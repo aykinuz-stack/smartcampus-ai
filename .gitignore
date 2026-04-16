@@ -1,0 +1,126 @@
+# ── Secrets & Credentials ──
+.env
+.env.*
+.streamlit/secrets.toml
+*.key
+*.pem
+*.cert
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ── IDE ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Data (backup) ──
+backups/
+*.db-journal
+*.db-wal
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Temp ──
+*.tmp
+*.bak
+*.log
+*.tmp.*
+
+# ── KVKK — Hassas Veri (GitHub'a GITMEZ) ──
+data/tenants/
+data/akademik/students.json
+data/akademik/grades.json
+data/akademik/attendance.json
+data/akademik/odev*.json
+data/akademik/veli_*.json
+data/akademik/mudahale_kayitlari.json
+data/akademik/disiplin_olaylari.json
+data/akademik/teachers.json
+data/rehberlik/
+data/saglik/
+data/mood_checkin/
+data/ihbar_hatti/
+data/sosyal_etkinlik/
+data/davranissal_risk/
+data/erken_uyari/
+data/olcme/
+data/kayit_modulu/
+data/users.json
+data/activity_log.db*
+
+# ── Flutter build output ──
+mobile/flutter_app/android/
+mobile/flutter_app/ios/
+mobile/flutter_app/.dart_tool/
+mobile/flutter_app/.flutter-plugins
+mobile/flutter_app/.flutter-plugins-dependencies
+mobile/flutter_app/.packages
+mobile/flutter_app/build/
+mobile/flutter_app/pubspec.lock
+
+# ── Venv ──
+.venv/
+venv/
+
+# ── Node ──
+node_modules/
+
+# ── KESIN BUYUK DOSYALAR (GitHub Limit) ──
+# Python venv (MB yerine GB)
+.venv/
+venv/
+env/
+ENV/
+**/site-packages/
+**/dist-info/
+
+# Tum PDF/Office dosyalar
+*.pdf
+*.pptx
+*.docx
+*.xlsx
+
+# Ders icerikleri (cok buyuk)
+data/english/
+data/fono*/
+data/fransizca/
+data/german/
+data/book_content/
+data/bilgi_treni/
+data/dijital_kutuphane/
+data/dil_treni/
+data/kay01/
+data/sosyal/
+GEN-01_TamPaket/
+
+# Tum temporary + backup
+*.tmp
+*.tmp.*
+*.bak
+*.old
+
+# Buyuk media
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.mp3
+*.wav
+*.iso
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z

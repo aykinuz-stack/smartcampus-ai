@@ -1,0 +1,92 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:   # Manuel tetikleme
+
+permissions:
+  contents: write       # Release olusturmak icin
+
+jobs:
+  build:
+    name: Flutter APK Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout kod
+        uses: actions/checkout@v4
+
+      - name: Java 17 kur
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Flutter SDK kur
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.19.5'
+          channel: 'stable'
+          cache: true
+
+      - name: Flutter dogrulama
+        run: flutter --version
+
+      - name: Flutter app klasorune gec
+        working-directory: mobile/flutter_app
+        run: |
+          # Platform dosyalarini olustur (android/, ios/)
+          flutter create . --platforms=android --org=com.smartcampus.ai --project-name=smartcampus_mobile
+
+      - name: Dependencies yukle
+        working-directory: mobile/flutter_app
+        run: flutter pub get
+
+      - name: AndroidManifest.xml — Internet + Kamera izni
+        working-directory: mobile/flutter_app
+        run: |
+          MANIFEST="android/app/src/main/AndroidManifest.xml"
+          # Permissions ekle (yoksa)
+          if ! grep -q "android.permission.INTERNET" $MANIFEST; then
+            sed -i '/<manifest/a \    <uses-permission android:name="android.permission.INTERNET" />\n    <uses-permission android:name="android.permission.CAMERA" />' $MANIFEST
+          fi
+          cat $MANIFEST
+
+      - name: Release APK build
+        working-directory: mobile/flutter_app
+        run: flutter build apk --release
+
+      - name: APK boyut kontrol
+        working-directory: mobile/flutter_app
+        run: ls -la build/app/outputs/flutter-apk/
+
+      - name: APK'yi artifact olarak yukle
+        uses: actions/upload-artifact@v4
+        with:
+          name: smartcampus-app-release
+          path: mobile/flutter_app/build/app/outputs/flutter-apk/app-release.apk
+          retention-days: 30
+
+      - name: APK'yi GitHub Release'e ekle
+        if: github.event_name == 'push'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ github.run_number }}
+          name: SmartCampus Mobile v${{ github.run_number }}
+          body: |
+            SmartCampus AI Mobile APK
+            Build: ${{ github.run_number }}
+            Date: ${{ github.event.head_commit.timestamp }}
+
+            **Indirme:** Asagidaki `app-release.apk` dosyasina tikla.
+
+            ## Yukleme
+            1. APK'yi telefona indir
+            2. "Bilinmeyen kaynaklara izin ver" ac
+            3. APK'ya tikla → yukle → ac
+          files: mobile/flutter_app/build/app/outputs/flutter-apk/app-release.apk
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

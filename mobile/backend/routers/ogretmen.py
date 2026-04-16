@@ -1,0 +1,336 @@
+"""Ogretmen endpoint'leri — yoklama, not, ders defteri, odev atama."""
+from __future__ import annotations
+
+import uuid
+from datetime import date, datetime
+from typing import Annotated
+
+from fastapi import APIRouter, Depends, HTTPException
+
+from ..core.data_adapter import DataAdapter, DataPaths
+from ..core.deps import get_current_user, get_data_adapter, require_roles
+from ..schemas.ogretmen import (
+    DersDefteriItem,
+    DersDefteriRequest,
+    NotBatchRequest,
+    NotBatchResponse,
+    OdevAtaRequest,
+    SinifListResponse,
+    SinifOgrenci,
+    YoklamaBatchRequest,
+    YoklamaBatchResponse,
+)
+
+
+router = APIRouter(prefix="/ogretmen", tags=["Ogretmen"])
+
+
+# Ders defteri path (DataPaths'te yok)
+class OgretmenPaths:
+    DERS_DEFTERI = "akademik/ders_defteri.json"
+
+
+def _require_ogretmen(user: dict):
+    role = user.get("role", "").lower()
+    if role not in ("ogretmen", "superadmin", "yonetici", "mudur", "mudur_yardimcisi",
+                    "sinif_ogretmeni", "brans_ogretmeni"):
+        raise HTTPException(403, "Sadece ogretmen bu endpoint'i kullanabilir")
+
+
+# ══════════════════════════════════════════════════════════════
+# SINIF LISTESI
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/sinif/{sinif}/{sube}", response_model=SinifListResponse)
+async def sinif_ogrencileri(
+    sinif: str,
+    sube: str,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Belirli sinif/sube icinn ogrenci listesi."""
+    _require_ogretmen(user)
+    students = adapter.load(DataPaths.STUDENTS) or []
+    mine = [s for s in students
+            if str(s.get("sinif", "")) == str(sinif)
+            and s.get("sube", "") == sube
+            and s.get("durum", "aktif") == "aktif"]
+    mine.sort(key=lambda s: int(s.get("numara", 0) or 0))
+
+    ogrenciler = [
+        SinifOgrenci(
+            id=s.get("id", ""),
+            ad_soyad=f"{s.get('ad','')} {s.get('soyad','')}".strip(),
+            numara=str(s.get("numara", "")),
+            sinif=str(s.get("sinif", "")),
+            sube=s.get("sube", ""),
+        )
+        for s in mine
+    ]
+    return SinifListResponse(sinif=sinif, sube=sube, ogrenciler=ogrenciler)
+
+
+@router.get("/siniflarim")
+async def siniflarim(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Ogretmene atanmis sinif/sube listesi."""
+    _require_ogretmen(user)
+    students = adapter.load(DataPaths.STUDENTS) or []
+    # Basit: tum unique sinif/sube kombinasyonlari
+    combos = set()
+    for s in students:
+        if s.get("durum", "aktif") == "aktif":
+            combos.add((str(s.get("sinif", "")), s.get("sube", "")))
+    return [{"sinif": c[0], "sube": c[1],
+            "ogrenci_sayisi": sum(1 for s in students
+                                 if str(s.get("sinif", "")) == c[0]
+                                 and s.get("sube", "") == c[1])}
+            for c in sorted(combos)]
+
+
+# ══════════════════════════════════════════════════════════════
+# YOKLAMA
+# ══════════════════════════════════════════════════════════════
+
+@router.post("/yoklama", response_model=YoklamaBatchResponse)
+async def yoklama_batch(
+    req: YoklamaBatchRequest,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Toplu yoklama girisi — tum sinif icin."""
+    _require_ogretmen(user)
+
+    existing = adapter.load(DataPaths.ATTENDANCE) or []
+    now = datetime.now()
+    akademik_yil = f"{now.year if now.month >= 9 else now.year - 1}-{now.year + 1 if now.month >= 9 else now.year}"
+
+    eklenen, guncellenen = 0, 0
+
+    for y in req.yoklamalar:
+        # Ayni ogrenci/tarih/ders/saat varsa guncelle
+        idx = next(
+            (i for i, a in enumerate(existing)
+             if a.get("student_id") == y.student_id
+             and a.get("tarih") == req.tarih
+             and a.get("ders") == req.ders
+             and int(a.get("ders_saati", 0) or 0) == req.ders_saati),
+            None,
+        )
+        if idx is not None:
+            existing[idx]["turu"] = y.turu
+            existing[idx]["aciklama"] = y.aciklama
+            guncellenen += 1
+        else:
+            existing.append({
+                "id": f"dev_{uuid.uuid4().hex[:8]}",
+                "student_id": y.student_id,
+                "tarih": req.tarih,
+                "ders": req.ders,
+                "ders_saati": req.ders_saati,
+                "turu": y.turu,
+                "aciklama": y.aciklama,
+                "akademik_yil": akademik_yil,
+            })
+            eklenen += 1
+
+    adapter.save(DataPaths.ATTENDANCE, existing)
+    return YoklamaBatchResponse(eklenen=eklenen, guncellenen=guncellenen, tarih=req.tarih)
+
+
+@router.get("/yoklama/bugun/{sinif}/{sube}")
+async def yoklama_bugun(
+    sinif: str,
+    sube: str,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+    ders: str | None = None,
+    ders_saati: int | None = None,
+):
+    """Bugun girilen yoklama (varsa)."""
+    _require_ogretmen(user)
+    today = date.today().isoformat()
+    att = adapter.load(DataPaths.ATTENDANCE) or []
+
+    students = adapter.load(DataPaths.STUDENTS) or []
+    student_ids = {s.get("id") for s in students
+                  if str(s.get("sinif", "")) == str(sinif) and s.get("sube", "") == sube}
+
+    mine = [
+        a for a in att
+        if a.get("student_id") in student_ids
+        and a.get("tarih") == today
+        and (ders is None or a.get("ders") == ders)
+        and (ders_saati is None or int(a.get("ders_saati", 0) or 0) == ders_saati)
+    ]
+    return {"tarih": today, "kayitlar": mine}
+
+
+# ══════════════════════════════════════════════════════════════
+# NOT GIRISI
+# ══════════════════════════════════════════════════════════════
+
+@router.post("/not", response_model=NotBatchResponse)
+async def not_batch(
+    req: NotBatchRequest,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Toplu not girisi."""
+    _require_ogretmen(user)
+
+    grades = adapter.load(DataPaths.GRADES) or []
+    now = datetime.now()
+    akademik_yil = f"{now.year if now.month >= 9 else now.year - 1}-{now.year + 1 if now.month >= 9 else now.year}"
+
+    eklenen = 0
+    for n in req.notlar:
+        grades.append({
+            "id": f"not_{uuid.uuid4().hex[:8]}",
+            "student_id": n.student_id,
+            "ders": req.ders,
+            "sinif": req.sinif,
+            "sube": req.sube,
+            "donem": req.donem,
+            "not_turu": req.not_turu,
+            "not_sirasi": req.not_sirasi,
+            "puan": n.puan,
+            "tarih": req.tarih,
+            "aciklama": n.aciklama,
+            "akademik_yil": akademik_yil,
+        })
+        eklenen += 1
+
+    adapter.save(DataPaths.GRADES, grades)
+    return NotBatchResponse(eklenen=eklenen, tarih=req.tarih)
+
+
+# ══════════════════════════════════════════════════════════════
+# DERS DEFTERI
+# ══════════════════════════════════════════════════════════════
+
+@router.post("/ders-defteri", response_model=DersDefteriItem, status_code=201)
+async def ders_defteri_ekle(
+    req: DersDefteriRequest,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Ders defteri kaydi ekle."""
+    _require_ogretmen(user)
+
+    yeni = {
+        "id": f"dd_{uuid.uuid4().hex[:8]}",
+        "sinif": req.sinif,
+        "sube": req.sube,
+        "ders": req.ders,
+        "ders_saati": req.ders_saati,
+        "tarih": req.tarih,
+        "islenen_konu": req.islenen_konu,
+        "ozel_not": req.ozel_not,
+        "online_link": req.online_link,
+        "kazanimlar": req.kazanimlar,
+        "ogretmen_id": user.get("user_id", ""),
+        "ogretmen_adi": user.get("ad_soyad", ""),
+    }
+    adapter.append(OgretmenPaths.DERS_DEFTERI, yeni)
+
+    return DersDefteriItem(
+        id=yeni["id"], sinif=yeni["sinif"], sube=yeni["sube"],
+        ders=yeni["ders"], ders_saati=yeni["ders_saati"], tarih=yeni["tarih"],
+        islenen_konu=yeni["islenen_konu"], ozel_not=yeni["ozel_not"],
+        online_link=yeni["online_link"],
+        ogretmen_id=yeni["ogretmen_id"], ogretmen_adi=yeni["ogretmen_adi"],
+    )
+
+
+@router.get("/ders-defteri/{sinif}/{sube}")
+async def ders_defteri_list(
+    sinif: str, sube: str,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+    limit: int = 30,
+):
+    """Sinif/sube icin son N ders defteri kaydi."""
+    _require_ogretmen(user)
+    all_dd = adapter.load(OgretmenPaths.DERS_DEFTERI) or []
+    mine = [d for d in all_dd
+           if d.get("sinif") == sinif and d.get("sube") == sube]
+    mine.sort(key=lambda d: (d.get("tarih", ""), d.get("ders_saati", 0)),
+             reverse=True)
+    return mine[:limit]
+
+
+# ══════════════════════════════════════════════════════════════
+# ODEV ATA
+# ══════════════════════════════════════════════════════════════
+
+@router.post("/odev/ata", status_code=201)
+async def odev_ata(
+    req: OdevAtaRequest,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Yeni odev ata. Sinif/sube tum ogrencilerine verilir."""
+    _require_ogretmen(user)
+    now = datetime.now()
+    akademik_yil = f"{now.year if now.month >= 9 else now.year - 1}-{now.year + 1 if now.month >= 9 else now.year}"
+
+    yeni = {
+        "id": f"odev_{uuid.uuid4().hex[:8]}",
+        "baslik": req.baslik,
+        "ders": req.ders,
+        "sinif": req.sinif,
+        "sube": req.sube,
+        "ogretmen_id": user.get("user_id", ""),
+        "ogretmen_adi": user.get("ad_soyad", ""),
+        "tur": req.tur,
+        "aciklama": req.aciklama,
+        "verilis_tarihi": req.verilis_tarihi,
+        "teslim_tarihi": req.teslim_tarihi,
+        "durum": "aktif",
+        "kaynak_url": req.kaynak_url,
+        "akademik_yil": akademik_yil,
+    }
+    adapter.append(DataPaths.HOMEWORK, yeni)
+    return {"id": yeni["id"]}
+
+
+# ══════════════════════════════════════════════════════════════
+# OGRETMEN ICIN OGRENCI OZETI
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/ogrenci-ozet/{student_id}")
+async def ogrenci_ozet(
+    student_id: str,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Ogretmen icin ogrenci hizli ozet (not ort, devamsizlik, son not)."""
+    _require_ogretmen(user)
+
+    students = adapter.load(DataPaths.STUDENTS) or []
+    s = next((x for x in students if x.get("id") == student_id), None)
+    if not s:
+        raise HTTPException(404, "Ogrenci bulunamadi")
+
+    grades = adapter.load(DataPaths.GRADES) or []
+    att = adapter.load(DataPaths.ATTENDANCE) or []
+
+    mine_grades = [g for g in grades if g.get("student_id") == student_id]
+    mine_att = [a for a in att if a.get("student_id") == student_id]
+
+    puanlar = [float(g.get("puan", 0) or 0) for g in mine_grades]
+    devamsizlik = sum(1 for a in mine_att if a.get("turu", "").lower() in ("devamsiz", "ozursuz"))
+
+    return {
+        "student_id": student_id,
+        "ad_soyad": f"{s.get('ad','')} {s.get('soyad','')}",
+        "sinif": s.get("sinif", ""),
+        "sube": s.get("sube", ""),
+        "numara": s.get("numara", ""),
+        "not_ortalamasi": round(sum(puanlar) / len(puanlar), 1) if puanlar else 0.0,
+        "not_sayisi": len(puanlar),
+        "devamsizlik_sayisi": devamsizlik,
+    }

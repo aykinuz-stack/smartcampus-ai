@@ -1,0 +1,87 @@
+name: smartcampus_mobile
+description: SmartCampusAI mobil uygulama (Android + iOS) — Flutter native
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+  flutter: ">=3.16.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # HTTP + API
+  dio: ^5.4.0
+  pretty_dio_logger: ^1.3.1
+
+  # State management
+  flutter_riverpod: ^2.4.9
+  riverpod_annotation: ^2.3.3
+
+  # Routing
+  go_router: ^13.0.0
+
+  # Storage (offline cache + secure token)
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  flutter_secure_storage: ^9.0.0
+
+  # UI
+  google_fonts: ^6.1.0
+  flutter_svg: ^2.0.9
+  cached_network_image: ^3.3.0
+  fl_chart: ^0.66.0
+  shimmer: ^3.0.0
+  lottie: ^3.0.0
+
+  # Device features
+  permission_handler: ^11.1.0
+  mobile_scanner: ^3.5.5           # QR okuma (yoklama, ziyaretci)
+  image_picker: ^1.0.5              # Fotograf cek (odev teslim)
+  speech_to_text: ^6.6.0            # Smarti sesli asistan
+  flutter_tts: ^3.8.5               # Text-to-speech
+  local_auth: ^2.1.8                # Biyometrik (parmak izi giris)
+
+  # Push bildirim
+  firebase_core: ^2.25.0
+  firebase_messaging: ^14.7.10
+  flutter_local_notifications: ^16.3.0
+
+  # Tarih / format
+  intl: ^0.19.0
+  jwt_decoder: ^2.0.1
+
+  # Utilities
+  logger: ^2.0.2+1
+  equatable: ^2.0.5
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.8.1
+  connectivity_plus: ^5.0.2
+  package_info_plus: ^5.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.7
+  riverpod_generator: ^2.3.9
+  freezed: ^2.4.6
+  json_serializable: ^6.7.1
+  hive_generator: ^2.0.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/animations/
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
