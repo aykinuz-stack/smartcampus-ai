@@ -210,6 +210,11 @@ class _YoneticiHomePageState extends ConsumerState<YoneticiHomePage> {
                         onTap: () => context.push('/yonetici/tuketim-demirbas'),
                       ),
                       _QCard(
+                        icon: Icons.build, title: 'Destek Hizmetleri',
+                        subtitle: 'Ticket + SLA', color: AppColors.warning,
+                        onTap: () => context.push('/yonetici/destek-hizmetleri'),
+                      ),
+                      _QCard(
                         icon: Icons.checklist, title: 'Onaylar',
                         subtitle: 'Randevu + belge', color: AppColors.warning,
                         onTap: () => context.push('/yonetici/onaylar'),

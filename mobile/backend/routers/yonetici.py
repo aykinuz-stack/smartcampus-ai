@@ -1007,6 +1007,54 @@ async def dil_ders_detay(
     }
 
 
+# ══════════════════════════════════════════════════════════════
+# DESTEK HIZMETLERI TAKIP
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/destek-hizmetleri")
+async def destek_hizmetleri(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Destek hizmetleri — ticket ozet + bekleyen + SLA."""
+    _require_yonetici(user)
+    today = date.today().isoformat()
+
+    tickets = (adapter.load("destek_hizmetleri/tickets.json")
+               or adapter.load("tdm/tickets.json") or [])
+    periyodik = (adapter.load("destek_hizmetleri/periyodik_gorevler.json") or [])
+    bakimlar = (adapter.load("destek_hizmetleri/bakim_kayitlari.json") or [])
+
+    from collections import Counter
+    durum_dag = Counter(t.get("durum", "?") for t in tickets)
+    oncelik_dag = Counter(t.get("oncelik", "?") for t in tickets)
+
+    acik = [t for t in tickets if t.get("durum") not in ("Tamamlandi", "Kapandi", "Kontrol")]
+    bugun_acilan = [t for t in tickets if t.get("olusturma_tarihi", "").startswith(today)]
+
+    return {
+        "ozet": {
+            "toplam_ticket": len(tickets),
+            "acik": len(acik),
+            "bugun_acilan": len(bugun_acilan),
+            "periyodik_gorev": len(periyodik),
+            "bakim_kaydi": len(bakimlar),
+        },
+        "durum_dagilimi": dict(durum_dag.most_common()),
+        "oncelik_dagilimi": dict(oncelik_dag.most_common()),
+        "acik_ticketlar": [
+            {"id": t.get("id"), "ticket_no": t.get("ticket_no", ""),
+             "baslik": t.get("baslik", t.get("aciklama", "")[:50]),
+             "kategori": t.get("hizmet_alani", t.get("kategori", "")),
+             "oncelik": t.get("oncelik", "Normal"),
+             "durum": t.get("durum", ""),
+             "tarih": (t.get("olusturma_tarihi") or "")[:10],
+             "talep_eden": t.get("talep_eden", "")}
+            for t in sorted(acik, key=lambda x: {"Kritik": 0, "Yuksek": 1, "Normal": 2, "Dusuk": 3}.get(x.get("oncelik", "Normal"), 2))
+        ][:20],
+    }
+
+
 @router.get("/randevular")
 async def randevular(
     user: Annotated[dict, Depends(get_current_user)],
