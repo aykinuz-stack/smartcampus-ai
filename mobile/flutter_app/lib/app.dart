@@ -53,6 +53,9 @@ import 'features/yonetici/calisanlar_page.dart';
 import 'features/yonetici/sinif_listeleri_page.dart';
 import 'features/yonetici/tuketim_demirbas_page.dart';
 import 'features/yonetici/destek_hizmetleri_page.dart';
+import 'features/yonetici/revir_page.dart';
+import 'features/yonetici/kutuphane_page.dart';
+import 'features/yonetici/sosyal_etkinlik_page.dart';
 
 
 class SmartCampusApp extends ConsumerWidget {
@@ -172,6 +175,9 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/yonetici/sinif-listeleri', builder: (_, __) => const SinifListeleriPage()),
         GoRoute(path: '/yonetici/tuketim-demirbas', builder: (_, __) => const TuketimDemirbasPage()),
         GoRoute(path: '/yonetici/destek-hizmetleri', builder: (_, __) => const DestekHizmetleriPage()),
+        GoRoute(path: '/yonetici/revir', builder: (_, __) => const RevirPage()),
+        GoRoute(path: '/yonetici/kutuphane', builder: (_, __) => const KutuphanePage()),
+        GoRoute(path: '/yonetici/sosyal-etkinlik', builder: (_, __) => const SosyalEtkinlikPage()),
         // Fallback
         GoRoute(path: '/home', builder: (_, __) => const _PlaceholderPage(title: 'Ana Sayfa')),
       ],

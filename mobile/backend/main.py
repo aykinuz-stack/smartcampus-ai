@@ -139,6 +139,82 @@ async def ai_treni_quiz(sinif: int):
         return {"sinif": sinif, "sorular": [], "hata": str(e)}
 
 
+# ── Revir (Okul Sagligi) ──
+@app.get(f"{settings.API_PREFIX}/saglik/revir-ozet")
+async def revir_ozet():
+    from .core.data_adapter import DataAdapter
+    from datetime import date
+    adapter = DataAdapter()
+    ziyaretler = adapter.load("saglik/revir_ziyaretleri.json") or []
+    today = date.today().isoformat()
+    bugun = [z for z in ziyaretler if z.get("tarih","").startswith(today)]
+    from collections import Counter
+    neden_dag = Counter(z.get("neden","?") for z in ziyaretler)
+    return {
+        "toplam": len(ziyaretler),
+        "bugun": len(bugun),
+        "supheli": sum(1 for z in ziyaretler if z.get("supheli_yaralanma")),
+        "neden_dagilimi": dict(neden_dag.most_common(10)),
+        "son_ziyaretler": [
+            {"tarih": z.get("tarih"), "ogrenci": z.get("student_name"),
+             "neden": z.get("neden"), "islem": z.get("islem",""),
+             "supheli": z.get("supheli_yaralanma", False)}
+            for z in sorted(ziyaretler, key=lambda x: x.get("tarih",""), reverse=True)[:20]
+        ],
+    }
+
+
+# ── Kutuphane ──
+@app.get(f"{settings.API_PREFIX}/kutuphane/ozet")
+async def kutuphane_ozet():
+    from .core.data_adapter import DataAdapter
+    adapter = DataAdapter()
+    # Kutuphane verileri tenant bazli olabilir
+    odunc = adapter.load("kutuphane/odunc_kayitlari.json") or []
+    kitaplar = adapter.load("kutuphane/kitaplar.json") or []
+    geciken = [o for o in odunc if o.get("durum") == "gecikti"]
+    return {
+        "toplam_kitap": len(kitaplar),
+        "aktif_odunc": sum(1 for o in odunc if o.get("durum") in ("odunc","gecikti")),
+        "geciken": len(geciken),
+        "son_odunc": [
+            {"kitap": o.get("kitap_adi",""), "ogrenci": o.get("ogrenci_adi",""),
+             "tarih": o.get("odunc_tarihi",""), "iade": o.get("iade_tarihi",""),
+             "durum": o.get("durum","")}
+            for o in sorted(odunc, key=lambda x: x.get("odunc_tarihi",""), reverse=True)[:15]
+        ],
+    }
+
+
+# ── Sosyal Etkinlik ──
+@app.get(f"{settings.API_PREFIX}/sosyal/ozet")
+async def sosyal_ozet():
+    from .core.data_adapter import DataAdapter
+    adapter = DataAdapter()
+    kulupler = adapter.load("sosyal_etkinlik/kulupler.json") or []
+    etkinlikler = adapter.load("sosyal_etkinlik/etkinlikler.json") or []
+    from datetime import date
+    today = date.today().isoformat()
+    yaklasan = [e for e in etkinlikler if e.get("tarih_baslangic","") >= today]
+    return {
+        "toplam_kulup": len(kulupler),
+        "toplam_etkinlik": len(etkinlikler),
+        "yaklasan": len(yaklasan),
+        "kulupler": [
+            {"ad": k.get("ad"), "kademe": k.get("kademe",""),
+             "gun": k.get("faaliyet_gunu",""), "durum": k.get("durum",""),
+             "uye": len(k.get("ogrenciler",[]))}
+            for k in kulupler
+        ],
+        "yaklasan_etkinlikler": [
+            {"baslik": e.get("baslik"), "tarih": e.get("tarih_baslangic"),
+             "kategori": e.get("kategori",""), "konum": e.get("lokasyon",""),
+             "durum": e.get("durum","")}
+            for e in sorted(yaklasan, key=lambda x: x.get("tarih_baslangic",""))[:10]
+        ],
+    }
+
+
 @app.get(f"{settings.API_PREFIX}/kurum/yemek-menusu")
 async def kurum_yemek():
     from .core.data_adapter import DataAdapter
