@@ -143,6 +143,13 @@ class _OgretmenHomePageState extends ConsumerState<OgretmenHomePage> {
                     onTap: () => context.push('/ogretmen/qr-yoklama'),
                   ),
                   _QuickCard(
+                    icon: Icons.analytics,
+                    title: 'Sınav Sonuçları',
+                    subtitle: 'Sınıf/ders analiz',
+                    color: AppColors.gold,
+                    onTap: () => context.push('/ogretmen/sinav-sonuclari'),
+                  ),
+                  _QuickCard(
                     icon: Icons.grade,
                     title: 'Not Girişi',
                     subtitle: 'Toplu not gir',

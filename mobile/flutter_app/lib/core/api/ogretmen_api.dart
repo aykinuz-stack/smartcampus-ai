@@ -113,6 +113,13 @@ class OgretmenApi {
     });
     return Map<String, dynamic>.from(r.data);
   }
+  Future<Map<String, dynamic>> sinavSonuclari({String? ders, String? sinif}) async {
+    final params = <String, dynamic>{};
+    if (ders != null) params['ders'] = ders;
+    if (sinif != null) params['sinif'] = sinif;
+    final r = await _api.get('/ogretmen/sinav-sonuclari', params: params);
+    return Map<String, dynamic>.from(r.data);
+  }
 }
 
 

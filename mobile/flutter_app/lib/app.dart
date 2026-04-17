@@ -21,6 +21,7 @@ import 'features/veli/cocuk_detay_page.dart';
 import 'features/ogretmen/ogretmen_home.dart';
 import 'features/ogretmen/yoklama_page.dart';
 import 'features/ogretmen/qr_yoklama_page.dart';
+import 'features/ogretmen/sinav_sonuc_page.dart';
 import 'features/ogretmen/not_giris_page.dart';
 import 'features/ogretmen/ders_defteri_page.dart';
 import 'features/ogretmen/odev_ata_page.dart';
@@ -127,6 +128,7 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/ogretmen/not', builder: (_, __) => const NotGirisPage()),
         GoRoute(path: '/ogretmen/ders-defteri', builder: (_, __) => const DersDefteriPage()),
         GoRoute(path: '/ogretmen/odev-ata', builder: (_, __) => const OdevAtaPage()),
+        GoRoute(path: '/ogretmen/sinav-sonuclari', builder: (_, __) => const SinavSonucPage()),
         // REHBER rotaları
         GoRoute(path: '/rehber', builder: (_, __) => const RehberHomePage()),
         GoRoute(path: '/rehber/vakalar', builder: (_, __) => const VakalarPage()),

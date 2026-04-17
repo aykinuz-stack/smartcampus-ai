@@ -334,3 +334,72 @@ async def ogrenci_ozet(
         "not_sayisi": len(puanlar),
         "devamsizlik_sayisi": devamsizlik,
     }
+
+
+# ══════════════════════════════════════════════════════════════
+# SINAV SONUCLARI — sinif/ders bazli
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/sinav-sonuclari")
+async def sinav_sonuclari(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+    sinif: str | None = None,
+    sube: str | None = None,
+    ders: str | None = None,
+):
+    """Sinif/ders bazli sinav sonuclari — ogretmen + yonetici."""
+    _require_ogretmen(user)
+    all_grades = adapter.load(DataPaths.GRADES) or []
+
+    sinavlar = [g for g in all_grades
+                if g.get("not_turu", "").lower() in ("yazili", "sinav", "deneme")]
+
+    if sinif:
+        sinavlar = [g for g in sinavlar if str(g.get("sinif", "")) == sinif]
+    if sube:
+        sinavlar = [g for g in sinavlar if g.get("sube", "") == sube]
+    if ders:
+        sinavlar = [g for g in sinavlar if g.get("ders", "").lower() == ders.lower()]
+
+    sinavlar.sort(key=lambda g: g.get("tarih", ""), reverse=True)
+
+    students = adapter.load(DataPaths.STUDENTS) or []
+    stu_map = {s.get("id"): f"{s.get('ad', '')} {s.get('soyad', '')}".strip()
+               for s in students}
+
+    from collections import defaultdict
+    sinav_gruplari: dict[str, list] = defaultdict(list)
+    for g in sinavlar:
+        key = f"{g.get('ders','')}|{g.get('not_turu','')} {g.get('not_sirasi','')}|{g.get('tarih','')}"
+        sinav_gruplari[key].append(g)
+
+    sonuc_listesi = []
+    for key, notlar in list(sinav_gruplari.items())[:20]:
+        parts = key.split("|")
+        puanlar = [float(n.get("puan", 0) or 0) for n in notlar]
+        sonuc_listesi.append({
+            "ders": parts[0] if parts else "",
+            "sinav_adi": parts[1] if len(parts) > 1 else "",
+            "tarih": parts[2] if len(parts) > 2 else "",
+            "sinif": f"{notlar[0].get('sinif','')}/{notlar[0].get('sube','')}" if notlar else "",
+            "ogrenci_sayisi": len(notlar),
+            "ortalama": round(sum(puanlar) / len(puanlar), 1) if puanlar else 0,
+            "en_yuksek": max(puanlar) if puanlar else 0,
+            "en_dusuk": min(puanlar) if puanlar else 0,
+            "basari_orani": round(sum(1 for p in puanlar if p >= 50) / len(puanlar) * 100, 1) if puanlar else 0,
+            "detay": [
+                {"ogrenci": stu_map.get(n.get("student_id"), "?"),
+                 "puan": n.get("puan")}
+                for n in sorted(notlar, key=lambda x: float(x.get("puan", 0) or 0), reverse=True)
+            ][:30],
+        })
+
+    tum_dersler = sorted(set(g.get("ders", "") for g in all_grades if g.get("ders")))
+    tum_siniflar = sorted(set(f"{g.get('sinif','')}/{g.get('sube','')}" for g in all_grades if g.get("sinif")))
+
+    return {
+        "toplam_sinav": len(sinav_gruplari),
+        "sonuclar": sonuc_listesi,
+        "filtreler": {"dersler": tum_dersler, "siniflar": tum_siniflar},
+    }
