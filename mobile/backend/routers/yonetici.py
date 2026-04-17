@@ -577,6 +577,162 @@ async def kayit_ozet(
     }
 
 
+# ══════════════════════════════════════════════════════════════
+# DERS PROGRAMI
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/ders-programi")
+async def ders_programi(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+    sinif: str | None = None,
+    sube: str | None = None,
+    gun: str | None = None,
+):
+    """Ders programi — sinif/gun filtreli."""
+    _require_yonetici(user)
+    schedule = adapter.load("akademik/schedule.json") or []
+
+    if sinif:
+        schedule = [s for s in schedule if str(s.get("sinif", "")) == sinif]
+    if sube:
+        schedule = [s for s in schedule if s.get("sube", "") == sube]
+    if gun:
+        schedule = [s for s in schedule if s.get("gun", "").lower() == gun.lower()]
+
+    # Gune gore grupla
+    from collections import defaultdict
+    gun_gruplari: dict[str, list] = defaultdict(list)
+    for s in schedule:
+        gun_gruplari[s.get("gun", "?")].append(s)
+
+    # Her gun icinde saate gore sirala
+    gunler = []
+    for g in ["Pazartesi", "Sali", "Carsamba", "Persembe", "Cuma"]:
+        dersler = gun_gruplari.get(g, [])
+        dersler.sort(key=lambda x: int(x.get("saat", 0) or 0))
+        if dersler:
+            gunler.append({
+                "gun": g,
+                "ders_sayisi": len(dersler),
+                "dersler": [
+                    {"saat": s.get("saat"), "ders": s.get("ders"),
+                     "ogretmen": s.get("ogretmen_adi"),
+                     "sinif": f"{s.get('sinif','')}/{s.get('sube','')}"}
+                    for s in dersler
+                ],
+            })
+
+    # Mevcut siniflar (filtre)
+    tum_siniflar = sorted(set(f"{s.get('sinif','')}/{s.get('sube','')}"
+                             for s in adapter.load("akademik/schedule.json") or []))
+
+    return {"gunler": gunler, "siniflar": tum_siniflar, "toplam": len(schedule)}
+
+
+# ══════════════════════════════════════════════════════════════
+# NOBET YONETIMI
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/nobet")
+async def nobet_yonetimi(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Nobet gorevleri + kayitlari."""
+    _require_yonetici(user)
+    gorevler = adapter.load("akademik/nobet_gorevler.json") or []
+    kayitlar = adapter.load("akademik/nobet_kayitlar.json") or []
+    today = date.today().isoformat()
+    gun_adi = _GUN_MAP[date.today().weekday()]
+
+    # Bugunku nobetciler
+    bugun_nobetciler = [g for g in gorevler if g.get("gun", "").lower() == gun_adi.lower()]
+
+    # Gun bazli grupla
+    from collections import defaultdict
+    gun_gruplari: dict[str, list] = defaultdict(list)
+    for g in gorevler:
+        gun_gruplari[g.get("gun", "?")].append(g)
+
+    # Kayit durumu
+    kayit_map = {k.get("gorev_id"): k for k in kayitlar}
+
+    haftalik = []
+    for gun in ["Pazartesi", "Sali", "Carsamba", "Persembe", "Cuma"]:
+        nobetciler = gun_gruplari.get(gun, [])
+        haftalik.append({
+            "gun": gun,
+            "nobetciler": [
+                {"ogretmen": n.get("ogretmen_adi"), "yer": n.get("yer"),
+                 "saat": n.get("saat"),
+                 "durum": kayit_map.get(n.get("id"), {}).get("durum", "bekliyor")}
+                for n in nobetciler
+            ],
+        })
+
+    return {
+        "bugun": {
+            "gun": gun_adi,
+            "nobetciler": [
+                {"ogretmen": n.get("ogretmen_adi"), "yer": n.get("yer"), "saat": n.get("saat")}
+                for n in bugun_nobetciler
+            ],
+        },
+        "haftalik": haftalik,
+        "toplam_gorev": len(gorevler),
+        "toplam_kayit": len(kayitlar),
+    }
+
+
+# ══════════════════════════════════════════════════════════════
+# ZAMAN CIZELGESI
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/zaman-cizelgesi")
+async def zaman_cizelgesi(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Gunluk zaman cizelgesi — ders/teneffus/ogle arasi."""
+    _require_yonetici(user)
+
+    # Standart okul zaman cizelgesi
+    cizelge = [
+        {"saat": "08:30", "bitis": "09:10", "tur": "ders", "no": 1, "sure": 40},
+        {"saat": "09:10", "bitis": "09:20", "tur": "teneffus", "no": 0, "sure": 10},
+        {"saat": "09:20", "bitis": "10:00", "tur": "ders", "no": 2, "sure": 40},
+        {"saat": "10:00", "bitis": "10:10", "tur": "teneffus", "no": 0, "sure": 10},
+        {"saat": "10:10", "bitis": "10:50", "tur": "ders", "no": 3, "sure": 40},
+        {"saat": "10:50", "bitis": "11:00", "tur": "teneffus", "no": 0, "sure": 10},
+        {"saat": "11:00", "bitis": "11:40", "tur": "ders", "no": 4, "sure": 40},
+        {"saat": "11:40", "bitis": "12:20", "tur": "ogle", "no": 0, "sure": 40},
+        {"saat": "12:20", "bitis": "13:00", "tur": "ders", "no": 5, "sure": 40},
+        {"saat": "13:00", "bitis": "13:10", "tur": "teneffus", "no": 0, "sure": 10},
+        {"saat": "13:10", "bitis": "13:50", "tur": "ders", "no": 6, "sure": 40},
+        {"saat": "13:50", "bitis": "14:00", "tur": "teneffus", "no": 0, "sure": 10},
+        {"saat": "14:00", "bitis": "14:40", "tur": "ders", "no": 7, "sure": 40},
+        {"saat": "14:40", "bitis": "14:50", "tur": "teneffus", "no": 0, "sure": 10},
+        {"saat": "14:50", "bitis": "15:30", "tur": "ders", "no": 8, "sure": 40},
+        {"saat": "15:30", "bitis": "16:00", "tur": "etut", "no": 0, "sure": 30},
+    ]
+
+    # Simdi hangi dilim aktif
+    from datetime import datetime as dt
+    now = dt.now().strftime("%H:%M")
+    aktif_dilim = None
+    for c in cizelge:
+        if c["saat"] <= now < c["bitis"]:
+            aktif_dilim = c
+            break
+
+    return {
+        "cizelge": cizelge,
+        "aktif_dilim": aktif_dilim,
+        "simdi": now,
+    }
+
+
 @router.get("/randevular")
 async def randevular(
     user: Annotated[dict, Depends(get_current_user)],

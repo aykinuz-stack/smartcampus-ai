@@ -39,6 +39,9 @@ import 'features/yonetici/butce_page.dart';
 import 'features/yonetici/randevular_page.dart';
 import 'features/yonetici/gun_raporu_page.dart';
 import 'features/yonetici/kayit_ozet_page.dart';
+import 'features/yonetici/ders_programi_page.dart';
+import 'features/yonetici/nobet_page.dart';
+import 'features/yonetici/zaman_cizelgesi_page.dart';
 
 
 class SmartCampusApp extends ConsumerWidget {
@@ -145,6 +148,9 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/yonetici/randevular', builder: (_, __) => const YoneticiRandevularPage()),
         GoRoute(path: '/yonetici/gun-raporu', builder: (_, __) => const GunRaporuPage()),
         GoRoute(path: '/yonetici/kayit-ozet', builder: (_, __) => const KayitOzetPage()),
+        GoRoute(path: '/yonetici/ders-programi', builder: (_, __) => const DersProgramiPage()),
+        GoRoute(path: '/yonetici/nobet', builder: (_, __) => const NobetPage()),
+        GoRoute(path: '/yonetici/zaman-cizelgesi', builder: (_, __) => const ZamanCizelgesiPage()),
         // Fallback
         GoRoute(path: '/home', builder: (_, __) => const _PlaceholderPage(title: 'Ana Sayfa')),
       ],

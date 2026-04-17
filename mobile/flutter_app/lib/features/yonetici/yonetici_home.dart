@@ -200,6 +200,21 @@ class _YoneticiHomePageState extends ConsumerState<YoneticiHomePage> {
                         onTap: () => context.push('/yonetici/onaylar'),
                       ),
                       _QCard(
+                        icon: Icons.menu_book, title: 'Ders Programı',
+                        subtitle: 'Sınıf/gün bazlı', color: AppColors.info,
+                        onTap: () => context.push('/yonetici/ders-programi'),
+                      ),
+                      _QCard(
+                        icon: Icons.shield, title: 'Nöbet',
+                        subtitle: 'Bugün + haftalık', color: AppColors.success,
+                        onTap: () => context.push('/yonetici/nobet'),
+                      ),
+                      _QCard(
+                        icon: Icons.access_time, title: 'Zaman Çizelgesi',
+                        subtitle: 'Ders/teneffüs', color: AppColors.warning,
+                        onTap: () => context.push('/yonetici/zaman-cizelgesi'),
+                      ),
+                      _QCard(
                         icon: Icons.chat, title: 'Mesajlar',
                         subtitle: 'Gelen/Giden/Yeni', color: AppColors.primary,
                         onTap: () => context.push('/messages'),
