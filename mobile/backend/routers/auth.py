@@ -58,12 +58,16 @@ async def login(req: LoginRequest):
     if not user:
         raise HTTPException(status_code=401, detail="Kullanici bulunamadi")
 
-    # Sifre dogrulama — mevcut sistem bcrypt hash tutuyor olabilir
-    # Ilk surumde basit dogrulama: sifre_hash veya password_hash alanina bak
+    # Sifre dogrulama — bcrypt + legacy sha256 + plain destekler
     stored = user.get("password_hash") or user.get("sifre_hash") or user.get("sifre", "")
     ok = False
-    if stored.startswith("$2"):  # bcrypt hash
+    if stored.startswith("$2"):
+        # bcrypt hash
         ok = verify_password(req.password, stored)
+    elif len(stored) == 64 and all(c in "0123456789abcdef" for c in stored):
+        # SHA-256 legacy hash (utils/auth.py ile ortak)
+        import hashlib
+        ok = hashlib.sha256(req.password.encode("utf-8")).hexdigest() == stored
     else:
         # Plain text (gelistirme)
         ok = stored == req.password
