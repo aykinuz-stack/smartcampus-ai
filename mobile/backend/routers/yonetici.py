@@ -892,6 +892,121 @@ async def tuketim_demirbas_rapor(
     }
 
 
+# ══════════════════════════════════════════════════════════════
+# KISISEL DIL GELISIMI
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/dil-gelisimi")
+async def dil_gelisimi(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+    dil: str = "ingilizce",
+):
+    """Kisisel dil gelisimi — ders listesi + kelimeler."""
+    import json
+    from pathlib import Path
+    base = Path(adapter.base)
+
+    dil_map = {
+        "ingilizce": "fono/fono_lessons.json",
+        "almanca": "fono_almanca_104/fono_almanca_104_lessons.json",
+        "fransizca": "fono_fransizca/fono_fransizca_lessons.json",
+        "italyanca": "fono_italyanca/fono_italyanca_lessons.json",
+        "ispanyolca": "fono_ispanyolca/fono_ispanyolca_lessons.json",
+    }
+
+    # Dosyayi bul (tenant veya global)
+    rel = dil_map.get(dil, dil_map["ingilizce"])
+    data = adapter.load(rel)
+    if not data:
+        # Global data klasorunden dene
+        global_path = Path(__file__).resolve().parent.parent.parent.parent / "data" / rel
+        if global_path.exists():
+            with open(global_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+
+    lessons = data.get("lessons", []) if isinstance(data, dict) else data if isinstance(data, list) else []
+
+    # Ders ozet listesi
+    ders_listesi = []
+    for i, l in enumerate(lessons):
+        voc = l.get("vocabulary", l.get("words", []))
+        ders_listesi.append({
+            "no": l.get("ders", i + 1),
+            "title": l.get("title", f"Ders {i+1}"),
+            "type": l.get("type_label", ""),
+            "kelime_sayisi": len(voc),
+            "gramer_sayisi": len(l.get("grammar_topics", [])),
+            "alistirma_sayisi": len(l.get("exercises", [])),
+        })
+
+    # Mevcut diller
+    diller = []
+    for dk, dp in dil_map.items():
+        p = Path(adapter.base) / dp
+        gp = Path(__file__).resolve().parent.parent.parent.parent / "data" / dp
+        if p.exists() or gp.exists():
+            diller.append(dk)
+
+    return {
+        "dil": dil,
+        "toplam_ders": len(lessons),
+        "diller": diller,
+        "dersler": ders_listesi,
+    }
+
+
+@router.get("/dil-gelisimi/ders/{ders_no}")
+async def dil_ders_detay(
+    ders_no: int,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+    dil: str = "ingilizce",
+):
+    """Tek ders detayi — kelimeler + gramer + alistirmalar."""
+    import json
+    from pathlib import Path
+
+    dil_map = {
+        "ingilizce": "fono/fono_lessons.json",
+        "almanca": "fono_almanca_104/fono_almanca_104_lessons.json",
+        "fransizca": "fono_fransizca/fono_fransizca_lessons.json",
+        "italyanca": "fono_italyanca/fono_italyanca_lessons.json",
+        "ispanyolca": "fono_ispanyolca/fono_ispanyolca_lessons.json",
+    }
+
+    rel = dil_map.get(dil, dil_map["ingilizce"])
+    data = adapter.load(rel)
+    if not data:
+        global_path = Path(__file__).resolve().parent.parent.parent.parent / "data" / rel
+        if global_path.exists():
+            with open(global_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+
+    lessons = data.get("lessons", []) if isinstance(data, dict) else []
+
+    # Ders bul (0-indexed veya ders numarasi)
+    lesson = None
+    for l in lessons:
+        if l.get("ders") == ders_no or lessons.index(l) == ders_no - 1:
+            lesson = l
+            break
+
+    if not lesson:
+        raise HTTPException(404, f"Ders {ders_no} bulunamadi")
+
+    return {
+        "no": lesson.get("ders", ders_no),
+        "title": lesson.get("title", ""),
+        "type": lesson.get("type_label", ""),
+        "vocabulary": lesson.get("vocabulary", lesson.get("words", [])),
+        "grammar_topics": lesson.get("grammar_topics", []),
+        "grammar_examples": lesson.get("grammar_examples", []),
+        "reading": lesson.get("reading", ""),
+        "exercises": lesson.get("exercises", []),
+    }
+
+
 @router.get("/randevular")
 async def randevular(
     user: Annotated[dict, Depends(get_current_user)],

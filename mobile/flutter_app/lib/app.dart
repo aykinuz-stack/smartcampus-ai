@@ -12,6 +12,7 @@ import 'features/ogrenci/devamsizlik_page.dart';
 import 'features/ogrenci/odev_page.dart';
 import 'features/ogrenci/mesaj_page.dart';
 import 'features/ogrenci/ihbar_page.dart';
+import 'features/ogrenci/dil_gelisimi_page.dart';
 import 'features/veli/veli_home.dart';
 import 'features/veli/kapsul_page.dart';
 import 'features/veli/randevu_page.dart';
@@ -106,6 +107,10 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(
           path: '/smarti',
           builder: (_, __) => const _PlaceholderPage(title: 'Smarti AI'),
+        ),
+        GoRoute(
+          path: '/dil-gelisimi',
+          builder: (_, __) => const DilGelisimiPage(),
         ),
         GoRoute(
           path: '/profile',
