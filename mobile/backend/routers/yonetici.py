@@ -382,6 +382,161 @@ async def butce_gunluk(
 # RANDEVU (yonetici icin tum randevular)
 # ══════════════════════════════════════════════════════════════
 
+# ══════════════════════════════════════════════════════════════
+# GUN BASI + GUN SONU RAPORU
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/gun-raporu")
+async def gun_raporu(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Gun basi + gun sonu raporu — tek endpoint."""
+    _require_yonetici(user)
+    today = date.today().isoformat()
+    gun_adi = _GUN_MAP[date.today().weekday()]
+
+    # Ogrenci + ogretmen sayisi
+    students = adapter.load("akademik/students.json") or []
+    teachers = adapter.load("akademik/teachers.json") or []
+    aktif_ogrenci = sum(1 for s in students if s.get("durum") == "aktif")
+    aktif_ogretmen = len(teachers)
+
+    # Yoklama
+    att = adapter.load("akademik/attendance.json") or []
+    bugun_att = [a for a in att if a.get("tarih") == today]
+    devamsiz = sum(1 for a in bugun_att if a.get("turu", "").lower() in ("devamsiz", "ozursuz"))
+    gec = sum(1 for a in bugun_att if a.get("turu", "").lower() == "gec")
+
+    # Etkinlik
+    etkinlikler = adapter.load("akademik/etkinlik_duyurular.json") or []
+    bugun_etk = [e for e in etkinlikler if e.get("tarih", "").startswith(today)]
+
+    # Randevu
+    randevular = adapter.load("akademik/veli_randevular.json") or []
+    bugun_randevu = [r for r in randevular if r.get("tarih") == today]
+
+    # Mood
+    mood = adapter.load("mood_checkin/checkins.json") or []
+    bugun_mood = [m for m in mood if m.get("tarih") == today]
+    mood_ort = round(sum(int(m.get("level", 3)) for m in bugun_mood) / max(len(bugun_mood), 1), 1) if bugun_mood else 0
+
+    # Ihbar
+    ihbar = adapter.load("ihbar_hatti/ihbarlar.json") or []
+    yeni_ihbar = sum(1 for i in ihbar if i.get("durum") == "Yeni")
+
+    # Risk
+    risk = adapter.load("davranissal_risk/risk_records.json") or []
+    kritik_risk = sum(1 for r in risk if r.get("behavioral_risk_score", 0) >= 70)
+
+    # Odev
+    odevler = adapter.load("akademik/odevler.json") or []
+    bugun_odev = sum(1 for o in odevler if o.get("verilis_tarihi", "").startswith(today))
+
+    return {
+        "tarih": today,
+        "gun": gun_adi,
+        "gun_basi": {
+            "aktif_ogrenci": aktif_ogrenci,
+            "aktif_ogretmen": aktif_ogretmen,
+            "bugun_etkinlik": len(bugun_etk),
+            "bugun_randevu": len(bugun_randevu),
+            "bekleyen_ihbar": yeni_ihbar,
+            "kritik_risk": kritik_risk,
+            "etkinlikler": [{"baslik": e.get("baslik"), "konum": e.get("konum")} for e in bugun_etk],
+            "randevular": [{"saat": r.get("saat"), "veli": r.get("veli_adi"),
+                           "ogretmen": r.get("ogretmen_adi"), "konu": r.get("konu")}
+                          for r in bugun_randevu],
+        },
+        "gun_sonu": {
+            "devamsiz": devamsiz,
+            "gec": gec,
+            "yoklama_alinan": len(set(a.get("student_id") for a in bugun_att)),
+            "mood_ortalama": mood_ort,
+            "mood_katilim": len(bugun_mood),
+            "verilen_odev": bugun_odev,
+        },
+    }
+
+
+# ══════════════════════════════════════════════════════════════
+# KAYIT MODULU OZET
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/kayit-ozet")
+async def kayit_ozet(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Kayit modulu pipeline ozeti — bugun + toplam."""
+    _require_yonetici(user)
+    today = date.today().isoformat()
+
+    adaylar = adapter.load("kayit_modulu/kayit_adaylar.json") or []
+
+    # Asama dagilimi
+    from collections import Counter
+    asama_sayilari = Counter(a.get("asama", "?") for a in adaylar)
+
+    # Bugun aranan
+    bugun_aranan = 0
+    bugun_gorusme = 0
+    bugun_randevu = 0
+    bugun_kayit = 0
+    toplam_veli = len(set(f"{a.get('veli_adi','')} {a.get('veli_soyadi','')}" for a in adaylar))
+
+    for a in adaylar:
+        aramalar = a.get("aramalar") or []
+        for ar in aramalar:
+            if ar.get("tarih", "").startswith(today):
+                bugun_aranan += 1
+                break
+
+        gorusmeler = a.get("gorusmeler") or []
+        for g in gorusmeler:
+            if g.get("tarih", "").startswith(today):
+                bugun_gorusme += 1
+                break
+
+    # Bugun randevu (kayit amaçlı)
+    randevular = adapter.load("akademik/veli_randevular.json") or []
+    bugun_randevu = sum(1 for r in randevular if r.get("tarih") == today)
+
+    # Bugun kayit olan (asama=kesin_kayit, son guncelleme bugün)
+    bugun_kayit = sum(1 for a in adaylar
+                     if a.get("asama") == "kesin_kayit"
+                     and any(g.get("tarih", "").startswith(today)
+                            for g in (a.get("gorusmeler") or [])))
+
+    return {
+        "pipeline": {
+            "aday": asama_sayilari.get("aday", 0),
+            "arandi": asama_sayilari.get("arandi", 0),
+            "randevu": asama_sayilari.get("randevu", 0),
+            "gorusme": asama_sayilari.get("gorusme", 0),
+            "fiyat_verildi": asama_sayilari.get("fiyat_verildi", 0),
+            "sozlesme": asama_sayilari.get("sozlesme", 0),
+            "kesin_kayit": asama_sayilari.get("kesin_kayit", 0),
+            "olumsuz": asama_sayilari.get("olumsuz", 0),
+        },
+        "bugun": {
+            "aranan": bugun_aranan,
+            "gorusme": bugun_gorusme,
+            "randevu": bugun_randevu,
+            "kayit": bugun_kayit,
+        },
+        "toplam": {
+            "aday_sayisi": len(adaylar),
+            "veli_sayisi": toplam_veli,
+            "kesin_kayit": asama_sayilari.get("kesin_kayit", 0),
+            "olumsuz": asama_sayilari.get("olumsuz", 0),
+            "donusum_orani": round(
+                asama_sayilari.get("kesin_kayit", 0) / max(len(adaylar), 1) * 100, 1
+            ),
+        },
+    }
+
+
 @router.get("/randevular")
 async def randevular(
     user: Annotated[dict, Depends(get_current_user)],

@@ -165,9 +165,19 @@ class _YoneticiHomePageState extends ConsumerState<YoneticiHomePage> {
                     childAspectRatio: 1.3,
                     children: [
                       _QCard(
+                        icon: Icons.wb_sunny, title: 'Gün Raporu',
+                        subtitle: 'Başı + sonu', color: AppColors.gold,
+                        onTap: () => context.push('/yonetici/gun-raporu'),
+                      ),
+                      _QCard(
                         icon: Icons.today, title: 'Bugün Okulda',
                         subtitle: 'Ders + etkinlik', color: AppColors.info,
                         onTap: () => context.push('/yonetici/bugun-okulda'),
+                      ),
+                      _QCard(
+                        icon: Icons.app_registration, title: 'Kayıt Özeti',
+                        subtitle: 'Pipeline + bugün', color: AppColors.primary,
+                        onTap: () => context.push('/yonetici/kayit-ozet'),
                       ),
                       _QCard(
                         icon: Icons.account_balance_wallet, title: 'Bütçe',

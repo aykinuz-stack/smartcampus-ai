@@ -36,6 +36,8 @@ import 'features/yonetici/onaylar_page.dart';
 import 'features/yonetici/bugun_okulda_page.dart';
 import 'features/yonetici/butce_page.dart';
 import 'features/yonetici/randevular_page.dart';
+import 'features/yonetici/gun_raporu_page.dart';
+import 'features/yonetici/kayit_ozet_page.dart';
 
 
 class SmartCampusApp extends ConsumerWidget {
@@ -139,6 +141,8 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/yonetici/bugun-okulda', builder: (_, __) => const BugunOkuldaPage()),
         GoRoute(path: '/yonetici/butce', builder: (_, __) => const ButcePage()),
         GoRoute(path: '/yonetici/randevular', builder: (_, __) => const YoneticiRandevularPage()),
+        GoRoute(path: '/yonetici/gun-raporu', builder: (_, __) => const GunRaporuPage()),
+        GoRoute(path: '/yonetici/kayit-ozet', builder: (_, __) => const KayitOzetPage()),
         // Fallback
         GoRoute(path: '/home', builder: (_, __) => const _PlaceholderPage(title: 'Ana Sayfa')),
       ],
