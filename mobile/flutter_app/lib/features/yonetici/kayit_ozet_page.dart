@@ -90,11 +90,115 @@ class _KayitOzetPageState extends ConsumerState<KayitOzetPage> {
               _PipelineBar(label: 'Sözleşme', val: pipeline['sozlesme'] ?? 0, total: toplam['aday_sayisi'] ?? 1, color: AppColors.info),
               _PipelineBar(label: 'Kesin Kayıt ✓', val: pipeline['kesin_kayit'] ?? 0, total: toplam['aday_sayisi'] ?? 1, color: AppColors.success),
               _PipelineBar(label: 'Olumsuz ✗', val: pipeline['olumsuz'] ?? 0, total: toplam['aday_sayisi'] ?? 1, color: AppColors.danger),
+
+              const SizedBox(height: 20),
+
+              // ARANACAK LİSTESİ
+              _DetayBolum(
+                baslik: '📞 Aranacak Kişiler',
+                color: AppColors.info,
+                liste: (d['aranacak_liste'] as List?) ?? [],
+                satirBuilder: (item) => ListTile(
+                  dense: true,
+                  leading: const Icon(Icons.phone, color: AppColors.info, size: 18),
+                  title: Text('${item['veli']}', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
+                  subtitle: Text('${item['ogrenci']} · ${item['telefon']}', style: const TextStyle(fontSize: 11)),
+                  trailing: Text(item['asama'] ?? '', style: const TextStyle(fontSize: 10, color: AppColors.textSecondaryDark)),
+                ),
+              ),
+
+              // GECİKEN TAKİP
+              _DetayBolum(
+                baslik: '⏳ Geciken Takip',
+                color: AppColors.warning,
+                liste: (d['geciken_takip'] as List?) ?? [],
+                satirBuilder: (item) => ListTile(
+                  dense: true,
+                  leading: const Icon(Icons.access_time, color: AppColors.warning, size: 18),
+                  title: Text('${item['veli']}', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
+                  subtitle: Text('${item['ogrenci']} · Son: ${item['son_islem']}', style: const TextStyle(fontSize: 11)),
+                  trailing: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                    decoration: BoxDecoration(color: AppColors.warning.withOpacity(0.15), borderRadius: BorderRadius.circular(4)),
+                    child: Text(item['asama'] ?? '', style: const TextStyle(fontSize: 9, color: AppColors.warning)),
+                  ),
+                ),
+              ),
+
+              // BUGÜN RANDEVU
+              _DetayBolum(
+                baslik: '📅 Bugünkü Randevular',
+                color: AppColors.gold,
+                liste: (d['bugun_randevu_liste'] as List?) ?? [],
+                satirBuilder: (item) => ListTile(
+                  dense: true,
+                  leading: Container(
+                    padding: const EdgeInsets.all(6),
+                    decoration: BoxDecoration(color: AppColors.gold.withOpacity(0.15), borderRadius: BorderRadius.circular(6)),
+                    child: Text(item['saat'] ?? '', style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.bold, fontSize: 11)),
+                  ),
+                  title: Text('${item['veli']}', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
+                  subtitle: Text('${item['konu']} · ${item['ogretmen']}', style: const TextStyle(fontSize: 11)),
+                ),
+              ),
+
+              // BUGÜN TAMAMLANAN
+              _DetayBolum(
+                baslik: '✅ Bugün Tamamlanan',
+                color: AppColors.success,
+                liste: (d['bugun_tamamlanan'] as List?) ?? [],
+                satirBuilder: (item) {
+                  IconData ic;
+                  switch (item['islem']) {
+                    case 'arama': ic = Icons.phone; break;
+                    case 'gorusme': ic = Icons.handshake; break;
+                    default: ic = Icons.check_circle;
+                  }
+                  return ListTile(
+                    dense: true,
+                    leading: Icon(ic, color: AppColors.success, size: 18),
+                    title: Text('${item['veli']}', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
+                    subtitle: Text('${item['ogrenci']} · ${item['islem']}', style: const TextStyle(fontSize: 11)),
+                  );
+                },
+              ),
             ]),
           );
         },
       ),
     );
+  }
+}
+
+
+class _DetayBolum extends StatelessWidget {
+  final String baslik;
+  final Color color;
+  final List liste;
+  final Widget Function(Map<String, dynamic>) satirBuilder;
+  const _DetayBolum({required this.baslik, required this.color,
+                     required this.liste, required this.satirBuilder});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      const SizedBox(height: 12),
+      Row(children: [
+        Text(baslik, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: color)),
+        const Spacer(),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+          decoration: BoxDecoration(color: color.withOpacity(0.15), borderRadius: BorderRadius.circular(6)),
+          child: Text('${liste.length}', style: TextStyle(color: color, fontWeight: FontWeight.bold, fontSize: 12)),
+        ),
+      ]),
+      const SizedBox(height: 6),
+      if (liste.isEmpty)
+        Padding(padding: const EdgeInsets.all(12),
+            child: Text('Yok', style: TextStyle(color: Colors.grey[500])))
+      else
+        ...liste.take(10).map((item) => satirBuilder(Map<String, dynamic>.from(item as Map))),
+    ]);
   }
 }
 

@@ -534,6 +534,46 @@ async def kayit_ozet(
                 asama_sayilari.get("kesin_kayit", 0) / max(len(adaylar), 1) * 100, 1
             ),
         },
+        # Detay listeleri
+        "aranacak_liste": [
+            {"veli": f"{a.get('veli_adi','')} {a.get('veli_soyadi','')}".strip(),
+             "ogrenci": a.get("ogrenci_adi", ""),
+             "telefon": a.get("veli_telefon", ""),
+             "asama": a.get("asama", ""),
+             "son_arama": (a.get("aramalar") or [{}])[-1].get("tarih", "")[:10] if a.get("aramalar") else "-"}
+            for a in adaylar
+            if a.get("asama") in ("aday", "arandi")
+            and a.get("asama") != "olumsuz"
+        ][:20],
+        "geciken_takip": [
+            {"veli": f"{a.get('veli_adi','')} {a.get('veli_soyadi','')}".strip(),
+             "ogrenci": a.get("ogrenci_adi", ""),
+             "asama": a.get("asama", ""),
+             "son_islem": (a.get("aramalar") or a.get("gorusmeler") or [{}])[-1].get("tarih", "")[:10]
+                          if (a.get("aramalar") or a.get("gorusmeler")) else "-"}
+            for a in adaylar
+            if a.get("asama") in ("arandi", "randevu", "gorusme", "fiyat_verildi")
+            and a.get("asama") != "olumsuz"
+            and a.get("asama") != "kesin_kayit"
+        ][:15],
+        "bugun_randevu_liste": [
+            {"saat": r.get("saat", ""),
+             "veli": r.get("veli_adi", ""),
+             "ogretmen": r.get("ogretmen_adi", ""),
+             "konu": r.get("konu", ""),
+             "durum": r.get("durum", "")}
+            for r in randevular if r.get("tarih") == today
+        ],
+        "bugun_tamamlanan": [
+            {"veli": f"{a.get('veli_adi','')} {a.get('veli_soyadi','')}".strip(),
+             "ogrenci": a.get("ogrenci_adi", ""),
+             "islem": "arama" if any(ar.get("tarih", "").startswith(today) for ar in (a.get("aramalar") or []))
+                      else "gorusme" if any(g.get("tarih", "").startswith(today) for g in (a.get("gorusmeler") or []))
+                      else "kayit"}
+            for a in adaylar
+            if any(ar.get("tarih", "").startswith(today) for ar in (a.get("aramalar") or []))
+            or any(g.get("tarih", "").startswith(today) for g in (a.get("gorusmeler") or []))
+        ][:20],
     }
 
 
