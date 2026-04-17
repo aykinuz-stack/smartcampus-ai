@@ -250,6 +250,11 @@ class _YoneticiHomePageState extends ConsumerState<YoneticiHomePage> {
                         onTap: () => context.push('/yonetici/sosyal-etkinlik'),
                       ),
                       _QCard(
+                        icon: Icons.translate, title: 'Dil Gelişimi',
+                        subtitle: '5 dil · 104+ ders', color: AppColors.info,
+                        onTap: () => context.push('/dil-gelisimi'),
+                      ),
+                      _QCard(
                         icon: Icons.chat, title: 'Mesajlar',
                         subtitle: 'Gelen/Giden/Yeni', color: AppColors.primary,
                         onTap: () => context.push('/messages'),

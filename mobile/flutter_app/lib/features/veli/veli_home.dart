@@ -217,6 +217,13 @@ class _VeliHomePageState extends ConsumerState<VeliHomePage> {
                     onTap: () => context.push('/smarti'),
                   ),
                   _QuickCard(
+                    icon: Icons.translate,
+                    title: 'Dil Gelişimi',
+                    subtitle: '5 dil · 104+ ders',
+                    color: AppColors.info,
+                    onTap: () => context.push('/dil-gelisimi'),
+                  ),
+                  _QuickCard(
                     icon: Icons.shield,
                     title: 'İhbar Hattı',
                     subtitle: 'Anonim bildirim',

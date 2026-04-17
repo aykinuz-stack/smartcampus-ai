@@ -178,6 +178,13 @@ class _OgretmenHomePageState extends ConsumerState<OgretmenHomePage> {
                     onTap: () => context.push('/messages'),
                   ),
                   _QuickCard(
+                    icon: Icons.translate,
+                    title: 'Dil Gelişimi',
+                    subtitle: '5 dil · 104+ ders',
+                    color: AppColors.info,
+                    onTap: () => context.push('/dil-gelisimi'),
+                  ),
+                  _QuickCard(
                     icon: Icons.smart_toy,
                     title: 'Ders Planı AI',
                     subtitle: 'Smarti ile planla',

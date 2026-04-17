@@ -108,6 +108,16 @@ class RehberHomePage extends ConsumerWidget {
                   subtitle: 'İletişim', color: AppColors.success,
                   onTap: () => context.push('/messages'),
                 ),
+                _QCard(
+                  icon: Icons.translate, title: 'Dil Gelişimi',
+                  subtitle: '5 dil · 104+ ders', color: AppColors.info,
+                  onTap: () => context.push('/dil-gelisimi'),
+                ),
+                _QCard(
+                  icon: Icons.smart_toy, title: 'Smarti AI',
+                  subtitle: 'Asistan', color: AppColors.primary,
+                  onTap: () => context.push('/smarti'),
+                ),
               ],
             ),
           ],
