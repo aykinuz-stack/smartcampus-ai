@@ -17,6 +17,7 @@ import 'features/veli/kapsul_page.dart';
 import 'features/veli/randevu_page.dart';
 import 'features/veli/belge_page.dart';
 import 'features/veli/geri_bildirim_page.dart';
+import 'features/veli/cocuk_detay_page.dart';
 import 'features/ogretmen/ogretmen_home.dart';
 import 'features/ogretmen/yoklama_page.dart';
 import 'features/ogretmen/qr_yoklama_page.dart';
@@ -107,6 +108,16 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/veli/randevu', builder: (_, __) => const RandevuPage()),
         GoRoute(path: '/veli/belge', builder: (_, __) => const BelgePage()),
         GoRoute(path: '/veli/geri-bildirim', builder: (_, __) => const GeriBildirimPage()),
+        GoRoute(
+          path: '/veli/cocuk-detay',
+          builder: (ctx, state) {
+            final extra = state.extra as Map<String, dynamic>? ?? {};
+            return CocukDetayPage(
+              studentId: extra['studentId'] ?? '',
+              studentName: extra['studentName'] ?? 'Öğrenci',
+            );
+          },
+        ),
         // OGRETMEN rotaları
         GoRoute(path: '/ogretmen', builder: (_, __) => const OgretmenHomePage()),
         GoRoute(path: '/ogretmen/yoklama', builder: (_, __) => const YoklamaPage()),

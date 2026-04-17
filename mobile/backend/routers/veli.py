@@ -378,6 +378,255 @@ async def belge_talep(
 # GERI BILDIRIM
 # ══════════════════════════════════════════════════════════════
 
+# ══════════════════════════════════════════════════════════════
+# COCUK DETAY — Yoklama, Not, Sinav, Karne, Odev
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/cocuk/{student_id}/yoklama")
+async def cocuk_yoklama(
+    student_id: str,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Cocugun yoklama durumu — gunluk + aylik ozet."""
+    sid = _validate_student_id(user, student_id)
+    all_att = adapter.load(DataPaths.ATTENDANCE) or []
+    mine = [a for a in all_att if a.get("student_id") == sid]
+    mine.sort(key=lambda a: a.get("tarih", ""), reverse=True)
+
+    today = date.today().isoformat()
+    this_month = today[:7]
+
+    bugun = [a for a in mine if a.get("tarih") == today]
+    bu_ay = [a for a in mine if a.get("tarih", "")[:7] == this_month]
+
+    ozursuz = sum(1 for a in mine if a.get("turu", "").lower() in ("devamsiz", "ozursuz"))
+    ozurlu = sum(1 for a in mine if a.get("turu", "").lower() in ("izinli", "raporlu", "ozurlu"))
+    gec = sum(1 for a in mine if a.get("turu", "").lower() == "gec")
+    bu_ay_ozursuz = sum(1 for a in bu_ay if a.get("turu", "").lower() in ("devamsiz", "ozursuz"))
+
+    return {
+        "bugun": [{"ders": a.get("ders"), "saat": a.get("ders_saati"),
+                   "durum": a.get("turu")} for a in bugun],
+        "bu_ay_ozursuz": bu_ay_ozursuz,
+        "toplam_ozursuz": ozursuz,
+        "toplam_ozurlu": ozurlu,
+        "toplam_gec": gec,
+        "son_kayitlar": [
+            {"tarih": a.get("tarih"), "ders": a.get("ders"),
+             "saat": a.get("ders_saati"), "durum": a.get("turu")}
+            for a in mine[:30]
+        ],
+    }
+
+
+@router.get("/cocuk/{student_id}/notlar")
+async def cocuk_notlar(
+    student_id: str,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+    donem: str | None = None,
+):
+    """Cocugun ders notlari — ders bazli ortalama + trend."""
+    sid = _validate_student_id(user, student_id)
+    all_grades = adapter.load(DataPaths.GRADES) or []
+    mine = [g for g in all_grades if g.get("student_id") == sid]
+    if donem:
+        mine = [g for g in mine if g.get("donem") == donem]
+    mine.sort(key=lambda g: g.get("tarih", ""), reverse=True)
+
+    # Ders bazli agrege
+    ders_data: dict[str, list] = {}
+    for g in mine:
+        d = g.get("ders", "")
+        ders_data.setdefault(d, [])
+        ders_data[d].append(float(g.get("puan", 0) or 0))
+
+    ders_kartlari = []
+    for ders, puanlar in sorted(ders_data.items()):
+        ort = round(sum(puanlar) / len(puanlar), 1)
+        ders_kartlari.append({
+            "ders": ders,
+            "ortalama": ort,
+            "not_sayisi": len(puanlar),
+            "en_yuksek": max(puanlar),
+            "en_dusuk": min(puanlar),
+            "durum": "basarili" if ort >= 50 else "riskli",
+        })
+
+    tum_puanlar = [float(g.get("puan", 0) or 0) for g in mine]
+    genel_ort = round(sum(tum_puanlar) / len(tum_puanlar), 1) if tum_puanlar else 0.0
+
+    return {
+        "genel_ortalama": genel_ort,
+        "toplam_not": len(mine),
+        "ders_kartlari": ders_kartlari,
+        "son_notlar": [
+            {"ders": g.get("ders"), "puan": g.get("puan"), "tur": g.get("not_turu"),
+             "sira": g.get("not_sirasi"), "tarih": g.get("tarih"),
+             "donem": g.get("donem")}
+            for g in mine[:20]
+        ],
+    }
+
+
+@router.get("/cocuk/{student_id}/sinav-sonuclari")
+async def cocuk_sinav_sonuclari(
+    student_id: str,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Cocugun sinav/deneme sonuclari."""
+    sid = _validate_student_id(user, student_id)
+
+    # OD modulunden sinavlar
+    sinav_sonuclari = adapter.load("olcme/results.json") or []
+    mine = [s for s in sinav_sonuclari if s.get("student_id") == sid]
+    mine.sort(key=lambda s: s.get("tarih", s.get("created_at", "")), reverse=True)
+
+    # Yoksa grades'den yazili notlari al
+    if not mine:
+        all_grades = adapter.load(DataPaths.GRADES) or []
+        yazili = [g for g in all_grades
+                 if g.get("student_id") == sid
+                 and g.get("not_turu", "").lower() in ("yazili", "sinav", "deneme")]
+        yazili.sort(key=lambda g: g.get("tarih", ""), reverse=True)
+        return {
+            "kaynak": "notlar",
+            "toplam": len(yazili),
+            "sonuclar": [
+                {"ders": g.get("ders"), "puan": g.get("puan"),
+                 "tur": g.get("not_turu"), "tarih": g.get("tarih"),
+                 "donem": g.get("donem")}
+                for g in yazili[:20]
+            ],
+        }
+
+    return {
+        "kaynak": "olcme_degerlendirme",
+        "toplam": len(mine),
+        "sonuclar": mine[:20],
+    }
+
+
+@router.get("/cocuk/{student_id}/karne")
+async def cocuk_karne(
+    student_id: str,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Cocugun tum dersleri icin karne — her ders ortalamasi + genel."""
+    sid = _validate_student_id(user, student_id)
+    students = adapter.load(DataPaths.STUDENTS) or []
+    s = next((x for x in students if x.get("id") == sid), None)
+    if not s:
+        from fastapi import HTTPException
+        raise HTTPException(404, "Ogrenci yok")
+
+    all_grades = adapter.load(DataPaths.GRADES) or []
+    mine = [g for g in all_grades if g.get("student_id") == sid]
+
+    # Donem bazli
+    donemler = {}
+    for g in mine:
+        d = g.get("donem", "Genel")
+        donemler.setdefault(d, {})
+        ders = g.get("ders", "")
+        donemler[d].setdefault(ders, [])
+        donemler[d][ders].append(float(g.get("puan", 0) or 0))
+
+    karne = {}
+    for donem, dersler in donemler.items():
+        karne[donem] = {
+            "dersler": [
+                {
+                    "ders": ders,
+                    "ortalama": round(sum(p) / len(p), 1),
+                    "not_sayisi": len(p),
+                    "durum": "basarili" if sum(p) / len(p) >= 50 else "riskli",
+                }
+                for ders, p in sorted(dersler.items())
+            ],
+            "genel_ortalama": round(
+                sum(sum(p) / len(p) for p in dersler.values()) / len(dersler), 1
+            ) if dersler else 0.0,
+        }
+
+    # Devamsizlik ozet
+    all_att = adapter.load(DataPaths.ATTENDANCE) or []
+    ozursuz = sum(1 for a in all_att
+                 if a.get("student_id") == sid
+                 and a.get("turu", "").lower() in ("devamsiz", "ozursuz"))
+
+    return {
+        "ogrenci": {
+            "ad_soyad": f"{s.get('ad', '')} {s.get('soyad', '')}".strip(),
+            "sinif": str(s.get("sinif", "")),
+            "sube": s.get("sube", ""),
+            "numara": str(s.get("numara", "")),
+        },
+        "karne": karne,
+        "toplam_devamsizlik": ozursuz,
+    }
+
+
+@router.get("/cocuk/{student_id}/odevler")
+async def cocuk_odevler(
+    student_id: str,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Cocugun odev durumu — bekleyen + teslim edilen."""
+    sid = _validate_student_id(user, student_id)
+
+    students = adapter.load(DataPaths.STUDENTS) or []
+    s = next((x for x in students if x.get("id") == sid), None)
+    if not s:
+        from fastapi import HTTPException
+        raise HTTPException(404, "Ogrenci yok")
+
+    sinif, sube = str(s.get("sinif", "")), s.get("sube", "")
+    today = date.today().isoformat()
+
+    all_odev = adapter.load(DataPaths.HOMEWORK) or []
+    mine_odev = [o for o in all_odev
+                if str(o.get("sinif", "")) == sinif and o.get("sube", "") == sube]
+
+    all_teslim = adapter.load(DataPaths.HOMEWORK_SUBMISSIONS) or []
+    mine_teslim = {t.get("odev_id"): t for t in all_teslim if t.get("student_id") == sid}
+
+    bekleyen, geciken, teslim_edilen = [], [], []
+    for o in mine_odev:
+        teslim = mine_teslim.get(o.get("id"))
+        teslim_tarihi = o.get("teslim_tarihi", "")
+        item = {
+            "id": o.get("id"),
+            "baslik": o.get("baslik"),
+            "ders": o.get("ders"),
+            "ogretmen": o.get("ogretmen_adi"),
+            "teslim_tarihi": teslim_tarihi,
+            "teslim_edildi": teslim is not None,
+            "puan": teslim.get("puan") if teslim else None,
+            "gec": teslim.get("gec_teslim") if teslim else None,
+        }
+        if teslim:
+            teslim_edilen.append(item)
+        elif teslim_tarihi and teslim_tarihi < today:
+            geciken.append(item)
+        else:
+            bekleyen.append(item)
+
+    return {
+        "bekleyen": len(bekleyen),
+        "geciken": len(geciken),
+        "teslim_edilen": len(teslim_edilen),
+        "toplam": len(mine_odev),
+        "bekleyen_liste": bekleyen[:20],
+        "geciken_liste": geciken[:10],
+        "teslim_liste": teslim_edilen[:20],
+    }
+
+
 @router.post("/geri-bildirim", status_code=201)
 async def geri_bildirim(
     req: GeriBildirimRequest,

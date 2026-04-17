@@ -201,7 +201,12 @@ class _CocukKart extends ConsumerWidget {
     final riskVar = cocuk['risk_var'] as bool? ?? false;
     final riskSeviye = cocuk['risk_seviyesi'] as String? ?? '';
 
-    return Card(
+    return InkWell(
+      onTap: () {
+        context.push('/veli/cocuk-detay',
+          extra: {'studentId': cocuk['student_id'], 'studentName': cocuk['ad_soyad']});
+      },
+      child: Card(
       margin: const EdgeInsets.only(bottom: 12),
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -273,6 +278,7 @@ class _CocukKart extends ConsumerWidget {
           ],
         ),
       ),
+    ),  // InkWell kapanisi
     );
   }
 }
