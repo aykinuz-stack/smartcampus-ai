@@ -733,6 +733,90 @@ async def zaman_cizelgesi(
     }
 
 
+# ══════════════════════════════════════════════════════════════
+# AKTIF CALISAN LISTESI
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/calisanlar")
+async def calisanlar(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Aktif calisan (ogretmen) listesi."""
+    _require_yonetici(user)
+    teachers = adapter.load("akademik/teachers.json") or []
+
+    from collections import Counter
+    brans_dag = Counter(t.get("brans", "?") for t in teachers)
+
+    return {
+        "toplam": len(teachers),
+        "aktif": sum(1 for t in teachers if t.get("durum") != "pasif"),
+        "brans_dagilimi": dict(brans_dag.most_common()),
+        "liste": [
+            {"id": t.get("id"), "ad_soyad": f"{t.get('ad','')} {t.get('soyad','')}".strip(),
+             "brans": t.get("brans", ""), "email": t.get("email", ""),
+             "telefon": t.get("telefon", ""), "durum": t.get("durum", "aktif")}
+            for t in sorted(teachers, key=lambda x: f"{x.get('ad','')} {x.get('soyad','')}")
+        ],
+    }
+
+
+# ══════════════════════════════════════════════════════════════
+# SINIF LISTELERI
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/sinif-listeleri")
+async def sinif_listeleri(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+    sinif: str | None = None,
+    sube: str | None = None,
+):
+    """Sinif bazli ogrenci listeleri."""
+    _require_yonetici(user)
+    students = adapter.load("akademik/students.json") or []
+    aktif = [s for s in students if s.get("durum") == "aktif"]
+
+    if sinif:
+        aktif = [s for s in aktif if str(s.get("sinif", "")) == sinif]
+    if sube:
+        aktif = [s for s in aktif if s.get("sube", "") == sube]
+
+    # Sinif bazli grupla
+    from collections import defaultdict
+    sinif_gruplari: dict[str, list] = defaultdict(list)
+    for s in aktif:
+        key = f"{s.get('sinif','')}/{s.get('sube','')}"
+        sinif_gruplari[key].append(s)
+
+    siniflar = []
+    for key in sorted(sinif_gruplari.keys()):
+        ogr = sinif_gruplari[key]
+        ogr.sort(key=lambda x: int(x.get("numara", 0) or 0))
+        siniflar.append({
+            "sinif_sube": key,
+            "ogrenci_sayisi": len(ogr),
+            "kiz": sum(1 for o in ogr if o.get("cinsiyet", "").lower() in ("kiz", "k")),
+            "erkek": sum(1 for o in ogr if o.get("cinsiyet", "").lower() in ("erkek", "e")),
+            "ogrenciler": [
+                {"id": o.get("id"), "numara": o.get("numara", ""),
+                 "ad_soyad": f"{o.get('ad','')} {o.get('soyad','')}".strip(),
+                 "cinsiyet": o.get("cinsiyet", ""), "veli": o.get("veli_adi", "")}
+                for o in ogr
+            ],
+        })
+
+    tum_siniflar = sorted(sinif_gruplari.keys())
+
+    return {
+        "toplam_ogrenci": len(aktif),
+        "toplam_sinif": len(sinif_gruplari),
+        "siniflar": siniflar,
+        "sinif_listesi": tum_siniflar,
+    }
+
+
 @router.get("/randevular")
 async def randevular(
     user: Annotated[dict, Depends(get_current_user)],

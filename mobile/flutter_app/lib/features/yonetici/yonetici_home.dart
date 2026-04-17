@@ -190,6 +190,16 @@ class _YoneticiHomePageState extends ConsumerState<YoneticiHomePage> {
                         onTap: () => context.push('/yonetici/randevular'),
                       ),
                       _QCard(
+                        icon: Icons.people, title: 'Çalışanlar',
+                        subtitle: 'Aktif personel', color: AppColors.primary,
+                        onTap: () => context.push('/yonetici/calisanlar'),
+                      ),
+                      _QCard(
+                        icon: Icons.class_, title: 'Sınıf Listeleri',
+                        subtitle: 'Öğrenci listeleri', color: AppColors.info,
+                        onTap: () => context.push('/yonetici/sinif-listeleri'),
+                      ),
+                      _QCard(
                         icon: Icons.warning_amber, title: 'Erken Uyarı',
                         subtitle: 'Bütüncül Risk', color: AppColors.danger,
                         onTap: () => context.push('/yonetici/erken-uyari'),
