@@ -49,9 +49,27 @@ jobs:
           MANIFEST="android/app/src/main/AndroidManifest.xml"
           # Permissions ekle (yoksa)
           if ! grep -q "android.permission.INTERNET" $MANIFEST; then
-            sed -i '/<manifest/a \    <uses-permission android:name="android.permission.INTERNET" />\n    <uses-permission android:name="android.permission.CAMERA" />' $MANIFEST
+            sed -i '/<manifest/a \    <uses-permission android:name="android.permission.INTERNET" />\n    <uses-permission android:name="android.permission.CAMERA" />\n    <uses-permission android:name="android.permission.RECORD_AUDIO" />' $MANIFEST
           fi
           cat $MANIFEST
+
+      - name: build.gradle — minSdkVersion 23'e yukselt
+        working-directory: mobile/flutter_app
+        run: |
+          BUILD_GRADLE="android/app/build.gradle"
+          if [ -f "$BUILD_GRADLE" ]; then
+            # flutter.minSdkVersion yerine 23 koy
+            sed -i 's|minSdkVersion flutter.minSdkVersion|minSdkVersion 23|g' $BUILD_GRADLE
+            sed -i 's|minSdk = flutter.minSdkVersion|minSdk = 23|g' $BUILD_GRADLE
+            sed -i 's|minSdk flutter.minSdkVersion|minSdk 23|g' $BUILD_GRADLE
+            grep -n "minSdk" $BUILD_GRADLE || echo "minSdk satiri bulunamadi"
+          fi
+          # Kotlin (gradle.kts) varsa onu da guncelle
+          BUILD_GRADLE_KTS="android/app/build.gradle.kts"
+          if [ -f "$BUILD_GRADLE_KTS" ]; then
+            sed -i 's|minSdk = flutter.minSdkVersion|minSdk = 23|g' $BUILD_GRADLE_KTS
+            grep -n "minSdk" $BUILD_GRADLE_KTS || echo "minSdk (kts) bulunamadi"
+          fi
 
       - name: Release APK build
         working-directory: mobile/flutter_app
