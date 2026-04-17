@@ -915,15 +915,24 @@ async def dil_gelisimi(
         "ispanyolca": "fono_ispanyolca/fono_ispanyolca_lessons.json",
     }
 
-    # Dosyayi bul (tenant veya global)
+    # Dosyayi bul — birden fazla yol dene
     rel = dil_map.get(dil, dil_map["ingilizce"])
-    data = adapter.load(rel)
+    data = None
+    search_paths = [
+        base / rel,
+        Path(__file__).resolve().parent.parent.parent.parent / "data" / rel,
+    ]
+    for sp in search_paths:
+        if sp.exists():
+            try:
+                with open(sp, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if data:
+                    break
+            except Exception:
+                pass
     if not data:
-        # Global data klasorunden dene
-        global_path = Path(__file__).resolve().parent.parent.parent.parent / "data" / rel
-        if global_path.exists():
-            with open(global_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
+        data = {}
 
     lessons = data.get("lessons", []) if isinstance(data, dict) else data if isinstance(data, list) else []
 
@@ -940,13 +949,13 @@ async def dil_gelisimi(
             "alistirma_sayisi": len(l.get("exercises", [])),
         })
 
-    # Mevcut diller
+    # Mevcut diller — tum yollari tara
     diller = []
     for dk, dp in dil_map.items():
-        p = Path(adapter.base) / dp
-        gp = Path(__file__).resolve().parent.parent.parent.parent / "data" / dp
-        if p.exists() or gp.exists():
-            diller.append(dk)
+        for sp in [base / dp, Path(__file__).resolve().parent.parent.parent.parent / "data" / dp]:
+            if sp.exists():
+                diller.append(dk)
+                break
 
     return {
         "dil": dil,
@@ -976,12 +985,16 @@ async def dil_ders_detay(
     }
 
     rel = dil_map.get(dil, dil_map["ingilizce"])
-    data = adapter.load(rel)
-    if not data:
-        global_path = Path(__file__).resolve().parent.parent.parent.parent / "data" / rel
-        if global_path.exists():
-            with open(global_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
+    data = None
+    base = Path(adapter.base)
+    for sp in [base / rel, Path(__file__).resolve().parent.parent.parent.parent / "data" / rel]:
+        if sp.exists():
+            try:
+                with open(sp, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if data: break
+            except Exception: pass
+    if not data: data = {}
 
     lessons = data.get("lessons", []) if isinstance(data, dict) else []
 
