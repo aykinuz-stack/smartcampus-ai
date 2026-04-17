@@ -165,6 +165,21 @@ class _YoneticiHomePageState extends ConsumerState<YoneticiHomePage> {
                     childAspectRatio: 1.3,
                     children: [
                       _QCard(
+                        icon: Icons.today, title: 'Bugün Okulda',
+                        subtitle: 'Ders + etkinlik', color: AppColors.info,
+                        onTap: () => context.push('/yonetici/bugun-okulda'),
+                      ),
+                      _QCard(
+                        icon: Icons.account_balance_wallet, title: 'Bütçe',
+                        subtitle: 'Gelir/gider akışı', color: AppColors.success,
+                        onTap: () => context.push('/yonetici/butce'),
+                      ),
+                      _QCard(
+                        icon: Icons.calendar_month, title: 'Randevular',
+                        subtitle: 'Bugün + yaklaşan', color: AppColors.gold,
+                        onTap: () => context.push('/yonetici/randevular'),
+                      ),
+                      _QCard(
                         icon: Icons.warning_amber, title: 'Erken Uyarı',
                         subtitle: 'Bütüncül Risk', color: AppColors.danger,
                         onTap: () => context.push('/yonetici/erken-uyari'),
@@ -175,13 +190,8 @@ class _YoneticiHomePageState extends ConsumerState<YoneticiHomePage> {
                         onTap: () => context.push('/yonetici/onaylar'),
                       ),
                       _QCard(
-                        icon: Icons.smart_toy, title: 'Smarti AI',
-                        subtitle: 'Yönetici asistanı', color: AppColors.primary,
-                        onTap: () => context.push('/smarti'),
-                      ),
-                      _QCard(
                         icon: Icons.chat, title: 'Mesajlar',
-                        subtitle: 'Toplu iletişim', color: AppColors.success,
+                        subtitle: 'Gelen/Giden/Yeni', color: AppColors.primary,
                         onTap: () => context.push('/messages'),
                       ),
                     ],

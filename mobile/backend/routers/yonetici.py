@@ -214,3 +214,209 @@ async def onay_aksiyon(
                 adapter.save(path, data)
                 return {"ok": True}
     raise HTTPException(404, "Onay istegi bulunamadi")
+
+
+# ══════════════════════════════════════════════════════════════
+# BUGUN OKULDA NE VAR?
+# ══════════════════════════════════════════════════════════════
+
+_GUN_MAP = {0: "Pazartesi", 1: "Sali", 2: "Carsamba", 3: "Persembe",
+           4: "Cuma", 5: "Cumartesi", 6: "Pazar"}
+
+
+@router.get("/bugun-okulda")
+async def bugun_okulda(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Gun basi — bugun okulda ne oluyor akisi."""
+    _require_yonetici(user)
+    today = date.today()
+    today_str = today.isoformat()
+    gun_adi = _GUN_MAP[today.weekday()]
+
+    # Ders programi (bugun olan dersler)
+    schedule = adapter.load("akademik/schedule.json") or []
+    bugun_dersler = [
+        s for s in schedule
+        if s.get("gun", "").lower() == gun_adi.lower()
+    ]
+    # Saate gore sirala
+    bugun_dersler.sort(key=lambda s: int(s.get("saat", 0) or 0))
+    # Unique sinif+saat
+    ders_ozet = {}
+    for s in bugun_dersler:
+        saat = int(s.get("saat", 0) or 0)
+        ders_ozet.setdefault(saat, [])
+        ders_ozet[saat].append({
+            "sinif": f"{s.get('sinif','')}/{s.get('sube','')}",
+            "ders": s.get("ders", ""),
+            "ogretmen": s.get("ogretmen_adi", ""),
+        })
+
+    # Bugunku etkinlik / duyurular
+    etkinlikler = adapter.load("akademik/etkinlik_duyurular.json") or []
+    bugun_etk = [
+        e for e in etkinlikler
+        if e.get("tarih", "").startswith(today_str)
+        and e.get("durum", "aktif") == "aktif"
+    ]
+
+    # Bugunku randevular
+    randevular = adapter.load("akademik/veli_randevular.json") or []
+    bugun_randevular = [
+        r for r in randevular
+        if r.get("tarih", "") == today_str
+        and r.get("durum", "") not in ("iptal",)
+    ]
+    bugun_randevular.sort(key=lambda r: r.get("saat", ""))
+
+    # Yoklama alinan sinif sayisi
+    att = adapter.load("akademik/attendance.json") or []
+    today_att = [a for a in att if a.get("tarih") == today_str]
+    yoklama_sinif_sayisi = len({(a.get("ders", ""), a.get("ders_saati", ""))
+                                for a in today_att})
+
+    # Bugunku devamsizlik
+    ozursuz = sum(1 for a in today_att
+                 if a.get("turu", "").lower() in ("devamsiz", "ozursuz"))
+
+    return {
+        "tarih": today_str,
+        "gun": gun_adi,
+        "ders_programi": [
+            {"saat": saat, "dersler": d}
+            for saat, d in sorted(ders_ozet.items())
+        ],
+        "etkinlikler": [
+            {"baslik": e.get("baslik"), "konum": e.get("konum", ""),
+             "tarih": e.get("tarih"), "tur": e.get("tur", "")}
+            for e in bugun_etk
+        ],
+        "randevular": [
+            {"saat": r.get("saat"), "veli": r.get("veli_adi"),
+             "ogretmen": r.get("ogretmen_adi"), "konu": r.get("konu"),
+             "durum": r.get("durum")}
+            for r in bugun_randevular
+        ],
+        "istatistik": {
+            "yoklama_alinan_sinif": yoklama_sinif_sayisi,
+            "bugun_devamsiz": ozursuz,
+            "toplam_ders_saati": len(bugun_dersler),
+        },
+    }
+
+
+# ══════════════════════════════════════════════════════════════
+# BUTCE — GUNLUK AKIS
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/butce-gunluk")
+async def butce_gunluk(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+    days: int = 30,
+):
+    """Son N gun gelir/gider akisi."""
+    _require_yonetici(user)
+    cutoff = (date.today() - timedelta(days=days)).isoformat()
+
+    # Gider kayitlari
+    gider = adapter.load("butce/gider_kayitlari.json") or []
+    gelir = adapter.load("butce/gelir_kayitlari.json") or []
+
+    gider_son = [g for g in gider if g.get("tarih", "") >= cutoff]
+    gelir_son = [g for g in gelir if g.get("tarih", "") >= cutoff]
+
+    # Gun bazli agrege
+    gun_agrege: dict[str, dict] = {}
+    for g in gelir_son:
+        t = g.get("tarih", "")[:10]
+        gun_agrege.setdefault(t, {"gelir": 0, "gider": 0})
+        gun_agrege[t]["gelir"] += float(g.get("tutar", 0) or 0)
+    for g in gider_son:
+        t = g.get("tarih", "")[:10]
+        gun_agrege.setdefault(t, {"gelir": 0, "gider": 0})
+        gun_agrege[t]["gider"] += float(g.get("tutar", 0) or 0)
+
+    gunluk_akis = sorted(
+        [{"tarih": t, **v, "net": v["gelir"] - v["gider"]}
+         for t, v in gun_agrege.items()],
+        key=lambda x: x["tarih"], reverse=True
+    )
+
+    toplam_gelir = sum(g["gelir"] for g in gun_agrege.values())
+    toplam_gider = sum(g["gider"] for g in gun_agrege.values())
+
+    # Son 10 islem (genel)
+    son_islemler = []
+    for g in (gelir_son[-10:])[::-1]:
+        son_islemler.append({
+            "tip": "gelir",
+            "tarih": g.get("tarih", "")[:10],
+            "kategori": g.get("kategori", ""),
+            "aciklama": g.get("aciklama", ""),
+            "tutar": float(g.get("tutar", 0) or 0),
+        })
+    for g in (gider_son[-10:])[::-1]:
+        son_islemler.append({
+            "tip": "gider",
+            "tarih": g.get("tarih", "")[:10],
+            "kategori": g.get("kategori", ""),
+            "aciklama": g.get("aciklama", ""),
+            "tutar": float(g.get("tutar", 0) or 0),
+        })
+    son_islemler.sort(key=lambda x: x["tarih"], reverse=True)
+
+    return {
+        "toplam_gelir": round(toplam_gelir, 2),
+        "toplam_gider": round(toplam_gider, 2),
+        "net": round(toplam_gelir - toplam_gider, 2),
+        "gunluk_akis": gunluk_akis[:30],
+        "son_islemler": son_islemler[:20],
+        "gun_sayisi": len(gun_agrege),
+    }
+
+
+# ══════════════════════════════════════════════════════════════
+# RANDEVU (yonetici icin tum randevular)
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/randevular")
+async def randevular(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Okuldaki tum randevular."""
+    _require_yonetici(user)
+    randevular = adapter.load("akademik/veli_randevular.json") or []
+    today = date.today().isoformat()
+
+    bugun = [r for r in randevular if r.get("tarih") == today]
+    yaklasilan = [r for r in randevular
+                 if r.get("tarih", "") > today
+                 and r.get("durum", "") not in ("iptal", "tamamlandi")]
+    bekleyen = [r for r in randevular if r.get("durum") == "beklemede"]
+
+    bugun.sort(key=lambda r: r.get("saat", ""))
+    yaklasilan.sort(key=lambda r: (r.get("tarih", ""), r.get("saat", "")))
+    bekleyen.sort(key=lambda r: r.get("tarih", ""))
+
+    def _item(r):
+        return {
+            "id": r.get("id"),
+            "student_id": r.get("student_id"),
+            "veli": r.get("veli_adi"),
+            "ogretmen": r.get("ogretmen_adi"),
+            "tarih": r.get("tarih"),
+            "saat": r.get("saat"),
+            "konu": r.get("konu"),
+            "durum": r.get("durum"),
+        }
+
+    return {
+        "bugun": [_item(r) for r in bugun],
+        "yaklasilan": [_item(r) for r in yaklasilan[:20]],
+        "bekleyen": [_item(r) for r in bekleyen[:20]],
+        "toplam": len(randevular),
+    }

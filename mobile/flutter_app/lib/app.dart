@@ -32,6 +32,9 @@ import 'features/rehber/ihbar_inceleme_page.dart';
 import 'features/yonetici/yonetici_home.dart';
 import 'features/yonetici/erken_uyari_page.dart';
 import 'features/yonetici/onaylar_page.dart';
+import 'features/yonetici/bugun_okulda_page.dart';
+import 'features/yonetici/butce_page.dart';
+import 'features/yonetici/randevular_page.dart';
 
 
 class SmartCampusApp extends ConsumerWidget {
@@ -122,6 +125,9 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/yonetici', builder: (_, __) => const YoneticiHomePage()),
         GoRoute(path: '/yonetici/erken-uyari', builder: (_, __) => const ErkenUyariPage()),
         GoRoute(path: '/yonetici/onaylar', builder: (_, __) => const OnaylarPage()),
+        GoRoute(path: '/yonetici/bugun-okulda', builder: (_, __) => const BugunOkuldaPage()),
+        GoRoute(path: '/yonetici/butce', builder: (_, __) => const ButcePage()),
+        GoRoute(path: '/yonetici/randevular', builder: (_, __) => const YoneticiRandevularPage()),
         // Fallback
         GoRoute(path: '/home', builder: (_, __) => const _PlaceholderPage(title: 'Ana Sayfa')),
       ],
