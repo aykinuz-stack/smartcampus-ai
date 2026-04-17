@@ -10,7 +10,7 @@ final apiClientProvider = Provider<ApiClient>((ref) => ApiClient());
 /// JWT token otomatik olarak eklenir, 401'de refresh denenir.
 class ApiClient {
   // Bilgisayar IP'si — Aynı Wi-Fi'de çalışır
-  static const String baseUrl = 'http://192.168.1.103:8000/api/v1';
+  static const String baseUrl = 'http://192.168.1.21:8000/api/v1';
   // Production: https://api.smartcampusai.com/api/v1
 
   static const _storage = FlutterSecureStorage();
