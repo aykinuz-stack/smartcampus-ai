@@ -156,11 +156,65 @@ class _VeliHomePageState extends ConsumerState<VeliHomePage> {
                     onTap: () => context.push('/veli/belge'),
                   ),
                   _QuickCard(
+                    icon: Icons.quiz,
+                    title: 'Sınav Sonuçları',
+                    subtitle: 'Yazılı / deneme',
+                    color: Color(0xFF8B5CF6),
+                    onTap: () {
+                      final children = user?.childrenIds ?? [];
+                      if (children.isNotEmpty) {
+                        context.push('/veli/cocuk-detay',
+                          extra: {'studentId': children.first, 'studentName': 'Çocuğum'});
+                      }
+                    },
+                  ),
+                  _QuickCard(
+                    icon: Icons.menu_book,
+                    title: 'Ders Programı',
+                    subtitle: 'Haftalık program',
+                    color: AppColors.info,
+                    onTap: () => context.push('/takvim'),
+                  ),
+                  _QuickCard(
+                    icon: Icons.wb_sunny,
+                    title: 'Günlük Rapor',
+                    subtitle: 'Bugün okulda ne oldu',
+                    color: AppColors.gold,
+                    onTap: () => context.push('/veli/kapsul'),
+                  ),
+                  _QuickCard(
+                    icon: Icons.assignment,
+                    title: 'Ödevler',
+                    subtitle: 'Bekleyen + teslim',
+                    color: AppColors.warning,
+                    onTap: () {
+                      final children = user?.childrenIds ?? [];
+                      if (children.isNotEmpty) {
+                        context.push('/veli/cocuk-detay',
+                          extra: {'studentId': children.first, 'studentName': 'Çocuğum'});
+                      }
+                    },
+                  ),
+                  _QuickCard(
+                    icon: Icons.campaign,
+                    title: 'Duyuru & Yemek',
+                    subtitle: 'Okul duyuruları',
+                    color: AppColors.success,
+                    onTap: () => context.push('/duyuru-yemek'),
+                  ),
+                  _QuickCard(
                     icon: Icons.chat,
                     title: 'Mesajlar',
                     subtitle: 'Öğretmenle iletişim',
-                    color: AppColors.success,
+                    color: AppColors.primary,
                     onTap: () => context.push('/messages'),
+                  ),
+                  _QuickCard(
+                    icon: Icons.smart_toy,
+                    title: 'Smarti AI',
+                    subtitle: 'Asistan',
+                    color: Color(0xFF6366F1),
+                    onTap: () => context.push('/smarti'),
                   ),
                   _QuickCard(
                     icon: Icons.shield,
@@ -168,6 +222,13 @@ class _VeliHomePageState extends ConsumerState<VeliHomePage> {
                     subtitle: 'Anonim bildirim',
                     color: AppColors.danger,
                     onTap: () => context.push('/ihbar'),
+                  ),
+                  _QuickCard(
+                    icon: Icons.description,
+                    title: 'Belge Talebi',
+                    subtitle: 'Öğrenci belgesi',
+                    color: AppColors.warning,
+                    onTap: () => context.push('/veli/belge'),
                   ),
                   _QuickCard(
                     icon: Icons.feedback,
