@@ -1,6 +1,10 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+
+/// Global ApiClient provider — tüm API servisleri buradan tüketir.
+final apiClientProvider = Provider<ApiClient>((ref) => ApiClient());
 
 /// API Client — tüm HTTP isteklerin geçtiği merkezi nokta.
 /// JWT token otomatik olarak eklenir, 401'de refresh denenir.

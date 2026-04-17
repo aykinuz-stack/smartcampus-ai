@@ -89,8 +89,7 @@ class AuthService {
 }
 
 
-// Riverpod provider
-final apiClientProvider = Provider<ApiClient>((ref) => ApiClient());
+// apiClientProvider artik api_client.dart icinde tanimli — buradan kaldirildi.
 final authServiceProvider = Provider<AuthService>((ref) =>
     AuthService(ref.watch(apiClientProvider)));
 
