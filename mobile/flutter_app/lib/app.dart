@@ -13,6 +13,9 @@ import 'features/ogrenci/odev_page.dart';
 import 'features/ogrenci/mesaj_page.dart';
 import 'features/ogrenci/ihbar_page.dart';
 import 'features/ogrenci/dil_gelisimi_page.dart';
+import 'features/ogrenci/smarti_chat_page.dart';
+import 'features/ogrenci/akademik_takvim_page.dart';
+import 'features/ogrenci/duyuru_yemek_page.dart';
 import 'features/veli/veli_home.dart';
 import 'features/veli/kapsul_page.dart';
 import 'features/veli/randevu_page.dart';
@@ -107,12 +110,11 @@ class SmartCampusApp extends ConsumerWidget {
         ),
         GoRoute(
           path: '/smarti',
-          builder: (_, __) => const _PlaceholderPage(title: 'Smarti AI'),
+          builder: (_, __) => const SmartiChatPage(),
         ),
-        GoRoute(
-          path: '/dil-gelisimi',
-          builder: (_, __) => const DilGelisimiPage(),
-        ),
+        GoRoute(path: '/dil-gelisimi', builder: (_, __) => const DilGelisimiPage()),
+        GoRoute(path: '/takvim', builder: (_, __) => const AkademikTakvimPage()),
+        GoRoute(path: '/duyuru-yemek', builder: (_, __) => const DuyuruYemekPage()),
         GoRoute(
           path: '/profile',
           builder: (_, __) => const _PlaceholderPage(title: 'Profilim'),

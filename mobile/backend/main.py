@@ -15,7 +15,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from .core.config import settings
-from .routers import auth, mood, ogrenci, messaging, ihbar, veli, ogretmen, rehber, yonetici
+from .routers import auth, mood, ogrenci, messaging, ihbar, smarti, veli, ogretmen, rehber, yonetici
 
 
 @asynccontextmanager
@@ -65,6 +65,23 @@ app.include_router(mood.router, prefix=settings.API_PREFIX)
 app.include_router(ogrenci.router, prefix=settings.API_PREFIX)
 app.include_router(messaging.router, prefix=settings.API_PREFIX)
 app.include_router(ihbar.router, prefix=settings.API_PREFIX)
+app.include_router(smarti.router, prefix=settings.API_PREFIX)
+
+
+# ── Kurum hizmetleri endpoint'leri (basit) ──
+from fastapi import Request as FRequest
+
+@app.get(f"{settings.API_PREFIX}/kurum/duyurular")
+async def kurum_duyurular():
+    from .core.data_adapter import DataAdapter
+    adapter = DataAdapter()
+    return adapter.load("akademik/etkinlik_duyurular.json") or []
+
+@app.get(f"{settings.API_PREFIX}/kurum/yemek-menusu")
+async def kurum_yemek():
+    from .core.data_adapter import DataAdapter
+    adapter = DataAdapter()
+    return adapter.load("akademik/yemek_menusu.json") or []
 app.include_router(veli.router, prefix=settings.API_PREFIX)
 app.include_router(ogretmen.router, prefix=settings.API_PREFIX)
 app.include_router(rehber.router, prefix=settings.API_PREFIX)
