@@ -77,6 +77,68 @@ async def kurum_duyurular():
     adapter = DataAdapter()
     return adapter.load("akademik/etkinlik_duyurular.json") or []
 
+@app.get(f"{settings.API_PREFIX}/ai-treni/config")
+async def ai_treni_config():
+    """AI Treni yapilandirmasi — siniflar + kompartimanlar."""
+    import sys
+    sys.path.insert(0, str(settings.DATA_DIR.parent))
+    try:
+        from data.bilgi_treni.config import SINIF_LABELS, SINIF_THEMES, KOMPARTIMAN_LIST
+        siniflar = [
+            {"no": k, "label": v, "tema": SINIF_THEMES.get(k, ("", "#666"))[0],
+             "renk": SINIF_THEMES.get(k, ("", "#666"))[1]}
+            for k, v in SINIF_LABELS.items()
+        ]
+        kompartimanlar = [
+            {"ikon": k[0], "baslik": k[1], "aciklama": k[2]}
+            for k in KOMPARTIMAN_LIST
+        ]
+        return {"siniflar": siniflar, "kompartimanlar": kompartimanlar}
+    except Exception as e:
+        return {"siniflar": [], "kompartimanlar": [], "hata": str(e)}
+
+
+@app.get(f"{settings.API_PREFIX}/ai-treni/quiz/{{sinif}}")
+async def ai_treni_quiz(sinif: int):
+    """Sinif bazli quiz sorulari."""
+    import sys, json, random
+    sys.path.insert(0, str(settings.DATA_DIR.parent))
+    try:
+        # Bilgi yarismasi sorulari
+        from pathlib import Path
+        quiz_files = list((settings.DATA_DIR / "bilgi_treni").glob("*quiz*")) + \
+                     list((settings.DATA_DIR / "bilgi_treni").glob("*bilgi_yarismasi*"))
+
+        # Content dosyalarindan da sorular cekilebilir
+        sorular = []
+        for qf in quiz_files:
+            try:
+                with open(qf, "r", encoding="utf-8") as f:
+                    d = json.load(f)
+                if isinstance(d, list):
+                    sorular.extend(d)
+                elif isinstance(d, dict) and "sorular" in d:
+                    sorular.extend(d["sorular"])
+            except Exception:
+                pass
+
+        # Yoksa basit sorular uret
+        if not sorular:
+            kategoriler = ["Bilim", "Tarih", "Cografya", "Matematik", "Genel Kultur"]
+            for i in range(10):
+                sorular.append({
+                    "soru": f"{sinif}. sinif {kategoriler[i%5]} sorusu #{i+1}",
+                    "secenekler": ["A seçeneği", "B seçeneği", "C seçeneği", "D seçeneği"],
+                    "dogru": 0,
+                    "kategori": kategoriler[i % 5],
+                })
+
+        random.shuffle(sorular)
+        return {"sinif": sinif, "sorular": sorular[:10]}
+    except Exception as e:
+        return {"sinif": sinif, "sorular": [], "hata": str(e)}
+
+
 @app.get(f"{settings.API_PREFIX}/kurum/yemek-menusu")
 async def kurum_yemek():
     from .core.data_adapter import DataAdapter
