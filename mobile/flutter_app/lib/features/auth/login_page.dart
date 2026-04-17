@@ -55,7 +55,10 @@ class _LoginPageState extends ConsumerState<LoginPage> {
         if (mounted) context.go('/home');
       }
     } else {
-      setState(() => _error = 'Giriş başarısız — kullanıcı adı veya şifre hatalı');
+      setState(() => _error = 'Giriş başarısız. Kontrol et:\n'
+          '• Kullanıcı adı ve şifre doğru mu?\n'
+          '• Backend çalışıyor mu? (bilgisayar açık mı?)\n'
+          '• Aynı Wi-Fi ağında mısın?');
     }
   }
 

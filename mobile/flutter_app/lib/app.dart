@@ -225,26 +225,66 @@ class _SplashPageState extends ConsumerState<_SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.surfaceDarker,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              width: 96,
-              height: 96,
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(colors: [AppColors.primary, AppColors.gold]),
-                borderRadius: BorderRadius.circular(24),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft, end: Alignment.bottomRight,
+            colors: [AppColors.surfaceDarker, Color(0xFF1E1B4B), AppColors.surfaceDark],
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Logo animasyonlu
+              TweenAnimationBuilder<double>(
+                tween: Tween(begin: 0.0, end: 1.0),
+                duration: const Duration(milliseconds: 800),
+                curve: Curves.elasticOut,
+                builder: (_, scale, child) => Transform.scale(scale: scale, child: child),
+                child: Container(
+                  width: 110, height: 110,
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      begin: Alignment.topLeft, end: Alignment.bottomRight,
+                      colors: [AppColors.primary, AppColors.gold]),
+                    borderRadius: BorderRadius.circular(28),
+                    boxShadow: [
+                      BoxShadow(color: AppColors.primary.withOpacity(0.4),
+                          blurRadius: 30, spreadRadius: 2),
+                    ],
+                  ),
+                  child: const Icon(Icons.school_rounded, size: 60, color: Colors.white),
+                ),
               ),
-              child: const Icon(Icons.school_rounded, size: 56, color: Colors.white),
-            ),
-            const SizedBox(height: 24),
-            const Text('SmartCampus AI',
-                style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 24),
-            const CircularProgressIndicator(color: AppColors.gold),
-          ],
+              const SizedBox(height: 28),
+              // Baslik animasyonlu
+              TweenAnimationBuilder<double>(
+                tween: Tween(begin: 0.0, end: 1.0),
+                duration: const Duration(milliseconds: 600),
+                builder: (_, opacity, __) => Opacity(
+                  opacity: opacity,
+                  child: const Column(children: [
+                    Text('SmartCampus AI',
+                        style: TextStyle(color: Colors.white, fontSize: 26,
+                            fontWeight: FontWeight.bold, letterSpacing: 1.2)),
+                    SizedBox(height: 6),
+                    Text('Eğitimin Geleceği',
+                        style: TextStyle(color: AppColors.gold, fontSize: 13,
+                            fontStyle: FontStyle.italic)),
+                  ]),
+                ),
+              ),
+              const SizedBox(height: 32),
+              const SizedBox(width: 28, height: 28,
+                  child: CircularProgressIndicator(strokeWidth: 2.5, color: AppColors.gold)),
+              const SizedBox(height: 12),
+              Text('Yükleniyor...', style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 12)),
+              const SizedBox(height: 60),
+              Text('v21 · 55+ sayfa · 5 rol',
+                  style: TextStyle(color: Colors.white.withOpacity(0.3), fontSize: 10)),
+            ],
+          ),
         ),
       ),
     );
