@@ -817,6 +817,81 @@ async def sinif_listeleri(
     }
 
 
+# ══════════════════════════════════════════════════════════════
+# TUKETIM & DEMIRBAS GUNLUK RAPOR
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/tuketim-demirbas")
+async def tuketim_demirbas_rapor(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Tuketim & demirbas gunluk rapor — stok, min stok uyari, hareketler."""
+    _require_yonetici(user)
+    today = date.today().isoformat()
+
+    # Tuketim urunleri (tdm klasoru veya tuketim_demirbas)
+    urunler = (adapter.load("tdm/tuketim_urunleri.json")
+               or adapter.load("tuketim_demirbas/tuketim_urunleri.json") or [])
+    kategoriler = (adapter.load("tdm/tuketim_kategorileri.json")
+                   or adapter.load("tuketim_demirbas/tuketim_kategorileri.json") or [])
+    demirbaslar = (adapter.load("tdm/demirbaslar.json")
+                   or adapter.load("tuketim_demirbas/demirbaslar.json") or [])
+    hareketler = (adapter.load("tdm/tuketim_hareketleri.json")
+                  or adapter.load("tuketim_demirbas/tuketim_hareketleri.json") or [])
+    zimmetler = (adapter.load("tdm/zimmet_kayitlari.json")
+                 or adapter.load("tuketim_demirbas/zimmet_kayitlari.json") or [])
+
+    # Min stok uyari
+    min_stok_uyari = [
+        {"urun": u.get("urun_adi"), "stok": u.get("stok", 0),
+         "min_stok": u.get("min_stok", 0), "kategori": u.get("kategori", "")}
+        for u in urunler
+        if (u.get("stok", 0) or 0) <= (u.get("min_stok", 0) or 0)
+        and u.get("aktif", True)
+    ]
+
+    # Bugun hareketler
+    bugun_hareket = [h for h in hareketler if h.get("tarih", "").startswith(today)]
+
+    # Toplam stok degeri
+    toplam_deger = sum(
+        (u.get("stok", 0) or 0) * (u.get("birim_fiyat", 0) or 0)
+        for u in urunler if u.get("aktif", True)
+    )
+
+    # Kategori bazli urun sayisi
+    from collections import Counter
+    kat_sayilari = Counter(u.get("kategori", "?") for u in urunler if u.get("aktif", True))
+
+    return {
+        "ozet": {
+            "toplam_urun": len([u for u in urunler if u.get("aktif", True)]),
+            "toplam_demirbas": len(demirbaslar),
+            "aktif_zimmet": len([z for z in zimmetler if z.get("durum", "") == "aktif"]),
+            "min_stok_uyari": len(min_stok_uyari),
+            "toplam_deger": round(toplam_deger, 2),
+            "bugun_hareket": len(bugun_hareket),
+        },
+        "min_stok_uyari": min_stok_uyari[:15],
+        "bugun_hareketler": [
+            {"urun": h.get("urun_adi", h.get("urun_id", "")),
+             "miktar": h.get("miktar"), "tur": h.get("tur", ""),
+             "tarih": h.get("tarih", ""), "yapan": h.get("yapan_kisi", "")}
+            for h in bugun_hareket[:20]
+        ],
+        "kategori_dagilimi": dict(kat_sayilari.most_common()),
+        "urun_listesi": [
+            {"urun": u.get("urun_adi"), "stok": u.get("stok", 0),
+             "min_stok": u.get("min_stok", 0), "birim": u.get("birim", ""),
+             "kategori": u.get("kategori", ""),
+             "deger": round((u.get("stok", 0) or 0) * (u.get("birim_fiyat", 0) or 0), 2)}
+            for u in sorted(urunler, key=lambda x: x.get("stok", 0) or 0)
+            if u.get("aktif", True)
+        ][:30],
+    }
+
+
 @router.get("/randevular")
 async def randevular(
     user: Annotated[dict, Depends(get_current_user)],

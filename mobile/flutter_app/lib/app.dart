@@ -44,6 +44,7 @@ import 'features/yonetici/nobet_page.dart';
 import 'features/yonetici/zaman_cizelgesi_page.dart';
 import 'features/yonetici/calisanlar_page.dart';
 import 'features/yonetici/sinif_listeleri_page.dart';
+import 'features/yonetici/tuketim_demirbas_page.dart';
 
 
 class SmartCampusApp extends ConsumerWidget {
@@ -155,6 +156,7 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/yonetici/zaman-cizelgesi', builder: (_, __) => const ZamanCizelgesiPage()),
         GoRoute(path: '/yonetici/calisanlar', builder: (_, __) => const CalisanlarPage()),
         GoRoute(path: '/yonetici/sinif-listeleri', builder: (_, __) => const SinifListeleriPage()),
+        GoRoute(path: '/yonetici/tuketim-demirbas', builder: (_, __) => const TuketimDemirbasPage()),
         // Fallback
         GoRoute(path: '/home', builder: (_, __) => const _PlaceholderPage(title: 'Ana Sayfa')),
       ],
