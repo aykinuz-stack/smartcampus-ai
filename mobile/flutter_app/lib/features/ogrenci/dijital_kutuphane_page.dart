@@ -72,6 +72,27 @@ class _DijitalKutuphanePageState extends ConsumerState<DijitalKutuphanePage> {
               ),
               const SizedBox(height: 16),
 
+              // Bilgi Yarismasi ozel kart
+              Card(
+                margin: const EdgeInsets.only(bottom: 12),
+                color: AppColors.gold.withOpacity(0.08),
+                child: ListTile(
+                  leading: Container(
+                    width: 50, height: 50,
+                    decoration: BoxDecoration(
+                      gradient: const LinearGradient(colors: [AppColors.gold, Color(0xFFD97706)]),
+                      borderRadius: BorderRadius.circular(12)),
+                    child: const Center(child: Text('🏆', style: TextStyle(fontSize: 26))),
+                  ),
+                  title: const Text('Bilgi Yarışması', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                  subtitle: const Text('1500 soru · İlkokul / Ortaokul / Lise', style: TextStyle(fontSize: 12)),
+                  trailing: const Icon(Icons.play_circle, color: AppColors.gold, size: 32),
+                  onTap: () => Navigator.push(context, MaterialPageRoute(
+                    builder: (_) => const _BilgiYarismasiPage())),
+                ),
+              ),
+              const SizedBox(height: 4),
+
               // Kategori kartlari
               ...kategoriler.map((kat) {
                 final k = kat as Map;
@@ -128,6 +149,185 @@ class _DijitalKutuphanePageState extends ConsumerState<DijitalKutuphanePage> {
                   ),
                 );
               }),
+            ]),
+          );
+        },
+      ),
+    );
+  }
+}
+
+
+// ═══════════════════════════════════════════════════════════
+// BİLGİ YARIŞMASI
+// ═══════════════════════════════════════════════════════════
+
+class _BilgiYarismasiPage extends ConsumerStatefulWidget {
+  const _BilgiYarismasiPage();
+  @override
+  ConsumerState<_BilgiYarismasiPage> createState() => _BilgiYarismasiPageState();
+}
+
+class _BilgiYarismasiPageState extends ConsumerState<_BilgiYarismasiPage> {
+  String _level = 'ilkokul';
+  Future<Map<String, dynamic>>? _future;
+  int _current = 0;
+  int _dogru = 0;
+  int? _secilen;
+  bool _cevaplandi = false;
+
+  @override
+  void initState() { super.initState(); _load(); }
+
+  void _load() {
+    setState(() {
+      _current = 0; _dogru = 0; _secilen = null; _cevaplandi = false;
+      _future = ref.read(apiClientProvider)
+          .get('/bilgi-yarismasi/$_level')
+          .then((r) => Map<String, dynamic>.from(r.data));
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('🏆 Bilgi Yarışması'),
+        actions: [
+          PopupMenuButton<String>(
+            icon: const Icon(Icons.school),
+            onSelected: (v) { setState(() => _level = v); _load(); },
+            itemBuilder: (_) => const [
+              PopupMenuItem(value: 'ilkokul', child: Text('İlkokul (500 soru)')),
+              PopupMenuItem(value: 'ortaokul', child: Text('Ortaokul (500 soru)')),
+              PopupMenuItem(value: 'lise', child: Text('Lise (500 soru)')),
+            ],
+          ),
+        ],
+      ),
+      body: FutureBuilder<Map<String, dynamic>>(
+        future: _future,
+        builder: (_, snap) {
+          if (snap.connectionState == ConnectionState.waiting)
+            return const Center(child: CircularProgressIndicator());
+          final sorular = (snap.data?['sorular'] as List?) ?? [];
+          if (sorular.isEmpty) return const Center(child: Text('Soru yüklenemedi'));
+
+          if (_current >= sorular.length) {
+            final oran = _dogru / sorular.length * 100;
+            return Center(child: Column(mainAxisSize: MainAxisSize.min, children: [
+              Text(oran >= 70 ? '🎉' : oran >= 50 ? '👍' : '💪', style: const TextStyle(fontSize: 60)),
+              const SizedBox(height: 16),
+              Text('$_dogru / ${sorular.length}', style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
+              Text('${_level[0].toUpperCase()}${_level.substring(1)} Seviyesi', style: const TextStyle(fontSize: 14)),
+              const SizedBox(height: 8),
+              Text('%${oran.toStringAsFixed(0)}',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,
+                      color: oran >= 70 ? AppColors.success : oran >= 50 ? AppColors.warning : AppColors.danger)),
+              const SizedBox(height: 24),
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                ElevatedButton.icon(icon: const Icon(Icons.refresh), label: const Text('Tekrar'),
+                    onPressed: _load),
+                const SizedBox(width: 12),
+                OutlinedButton.icon(icon: const Icon(Icons.school), label: const Text('Seviye Değiştir'),
+                    onPressed: () {
+                      final next = _level == 'ilkokul' ? 'ortaokul' : _level == 'ortaokul' ? 'lise' : 'ilkokul';
+                      setState(() => _level = next); _load();
+                    }),
+              ]),
+            ]));
+          }
+
+          final soru = sorular[_current] as Map;
+          final secenekler = (soru['secenekler'] as List?) ?? [];
+          final dogruIdx = (soru['dogru'] as num?)?.toInt() ?? 0;
+
+          return Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+              // Progress + level
+              Row(children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                  decoration: BoxDecoration(color: AppColors.gold.withOpacity(0.15), borderRadius: BorderRadius.circular(6)),
+                  child: Text('${_level[0].toUpperCase()}${_level.substring(1)}',
+                      style: const TextStyle(fontSize: 10, color: AppColors.gold, fontWeight: FontWeight.bold)),
+                ),
+                const SizedBox(width: 8),
+                Expanded(child: LinearProgressIndicator(
+                  value: (_current + 1) / sorular.length, minHeight: 6,
+                  backgroundColor: AppColors.gold.withOpacity(0.1),
+                  valueColor: const AlwaysStoppedAnimation(AppColors.gold),
+                )),
+                const SizedBox(width: 8),
+                Text('${_current + 1}/${sorular.length}', style: const TextStyle(fontSize: 12)),
+              ]),
+              if ((soru['kategori'] as String? ?? '').isNotEmpty) ...[
+                const SizedBox(height: 6),
+                Text(soru['kategori'], style: const TextStyle(fontSize: 11, color: AppColors.gold)),
+              ],
+              const SizedBox(height: 20),
+              Text(soru['soru'] ?? '', style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w600, height: 1.4)),
+              const SizedBox(height: 16),
+
+              ...secenekler.asMap().entries.map((e) {
+                final idx = e.key; final text = e.value.toString();
+                Color? bg, border;
+                if (_cevaplandi) {
+                  if (idx == dogruIdx) { bg = AppColors.success.withOpacity(0.15); border = AppColors.success; }
+                  else if (idx == _secilen) { bg = AppColors.danger.withOpacity(0.15); border = AppColors.danger; }
+                }
+                final secili = _secilen == idx && !_cevaplandi;
+                return GestureDetector(
+                  onTap: _cevaplandi ? null : () => setState(() => _secilen = idx),
+                  child: Container(
+                    margin: const EdgeInsets.only(bottom: 8), padding: const EdgeInsets.all(14),
+                    decoration: BoxDecoration(
+                      color: bg ?? (secili ? AppColors.gold.withOpacity(0.1) : null),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: border ?? (secili ? AppColors.gold : Colors.grey.withOpacity(0.3)),
+                          width: (secili || _cevaplandi) ? 2 : 1)),
+                    child: Row(children: [
+                      Container(width: 28, height: 28,
+                        decoration: BoxDecoration(shape: BoxShape.circle,
+                            color: (border ?? (secili ? AppColors.gold : Colors.grey)).withOpacity(0.15)),
+                        child: Center(child: Text(String.fromCharCode(65 + idx),
+                            style: TextStyle(fontWeight: FontWeight.bold,
+                                color: border ?? (secili ? AppColors.gold : Colors.grey))))),
+                      const SizedBox(width: 12),
+                      Expanded(child: Text(text, style: const TextStyle(fontSize: 14))),
+                      if (_cevaplandi && idx == dogruIdx) const Icon(Icons.check_circle, color: AppColors.success),
+                      if (_cevaplandi && idx == _secilen && idx != dogruIdx) const Icon(Icons.cancel, color: AppColors.danger),
+                    ]),
+                  ),
+                );
+              }),
+
+              // Aciklama
+              if (_cevaplandi && (soru['aciklama'] as String? ?? '').isNotEmpty) ...[
+                const SizedBox(height: 12),
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: AppColors.info.withOpacity(0.08), borderRadius: BorderRadius.circular(8),
+                    border: const Border(left: BorderSide(color: AppColors.info, width: 3))),
+                  child: Text(soru['aciklama'], style: const TextStyle(fontSize: 12)),
+                ),
+              ],
+
+              const Spacer(),
+              if (!_cevaplandi)
+                SizedBox(height: 50, child: ElevatedButton(
+                  onPressed: _secilen == null ? null : () {
+                    setState(() { _cevaplandi = true; if (_secilen == dogruIdx) _dogru++; });
+                  },
+                  style: ElevatedButton.styleFrom(backgroundColor: AppColors.gold),
+                  child: const Text('CEVAPLA')))
+              else
+                SizedBox(height: 50, child: ElevatedButton(
+                  onPressed: () => setState(() { _current++; _secilen = null; _cevaplandi = false; }),
+                  style: ElevatedButton.styleFrom(backgroundColor: AppColors.success),
+                  child: Text(_current + 1 >= sorular.length ? 'SONUÇ' : 'SONRAKİ →'))),
             ]),
           );
         },

@@ -235,6 +235,31 @@ async def dk_icerik():
     return {"kategoriler": kategoriler, "toplam_kategori": len(kategoriler)}
 
 
+# ── Bilgi Yarismasi ──
+@app.get(f"{settings.API_PREFIX}/bilgi-yarismasi/{level}")
+async def bilgi_yarismasi(level: str = "ilkokul"):
+    """Bilgi yarismasi sorulari — ilkokul/ortaokul/lise."""
+    import sys, json, random
+    sys.path.insert(0, str(settings.DATA_DIR.parent))
+    try:
+        from views.bilgi_yarismasi_game import _build_questions_json
+        sorular = json.loads(_build_questions_json(level))
+        random.shuffle(sorular)
+        # Normalize: k=kategori, s=soru, o=secenekler, d=dogru, a=aciklama
+        normalized = []
+        for q in sorular[:15]:
+            normalized.append({
+                "kategori": q.get("k", ""),
+                "soru": q.get("s", ""),
+                "secenekler": q.get("o", []),
+                "dogru": q.get("d", 0),
+                "aciklama": q.get("a", ""),
+            })
+        return {"level": level, "toplam": len(sorular), "sorular": normalized}
+    except Exception as e:
+        return {"level": level, "toplam": 0, "sorular": [], "hata": str(e)}
+
+
 @app.get(f"{settings.API_PREFIX}/kurum/duyurular")
 async def kurum_duyurular():
     from .core.data_adapter import DataAdapter
