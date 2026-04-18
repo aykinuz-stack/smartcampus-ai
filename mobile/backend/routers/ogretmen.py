@@ -55,7 +55,13 @@ async def sinif_ogrencileri(
             if str(s.get("sinif", "")) == str(sinif)
             and s.get("sube", "") == sube
             and s.get("durum", "aktif") == "aktif"]
-    mine.sort(key=lambda s: int(s.get("numara", 0) or 0))
+    def _numara_key(s):
+        n = s.get("numara", "0") or "0"
+        try:
+            return int(n)
+        except ValueError:
+            return 0
+    mine.sort(key=_numara_key)
 
     ogrenciler = [
         SinifOgrenci(
