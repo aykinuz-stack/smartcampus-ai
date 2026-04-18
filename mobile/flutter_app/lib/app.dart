@@ -22,6 +22,7 @@ import 'features/ogrenci/kocluk_page.dart';
 import 'features/ogrenci/dijital_kutuphane_page.dart';
 import 'features/ogrenci/gunun_bilgisi_page.dart';
 import 'features/ogrenci/zeka_oyunlari_page.dart';
+import 'features/ogrenci/kdg_premium_page.dart';
 import 'features/veli/veli_home.dart';
 import 'features/veli/kapsul_page.dart';
 import 'features/veli/randevu_page.dart';
@@ -130,6 +131,7 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/dijital-kutuphane', builder: (_, __) => const DijitalKutuphanePage()),
         GoRoute(path: '/gunun-bilgisi', builder: (_, __) => const GununBilgisiPage()),
         GoRoute(path: '/zeka-oyunlari', builder: (_, __) => const ZekaOyunlariPage()),
+        GoRoute(path: '/kdg-premium', builder: (_, __) => const KdgPremiumPage()),
         GoRoute(
           path: '/profile',
           builder: (_, __) => const _PlaceholderPage(title: 'Profilim'),

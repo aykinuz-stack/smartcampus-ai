@@ -260,6 +260,11 @@ class _YoneticiHomePageState extends ConsumerState<YoneticiHomePage> {
                         onTap: () => context.push('/dil-gelisimi'),
                       ),
                       _QCard(
+                        icon: Icons.workspace_premium, title: 'KDG Premium',
+                        subtitle: 'CEFR İng + Alm', color: Color(0xFF7C3AED),
+                        onTap: () => context.push('/kdg-premium'),
+                      ),
+                      _QCard(
                         icon: Icons.chat, title: 'Mesajlar',
                         subtitle: 'Gelen/Giden/Yeni', color: AppColors.primary,
                         onTap: () => context.push('/messages'),

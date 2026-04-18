@@ -318,6 +318,99 @@ async def zeka_oyunlari():
     return {"oyunlar": oyunlar}
 
 
+# ── KDG Premium (CEFR Ingilizce + Almanca) ──
+@app.get(settings.API_PREFIX + "/kdg/{dil}")
+async def kdg_dersler(dil: str = "ingilizce"):
+    """KDG Premium — CEFR seviyeli kelime + gramer."""
+    import json
+    from pathlib import Path
+    lang_dir = {"ingilizce": "english", "almanca": "german"}.get(dil, "english")
+    base = settings.DATA_DIR / lang_dir
+
+    # Kelimeler
+    words_data = {}
+    wp = base / "cefr_words.json"
+    if not wp.exists():
+        wp = Path(__file__).resolve().parent.parent.parent / "data" / lang_dir / "cefr_words.json"
+    if wp.exists():
+        with open(wp, "r", encoding="utf-8") as f:
+            words_data = json.load(f)
+
+    # Gramer
+    grammar_data = {}
+    gp = base / "cefr_grammar.json"
+    if not gp.exists():
+        gp = Path(__file__).resolve().parent.parent.parent / "data" / lang_dir / "cefr_grammar.json"
+    if gp.exists():
+        with open(gp, "r", encoding="utf-8") as f:
+            grammar_data = json.load(f)
+
+    seviyeler = []
+    for level in ["A1", "A2", "B1", "B2", "C1"]:
+        w = words_data.get(level, {})
+        g = grammar_data.get(level, [])
+        cats = w.get("categories", {})
+        toplam_kelime = sum(len(v) if isinstance(v, list) else 0 for v in cats.values())
+        seviyeler.append({
+            "seviye": level,
+            "aciklama": w.get("description", ""),
+            "hedef": w.get("target", 0),
+            "kategori_sayisi": len(cats),
+            "kelime_sayisi": toplam_kelime,
+            "gramer_sayisi": len(g) if isinstance(g, list) else 0,
+        })
+
+    return {"dil": dil, "seviyeler": seviyeler, "diller": ["ingilizce", "almanca"]}
+
+
+@app.get(settings.API_PREFIX + "/kdg/{dil}/{seviye}")
+async def kdg_seviye_detay(dil: str, seviye: str):
+    """KDG seviye detay — kategoriler + kelimeler + gramer."""
+    import json
+    from pathlib import Path
+    lang_dir = {"ingilizce": "english", "almanca": "german"}.get(dil, "english")
+
+    words_data = {}
+    for p in [settings.DATA_DIR / lang_dir / "cefr_words.json",
+              Path(__file__).resolve().parent.parent.parent / "data" / lang_dir / "cefr_words.json"]:
+        if p.exists():
+            with open(p, "r", encoding="utf-8") as f: words_data = json.load(f)
+            break
+
+    grammar_data = {}
+    for p in [settings.DATA_DIR / lang_dir / "cefr_grammar.json",
+              Path(__file__).resolve().parent.parent.parent / "data" / lang_dir / "cefr_grammar.json"]:
+        if p.exists():
+            with open(p, "r", encoding="utf-8") as f: grammar_data = json.load(f)
+            break
+
+    level_words = words_data.get(seviye.upper(), {})
+    level_grammar = grammar_data.get(seviye.upper(), [])
+
+    # Kategorileri normalize et
+    cats = level_words.get("categories", {})
+    kategoriler = []
+    for kat_ad, kelimeler in cats.items():
+        if isinstance(kelimeler, list):
+            kategoriler.append({
+                "kategori": kat_ad,
+                "kelimeler": [
+                    {"word": w.get("e", w.get("de", "")),
+                     "tr": w.get("t", ""),
+                     "pron": w.get("p", "")}
+                    for w in kelimeler if isinstance(w, dict)
+                ],
+            })
+
+    return {
+        "dil": dil,
+        "seviye": seviye.upper(),
+        "aciklama": level_words.get("description", ""),
+        "kategoriler": kategoriler,
+        "gramer": level_grammar if isinstance(level_grammar, list) else [],
+    }
+
+
 @app.get(f"{settings.API_PREFIX}/kurum/duyurular")
 async def kurum_duyurular():
     from .core.data_adapter import DataAdapter

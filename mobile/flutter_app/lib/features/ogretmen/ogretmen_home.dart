@@ -192,6 +192,13 @@ class _OgretmenHomePageState extends ConsumerState<OgretmenHomePage> {
                     onTap: () => context.push('/dil-gelisimi'),
                   ),
                   _QuickCard(
+                    icon: Icons.workspace_premium,
+                    title: 'KDG Premium',
+                    subtitle: 'CEFR İng + Alm',
+                    color: Color(0xFF7C3AED),
+                    onTap: () => context.push('/kdg-premium'),
+                  ),
+                  _QuickCard(
                     icon: Icons.smart_toy,
                     title: 'Ders Planı AI',
                     subtitle: 'Smarti ile planla',

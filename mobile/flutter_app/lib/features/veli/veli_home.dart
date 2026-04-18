@@ -231,6 +231,13 @@ class _VeliHomePageState extends ConsumerState<VeliHomePage> {
                     onTap: () => context.push('/dil-gelisimi'),
                   ),
                   _QuickCard(
+                    icon: Icons.workspace_premium,
+                    title: 'KDG Premium',
+                    subtitle: 'CEFR İng + Alm',
+                    color: Color(0xFF7C3AED),
+                    onTap: () => context.push('/kdg-premium'),
+                  ),
+                  _QuickCard(
                     icon: Icons.shield,
                     title: 'İhbar Hattı',
                     subtitle: 'Anonim bildirim',
