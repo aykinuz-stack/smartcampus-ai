@@ -114,6 +114,11 @@ class RehberHomePage extends ConsumerWidget {
                   onTap: () => context.push('/dijital-kutuphane'),
                 ),
                 _QCard(
+                  icon: Icons.emoji_events, title: 'Bilgi Yarışmaları',
+                  subtitle: '4 tür · 3700+ soru', color: Color(0xFF7C3AED),
+                  onTap: () => context.push('/bilgi-yarismasi-koleksiyon'),
+                ),
+                _QCard(
                   icon: Icons.translate, title: 'Dil Gelişimi',
                   subtitle: '5 dil · 104+ ders', color: AppColors.info,
                   onTap: () => context.push('/dil-gelisimi'),

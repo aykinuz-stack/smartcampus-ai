@@ -1,0 +1,3002 @@
+[
+ {
+  "k": "Tarih",
+  "s": "İstanbul'un fethi hangi yılda gerçekleşmiştir?",
+  "o": [
+   "1071",
+   "1453",
+   "1299",
+   "1923"
+  ],
+  "d": 1,
+  "a": "Fatih Sultan Mehmet, 1453'te İstanbul'u fethetti."
+ },
+ {
+  "k": "Tarih",
+  "s": "Türkiye Cumhuriyeti hangi tarihte ilan edilmiştir?",
+  "o": [
+   "23 Nisan 1920",
+   "30 Ağustos 1922",
+   "29 Ekim 1923",
+   "19 Mayıs 1919"
+  ],
+  "d": 2,
+  "a": "Cumhuriyet 29 Ekim 1923'te ilan edildi."
+ },
+ {
+  "k": "Tarih",
+  "s": "Malazgirt Meydan Muharebesi hangi yılda yapılmıştır?",
+  "o": [
+   "1071",
+   "1176",
+   "1243",
+   "1453"
+  ],
+  "d": 0,
+  "a": "1071'de Sultan Alparslan, Bizans'ı yendi."
+ },
+ {
+  "k": "Tarih",
+  "s": "Osmanlı Devleti'nin kurucusu kimdir?",
+  "o": [
+   "Fatih Sultan Mehmet",
+   "Osman Bey",
+   "Kanuni Sultan Süleyman",
+   "Yavuz Sultan Selim"
+  ],
+  "d": 1,
+  "a": "Osman Bey, 1299'da Osmanlı Beyliği'ni kurdu."
+ },
+ {
+  "k": "Tarih",
+  "s": "Çanakkale Savaşı hangi yılda başlamıştır?",
+  "o": [
+   "1912",
+   "1914",
+   "1915",
+   "1916"
+  ],
+  "d": 2,
+  "a": "Çanakkale Savaşı 1915'te başladı."
+ },
+ {
+  "k": "Tarih",
+  "s": "TBMM ilk kez hangi tarihte açılmıştır?",
+  "o": [
+   "23 Nisan 1920",
+   "29 Ekim 1923",
+   "19 Mayıs 1919",
+   "30 Ağustos 1922"
+  ],
+  "d": 0,
+  "a": "TBMM 23 Nisan 1920'de Ankara'da açıldı."
+ },
+ {
+  "k": "Tarih",
+  "s": "İkinci Dünya Savaşı hangi yıllar arasında olmuştur?",
+  "o": [
+   "1914-1918",
+   "1939-1945",
+   "1929-1935",
+   "1941-1948"
+  ],
+  "d": 1,
+  "a": "II. Dünya Savaşı 1939-1945 yılları arasında yaşandı."
+ },
+ {
+  "k": "Tarih",
+  "s": "Atatürk'ün Samsun'a çıkışı hangi tarihte olmuştur?",
+  "o": [
+   "23 Nisan 1920",
+   "19 Mayıs 1919",
+   "30 Ağustos 1922",
+   "9 Eylül 1922"
+  ],
+  "d": 1,
+  "a": "Mustafa Kemal 19 Mayıs 1919'da Samsun'a çıktı."
+ },
+ {
+  "k": "Tarih",
+  "s": "Anadolu'nun kapılarını Türklere açan savaş hangisidir?",
+  "o": [
+   "Kosova Savaşı",
+   "Malazgirt Savaşı",
+   "Miryokefalon Savaşı",
+   "Dandanakan Savaşı"
+  ],
+  "d": 1,
+  "a": "1071 Malazgirt Zaferi ile Anadolu'nun kapıları Türklere açıldı."
+ },
+ {
+  "k": "Tarih",
+  "s": "Osmanlı'da 'Lale Devri' hangi padişah dönemindedir?",
+  "o": [
+   "Kanuni Sultan Süleyman",
+   "III. Ahmet",
+   "II. Mahmut",
+   "Yavuz Sultan Selim"
+  ],
+  "d": 1,
+  "a": "Lale Devri (1718-1730) III. Ahmet döneminde yaşandı. İlk matbaa bu dönemde kuruldu!"
+ },
+ {
+  "k": "Tarih",
+  "s": "İlk Türk matbaasını kuran kişi kimdir?",
+  "o": [
+   "İbrahim Müteferrika",
+   "Takiyüddin",
+   "Ali Kuşçu",
+   "Piri Reis"
+  ],
+  "d": 0,
+  "a": "İbrahim Müteferrika 1729'da ilk Türk matbaasını İstanbul'da kurdu."
+ },
+ {
+  "k": "Tarih",
+  "s": "Kurtuluş Savaşı'nın son muharebesi hangisidir?",
+  "o": [
+   "Sakarya Meydan Muharebesi",
+   "Başkomutanlık Meydan Muharebesi",
+   "İnönü Savaşı",
+   "Kütahya-Eskişehir Savaşı"
+  ],
+  "d": 1,
+  "a": "Başkomutanlık Meydan Muharebesi (26-30 Ağustos 1922) son ve kesin zaferdir."
+ },
+ {
+  "k": "Tarih",
+  "s": "Türkiye'de kadınlara seçme ve seçilme hakkı hangi yıl verildi?",
+  "o": [
+   "1923",
+   "1930",
+   "1934",
+   "1938"
+  ],
+  "d": 2,
+  "a": "1934'te Türk kadınları seçme-seçilme hakkı kazandı. Birçok Avrupa ülkesinden önce!"
+ },
+ {
+  "k": "Tarih",
+  "s": "Dünyada bilinen ilk yazılı antlaşma hangisidir?",
+  "o": [
+   "Vestfalya Antlaşması",
+   "Kadeş Antlaşması",
+   "Magna Carta",
+   "Sevr Antlaşması"
+  ],
+  "d": 1,
+  "a": "Kadeş Antlaşması (MÖ 1274) Hititler ile Mısırlılar arasında imzalandı."
+ },
+ {
+  "k": "Tarih",
+  "s": "Göbeklitepe hangi ile yakın ve kaç yıllık tarihi var?",
+  "o": [
+   "Nevşehir - 5 bin yıl",
+   "Şanlıurfa - 12 bin yıl",
+   "Mardin - 8 bin yıl",
+   "Diyarbakır - 10 bin yıl"
+  ],
+  "d": 1,
+  "a": "Göbeklitepe, Şanlıurfa'da dünyanın en eski tapınak alanıdır (~12 bin yıl)."
+ },
+ {
+  "k": "Tarih",
+  "s": "Piri Reis Haritası hangi yüzyılda çizilmiştir?",
+  "o": [
+   "14. yüzyıl",
+   "15. yüzyıl",
+   "16. yüzyıl",
+   "17. yüzyıl"
+  ],
+  "d": 2,
+  "a": "Piri Reis ünlü dünya haritasını 1513'te (16. yüzyıl) çizdi. Amerika kıtasını gösteren en eski haritalardan!"
+ },
+ {
+  "k": "Tarih",
+  "s": "Osmanlı İmparatorluğu en geniş sınırlarına hangi padişah döneminde ulaştı?",
+  "o": [
+   "Fatih Sultan Mehmet",
+   "Yavuz Sultan Selim",
+   "Kanuni Sultan Süleyman",
+   "II. Mehmet"
+  ],
+  "d": 2,
+  "a": "Kanuni Sultan Süleyman döneminde (1520-1566) Osmanlı en geniş sınırlarına ulaştı."
+ },
+ {
+  "k": "Tarih",
+  "s": "Mısır piramitlerinden en büyüğü hangisidir?",
+  "o": [
+   "Kefren Piramidi",
+   "Keops Piramidi",
+   "Mikerinos Piramidi",
+   "Saqqara Piramidi"
+  ],
+  "d": 1,
+  "a": "Keops Piramidi (Giza) yaklaşık 146 metre yüksekliğiyle en büyük piramittir."
+ },
+ {
+  "k": "Tarih",
+  "s": "Atatürk hangi savaşta 'Anafartalar Kahramanı' unvanını aldı?",
+  "o": [
+   "Sakarya Savaşı",
+   "Çanakkale Savaşı",
+   "Başkomutanlık Savaşı",
+   "I. İnönü Savaşı"
+  ],
+  "d": 1,
+  "a": "Mustafa Kemal, 1915 Çanakkale Savaşı'nda Anafartalar Kahramanı oldu."
+ },
+ {
+  "k": "Tarih",
+  "s": "İlk olimpiyat oyunları nerede düzenlenmiştir?",
+  "o": [
+   "Roma",
+   "Atina",
+   "Olympia",
+   "İstanbul"
+  ],
+  "d": 2,
+  "a": "İlk olimpiyat MÖ 776'da antik Yunanistan'daki Olympia'da düzenlendi."
+ },
+ {
+  "k": "Tarih",
+  "s": "Sümerler dünyaya hangi icadı kazandırmıştır?",
+  "o": [
+   "Barut",
+   "Pusula",
+   "Yazı",
+   "Matbaa"
+  ],
+  "d": 2,
+  "a": "Sümerler MÖ 3500 civarında çivi yazısını icat etti - tarihin başlangıcı!"
+ },
+ {
+  "k": "Tarih",
+  "s": "Lozan Antlaşması hangi yılda imzalanmıştır?",
+  "o": [
+   "1921",
+   "1922",
+   "1923",
+   "1924"
+  ],
+  "d": 2,
+  "a": "Lozan Antlaşması 24 Temmuz 1923'te İsviçre'de imzalandı."
+ },
+ {
+  "k": "Tarih",
+  "s": "İstanbul'da Ayasofya ne zaman camiye dönüştürülmüştür (ilk kez)?",
+  "o": [
+   "1453",
+   "1520",
+   "1616",
+   "1934"
+  ],
+  "d": 0,
+  "a": "Fatih Sultan Mehmet, İstanbul'un fethinden sonra 1453'te Ayasofya'yı camiye çevirdi."
+ },
+ {
+  "k": "Tarih",
+  "s": "Türk Hava Yolları (THY) hangi yılda kurulmuştur?",
+  "o": [
+   "1923",
+   "1933",
+   "1945",
+   "1956"
+  ],
+  "d": 1,
+  "a": "THY, 1933'te 'Devlet Hava Yolları' adıyla kuruldu."
+ },
+ {
+  "k": "Tarih",
+  "s": "Sakarya Meydan Muharebesi kaç gün sürmüştür?",
+  "o": [
+   "7 gün",
+   "15 gün",
+   "22 gün",
+   "30 gün"
+  ],
+  "d": 2,
+  "a": "Sakarya Meydan Muharebesi 22 gün 22 gece sürdü (23 Ağustos - 13 Eylül 1921)."
+ },
+ {
+  "k": "Tarih",
+  "s": "Tanzimat Fermanı hangi yılda ilan edilmiştir?",
+  "o": [
+   "1808",
+   "1839",
+   "1856",
+   "1876"
+  ],
+  "d": 1,
+  "a": "Tanzimat Fermanı 1839'da Gülhane Parkı'nda okunarak ilan edildi."
+ },
+ {
+  "k": "Tarih",
+  "s": "Dünya tarihindeki en kısa savaş hangi ülkeler arasında olmuştur?",
+  "o": [
+   "İngiltere - Zanzibar",
+   "ABD - İspanya",
+   "Rusya - Japonya",
+   "Fransa - Prusya"
+  ],
+  "d": 0,
+  "a": "İngiltere-Zanzibar savaşı sadece 38-45 dakika sürdü (1896). Tarihin en kısa savaşı!"
+ },
+ {
+  "k": "Tarih",
+  "s": "Mezopotamya uygarlıkları hangi nehirler arasında kurulmuştur?",
+  "o": [
+   "Nil - Kızılırmak",
+   "Fırat - Dicle",
+   "Ganj - İndus",
+   "Amazon - Orinoco"
+  ],
+  "d": 1,
+  "a": "Mezopotamya 'İki nehir arası' anlamına gelir: Fırat ve Dicle."
+ },
+ {
+  "k": "Tarih",
+  "s": "Atatürk'ün soyadı kanunu hangi yılda kabul edilmiştir?",
+  "o": [
+   "1926",
+   "1928",
+   "1934",
+   "1936"
+  ],
+  "d": 2,
+  "a": "Soyadı Kanunu 1934'te kabul edildi. Mustafa Kemal'e 'Atatürk' soyadı TBMM tarafından verildi."
+ },
+ {
+  "k": "Tarih",
+  "s": "Roma İmparatorluğu hangi yılda ikiye ayrılmıştır?",
+  "o": [
+   "285",
+   "330",
+   "395",
+   "476"
+  ],
+  "d": 2,
+  "a": "395'te Doğu (Bizans) ve Batı Roma olarak ikiye ayrıldı."
+ },
+ {
+  "k": "Tarih",
+  "s": "Harf inkılabı hangi yılda gerçekleşmiştir?",
+  "o": [
+   "1925",
+   "1926",
+   "1928",
+   "1930"
+  ],
+  "d": 2,
+  "a": "1 Kasım 1928'de Latin alfabesine geçildi. Okuma-yazma oranı hızla arttı!"
+ },
+ {
+  "k": "Tarih",
+  "s": "İpek Yolu hangi iki bölgeyi birbirine bağlıyordu?",
+  "o": [
+   "Avrupa - Afrika",
+   "Çin - Akdeniz",
+   "Hindistan - Mısır",
+   "Japonya - Avrupa"
+  ],
+  "d": 1,
+  "a": "İpek Yolu, Çin'den Akdeniz'e uzanan tarihi ticaret yoluydu."
+ },
+ {
+  "k": "Tarih",
+  "s": "Osmanlı'nın ilk başkenti neresidir?",
+  "o": [
+   "İstanbul",
+   "Bursa",
+   "Edirne",
+   "Söğüt"
+  ],
+  "d": 3,
+  "a": "Osmanlı'nın ilk merkezi Söğüt'tür (1299). İlk gerçek başkent ise Bursa kabul edilir."
+ },
+ {
+  "k": "Tarih",
+  "s": "Avrupa'da Rönesans hangi ülkede başlamıştır?",
+  "o": [
+   "Fransa",
+   "İngiltere",
+   "İtalya",
+   "Almanya"
+  ],
+  "d": 2,
+  "a": "Rönesans 14. yüzyılda İtalya'da (Floransa) başladı."
+ },
+ {
+  "k": "Tarih",
+  "s": "Büyük İskender hangi ülkeden çıkmıştır?",
+  "o": [
+   "Yunanistan",
+   "Makedonya",
+   "Roma",
+   "Mısır"
+  ],
+  "d": 1,
+  "a": "İskender, antik Makedonya Kralı II. Filip'in oğluydu."
+ },
+ {
+  "k": "Tarih",
+  "s": "Berlin Duvarı hangi yılda yıkılmıştır?",
+  "o": [
+   "1985",
+   "1987",
+   "1989",
+   "1991"
+  ],
+  "d": 2,
+  "a": "Berlin Duvarı 9 Kasım 1989'da yıkıldı. Soğuk Savaş'ın sembolik sonu!"
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Türkiye'nin en uzun nehri hangisidir?",
+  "o": [
+   "Fırat",
+   "Kızılırmak",
+   "Sakarya",
+   "Dicle"
+  ],
+  "d": 1,
+  "a": "Kızılırmak 1355 km ile Türkiye'nin en uzun nehridir."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Türkiye'nin en büyük gölü hangisidir?",
+  "o": [
+   "Tuz Gölü",
+   "Van Gölü",
+   "Beyşehir Gölü",
+   "Burdur Gölü"
+  ],
+  "d": 1,
+  "a": "Van Gölü 3713 km² ile en büyük göldür."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Dünyanın en büyük okyanusu hangisidir?",
+  "o": [
+   "Atlas Okyanusu",
+   "Hint Okyanusu",
+   "Büyük (Pasifik) Okyanus",
+   "Kuzey Buz Denizi"
+  ],
+  "d": 2,
+  "a": "Pasifik Okyanusu dünyanın en büyük okyanusudur."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Türkiye kaç coğrafi bölgeye ayrılır?",
+  "o": [
+   "5",
+   "6",
+   "7",
+   "8"
+  ],
+  "d": 2,
+  "a": "Türkiye 7 coğrafi bölgeye ayrılır."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Dünyanın en yüksek dağı hangisidir?",
+  "o": [
+   "K2",
+   "Everest",
+   "Ağrı Dağı",
+   "Kilimanjaro"
+  ],
+  "d": 1,
+  "a": "Everest Dağı 8849 m ile dünyanın en yüksek noktasıdır."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Türkiye'nin en yüksek dağı hangisidir?",
+  "o": [
+   "Erciyes",
+   "Ağrı Dağı",
+   "Süphan Dağı",
+   "Kaçkar"
+  ],
+  "d": 1,
+  "a": "Ağrı Dağı 5137 m ile Türkiye'nin en yüksek dağıdır."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Amazon Nehri hangi kıtadadır?",
+  "o": [
+   "Afrika",
+   "Asya",
+   "Güney Amerika",
+   "Kuzey Amerika"
+  ],
+  "d": 2,
+  "a": "Amazon Nehri Güney Amerika'dadır."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Hangi ülke hem Avrupa hem Asya kıtasında yer alır?",
+  "o": [
+   "İran",
+   "Yunanistan",
+   "Türkiye",
+   "Mısır"
+  ],
+  "d": 2,
+  "a": "Türkiye, İstanbul Boğazı ile iki kıtada yer alır."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Türkiye'nin yüzölçümü bakımından en büyük ili hangisidir?",
+  "o": [
+   "İstanbul",
+   "Ankara",
+   "Konya",
+   "Sivas"
+  ],
+  "d": 2,
+  "a": "Konya 40.838 km² ile Türkiye'nin en büyük yüzölçümüne sahip ilidir."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Dünyada en fazla ülkeyle sınır komşusu olan ülke hangisidir?",
+  "o": [
+   "Rusya",
+   "Çin",
+   "Brezilya",
+   "Almanya"
+  ],
+  "d": 1,
+  "a": "Çin, 14 ülkeyle sınır komşusudur. Rusya da 14 ülkeyle eşit!"
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Türkiye'de en çok yağış alan bölge hangisidir?",
+  "o": [
+   "Marmara Bölgesi",
+   "Akdeniz Bölgesi",
+   "Karadeniz Bölgesi",
+   "Ege Bölgesi"
+  ],
+  "d": 2,
+  "a": "Karadeniz Bölgesi, özellikle Doğu Karadeniz, Türkiye'nin en çok yağış alan bölgesidir."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Hangi kıta hem Kuzey hem Güney Yarımküre'de bulunur?",
+  "o": [
+   "Avrupa",
+   "Asya",
+   "Afrika",
+   "Avustralya"
+  ],
+  "d": 2,
+  "a": "Afrika kıtası Ekvator tarafından ikiye bölünür, her iki yarımkürede de yer alır."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Dünyanın en uzun nehri hangisidir?",
+  "o": [
+   "Amazon",
+   "Nil",
+   "Mississippi",
+   "Yangtze"
+  ],
+  "d": 1,
+  "a": "Nil Nehri 6.650 km ile dünyanın en uzun nehridir. Afrika'nın can damarı!"
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Türkiye'nin kaç denizle çevrili olduğu doğrudur?",
+  "o": [
+   "2",
+   "3",
+   "4",
+   "5"
+  ],
+  "d": 2,
+  "a": "Karadeniz, Marmara, Ege ve Akdeniz olmak üzere 4 denizle çevrilidir."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Dünyanın en büyük çölü hangisidir?",
+  "o": [
+   "Sahra Çölü",
+   "Gobi Çölü",
+   "Antarktika",
+   "Karakum Çölü"
+  ],
+  "d": 2,
+  "a": "Antarktika aslında dünyanın en büyük çölüdür! Sahra ise en büyük sıcak çöldür."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "İstanbul Boğazı hangi iki denizi birbirine bağlar?",
+  "o": [
+   "Ege - Akdeniz",
+   "Karadeniz - Marmara",
+   "Marmara - Ege",
+   "Karadeniz - Akdeniz"
+  ],
+  "d": 1,
+  "a": "İstanbul Boğazı, Karadeniz ile Marmara Denizi'ni birbirine bağlar."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Türkiye'nin en doğusundaki il hangisidir?",
+  "o": [
+   "Van",
+   "Hakkari",
+   "Iğdır",
+   "Kars"
+  ],
+  "d": 2,
+  "a": "Iğdır, Türkiye'nin en doğusundaki ildir (44°E). Aynı zamanda Ağrı Dağı'nın eteklerinde!"
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Dünyanın en küçük kıtası hangisidir?",
+  "o": [
+   "Avrupa",
+   "Antarktika",
+   "Avustralya/Okyanusya",
+   "Güney Amerika"
+  ],
+  "d": 2,
+  "a": "Avustralya/Okyanusya 8.5 milyon km² ile en küçük kıtadır."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Kapadokya'daki peri bacaları nasıl oluşmuştur?",
+  "o": [
+   "İnsan yapımı",
+   "Volkanik erozyon",
+   "Depremler",
+   "Sel suları"
+  ],
+  "d": 1,
+  "a": "Peri bacaları volkanik tüf tabakalarının rüzgar ve su erozyonuyla aşınmasıyla oluştu."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Dünyanın en derin gölü hangisidir?",
+  "o": [
+   "Hazar Denizi",
+   "Baykal Gölü",
+   "Victoria Gölü",
+   "Titicaca Gölü"
+  ],
+  "d": 1,
+  "a": "Baykal Gölü (Rusya) 1.642 m derinlikle dünyanın en derin gölüdür. Dünya tatlı suyunun %20'si burada!"
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Güneydoğu Anadolu Bölgesi'nin en önemli tarım ürünü hangisidir?",
+  "o": [
+   "Çay",
+   "Fındık",
+   "Pamuk",
+   "Ayçiçeği"
+  ],
+  "d": 2,
+  "a": "GAP sayesinde pamuk üretimi Güneydoğu Anadolu'nun lokomotifidir."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Sıcaklık rekorunun kırıldığı yer neresidir?",
+  "o": [
+   "Sahra Çölü",
+   "Ölüm Vadisi (ABD)",
+   "Lut Çölü (İran)",
+   "Rub al-Hali (Arabistan)"
+  ],
+  "d": 1,
+  "a": "Ölüm Vadisi'nde (Death Valley) 56.7°C ölçüldü (1913). Dünyanın en sıcak noktası!"
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Türkiye'de en fazla deprem olan bölge hangisidir?",
+  "o": [
+   "Marmara Bölgesi",
+   "Doğu Anadolu",
+   "Ege Bölgesi",
+   "Karadeniz Bölgesi"
+  ],
+  "d": 1,
+  "a": "Doğu Anadolu Bölgesi Türkiye'nin en aktif deprem kuşağındadır."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Dünyanın en kalabalık ülkesi hangisidir?",
+  "o": [
+   "ABD",
+   "Hindistan",
+   "Çin",
+   "Endonezya"
+  ],
+  "d": 1,
+  "a": "Hindistan, 2023'te Çin'i geçerek dünyanın en kalabalık ülkesi oldu (~1.4 milyar)."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Akdeniz ikliminde yazlar nasıldır?",
+  "o": [
+   "Serin ve yağışlı",
+   "Sıcak ve kurak",
+   "Ilık ve nemli",
+   "Soğuk ve karlı"
+  ],
+  "d": 1,
+  "a": "Akdeniz ikliminde yazlar sıcak-kurak, kışlar ılık-yağışlı geçer."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Türkiye'nin en büyük adası hangisidir?",
+  "o": [
+   "Bozcaada",
+   "Gökçeada",
+   "Büyükada",
+   "Akdamar"
+  ],
+  "d": 1,
+  "a": "Gökçeada (Çanakkale) 286 km² ile Türkiye'nin en büyük adasıdır."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Ekvator çizgisi hangi kıtalardan geçmez?",
+  "o": [
+   "Afrika",
+   "Güney Amerika",
+   "Avrupa",
+   "Asya"
+  ],
+  "d": 2,
+  "a": "Ekvator çizgisi Avrupa kıtasından geçmez. Afrika, G. Amerika ve Asya'dan geçer."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Dünyada en fazla yanardağ bulunan ülke hangisidir?",
+  "o": [
+   "Japonya",
+   "İzlanda",
+   "Endonezya",
+   "İtalya"
+  ],
+  "d": 2,
+  "a": "Endonezya ~130 aktif yanardağla dünyanın en fazla yanardağa sahip ülkesidir. 'Ateş Kuşağı' üzerinde!"
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Dünyanın en uzun sıradağları hangisidir?",
+  "o": [
+   "Himalayalar",
+   "Alpler",
+   "And Dağları",
+   "Kayalık Dağlar"
+  ],
+  "d": 2,
+  "a": "And Dağları (Güney Amerika) 7000+ km ile dünyanın en uzun sıradağ sistemidir."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Hangi ülke yüzölçümü bakımından dünyanın en büyüğüdür?",
+  "o": [
+   "Kanada",
+   "Çin",
+   "ABD",
+   "Rusya"
+  ],
+  "d": 3,
+  "a": "Rusya 17.1 milyon km² ile dünyanın en büyük ülkesidir."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Panama Kanalı hangi iki okyanusu birbirine bağlar?",
+  "o": [
+   "Atlas - Hint",
+   "Pasifik - Hint",
+   "Atlas - Pasifik",
+   "Kuzey Buz - Atlas"
+  ],
+  "d": 2,
+  "a": "Panama Kanalı Atlas Okyanusu ile Pasifik Okyanusu'nu bağlar."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Türkiye'nin en alçak noktası neresidir?",
+  "o": [
+   "Tuz Gölü",
+   "Hatay - Amik Ovası",
+   "Antalya kıyıları",
+   "İskenderun Körfezi"
+  ],
+  "d": 1,
+  "a": "Amik Ovası (Hatay) deniz seviyesinin altında, Türkiye'nin en alçak noktası."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Karadeniz neden bu isimle anılır?",
+  "o": [
+   "Suyu siyah",
+   "Fırtınalı hava",
+   "Kuzeyde olması",
+   "Derin olması"
+  ],
+  "d": 2,
+  "a": "Eski Türk coğrafyasında kuzey=kara rengi ile simgelenirdi → Kuzey Deniz = Karadeniz."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Dünyanın en büyük adasını hangi ülke yönetir?",
+  "o": [
+   "Avustralya",
+   "İngiltere",
+   "Danimarka (Grönland)",
+   "Kanada"
+  ],
+  "d": 2,
+  "a": "Grönland 2.16 milyon km² ile dünyanın en büyük adasıdır. Danimarka özerk bölgesi."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "İklim değişikliği ile eriyen buzullar en çok hangi kıtayı etkiler?",
+  "o": [
+   "Afrika",
+   "Güney Amerika",
+   "Antarktika",
+   "Avustralya"
+  ],
+  "d": 2,
+  "a": "Antarktika'daki buzullar dünya tatlı suyunun %70'ini barındırır."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Türkiye'nin en çok sınır komşusu olan bölgesi hangisidir?",
+  "o": [
+   "Marmara",
+   "Doğu Anadolu",
+   "Güneydoğu Anadolu",
+   "Karadeniz"
+  ],
+  "d": 1,
+  "a": "Doğu Anadolu, Gürcistan, Ermenistan, Nahçıvan ve İran ile sınır komşusudur."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Nil Nehri hangi denize dökülür?",
+  "o": [
+   "Kızıldeniz",
+   "Hint Okyanusu",
+   "Akdeniz",
+   "Atlas Okyanusu"
+  ],
+  "d": 2,
+  "a": "Nil Nehri Mısır'dan geçerek Akdeniz'e dökülür."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Dünyanın en kurak yeri neresidir?",
+  "o": [
+   "Sahra Çölü",
+   "Gobi Çölü",
+   "Atacama Çölü",
+   "Antarktika"
+  ],
+  "d": 2,
+  "a": "Atacama Çölü (Şili) dünyanın en kurak yeridir. Bazı bölgelerinde hiç yağmur yağmamış!"
+ },
+ {
+  "k": "Bilim",
+  "s": "Suyun kimyasal formülü nedir?",
+  "o": [
+   "CO2",
+   "H2O",
+   "NaCl",
+   "O2"
+  ],
+  "d": 1,
+  "a": "Su: H2O (2 Hidrojen + 1 Oksijen)"
+ },
+ {
+  "k": "Bilim",
+  "s": "Güneş sisteminde kaç gezegen vardır?",
+  "o": [
+   "7",
+   "8",
+   "9",
+   "10"
+  ],
+  "d": 1,
+  "a": "Güneş sisteminde 8 gezegen vardır (Plüton cüce gezegen)."
+ },
+ {
+  "k": "Bilim",
+  "s": "DNA'nın açılımı nedir?",
+  "o": [
+   "Deoksiribonükleik Asit",
+   "Dinamik Nükleer Asit",
+   "Direkt Nükleik Asit",
+   "Deoksi Nitrik Asit"
+  ],
+  "d": 0,
+  "a": "DNA = Deoksiribonükleik Asit"
+ },
+ {
+  "k": "Bilim",
+  "s": "Işık hızı saniyede yaklaşık kaç km'dir?",
+  "o": [
+   "100.000",
+   "200.000",
+   "300.000",
+   "400.000"
+  ],
+  "d": 2,
+  "a": "Işık hızı ≈ 300.000 km/s"
+ },
+ {
+  "k": "Bilim",
+  "s": "Periyodik tabloda 'Fe' hangi elementi simgeler?",
+  "o": [
+   "Flor",
+   "Fosfor",
+   "Demir",
+   "Fermiyum"
+  ],
+  "d": 2,
+  "a": "Fe = Ferrum (Demir)"
+ },
+ {
+  "k": "Bilim",
+  "s": "Yerçekimi yasasını bulan bilim insanı kimdir?",
+  "o": [
+   "Einstein",
+   "Newton",
+   "Galileo",
+   "Kepler"
+  ],
+  "d": 1,
+  "a": "Isaac Newton yerçekimi yasasını keşfetti."
+ },
+ {
+  "k": "Bilim",
+  "s": "Dünyanın Güneş etrafındaki dönüşü ne kadar sürer?",
+  "o": [
+   "24 saat",
+   "30 gün",
+   "365 gün",
+   "12 ay"
+  ],
+  "d": 2,
+  "a": "Dünya, Güneş etrafında yaklaşık 365 günde (1 yıl) döner."
+ },
+ {
+  "k": "Bilim",
+  "s": "İnsan vücudunda kaç kemik bulunur?",
+  "o": [
+   "186",
+   "206",
+   "256",
+   "306"
+  ],
+  "d": 1,
+  "a": "Yetişkin insan vücudunda 206 kemik bulunur."
+ },
+ {
+  "k": "Bilim",
+  "s": "Hangi gezegen 'Kızıl Gezegen' olarak bilinir?",
+  "o": [
+   "Venüs",
+   "Jüpiter",
+   "Mars",
+   "Satürn"
+  ],
+  "d": 2,
+  "a": "Mars, yüzeyindeki demir oksit (pas) nedeniyle kırmızımsı görünür."
+ },
+ {
+  "k": "Bilim",
+  "s": "İnsan beyninin ağırlığı yaklaşık kaç gramdır?",
+  "o": [
+   "500 g",
+   "1000 g",
+   "1400 g",
+   "2000 g"
+  ],
+  "d": 2,
+  "a": "Yetişkin insan beyni yaklaşık 1400 gram ağırlığındadır."
+ },
+ {
+  "k": "Bilim",
+  "s": "Fotosentez sırasında bitkiler havaya hangi gazı verir?",
+  "o": [
+   "Karbondioksit",
+   "Azot",
+   "Oksijen",
+   "Hidrojen"
+  ],
+  "d": 2,
+  "a": "Bitkiler fotosentez ile CO2 alıp O2 (oksijen) üretir. Yaşamın kaynağı!"
+ },
+ {
+  "k": "Bilim",
+  "s": "Ses hangi ortamda en hızlı yayılır?",
+  "o": [
+   "Havada",
+   "Suda",
+   "Katı maddede",
+   "Boşlukta"
+  ],
+  "d": 2,
+  "a": "Ses katı maddede en hızlı yayılır. Boşlukta ise hiç yayılamaz!"
+ },
+ {
+  "k": "Bilim",
+  "s": "Hangi vitamin güneş ışığıyla sentezlenir?",
+  "o": [
+   "A vitamini",
+   "B12 vitamini",
+   "C vitamini",
+   "D vitamini"
+  ],
+  "d": 3,
+  "a": "D vitamini cilt altında güneş ışığı (UV) yardımıyla sentezlenir."
+ },
+ {
+  "k": "Bilim",
+  "s": "Elektrik ampulünü icat eden bilim insanı kimdir?",
+  "o": [
+   "Nikola Tesla",
+   "Thomas Edison",
+   "Alexander Graham Bell",
+   "Michael Faraday"
+  ],
+  "d": 1,
+  "a": "Thomas Edison, 1879'da pratik elektrik ampulünü geliştirdi."
+ },
+ {
+  "k": "Bilim",
+  "s": "Periyodik tabloda kaç element vardır (2024)?",
+  "o": [
+   "92",
+   "108",
+   "118",
+   "126"
+  ],
+  "d": 2,
+  "a": "Periyodik tabloda 118 element bulunmaktadır (1-118 arası)."
+ },
+ {
+  "k": "Bilim",
+  "s": "Gökkuşağında kaç renk vardır?",
+  "o": [
+   "5",
+   "6",
+   "7",
+   "8"
+  ],
+  "d": 2,
+  "a": "Gökkuşağında 7 renk vardır: Kırmızı, turuncu, sarı, yeşil, mavi, çivit mavisi, mor."
+ },
+ {
+  "k": "Bilim",
+  "s": "İnsan vücudundaki en büyük organ hangisidir?",
+  "o": [
+   "Karaciğer",
+   "Beyin",
+   "Deri",
+   "Akciğer"
+  ],
+  "d": 2,
+  "a": "Deri, ~2 m² alanla vücudun en büyük organıdır!"
+ },
+ {
+  "k": "Bilim",
+  "s": "Hangi hayvan kendi vücut ışığını üretebilir?",
+  "o": [
+   "Ahtapot",
+   "Ateş böceği",
+   "Bukalemun",
+   "Denizatı"
+  ],
+  "d": 1,
+  "a": "Ateş böcekleri biyolüminesans ile kendi ışığını üretir."
+ },
+ {
+  "k": "Bilim",
+  "s": "Bir su molekülünde kaç atom vardır?",
+  "o": [
+   "2",
+   "3",
+   "4",
+   "5"
+  ],
+  "d": 1,
+  "a": "H2O: 2 hidrojen + 1 oksijen = 3 atom."
+ },
+ {
+  "k": "Bilim",
+  "s": "Dünyanın çekirdeği hangi metallerden oluşur?",
+  "o": [
+   "Altın ve gümüş",
+   "Demir ve nikel",
+   "Bakır ve çinko",
+   "Alüminyum ve titan"
+  ],
+  "d": 1,
+  "a": "Dünya çekirdeği ağırlıklı olarak demir ve nikelden oluşur. 5000°C sıcaklıkta!"
+ },
+ {
+  "k": "Bilim",
+  "s": "Hangi bilim insanı görelilik teorisini geliştirdi?",
+  "o": [
+   "Newton",
+   "Hawking",
+   "Einstein",
+   "Bohr"
+  ],
+  "d": 2,
+  "a": "Albert Einstein, 1905 ve 1915'te özel ve genel görelilik teorilerini yayımladı."
+ },
+ {
+  "k": "Bilim",
+  "s": "Penisilin antibiyotiğini keşfeden bilim insanı kimdir?",
+  "o": [
+   "Louis Pasteur",
+   "Alexander Fleming",
+   "Robert Koch",
+   "Edward Jenner"
+  ],
+  "d": 1,
+  "a": "Alexander Fleming 1928'de penisilin'i keşfetti. Modern tıbbın dönüm noktası!"
+ },
+ {
+  "k": "Bilim",
+  "s": "İnsan vücudundaki en küçük kemik hangisidir?",
+  "o": [
+   "El kemiği",
+   "Ayak kemiği",
+   "Kulak kemiği (üzengi)",
+   "Burun kemiği"
+  ],
+  "d": 2,
+  "a": "Üzengi kemiği (stapes) ~3 mm ile vücudun en küçük kemiğidir."
+ },
+ {
+  "k": "Bilim",
+  "s": "Hangi element canlı yaşamın temelini oluşturur?",
+  "o": [
+   "Oksijen",
+   "Hidrojen",
+   "Karbon",
+   "Azot"
+  ],
+  "d": 2,
+  "a": "Karbon, organik bileşiklerin temelini oluşturur. Yaşamın yapı taşı!"
+ },
+ {
+  "k": "Bilim",
+  "s": "Güneş'in yüzey sıcaklığı yaklaşık kaç derecedir?",
+  "o": [
+   "1.500°C",
+   "3.000°C",
+   "5.500°C",
+   "10.000°C"
+  ],
+  "d": 2,
+  "a": "Güneş'in yüzey sıcaklığı yaklaşık 5.500°C'dir. Çekirdeği 15 milyon°C!"
+ },
+ {
+  "k": "Bilim",
+  "s": "Hangi gezegenin en fazla uydusu vardır?",
+  "o": [
+   "Jüpiter",
+   "Satürn",
+   "Uranüs",
+   "Neptün"
+  ],
+  "d": 1,
+  "a": "Satürn 140+ uydusuyla en fazla uyduya sahip gezegendir."
+ },
+ {
+  "k": "Bilim",
+  "s": "Suyun kaynama noktası deniz seviyesinde kaç derecedir?",
+  "o": [
+   "90°C",
+   "95°C",
+   "100°C",
+   "110°C"
+  ],
+  "d": 2,
+  "a": "Saf su deniz seviyesinde 100°C'de kaynar."
+ },
+ {
+  "k": "Bilim",
+  "s": "Atmosferdeki en bol gaz hangisidir?",
+  "o": [
+   "Oksijen",
+   "Azot",
+   "Karbondioksit",
+   "Hidrojen"
+  ],
+  "d": 1,
+  "a": "Azot (N₂) atmosferin %78'ini oluşturur. Oksijen sadece %21!"
+ },
+ {
+  "k": "Bilim",
+  "s": "İnsan vücudunda kaç litre kan vardır?",
+  "o": [
+   "2-3 litre",
+   "5-6 litre",
+   "8-9 litre",
+   "10-12 litre"
+  ],
+  "d": 1,
+  "a": "Yetişkin bir insanda yaklaşık 5-6 litre kan bulunur."
+ },
+ {
+  "k": "Bilim",
+  "s": "Hücre bölünmesi sırasında DNA'nın kopyalanmasına ne denir?",
+  "o": [
+   "Translasyon",
+   "Transkripsiyon",
+   "Replikasyon",
+   "Mutasyon"
+  ],
+  "d": 2,
+  "a": "Replikasyon: DNA'nın kendi kopyasını oluşturması."
+ },
+ {
+  "k": "Bilim",
+  "s": "Dünya'nın tek doğal uydusu nedir?",
+  "o": [
+   "Güneş",
+   "Ay",
+   "Yıldızlar",
+   "Mars"
+  ],
+  "d": 1,
+  "a": "Ay, Dünya'nın tek doğal uydusudur."
+ },
+ {
+  "k": "Bilim",
+  "s": "Hangi vitamin eksikliği iskorbüt hastalığına neden olur?",
+  "o": [
+   "A vitamini",
+   "B vitamini",
+   "C vitamini",
+   "D vitamini"
+  ],
+  "d": 2,
+  "a": "C vitamini eksikliği iskorbüt hastalığına yol açar. Denizcilerin korkulu rüyasıydı!"
+ },
+ {
+  "k": "Bilim",
+  "s": "Sismograf hangi doğa olayını ölçer?",
+  "o": [
+   "Rüzgar hızı",
+   "Deprem",
+   "Hava basıncı",
+   "Nem"
+  ],
+  "d": 1,
+  "a": "Sismograf deprem dalgalarını kaydeder ve ölçer."
+ },
+ {
+  "k": "Bilim",
+  "s": "Fotosentez hangi organelde gerçekleşir?",
+  "o": [
+   "Mitokondri",
+   "Ribozom",
+   "Kloroplast",
+   "Çekirdek"
+  ],
+  "d": 2,
+  "a": "Fotosentez kloroplast organelinde gerçekleşir. Klorofil pigmenti sayesinde!"
+ },
+ {
+  "k": "Bilim",
+  "s": "Hangi hayvan dünyanın en hızlı kara hayvanıdır?",
+  "o": [
+   "Aslan",
+   "Çita",
+   "Kanguru",
+   "Ceylan"
+  ],
+  "d": 1,
+  "a": "Çita saatte 120 km hıza ulaşabilen en hızlı kara hayvanıdır!"
+ },
+ {
+  "k": "Bilim",
+  "s": "Termometre neyi ölçer?",
+  "o": [
+   "Basınç",
+   "Sıcaklık",
+   "Nem",
+   "Rüzgar hızı"
+  ],
+  "d": 1,
+  "a": "Termometre sıcaklık ölçen aletdir."
+ },
+ {
+  "k": "Bilim",
+  "s": "Barometre neyi ölçer?",
+  "o": [
+   "Sıcaklık",
+   "Hava basıncı",
+   "Nem",
+   "Rüzgar yönü"
+  ],
+  "d": 1,
+  "a": "Barometre hava basıncını ölçer. Hava tahmini için kritik!"
+ },
+ {
+  "k": "Bilim",
+  "s": "İnsan kulağı hangi frekans aralığındaki sesleri duyar?",
+  "o": [
+   "1-100 Hz",
+   "20-20000 Hz",
+   "50-50000 Hz",
+   "100-100000 Hz"
+  ],
+  "d": 1,
+  "a": "İnsan kulağı yaklaşık 20 Hz - 20.000 Hz arasındaki sesleri duyabilir."
+ },
+ {
+  "k": "Bilim",
+  "s": "Dünyanın yaşı yaklaşık kaç milyar yıldır?",
+  "o": [
+   "2.5 milyar",
+   "4.5 milyar",
+   "6.5 milyar",
+   "10 milyar"
+  ],
+  "d": 1,
+  "a": "Dünya yaklaşık 4.5 milyar yaşındadır."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Nutuk adlı eser kime aittir?",
+  "o": [
+   "Yahya Kemal",
+   "Mehmet Akif Ersoy",
+   "Mustafa Kemal Atatürk",
+   "Namık Kemal"
+  ],
+  "d": 2,
+  "a": "Nutuk, Mustafa Kemal Atatürk tarafından yazılmıştır."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "İstiklal Marşı'nın şairi kimdir?",
+  "o": [
+   "Nazım Hikmet",
+   "Mehmet Akif Ersoy",
+   "Yahya Kemal Beyatlı",
+   "Tevfik Fikret"
+  ],
+  "d": 1,
+  "a": "İstiklal Marşı, Mehmet Akif Ersoy tarafından yazılmıştır."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Mona Lisa' tablosunun ressamı kimdir?",
+  "o": [
+   "Picasso",
+   "Van Gogh",
+   "Leonardo da Vinci",
+   "Michelangelo"
+  ],
+  "d": 2,
+  "a": "Mona Lisa, Leonardo da Vinci'nin eseridir."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Romeo ve Juliet hangi yazarın eseridir?",
+  "o": [
+   "Charles Dickens",
+   "William Shakespeare",
+   "Mark Twain",
+   "Victor Hugo"
+  ],
+  "d": 1,
+  "a": "Romeo ve Juliet, Shakespeare'in ünlü eseridir."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Türk edebiyatında 'Çalıkuşu' romanının yazarı kimdir?",
+  "o": [
+   "Halide Edib Adıvar",
+   "Reşat Nuri Güntekin",
+   "Yakup Kadri",
+   "Ömer Seyfettin"
+  ],
+  "d": 1,
+  "a": "Çalıkuşu, Reşat Nuri Güntekin tarafından yazılmıştır."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Safahat' adlı eser kime aittir?",
+  "o": [
+   "Yahya Kemal Beyatlı",
+   "Mehmet Akif Ersoy",
+   "Ziya Gökalp",
+   "Tevfik Fikret"
+  ],
+  "d": 1,
+  "a": "Safahat, Mehmet Akif Ersoy'un şiir kitabıdır."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Nobel Edebiyat Ödülü alan ilk Türk yazar kimdir?",
+  "o": [
+   "Yaşar Kemal",
+   "Orhan Pamuk",
+   "Nazım Hikmet",
+   "Aziz Nesin"
+  ],
+  "d": 1,
+  "a": "Orhan Pamuk, 2006'da Nobel Edebiyat Ödülü aldı."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Kürk Mantolu Madonna' romanının yazarı kimdir?",
+  "o": [
+   "Sabahattin Ali",
+   "Peyami Safa",
+   "Ahmet Hamdi Tanpınar",
+   "Orhan Kemal"
+  ],
+  "d": 0,
+  "a": "Kürk Mantolu Madonna, Sabahattin Ali'nin başyapıtıdır. Yıllar sonra yeniden bestseller oldu!"
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'İnce Memed' romanının yazarı kimdir?",
+  "o": [
+   "Orhan Pamuk",
+   "Yaşar Kemal",
+   "Kemal Tahir",
+   "Fakir Baykurt"
+  ],
+  "d": 1,
+  "a": "İnce Memed, Yaşar Kemal'in dünya çapında ünlü eseridir."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Türk edebiyatında 'Huzur' romanı kime aittir?",
+  "o": [
+   "Ahmet Hamdi Tanpınar",
+   "Tarık Buğra",
+   "Oğuz Atay",
+   "Yusuf Atılgan"
+  ],
+  "d": 0,
+  "a": "Huzur, Ahmet Hamdi Tanpınar'ın İstanbul'u anlatan başyapıtıdır."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Tutunamayanlar' romanının yazarı kimdir?",
+  "o": [
+   "Oğuz Atay",
+   "Yusuf Atılgan",
+   "Adalet Ağaoğlu",
+   "Orhan Pamuk"
+  ],
+  "d": 0,
+  "a": "Tutunamayanlar, Oğuz Atay'ın Türk edebiyatının en önemli romanlarından biridir."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Ateşten Gömlek' romanı hangi yazara aittir?",
+  "o": [
+   "Reşat Nuri Güntekin",
+   "Halide Edib Adıvar",
+   "Yakup Kadri",
+   "Ömer Seyfettin"
+  ],
+  "d": 1,
+  "a": "Ateşten Gömlek, Halide Edib Adıvar'ın Kurtuluş Savaşı'nı anlatan romanıdır."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Nasreddin Hoca hangi yüzyılda yaşamıştır?",
+  "o": [
+   "11. yüzyıl",
+   "13. yüzyıl",
+   "15. yüzyıl",
+   "17. yüzyıl"
+  ],
+  "d": 1,
+  "a": "Nasreddin Hoca 13. yüzyılda Akşehir'de yaşadı. Fıkraları dünyaca ünlü!"
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Yüzüklerin Efendisi' serisi kimin eseridir?",
+  "o": [
+   "C.S. Lewis",
+   "J.R.R. Tolkien",
+   "J.K. Rowling",
+   "George R.R. Martin"
+  ],
+  "d": 1,
+  "a": "Yüzüklerin Efendisi, J.R.R. Tolkien'in fantastik edebiyat başyapıtıdır."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Küçük Prens' kitabının yazarı kimdir?",
+  "o": [
+   "Victor Hugo",
+   "Jules Verne",
+   "Antoine de Saint-Exupéry",
+   "Albert Camus"
+  ],
+  "d": 2,
+  "a": "Küçük Prens (Le Petit Prince) dünya edebiyatının en çok okunan kitaplarından!"
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Divan edebiyatının en ünlü şairi kabul edilen kişi kimdir?",
+  "o": [
+   "Yunus Emre",
+   "Fuzuli",
+   "Baki",
+   "Nedim"
+  ],
+  "d": 1,
+  "a": "Fuzuli, Divan edebiyatının en büyük şairlerinden sayılır. Leyla ile Mecnun'un yazarı!"
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Sinekli Bakkal' romanıyla Atatürk'ten ödül alan yazar kimdir?",
+  "o": [
+   "Halide Edib Adıvar",
+   "Reşat Nuri Güntekin",
+   "Yakup Kadri Karaosmanoğlu",
+   "Peyami Safa"
+  ],
+  "d": 0,
+  "a": "Halide Edib Adıvar, Sinekli Bakkal ile CHP Roman Yarışması'nı kazandı."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Dünya edebiyatında 'Don Kişot' kimin eseridir?",
+  "o": [
+   "Dante",
+   "Cervantes",
+   "Shakespeare",
+   "Goethe"
+  ],
+  "d": 1,
+  "a": "Don Kişot, Miguel de Cervantes'in eseridir. İlk modern roman kabul edilir!"
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Beyaz Gemi' adlı eserin yazarı kimdir?",
+  "o": [
+   "Cengiz Aytmatov",
+   "Yaşar Kemal",
+   "Nazım Hikmet",
+   "Sabahattin Ali"
+  ],
+  "d": 0,
+  "a": "Beyaz Gemi, Kırgız yazar Cengiz Aytmatov'un başyapıtıdır."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Suç ve Ceza' romanının yazarı kimdir?",
+  "o": [
+   "Tolstoy",
+   "Dostoyevski",
+   "Çehov",
+   "Gogol"
+  ],
+  "d": 1,
+  "a": "Suç ve Ceza, Fyodor Dostoyevski'nin ölümsüz eseridir."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Savaş ve Barış' romanının yazarı kimdir?",
+  "o": [
+   "Dostoyevski",
+   "Tolstoy",
+   "Puşkin",
+   "Turgenyev"
+  ],
+  "d": 1,
+  "a": "Savaş ve Barış, Lev Tolstoy'un başyapıtıdır."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Türk edebiyatında 'Yaban' romanının yazarı kimdir?",
+  "o": [
+   "Halide Edib",
+   "Yakup Kadri Karaosmanoğlu",
+   "Reşat Nuri",
+   "Peyami Safa"
+  ],
+  "d": 1,
+  "a": "Yaban, Yakup Kadri Karaosmanoğlu'nun Kurtuluş Savaşı'nı anlatan romanıdır."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Yunus Emre hangi yüzyılda yaşamıştır?",
+  "o": [
+   "11. yüzyıl",
+   "13. yüzyıl",
+   "15. yüzyıl",
+   "17. yüzyıl"
+  ],
+  "d": 1,
+  "a": "Yunus Emre 13. yüzyılda yaşamış Türk tasavvuf şairidir."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Harry Potter serisinin yazarı kimdir?",
+  "o": [
+   "Stephen King",
+   "J.R.R. Tolkien",
+   "J.K. Rowling",
+   "Roald Dahl"
+  ],
+  "d": 2,
+  "a": "Harry Potter, J.K. Rowling tarafından yazılmıştır. 500 milyon+ kopya satıldı!"
+ },
+ {
+  "k": "Edebiyat",
+  "s": "İlk Türkçe roman hangisidir?",
+  "o": [
+   "Araba Sevdası",
+   "Taaşşuk-ı Talat ve Fitnat",
+   "İntibah",
+   "Sergüzeşt"
+  ],
+  "d": 1,
+  "a": "Taaşşuk-ı Talat ve Fitnat (1872), Şemsettin Sami tarafından yazılmış ilk Türkçe romandır."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Simyacı' romanının yazarı kimdir?",
+  "o": [
+   "Gabriel Garcia Marquez",
+   "Paulo Coelho",
+   "Isabel Allende",
+   "Jorge Amado"
+  ],
+  "d": 1,
+  "a": "Simyacı, Brezilyalı Paulo Coelho'nun dünyaca ünlü eseridir."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Dede Korkut Hikayeleri hangi Türk boyuna aittir?",
+  "o": [
+   "Göktürk",
+   "Oğuz",
+   "Kıpçak",
+   "Uygur"
+  ],
+  "d": 1,
+  "a": "Dede Korkut, Oğuz Türklerinin destanımsı hikayeler koleksiyonudur."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Uçurtma Avcısı' romanının yazarı kimdir?",
+  "o": [
+   "Orhan Pamuk",
+   "Khaled Hosseini",
+   "Paulo Coelho",
+   "Haruki Murakami"
+  ],
+  "d": 1,
+  "a": "Uçurtma Avcısı, Afgan kökenli Khaled Hosseini'nin romanıdır."
+ },
+ {
+  "k": "Spor",
+  "s": "FIFA Dünya Kupası kaç yılda bir düzenlenir?",
+  "o": [
+   "2 yıl",
+   "3 yıl",
+   "4 yıl",
+   "5 yıl"
+  ],
+  "d": 2,
+  "a": "Dünya Kupası 4 yılda bir düzenlenir."
+ },
+ {
+  "k": "Spor",
+  "s": "Olimpiyat Oyunları'nda kaç halka vardır?",
+  "o": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "d": 2,
+  "a": "Olimpiyat sembolünde 5 kıtayı temsil eden 5 halka vardır."
+ },
+ {
+  "k": "Spor",
+  "s": "Bir futbol maçı normal sürede kaç dakikadır?",
+  "o": [
+   "80",
+   "90",
+   "100",
+   "120"
+  ],
+  "d": 1,
+  "a": "Futbol maçı 2×45 = 90 dakikadır."
+ },
+ {
+  "k": "Spor",
+  "s": "Wimbledon turnuvası hangi spor dalında düzenlenir?",
+  "o": [
+   "Golf",
+   "Tenis",
+   "Kriket",
+   "Yüzme"
+  ],
+  "d": 1,
+  "a": "Wimbledon dünyanın en eski tenis turnuvasıdır."
+ },
+ {
+  "k": "Spor",
+  "s": "Basketbolda bir takım kaç kişiden oluşur?",
+  "o": [
+   "5",
+   "6",
+   "7",
+   "11"
+  ],
+  "d": 0,
+  "a": "Basketbolda sahada 5 kişi oynar."
+ },
+ {
+  "k": "Spor",
+  "s": "Voleybolda bir set kaç sayıya kadar oynanır?",
+  "o": [
+   "15",
+   "21",
+   "25",
+   "30"
+  ],
+  "d": 2,
+  "a": "Voleybolda bir set 25 sayıya kadar oynanır (5. set hariç)."
+ },
+ {
+  "k": "Spor",
+  "s": "Türkiye'nin ilk olimpiyat altın madalyası hangi spor dalındadır?",
+  "o": [
+   "Halter",
+   "Güreş",
+   "Atletizm",
+   "Boks"
+  ],
+  "d": 1,
+  "a": "Yaşar Doğu, 1948 Londra Olimpiyatları'nda güreşte altın madalya kazandı."
+ },
+ {
+  "k": "Spor",
+  "s": "Maratonda koşulan mesafe kaç kilometredir?",
+  "o": [
+   "36.195 km",
+   "40 km",
+   "42.195 km",
+   "45 km"
+  ],
+  "d": 2,
+  "a": "Maraton mesafesi tam olarak 42.195 km'dir. Antik Yunan'dan gelen bir gelenek!"
+ },
+ {
+  "k": "Spor",
+  "s": "Kriket oyununda kaç oyuncu sahada bulunur?",
+  "o": [
+   "9",
+   "11",
+   "13",
+   "15"
+  ],
+  "d": 1,
+  "a": "Kriket takımlarında 11 oyuncu sahada bulunur."
+ },
+ {
+  "k": "Spor",
+  "s": "Hangi ülke en fazla FIFA Dünya Kupası kazanmıştır?",
+  "o": [
+   "Almanya",
+   "Arjantin",
+   "Brezilya",
+   "İtalya"
+  ],
+  "d": 2,
+  "a": "Brezilya 5 Dünya Kupası ile rekor sahibidir (1958, 1962, 1970, 1994, 2002)."
+ },
+ {
+  "k": "Spor",
+  "s": "Teniste 'Grand Slam' kaç turnuvadan oluşur?",
+  "o": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "d": 1,
+  "a": "Grand Slam: Australian Open, Roland Garros, Wimbledon, US Open — 4 turnuva."
+ },
+ {
+  "k": "Spor",
+  "s": "Bir satranç tahtasında toplam kaç kare vardır?",
+  "o": [
+   "32",
+   "48",
+   "64",
+   "81"
+  ],
+  "d": 2,
+  "a": "Satranç tahtası 8×8 = 64 kareden oluşur."
+ },
+ {
+  "k": "Spor",
+  "s": "Türkiye Süper Lig'inde bir sezon kaç takım mücadele eder?",
+  "o": [
+   "16",
+   "18",
+   "20",
+   "22"
+  ],
+  "d": 2,
+  "a": "Süper Lig'de 20 takım mücadele etmektedir."
+ },
+ {
+  "k": "Spor",
+  "s": "Usain Bolt'un 100 metre dünya rekoru kaç saniyedir?",
+  "o": [
+   "9.38",
+   "9.58",
+   "9.72",
+   "9.84"
+  ],
+  "d": 1,
+  "a": "Usain Bolt, 2009'da Berlin'de 9.58 saniyeyle dünya rekoru kırdı. Tarihte en hızlı insan!"
+ },
+ {
+  "k": "Spor",
+  "s": "Yüzmede 'kelebek' stili hangi hareketle yapılır?",
+  "o": [
+   "Kollar sırayla çekilir",
+   "İki kol birlikte yukarı çıkar",
+   "Sırtüstü yüzülür",
+   "Kurbağalama tekniği"
+  ],
+  "d": 1,
+  "a": "Kelebek stilinde iki kol aynı anda su üzerinden öne atılır."
+ },
+ {
+  "k": "Spor",
+  "s": "NBA'de bir basketbol maçı kaç periyottan oluşur?",
+  "o": [
+   "2",
+   "3",
+   "4",
+   "5"
+  ],
+  "d": 2,
+  "a": "NBA'de bir maç 4 çeyrek (periyot), her biri 12 dakikadır."
+ },
+ {
+  "k": "Spor",
+  "s": "Hangi spor dalında 'ace' terimi kullanılır?",
+  "o": [
+   "Futbol",
+   "Tenis",
+   "Yüzme",
+   "Atletizm"
+  ],
+  "d": 1,
+  "a": "Teniste karşı tarafın dokunmadığı servis vuruşuna 'ace' denir."
+ },
+ {
+  "k": "Spor",
+  "s": "Formula 1'de en fazla şampiyonluk kazanan pilot kimdir?",
+  "o": [
+   "Ayrton Senna",
+   "Michael Schumacher",
+   "Lewis Hamilton",
+   "Sebastian Vettel"
+  ],
+  "d": 2,
+  "a": "Lewis Hamilton 7 şampiyonlukla F1 rekor sahibidir (Schumacher ile eşit)."
+ },
+ {
+  "k": "Spor",
+  "s": "Olimpiyatlarda hangi renkler halka olarak kullanılır?",
+  "o": [
+   "Mavi, kırmızı, sarı, yeşil, siyah",
+   "Mavi, kırmızı, sarı, yeşil, beyaz",
+   "Mavi, kırmızı, turuncu, yeşil, siyah",
+   "Mavi, mor, sarı, yeşil, siyah"
+  ],
+  "d": 0,
+  "a": "Olimpiyat halkaları: mavi, siyah, kırmızı, sarı, yeşil. 5 kıtayı temsil eder."
+ },
+ {
+  "k": "Spor",
+  "s": "Hentbolda bir takım kaç kişiden oluşur?",
+  "o": [
+   "5",
+   "6",
+   "7",
+   "9"
+  ],
+  "d": 2,
+  "a": "Hentbolda sahada 6 oyuncu + 1 kaleci = 7 kişi."
+ },
+ {
+  "k": "Spor",
+  "s": "Modern olimpiyatları başlatan kişi kimdir?",
+  "o": [
+   "Pierre de Coubertin",
+   "Jules Rimet",
+   "Jesse Owens",
+   "Jim Thorpe"
+  ],
+  "d": 0,
+  "a": "Baron Pierre de Coubertin 1896'da modern olimpiyatları başlattı."
+ },
+ {
+  "k": "Spor",
+  "s": "Yüzme stillerinden hangisi en hızlısıdır?",
+  "o": [
+   "Kurbağalama",
+   "Kelebek",
+   "Serbest (Kraul)",
+   "Sırtüstü"
+  ],
+  "d": 2,
+  "a": "Serbest stil (kraul) en hızlı yüzme tekniğidir."
+ },
+ {
+  "k": "Spor",
+  "s": "Bir buz hokeyi maçı kaç periyottan oluşur?",
+  "o": [
+   "2",
+   "3",
+   "4",
+   "5"
+  ],
+  "d": 1,
+  "a": "Buz hokeyinde 3 periyot, her biri 20 dakikadır."
+ },
+ {
+  "k": "Spor",
+  "s": "Güreşte Türkiye'nin en başarılı sporcusu kabul edilen kişi kimdir?",
+  "o": [
+   "Yaşar Doğu",
+   "Hamza Yerlikaya",
+   "Rıza Kayaalp",
+   "Taha Akgül"
+  ],
+  "d": 0,
+  "a": "Yaşar Doğu, Türk güreşinin efsanesi. Dünya ve Olimpiyat şampiyonu!"
+ },
+ {
+  "k": "Spor",
+  "s": "Badminton sporunun temel aracı nedir?",
+  "o": [
+   "Top",
+   "Tüylü top (Kaz tüyü)",
+   "Disk",
+   "Balon"
+  ],
+  "d": 1,
+  "a": "Badmintonda kaz tüyünden yapılan tüylü top (shuttle) kullanılır."
+ },
+ {
+  "k": "Spor",
+  "s": "Bir rugby topunun şekli nasıldır?",
+  "o": [
+   "Yuvarlak",
+   "Oval (elips)",
+   "Küp",
+   "Silindir"
+  ],
+  "d": 1,
+  "a": "Rugby topu oval (elips) şeklindedir."
+ },
+ {
+  "k": "Spor",
+  "s": "Masa tenisinde küçük topun çapı yaklaşık kaç mm'dir?",
+  "o": [
+   "20 mm",
+   "30 mm",
+   "40 mm",
+   "50 mm"
+  ],
+  "d": 2,
+  "a": "Masa tenisi topu 40 mm çapındadır."
+ },
+ {
+  "k": "Spor",
+  "s": "Dünyanın en çok izlenen spor etkinliği hangisidir?",
+  "o": [
+   "Olimpiyatlar",
+   "FIFA Dünya Kupası",
+   "Super Bowl",
+   "Wimbledon"
+  ],
+  "d": 1,
+  "a": "FIFA Dünya Kupası finali dünyada en çok izlenen spor etkinliğidir."
+ },
+ {
+  "k": "Spor",
+  "s": "Bir futbol sahasının uzunluğu yaklaşık kaç metredir?",
+  "o": [
+   "80-90 m",
+   "90-100 m",
+   "100-110 m",
+   "110-120 m"
+  ],
+  "d": 2,
+  "a": "FIFA standardı futbol sahası 100-110 m uzunluğundadır."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'nin kaç ili vardır?",
+  "o": [
+   "79",
+   "80",
+   "81",
+   "82"
+  ],
+  "d": 2,
+  "a": "Türkiye'nin 81 ili vardır."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'nin para birimi nedir?",
+  "o": [
+   "Dolar",
+   "Euro",
+   "Türk Lirası",
+   "Sterlin"
+  ],
+  "d": 2,
+  "a": "Türkiye'nin resmi para birimi Türk Lirası'dır (TL)."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'de resmi dil hangisidir?",
+  "o": [
+   "Arapça",
+   "Türkçe",
+   "Kürtçe",
+   "İngilizce"
+  ],
+  "d": 1,
+  "a": "Türkiye'nin resmi dili Türkçe'dir."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Kapadokya hangi ildedir?",
+  "o": [
+   "Kayseri",
+   "Nevşehir",
+   "Aksaray",
+   "Konya"
+  ],
+  "d": 1,
+  "a": "Kapadokya bölgesi ağırlıklı olarak Nevşehir'dedir."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Pamukkale travertenleri hangi ildedir?",
+  "o": [
+   "Muğla",
+   "Aydın",
+   "Denizli",
+   "Burdur"
+  ],
+  "d": 2,
+  "a": "Pamukkale travertenleri Denizli'dedir."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Efes Antik Kenti hangi ildedir?",
+  "o": [
+   "İzmir",
+   "Aydın",
+   "Muğla",
+   "Manisa"
+  ],
+  "d": 0,
+  "a": "Efes Antik Kenti İzmir'in Selçuk ilçesindedir."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'nin en kalabalık şehri hangisidir?",
+  "o": [
+   "Ankara",
+   "İstanbul",
+   "İzmir",
+   "Bursa"
+  ],
+  "d": 1,
+  "a": "İstanbul, Türkiye'nin en kalabalık şehridir."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türk bayrağında hangi semboller bulunur?",
+  "o": [
+   "Yıldız ve güneş",
+   "Ay ve yıldız",
+   "Kartal",
+   "Aslan"
+  ],
+  "d": 1,
+  "a": "Türk bayrağında kırmızı zemin üzerinde beyaz ay ve yıldız bulunur."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'nin yüzölçümü yaklaşık kaç km²'dir?",
+  "o": [
+   "580.000",
+   "680.000",
+   "783.000",
+   "890.000"
+  ],
+  "d": 2,
+  "a": "Türkiye'nin yüzölçümü yaklaşık 783.562 km²'dir."
+ },
+ {
+  "k": "Türkiye",
+  "s": "İstanbul Boğaz Köprüsü (15 Temmuz) hangi yıl açılmıştır?",
+  "o": [
+   "1963",
+   "1968",
+   "1973",
+   "1978"
+  ],
+  "d": 2,
+  "a": "İlk Boğaz Köprüsü 30 Ekim 1973'te açıldı. Cumhuriyet'in 50. yılına hediye!"
+ },
+ {
+  "k": "Türkiye",
+  "s": "Sümela Manastırı hangi ildedir?",
+  "o": [
+   "Artvin",
+   "Trabzon",
+   "Rize",
+   "Giresun"
+  ],
+  "d": 1,
+  "a": "Sümela Manastırı, Trabzon'un Maçka ilçesinde kayalıklara yapılmıştır."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'nin en uzun plajı nerededir?",
+  "o": [
+   "Antalya - Konyaaltı",
+   "Muğla - Ölüdeniz",
+   "Antalya - Patara",
+   "Mersin - Kızkalesi"
+  ],
+  "d": 2,
+  "a": "Patara Plajı 18 km uzunluğuyla Türkiye'nin en uzun plajıdır. Caretta caretta yuvalama alanı!"
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'de en çok üretilen tarım ürünü hangisidir?",
+  "o": [
+   "Buğday",
+   "Pamuk",
+   "Çay",
+   "Fındık"
+  ],
+  "d": 0,
+  "a": "Buğday, Türkiye'nin en çok üretilen tarım ürünüdür (İç Anadolu başta)."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Nemrut Dağı devasa heykelleri hangi ildedir?",
+  "o": [
+   "Malatya",
+   "Adıyaman",
+   "Şanlıurfa",
+   "Elazığ"
+  ],
+  "d": 1,
+  "a": "Nemrut Dağı, Adıyaman'dadır. Kommagene Kralı Antiochos'un dev heykelleri UNESCO listesinde!"
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye dünyada en çok hangi kuru yemişin üreticisidir?",
+  "o": [
+   "Badem",
+   "Ceviz",
+   "Fındık",
+   "Antep fıstığı"
+  ],
+  "d": 2,
+  "a": "Türkiye dünya fındık üretiminin %70'ini karşılar. Karadeniz bölgesi lideri!"
+ },
+ {
+  "k": "Türkiye",
+  "s": "Aspendos Antik Tiyatrosu hangi ildedir?",
+  "o": [
+   "Antalya",
+   "Mersin",
+   "Muğla",
+   "Denizli"
+  ],
+  "d": 0,
+  "a": "Aspendos, Antalya'dadır ve dünyanın en iyi korunmuş Roma tiyatrolarından biridir."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'nin UNESCO Dünya Mirası listesinde kaç varlığı var?",
+  "o": [
+   "10",
+   "14",
+   "19",
+   "21"
+  ],
+  "d": 2,
+  "a": "Türkiye'nin UNESCO listesinde 19 kültürel ve doğal miras varlığı bulunmaktadır."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türk mutfağının UNESCO somut olmayan kültürel mirası olan yemeği hangisidir?",
+  "o": [
+   "Döner",
+   "Baklava",
+   "Geleneksel Türk Kahvesi",
+   "Kebap"
+  ],
+  "d": 2,
+  "a": "Türk kahvesi kültürü ve geleneği 2013'te UNESCO listesine alındı."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Mardin'in simgesi olan taş evlerin özelliği nedir?",
+  "o": [
+   "Ahşap çatılı",
+   "Birinin çatısı diğerinin terası",
+   "Yeraltı şehri",
+   "Kaya oyma"
+  ],
+  "d": 1,
+  "a": "Mardin'de evler yamaçta sıralanır, birinin çatısı diğerinin terasıdır. Eşsiz mimari!"
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'nin ilk milli parkı hangisidir?",
+  "o": [
+   "Göreme",
+   "Yedigöller",
+   "Kuş Cenneti",
+   "Soğuksu"
+  ],
+  "d": 2,
+  "a": "Kuş Cenneti (Manyas) 1959'da Türkiye'nin ilk milli parkı ilan edildi."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Van kedisinin en belirgin özelliği nedir?",
+  "o": [
+   "Siyah tüyler",
+   "Farklı renkte gözler",
+   "Çok küçük boyut",
+   "Uzun kuyruk"
+  ],
+  "d": 1,
+  "a": "Van kedisi farklı renkte gözleriyle (biri mavi, biri kehribar) ünlüdür. Yüzmeyi de sever!"
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'nin en uzun tüneli hangisidir?",
+  "o": [
+   "Ilgaz Tüneli",
+   "Ovit Tüneli",
+   "Bolu Tüneli",
+   "Zigana Tüneli"
+  ],
+  "d": 1,
+  "a": "Ovit Tüneli (Rize-Erzurum) 14.3 km ile Türkiye'nin en uzun tünelidir."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'de en çok turist çeken şehir hangisidir?",
+  "o": [
+   "İstanbul",
+   "Antalya",
+   "İzmir",
+   "Muğla"
+  ],
+  "d": 1,
+  "a": "Antalya, yıllık 15+ milyon turistle Türkiye'nin turizm başkentidir."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Kız Kulesi hangi şehirdedir?",
+  "o": [
+   "Ankara",
+   "İzmir",
+   "İstanbul",
+   "Antalya"
+  ],
+  "d": 2,
+  "a": "Kız Kulesi İstanbul Boğazı'nda, Üsküdar açıklarında yer alır."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'nin en eski üniversitesi hangisidir?",
+  "o": [
+   "Ankara Üniversitesi",
+   "İstanbul Üniversitesi",
+   "Hacettepe Üniversitesi",
+   "ODTÜ"
+  ],
+  "d": 1,
+  "a": "İstanbul Üniversitesi 1453'te Fatih tarafından kurulan Türkiye'nin en eski üniversitesidir."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye hangi spor dalında dünya sıralamasında liderdir?",
+  "o": [
+   "Futbol",
+   "Basketbol",
+   "Güreş",
+   "Voleybol"
+  ],
+  "d": 2,
+  "a": "Türkiye güreşte tarihsel olarak dünya çapında lider ülkelerdendir."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Galata Kulesi hangi dönemde inşa edilmiştir?",
+  "o": [
+   "Roma dönemi",
+   "Bizans dönemi",
+   "Ceneviz dönemi",
+   "Osmanlı dönemi"
+  ],
+  "d": 2,
+  "a": "Galata Kulesi 1348'de Cenevizliler tarafından inşa edilmiştir."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'nin milli içeceği nedir?",
+  "o": [
+   "Kahve",
+   "Çay",
+   "Ayran",
+   "Şalgam"
+  ],
+  "d": 2,
+  "a": "Ayran, Türkiye'nin milli içeceği kabul edilir. Yoğurt + su + tuz!"
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'de hangi deniz en tuzludur?",
+  "o": [
+   "Karadeniz",
+   "Marmara",
+   "Ege",
+   "Akdeniz"
+  ],
+  "d": 3,
+  "a": "Akdeniz Türkiye'yi çevreleyen denizlerin en tuzlusudur."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'nin toplam kaç komşu ülkesi vardır?",
+  "o": [
+   "6",
+   "7",
+   "8",
+   "9"
+  ],
+  "d": 2,
+  "a": "8 komşu: Yunanistan, Bulgaristan, Gürcistan, Ermenistan, Nahçıvan(Azerbaycan), İran, Irak, Suriye."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Selimiye Camii hangi ilde ve kimin eseridir?",
+  "o": [
+   "İstanbul - Sinan",
+   "Edirne - Sinan",
+   "Bursa - Sinan",
+   "Konya - Sinan"
+  ],
+  "d": 1,
+  "a": "Selimiye Camii Edirne'dedir. Mimar Sinan'ın 'ustalık eseri' olarak bilinir."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'de en çok çay üretilen bölge hangisidir?",
+  "o": [
+   "Marmara",
+   "Ege",
+   "Doğu Karadeniz",
+   "Akdeniz"
+  ],
+  "d": 2,
+  "a": "Rize ve çevresi Doğu Karadeniz, Türkiye'nin çay başkentidir!"
+ },
+ {
+  "k": "Türkiye",
+  "s": "Mevlana Müzesi hangi şehirdedir?",
+  "o": [
+   "İstanbul",
+   "Konya",
+   "Bursa",
+   "Ankara"
+  ],
+  "d": 1,
+  "a": "Mevlana Celaleddin Rumi'nin türbesi Konya'dadır. Her yıl milyonlarca ziyaretçi alır."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Türkiye'nin en büyük havalimanı hangisidir?",
+  "o": [
+   "Sabiha Gökçen",
+   "Esenboğa",
+   "İstanbul Havalimanı",
+   "Antalya"
+  ],
+  "d": 2,
+  "a": "İstanbul Havalimanı dünyanın en büyük havalimanlarından biridir."
+ },
+ {
+  "k": "Türkiye",
+  "s": "Zeugma Mozaik Müzesi hangi ildedir?",
+  "o": [
+   "Şanlıurfa",
+   "Gaziantep",
+   "Adıyaman",
+   "Hatay"
+  ],
+  "d": 1,
+  "a": "Zeugma Mozaik Müzesi Gaziantep'tedir. Dünyanın en büyük mozaik müzesi!"
+ },
+ {
+  "k": "Türkiye",
+  "s": "Kangal köpeği hangi ildendir?",
+  "o": [
+   "Konya",
+   "Kayseri",
+   "Sivas",
+   "Yozgat"
+  ],
+  "d": 2,
+  "a": "Kangal, Sivas'ın Kangal ilçesine adını veren dünyaca ünlü çoban köpeğidir."
+ },
+ {
+  "k": "Spor",
+  "s": "Bir voleybol takımında sahada kaç oyuncu bulunur?",
+  "o": [
+   "5",
+   "6",
+   "7",
+   "8"
+  ],
+  "d": 1,
+  "a": "Voleybolda her takımdan 6 oyuncu sahada bulunur. Toplam 12 oyuncu!"
+ },
+ {
+  "k": "Spor",
+  "s": "Kriket hangi ülkelerde en popülerdir?",
+  "o": [
+   "ABD ve Kanada",
+   "Hindistan ve İngiltere",
+   "Brezilya ve Arjantin",
+   "Çin ve Japonya"
+  ],
+  "d": 1,
+  "a": "Kriket özellikle Hindistan, İngiltere, Avustralya ve Pakistan'da çok popülerdir."
+ },
+ {
+  "k": "Spor",
+  "s": "Bir maraton yarışının mesafesi kaç kilometredir?",
+  "o": [
+   "21.1 km",
+   "42.195 km",
+   "50 km",
+   "35 km"
+  ],
+  "d": 1,
+  "a": "Maraton 42.195 km'dir. 1908 Londra Olimpiyatları'ndan beri bu mesafe standarttır."
+ },
+ {
+  "k": "Spor",
+  "s": "Beyzbolda atış yapan oyuncuya ne denir?",
+  "o": [
+   "Striker",
+   "Pitcher",
+   "Goalkeeper",
+   "Server"
+  ],
+  "d": 1,
+  "a": "Beyzbolda topu atan oyuncuya 'pitcher' (atıcı) denir."
+ },
+ {
+  "k": "Spor",
+  "s": "Buz hokeyinde disk şeklindeki nesneye ne denir?",
+  "o": [
+   "Top",
+   "Puck",
+   "Birdie",
+   "Shuttle"
+  ],
+  "d": 1,
+  "a": "Buz hokeyinde kullanılan sert kauçuk diske 'puck' denir."
+ },
+ {
+  "k": "Spor",
+  "s": "Wimbledon tenis turnuvası hangi zemin üzerinde oynanır?",
+  "o": [
+   "Toprak",
+   "Sert kort",
+   "Çim",
+   "Halı"
+  ],
+  "d": 2,
+  "a": "Wimbledon dünyanın en prestijli çim kort tenis turnuvasıdır."
+ },
+ {
+  "k": "Spor",
+  "s": "Bir rugby takımında kaç oyuncu bulunur?",
+  "o": [
+   "11",
+   "13",
+   "15",
+   "9"
+  ],
+  "d": 2,
+  "a": "Rugby Union'da her takımda 15 oyuncu bulunur. Rugby League'de ise 13'tür."
+ },
+ {
+  "k": "Spor",
+  "s": "Kış Olimpiyatları'nda hangi spor dalı yapılmaz?",
+  "o": [
+   "Biatlon",
+   "Curling",
+   "Yüzme",
+   "Buz pateni"
+  ],
+  "d": 2,
+  "a": "Yüzme bir yaz olimpiyat sporudur. Kış Olimpiyatları'nda buz ve kar sporları yer alır."
+ },
+ {
+  "k": "Spor",
+  "s": "Dünya Kupası futbol tarihinde en çok gol atan oyuncu kimdir?",
+  "o": [
+   "Pelé",
+   "Miroslav Klose",
+   "Ronaldo",
+   "Just Fontaine"
+  ],
+  "d": 1,
+  "a": "Miroslav Klose 16 golle Dünya Kupası tarihinin en golcü oyuncusudur."
+ },
+ {
+  "k": "Spor",
+  "s": "Okçulukta hedefe isabet eden en iç halkaya ne denir?",
+  "o": [
+   "Bullseye",
+   "Strike",
+   "Ace",
+   "Hole-in-one"
+  ],
+  "d": 0,
+  "a": "Okçulukta tam ortaya isabet 'bullseye' (boğa gözü) olarak adlandırılır. 10 puan değerindedir!"
+ },
+ {
+  "k": "Spor",
+  "s": "Hangisi bir su sporu değildir?",
+  "o": [
+   "Sutopu",
+   "Kürek",
+   "Eskrim",
+   "Yelken"
+  ],
+  "d": 2,
+  "a": "Eskrim bir kılıç sporudur, su ile ilgisi yoktur!"
+ },
+ {
+  "k": "Spor",
+  "s": "Formula 1'de yarış pisti turuna ne denir?",
+  "o": [
+   "Set",
+   "Lap",
+   "Round",
+   "Heat"
+  ],
+  "d": 1,
+  "a": "Formula 1'de pistin bir tam turuna 'lap' denir."
+ },
+ {
+  "k": "Spor",
+  "s": "Jimnastikte erkeklerin yarıştığı ama kadınların yarışmadığı alet hangisidir?",
+  "o": [
+   "Denge aleti",
+   "Halka",
+   "Yer",
+   "Paralel bar"
+  ],
+  "d": 1,
+  "a": "Halka (rings) sadece erkek jimnastiğinde vardır. Büyük kol gücü gerektirir!"
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Sefiller' (Les Misérables) romanının yazarı kimdir?",
+  "o": [
+   "Emile Zola",
+   "Victor Hugo",
+   "Alexandre Dumas",
+   "Gustave Flaubert"
+  ],
+  "d": 1,
+  "a": "Victor Hugo'nun 1862'de yayımlanan Sefiller, dünya edebiyatının en büyük romanlarından biridir."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Yaşlı Adam ve Deniz' kimin eseridir?",
+  "o": [
+   "John Steinbeck",
+   "Ernest Hemingway",
+   "Mark Twain",
+   "F. Scott Fitzgerald"
+  ],
+  "d": 1,
+  "a": "Hemingway bu kısa roman ile 1954 Nobel Edebiyat Ödülü'nü kazandı."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Sherlock Holmes karakterini kim yaratmıştır?",
+  "o": [
+   "Agatha Christie",
+   "Arthur Conan Doyle",
+   "Edgar Allan Poe",
+   "Charles Dickens"
+  ],
+  "d": 1,
+  "a": "Sir Arthur Conan Doyle, Sherlock Holmes'u 1887'de 'Kızıl Dosya' romanıyla tanıttı."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Dönüşüm' (Die Verwandlung) adlı eserin yazarı kimdir?",
+  "o": [
+   "Thomas Mann",
+   "Franz Kafka",
+   "Hermann Hesse",
+   "Stefan Zweig"
+  ],
+  "d": 1,
+  "a": "Kafka'nın 1915 tarihli bu novellasında Gregor Samsa bir sabah böceğe dönüşür."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Türk edebiyatında 'Garip Akımı'nın öncüsü kimdir?",
+  "o": [
+   "Nazım Hikmet",
+   "Orhan Veli Kanık",
+   "Cahit Sıtkı Tarancı",
+   "Necip Fazıl"
+  ],
+  "d": 1,
+  "a": "Orhan Veli Kanık, 1941'de Garip manifestosunu yayımlayarak şiirde devrim yaptı."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Don Kişot' hangi ülke edebiyatına aittir?",
+  "o": [
+   "Fransa",
+   "İtalya",
+   "İspanya",
+   "Portekiz"
+  ],
+  "d": 2,
+  "a": "Miguel de Cervantes'in Don Kişot'u (1605) dünyanın ilk modern romanı sayılır."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Bin Dokuz Yüz Seksen Dört' (1984) romanının yazarı kimdir?",
+  "o": [
+   "Aldous Huxley",
+   "George Orwell",
+   "Ray Bradbury",
+   "H.G. Wells"
+  ],
+  "d": 1,
+  "a": "George Orwell'ın 1949'da yazdığı bu distopya, 'Big Brother' kavramını edebiyata kazandırdı."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Türk edebiyatında 'Çalıkuşu' romanının yazarı kimdir?",
+  "o": [
+   "Halide Edib Adıvar",
+   "Reşat Nuri Güntekin",
+   "Yakup Kadri",
+   "Ömer Seyfettin"
+  ],
+  "d": 1,
+  "a": "Reşat Nuri Güntekin'in 1922'de yazdığı Çalıkuşu, idealist öğretmen Feride'nin hikâyesidir."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Romeo ve Juliet' kimin eseridir?",
+  "o": [
+   "Christopher Marlowe",
+   "William Shakespeare",
+   "Ben Jonson",
+   "Oscar Wilde"
+  ],
+  "d": 1,
+  "a": "Shakespeare'in bu ölümsüz trajedisi 1597'de yayımlandı. Dünyanın en bilinen aşk hikâyesi!"
+ },
+ {
+  "k": "Edebiyat",
+  "s": "Nobel Edebiyat Ödülü'nü ilk kazanan kadın yazar kimdir?",
+  "o": [
+   "Virginia Woolf",
+   "Selma Lagerlöf",
+   "Pearl Buck",
+   "Toni Morrison"
+  ],
+  "d": 1,
+  "a": "İsveçli yazar Selma Lagerlöf, 1909'da Nobel Edebiyat Ödülü'nü kazanan ilk kadın oldu."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Saatleri Ayarlama Enstitüsü' kimin eseridir?",
+  "o": [
+   "Ahmet Hamdi Tanpınar",
+   "Peyami Safa",
+   "Oğuz Atay",
+   "Yusuf Atılgan"
+  ],
+  "d": 0,
+  "a": "Tanpınar'ın bu hiciv romanı (1961) Türk bürokrasisini ve modernleşmeyi eleştirir."
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'Hobbit' ve 'Yüzüklerin Efendisi' kimin eserleridir?",
+  "o": [
+   "C.S. Lewis",
+   "J.R.R. Tolkien",
+   "George R.R. Martin",
+   "Terry Pratchett"
+  ],
+  "d": 1,
+  "a": "Tolkien, modern fantastik edebiyatın babası sayılır. Kendi dil ve mitolojisini yarattı!"
+ },
+ {
+  "k": "Edebiyat",
+  "s": "'İnce Memed' romanının yazarı kimdir?",
+  "o": [
+   "Kemal Tahir",
+   "Yaşar Kemal",
+   "Orhan Kemal",
+   "Fakir Baykurt"
+  ],
+  "d": 1,
+  "a": "Yaşar Kemal'in 1955'te yazdığı İnce Memed, Çukurova'da geçen bir eşkıya destanıdır."
+ },
+ {
+  "k": "Bilim",
+  "s": "Işığın bir yılda aldığı mesafeye ne denir?",
+  "o": [
+   "Astronomik birim",
+   "Işık yılı",
+   "Parsek",
+   "Kiloparsek"
+  ],
+  "d": 1,
+  "a": "Bir ışık yılı yaklaşık 9.46 trilyon kilometredir. Evrendeki mesafeleri ölçmek için kullanılır."
+ },
+ {
+  "k": "Bilim",
+  "s": "İnsan vücudundaki en küçük kemik hangisidir?",
+  "o": [
+   "Kaval kemiği",
+   "Üzengi kemiği",
+   "Köprücük kemiği",
+   "Bilek kemiği"
+  ],
+  "d": 1,
+  "a": "Üzengi kemiği (stapes) kulak içindedir ve sadece 2.5-3 mm uzunluğundadır!"
+ },
+ {
+  "k": "Bilim",
+  "s": "Fotosentez sırasında bitkiler hangi gazı serbest bırakır?",
+  "o": [
+   "Karbondioksit",
+   "Azot",
+   "Oksijen",
+   "Hidrojen"
+  ],
+  "d": 2,
+  "a": "Bitkiler güneş ışığı ve CO₂ kullanarak oksijen üretir. Dünya'daki oksijenin çoğu bitkilerden gelir!"
+ },
+ {
+  "k": "Bilim",
+  "s": "Evrendeki en bol element hangisidir?",
+  "o": [
+   "Oksijen",
+   "Karbon",
+   "Helyum",
+   "Hidrojen"
+  ],
+  "d": 3,
+  "a": "Hidrojen evrendeki tüm maddenin yaklaşık %75'ini oluşturur. Yıldızların yakıtıdır!"
+ },
+ {
+  "k": "Bilim",
+  "s": "DNA'nın çift sarmal yapısını keşfeden bilim insanları kimlerdir?",
+  "o": [
+   "Darwin ve Mendel",
+   "Watson ve Crick",
+   "Pasteur ve Koch",
+   "Newton ve Leibniz"
+  ],
+  "d": 1,
+  "a": "James Watson ve Francis Crick, 1953'te DNA'nın çift sarmal yapısını açıkladı."
+ },
+ {
+  "k": "Bilim",
+  "s": "Mutlak sıfır kaç derece Celsius'tur?",
+  "o": [
+   "-100°C",
+   "-273.15°C",
+   "-300°C",
+   "-196°C"
+  ],
+  "d": 1,
+  "a": "Mutlak sıfır -273.15°C'dir (0 Kelvin). Atomların hareketi neredeyse tamamen durur!"
+ },
+ {
+  "k": "Tarih",
+  "s": "Magna Carta hangi yılda imzalanmıştır?",
+  "o": [
+   "1066",
+   "1215",
+   "1453",
+   "1492"
+  ],
+  "d": 1,
+  "a": "Magna Carta 1215'te İngiltere'de imzalandı. Anayasal hakların temelini oluşturur."
+ },
+ {
+  "k": "Tarih",
+  "s": "İlk yazıyı hangi uygarlık icat etmiştir?",
+  "o": [
+   "Mısırlılar",
+   "Sümerler",
+   "Çinliler",
+   "Romalılar"
+  ],
+  "d": 1,
+  "a": "Sümerler MÖ 3400 civarında çivi yazısını icat etti. İnsanlık tarihinin en büyük buluşlarından!"
+ },
+ {
+  "k": "Tarih",
+  "s": "Osmanlı İmparatorluğu'nda Tanzimat Fermanı hangi yılda ilan edildi?",
+  "o": [
+   "1808",
+   "1839",
+   "1856",
+   "1876"
+  ],
+  "d": 1,
+  "a": "Tanzimat Fermanı (Gülhane Hatt-ı Şerifi) 1839'da ilan edildi. Batılılaşma hareketinin başlangıcıdır."
+ },
+ {
+  "k": "Tarih",
+  "s": "Rönesans hangi ülkede başlamıştır?",
+  "o": [
+   "Fransa",
+   "İngiltere",
+   "İtalya",
+   "Almanya"
+  ],
+  "d": 2,
+  "a": "Rönesans 14. yüzyılda İtalya'da, özellikle Floransa'da başladı. Leonardo da Vinci, Michelangelo gibi dahiler yetişti."
+ },
+ {
+  "k": "Tarih",
+  "s": "Çanakkale Deniz Savaşı hangi tarihte yapılmıştır?",
+  "o": [
+   "19 Mayıs 1919",
+   "18 Mart 1915",
+   "30 Ağustos 1922",
+   "29 Ekim 1923"
+  ],
+  "d": 1,
+  "a": "18 Mart 1915 Çanakkale Deniz Zaferi, düşman donanmasının geri çekildiği tarihi gündür."
+ },
+ {
+  "k": "Tarih",
+  "s": "Soğuk Savaş hangi iki süper güç arasında yaşandı?",
+  "o": [
+   "ABD ve Çin",
+   "ABD ve SSCB",
+   "İngiltere ve Fransa",
+   "SSCB ve Çin"
+  ],
+  "d": 1,
+  "a": "Soğuk Savaş (1947-1991) ABD ve SSCB arasındaki ideolojik ve siyasi mücadeleydi."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Dünya'nın en kurak çölü hangisidir?",
+  "o": [
+   "Sahra",
+   "Gobi",
+   "Atacama",
+   "Kalahari"
+  ],
+  "d": 2,
+  "a": "Atacama Çölü (Şili) dünyanın en kurak yeridir. Bazı bölgelerinde hiç yağmur yağmaz!"
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Hangi kıtada hiç ülke yoktur?",
+  "o": [
+   "Okyanusya",
+   "Antarktika",
+   "Arktik",
+   "Avustralya"
+  ],
+  "d": 1,
+  "a": "Antarktika'da kalıcı nüfus ve ülke yoktur. Sadece bilimsel araştırma istasyonları bulunur."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Amazon Nehri hangi okyanusa dökülür?",
+  "o": [
+   "Pasifik",
+   "Hint",
+   "Atlas",
+   "Arktik"
+  ],
+  "d": 2,
+  "a": "Amazon Nehri Atlas Okyanusu'na dökülür. Dünyanın en çok su taşıyan nehridir!"
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Dünyanın en büyük adası hangisidir?",
+  "o": [
+   "Borneo",
+   "Madagaskar",
+   "Grönland",
+   "Yeni Gine"
+  ],
+  "d": 2,
+  "a": "Grönland 2.16 milyon km² ile dünyanın en büyük adasıdır. Avustralya kıta sayılır."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Panama Kanalı hangi iki okyanusu birbirine bağlar?",
+  "o": [
+   "Atlas ve Hint",
+   "Pasifik ve Hint",
+   "Atlas ve Pasifik",
+   "Arktik ve Atlas"
+  ],
+  "d": 2,
+  "a": "Panama Kanalı Atlas ve Pasifik okyanuslarını bağlar. 1914'te açıldı, 82 km uzunluğundadır."
+ },
+ {
+  "k": "Coğrafya",
+  "s": "Türkiye'nin en uzun nehri hangisidir?",
+  "o": [
+   "Fırat",
+   "Kızılırmak",
+   "Sakarya",
+   "Dicle"
+  ],
+  "d": 1,
+  "a": "Kızılırmak 1355 km ile Türkiye'nin en uzun nehridir. Tamamen Türkiye sınırları içinde akar."
+ }
+]

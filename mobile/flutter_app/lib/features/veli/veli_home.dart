@@ -224,6 +224,13 @@ class _VeliHomePageState extends ConsumerState<VeliHomePage> {
                     onTap: () => context.push('/dijital-kutuphane'),
                   ),
                   _QuickCard(
+                    icon: Icons.emoji_events,
+                    title: 'Bilgi Yarışmaları',
+                    subtitle: '4 tür · 3700+ soru',
+                    color: Color(0xFF7C3AED),
+                    onTap: () => context.push('/bilgi-yarismasi-koleksiyon'),
+                  ),
+                  _QuickCard(
                     icon: Icons.translate,
                     title: 'Dil Gelişimi',
                     subtitle: '5 dil · 104+ ders',

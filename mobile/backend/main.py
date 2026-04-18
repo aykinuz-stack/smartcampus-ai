@@ -15,7 +15,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from .core.config import settings
-from .routers import auth, mood, ogrenci, messaging, ihbar, smarti, veli, ogretmen, rehber, yonetici
+from .routers import auth, mood, ogrenci, messaging, ihbar, smarti, veli, ogretmen, rehber, yonetici, quiz_koleksiyon
 
 
 @asynccontextmanager
@@ -564,6 +564,7 @@ app.include_router(veli.router, prefix=settings.API_PREFIX)
 app.include_router(ogretmen.router, prefix=settings.API_PREFIX)
 app.include_router(rehber.router, prefix=settings.API_PREFIX)
 app.include_router(yonetici.router, prefix=settings.API_PREFIX)
+app.include_router(quiz_koleksiyon.router, prefix=settings.API_PREFIX)
 
 
 @app.get("/")
