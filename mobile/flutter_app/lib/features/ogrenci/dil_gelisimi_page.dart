@@ -19,7 +19,7 @@ class _DilGelisimiPageState extends ConsumerState<DilGelisimiPage> {
 
   void _load() {
     setState(() => _future = ref.read(apiClientProvider)
-        .get('/yonetici/dil-gelisimi', params: {'dil': _dil})
+        .get('/dil/dersler', params: {'dil': _dil})
         .then((r) => Map<String, dynamic>.from(r.data)));
   }
 
@@ -181,7 +181,7 @@ class _DersDetayPageState extends ConsumerState<_DersDetayPage>
     super.initState();
     _tabCtrl = TabController(length: 3, vsync: this);
     _future = ref.read(apiClientProvider)
-        .get('/yonetici/dil-gelisimi/ders/${widget.dersNo}', params: {'dil': widget.dil})
+        .get('/dil/ders/${widget.dersNo}', params: {'dil': widget.dil})
         .then((r) => Map<String, dynamic>.from(r.data));
   }
 
@@ -227,9 +227,10 @@ class _DersDetayPageState extends ConsumerState<_DersDetayPage>
                         color: AppColors.primary.withOpacity(0.15), borderRadius: BorderRadius.circular(10)),
                       child: const Center(child: Icon(Icons.translate, color: AppColors.primary, size: 20)),
                     ),
-                    title: Text(vv['en'] ?? vv['word'] ?? '', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                    title: Text(vv['word'] ?? vv['en'] ?? vv['de'] ?? vv['fr'] ?? vv['it'] ?? vv['es'] ?? '',
+                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                     subtitle: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      if (vv['pron'] != null)
+                      if ((vv['pron'] as String? ?? '').isNotEmpty)
                         Text('/${vv['pron']}/', style: const TextStyle(fontSize: 12, fontStyle: FontStyle.italic, color: AppColors.info)),
                       Text(vv['tr'] ?? vv['meaning'] ?? '', style: const TextStyle(fontSize: 14)),
                     ]),

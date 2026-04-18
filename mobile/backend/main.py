@@ -71,6 +71,103 @@ app.include_router(smarti.router, prefix=settings.API_PREFIX)
 # ── Kurum hizmetleri endpoint'leri (basit) ──
 from fastapi import Request as FRequest
 
+# ── Dil Gelisimi (TUM ROLLER) ──
+@app.get(f"{settings.API_PREFIX}/dil/dersler")
+async def dil_dersler(dil: str = "ingilizce"):
+    """Dil dersleri — tum roller erisebilir."""
+    import json
+    from pathlib import Path
+    dil_map = {
+        "ingilizce": "fono/fono_lessons.json",
+        "almanca": "fono_almanca_104/fono_almanca_104_lessons.json",
+        "fransizca": "fono_fransizca/fono_fransizca_lessons.json",
+        "italyanca": "fono_italyanca/fono_italyanca_lessons.json",
+        "ispanyolca": "fono_ispanyolca/fono_ispanyolca_lessons.json",
+    }
+    rel = dil_map.get(dil, dil_map["ingilizce"])
+    data = None
+    for sp in [settings.DATA_DIR / rel,
+               Path(__file__).resolve().parent.parent.parent / "data" / rel]:
+        if sp.exists():
+            try:
+                with open(sp, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if data: break
+            except Exception: pass
+    if not data: data = {}
+    lessons = data.get("lessons", []) if isinstance(data, dict) else []
+    ders_listesi = []
+    for i, l in enumerate(lessons):
+        voc = l.get("vocabulary", l.get("words", []))
+        ders_listesi.append({
+            "no": l.get("ders", i + 1),
+            "title": l.get("title", f"Ders {i+1}"),
+            "kelime_sayisi": len(voc),
+            "gramer_sayisi": len(l.get("grammar_topics", [])),
+            "alistirma_sayisi": len(l.get("exercises", [])),
+        })
+    diller = []
+    for dk, dp in dil_map.items():
+        for sp in [settings.DATA_DIR / dp,
+                   Path(__file__).resolve().parent.parent.parent / "data" / dp]:
+            if sp.exists(): diller.append(dk); break
+    return {"dil": dil, "toplam_ders": len(lessons), "diller": diller, "dersler": ders_listesi}
+
+
+@app.get(f"{settings.API_PREFIX}/dil/ders/{{ders_no}}")
+async def dil_ders_detay(ders_no: int, dil: str = "ingilizce"):
+    """Tek ders detayi — tum roller."""
+    import json
+    from pathlib import Path
+    dil_map = {
+        "ingilizce": "fono/fono_lessons.json",
+        "almanca": "fono_almanca_104/fono_almanca_104_lessons.json",
+        "fransizca": "fono_fransizca/fono_fransizca_lessons.json",
+        "italyanca": "fono_italyanca/fono_italyanca_lessons.json",
+        "ispanyolca": "fono_ispanyolca/fono_ispanyolca_lessons.json",
+    }
+    rel = dil_map.get(dil, dil_map["ingilizce"])
+    data = None
+    for sp in [settings.DATA_DIR / rel,
+               Path(__file__).resolve().parent.parent.parent / "data" / rel]:
+        if sp.exists():
+            try:
+                with open(sp, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if data: break
+            except Exception: pass
+    if not data: data = {}
+    lessons = data.get("lessons", []) if isinstance(data, dict) else []
+    lesson = None
+    for l in lessons:
+        if l.get("ders") == ders_no or lessons.index(l) == ders_no - 1:
+            lesson = l; break
+    if not lesson:
+        return {"hata": f"Ders {ders_no} bulunamadi"}
+    # Kelime alanini normalize et (en/de/fr/it/es -> word + tr)
+    dil_key = {"ingilizce": "en", "almanca": "de", "fransizca": "fr",
+               "italyanca": "it", "ispanyolca": "es"}.get(dil, "en")
+    vocabulary = lesson.get("vocabulary", lesson.get("words", []))
+    normalized_vocab = []
+    for v in vocabulary:
+        word = v.get(dil_key) or v.get("en") or v.get("word") or v.get("kelime", "")
+        normalized_vocab.append({
+            "word": word,
+            "pron": v.get("pron", ""),
+            "tr": v.get("tr", v.get("meaning", "")),
+        })
+    return {
+        "no": lesson.get("ders", ders_no),
+        "title": lesson.get("title", ""),
+        "dil": dil,
+        "vocabulary": normalized_vocab,
+        "grammar_topics": lesson.get("grammar_topics", []),
+        "grammar_examples": lesson.get("grammar_examples", []),
+        "reading": lesson.get("reading", ""),
+        "exercises": lesson.get("exercises", []),
+    }
+
+
 @app.get(f"{settings.API_PREFIX}/kurum/duyurular")
 async def kurum_duyurular():
     from .core.data_adapter import DataAdapter
