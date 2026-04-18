@@ -109,6 +109,11 @@ class RehberHomePage extends ConsumerWidget {
                   onTap: () => context.push('/messages'),
                 ),
                 _QCard(
+                  icon: Icons.local_library, title: 'Dijital Kütüphane',
+                  subtitle: 'YouTube + Lab + Müze', color: Color(0xFF5D4037),
+                  onTap: () => context.push('/dijital-kutuphane'),
+                ),
+                _QCard(
                   icon: Icons.translate, title: 'Dil Gelişimi',
                   subtitle: '5 dil · 104+ ders', color: AppColors.info,
                   onTap: () => context.push('/dil-gelisimi'),

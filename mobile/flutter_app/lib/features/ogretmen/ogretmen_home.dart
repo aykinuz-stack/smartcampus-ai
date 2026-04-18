@@ -178,6 +178,13 @@ class _OgretmenHomePageState extends ConsumerState<OgretmenHomePage> {
                     onTap: () => context.push('/messages'),
                   ),
                   _QuickCard(
+                    icon: Icons.local_library,
+                    title: 'Dijital Kütüphane',
+                    subtitle: 'YouTube + Lab + Müze',
+                    color: Color(0xFF5D4037),
+                    onTap: () => context.push('/dijital-kutuphane'),
+                  ),
+                  _QuickCard(
                     icon: Icons.translate,
                     title: 'Dil Gelişimi',
                     subtitle: '5 dil · 104+ ders',
