@@ -236,7 +236,7 @@ async def dk_icerik():
 
 
 # ── Bilgi Yarismasi ──
-@app.get(f"{settings.API_PREFIX}/bilgi-yarismasi/{level}")
+@app.get(settings.API_PREFIX + "/bilgi-yarismasi/{level}")
 async def bilgi_yarismasi(level: str = "ilkokul"):
     """Bilgi yarismasi sorulari — ilkokul/ortaokul/lise."""
     import sys, json, random
