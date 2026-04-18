@@ -260,6 +260,64 @@ async def bilgi_yarismasi(level: str = "ilkokul"):
         return {"level": level, "toplam": 0, "sorular": [], "hata": str(e)}
 
 
+# ── Gunun Bilgisi ──
+@app.get(f"{settings.API_PREFIX}/gunun-bilgisi")
+async def gunun_bilgisi():
+    import sys
+    sys.path.insert(0, str(settings.DATA_DIR.parent))
+    try:
+        from models.gunun_bilgisi_kitap import get_gunun_bilgisi, get_gecmis_bilgiler, KATEGORILER
+        from datetime import date
+        bugun = get_gunun_bilgisi(date.today()) or {}
+        gecmis = get_gecmis_bilgiler()
+        return {
+            "bugun": bugun,
+            "kategoriler": list(KATEGORILER.keys()),
+            "gecmis": [
+                {"tarih": t.isoformat(), **b}
+                for t, b in gecmis[:30]
+            ],
+        }
+    except Exception as e:
+        return {"bugun": {}, "kategoriler": [], "gecmis": [], "hata": str(e)}
+
+
+# ── E-Dergi ──
+@app.get(f"{settings.API_PREFIX}/e-dergi")
+async def e_dergi():
+    from pathlib import Path
+    dergi_dir = settings.DATA_DIR.parent / "data" / "dergi_gorseller"
+    if not dergi_dir.exists():
+        dergi_dir = settings.DATA_DIR.parent / "dergi_gorseller"
+    dergiler = []
+    if dergi_dir.exists():
+        for f in sorted(dergi_dir.glob("*.pdf")):
+            sayi = f.stem.replace("SmartCampus_eDergi_Sayi", "").replace("SmartCampus_eDergi_", "")
+            dergiler.append({"sayi": sayi, "dosya": f.name, "boyut_mb": round(f.stat().st_size / 1024 / 1024, 1)})
+    return {"toplam": len(dergiler), "dergiler": dergiler}
+
+
+# ── Zeka Oyunlari ──
+@app.get(f"{settings.API_PREFIX}/zeka-oyunlari")
+async def zeka_oyunlari():
+    """Mobilde calisacak zeka oyunlari listesi."""
+    oyunlar = [
+        {"id": "hafiza", "ikon": "🧠", "ad": "Hafıza Oyunu",
+         "aciklama": "Eşleşen kartları bul", "seviye": ["Kolay", "Orta", "Zor"]},
+        {"id": "sudoku", "ikon": "🔢", "ad": "Sudoku Mini",
+         "aciklama": "4×4 mini sudoku", "seviye": ["4x4"]},
+        {"id": "bilmece", "ikon": "❓", "ad": "Bilmeceler",
+         "aciklama": "Düşün ve bul", "seviye": ["İlkokul", "Ortaokul"]},
+        {"id": "kelime", "ikon": "📝", "ad": "Kelime Bulmaca",
+         "aciklama": "Gizli kelimeyi bul", "seviye": ["Kolay", "Zor"]},
+        {"id": "stroop", "ikon": "🎨", "ad": "Stroop Testi",
+         "aciklama": "Rengi söyle, kelimeyi değil", "seviye": ["Normal"]},
+        {"id": "siralama", "ikon": "📊", "ad": "Sayı Sıralama",
+         "aciklama": "Sayıları küçükten büyüğe sırala", "seviye": ["Kolay", "Zor"]},
+    ]
+    return {"oyunlar": oyunlar}
+
+
 @app.get(f"{settings.API_PREFIX}/kurum/duyurular")
 async def kurum_duyurular():
     from .core.data_adapter import DataAdapter
