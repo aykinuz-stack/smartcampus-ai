@@ -168,6 +168,73 @@ async def dil_ders_detay(ders_no: int, dil: str = "ingilizce"):
     }
 
 
+# ── Dijital Kutuphane ──
+@app.get(f"{settings.API_PREFIX}/dijital-kutuphane/icerik")
+async def dk_icerik():
+    """Dijital kutuphane — mobilde calisacak icerikler."""
+    kategoriler = [
+        {"id": "youtube", "ikon": "📺", "baslik": "YouTube Kanalları",
+         "aciklama": "Eğitim kanalları", "renk": "#DC2626",
+         "icerikler": [
+             {"ad": "TRT Çocuk", "url": "https://www.youtube.com/trtcocuk", "tur": "video"},
+             {"ad": "Niloya", "url": "https://www.youtube.com/@niloyatv", "tur": "video"},
+             {"ad": "Kukuli", "url": "https://www.youtube.com/Kukuli", "tur": "video"},
+             {"ad": "Düşyeri", "url": "https://www.youtube.com/@Dusyeri", "tur": "video"},
+             {"ad": "EBA", "url": "https://www.youtube.com/@EbaGovTr-Eba", "tur": "video"},
+             {"ad": "Robotistan", "url": "https://www.youtube.com/c/robotistan", "tur": "video"},
+             {"ad": "Super Simple Songs", "url": "https://www.youtube.com/user/SuperSimpleSongs", "tur": "video"},
+             {"ad": "Sesame Street", "url": "https://www.youtube.com/sesamestreet", "tur": "video"},
+             {"ad": "Eğlenceli Bilim", "url": "https://youtube.com/@eglencelibilim", "tur": "video"},
+             {"ad": "Pinkfong", "url": "https://www.youtube.com/Pinkfong", "tur": "video"},
+         ]},
+        {"id": "e_ogrenme", "ikon": "🎓", "baslik": "E-Öğrenme Platformları",
+         "aciklama": "İnteraktif öğrenme", "renk": "#2563EB",
+         "icerikler": [
+             {"ad": "Khan Academy", "url": "https://tr.khanacademy.org", "tur": "platform"},
+             {"ad": "EBA", "url": "https://www.eba.gov.tr", "tur": "platform"},
+             {"ad": "Vitamin Eğitim", "url": "https://www.vitaminegitim.com", "tur": "platform"},
+             {"ad": "Morpa Kampüs", "url": "https://www.morpakampus.com", "tur": "platform"},
+         ]},
+        {"id": "interaktif", "ikon": "🔬", "baslik": "İnteraktif Araçlar",
+         "aciklama": "Simülasyon ve lab", "renk": "#059669",
+         "icerikler": [
+             {"ad": "PhET Simülasyonları", "url": "https://phet.colorado.edu/tr/", "tur": "lab"},
+             {"ad": "GeoGebra", "url": "https://www.geogebra.org", "tur": "lab"},
+             {"ad": "Desmos", "url": "https://www.desmos.com/calculator", "tur": "lab"},
+             {"ad": "Scratch", "url": "https://scratch.mit.edu", "tur": "kodlama"},
+             {"ad": "Code.org", "url": "https://code.org", "tur": "kodlama"},
+         ]},
+        {"id": "radyo", "ikon": "📻", "baslik": "Eğitim Radyosu",
+         "aciklama": "Sesli yayınlar", "renk": "#7C3AED",
+         "icerikler": [
+             {"ad": "TRT Radyo Çocuk", "url": "https://www.trtdinle.com/canli/radyo-cocuk", "tur": "radyo"},
+             {"ad": "TRT Radyo 1", "url": "https://www.trtdinle.com/canli/radyo1", "tur": "radyo"},
+         ]},
+        {"id": "muze", "ikon": "🏛️", "baslik": "Sanal Müzeler",
+         "aciklama": "Online tur", "renk": "#D97706",
+         "icerikler": [
+             {"ad": "Google Arts & Culture", "url": "https://artsandculture.google.com", "tur": "muze"},
+             {"ad": "Topkapı Sarayı", "url": "https://www.google.com/maps/@41.0115,28.9833,3a,75y", "tur": "muze"},
+             {"ad": "Louvre Müzesi", "url": "https://www.louvre.fr/en/online-tours", "tur": "muze"},
+             {"ad": "British Museum", "url": "https://www.britishmuseum.org/collection", "tur": "muze"},
+             {"ad": "NASA", "url": "https://www.nasa.gov/stem", "tur": "bilim"},
+         ]},
+        {"id": "sesli_kitap", "ikon": "🎧", "baslik": "Sesli Kitaplar",
+         "aciklama": "Dinleyerek öğren", "renk": "#EC4899",
+         "icerikler": [
+             {"ad": "Masal Dinle (YouTube)", "url": "https://www.youtube.com/results?search_query=masal+dinle+çocuk", "tur": "ses"},
+             {"ad": "Sesli Hikayeler", "url": "https://www.youtube.com/results?search_query=sesli+hikaye+çocuk", "tur": "ses"},
+         ]},
+        {"id": "kelime", "ikon": "📖", "baslik": "Kelime Hazinesi",
+         "aciklama": "Kelime öğren", "renk": "#0891B2",
+         "icerikler": [
+             {"ad": "Türkçe Sözlük (TDK)", "url": "https://sozluk.gov.tr", "tur": "sozluk"},
+             {"ad": "Tureng (İng-Tr)", "url": "https://tureng.com", "tur": "sozluk"},
+         ]},
+    ]
+    return {"kategoriler": kategoriler, "toplam_kategori": len(kategoriler)}
+
+
 @app.get(f"{settings.API_PREFIX}/kurum/duyurular")
 async def kurum_duyurular():
     from .core.data_adapter import DataAdapter

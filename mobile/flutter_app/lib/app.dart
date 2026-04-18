@@ -19,6 +19,7 @@ import 'features/ogrenci/duyuru_yemek_page.dart';
 import 'features/ogrenci/ai_treni_page.dart';
 import 'features/ogrenci/online_sinav_page.dart';
 import 'features/ogrenci/kocluk_page.dart';
+import 'features/ogrenci/dijital_kutuphane_page.dart';
 import 'features/veli/veli_home.dart';
 import 'features/veli/kapsul_page.dart';
 import 'features/veli/randevu_page.dart';
@@ -124,6 +125,7 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/ai-treni', builder: (_, __) => const AiTreniPage()),
         GoRoute(path: '/online-sinav', builder: (_, __) => const OnlineSinavPage()),
         GoRoute(path: '/kocluk', builder: (_, __) => const KoclukPage()),
+        GoRoute(path: '/dijital-kutuphane', builder: (_, __) => const DijitalKutuphanePage()),
         GoRoute(
           path: '/profile',
           builder: (_, __) => const _PlaceholderPage(title: 'Profilim'),
