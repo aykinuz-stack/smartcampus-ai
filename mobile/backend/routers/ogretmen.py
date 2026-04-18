@@ -143,7 +143,101 @@ async def yoklama_batch(
             eklenen += 1
 
     adapter.save(DataPaths.ATTENDANCE, existing)
+
+    # ── Veliye otomatik devamsızlık bildirimi ──
+    _yoklama_veli_bildirim(adapter, req, existing, user)
+
     return YoklamaBatchResponse(eklenen=eklenen, guncellenen=guncellenen, tarih=req.tarih)
+
+
+def _yoklama_veli_bildirim(
+    adapter: DataAdapter,
+    req: YoklamaBatchRequest,
+    all_attendance: list[dict],
+    teacher: dict,
+):
+    """Yoklama sonrası veliye otomatik bildirim gönderir.
+
+    Kurallar:
+    - 1. ders yoklamasında devamsız → "Öğrencimiz X bugün okula gelmemiştir."
+    - Sonraki derslerde devam var AMA önceki derslerde devamsızdı
+      → "Öğrencimiz X N. derste okula gelmiştir."
+    """
+    students = adapter.load(DataPaths.STUDENTS) or []
+    users = adapter.load("users.json") or []
+    mesaj_path = "akademik/veli_mesajlar.json"
+
+    stu_map = {s.get("id"): s for s in students}
+    # Veli haritası: ogrenci_id → veli user
+    veli_map: dict[str, dict] = {}
+    for u in users:
+        if u.get("role", "").lower() == "veli" and u.get("ogrenci_id"):
+            veli_map[u["ogrenci_id"]] = u
+
+    ogretmen_adi = teacher.get("ad_soyad", teacher.get("name", "Öğretmen"))
+    ogretmen_id = teacher.get("user_id", "")
+    tarih = req.tarih
+    tarih_gosterim = f"{tarih[8:10]}.{tarih[5:7]}.{tarih[:4]}" if len(tarih) >= 10 else tarih
+
+    for y in req.yoklamalar:
+        stu = stu_map.get(y.student_id)
+        if not stu:
+            continue
+        ad_soyad = f"{stu.get('ad', '')} {stu.get('soyad', '')}".strip()
+        veli = veli_map.get(y.student_id)
+        if not veli:
+            continue
+
+        if y.turu in ("devamsiz", "ozursuz"):
+            # 1. ders: "okula gelmemiştir"
+            if req.ders_saati == 1:
+                mesaj_text = (
+                    f"Sayın Veli, öğrencimiz {ad_soyad} bugün ({tarih_gosterim}) "
+                    f"okula gelmemiştir. Bilginize."
+                )
+                _yoklama_mesaj_ekle(adapter, mesaj_path, y.student_id,
+                                   veli, ogretmen_id, ogretmen_adi, mesaj_text)
+
+        elif y.turu == "devam" and req.ders_saati > 1:
+            # Önceki derslerde devamsız mıydı?
+            onceki_devamsiz = any(
+                a for a in all_attendance
+                if a.get("student_id") == y.student_id
+                and a.get("tarih") == tarih
+                and int(a.get("ders_saati", 0) or 0) < req.ders_saati
+                and a.get("turu") in ("devamsiz", "ozursuz")
+            )
+            if onceki_devamsiz:
+                mesaj_text = (
+                    f"Sayın Veli, öğrencimiz {ad_soyad} bugün ({tarih_gosterim}) "
+                    f"{req.ders_saati}. derste okula gelmiştir. Bilginize."
+                )
+                _yoklama_mesaj_ekle(adapter, mesaj_path, y.student_id,
+                                   veli, ogretmen_id, ogretmen_adi, mesaj_text)
+
+
+def _yoklama_mesaj_ekle(
+    adapter: DataAdapter,
+    path: str,
+    student_id: str,
+    veli: dict,
+    ogretmen_id: str,
+    ogretmen_adi: str,
+    mesaj_text: str,
+):
+    """Yoklama bildirimini veli mesajlarına ekler."""
+    yeni = {
+        "id": f"vm_{uuid.uuid4().hex[:8]}",
+        "student_id": student_id,
+        "veli_adi": veli.get("name", ""),
+        "ogretmen_id": ogretmen_id,
+        "ogretmen_adi": ogretmen_adi,
+        "tarih": datetime.now().isoformat(),
+        "mesaj": mesaj_text,
+        "yon": "sistem_to_veli",
+        "okundu": False,
+    }
+    adapter.append(path, yeni)
 
 
 @router.get("/yoklama/bugun/{sinif}/{sube}")
