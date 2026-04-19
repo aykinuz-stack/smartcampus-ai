@@ -199,6 +199,20 @@ class _OgretmenHomePageState extends ConsumerState<OgretmenHomePage> {
                     onTap: () => context.push('/matematik-koyu'),
                   ),
                   _QuickCard(
+                    icon: Icons.extension,
+                    title: 'Zeka Oyunları',
+                    subtitle: '7 oyun · Sudoku +',
+                    color: Color(0xFFEC4899),
+                    onTap: () => context.push('/zeka-oyunlari'),
+                  ),
+                  _QuickCard(
+                    icon: Icons.lightbulb,
+                    title: 'Günün Bilgisi',
+                    subtitle: '230 gün · 8 kategori',
+                    color: Color(0xFFEAB308),
+                    onTap: () => context.push('/gunun-bilgisi'),
+                  ),
+                  _QuickCard(
                     icon: Icons.translate,
                     title: 'Dil Gelişimi',
                     subtitle: '5 dil · 104+ ders',
