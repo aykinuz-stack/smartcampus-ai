@@ -188,6 +188,9 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/yonetici/revir', builder: (_, __) => const RevirPage()),
         GoRoute(path: '/yonetici/kutuphane', builder: (_, __) => const KutuphanePage()),
         GoRoute(path: '/yonetici/sosyal-etkinlik', builder: (_, __) => const SosyalEtkinlikPage()),
+        GoRoute(path: '/yonetici/toplanti-kurullar', builder: (_, __) => const _PlaceholderPage(title: 'Toplantı & Kurullar')),
+        GoRoute(path: '/yonetici/servis-hizmetleri', builder: (_, __) => const _PlaceholderPage(title: 'Servis Hizmetleri')),
+        GoRoute(path: '/yonetici/veli-talepleri', builder: (_, __) => const _PlaceholderPage(title: 'Veli Talepleri')),
         // Fallback
         GoRoute(path: '/home', builder: (_, __) => const _PlaceholderPage(title: 'Ana Sayfa')),
       ],

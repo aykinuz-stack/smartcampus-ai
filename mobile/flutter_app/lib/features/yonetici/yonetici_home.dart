@@ -274,6 +274,36 @@ class _YoneticiHomePageState extends ConsumerState<YoneticiHomePage> {
                         subtitle: 'Gelen/Giden/Yeni', color: AppColors.primary,
                         onTap: () => context.push('/messages'),
                       ),
+                      _QCard(
+                        icon: Icons.groups, title: 'Toplantı & Kurullar',
+                        subtitle: 'Toplantı + karar', color: Color(0xFF6366F1),
+                        onTap: () => context.push('/yonetici/toplanti-kurullar'),
+                      ),
+                      _QCard(
+                        icon: Icons.directions_bus, title: 'Servis Hizmetleri',
+                        subtitle: 'Güzergah + takip', color: Color(0xFF0EA5E9),
+                        onTap: () => context.push('/yonetici/servis-hizmetleri'),
+                      ),
+                      _QCard(
+                        icon: Icons.request_page, title: 'Veli Talepleri',
+                        subtitle: 'Başvuru + takip', color: Color(0xFFF97316),
+                        onTap: () => context.push('/yonetici/veli-talepleri'),
+                      ),
+                      _QCard(
+                        icon: Icons.calendar_month, title: 'Akademik Takvim',
+                        subtitle: 'Yıllık plan', color: Color(0xFF14B8A6),
+                        onTap: () => context.push('/takvim'),
+                      ),
+                      _QCard(
+                        icon: Icons.extension, title: 'Zeka Oyunları',
+                        subtitle: 'Hafıza + Sudoku', color: Color(0xFFEC4899),
+                        onTap: () => context.push('/zeka-oyunlari'),
+                      ),
+                      _QCard(
+                        icon: Icons.lightbulb, title: 'Günün Bilgisi',
+                        subtitle: '230 gün · 8 kategori', color: Color(0xFFEAB308),
+                        onTap: () => context.push('/gunun-bilgisi'),
+                      ),
                     ],
                   ),
                 ],
