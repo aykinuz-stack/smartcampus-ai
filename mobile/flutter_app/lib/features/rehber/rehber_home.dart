@@ -119,6 +119,16 @@ class RehberHomePage extends ConsumerWidget {
                   onTap: () => context.push('/takvim'),
                 ),
                 _QCard(
+                  icon: Icons.menu_book, title: 'Ders Programı',
+                  subtitle: 'Sınıf/gün bazlı', color: AppColors.info,
+                  onTap: () => context.push('/yonetici/ders-programi'),
+                ),
+                _QCard(
+                  icon: Icons.access_time, title: 'Zaman Çizelgesi',
+                  subtitle: 'Ders/teneffüs', color: AppColors.warning,
+                  onTap: () => context.push('/yonetici/zaman-cizelgesi'),
+                ),
+                _QCard(
                   icon: Icons.campaign, title: 'Duyuru & Yemek',
                   subtitle: 'Okul duyuruları', color: AppColors.success,
                   onTap: () => context.push('/duyuru-yemek'),

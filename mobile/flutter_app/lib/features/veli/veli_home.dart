@@ -171,9 +171,16 @@ class _VeliHomePageState extends ConsumerState<VeliHomePage> {
                   _QuickCard(
                     icon: Icons.menu_book,
                     title: 'Ders Programı',
-                    subtitle: 'Haftalık program',
+                    subtitle: 'Sınıf/gün bazlı',
                     color: AppColors.info,
-                    onTap: () => context.push('/takvim'),
+                    onTap: () => context.push('/yonetici/ders-programi'),
+                  ),
+                  _QuickCard(
+                    icon: Icons.access_time,
+                    title: 'Zaman Çizelgesi',
+                    subtitle: 'Ders/teneffüs',
+                    color: AppColors.warning,
+                    onTap: () => context.push('/yonetici/zaman-cizelgesi'),
                   ),
                   _QuickCard(
                     icon: Icons.wb_sunny,
