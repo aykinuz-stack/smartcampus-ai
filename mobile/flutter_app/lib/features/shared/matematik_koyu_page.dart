@@ -101,7 +101,7 @@ class _GunlukIpucu extends StatelessWidget {
 
 // ── Matematikçi Kartı ──
 class _MatematikciKart extends StatelessWidget {
-  static const _matematikçiler = [
+  static const _matematikciler = [
     {'ad': 'Carl Friedrich Gauss', 'yil': '1777-1855', 'alan': 'Sayılar Teorisi', 'ikon': '👑',
      'soz': 'Matematik bilimlerin kraliçesidir.', 'bilgi': 'Daha 10 yaşındayken 1\'den 100\'e kadar toplamı 5050 olarak buldu.'},
     {'ad': 'Leonhard Euler', 'yil': '1707-1783', 'alan': 'Analiz, Graf Teorisi', 'ikon': '∞',
@@ -118,7 +118,7 @@ class _MatematikciKart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final m = _matematikçiler[DateTime.now().day % _matematikçiler.length];
+    final m = _matematikciler[DateTime.now().day % _matematikciler.length];
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
