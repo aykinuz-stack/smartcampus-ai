@@ -231,6 +231,13 @@ class _VeliHomePageState extends ConsumerState<VeliHomePage> {
                     onTap: () => context.push('/bilgi-yarismasi-koleksiyon'),
                   ),
                   _QuickCard(
+                    icon: Icons.calculate,
+                    title: 'Matematik Köyü',
+                    subtitle: '6 oyun · formüller',
+                    color: Color(0xFF6366F1),
+                    onTap: () => context.push('/matematik-koyu'),
+                  ),
+                  _QuickCard(
                     icon: Icons.translate,
                     title: 'Dil Gelişimi',
                     subtitle: '5 dil · 104+ ders',

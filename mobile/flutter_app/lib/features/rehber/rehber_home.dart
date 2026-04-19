@@ -119,6 +119,11 @@ class RehberHomePage extends ConsumerWidget {
                   onTap: () => context.push('/bilgi-yarismasi-koleksiyon'),
                 ),
                 _QCard(
+                  icon: Icons.calculate, title: 'Matematik Köyü',
+                  subtitle: '6 oyun · formüller', color: Color(0xFF6366F1),
+                  onTap: () => context.push('/matematik-koyu'),
+                ),
+                _QCard(
                   icon: Icons.translate, title: 'Dil Gelişimi',
                   subtitle: '5 dil · 104+ ders', color: AppColors.info,
                   onTap: () => context.push('/dil-gelisimi'),
