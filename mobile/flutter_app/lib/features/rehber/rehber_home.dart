@@ -109,6 +109,26 @@ class RehberHomePage extends ConsumerWidget {
                   onTap: () => context.push('/messages'),
                 ),
                 _QCard(
+                  icon: Icons.warning_amber, title: 'Erken Uyarı',
+                  subtitle: 'Bütüncül Risk', color: AppColors.danger,
+                  onTap: () => context.push('/yonetici/erken-uyari'),
+                ),
+                _QCard(
+                  icon: Icons.calendar_month, title: 'Takvim',
+                  subtitle: 'Etkinlik + sınav', color: AppColors.gold,
+                  onTap: () => context.push('/takvim'),
+                ),
+                _QCard(
+                  icon: Icons.campaign, title: 'Duyuru & Yemek',
+                  subtitle: 'Okul duyuruları', color: AppColors.success,
+                  onTap: () => context.push('/duyuru-yemek'),
+                ),
+                _QCard(
+                  icon: Icons.train, title: 'AI Treni',
+                  subtitle: '12 vagon · quiz', color: Color(0xFF8B5CF6),
+                  onTap: () => context.push('/ai-treni'),
+                ),
+                _QCard(
                   icon: Icons.local_library, title: 'Dijital Kütüphane',
                   subtitle: 'YouTube + Lab + Müze', color: Color(0xFF5D4037),
                   onTap: () => context.push('/dijital-kutuphane'),

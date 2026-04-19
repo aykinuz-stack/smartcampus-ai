@@ -266,6 +266,13 @@ class _VeliHomePageState extends ConsumerState<VeliHomePage> {
                     onTap: () => context.push('/kdg-premium'),
                   ),
                   _QuickCard(
+                    icon: Icons.train,
+                    title: 'AI Treni',
+                    subtitle: '12 vagon · quiz',
+                    color: Color(0xFF8B5CF6),
+                    onTap: () => context.push('/ai-treni'),
+                  ),
+                  _QuickCard(
                     icon: Icons.shield,
                     title: 'İhbar Hattı',
                     subtitle: 'Anonim bildirim',
