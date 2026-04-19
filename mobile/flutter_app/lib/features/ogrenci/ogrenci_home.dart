@@ -271,6 +271,9 @@ class _OgrenciHomePageState extends ConsumerState<OgrenciHomePage> {
                 crossAxisSpacing: 12, mainAxisSpacing: 12,
                 childAspectRatio: 1.4,
                 children: [
+                  _FeatureCard(icon: Icons.assignment_late, title: 'Günlük İşler',
+                      subtitle: 'Bugün devamsızlar', color: Color(0xFFDC2626),
+                      onTap: () => context.push('/gunluk-isler')),
                   _FeatureCard(icon: Icons.grade, title: 'Notlarım',
                       subtitle: 'Ders ortalamaları', color: AppColors.primary,
                       onTap: () => context.push('/notes')),

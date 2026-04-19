@@ -79,6 +79,11 @@ class RehberHomePage extends ConsumerWidget {
               childAspectRatio: 1.2,
               children: [
                 _QCard(
+                  icon: Icons.assignment_late, title: 'Günlük İşler',
+                  subtitle: 'Bugün devamsızlar', color: Color(0xFFDC2626),
+                  onTap: () => context.push('/gunluk-isler'),
+                ),
+                _QCard(
                   icon: Icons.folder_open, title: 'Vakalar',
                   subtitle: 'Açık / Kapalı', color: AppColors.primary,
                   onTap: () => context.push('/rehber/vakalar'),

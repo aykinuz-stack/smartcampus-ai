@@ -129,6 +129,13 @@ class _OgretmenHomePageState extends ConsumerState<OgretmenHomePage> {
                 childAspectRatio: 1.2,
                 children: [
                   _QuickCard(
+                    icon: Icons.assignment_late,
+                    title: 'Günlük İşler',
+                    subtitle: 'Bugün devamsızlar',
+                    color: Color(0xFFDC2626),
+                    onTap: () => context.push('/gunluk-isler'),
+                  ),
+                  _QuickCard(
                     icon: Icons.how_to_reg,
                     title: 'Yoklama',
                     subtitle: 'Manuel liste',

@@ -567,6 +567,102 @@ app.include_router(yonetici.router, prefix=settings.API_PREFIX)
 app.include_router(quiz_koleksiyon.router, prefix=settings.API_PREFIX)
 
 
+# ══════════════════════════════════════════════════════════════
+# GÜNLÜK İŞLER — bugünkü devamsız/geç/izinli öğrenciler
+# ══════════════════════════════════════════════════════════════
+
+@app.get(settings.API_PREFIX + "/gunluk-isler")
+async def gunluk_isler(
+    user: dict = Depends(get_current_user),
+    adapter: DataAdapter = Depends(get_data_adapter),
+):
+    """Bugünkü yoklama sonuçları — devamsız, geç, izinli öğrenciler."""
+    from datetime import date as _date
+
+    bugun = _date.today().isoformat()
+    attendance = adapter.load(DataPaths.ATTENDANCE) or []
+    students = adapter.load(DataPaths.STUDENTS) or []
+    all_users = adapter.load("users.json") or []
+
+    stu_map = {s.get("id"): s for s in students}
+    role = user.get("role", "").lower()
+
+    # Bugünkü kayıtlar
+    bugun_kayitlar = [a for a in attendance if a.get("tarih") == bugun]
+
+    # Kategorize et
+    devamsiz = {}
+    gec_list = []
+    izinli_list = []
+
+    for a in bugun_kayitlar:
+        sid = a.get("student_id", "")
+        turu = a.get("turu", "")
+        stu = stu_map.get(sid, {})
+        if not stu:
+            continue
+
+        info = {
+            "student_id": sid,
+            "ad_soyad": f"{stu.get('ad', '')} {stu.get('soyad', '')}".strip(),
+            "sinif": str(stu.get("sinif", "")),
+            "sube": stu.get("sube", ""),
+            "numara": stu.get("numara", ""),
+            "ders": a.get("ders", ""),
+            "ders_saati": a.get("ders_saati", 0),
+        }
+
+        if turu in ("devamsiz", "ozursuz"):
+            if sid not in devamsiz:
+                devamsiz[sid] = {
+                    "student_id": sid,
+                    "ad_soyad": info["ad_soyad"],
+                    "sinif": info["sinif"],
+                    "sube": info["sube"],
+                    "numara": info["numara"],
+                    "veli_adi": f"{stu.get('veli_adi', '')} {stu.get('veli_soyadi', '')}".strip(),
+                    "veli_telefon": stu.get("veli_telefon", ""),
+                    "dersler": [],
+                }
+            devamsiz[sid]["dersler"].append(f"{info['ders']} ({info['ders_saati']}. ders)")
+        elif turu == "gec":
+            gec_list.append(info)
+        elif turu in ("izinli", "raporlu"):
+            izinli_list.append(info)
+
+    # Rol bazlı filtreleme
+    if role == "veli":
+        ogrenci_id = user.get("ogrenci_id", "")
+        children = user.get("children_ids", [])
+        if ogrenci_id:
+            children = list(set(children + [ogrenci_id]))
+        devamsiz = {k: v for k, v in devamsiz.items() if k in children}
+        gec_list = [g for g in gec_list if g["student_id"] in children]
+        izinli_list = [i for i in izinli_list if i["student_id"] in children]
+    elif role == "ogrenci":
+        own_id = user.get("student_id", user.get("source_id", ""))
+        own_stu = stu_map.get(own_id, {})
+        own_sinif = str(own_stu.get("sinif", ""))
+        own_sube = own_stu.get("sube", "")
+        sinif_ids = {s.get("id") for s in students
+                     if str(s.get("sinif", "")) == own_sinif
+                     and s.get("sube", "") == own_sube}
+        devamsiz = {k: v for k, v in devamsiz.items() if k in sinif_ids}
+        gec_list = [g for g in gec_list if g["student_id"] in sinif_ids]
+        izinli_list = [i for i in izinli_list if i["student_id"] in sinif_ids]
+
+    return {
+        "tarih": bugun,
+        "yoklama_alinan": len(set(a.get("student_id") for a in bugun_kayitlar)),
+        "devamsiz": list(devamsiz.values()),
+        "devamsiz_sayisi": len(devamsiz),
+        "gec": gec_list,
+        "gec_sayisi": len(gec_list),
+        "izinli": izinli_list,
+        "izinli_sayisi": len(izinli_list),
+    }
+
+
 @app.get("/")
 async def root():
     return {

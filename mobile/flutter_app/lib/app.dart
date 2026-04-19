@@ -22,6 +22,7 @@ import 'features/ogrenci/kocluk_page.dart';
 import 'features/ogrenci/dijital_kutuphane_page.dart';
 import 'features/shared/bilgi_yarismasi_koleksiyon_page.dart';
 import 'features/shared/matematik_koyu_page.dart';
+import 'features/shared/gunluk_isler_page.dart';
 import 'features/ogrenci/gunun_bilgisi_page.dart';
 import 'features/ogrenci/zeka_oyunlari_page.dart';
 import 'features/ogrenci/kdg_premium_page.dart';
@@ -133,6 +134,7 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/dijital-kutuphane', builder: (_, __) => const DijitalKutuphanePage()),
         GoRoute(path: '/bilgi-yarismasi-koleksiyon', builder: (_, __) => const BilgiYarismasiKoleksiyonPage()),
         GoRoute(path: '/matematik-koyu', builder: (_, __) => const MatematikKoyuPage()),
+        GoRoute(path: '/gunluk-isler', builder: (_, __) => const GunlukIslerPage()),
         GoRoute(path: '/gunun-bilgisi', builder: (_, __) => const GununBilgisiPage()),
         GoRoute(path: '/zeka-oyunlari', builder: (_, __) => const ZekaOyunlariPage()),
         GoRoute(path: '/kdg-premium', builder: (_, __) => const KdgPremiumPage()),

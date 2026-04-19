@@ -135,6 +135,13 @@ class _VeliHomePageState extends ConsumerState<VeliHomePage> {
                 childAspectRatio: 1.4,
                 children: [
                   _QuickCard(
+                    icon: Icons.assignment_late,
+                    title: 'Günlük İşler',
+                    subtitle: 'Bugün devamsızlar',
+                    color: Color(0xFFDC2626),
+                    onTap: () => context.push('/gunluk-isler'),
+                  ),
+                  _QuickCard(
                     icon: Icons.auto_awesome,
                     title: 'Günlük Kapsül',
                     subtitle: '18:00 AI özet',
