@@ -10,11 +10,13 @@ _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 
-from fastapi import FastAPI, Request
+from fastapi import Depends, FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from .core.config import settings
+from .core.data_adapter import DataAdapter, DataPaths
+from .core.deps import get_current_user, get_data_adapter
 from .routers import auth, mood, ogrenci, messaging, ihbar, smarti, veli, ogretmen, rehber, yonetici, quiz_koleksiyon
 
 
@@ -577,7 +579,7 @@ async def gunluk_isler(
     adapter: DataAdapter = Depends(get_data_adapter),
 ):
     """Bugünkü yoklama sonuçları — devamsız, geç, izinli öğrenciler."""
-    from datetime import date as _date
+    from datetime import date as _date, timedelta
 
     bugun = _date.today().isoformat()
     attendance = adapter.load(DataPaths.ATTENDANCE) or []
