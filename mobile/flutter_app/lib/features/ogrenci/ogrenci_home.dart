@@ -346,7 +346,7 @@ class _OgrenciHomePageState extends ConsumerState<OgrenciHomePage> {
                   _FeatureCard(icon: Icons.book, title: 'Öğrenci Defterim',
                       subtitle: 'Kişisel notlar', color: Color(0xFF14B8A6),
                       onTap: () => context.push('/ogrenci/defterim')),
-                  _FeatureCard(icon: Icons.target, title: 'KYT Soruları',
+                  _FeatureCard(icon: Icons.gps_fixed, title: 'KYT Soruları',
                       subtitle: 'Kazanım pekiştir', color: Color(0xFF0EA5E9),
                       onTap: () => context.push('/bilgi-yarismasi-koleksiyon')),
                   _FeatureCard(icon: Icons.palette, title: 'Sanat Sokağı',
