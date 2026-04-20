@@ -356,13 +356,6 @@ class _VeliHomePageState extends ConsumerState<VeliHomePage> {
                     onTap: () => context.push('/ihbar'),
                   ),
                   _QuickCard(
-                    icon: Icons.description,
-                    title: 'Belge Talebi',
-                    subtitle: 'Öğrenci belgesi',
-                    color: AppColors.warning,
-                    onTap: () => context.push('/veli/belge'),
-                  ),
-                  _QuickCard(
                     icon: Icons.feedback,
                     title: 'Geri Bildirim',
                     subtitle: 'Memnuniyet / öneri',

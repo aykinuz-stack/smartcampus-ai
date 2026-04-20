@@ -314,6 +314,16 @@ class _YoneticiHomePageState extends ConsumerState<YoneticiHomePage> {
                         subtitle: '230 gün · 8 kategori', color: Color(0xFFEAB308),
                         onTap: () => context.push('/gunun-bilgisi'),
                       ),
+                      _QCard(
+                        icon: Icons.smart_toy, title: 'Smarti AI',
+                        subtitle: 'Asistan', color: Color(0xFF6366F1),
+                        onTap: () => context.push('/smarti'),
+                      ),
+                      _QCard(
+                        icon: Icons.train, title: 'AI Treni',
+                        subtitle: '12 vagon · quiz', color: Color(0xFF8B5CF6),
+                        onTap: () => context.push('/ai-treni'),
+                      ),
                     ],
                   ),
                 ],
