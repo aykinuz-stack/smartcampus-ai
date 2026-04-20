@@ -90,33 +90,33 @@ class _OgretmenHomePageState extends ConsumerState<OgretmenHomePage> {
               ),
               const SizedBox(height: 20),
 
-              const Text('Sınıflarım',
-                  style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600)),
-              const SizedBox(height: 10),
               FutureBuilder<List<Map<String, dynamic>>>(
                 future: _siniflarFuture,
                 builder: (ctx, snap) {
-                  if (snap.connectionState == ConnectionState.waiting) {
-                    return const Padding(
-                      padding: EdgeInsets.all(32),
-                      child: Center(child: CircularProgressIndicator()),
-                    );
-                  }
                   final siniflar = snap.data ?? [];
-                  if (siniflar.isEmpty) {
-                    return const Padding(
-                      padding: EdgeInsets.all(16),
-                      child: Text('Atanmış sınıf yok'),
-                    );
+                  if (snap.connectionState == ConnectionState.waiting) {
+                    return const SizedBox();
                   }
-                  return Wrap(
-                    spacing: 8, runSpacing: 8,
-                    children: siniflar.map((s) => _SinifChip(data: s)).toList(),
+                  if (siniflar.isEmpty) return const SizedBox();
+                  return ExpansionTile(
+                    leading: const Icon(Icons.class_, color: AppColors.success, size: 22),
+                    title: Text('Sınıflarım (${siniflar.length})',
+                        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
+                    initiallyExpanded: false,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                        child: Wrap(
+                          spacing: 8, runSpacing: 8,
+                          children: siniflar.map((s) => _SinifChip(data: s)).toList(),
+                        ),
+                      ),
+                    ],
                   );
                 },
               ),
 
-              const SizedBox(height: 24),
+              const SizedBox(height: 10),
               const Text('Hızlı İşlemler',
                   style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600)),
               const SizedBox(height: 10),
