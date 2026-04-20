@@ -83,21 +83,34 @@ def render_gunluk_isler():
 
     # ── ÖĞRETMEN EK BİLGİLERİ ──
     if role in ("ogretmen", "yonetici", "superadmin", "mudur"):
-        import locale
         gun_isimleri = {0: "Pazartesi", 1: "Salı", 2: "Çarşamba",
                         3: "Perşembe", 4: "Cuma", 5: "Cumartesi", 6: "Pazar"}
         bugun_gun = gun_isimleri.get(date.today().weekday(), "")
 
         schedule = _load_json("data/akademik/schedule.json")
-        bugun_dersler = [s for s in schedule
-                         if s.get("gun", "").lower() == bugun_gun.lower()]
-        bugun_dersler.sort(key=lambda s: int(s.get("saat", 0) or 0))
-
-        nobet_data = _load_json("data/akademik/nobet.json")
         ogretmen_adi = auth_user.get("name", "")
+        # Sadece bu öğretmenin bugünkü dersleri (yönetici ise tümünü göster)
+        bugun_tum = [s for s in schedule if s.get("gun", "").lower() == bugun_gun.lower()]
+        if role == "ogretmen" and ogretmen_adi:
+            bugun_dersler = [s for s in bugun_tum
+                             if ogretmen_adi.lower() in (s.get("ogretmen_adi", "") or "").lower()]
+        else:
+            # Yönetici: tüm okulun bugünkü dersleri (ilk 20)
+            bugun_dersler = bugun_tum[:20]
+        def _saat_key(s):
+            v = s.get("saat", 0)
+            if isinstance(v, int):
+                return v
+            try:
+                return int(str(v).split(":")[0].split("-")[0])
+            except (ValueError, IndexError):
+                return 0
+        bugun_dersler.sort(key=_saat_key)
+
+        nobet_data = _load_json("data/akademik/nobet_gorevler.json")
         bugun_nobet = any(n for n in nobet_data
                           if bugun_gun.lower() in n.get("gun", "").lower()
-                          and ogretmen_adi.lower() in n.get("ogretmen", "").lower())
+                          and ogretmen_adi.lower() in (n.get("ogretmen_adi", n.get("ogretmen", "")) or "").lower())
 
         mesajlar = _load_json("data/akademik/veli_mesajlar.json")
         okunmamis = sum(1 for m in mesajlar if not m.get("okundu", False) and "veli" in m.get("yon", ""))
@@ -109,11 +122,6 @@ def render_gunluk_isler():
         if bugun_nobet:
             st.warning("🛡️ **Bugün nöbet günün!**")
 
-        if bugun_dersler:
-            st.markdown(f"**📚 Bugünkü Derslerim ({bugun_gun}) — {len(bugun_dersler)} ders:**")
-            for d in bugun_dersler:
-                st.markdown(f"&nbsp;&nbsp;&nbsp;`{d.get('saat', '?')}. ders` — **{d.get('ders', '')}** ({d.get('sinif', '')}/{d.get('sube', '')})")
-
         col_a, col_b = st.columns(2)
         with col_a:
             if okunmamis > 0:
@@ -121,6 +129,11 @@ def render_gunluk_isler():
         with col_b:
             if dogum_gunu:
                 st.success(f"🎂 Doğum günü: {', '.join(dogum_gunu[:3])}")
+
+        if bugun_dersler:
+            with st.expander(f"📚 Bugünkü Derslerim ({bugun_gun}) — {len(bugun_dersler)} ders", expanded=False):
+                for d in bugun_dersler:
+                    st.markdown(f"`{d.get('saat', '?')}` — **{d.get('ders', '')}** ({d.get('sinif', '')}/{d.get('sube', '')})")
 
         st.markdown("---")
 

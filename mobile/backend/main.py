@@ -660,11 +660,21 @@ async def gunluk_isler(
                    "thursday": "Perşembe", "friday": "Cuma", "saturday": "Cumartesi", "sunday": "Pazar"}
         bugun_gun = gun_map.get(bugun_str, bugun_str)
 
-        # Ders programı (bugün)
+        # Ders programı (bugün, sadece bu öğretmenin dersleri)
         schedule = adapter.load("akademik/schedule.json") or []
+        ogretmen_adi = user.get("ad_soyad", user.get("name", ""))
         bugun_dersler = [s for s in schedule
-                         if s.get("gun", "").lower() == bugun_gun.lower()]
-        bugun_dersler.sort(key=lambda s: int(s.get("saat", 0) or 0))
+                         if s.get("gun", "").lower() == bugun_gun.lower()
+                         and ogretmen_adi.lower() in (s.get("ogretmen_adi", s.get("ogretmen", "")) or "").lower()]
+        def _saat_key(s):
+            v = s.get("saat", 0)
+            if isinstance(v, int):
+                return v
+            try:
+                return int(str(v).split(":")[0].split("-")[0])
+            except (ValueError, IndexError):
+                return 0
+        bugun_dersler.sort(key=_saat_key)
 
         # Bekleyen not girişi (son 30 gün sınavlar - notu girilmemiş)
         grades = adapter.load(DataPaths.GRADES) or []
@@ -675,12 +685,12 @@ async def gunluk_isler(
         bugun_teslim = [s for s in submissions if s.get("teslim_tarihi", "")[:10] == bugun]
 
         # Nöbet (bugün)
-        nobet_data = adapter.load("akademik/nobet.json") or []
+        nobet_data = adapter.load("akademik/nobet_gorevler.json") or []
         ogretmen_adi = user.get("ad_soyad", user.get("name", ""))
         bugun_nobet = any(
             n for n in nobet_data
             if bugun_gun.lower() in (n.get("gun", "").lower(), "")
-            and ogretmen_adi.lower() in n.get("ogretmen", "").lower()
+            and ogretmen_adi.lower() in (n.get("ogretmen_adi", n.get("ogretmen", "")) or "").lower()
         )
 
         # Okunmamış mesajlar

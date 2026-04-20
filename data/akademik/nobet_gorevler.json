@@ -1,0 +1,191 @@
+[
+  {
+    "id": "nbg_1803415e",
+    "ogretmen_id": "ogr_25b99f8d",
+    "ogretmen_adi": "Mert Ozcan",
+    "gun": "Pazartesi",
+    "yer": "Otopark",
+    "saat": "12:00-16:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_f9ee615e",
+    "ogretmen_id": "ogr_9b1462ea",
+    "ogretmen_adi": "Dilara Kilic",
+    "gun": "Pazartesi",
+    "yer": "Giris",
+    "saat": "12:00-16:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_d97a75c3",
+    "ogretmen_id": "ogr_5692b4eb",
+    "ogretmen_adi": "Pelin Aydin",
+    "gun": "Pazartesi",
+    "yer": "Spor Salonu",
+    "saat": "08:00-12:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_203e2dba",
+    "ogretmen_id": "ogr_e5058e33",
+    "ogretmen_adi": "Yaren Kilic",
+    "gun": "Pazartesi",
+    "yer": "Koridor Kat-3",
+    "saat": "12:00-16:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_211737b2",
+    "ogretmen_id": "ogr_480ead2f",
+    "ogretmen_adi": "Ada Sahin",
+    "gun": "Sali",
+    "yer": "Spor Salonu",
+    "saat": "08:00-12:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_1200b365",
+    "ogretmen_id": "ogr_a649b6b4",
+    "ogretmen_adi": "Esra Tekin",
+    "gun": "Sali",
+    "yer": "Bahce",
+    "saat": "12:00-16:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_8bd094e8",
+    "ogretmen_id": "ogr_0f0af472",
+    "ogretmen_adi": "Ege Korkmaz",
+    "gun": "Sali",
+    "yer": "Koridor Kat-1",
+    "saat": "08:00-12:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_b4751c55",
+    "ogretmen_id": "ogr_992927db",
+    "ogretmen_adi": "Ahmet Ak",
+    "gun": "Sali",
+    "yer": "Koridor Kat-3",
+    "saat": "08:00-12:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_ffc3b14a",
+    "ogretmen_id": "ogr_8c91ee46",
+    "ogretmen_adi": "Ege Tas",
+    "gun": "Carsamba",
+    "yer": "Otopark",
+    "saat": "08:00-12:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_4102ed15",
+    "ogretmen_id": "ogr_4061e9c8",
+    "ogretmen_adi": "Busra Kaya",
+    "gun": "Carsamba",
+    "yer": "Koridor Kat-3",
+    "saat": "12:00-16:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_850eb9fd",
+    "ogretmen_id": "ogr_ef75c0aa",
+    "ogretmen_adi": "Taha Ozcan",
+    "gun": "Carsamba",
+    "yer": "Koridor Kat-2",
+    "saat": "12:00-16:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_d9492155",
+    "ogretmen_id": "ogr_01e58e19",
+    "ogretmen_adi": "Yaren Kilic",
+    "gun": "Carsamba",
+    "yer": "Spor Salonu",
+    "saat": "12:00-16:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_fc924378",
+    "ogretmen_id": "ogr_7240b8c3",
+    "ogretmen_adi": "Taha Acar",
+    "gun": "Persembe",
+    "yer": "Spor Salonu",
+    "saat": "08:00-12:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_e474cab5",
+    "ogretmen_id": "ogr_9fb37274",
+    "ogretmen_adi": "Selin Balci",
+    "gun": "Persembe",
+    "yer": "Koridor Kat-1",
+    "saat": "08:00-12:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_d2bce4e7",
+    "ogretmen_id": "ogr_70d7140a",
+    "ogretmen_adi": "Merve Bozkurt",
+    "gun": "Persembe",
+    "yer": "Koridor Kat-2",
+    "saat": "08:00-12:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_8722a9b3",
+    "ogretmen_id": "ogr_d0e3afbb",
+    "ogretmen_adi": "Merve Ozturk",
+    "gun": "Persembe",
+    "yer": "Otopark",
+    "saat": "12:00-16:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_97e54c68",
+    "ogretmen_id": "ogr_d0e3afbb",
+    "ogretmen_adi": "Merve Ozturk",
+    "gun": "Cuma",
+    "yer": "Koridor Kat-1",
+    "saat": "08:00-12:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_77747eb1",
+    "ogretmen_id": "ogr_8b0ab3f7",
+    "ogretmen_adi": "Asya Ozcan",
+    "gun": "Cuma",
+    "yer": "Yemekhane",
+    "saat": "08:00-12:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_8c302ef6",
+    "ogretmen_id": "ogr_69c3c794",
+    "ogretmen_adi": "Esra Dogan",
+    "gun": "Cuma",
+    "yer": "Otopark",
+    "saat": "12:00-16:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_827f38dc",
+    "ogretmen_id": "ogr_4afe9cac",
+    "ogretmen_adi": "Mira Tekin",
+    "gun": "Cuma",
+    "yer": "Koridor Kat-2",
+    "saat": "12:00-16:00",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "nbg_sc01",
+    "ogretmen_id": "sc_ogr",
+    "ogretmen_adi": "SmartCampus Ogretmen",
+    "gun": "Pazartesi",
+    "yer": "Ana Koridor",
+    "saat": "07:45-08:30",
+    "akademik_yil": "2025-2026"
+  }
+]
