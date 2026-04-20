@@ -309,3 +309,211 @@ async def ihbar_durum_guncelle(
             adapter.save(DataPaths.IHBAR, all_i)
             return {"ok": True}
     raise HTTPException(404, "Ihbar bulunamadi")
+
+
+# ══════════════════════════════════════════════════════════════
+# YÖNLENDİRME (SEVK)
+# ══════════════════════════════════════════════════════════════
+
+YONLENDIRME_TURLERI = [
+    "RAM", "Hastane", "CIMER", "Sosyal Hizmet", "Polis/Jandarma",
+    "Aile Danışmanlığı", "Psikiyatri", "Dil Terapisi", "Diğer",
+]
+
+@router.get("/yonlendirmeler")
+async def yonlendirmeler(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+    durum: str | None = None,
+):
+    _require_rehber(user)
+    items = adapter.load(DataPaths.YONLENDIRME) or []
+    if durum:
+        items = [i for i in items if i.get("durum") == durum]
+    items.sort(key=lambda i: i.get("tarih", ""), reverse=True)
+    return items[:100]
+
+
+@router.post("/yonlendirme", status_code=201)
+async def yonlendirme_ekle(
+    student_id: str,
+    tur: str,
+    kurum: str = "",
+    aciklama: str = "",
+    user: Annotated[dict, Depends(get_current_user)] = None,
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)] = None,
+):
+    _require_rehber(user)
+    students = adapter.load(DataPaths.STUDENTS) or []
+    s = next((x for x in students if x.get("id") == student_id), None)
+    if not s:
+        raise HTTPException(404, "Ogrenci yok")
+
+    yeni = {
+        "id": f"yon_{uuid.uuid4().hex[:8]}",
+        "student_id": student_id,
+        "ogrenci_adi": f"{s.get('ad', '')} {s.get('soyad', '')}".strip(),
+        "sinif": str(s.get("sinif", "")),
+        "sube": s.get("sube", ""),
+        "tur": tur,
+        "kurum": kurum,
+        "aciklama": aciklama,
+        "durum": "beklemede",
+        "tarih": datetime.now().isoformat(),
+        "rehber": user.get("ad_soyad", user.get("name", "")),
+    }
+    adapter.append(DataPaths.YONLENDIRME, yeni)
+    return yeni
+
+
+# ══════════════════════════════════════════════════════════════
+# RİSK DEĞERLENDİRME
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/risk-degerlendirme")
+async def risk_degerlendirme_list(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    _require_rehber(user)
+    items = adapter.load(DataPaths.RISK_DEGER) or []
+    items.sort(key=lambda i: i.get("tarih", ""), reverse=True)
+    return items[:100]
+
+
+@router.post("/risk-degerlendirme", status_code=201)
+async def risk_degerlendirme_ekle(
+    student_id: str,
+    risk_alanlari: str = "",
+    risk_seviyesi: str = "orta",
+    aciklama: str = "",
+    oneri: str = "",
+    user: Annotated[dict, Depends(get_current_user)] = None,
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)] = None,
+):
+    _require_rehber(user)
+    students = adapter.load(DataPaths.STUDENTS) or []
+    s = next((x for x in students if x.get("id") == student_id), None)
+    if not s:
+        raise HTTPException(404, "Ogrenci yok")
+
+    yeni = {
+        "id": f"risk_{uuid.uuid4().hex[:8]}",
+        "student_id": student_id,
+        "ogrenci_adi": f"{s.get('ad', '')} {s.get('soyad', '')}".strip(),
+        "sinif": str(s.get("sinif", "")),
+        "sube": s.get("sube", ""),
+        "risk_alanlari": risk_alanlari,
+        "risk_seviyesi": risk_seviyesi,
+        "aciklama": aciklama,
+        "oneri": oneri,
+        "tarih": datetime.now().isoformat(),
+        "rehber": user.get("ad_soyad", user.get("name", "")),
+    }
+    adapter.append(DataPaths.RISK_DEGER, yeni)
+    return yeni
+
+
+# ══════════════════════════════════════════════════════════════
+# KRİZ MÜDAHALE
+# ══════════════════════════════════════════════════════════════
+
+KRIZ_TURLERI = [
+    "İntihar Riski", "Öz Zarar", "Şiddet/Saldırganlık", "İstismar Şüphesi",
+    "Madde Kullanımı", "Aile İçi Şiddet", "Kayıp/Yas", "Doğal Afet", "Diğer",
+]
+
+@router.get("/kriz-kayitlari")
+async def kriz_list(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    _require_rehber(user)
+    items = adapter.load(DataPaths.KRIZ) or []
+    items.sort(key=lambda i: i.get("tarih", ""), reverse=True)
+    return items[:100]
+
+
+@router.post("/kriz-kayit", status_code=201)
+async def kriz_ekle(
+    student_id: str,
+    kriz_turu: str,
+    acil_durum: str = "hayir",
+    yapilan_mudahale: str = "",
+    bilgilendirilen: str = "",
+    user: Annotated[dict, Depends(get_current_user)] = None,
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)] = None,
+):
+    _require_rehber(user)
+    students = adapter.load(DataPaths.STUDENTS) or []
+    s = next((x for x in students if x.get("id") == student_id), None)
+    if not s:
+        raise HTTPException(404, "Ogrenci yok")
+
+    yeni = {
+        "id": f"kriz_{uuid.uuid4().hex[:8]}",
+        "student_id": student_id,
+        "ogrenci_adi": f"{s.get('ad', '')} {s.get('soyad', '')}".strip(),
+        "sinif": str(s.get("sinif", "")),
+        "sube": s.get("sube", ""),
+        "kriz_turu": kriz_turu,
+        "acil_durum": acil_durum,
+        "yapilan_mudahale": yapilan_mudahale,
+        "bilgilendirilen": bilgilendirilen,
+        "durum": "acik",
+        "tarih": datetime.now().isoformat(),
+        "rehber": user.get("ad_soyad", user.get("name", "")),
+    }
+    adapter.append(DataPaths.KRIZ, yeni)
+    return yeni
+
+
+# ══════════════════════════════════════════════════════════════
+# GELİŞİM DOSYASI
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/gelisim-dosyasi/{student_id}")
+async def gelisim_dosyasi(
+    student_id: str,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Öğrencinin tüm rehberlik geçmişini tek dosyada toplar."""
+    _require_rehber(user)
+
+    students = adapter.load(DataPaths.STUDENTS) or []
+    s = next((x for x in students if x.get("id") == student_id), None)
+    if not s:
+        raise HTTPException(404, "Ogrenci yok")
+
+    vakalar = [v for v in (adapter.load(DataPaths.VAKA) or []) if v.get("student_id") == student_id]
+    gorusmeler = [g for g in (adapter.load(DataPaths.GORUSME) or []) if g.get("student_id") == student_id]
+    aile = [f for f in (adapter.load(DataPaths.AILE_FORM) or []) if f.get("student_id") == student_id]
+    yonlendirmeler = [y for y in (adapter.load(DataPaths.YONLENDIRME) or []) if y.get("student_id") == student_id]
+    riskler = [r for r in (adapter.load(DataPaths.RISK_DEGER) or []) if r.get("student_id") == student_id]
+    krizler = [k for k in (adapter.load(DataPaths.KRIZ) or []) if k.get("student_id") == student_id]
+
+    # Mood
+    moods = [m for m in (adapter.load(DataPaths.MOOD_CHECKINS) or []) if m.get("student_id") == student_id]
+    mood_ort = round(sum(int(m.get("level", 3)) for m in moods) / len(moods), 2) if moods else 0
+
+    return {
+        "ogrenci": {
+            "id": student_id,
+            "ad_soyad": f"{s.get('ad', '')} {s.get('soyad', '')}".strip(),
+            "sinif": str(s.get("sinif", "")),
+            "sube": s.get("sube", ""),
+        },
+        "vaka_sayisi": len(vakalar),
+        "gorusme_sayisi": len(gorusmeler),
+        "yonlendirme_sayisi": len(yonlendirmeler),
+        "risk_sayisi": len(riskler),
+        "kriz_sayisi": len(krizler),
+        "mood_ortalamasi": mood_ort,
+        "vakalar": vakalar[-5:],
+        "gorusmeler": gorusmeler[-5:],
+        "aile_formu": aile[-1] if aile else None,
+        "yonlendirmeler": yonlendirmeler[-5:],
+        "riskler": riskler[-5:],
+        "krizler": krizler[-3:],
+    }

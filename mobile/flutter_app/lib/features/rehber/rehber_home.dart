@@ -109,6 +109,41 @@ class RehberHomePage extends ConsumerWidget {
                   onTap: () => context.push('/rehber/ihbar'),
                 ),
                 _QCard(
+                  icon: Icons.send, title: 'Yönlendirme',
+                  subtitle: 'RAM / Kurum sevk', color: Color(0xFF0EA5E9),
+                  onTap: () => context.push('/rehber/yonlendirme'),
+                ),
+                _QCard(
+                  icon: Icons.emergency, title: 'Kriz Müdahale',
+                  subtitle: 'Acil müdahale', color: Color(0xFFDC2626),
+                  onTap: () => context.push('/rehber/kriz'),
+                ),
+                _QCard(
+                  icon: Icons.assessment, title: 'Risk Değerlendirme',
+                  subtitle: 'Öğrenci risk skoru', color: Color(0xFFF97316),
+                  onTap: () => context.push('/rehber/risk'),
+                ),
+                _QCard(
+                  icon: Icons.folder_shared, title: 'Gelişim Dosyası',
+                  subtitle: 'Öğrenci dosyası', color: Color(0xFF8B5CF6),
+                  onTap: () => context.push('/rehber/gelisim-dosyasi'),
+                ),
+                _QCard(
+                  icon: Icons.work, title: 'Kariyer Rehberliği',
+                  subtitle: 'Meslek yönlendirme', color: Color(0xFF14B8A6),
+                  onTap: () => context.push('/rehber/kariyer'),
+                ),
+                _QCard(
+                  icon: Icons.favorite, title: 'Sosyo-Duygusal',
+                  subtitle: 'Duygu takibi', color: Color(0xFFEC4899),
+                  onTap: () => context.push('/rehber/sosyo-duygusal'),
+                ),
+                _QCard(
+                  icon: Icons.accessibility_new, title: 'BEP',
+                  subtitle: 'Özel eğitim planı', color: Color(0xFF6366F1),
+                  onTap: () => context.push('/rehber/bep'),
+                ),
+                _QCard(
                   icon: Icons.chat, title: 'Mesajlar',
                   subtitle: 'İletişim', color: AppColors.success,
                   onTap: () => context.push('/messages'),

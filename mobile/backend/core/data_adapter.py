@@ -119,6 +119,11 @@ class DataPaths:
     VAKA = "rehberlik/vaka_kayitlari.json"
     GORUSME = "rehberlik/gorusme_kayitlari.json"
     AILE_FORM = "rehberlik/aile_bilgi_formlari.json"
+    YONLENDIRME = "rehberlik/yonlendirmeler.json"
+    RISK_DEGER = "rehberlik/risk_degerlendirme.json"
+    KRIZ = "rehberlik/kriz_mudahale.json"
+    GELISIM_DOSYA = "rehberlik/gelisim_dosyasi.json"
+    BEP = "rehberlik/bep_planlari.json"
 
     # Saglik
     REVIR = "saglik/revir_ziyaretleri.json"

@@ -173,6 +173,13 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/rehber/aile-form', builder: (_, __) => const AileFormPage()),
         GoRoute(path: '/rehber/mood', builder: (_, __) => const MoodPanelPage()),
         GoRoute(path: '/rehber/ihbar', builder: (_, __) => const IhbarIncelemePage()),
+        GoRoute(path: '/rehber/yonlendirme', builder: (_, __) => const _PlaceholderPage(title: 'Yönlendirme (Sevk)')),
+        GoRoute(path: '/rehber/kriz', builder: (_, __) => const _PlaceholderPage(title: 'Kriz Müdahale')),
+        GoRoute(path: '/rehber/risk', builder: (_, __) => const _PlaceholderPage(title: 'Risk Değerlendirme')),
+        GoRoute(path: '/rehber/gelisim-dosyasi', builder: (_, __) => const _PlaceholderPage(title: 'Gelişim Dosyası')),
+        GoRoute(path: '/rehber/kariyer', builder: (_, __) => const _PlaceholderPage(title: 'Kariyer Rehberliği')),
+        GoRoute(path: '/rehber/sosyo-duygusal', builder: (_, __) => const _PlaceholderPage(title: 'Sosyo-Duygusal Takip')),
+        GoRoute(path: '/rehber/bep', builder: (_, __) => const _PlaceholderPage(title: 'BEP - Özel Eğitim Planı')),
         // YONETICI rotaları
         GoRoute(path: '/yonetici', builder: (_, __) => const YoneticiHomePage()),
         GoRoute(path: '/yonetici/erken-uyari', builder: (_, __) => const ErkenUyariPage()),
