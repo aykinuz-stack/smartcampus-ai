@@ -81,6 +81,49 @@ def render_gunluk_isler():
             gec_ids = gec_ids & sinif_ids
             izinli_ids = izinli_ids & sinif_ids
 
+    # ── ÖĞRETMEN EK BİLGİLERİ ──
+    if role in ("ogretmen", "yonetici", "superadmin", "mudur"):
+        import locale
+        gun_isimleri = {0: "Pazartesi", 1: "Salı", 2: "Çarşamba",
+                        3: "Perşembe", 4: "Cuma", 5: "Cumartesi", 6: "Pazar"}
+        bugun_gun = gun_isimleri.get(date.today().weekday(), "")
+
+        schedule = _load_json("data/akademik/schedule.json")
+        bugun_dersler = [s for s in schedule
+                         if s.get("gun", "").lower() == bugun_gun.lower()]
+        bugun_dersler.sort(key=lambda s: int(s.get("saat", 0) or 0))
+
+        nobet_data = _load_json("data/akademik/nobet.json")
+        ogretmen_adi = auth_user.get("name", "")
+        bugun_nobet = any(n for n in nobet_data
+                          if bugun_gun.lower() in n.get("gun", "").lower()
+                          and ogretmen_adi.lower() in n.get("ogretmen", "").lower())
+
+        mesajlar = _load_json("data/akademik/veli_mesajlar.json")
+        okunmamis = sum(1 for m in mesajlar if not m.get("okundu", False) and "veli" in m.get("yon", ""))
+
+        bugun_ay_gun = date.today().strftime("-%m-%d")
+        dogum_gunu = [f"{s.get('ad', '')} {s.get('soyad', '')} ({s.get('sinif', '')}/{s.get('sube', '')})"
+                      for s in students if (s.get("dogum_tarihi", "") or "").endswith(bugun_ay_gun)]
+
+        if bugun_nobet:
+            st.warning("🛡️ **Bugün nöbet günün!**")
+
+        if bugun_dersler:
+            st.markdown(f"**📚 Bugünkü Derslerim ({bugun_gun}) — {len(bugun_dersler)} ders:**")
+            for d in bugun_dersler:
+                st.markdown(f"&nbsp;&nbsp;&nbsp;`{d.get('saat', '?')}. ders` — **{d.get('ders', '')}** ({d.get('sinif', '')}/{d.get('sube', '')})")
+
+        col_a, col_b = st.columns(2)
+        with col_a:
+            if okunmamis > 0:
+                st.info(f"💬 **{okunmamis}** okunmamış mesaj")
+        with col_b:
+            if dogum_gunu:
+                st.success(f"🎂 Doğum günü: {', '.join(dogum_gunu[:3])}")
+
+        st.markdown("---")
+
     # ── İstatistik Kartları ──
     toplam_yoklama = len(set(a.get("student_id") for a in bugun_kayitlar))
 

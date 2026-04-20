@@ -651,6 +651,70 @@ async def gunluk_isler(
         gec_list = [g for g in gec_list if g["student_id"] in sinif_ids]
         izinli_list = [i for i in izinli_list if i["student_id"] in sinif_ids]
 
+    # ── Öğretmen ek bilgileri ──
+    ogretmen_ek = {}
+    if role in ("ogretmen", "superadmin", "yonetici", "mudur"):
+        from datetime import date as _d2
+        bugun_str = _d2.today().strftime("%A").lower()
+        gun_map = {"monday": "Pazartesi", "tuesday": "Salı", "wednesday": "Çarşamba",
+                   "thursday": "Perşembe", "friday": "Cuma", "saturday": "Cumartesi", "sunday": "Pazar"}
+        bugun_gun = gun_map.get(bugun_str, bugun_str)
+
+        # Ders programı (bugün)
+        schedule = adapter.load("akademik/schedule.json") or []
+        bugun_dersler = [s for s in schedule
+                         if s.get("gun", "").lower() == bugun_gun.lower()]
+        bugun_dersler.sort(key=lambda s: int(s.get("saat", 0) or 0))
+
+        # Bekleyen not girişi (son 30 gün sınavlar - notu girilmemiş)
+        grades = adapter.load(DataPaths.GRADES) or []
+        homework = adapter.load(DataPaths.HOMEWORK) or []
+
+        # Teslim edilen ödevler (bugün)
+        submissions = adapter.load(DataPaths.HOMEWORK_SUBMISSIONS) or []
+        bugun_teslim = [s for s in submissions if s.get("teslim_tarihi", "")[:10] == bugun]
+
+        # Nöbet (bugün)
+        nobet_data = adapter.load("akademik/nobet.json") or []
+        ogretmen_adi = user.get("ad_soyad", user.get("name", ""))
+        bugun_nobet = any(
+            n for n in nobet_data
+            if bugun_gun.lower() in (n.get("gun", "").lower(), "")
+            and ogretmen_adi.lower() in n.get("ogretmen", "").lower()
+        )
+
+        # Okunmamış mesajlar
+        mesajlar = adapter.load("akademik/veli_mesajlar.json") or []
+        user_id = user.get("user_id", "")
+        okunmamis = sum(1 for m in mesajlar
+                        if m.get("ogretmen_id") == user_id
+                        and not m.get("okundu", False)
+                        and "veli" in m.get("yon", ""))
+
+        # Doğum günü olan öğrenciler
+        bugun_ay_gun = _d2.today().strftime("-%m-%d")
+        dogum_gunu = [
+            f"{s.get('ad', '')} {s.get('soyad', '')} ({s.get('sinif', '')}/{s.get('sube', '')})"
+            for s in students
+            if (s.get("dogum_tarihi", "") or "").endswith(bugun_ay_gun)
+        ]
+
+        # Ders defteri eksik (son 3 gün)
+        ders_defteri = adapter.load("akademik/ders_defteri.json") or []
+        son3gun = [(_d2.today() - timedelta(days=i)).isoformat() for i in range(3)]
+        dd_girilmis = {(d.get("tarih", "")[:10], d.get("sinif"), d.get("sube"), d.get("ders"))
+                       for d in ders_defteri if d.get("tarih", "")[:10] in son3gun}
+
+        ogretmen_ek = {
+            "bugun_ders_programi": bugun_dersler[:10],
+            "bugun_gun": bugun_gun,
+            "teslim_edilen_odev": len(bugun_teslim),
+            "nobet_var": bugun_nobet,
+            "okunmamis_mesaj": okunmamis,
+            "dogum_gunu": dogum_gunu[:5],
+            "ders_defteri_eksik": max(0, len(bugun_dersler) - len(dd_girilmis)),
+        }
+
     return {
         "tarih": bugun,
         "yoklama_alinan": len(set(a.get("student_id") for a in bugun_kayitlar)),
@@ -660,6 +724,7 @@ async def gunluk_isler(
         "gec_sayisi": len(gec_list),
         "izinli": izinli_list,
         "izinli_sayisi": len(izinli_list),
+        **ogretmen_ek,
     }
 
 

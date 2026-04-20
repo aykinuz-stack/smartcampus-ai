@@ -62,6 +62,16 @@ class _GunlukIslerPageState extends ConsumerState<GunlukIslerPage> {
     final gecler = List<Map<String, dynamic>>.from(d['gec'] ?? []);
     final izinliler = List<Map<String, dynamic>>.from(d['izinli'] ?? []);
 
+    // Öğretmen ek bilgileri
+    final bugunDersleri = List<Map<String, dynamic>>.from(d['bugun_ders_programi'] ?? []);
+    final bugunGun = d['bugun_gun'] as String? ?? '';
+    final teslimOdev = d['teslim_edilen_odev'] as int? ?? 0;
+    final nobetVar = d['nobet_var'] as bool? ?? false;
+    final okunmamisMesaj = d['okunmamis_mesaj'] as int? ?? 0;
+    final dogumGunu = List<String>.from(d['dogum_gunu'] ?? []);
+    final dersDefterEksik = d['ders_defteri_eksik'] as int? ?? 0;
+    final hasOgretmenData = bugunDersleri.isNotEmpty || nobetVar || okunmamisMesaj > 0;
+
     return SingleChildScrollView(
       physics: const AlwaysScrollableScrollPhysics(),
       padding: const EdgeInsets.all(16),
@@ -99,7 +109,98 @@ class _GunlukIslerPageState extends ConsumerState<GunlukIslerPage> {
             const SizedBox(width: 8),
             _KpiCard(label: 'İzinli', value: '$izinliSayisi', color: AppColors.info, icon: Icons.medical_information),
           ]),
-          const SizedBox(height: 18),
+          const SizedBox(height: 14),
+
+          // ── ÖĞRETMEN EK BİLGİLERİ ──
+          if (hasOgretmenData) ...[
+            // Nöbet uyarısı
+            if (nobetVar)
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(12),
+                margin: const EdgeInsets.only(bottom: 10),
+                decoration: BoxDecoration(
+                  color: AppColors.warning.withOpacity(0.15),
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: AppColors.warning)),
+                child: const Row(children: [
+                  Icon(Icons.shield, color: AppColors.warning, size: 20),
+                  SizedBox(width: 8),
+                  Text('Bugün nöbet günün!', style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.warning)),
+                ]),
+              ),
+
+            // Okunmamış mesaj + teslim ödev + ders defteri eksik
+            Row(children: [
+              if (okunmamisMesaj > 0)
+                _MiniInfo(icon: Icons.mail, text: '$okunmamisMesaj mesaj', color: AppColors.primary),
+              if (teslimOdev > 0)
+                _MiniInfo(icon: Icons.assignment_turned_in, text: '$teslimOdev ödev teslim', color: AppColors.success),
+              if (dersDefterEksik > 0)
+                _MiniInfo(icon: Icons.edit_note, text: '$dersDefterEksik ders defteri eksik', color: AppColors.warning),
+            ]),
+            if (okunmamisMesaj > 0 || teslimOdev > 0 || dersDefterEksik > 0)
+              const SizedBox(height: 10),
+
+            // Bugünkü ders programı
+            if (bugunDersleri.isNotEmpty) ...[
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                decoration: BoxDecoration(
+                  color: AppColors.success.withOpacity(0.15),
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: AppColors.success.withOpacity(0.4))),
+                child: Row(children: [
+                  const Icon(Icons.schedule, color: AppColors.success, size: 20),
+                  const SizedBox(width: 8),
+                  Text('Bugünkü Derslerim ($bugunGun) — ${bugunDersleri.length} ders',
+                      style: const TextStyle(fontWeight: FontWeight.bold, color: AppColors.success)),
+                ]),
+              ),
+              const SizedBox(height: 6),
+              ...bugunDersleri.map((ders) => Container(
+                margin: const EdgeInsets.only(bottom: 4),
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                decoration: BoxDecoration(
+                  color: AppColors.success.withOpacity(0.05),
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border(left: BorderSide(color: AppColors.success, width: 3))),
+                child: Row(children: [
+                  Container(
+                    width: 28, height: 28, alignment: Alignment.center,
+                    decoration: BoxDecoration(color: AppColors.success.withOpacity(0.15), borderRadius: BorderRadius.circular(6)),
+                    child: Text('${ders['saat'] ?? '?'}', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(child: Text(ders['ders'] ?? '', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14))),
+                  Text('${ders['sinif'] ?? ''}/${ders['sube'] ?? ''}',
+                      style: const TextStyle(fontSize: 12, color: AppColors.textSecondaryDark)),
+                ]),
+              )),
+              const SizedBox(height: 10),
+            ],
+
+            // Doğum günleri
+            if (dogumGunu.isNotEmpty) ...[
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFEAB308).withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: const Color(0xFFEAB308).withOpacity(0.3))),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  const Row(children: [
+                    Text('🎂', style: TextStyle(fontSize: 18)),
+                    SizedBox(width: 8),
+                    Text('Doğum Günleri', style: TextStyle(fontWeight: FontWeight.bold)),
+                  ]),
+                  const SizedBox(height: 6),
+                  ...dogumGunu.map((d) => Text('  • $d', style: const TextStyle(fontSize: 13))),
+                ]),
+              ),
+              const SizedBox(height: 10),
+            ],
+          ],
 
           // Devamsız öğrenciler
           if (devamsizlar.isNotEmpty) ...[
@@ -271,6 +372,28 @@ class _DevamsizKart extends StatelessWidget {
             const Icon(Icons.phone, size: 14, color: AppColors.textSecondaryDark),
             Text(data['veli_telefon'] ?? '', style: const TextStyle(fontSize: 9, color: AppColors.textSecondaryDark)),
           ]),
+      ]),
+    );
+  }
+}
+
+
+class _MiniInfo extends StatelessWidget {
+  final IconData icon;
+  final String text;
+  final Color color;
+  const _MiniInfo({required this.icon, required this.text, required this.color});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(right: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+      decoration: BoxDecoration(
+        color: color.withOpacity(0.1), borderRadius: BorderRadius.circular(8)),
+      child: Row(mainAxisSize: MainAxisSize.min, children: [
+        Icon(icon, color: color, size: 14),
+        const SizedBox(width: 4),
+        Text(text, style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: color)),
       ]),
     );
   }
