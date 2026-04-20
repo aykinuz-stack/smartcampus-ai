@@ -113,6 +113,12 @@ class SmartCampusApp extends ConsumerWidget {
           path: '/attendance',
           builder: (_, __) => const DevamsizlikPage(),
         ),
+        GoRoute(path: '/ogrenci/sinav-sonuclari', builder: (_, __) => const _PlaceholderPage(title: 'Sınav Sonuçlarım')),
+        GoRoute(path: '/ogrenci/kazanim-borclari', builder: (_, __) => const _PlaceholderPage(title: 'Kazanım Borçlarım')),
+        GoRoute(path: '/ogrenci/telafi', builder: (_, __) => const _PlaceholderPage(title: 'Telafi Görevleri')),
+        GoRoute(path: '/ogrenci/defterim', builder: (_, __) => const _PlaceholderPage(title: 'Öğrenci Defterim')),
+        GoRoute(path: '/ogrenci/sanat-sokagi', builder: (_, __) => const _PlaceholderPage(title: 'Sanat Sokağı')),
+        GoRoute(path: '/ogrenci/bilisim-vadisi', builder: (_, __) => const _PlaceholderPage(title: 'Bilişim Vadisi')),
         GoRoute(
           path: '/messages',
           builder: (_, __) => const MesajPage(),
@@ -148,6 +154,13 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/veli/randevu', builder: (_, __) => const RandevuPage()),
         GoRoute(path: '/veli/belge', builder: (_, __) => const BelgePage()),
         GoRoute(path: '/veli/geri-bildirim', builder: (_, __) => const GeriBildirimPage()),
+        GoRoute(path: '/veli/servis', builder: (_, __) => const _PlaceholderPage(title: 'Servis Takibi')),
+        GoRoute(path: '/veli/yemek-menusu', builder: (_, __) => const _PlaceholderPage(title: 'Yemek Menüsü')),
+        GoRoute(path: '/veli/anket', builder: (_, __) => const _PlaceholderPage(title: 'Memnuniyet Anketi')),
+        GoRoute(path: '/veli/basari-duvari', builder: (_, __) => const _PlaceholderPage(title: 'Başarı Duvarı')),
+        GoRoute(path: '/veli/saglik-rehberlik', builder: (_, __) => const _PlaceholderPage(title: 'Sağlık & Rehberlik')),
+        GoRoute(path: '/veli/veli-egitim', builder: (_, __) => const _PlaceholderPage(title: 'Veli Eğitim')),
+        GoRoute(path: '/veli/bulten', builder: (_, __) => const _PlaceholderPage(title: 'Günlük Bülten')),
         GoRoute(
           path: '/veli/cocuk-detay',
           builder: (ctx, state) {

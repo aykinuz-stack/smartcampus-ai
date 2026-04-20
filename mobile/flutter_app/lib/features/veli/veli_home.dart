@@ -287,6 +287,68 @@ class _VeliHomePageState extends ConsumerState<VeliHomePage> {
                     onTap: () => context.push('/ai-treni'),
                   ),
                   _QuickCard(
+                    icon: Icons.directions_bus,
+                    title: 'Servis Takibi',
+                    subtitle: 'Güzergah + konum',
+                    color: Color(0xFF0EA5E9),
+                    onTap: () => context.push('/veli/servis'),
+                  ),
+                  _QuickCard(
+                    icon: Icons.restaurant_menu,
+                    title: 'Yemek Menüsü',
+                    subtitle: 'Haftalık liste',
+                    color: Color(0xFF10B981),
+                    onTap: () => context.push('/veli/yemek-menusu'),
+                  ),
+                  _QuickCard(
+                    icon: Icons.poll,
+                    title: 'Memnuniyet Anketi',
+                    subtitle: 'Görüşleriniz',
+                    color: Color(0xFF8B5CF6),
+                    onTap: () => context.push('/veli/anket'),
+                  ),
+                  _QuickCard(
+                    icon: Icons.star,
+                    title: 'Başarı Duvarı',
+                    subtitle: 'Ödüller + başarılar',
+                    color: Color(0xFFEAB308),
+                    onTap: () => context.push('/veli/basari-duvari'),
+                  ),
+                  _QuickCard(
+                    icon: Icons.health_and_safety,
+                    title: 'Sağlık & Rehberlik',
+                    subtitle: 'Çocuğun durumu',
+                    color: Color(0xFFEF4444),
+                    onTap: () => context.push('/veli/saglik-rehberlik'),
+                  ),
+                  _QuickCard(
+                    icon: Icons.school,
+                    title: 'Karne',
+                    subtitle: 'Dönemlik karne',
+                    color: Color(0xFF6366F1),
+                    onTap: () {
+                      final children = user?.childrenIds ?? [];
+                      if (children.isNotEmpty) {
+                        context.push('/veli/cocuk-detay',
+                          extra: {'studentId': children.first, 'studentName': 'Çocuğum'});
+                      }
+                    },
+                  ),
+                  _QuickCard(
+                    icon: Icons.menu_book,
+                    title: 'Veli Eğitim',
+                    subtitle: 'Psiko-eğitim',
+                    color: Color(0xFF14B8A6),
+                    onTap: () => context.push('/veli/veli-egitim'),
+                  ),
+                  _QuickCard(
+                    icon: Icons.newspaper,
+                    title: 'Günlük Bülten',
+                    subtitle: 'Okul bülteni',
+                    color: Color(0xFFF97316),
+                    onTap: () => context.push('/veli/bulten'),
+                  ),
+                  _QuickCard(
                     icon: Icons.shield,
                     title: 'İhbar Hattı',
                     subtitle: 'Anonim bildirim',
