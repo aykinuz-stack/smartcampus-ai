@@ -62,14 +62,16 @@ class _GunlukIslerPageState extends ConsumerState<GunlukIslerPage> {
     final gecler = List<Map<String, dynamic>>.from(d['gec'] ?? []);
     final izinliler = List<Map<String, dynamic>>.from(d['izinli'] ?? []);
 
-    // Öğretmen ek bilgileri
-    final bugunDersleri = List<Map<String, dynamic>>.from(d['bugun_ders_programi'] ?? []);
-    final bugunGun = d['bugun_gun'] as String? ?? '';
-    final teslimOdev = d['teslim_edilen_odev'] as int? ?? 0;
-    final nobetVar = d['nobet_var'] as bool? ?? false;
-    final okunmamisMesaj = d['okunmamis_mesaj'] as int? ?? 0;
-    final dogumGunu = List<String>.from(d['dogum_gunu'] ?? []);
-    final dersDefterEksik = d['ders_defteri_eksik'] as int? ?? 0;
+    // Öğretmen ek bilgileri (null-safe)
+    List<Map<String, dynamic>> bugunDersleri = [];
+    try { bugunDersleri = List<Map<String, dynamic>>.from(d['bugun_ders_programi'] ?? []); } catch (_) {}
+    final bugunGun = (d['bugun_gun'] ?? '').toString();
+    final teslimOdev = (d['teslim_edilen_odev'] as num?)?.toInt() ?? 0;
+    final nobetVar = d['nobet_var'] == true;
+    final okunmamisMesaj = (d['okunmamis_mesaj'] as num?)?.toInt() ?? 0;
+    List<String> dogumGunu = [];
+    try { dogumGunu = List<String>.from(d['dogum_gunu'] ?? []); } catch (_) {}
+    final dersDefterEksik = (d['ders_defteri_eksik'] as num?)?.toInt() ?? 0;
     final hasOgretmenData = bugunDersleri.isNotEmpty || nobetVar || okunmamisMesaj > 0;
 
     return SingleChildScrollView(
@@ -144,39 +146,26 @@ class _GunlukIslerPageState extends ConsumerState<GunlukIslerPage> {
 
             // Bugünkü ders programı
             if (bugunDersleri.isNotEmpty) ...[
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                decoration: BoxDecoration(
-                  color: AppColors.success.withOpacity(0.15),
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: AppColors.success.withOpacity(0.4))),
-                child: Row(children: [
-                  const Icon(Icons.schedule, color: AppColors.success, size: 20),
-                  const SizedBox(width: 8),
-                  Text('Bugünkü Derslerim ($bugunGun) — ${bugunDersleri.length} ders',
-                      style: const TextStyle(fontWeight: FontWeight.bold, color: AppColors.success)),
-                ]),
+              ExpansionTile(
+                leading: const Icon(Icons.schedule, color: AppColors.success, size: 20),
+                title: Text('Derslerim ($bugunGun) — ${bugunDersleri.length} ders',
+                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: AppColors.success)),
+                initiallyExpanded: false,
+                children: bugunDersleri.map((ders) {
+                  final saat = '${ders['saat'] ?? '?'}';
+                  final saatKisa = saat.length > 5 ? saat.substring(0, 5) : saat;
+                  return ListTile(
+                    dense: true,
+                    leading: CircleAvatar(
+                      radius: 14, backgroundColor: AppColors.success.withOpacity(0.15),
+                      child: Text(saatKisa, style: const TextStyle(fontSize: 9, fontWeight: FontWeight.bold)),
+                    ),
+                    title: Text('${ders['ders'] ?? ''}', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                    trailing: Text('${ders['sinif'] ?? ''}/${ders['sube'] ?? ''}',
+                        style: const TextStyle(fontSize: 12, color: AppColors.textSecondaryDark)),
+                  );
+                }).toList(),
               ),
-              const SizedBox(height: 6),
-              ...bugunDersleri.map((ders) => Container(
-                margin: const EdgeInsets.only(bottom: 4),
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                decoration: BoxDecoration(
-                  color: AppColors.success.withOpacity(0.05),
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border(left: BorderSide(color: AppColors.success, width: 3))),
-                child: Row(children: [
-                  Container(
-                    width: 28, height: 28, alignment: Alignment.center,
-                    decoration: BoxDecoration(color: AppColors.success.withOpacity(0.15), borderRadius: BorderRadius.circular(6)),
-                    child: Text('${ders['saat'] ?? '?'}', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(child: Text(ders['ders'] ?? '', style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 14))),
-                  Text('${ders['sinif'] ?? ''}/${ders['sube'] ?? ''}',
-                      style: const TextStyle(fontSize: 12, color: AppColors.textSecondaryDark)),
-                ]),
-              )),
               const SizedBox(height: 10),
             ],
 
