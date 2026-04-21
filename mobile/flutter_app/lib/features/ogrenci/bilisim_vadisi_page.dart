@@ -105,7 +105,8 @@ class BilisimVadisiPage extends ConsumerWidget {
             const Text('Dijital Okuryazarlik',
                 style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600)),
             const SizedBox(height: 12),
-            ..._dijitalOkur.map((d) => _DijitalKart(data: d)),
+            ..._dijitalOkurData.asMap().entries.map((e) =>
+                _DijitalKart(data: e.value, ikon: _dijitalIkonlar[e.key])),
 
             const SizedBox(height: 24),
             const Text('Yararli Kaynaklar',
@@ -190,12 +191,13 @@ class _SeviyeSection extends StatelessWidget {
 }
 
 
-const _dijitalOkur = [
-  {'baslik': 'Guvenli Sifre Olusturma', 'ikon': 0xe59e, 'renk': 0xFF059669},
-  {'baslik': 'Sosyal Medya Bilinclendirme', 'ikon': 0xe894, 'renk': 0xFF0284C7},
-  {'baslik': 'Kisisel Veri Koruma (KVKK)', 'ikon': 0xea18, 'renk': 0xFF7C3AED},
-  {'baslik': 'Sahte Haber / Dogrulama', 'ikon': 0xe629, 'renk': 0xFFD97706},
+const _dijitalOkurData = [
+  {'baslik': 'Guvenli Sifre Olusturma', 'ikonIdx': 0, 'renk': 0xFF059669},
+  {'baslik': 'Sosyal Medya Bilinclendirme', 'ikonIdx': 1, 'renk': 0xFF0284C7},
+  {'baslik': 'Kisisel Veri Koruma (KVKK)', 'ikonIdx': 2, 'renk': 0xFF7C3AED},
+  {'baslik': 'Sahte Haber / Dogrulama', 'ikonIdx': 3, 'renk': 0xFFD97706},
 ];
+const _dijitalIkonlar = [Icons.lock, Icons.people, Icons.privacy_tip, Icons.fact_check];
 
 const _kaynaklar = [
   {'baslik': 'Code.org', 'aciklama': 'Ucretsiz kodlama dersleri', 'url': 'https://code.org'},
@@ -206,7 +208,8 @@ const _kaynaklar = [
 
 class _DijitalKart extends StatelessWidget {
   final Map<String, dynamic> data;
-  const _DijitalKart({required this.data});
+  final IconData ikon;
+  const _DijitalKart({required this.data, required this.ikon});
 
   @override
   Widget build(BuildContext context) {
@@ -221,8 +224,7 @@ class _DijitalKart extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Icon(IconData(data['ikon'] as int, fontFamily: 'MaterialIcons'),
-              color: c, size: 22),
+          Icon(ikon, color: c, size: 22),
           const SizedBox(width: 12),
           Expanded(
             child: Text(data['baslik'] as String,
