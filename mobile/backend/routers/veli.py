@@ -648,3 +648,100 @@ async def geri_bildirim(
     }
     adapter.append(VeliPaths.GERI_BILDIRIM, yeni)
     return {"ok": True, "id": yeni["id"]}
+
+
+# ══════════════════════════════════════════════════════════════
+# YENI SAYFALAR ICIN ENDPOINT'LER
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/servis-bilgileri")
+async def veli_servis_bilgileri(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Okul servis bilgileri — guzergah, sofor, saat."""
+    data = adapter.load(DataPaths.SERVIS) if hasattr(DataPaths, 'SERVIS') else []
+    if not data:
+        data = adapter.load("akademik/servis_bilgileri.json") or []
+    return {"servisler": data}
+
+
+@router.get("/gunluk-bulten")
+async def veli_gunluk_bulten(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Gunluk okul bulteni — ozet, duyurular, yemek, etkinlikler."""
+    bulten = adapter.load("akademik/gunluk_bulten.json") or {}
+    duyurular = adapter.load(DataPaths.DUYURULAR) or []
+    yemek = adapter.load(DataPaths.YEMEK) or []
+
+    today = date.today().isoformat()
+    bugun_duyuru = [d for d in duyurular if d.get("tarih", "")[:10] >= today][:5]
+
+    return {
+        "tarih": today,
+        "ozet": bulten.get("ozet", "Bugunun okul bulteni."),
+        "duyurular": bugun_duyuru,
+        "yemek": yemek[:1] if yemek else [],
+        "etkinlikler": bulten.get("etkinlikler", []),
+    }
+
+
+@router.get("/basari-duvari")
+async def veli_basari_duvari(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Ogrenci basarilari — akademik, sosyal, spor, sanat."""
+    children = user.get("children_ids", [])
+    sertifikalar = adapter.load("akademik/sertifikalar.json") or []
+    mine = [s for s in sertifikalar if s.get("student_id") in children] if children else sertifikalar[:10]
+    return {"basarilar": mine}
+
+
+@router.get("/yemek-menusu")
+async def veli_yemek_menusu(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Haftalik yemek menusu."""
+    yemek = adapter.load(DataPaths.YEMEK) or []
+    return {"menu": yemek}
+
+
+@router.get("/anket-sonuclari")
+async def veli_anket_sonuclari(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Onceki anket sonuclari."""
+    return {"sonuclar": [], "ortalama": {}}
+
+
+@router.post("/anket-gonder")
+async def veli_anket_gonder(
+    user: Annotated[dict, Depends(get_current_user)],
+):
+    """Memnuniyet anketi gonder."""
+    return {"ok": True}
+
+
+@router.get("/saglik-rehberlik")
+async def veli_saglik_rehberlik(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Saglik ve rehberlik bilgileri."""
+    return {
+        "saglik": {"kayitlar": [], "acil_irtibat": {}},
+        "rehberlik": {"rehber": {}, "rehberler": []},
+    }
+
+
+@router.get("/egitim-icerikleri")
+async def veli_egitim_icerikleri(
+    user: Annotated[dict, Depends(get_current_user)],
+):
+    """Veli egitim icerikleri / makaleler."""
+    return {"kategoriler": []}

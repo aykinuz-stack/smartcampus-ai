@@ -1,0 +1,79 @@
+[
+  {
+    "id": "ot_001",
+    "baslik": "Matematik 2. Yazılı",
+    "ders": "Matematik",
+    "sinif": 8,
+    "tarih": "2026-04-28",
+    "saat": "09:00",
+    "tur": "yazili",
+    "sure_dk": 40,
+    "konu": "Denklemler ve Eşitsizlikler"
+  },
+  {
+    "id": "ot_002",
+    "baslik": "Fen Bilgisi 2. Yazılı",
+    "ders": "Fen Bilgisi",
+    "sinif": 8,
+    "tarih": "2026-04-30",
+    "saat": "10:00",
+    "tur": "yazili",
+    "sure_dk": 40,
+    "konu": "Basınç ve Kaldırma Kuvveti"
+  },
+  {
+    "id": "ot_003",
+    "baslik": "Türkçe 2. Yazılı",
+    "ders": "Türkçe",
+    "sinif": 8,
+    "tarih": "2026-05-02",
+    "saat": "09:00",
+    "tur": "yazili",
+    "sure_dk": 40,
+    "konu": "Cümle Türleri ve Anlam"
+  },
+  {
+    "id": "ot_004",
+    "baslik": "İngilizce Quiz",
+    "ders": "��ngilizce",
+    "sinif": 8,
+    "tarih": "2026-05-05",
+    "saat": "11:00",
+    "tur": "quiz",
+    "sure_dk": 20,
+    "konu": "Unit 7 - Passive Voice"
+  },
+  {
+    "id": "ot_005",
+    "baslik": "Sosyal Bilgiler 2. Yazılı",
+    "ders": "Sosyal Bilgiler",
+    "sinif": 8,
+    "tarih": "2026-05-07",
+    "saat": "09:00",
+    "tur": "yazili",
+    "sure_dk": 40,
+    "konu": "Atatürk İlkeleri"
+  },
+  {
+    "id": "ot_006",
+    "baslik": "Matematik 2. Yazılı",
+    "ders": "Matematik",
+    "sinif": 5,
+    "tarih": "2026-04-29",
+    "saat": "09:00",
+    "tur": "yazili",
+    "sure_dk": 40,
+    "konu": "Kesirler ve Ondalık Gösterim"
+  },
+  {
+    "id": "ot_007",
+    "baslik": "Fizik 2. Yazılı",
+    "ders": "Fizik",
+    "sinif": 10,
+    "tarih": "2026-04-28",
+    "saat": "10:00",
+    "tur": "yazili",
+    "sure_dk": 40,
+    "konu": "Basit Harmonik Hareket"
+  }
+]

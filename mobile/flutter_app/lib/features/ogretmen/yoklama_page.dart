@@ -6,7 +6,7 @@ import '../../core/api/ogretmen_api.dart';
 import '../../core/theme/app_theme.dart';
 
 
-/// Öğretmen Yoklama sayfası — sınıf seç, gün + ders + saat gir, hızlı işaretle.
+/// Öğretmen Yoklama — toplu işlem + swipe + QR entegrasyon.
 class YoklamaPage extends ConsumerStatefulWidget {
   const YoklamaPage({super.key});
 
@@ -21,7 +21,7 @@ class _YoklamaPageState extends ConsumerState<YoklamaPage> {
   int _dersSaati = 1;
   DateTime _tarih = DateTime.now();
   List<Map<String, dynamic>> _ogrenciler = [];
-  final Map<String, String> _durum = {};  // student_id -> devam/devamsiz/gec vs
+  final Map<String, String> _durum = {};
   bool _yukleniyor = false;
   bool _kaydediyor = false;
 
@@ -42,7 +42,6 @@ class _YoklamaPageState extends ConsumerState<YoklamaPage> {
     try {
       final r = await ref.read(ogretmenApiProvider).sinifOgrencileri(_sinif!, _sube!);
       final list = List<Map<String, dynamic>>.from(r['ogrenciler'] as List);
-      // Default: hepsi devam
       final m = <String, String>{};
       for (var o in list) {
         m[o['id'] as String] = 'devam';
@@ -77,7 +76,8 @@ class _YoklamaPageState extends ConsumerState<YoklamaPage> {
       );
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('✓ Yoklama kaydedildi'), backgroundColor: AppColors.success),
+        const SnackBar(content: Text('Yoklama kaydedildi'),
+            backgroundColor: AppColors.success),
       );
     } catch (e) {
       if (!mounted) return;
@@ -87,6 +87,15 @@ class _YoklamaPageState extends ConsumerState<YoklamaPage> {
     } finally {
       if (mounted) setState(() => _kaydediyor = false);
     }
+  }
+
+  // Toplu islem
+  void _topluIslem(String yeniDurum) {
+    setState(() {
+      for (var o in _ogrenciler) {
+        _durum[o['id'] as String] = yeniDurum;
+      }
+    });
   }
 
   @override
@@ -100,6 +109,7 @@ class _YoklamaPageState extends ConsumerState<YoklamaPage> {
     final devam = _durum.values.where((v) => v == 'devam').length;
     final devamsiz = _durum.values.where((v) => v == 'devamsiz').length;
     final gec = _durum.values.where((v) => v == 'gec').length;
+    final izinli = _durum.values.where((v) => v == 'izinli').length;
 
     return Scaffold(
       appBar: AppBar(
@@ -185,20 +195,57 @@ class _YoklamaPageState extends ConsumerState<YoklamaPage> {
             ),
           ),
 
+          // Toplu islem bar
+          if (_ogrenciler.isNotEmpty)
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+              color: AppColors.primary.withOpacity(0.05),
+              child: Row(
+                children: [
+                  const Text('Toplu:', style: TextStyle(fontSize: 12,
+                      fontWeight: FontWeight.w600)),
+                  const SizedBox(width: 6),
+                  _TopluBtn(
+                    label: 'Hepsi Devam',
+                    color: AppColors.success,
+                    icon: Icons.check_circle,
+                    onTap: () => _topluIslem('devam'),
+                  ),
+                  const SizedBox(width: 6),
+                  _TopluBtn(
+                    label: 'Hepsi Yok',
+                    color: AppColors.danger,
+                    icon: Icons.cancel,
+                    onTap: () => _topluIslem('devamsiz'),
+                  ),
+                  const SizedBox(width: 6),
+                  _TopluBtn(
+                    label: 'Sıfırla',
+                    color: AppColors.info,
+                    icon: Icons.restart_alt,
+                    onTap: () => _topluIslem('devam'),
+                  ),
+                ],
+              ),
+            ),
+
           // Ozet bar
           Container(
             color: AppColors.primary.withOpacity(0.08),
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: Row(
               children: [
-                _OzetSay('✓ Devam', '$devam', AppColors.success),
-                const SizedBox(width: 12),
-                _OzetSay('✗ Devamsız', '$devamsiz', AppColors.danger),
-                const SizedBox(width: 12),
-                _OzetSay('⏰ Geç', '$gec', AppColors.warning),
+                _OzetSay('Devam', '$devam', AppColors.success),
+                const SizedBox(width: 8),
+                _OzetSay('Yok', '$devamsiz', AppColors.danger),
+                const SizedBox(width: 8),
+                _OzetSay('Geç', '$gec', AppColors.warning),
+                const SizedBox(width: 8),
+                _OzetSay('İzinli', '$izinli', AppColors.info),
                 const Spacer(),
-                Text('Toplam: ${_ogrenciler.length}',
-                    style: const TextStyle(fontSize: 12, color: AppColors.textSecondaryDark)),
+                Text('${_ogrenciler.length}',
+                    style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold,
+                        color: AppColors.textSecondaryDark)),
               ],
             ),
           ),
@@ -212,15 +259,91 @@ class _YoklamaPageState extends ConsumerState<YoklamaPage> {
                         itemCount: _ogrenciler.length,
                         itemBuilder: (_, i) {
                           final o = _ogrenciler[i];
-                          return _OgrenciSatir(
-                            ogrenci: o,
-                            durum: _durum[o['id']] ?? 'devam',
-                            onChange: (v) => setState(() => _durum[o['id'] as String] = v),
+                          final id = o['id'] as String;
+                          return Dismissible(
+                            key: ValueKey(id),
+                            background: Container(
+                              color: AppColors.danger.withOpacity(0.2),
+                              alignment: Alignment.centerLeft,
+                              padding: const EdgeInsets.only(left: 20),
+                              child: const Row(
+                                children: [
+                                  Icon(Icons.close, color: AppColors.danger),
+                                  SizedBox(width: 8),
+                                  Text('Devamsız', style: TextStyle(
+                                      color: AppColors.danger,
+                                      fontWeight: FontWeight.bold)),
+                                ],
+                              ),
+                            ),
+                            secondaryBackground: Container(
+                              color: AppColors.warning.withOpacity(0.2),
+                              alignment: Alignment.centerRight,
+                              padding: const EdgeInsets.only(right: 20),
+                              child: const Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Text('Geç', style: TextStyle(
+                                      color: AppColors.warning,
+                                      fontWeight: FontWeight.bold)),
+                                  SizedBox(width: 8),
+                                  Icon(Icons.access_time, color: AppColors.warning),
+                                ],
+                              ),
+                            ),
+                            confirmDismiss: (dir) async {
+                              if (dir == DismissDirection.startToEnd) {
+                                setState(() => _durum[id] = 'devamsiz');
+                              } else {
+                                setState(() => _durum[id] = 'gec');
+                              }
+                              return false; // Don't actually dismiss
+                            },
+                            child: _OgrenciSatir(
+                              ogrenci: o,
+                              durum: _durum[id] ?? 'devam',
+                              onChange: (v) => setState(() => _durum[id] = v),
+                            ),
                           );
                         },
                       ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+
+class _TopluBtn extends StatelessWidget {
+  final String label;
+  final Color color;
+  final IconData icon;
+  final VoidCallback onTap;
+  const _TopluBtn({required this.label, required this.color,
+                   required this.icon, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(6),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+        decoration: BoxDecoration(
+          color: color.withOpacity(0.12),
+          borderRadius: BorderRadius.circular(6),
+          border: Border.all(color: color.withOpacity(0.3)),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, size: 14, color: color),
+            const SizedBox(width: 4),
+            Text(label, style: TextStyle(fontSize: 11, color: color,
+                fontWeight: FontWeight.w600)),
+          ],
+        ),
       ),
     );
   }
@@ -236,13 +359,13 @@ class _OzetSay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
         color: color.withOpacity(0.15),
         borderRadius: BorderRadius.circular(6),
       ),
       child: Text('$label: $value',
-          style: TextStyle(color: color, fontSize: 12, fontWeight: FontWeight.bold)),
+          style: TextStyle(color: color, fontSize: 11, fontWeight: FontWeight.bold)),
     );
   }
 }
@@ -307,6 +430,8 @@ class _OgrenciSatir extends StatelessWidget {
             },
             borderRadius: BorderRadius.circular(8),
             constraints: const BoxConstraints(minWidth: 36, minHeight: 32),
+            selectedColor: Colors.white,
+            fillColor: c,
             children: const [
               Icon(Icons.check, size: 18),
               Icon(Icons.close, size: 18),

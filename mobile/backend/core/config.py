@@ -26,8 +26,8 @@ class Settings(BaseSettings):
     # JWT
     JWT_SECRET_KEY: str = "change-me-in-production-32-char-random-string"
     JWT_ALGORITHM: str = "HS256"
-    ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
-    REFRESH_TOKEN_EXPIRE_DAYS: int = 7
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440   # 24 saat — modül içinde tekrar şifre sormasın
+    REFRESH_TOKEN_EXPIRE_DAYS: int = 30      # 30 gün
 
     # Veri yolu (Streamlit ile AYNI)
     DATA_DIR: Path = Path(__file__).resolve().parent.parent.parent.parent / "data"

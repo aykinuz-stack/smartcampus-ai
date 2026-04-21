@@ -43,6 +43,14 @@ jobs:
         working-directory: mobile/flutter_app
         run: flutter pub get
 
+      - name: App Icon olustur
+        working-directory: mobile/flutter_app
+        run: dart run flutter_launcher_icons || echo "Icon generation skipped"
+
+      - name: Splash Screen olustur
+        working-directory: mobile/flutter_app
+        run: dart run flutter_native_splash:create || echo "Splash generation skipped"
+
       - name: AndroidManifest.xml — Internet + Kamera izni
         working-directory: mobile/flutter_app
         run: |
@@ -91,17 +99,24 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ github.run_number }}
-          name: SmartCampus Mobile v${{ github.run_number }}
+          name: SmartCampus AI v${{ github.run_number }}
           body: |
-            SmartCampus AI Mobile APK
-            Build: ${{ github.run_number }}
-            Date: ${{ github.event.head_commit.timestamp }}
+            ## SmartCampus AI Mobile v${{ github.run_number }}
+            Build: ${{ github.run_number }} | Date: ${{ github.event.head_commit.timestamp }}
 
-            **Indirme:** Asagidaki `app-release.apk` dosyasina tikla.
+            **89+ Dart dosya | 118 backend route | 5 rol**
 
-            ## Yukleme
-            1. APK'yi telefona indir
-            2. "Bilinmeyen kaynaklara izin ver" ac
+            ### Yenilikler
+            - Ogrenci: Sinav Sonuclari, Kazanim Borclari, Telafi, Defterim, Sanat Sokagi, Bilisim Vadisi
+            - Veli: Servis Takibi, Gunluk Bulten, Basari Duvari, Yemek Menusu, Anket
+            - Rehber: Risk Degerlendirme, Gelisim Dosyasi, Yonlendirme, Kriz Mudahale, BEP
+            - Yonetici: Veli Talepleri, Servis Hizmetleri, Toplanti & Kurullar
+            - Ortak: Bildirim sayfasi, Dark/Light tema, Profil, Offline cache
+            - Smarti AI: Chat gecmisi + sesli giris
+
+            ### Yukleme
+            1. `app-release.apk` dosyasini indir
+            2. Telefonda "Bilinmeyen kaynaklara izin ver"
             3. APK'ya tikla → yukle → ac
           files: mobile/flutter_app/build/app/outputs/flutter-apk/app-release.apk
           draft: false

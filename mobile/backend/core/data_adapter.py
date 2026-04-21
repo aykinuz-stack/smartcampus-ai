@@ -138,6 +138,14 @@ class DataPaths:
     DVR_PROTOCOL = "davranissal_risk/protocols.json"
     DVR_AUDIT = "davranissal_risk/audit_log.json"
 
+    # Olcme / Sinav
+    OLCME_TAKVIM = "akademik/olcme_takvim.json"
+    EXAMS = "olcme/exams.json"
+    SCHEDULE = "akademik/schedule.json"
+
+    # Bildirimler
+    BILDIRIMLER = "akademik/bildirimler.json"
+
     # Kurum
     POZISYONLAR = "kurumsal/pozisyonlar.json"
     DUYURULAR = "akademik/etkinlik_duyurular.json"

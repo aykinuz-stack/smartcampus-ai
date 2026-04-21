@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import 'core/auth/auth_service.dart';
 import 'core/theme/app_theme.dart';
+import 'core/theme/theme_provider.dart';
 import 'features/auth/login_page.dart';
 import 'features/ogrenci/mood_checkin_page.dart';
 import 'features/ogrenci/ogrenci_home.dart';
@@ -23,14 +24,29 @@ import 'features/ogrenci/dijital_kutuphane_page.dart';
 import 'features/shared/bilgi_yarismasi_koleksiyon_page.dart';
 import 'features/shared/matematik_koyu_page.dart';
 import 'features/shared/gunluk_isler_page.dart';
+import 'features/shared/bildirim_page.dart';
 import 'features/ogrenci/gunun_bilgisi_page.dart';
 import 'features/ogrenci/zeka_oyunlari_page.dart';
 import 'features/ogrenci/kdg_premium_page.dart';
+import 'features/ogrenci/sinav_sonuclari_page.dart';
+import 'features/ogrenci/kazanim_borclari_page.dart';
+import 'features/ogrenci/telafi_page.dart';
+import 'features/ogrenci/defterim_page.dart';
+import 'features/ogrenci/sanat_sokagi_page.dart';
+import 'features/ogrenci/bilisim_vadisi_page.dart';
+import 'features/shared/profil_page.dart';
 import 'features/veli/veli_home.dart';
 import 'features/veli/kapsul_page.dart';
 import 'features/veli/randevu_page.dart';
 import 'features/veli/belge_page.dart';
 import 'features/veli/geri_bildirim_page.dart';
+import 'features/veli/servis_takip_page.dart';
+import 'features/veli/gunluk_bulten_page.dart';
+import 'features/veli/basari_duvari_page.dart';
+import 'features/veli/yemek_menusu_page.dart';
+import 'features/veli/anket_page.dart';
+import 'features/veli/saglik_rehberlik_page.dart';
+import 'features/veli/veli_egitim_page.dart';
 import 'features/veli/cocuk_detay_page.dart';
 import 'features/ogretmen/ogretmen_home.dart';
 import 'features/ogretmen/yoklama_page.dart';
@@ -45,6 +61,13 @@ import 'features/rehber/gorusme_page.dart';
 import 'features/rehber/aile_form_page.dart';
 import 'features/rehber/mood_panel_page.dart';
 import 'features/rehber/ihbar_inceleme_page.dart';
+import 'features/rehber/risk_degerlendirme_page.dart';
+import 'features/rehber/gelisim_dosyasi_page.dart';
+import 'features/rehber/yonlendirme_page.dart';
+import 'features/rehber/kriz_mudahale_page.dart';
+import 'features/rehber/kariyer_rehberligi_page.dart';
+import 'features/rehber/sosyo_duygusal_page.dart';
+import 'features/rehber/bep_page.dart';
 import 'features/yonetici/yonetici_home.dart';
 import 'features/yonetici/erken_uyari_page.dart';
 import 'features/yonetici/onaylar_page.dart';
@@ -63,6 +86,9 @@ import 'features/yonetici/destek_hizmetleri_page.dart';
 import 'features/yonetici/revir_page.dart';
 import 'features/yonetici/kutuphane_page.dart';
 import 'features/yonetici/sosyal_etkinlik_page.dart';
+import 'features/yonetici/veli_talepleri_page.dart';
+import 'features/yonetici/servis_hizmetleri_page.dart';
+import 'features/yonetici/toplanti_kurullar_page.dart';
 
 
 class SmartCampusApp extends ConsumerWidget {
@@ -70,12 +96,13 @@ class SmartCampusApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final themeMode = ref.watch(themeModeProvider);
     final router = _createRouter(ref);
     return MaterialApp.router(
       title: 'SmartCampus AI',
       theme: AppTheme.light(),
       darkTheme: AppTheme.dark(),
-      themeMode: ThemeMode.system,
+      themeMode: themeMode,
       debugShowCheckedModeBanner: false,
       routerConfig: router,
     );
@@ -93,6 +120,10 @@ class SmartCampusApp extends ConsumerWidget {
           path: '/login',
           builder: (_, __) => const LoginPage(),
         ),
+        // ORTAK
+        GoRoute(path: '/bildirimler', builder: (_, __) => const BildirimPage()),
+        GoRoute(path: '/ayarlar', builder: (_, __) => const _AyarlarPage()),
+        // OGRENCI
         GoRoute(
           path: '/ogrenci',
           builder: (_, __) => const OgrenciHomePage(),
@@ -113,12 +144,12 @@ class SmartCampusApp extends ConsumerWidget {
           path: '/attendance',
           builder: (_, __) => const DevamsizlikPage(),
         ),
-        GoRoute(path: '/ogrenci/sinav-sonuclari', builder: (_, __) => const _PlaceholderPage(title: 'Sınav Sonuçlarım')),
-        GoRoute(path: '/ogrenci/kazanim-borclari', builder: (_, __) => const _PlaceholderPage(title: 'Kazanım Borçlarım')),
-        GoRoute(path: '/ogrenci/telafi', builder: (_, __) => const _PlaceholderPage(title: 'Telafi Görevleri')),
-        GoRoute(path: '/ogrenci/defterim', builder: (_, __) => const _PlaceholderPage(title: 'Öğrenci Defterim')),
-        GoRoute(path: '/ogrenci/sanat-sokagi', builder: (_, __) => const _PlaceholderPage(title: 'Sanat Sokağı')),
-        GoRoute(path: '/ogrenci/bilisim-vadisi', builder: (_, __) => const _PlaceholderPage(title: 'Bilişim Vadisi')),
+        GoRoute(path: '/ogrenci/sinav-sonuclari', builder: (_, __) => const SinavSonuclariPage()),
+        GoRoute(path: '/ogrenci/kazanim-borclari', builder: (_, __) => const KazanimBorclariPage()),
+        GoRoute(path: '/ogrenci/telafi', builder: (_, __) => const TelafiPage()),
+        GoRoute(path: '/ogrenci/defterim', builder: (_, __) => const DefterimPage()),
+        GoRoute(path: '/ogrenci/sanat-sokagi', builder: (_, __) => const SanatSokagiPage()),
+        GoRoute(path: '/ogrenci/bilisim-vadisi', builder: (_, __) => const BilisimVadisiPage()),
         GoRoute(
           path: '/messages',
           builder: (_, __) => const MesajPage(),
@@ -146,7 +177,7 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/kdg-premium', builder: (_, __) => const KdgPremiumPage()),
         GoRoute(
           path: '/profile',
-          builder: (_, __) => const _PlaceholderPage(title: 'Profilim'),
+          builder: (_, __) => const ProfilPage(),
         ),
         // VELI rotaları
         GoRoute(path: '/veli', builder: (_, __) => const VeliHomePage()),
@@ -154,13 +185,13 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/veli/randevu', builder: (_, __) => const RandevuPage()),
         GoRoute(path: '/veli/belge', builder: (_, __) => const BelgePage()),
         GoRoute(path: '/veli/geri-bildirim', builder: (_, __) => const GeriBildirimPage()),
-        GoRoute(path: '/veli/servis', builder: (_, __) => const _PlaceholderPage(title: 'Servis Takibi')),
-        GoRoute(path: '/veli/yemek-menusu', builder: (_, __) => const _PlaceholderPage(title: 'Yemek Menüsü')),
-        GoRoute(path: '/veli/anket', builder: (_, __) => const _PlaceholderPage(title: 'Memnuniyet Anketi')),
-        GoRoute(path: '/veli/basari-duvari', builder: (_, __) => const _PlaceholderPage(title: 'Başarı Duvarı')),
-        GoRoute(path: '/veli/saglik-rehberlik', builder: (_, __) => const _PlaceholderPage(title: 'Sağlık & Rehberlik')),
-        GoRoute(path: '/veli/veli-egitim', builder: (_, __) => const _PlaceholderPage(title: 'Veli Eğitim')),
-        GoRoute(path: '/veli/bulten', builder: (_, __) => const _PlaceholderPage(title: 'Günlük Bülten')),
+        GoRoute(path: '/veli/servis', builder: (_, __) => const ServisTakipPage()),
+        GoRoute(path: '/veli/yemek-menusu', builder: (_, __) => const YemekMenusuPage()),
+        GoRoute(path: '/veli/anket', builder: (_, __) => const AnketPage()),
+        GoRoute(path: '/veli/basari-duvari', builder: (_, __) => const BasariDuvariPage()),
+        GoRoute(path: '/veli/saglik-rehberlik', builder: (_, __) => const SaglikRehberlikPage()),
+        GoRoute(path: '/veli/veli-egitim', builder: (_, __) => const VeliEgitimPage()),
+        GoRoute(path: '/veli/bulten', builder: (_, __) => const GunlukBultenPage()),
         GoRoute(
           path: '/veli/cocuk-detay',
           builder: (ctx, state) {
@@ -186,13 +217,13 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/rehber/aile-form', builder: (_, __) => const AileFormPage()),
         GoRoute(path: '/rehber/mood', builder: (_, __) => const MoodPanelPage()),
         GoRoute(path: '/rehber/ihbar', builder: (_, __) => const IhbarIncelemePage()),
-        GoRoute(path: '/rehber/yonlendirme', builder: (_, __) => const _PlaceholderPage(title: 'Yönlendirme (Sevk)')),
-        GoRoute(path: '/rehber/kriz', builder: (_, __) => const _PlaceholderPage(title: 'Kriz Müdahale')),
-        GoRoute(path: '/rehber/risk', builder: (_, __) => const _PlaceholderPage(title: 'Risk Değerlendirme')),
-        GoRoute(path: '/rehber/gelisim-dosyasi', builder: (_, __) => const _PlaceholderPage(title: 'Gelişim Dosyası')),
-        GoRoute(path: '/rehber/kariyer', builder: (_, __) => const _PlaceholderPage(title: 'Kariyer Rehberliği')),
-        GoRoute(path: '/rehber/sosyo-duygusal', builder: (_, __) => const _PlaceholderPage(title: 'Sosyo-Duygusal Takip')),
-        GoRoute(path: '/rehber/bep', builder: (_, __) => const _PlaceholderPage(title: 'BEP - Özel Eğitim Planı')),
+        GoRoute(path: '/rehber/yonlendirme', builder: (_, __) => const YonlendirmePage()),
+        GoRoute(path: '/rehber/kriz', builder: (_, __) => const KrizMudahalePage()),
+        GoRoute(path: '/rehber/risk', builder: (_, __) => const RiskDegerlendirmePage()),
+        GoRoute(path: '/rehber/gelisim-dosyasi', builder: (_, __) => const GelisimDosyasiPage()),
+        GoRoute(path: '/rehber/kariyer', builder: (_, __) => const KariyerRehberligiPage()),
+        GoRoute(path: '/rehber/sosyo-duygusal', builder: (_, __) => const SosyoDuygusalPage()),
+        GoRoute(path: '/rehber/bep', builder: (_, __) => const BepPage()),
         // YONETICI rotaları
         GoRoute(path: '/yonetici', builder: (_, __) => const YoneticiHomePage()),
         GoRoute(path: '/yonetici/erken-uyari', builder: (_, __) => const ErkenUyariPage()),
@@ -212,9 +243,9 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/yonetici/revir', builder: (_, __) => const RevirPage()),
         GoRoute(path: '/yonetici/kutuphane', builder: (_, __) => const KutuphanePage()),
         GoRoute(path: '/yonetici/sosyal-etkinlik', builder: (_, __) => const SosyalEtkinlikPage()),
-        GoRoute(path: '/yonetici/toplanti-kurullar', builder: (_, __) => const _PlaceholderPage(title: 'Toplantı & Kurullar')),
-        GoRoute(path: '/yonetici/servis-hizmetleri', builder: (_, __) => const _PlaceholderPage(title: 'Servis Hizmetleri')),
-        GoRoute(path: '/yonetici/veli-talepleri', builder: (_, __) => const _PlaceholderPage(title: 'Veli Talepleri')),
+        GoRoute(path: '/yonetici/toplanti-kurullar', builder: (_, __) => const ToplantiKurullarPage()),
+        GoRoute(path: '/yonetici/servis-hizmetleri', builder: (_, __) => const ServisHizmetleriPage()),
+        GoRoute(path: '/yonetici/veli-talepleri', builder: (_, __) => const VeliTalepleriPage()),
         // Fallback
         GoRoute(path: '/home', builder: (_, __) => const _PlaceholderPage(title: 'Ana Sayfa')),
       ],
@@ -306,7 +337,7 @@ class _SplashPageState extends ConsumerState<_SplashPage> {
                         style: TextStyle(color: Colors.white, fontSize: 26,
                             fontWeight: FontWeight.bold, letterSpacing: 1.2)),
                     SizedBox(height: 6),
-                    Text('Eğitimin Geleceği',
+                    Text('Egitimin Gelecegi',
                         style: TextStyle(color: AppColors.gold, fontSize: 13,
                             fontStyle: FontStyle.italic)),
                   ]),
@@ -316,13 +347,114 @@ class _SplashPageState extends ConsumerState<_SplashPage> {
               const SizedBox(width: 28, height: 28,
                   child: CircularProgressIndicator(strokeWidth: 2.5, color: AppColors.gold)),
               const SizedBox(height: 12),
-              Text('Yükleniyor...', style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 12)),
+              Text('Yukleniyor...', style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 12)),
               const SizedBox(height: 60),
-              Text('v21 · 55+ sayfa · 5 rol',
+              Text('v24 · 98 sayfa · 5 rol',
                   style: TextStyle(color: Colors.white.withOpacity(0.3), fontSize: 10)),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+
+/// Ayarlar Sayfası — tema toggle + profil
+class _AyarlarPage extends ConsumerWidget {
+  const _AyarlarPage();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final themeMode = ref.watch(themeModeProvider);
+
+    String temaAdi;
+    IconData temaIcon;
+    switch (themeMode) {
+      case ThemeMode.light:
+        temaAdi = 'Aydınlık';
+        temaIcon = Icons.light_mode;
+        break;
+      case ThemeMode.dark:
+        temaAdi = 'Karanlık';
+        temaIcon = Icons.dark_mode;
+        break;
+      case ThemeMode.system:
+        temaAdi = 'Sistem';
+        temaIcon = Icons.brightness_auto;
+        break;
+    }
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Ayarlar')),
+      body: ListView(
+        children: [
+          // Tema
+          ListTile(
+            leading: Icon(temaIcon, color: AppColors.primary),
+            title: const Text('Tema'),
+            subtitle: Text(temaAdi),
+            trailing: SegmentedButton<ThemeMode>(
+              segments: const [
+                ButtonSegment(value: ThemeMode.light,
+                    icon: Icon(Icons.light_mode, size: 18)),
+                ButtonSegment(value: ThemeMode.system,
+                    icon: Icon(Icons.brightness_auto, size: 18)),
+                ButtonSegment(value: ThemeMode.dark,
+                    icon: Icon(Icons.dark_mode, size: 18)),
+              ],
+              selected: {themeMode},
+              onSelectionChanged: (s) =>
+                  ref.read(themeModeProvider.notifier).setTheme(s.first),
+            ),
+          ),
+          const Divider(),
+          // Bildirimler
+          ListTile(
+            leading: const Icon(Icons.notifications, color: AppColors.gold),
+            title: const Text('Bildirimler'),
+            subtitle: const Text('Push bildirim ayarları'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () {},
+          ),
+          const Divider(),
+          // Uygulama hakkında
+          ListTile(
+            leading: const Icon(Icons.info_outline, color: AppColors.info),
+            title: const Text('Hakkında'),
+            subtitle: const Text('SmartCampus AI v22'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () {
+              showAboutDialog(
+                context: context,
+                applicationName: 'SmartCampus AI',
+                applicationVersion: 'v22',
+                applicationLegalese: '2026 SmartCampus',
+                applicationIcon: Container(
+                  width: 48, height: 48,
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [AppColors.primary, AppColors.gold]),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: const Icon(Icons.school, color: Colors.white, size: 28),
+                ),
+              );
+            },
+          ),
+          const Divider(),
+          // Cikis
+          ListTile(
+            leading: const Icon(Icons.logout, color: AppColors.danger),
+            title: const Text('Çıkış Yap'),
+            onTap: () async {
+              await ref.read(authServiceProvider).logout();
+              if (context.mounted) {
+                GoRouter.of(context).go('/login');
+              }
+            },
+          ),
+        ],
       ),
     );
   }
@@ -346,7 +478,7 @@ class _PlaceholderPage extends StatelessWidget {
             SizedBox(height: 16),
             Text('Yakında aktif olacak', style: TextStyle(fontSize: 16)),
             SizedBox(height: 8),
-            Text('Sprint takvimi için MIMARI.md\'ye bak',
+            Text('Sprint takvimi icin MIMARI.md\'ye bak',
                 style: TextStyle(fontSize: 12, color: AppColors.textSecondaryDark)),
           ],
         ),

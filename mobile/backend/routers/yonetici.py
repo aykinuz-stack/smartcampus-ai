@@ -1106,3 +1106,36 @@ async def randevular(
         "bekleyen": [_item(r) for r in bekleyen[:20]],
         "toplam": len(randevular),
     }
+
+
+# ══════════════════════════════════════════════════════════════
+# YENI SAYFALAR ICIN ENDPOINT'LER
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/veli-talepleri")
+async def yonetici_veli_talepleri(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Veli talepleri — izin, belge, randevu, sikayet."""
+    talepler = adapter.load("akademik/veli_belge_talepleri.json") or []
+    return {"talepler": talepler}
+
+
+@router.get("/servis-bilgileri")
+async def yonetici_servis_bilgileri(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Okul servis bilgileri."""
+    data = adapter.load("akademik/servis_bilgileri.json") or []
+    return {"servisler": data}
+
+
+@router.get("/toplantilar")
+async def yonetici_toplantilar(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Toplanti ve kurul listesi."""
+    return {"toplantilar": []}

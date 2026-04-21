@@ -48,6 +48,10 @@ class _YoneticiHomePageState extends ConsumerState<YoneticiHomePage> {
       appBar: AppBar(
         title: Text('Yönetim · ${user.adSoyad.split(' ').first}'),
         actions: [
+          IconButton(icon: const Icon(Icons.notifications_outlined),
+              onPressed: () => context.push('/bildirimler')),
+          IconButton(icon: const Icon(Icons.settings_outlined),
+              onPressed: () => context.push('/ayarlar')),
           IconButton(icon: const Icon(Icons.refresh), onPressed: _load),
           IconButton(
             icon: const Icon(Icons.logout),

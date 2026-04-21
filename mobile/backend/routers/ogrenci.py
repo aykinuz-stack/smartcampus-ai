@@ -254,7 +254,7 @@ async def teslim_et(
     if not sid:
         raise HTTPException(400, "student_id yok")
 
-    # Odev var mi
+    # Ödev var mı
     odevler = adapter.load(DataPaths.HOMEWORK) or []
     odev = next((o for o in odevler if o.get("id") == req.odev_id), None)
     if not odev:
@@ -296,3 +296,295 @@ async def teslim_et(
     }
     adapter.append(DataPaths.HOMEWORK_SUBMISSIONS, yeni)
     return {"id": yeni["id"], "created": True}
+
+
+# ══════════════════════════════════════════════════════════════
+# YAKLASAN SINAVLAR
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/yaklasan-sinavlar")
+async def get_yaklasan_sinavlar(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+    student_id: str | None = None,
+):
+    """Öğrencinin sınıfı için yaklaşan sınav/yazılı takvimi."""
+    sid = _target_student_id(user, student_id)
+    students = adapter.load(DataPaths.STUDENTS) or []
+    student = next((s for s in students if s.get("id") == sid), None)
+    sinif = int(student.get("sinif", 0)) if student else 0
+
+    today = date.today().isoformat()
+
+    # 1) olcme_takvim.json
+    takvim = adapter.load(DataPaths.OLCME_TAKVIM) or []
+    yaklasan = [
+        t for t in takvim
+        if t.get("tarih", "") >= today
+        and (not sinif or int(t.get("sinif", 0)) == sinif)
+    ]
+
+    # 2) olcme/exams.json (status=scheduled)
+    exams = adapter.load(DataPaths.EXAMS) or []
+    for e in exams:
+        if e.get("status") in ("scheduled", "active"):
+            e_sinif = int(e.get("sinif", 0))
+            e_tarih = e.get("exam_date") or e.get("created_at", "")
+            if e_tarih >= today and (not sinif or e_sinif == sinif):
+                yaklasan.append({
+                    "id": e.get("id"),
+                    "ders": e.get("ders", ""),
+                    "sinif": e_sinif,
+                    "tarih": e_tarih,
+                    "tur": e.get("type", "yazili"),
+                    "baslik": e.get("name", ""),
+                    "sure_dk": e.get("duration_minutes", 40),
+                })
+
+    yaklasan.sort(key=lambda x: x.get("tarih", ""))
+    return {"sinavlar": yaklasan[:20]}
+
+
+# ══════════════════════════════════════════════════════════════
+# DASHBOARD (tek cagri ile tum KPI)
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/dashboard")
+async def get_dashboard(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+    student_id: str | None = None,
+):
+    """Tek çağrıda tüm home KPI'ları — ağ trafiğini azaltır."""
+    sid = _target_student_id(user, student_id)
+    students = adapter.load(DataPaths.STUDENTS) or []
+    student = next((s for s in students if s.get("id") == sid), None)
+    sinif = int(student.get("sinif", 0)) if student else 0
+    sube = student.get("sube", "") if student else ""
+
+    today = date.today().isoformat()
+
+    # Notlar
+    all_grades = adapter.load(DataPaths.GRADES) or []
+    my_grades = [g for g in all_grades if g.get("student_id") == sid]
+    my_grades.sort(key=lambda g: g.get("tarih", ""), reverse=True)
+    puanlar = [float(g.get("puan", 0) or 0) for g in my_grades]
+    genel_ort = round(sum(puanlar) / len(puanlar), 1) if puanlar else 0.0
+
+    # Devamsızlık
+    all_att = adapter.load(DataPaths.ATTENDANCE) or []
+    my_att = [a for a in all_att if a.get("student_id") == sid]
+    ozursuz = sum(1 for a in my_att if a.get("turu", "").lower() in ("devamsiz", "ozursuz"))
+
+    # Ödevler
+    all_odev = adapter.load(DataPaths.HOMEWORK) or []
+    my_odev = [o for o in all_odev
+               if str(o.get("sinif", "")) == str(sinif) and o.get("sube", "") == sube]
+    all_teslim = adapter.load(DataPaths.HOMEWORK_SUBMISSIONS) or []
+    teslim_ids = {t.get("odev_id") for t in all_teslim if t.get("student_id") == sid}
+
+    bekleyen_odevler = []
+    for o in my_odev:
+        if o.get("id") not in teslim_ids:
+            bekleyen_odevler.append({
+                "id": o.get("id"),
+                "baslik": o.get("baslik", ""),
+                "ders": o.get("ders", ""),
+                "teslim_tarihi": o.get("teslim_tarihi", ""),
+            })
+    bekleyen_odevler.sort(key=lambda x: x.get("teslim_tarihi", "9999"))
+
+    # Yaklaşan sınavlar
+    takvim = adapter.load(DataPaths.OLCME_TAKVIM) or []
+    yaklasan_sinav = [
+        t for t in takvim
+        if t.get("tarih", "") >= today
+        and (not sinif or int(t.get("sinif", 0)) == sinif)
+    ]
+    yaklasan_sinav.sort(key=lambda x: x.get("tarih", ""))
+
+    # Bugünkü ders programı
+    from calendar import day_name
+    gun_map = {0: "Pazartesi", 1: "Sali", 2: "Carsamba", 3: "Persembe", 4: "Cuma"}
+    bugun_gun = gun_map.get(date.today().weekday(), "")
+    schedule = adapter.load(DataPaths.SCHEDULE) or []
+    bugun_ders = [
+        s for s in schedule
+        if s.get("gun", "") == bugun_gun
+        and str(s.get("sinif", "")) == str(sinif)
+        and s.get("sube", "") == sube
+    ]
+    bugun_ders.sort(key=lambda x: int(x.get("saat", 0)))
+
+    return {
+        "genel_ortalama": genel_ort,
+        "son_notlar": [
+            {"ders": g.get("ders"), "puan": float(g.get("puan", 0) or 0),
+             "not_turu": g.get("not_turu"), "tarih": g.get("tarih")}
+            for g in my_grades[:10]
+        ],
+        "devamsizlik_ozursuz": ozursuz,
+        "bekleyen_odev_sayisi": len(bekleyen_odevler),
+        "bekleyen_odevler": bekleyen_odevler[:5],
+        "yaklasan_sinavlar": yaklasan_sinav[:5],
+        "bugun_ders_sayisi": len(bugun_ders),
+        "bugun_dersler": [
+            {"saat": s.get("saat"), "ders": s.get("ders"),
+             "ogretmen": s.get("ogretmen", "")}
+            for s in bugun_ders
+        ],
+    }
+
+
+# ══════════════════════════════════════════════════════════════
+# SINAV SONUCLARI
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/sinav-sonuclari")
+async def get_sinav_sonuclari(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+    student_id: str | None = None,
+):
+    """Ogrencinin sinav sonuclari — olcme modulu verisiyle."""
+    sid = _target_student_id(user, student_id)
+
+    # Olcme sessions + results
+    sessions = adapter.load("olcme/sessions.json") or []
+    results = adapter.load("olcme/results.json") or []
+    exams = adapter.load(DataPaths.EXAMS) or []
+
+    my_sessions = [s for s in sessions if s.get("student_id") == sid]
+    result_map = {r.get("session_id"): r for r in results}
+    exam_map = {e.get("id"): e for e in exams}
+
+    sonuclar = []
+    for sess in my_sessions:
+        result = result_map.get(sess.get("id"))
+        exam = exam_map.get(sess.get("exam_id"))
+        if not result or not exam:
+            continue
+        sonuclar.append({
+            "sinav_adi": exam.get("name", ""),
+            "ders": exam.get("ders", ""),
+            "sinif": exam.get("sinif"),
+            "tarih": sess.get("started_at", ""),
+            "puan": result.get("score", 0),
+            "dogru": result.get("correct_count", 0),
+            "yanlis": result.get("wrong_count", 0),
+            "bos": result.get("empty_count", 0),
+            "toplam_soru": result.get("total_questions", 0),
+            "sure_dk": result.get("duration_minutes", 0),
+        })
+
+    # Grades tablosundaki yazili sonuclari da ekle
+    all_grades = adapter.load(DataPaths.GRADES) or []
+    my_grades = [g for g in all_grades if g.get("student_id") == sid]
+    for g in my_grades:
+        if g.get("not_turu", "").lower() in ("yazili", "sinav", "deneme"):
+            sonuclar.append({
+                "sinav_adi": f"{g.get('ders', '')} {g.get('not_turu', '')}",
+                "ders": g.get("ders", ""),
+                "sinif": None,
+                "tarih": g.get("tarih", ""),
+                "puan": float(g.get("puan", 0) or 0),
+                "dogru": None,
+                "yanlis": None,
+                "bos": None,
+                "toplam_soru": None,
+                "sure_dk": None,
+            })
+
+    sonuclar.sort(key=lambda x: x.get("tarih", ""), reverse=True)
+
+    # Ders bazli ortalamalar
+    ders_map: dict[str, list[float]] = defaultdict(list)
+    for s in sonuclar:
+        if s.get("puan") is not None:
+            ders_map[s["ders"]].append(float(s["puan"]))
+    ders_ort = {d: round(sum(p) / len(p), 1) for d, p in ders_map.items()}
+
+    return {
+        "sonuclar": sonuclar[:30],
+        "toplam": len(sonuclar),
+        "ders_ortalamalari": ders_ort,
+    }
+
+
+# ══════════════════════════════════════════════════════════════
+# KAZANIM BORCLARI
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/kazanim-borclari")
+async def get_kazanim_borclari(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+    student_id: str | None = None,
+):
+    """Ogrencinin eksik kazanimlari — dusuk puanli sinavlardan."""
+    sid = _target_student_id(user, student_id)
+
+    all_grades = adapter.load(DataPaths.GRADES) or []
+    my_grades = [g for g in all_grades if g.get("student_id") == sid]
+
+    # Telafi tasklari
+    telafi = adapter.load("olcme/telafi_tasks.json") or []
+    my_telafi = [t for t in telafi if t.get("student_id") == sid]
+
+    # Kazanim borclari: puan < 70 olan dersler
+    borclar = []
+    ders_set = set()
+    for g in my_grades:
+        puan = float(g.get("puan", 0) or 0)
+        if puan < 70:
+            ders = g.get("ders", "")
+            if ders not in ders_set:
+                ders_set.add(ders)
+                borclar.append({
+                    "ders": ders,
+                    "puan": puan,
+                    "not_turu": g.get("not_turu", ""),
+                    "tarih": g.get("tarih", ""),
+                    "renk": "RED" if puan < 50 else "YELLOW",
+                    "telafi_var": any(
+                        t.get("ders") == ders for t in my_telafi
+                    ),
+                })
+
+    borclar.sort(key=lambda x: x.get("puan", 0))
+
+    return {
+        "borclar": borclar,
+        "toplam": len(borclar),
+        "kritik": sum(1 for b in borclar if b["renk"] == "RED"),
+        "uyari": sum(1 for b in borclar if b["renk"] == "YELLOW"),
+    }
+
+
+# ══════════════════════════════════════════════════════════════
+# TELAFI GOREVLERI
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/telafi-gorevleri")
+async def get_telafi_gorevleri(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+    student_id: str | None = None,
+):
+    """Ogrencinin telafi gorevleri — renk bandi bazli."""
+    sid = _target_student_id(user, student_id)
+
+    telafi = adapter.load("olcme/telafi_tasks.json") or []
+    my_telafi = [t for t in telafi if t.get("student_id") == sid]
+    my_telafi.sort(key=lambda t: t.get("created_at", ""), reverse=True)
+
+    aktif = [t for t in my_telafi if t.get("status") != "completed"]
+    tamamlanan = [t for t in my_telafi if t.get("status") == "completed"]
+
+    return {
+        "aktif": aktif,
+        "tamamlanan": tamamlanan,
+        "toplam": len(my_telafi),
+        "aktif_sayisi": len(aktif),
+        "tamamlanan_sayisi": len(tamamlanan),
+    }

@@ -517,3 +517,39 @@ async def gelisim_dosyasi(
         "riskler": riskler[-5:],
         "krizler": krizler[-3:],
     }
+
+
+# ══════════════════════════════════════════════════════════════
+# YENI SAYFALAR ICIN ENDPOINT'LER
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/bep-planlari")
+async def rehber_bep_planlari(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """BEP (Bireysellestirilmis Egitim Plani) listesi."""
+    planlar = adapter.load(DataPaths.BEP) or []
+    return {"planlar": planlar}
+
+
+@router.get("/kariyer-rehberligi")
+async def rehber_kariyer(
+    user: Annotated[dict, Depends(get_current_user)],
+):
+    """Kariyer rehberligi icerik listesi."""
+    return {"kategoriler": []}
+
+
+@router.get("/sosyo-duygusal")
+async def rehber_sosyo_duygusal(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Sosyo-duygusal takip dashboard."""
+    checkins = adapter.load(DataPaths.MOOD_CHECKINS) or []
+    students = adapter.load(DataPaths.STUDENTS) or []
+    return {
+        "ogrenciler": students[:30],
+        "mood_kayitlari": checkins[-100:],
+    }

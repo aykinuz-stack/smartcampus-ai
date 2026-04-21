@@ -72,7 +72,34 @@ dev_dependencies:
   freezed: ^2.4.6
   json_serializable: ^6.7.1
   hive_generator: ^2.0.1
+  flutter_launcher_icons: ^0.14.1
+  flutter_native_splash: ^2.4.0
+
+# ══════════════════════════════════════════════════
+# APP ICON — flutter pub run flutter_launcher_icons
+# ══════════════════════════════════════════════════
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png"
+  adaptive_icon_background: "#4F46E5"
+  adaptive_icon_foreground: "assets/icon/app_icon_fg.png"
+  min_sdk_android: 21
+
+# ══════════════════════════════════════════════════
+# SPLASH SCREEN — flutter pub run flutter_native_splash:create
+# ══════════════════════════════════════════════════
+flutter_native_splash:
+  color: "#0F172A"
+  image: "assets/icon/app_icon.png"
+  color_dark: "#020617"
+  image_dark: "assets/icon/app_icon.png"
+  android_12:
+    color: "#0F172A"
+    icon_background_color: "#4F46E5"
+    image: "assets/icon/app_icon.png"
 
 flutter:
   uses-material-design: true
-  # Inter fontu google_fonts paketi uzerinden yukleniyor (asset gerekmez)
+  assets:
+    - assets/icon/

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "bld_001",
+    "baslik": "Matematik 2. Yazılı Tarihi Belirlendi",
+    "mesaj": "8. sınıf Matematik 2. yazılı sınavı 28 Nisan Pazartesi günü yapılacaktır.",
+    "tur": "sinav",
+    "alici_rol": "ogrenci",
+    "alici_id": "",
+    "gonderen": "Sistem",
+    "tarih": "2026-04-21T09:00:00",
+    "okundu": false,
+    "ikon": "quiz"
+  },
+  {
+    "id": "bld_002",
+    "baslik": "Yeni Ödev Verildi: Fen Bilgisi",
+    "mesaj": "Fen Bilgisi dersi için 'Ekosistemler' konusunda ödev verildi. Teslim: 25 Nisan.",
+    "tur": "odev",
+    "alici_rol": "ogrenci",
+    "alici_id": "",
+    "gonderen": "Ayşe Öğretmen",
+    "tarih": "2026-04-20T14:30:00",
+    "okundu": false,
+    "ikon": "assignment"
+  },
+  {
+    "id": "bld_003",
+    "baslik": "Devamsızlık Uyarısı",
+    "mesaj": "Özürsüz devamsızlık sayınız 5 güne ulaştı. Lütfen dikkat ediniz.",
+    "tur": "uyari",
+    "alici_rol": "ogrenci",
+    "alici_id": "",
+    "gonderen": "Sistem",
+    "tarih": "2026-04-19T08:00:00",
+    "okundu": true,
+    "ikon": "warning"
+  },
+  {
+    "id": "bld_004",
+    "baslik": "Karne Notu Girildi",
+    "mesaj": "Türkçe dersi 2. dönem 1. yazılı notunuz sisteme girildi: 85",
+    "tur": "not",
+    "alici_rol": "ogrenci",
+    "alici_id": "",
+    "gonderen": "Sistem",
+    "tarih": "2026-04-18T16:00:00",
+    "okundu": true,
+    "ikon": "grade"
+  },
+  {
+    "id": "bld_005",
+    "baslik": "Veli Toplantısı Hatırlatması",
+    "mesaj": "23 Nisan Çarşamba günü saat 14:00'te veli toplantısı yapılacaktır.",
+    "tur": "duyuru",
+    "alici_rol": "hepsi",
+    "alici_id": "",
+    "gonderen": "Okul Müdürlüğü",
+    "tarih": "2026-04-21T07:30:00",
+    "okundu": false,
+    "ikon": "campaign"
+  },
+  {
+    "id": "bld_006",
+    "baslik": "Yoklama Hatırlatması",
+    "mesaj": "1. ders yoklaması henüz alınmadı. Lütfen yoklama alın.",
+    "tur": "hatirlatma",
+    "alici_rol": "ogretmen",
+    "alici_id": "",
+    "gonderen": "Sistem",
+    "tarih": "2026-04-21T09:15:00",
+    "okundu": false,
+    "ikon": "fact_check"
+  },
+  {
+    "id": "bld_007",
+    "baslik": "Onay Bekleyen Talep",
+    "mesaj": "3 yeni izin talebi onayınızı bekliyor.",
+    "tur": "onay",
+    "alici_rol": "yonetici",
+    "alici_id": "",
+    "gonderen": "Sistem",
+    "tarih": "2026-04-21T08:00:00",
+    "okundu": false,
+    "ikon": "approval"
+  },
+  {
+    "id": "bld_008",
+    "baslik": "Çocuğunuzun Notu Girildi",
+    "mesaj": "Matematik dersi sınav notu sisteme girildi.",
+    "tur": "not",
+    "alici_rol": "veli",
+    "alici_id": "",
+    "gonderen": "Sistem",
+    "tarih": "2026-04-20T17:00:00",
+    "okundu": false,
+    "ikon": "grade"
+  }
+]

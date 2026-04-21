@@ -47,7 +47,10 @@ class _OgretmenHomePageState extends ConsumerState<OgretmenHomePage> {
       appBar: AppBar(
         title: Text('Merhaba, ${user.adSoyad.split(' ').first}'),
         actions: [
-          IconButton(icon: const Icon(Icons.notifications_outlined), onPressed: () {}),
+          IconButton(icon: const Icon(Icons.notifications_outlined),
+              onPressed: () => context.push('/bildirimler')),
+          IconButton(icon: const Icon(Icons.settings_outlined),
+              onPressed: () => context.push('/ayarlar')),
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: () async {
