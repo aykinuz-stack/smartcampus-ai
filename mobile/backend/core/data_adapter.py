@@ -146,6 +146,9 @@ class DataPaths:
     # Bildirimler
     BILDIRIMLER = "akademik/bildirimler.json"
 
+    # Servis
+    SERVIS = "akademik/servis_bilgileri.json"
+
     # Kurum
     POZISYONLAR = "kurumsal/pozisyonlar.json"
     DUYURULAR = "akademik/etkinlik_duyurular.json"

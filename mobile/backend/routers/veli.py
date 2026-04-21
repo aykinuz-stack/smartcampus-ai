@@ -660,9 +660,7 @@ async def veli_servis_bilgileri(
     adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
 ):
     """Okul servis bilgileri — guzergah, sofor, saat."""
-    data = adapter.load(DataPaths.SERVIS) if hasattr(DataPaths, 'SERVIS') else []
-    if not data:
-        data = adapter.load("akademik/servis_bilgileri.json") or []
+    data = adapter.load(DataPaths.SERVIS) or []
     return {"servisler": data}
 
 
