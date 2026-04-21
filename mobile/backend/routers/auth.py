@@ -76,13 +76,20 @@ async def login(req: LoginRequest):
         raise HTTPException(status_code=401, detail="Sifre hatali")
 
     # Token payload
+    # ad_soyad: once ad_soyad, sonra name, sonra ad+soyad
+    ad_soyad = (
+        user.get("ad_soyad")
+        or user.get("name")
+        or f"{user.get('ad', '')} {user.get('soyad', '')}".strip()
+        or user.get("username", "")
+    )
     payload = {
         "sub": user.get("username"),
         "role": user.get("role", "Ogrenci").lower(),
         "tenant_id": req.tenant_id,
         "user_id": user.get("id", user.get("username")),
-        "ad_soyad": user.get("ad_soyad", f"{user.get('ad','')} {user.get('soyad','')}").strip(),
-        "student_id": user.get("student_id", ""),
+        "ad_soyad": ad_soyad,
+        "student_id": user.get("student_id") or user.get("id", ""),
         "children_ids": user.get("children_ids", []),
     }
 
