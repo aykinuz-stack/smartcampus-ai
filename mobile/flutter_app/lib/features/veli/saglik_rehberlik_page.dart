@@ -638,7 +638,7 @@ class _SaglikRehberlikPageState extends ConsumerState<SaglikRehberlikPage>
         itemColor = AppColors.primary;
         break;
       case 'stress':
-        itemIcon = Icons.sentiment_stressed;
+        itemIcon = Icons.sentiment_dissatisfied;
         itemColor = AppColors.warning;
         break;
       case 'bullying':

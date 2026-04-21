@@ -75,7 +75,7 @@ class ProfilPage extends ConsumerWidget {
               const _SectionHeader('Hesap Bilgileri'),
               _InfoTile(icon: Icons.person, label: 'Ad Soyad', value: user.adSoyad),
               _InfoTile(icon: Icons.badge, label: 'Rol', value: _rolAdi(user.role)),
-              _InfoTile(icon: Icons.fingerprint, label: 'ID', value: user.userId),
+              _InfoTile(icon: Icons.fingerprint, label: 'ID', value: user.username),
 
               const _SectionHeader('Tercihler'),
               ListTile(
