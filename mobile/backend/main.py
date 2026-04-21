@@ -740,6 +740,103 @@ async def gunluk_isler(
     }
 
 
+# ══════════════════════════════════════════════════════════════
+# QR KOD HANDLER — Kitap-Yazılım entegrasyonu
+# ══════════════════════════════════════════════════════════════
+
+@app.get(settings.API_PREFIX + "/qr-handler")
+async def qr_handler(
+    sinif: int,
+    ders: str,
+    unite: str = "",
+    konu: str = "",
+    user: dict = Depends(get_current_user),
+    adapter: DataAdapter = Depends(get_data_adapter),
+):
+    """Kitaptaki QR kod tarandığında ilgili içeriği döndürür."""
+    role = user.get("role", "").lower()
+    plans = adapter.load("olcme/annual_plans.json") or []
+
+    # Kazanım eşleştirme
+    kazanimlar = [p for p in plans if p.get("grade") == sinif and p.get("subject") == ders]
+    if unite:
+        kazanimlar = [p for p in kazanimlar if unite.lower() in p.get("unit", "").lower()]
+    if konu:
+        kazanimlar = [p for p in kazanimlar if konu.lower() in p.get("topic", "").lower()]
+
+    toplam_kazanim = sum(len(k.get("learning_outcomes", [])) for k in kazanimlar[:20])
+
+    # Soru bankasından eşleşen soru sayısı
+    sorular = adapter.load("olcme/questions.json") or []
+    soru_sayisi = sum(1 for q in sorular
+                      if q.get("sinif") == sinif
+                      and ders.lower() in (q.get("ders", "") or "").lower())
+
+    # Rol bazlı yönlendirme önerileri
+    yonlendirmeler = []
+    if role == "ogrenci":
+        yonlendirmeler = [
+            {"baslik": "Quiz Çöz", "route": "/bilgi-yarismasi-koleksiyon", "ikon": "quiz"},
+            {"baslik": "Konu Tekrarı", "route": "/notes", "ikon": "book"},
+            {"baslik": "Matematik Köyü", "route": "/matematik-koyu", "ikon": "calculate"},
+            {"baslik": "AI Treni", "route": "/ai-treni", "ikon": "train"},
+            {"baslik": "Smarti'ye Sor", "route": "/smarti", "ikon": "smart_toy"},
+        ]
+    elif role == "veli":
+        yonlendirmeler = [
+            {"baslik": "Çocuk Performansı", "route": "/veli/cocuk-detay", "ikon": "analytics"},
+            {"baslik": "Karne Görüntüle", "route": "/veli/cocuk-detay", "ikon": "school"},
+            {"baslik": "Öğretmene Mesaj", "route": "/messages", "ikon": "chat"},
+        ]
+    elif role in ("ogretmen", "yonetici"):
+        yonlendirmeler = [
+            {"baslik": "Sınav Oluştur", "route": "/ogretmen/sinav-sonuclari", "ikon": "quiz"},
+            {"baslik": "Ders Defteri", "route": "/ogretmen/ders-defteri", "ikon": "book"},
+            {"baslik": "Yoklama Al", "route": "/ogretmen/yoklama", "ikon": "how_to_reg"},
+            {"baslik": "Sınıf Analizi", "route": "/yonetici/erken-uyari", "ikon": "analytics"},
+        ]
+
+    # Telafi önerisi
+    telafi = None
+    if role == "ogrenci":
+        student_id = user.get("student_id", user.get("source_id", ""))
+        if student_id:
+            grades = adapter.load(DataPaths.GRADES) or []
+            ders_notlari = [g for g in grades
+                            if g.get("student_id") == student_id
+                            and ders.lower() in (g.get("ders", "") or "").lower()]
+            if ders_notlari:
+                avg = sum(float(g.get("puan", 0) or 0) for g in ders_notlari) / len(ders_notlari)
+                if avg < 50:
+                    telafi = {
+                        "seviye": "kritik",
+                        "ortalama": round(avg, 1),
+                        "oneri": f"Bu konuyu kitaptan tekrar oku ve quiz çöz.",
+                    }
+                elif avg < 70:
+                    telafi = {
+                        "seviye": "dikkat",
+                        "ortalama": round(avg, 1),
+                        "oneri": f"Konuyu pekiştirmek için etkinlikleri yap.",
+                    }
+
+    return {
+        "sinif": sinif,
+        "ders": ders,
+        "unite": unite,
+        "konu": konu,
+        "kazanim_sayisi": toplam_kazanim,
+        "soru_sayisi": soru_sayisi,
+        "role": role,
+        "yonlendirmeler": yonlendirmeler,
+        "telafi": telafi,
+        "kazanimlar": [
+            {"topic": k.get("topic", ""), "outcomes": k.get("learning_outcomes", [])[:3]}
+            for k in kazanimlar[:10]
+        ],
+    }
+
+
 @app.get("/")
 async def root():
     return {

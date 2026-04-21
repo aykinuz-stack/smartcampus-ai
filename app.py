@@ -112,7 +112,6 @@ _MODUL_GRUPLARI = [
         "baslik": "GENEL",
         "moduller": [
             ("Ana Sayfa",            "🏠"),
-            ("Gunluk Isler",         "📋"),
             ("Yonetim Tek Ekran",    "📊"),
         ],
     },
@@ -127,36 +126,31 @@ _MODUL_GRUPLARI = [
             ("Randevu ve Ziyaretci",           "📅"),
             ("Toplanti ve Kurullar",            "🤝"),
             ("Kurum Hizmetleri",               "🏛️"),
-            ("Veli Gunluk Kapsul",             "📦"),
         ],
     },
     {
         "baslik": "AKADEMIK",
         "moduller": [
-            ("Ogrenci 360", "📊"),
-            ("Okul Oncesi - Ilkokul", "🎨"),
-            ("Akademik Takip", "📚"),
-            ("Akademik Takvim", "📅"),
-            ("Olcme ve Degerlendirme", "📝"),
-            ("Rehberlik",      "🧠"),
-            ("Okul Sagligi Takip", "🏥"),
+            ("Ogrenci Zeka Merkezi",           "🧠"),
+            ("Okul Oncesi - Ilkokul",          "🎨"),
+            ("Akademik Takip",                 "📚"),
+            ("Olcme ve Degerlendirme",         "📝"),
+            ("Rehberlik",                      "🧠"),
+            ("Okul Sagligi Takip",             "🏥"),
             ("Sosyal Etkinlik ve Kulupler",    "🎭"),
-            ("Kutuphane",                       "📖"),
-            ("Dijital Kutuphane",               "📱"),
-            ("AI Bireysel Egitim",             "🎓"),
-            ("Yabanci Dil",                     "🌍"),
+            ("Kutuphane",                      "📖"),
+            ("AI Ogrenme Platformu",           "🎓"),
+            ("Yabanci Dil",                    "🌍"),
             ("Kisisel Dil Gelisimi",           "🎓"),
-            ("Erken Uyari Sistemi",            "🧠"),
-            ("Egitim Koclugu",                "🏅"),
-            ("AI Treni",                      "🚂"),
-            ("STEAM Merkezi",               "🔬"),
+            ("Egitim Koclugu",                 "🏅"),
+            ("AI Treni",                       "🚂"),
+            ("STEAM Merkezi",                  "🔬"),
         ],
     },
     {
         "baslik": "OPERASYON",
         "moduller": [
-            ("Tuketim ve Demirbas",           "🗄️"),
-            ("Destek Hizmetleri Takip",        "🔧"),
+            ("Tesis ve Varlik Yonetimi",       "🏗️"),
             ("Sivil Savunma ve IS Guvenligi",  "⛑️"),
             ("Mezunlar ve Kariyer Yonetimi",   "🎓"),
         ],
@@ -697,9 +691,7 @@ def render_sidebar() -> str:
         extra_moduller = []
         if role == "SuperAdmin":
             extra_moduller.append(("Kurum Yonetimi", "🏢"))
-        if role in ("Yonetici", "Ogretmen", "SuperAdmin"):
-            extra_moduller.append(("Veli Paneli Onizleme", "👁️"))
-            extra_moduller.append(("Ogrenci Paneli Onizleme", "🎒"))
+        # Veli/Ogrenci panel onizleme kaldirildi — artik kendi sifreleriyle girilecek
 
         # Tum modul listesini olustur (radio icin)
         tum_moduller = []
@@ -772,10 +764,10 @@ def _route(page: str):
     if page == "Ana Sayfa":
         from views.ana_sayfa import render_ana_sayfa
         render_ana_sayfa()
-    elif page in ("Veli Paneli", "Veli Paneli Onizleme"):
+    elif page == "Veli Paneli":
         from views.ogrenci_veli_panel import render_veli_panel
         render_veli_panel()
-    elif page in ("Ogrenci Paneli", "Ogrenci Paneli Onizleme"):
+    elif page == "Ogrenci Paneli":
         from views.ogrenci_veli_panel import render_ogrenci_panel
         render_ogrenci_panel()
     elif page == "Yonetim Tek Ekran":
@@ -796,18 +788,45 @@ def _route(page: str):
     elif page == "Sosyal Medya Yonetimi":
         from views.sosyal_medya import render_sosyal_medya
         render_sosyal_medya()
-    elif page == "Ogrenci 360":
-        from views.ogrenci_360 import render_ogrenci_360
-        render_ogrenci_360()
+    # ── BİRLEŞİK MODÜLLER ──
+    elif page == "Ogrenci Zeka Merkezi":
+        from views.ogrenci_zeka_merkezi import render_ogrenci_zeka_merkezi
+        render_ogrenci_zeka_merkezi()
+    elif page == "AI Ogrenme Platformu":
+        from views.ai_ogrenme_platformu import render_ai_ogrenme_platformu
+        auth_user = st.session_state.get("auth_user", {})
+        user_role = auth_user.get("role", "")
+        readonly = user_role not in ("Yonetici",)
+        render_ai_ogrenme_platformu(readonly=readonly)
+    elif page == "Tesis ve Varlik Yonetimi":
+        from views.tesis_varlik_yonetimi import render_tesis_varlik_yonetimi
+        render_tesis_varlik_yonetimi()
+    # ── TAŞINAN MODÜLLER (geriye uyumluluk) ──
+    elif page in ("Ogrenci 360", "Erken Uyari Sistemi"):
+        from views.ogrenci_zeka_merkezi import render_ogrenci_zeka_merkezi
+        render_ogrenci_zeka_merkezi()
+    elif page in ("Dijital Kutuphane", "AI Bireysel Egitim"):
+        from views.ai_ogrenme_platformu import render_ai_ogrenme_platformu
+        render_ai_ogrenme_platformu()
+    elif page in ("Tuketim ve Demirbas", "Destek Hizmetleri Takip"):
+        from views.tesis_varlik_yonetimi import render_tesis_varlik_yonetimi
+        render_tesis_varlik_yonetimi()
+    elif page == "Veli Gunluk Kapsul":
+        from views.veli_gunluk_kapsul import render_veli_gunluk_kapsul
+        render_veli_gunluk_kapsul()
+    elif page == "Akademik Takvim":
+        from views.academic_calendar import render_academic_calendar
+        render_academic_calendar()
+    elif page == "Gunluk Isler":
+        from views.gunluk_isler import render_gunluk_isler
+        render_gunluk_isler()
+    # ── BAĞIMSIZ MODÜLLER ──
     elif page == "Okul Oncesi - Ilkokul":
         from views.okul_oncesi_ilkokul import render_okul_oncesi_ilkokul
         render_okul_oncesi_ilkokul()
     elif page == "Akademik Takip":
         from views.akademik_takip import render_akademik_takip
         render_akademik_takip()
-    elif page == "Akademik Takvim":
-        from views.academic_calendar import render_academic_calendar
-        render_academic_calendar()
     elif page == "Olcme ve Degerlendirme":
         from views.olcme_degerlendirme_v2 import render_olcme_degerlendirme_v2
         render_olcme_degerlendirme_v2()
@@ -820,15 +839,9 @@ def _route(page: str):
     elif page == "Okul Sagligi Takip":
         from views.okul_sagligi import render_okul_sagligi
         render_okul_sagligi()
-    elif page == "Tuketim ve Demirbas":
-        from views.tuketim_demirbas import render_tuketim_demirbas
-        render_tuketim_demirbas()
     elif page == "Randevu ve Ziyaretci":
         from views.randevu_ziyaretci import render_randevu_ziyaretci
         render_randevu_ziyaretci()
-    elif page == "Destek Hizmetleri Takip":
-        from views.destek_hizmetleri import render_destek_hizmetleri
-        render_destek_hizmetleri()
     elif page == "Sivil Savunma ve IS Guvenligi":
         from views.sivil_savunma_isg import render_sivil_savunma_isg
         render_sivil_savunma_isg()
@@ -844,24 +857,12 @@ def _route(page: str):
     elif page == "Kutuphane":
         from views.kutuphane import render_kutuphane
         render_kutuphane()
-    elif page == "Dijital Kutuphane":
-        from views.dijital_kutuphane import render_dijital_kutuphane
-        auth_user = st.session_state.get("auth_user", {})
-        user_role = auth_user.get("role", "")
-        readonly = user_role not in ("Yonetici",)
-        render_dijital_kutuphane(readonly=readonly)
-    elif page == "AI Bireysel Egitim":
-        from views.ai_bireysel_egitim import render_ai_bireysel_egitim
-        render_ai_bireysel_egitim()
     elif page == "Yabanci Dil":
         from views.yabanci_dil import render_yabanci_dil
         render_yabanci_dil()
     elif page == "Kisisel Dil Gelisimi":
         from views.kisisel_dil_gelisimi import render_kisisel_dil_gelisimi
         render_kisisel_dil_gelisimi()
-    elif page == "Erken Uyari Sistemi":
-        from views.erken_uyari import render_erken_uyari
-        render_erken_uyari()
     elif page == "Egitim Koclugu":
         from views.egitim_koclugu import render_egitim_koclugu
         render_egitim_koclugu()
@@ -880,15 +881,19 @@ def _route(page: str):
     elif page == "Kurum Yonetimi":
         from views.kurum_yonetimi import render_kurum_yonetimi
         render_kurum_yonetimi()
-    elif page == "Gunluk Isler":
-        from views.gunluk_isler import render_gunluk_isler
-        render_gunluk_isler()
     else:
         from views.ana_sayfa import render_ana_sayfa
         render_ana_sayfa()
 
 
 def main():
+    # QR kod handler — URL parametresi varsa direkt yonlendir
+    _qr_params = st.query_params
+    if _qr_params.get("sinif") and _qr_params.get("ders"):
+        from views.qr_handler import render_qr_handler
+        render_qr_handler()
+        return
+
     page = render_sidebar()
 
     # Komut Paleti — global Cmd+K arama
