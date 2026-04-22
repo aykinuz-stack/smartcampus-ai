@@ -2360,20 +2360,18 @@ def render_yonetim_ekran():
     except ImportError:
         pass
 
-    tabs = st.tabs([
-        "📊 Dashboard",
-        "📋 Günlük İşlemler",
-        "📇 Yönetim",
-        "📈 Raporlar",
-        "📚 Kazanımlar",
-        "🏗️ Kontrol Merkezi",
-        "🧠 AI Danışman",
-        "⚖️ Karşılaştır",
-        "⚙️ Ayarlar",
-        "📌 Görev Atama",
-    ])
+    # -- Tab Gruplama (10 -> 2 grup) --
+    _G_30983 = {
+        "Grup A": [("📊 Dashboard", 0), ("📋 Günlük İşlemler", 1), ("📇 Yönetim", 2), ("📈 Raporlar", 3), ("📚 Kazanımlar", 4), ("🏗️ Kontrol Merkezi", 5), ("🧠 AI Danışman", 6)],
+        "Grup B": [("⚖️ Karşılaştır", 7), ("⚙️ Ayarlar", 8), ("📌 Görev Atama", 9)],
+    }
+    _r_30983 = st.radio("", list(_G_30983.keys()), horizontal=True, label_visibility="collapsed", key="r_30983")
+    _a_30983 = set(t[1] for t in _G_30983[_r_30983])
+    tabs = st.tabs([t[0] for t in _G_30983[_r_30983]])
+    _m_30983 = {idx: t for idx, t in zip((t[1] for t in _G_30983[_r_30983]), tabs)}
 
-    with tabs[0]:
+    if 0 in _a_30983:
+      with _m_30983[0]:
         _render_dashboard(store)
         # ZIRVE: Ders Programi Heatmap — gömülü (tıkla aç/kapa)
         with st.expander("📅 Okul Genel Ders Programı", expanded=False):
@@ -2393,7 +2391,8 @@ def render_yonetim_ekran():
             except Exception as _e:
                 st.info(f"Okul Dashboard yüklenemedi: {_e}")
 
-    with tabs[1]:
+    if 1 in _a_30983:
+      with _m_30983[1]:
         sub_gun = st.tabs(["🌅 Gün Başı", "🌆 Gün Sonu", "⭐ Performans", "📅 Haftalık Takvim", "📊 Haftalık Trend", "📝 Ajanda"])
         with sub_gun[0]:
             _render_gun_basi(store)
@@ -2420,7 +2419,8 @@ def render_yonetim_ekran():
             except Exception as _e:
                 st.error(f"Ajanda yüklenemedi: {_e}")
 
-    with tabs[2]:
+    if 2 in _a_30983:
+      with _m_30983[2]:
         sub_yon = st.tabs(["📋 Modüller", "📇 Personel", "👨‍👩‍👧 Sınıf & Veli", "📧 E-posta"])
         with sub_yon[0]:
             _render_modul_ozetleri()
@@ -2431,7 +2431,8 @@ def render_yonetim_ekran():
         with sub_yon[3]:
             _render_eposta_ayarlari(store)
 
-    with tabs[3]:
+    if 3 in _a_30983:
+      with _m_30983[3]:
         sub_rap = st.tabs(["📈 Raporlar", "💡 Günün Bilgisi", "📖 Kılavuz", "🔀 Veri Akışı", "📚 Kampüs Wiki"])
         with sub_rap[0]:
             _render_raporlar(store)
@@ -2503,11 +2504,13 @@ def render_yonetim_ekran():
             except Exception as _e:
                 st.error(f"Kampüs Wiki yüklenemedi: {_e}")
 
-    with tabs[4]:
+    if 4 in _a_30983:
+      with _m_30983[4]:
         _render_kazanim_yonetimi()
 
     # ZİRVE: Canlı Kontrol Merkezi
-    with tabs[5]:
+    if 5 in _a_30983:
+      with _m_30983[5]:
         try:
             from views._yte_zirve_features import render_canli_kontrol_merkezi
             render_canli_kontrol_merkezi(store)
@@ -2515,7 +2518,8 @@ def render_yonetim_ekran():
             st.error(f"Kontrol merkezi yüklenemedi: {_e}")
 
     # ZİRVE: AI Çapraz Modül Danışman
-    with tabs[6]:
+    if 6 in _a_30983:
+      with _m_30983[6]:
         try:
             from views._yte_zirve_features import render_ai_capraz_danisman
             render_ai_capraz_danisman(store)
@@ -2523,21 +2527,24 @@ def render_yonetim_ekran():
             st.error(f"AI danışman yüklenemedi: {_e}")
 
     # ZİRVE: Karşılaştırma Cockpit
-    with tabs[7]:
+    if 7 in _a_30983:
+      with _m_30983[7]:
         try:
             from views._yte_zirve_features import render_karsilastirma_cockpit
             render_karsilastirma_cockpit(store)
         except Exception as _e:
             st.error(f"Karşılaştırma cockpit yüklenemedi: {_e}")
 
-    with tabs[8]:
+    if 8 in _a_30983:
+      with _m_30983[8]:
         sub_ayar = st.tabs(["⚙️ Ayarlar", "🤖 Smarti"])
         with sub_ayar[0]:
             _render_ayarlar(store)
         with sub_ayar[1]:
             _render_smarti(store)
 
-    with tabs[9]:
+    if 9 in _a_30983:
+      with _m_30983[9]:
         try:
             from views.modul_gorev_atama import render_modul_gorev_atama
             render_modul_gorev_atama()
