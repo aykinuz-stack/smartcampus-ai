@@ -1,312 +1,395 @@
-# SmartCampusAI Mobile — Çalıştırma Kılavuzu
+# SmartCampusAI Mobile -- Calistirma Kilavuzu
 
-Bu iskelet **çalışır durumda** ama eksik parçalar var (Firebase config, Android SDK ayarı,
-diğer modüller). Aşağıdaki adımlarla geliştirme ortamını kurabilirsin.
+> Son guncelleme: 2026-04-21
 
-## İçindekiler
+Bu kilavuz, SmartCampusAI mobil uygulamasinin backend'ini calistirmayi, APK yuklemeyi
+ve gelistirme ortamini kurmayia adim adim anlatir.
+
+---
+
+## Icindekiler
+
 1. [Gereksinimler](#1-gereksinimler)
-2. [Backend Kurulumu](#2-backend-kurulumu-fastapi)
-3. [Flutter Kurulumu](#3-flutter-kurulumu)
-4. [İlk Çalıştırma](#4-ilk-calistirma)
-5. [Android Cihazda Test](#5-android-cihazda-test)
-6. [Production Build](#6-production-build)
-7. [Eksik Parçalar (yapılacaklar)](#7-eksik-parçalar)
+2. [Backend Calistirma](#2-backend-calistirma)
+3. [APK Yukleme (Kullanicilar Icin)](#3-apk-yukleme)
+4. [Giris Bilgileri](#4-giris-bilgileri)
+5. [Sorun Giderme](#5-sorun-giderme)
+6. [Gelistirici Notu (Flutter Build)](#6-gelistirici-notu)
+7. [API Dokumantasyonu](#7-api-dokumantasyonu)
 
 ---
 
 ## 1. Gereksinimler
 
-| Araç | Versiyon | Amaç |
+### Backend icin (zorunlu)
+
+| Gereksinim | Minimum | Aciklama |
 |---|---|---|
-| Python | 3.12+ | Backend |
-| Flutter SDK | 3.16+ | Mobil frontend |
-| Android Studio | 2023.1+ | Android SDK + Emulator |
-| VS Code | son | Flutter extension için |
-| Java | JDK 17 | Android build |
-| Firebase CLI | son | Push notification (opsiyonel) |
+| Python | 3.10+ | 3.12 onerilir |
+| pip | guncel | Paket yonetimi |
+| Isletim sistemi | Windows / macOS / Linux | Herhangi biri |
 
-### Kurulum komutları
+### Mobil uygulama icin
 
-**Flutter** (Windows):
-```bash
-# https://docs.flutter.dev/get-started/install/windows adresinden indir
-flutter --version  # 3.16+ olmalı
-flutter doctor     # Her şey yeşil olmalı
-```
+| Gereksinim | Aciklama |
+|---|---|
+| Android telefon | Android 6.0+ (API 23+) |
+| Wi-Fi | Backend ile ayni ag uzerinde olmali |
 
-**Android Studio:**
-- [developer.android.com/studio](https://developer.android.com/studio)
-- SDK Manager → Android SDK 33+ yükle
-- AVD Manager → Pixel 6 emulator oluştur
+### Gelistirme icin (opsiyonel)
+
+| Gereksinim | Minimum | Aciklama |
+|---|---|---|
+| Flutter SDK | 3.19+ | CI zaten build yapar; lokal gelistirme icin |
+| Dart SDK | 3.2+ | Flutter ile birlikte gelir |
+| Android Studio | guncel | Android SDK + emulator |
+| Java | 17 | Android build icin (Temurin onerilir) |
+
+> **Not:** Normal kullanim icin Flutter kurmaya gerek yoktur.
+> GitHub Actions CI/CD otomatik olarak APK olusturur.
+> Sadece backend'i calistirip APK'yi telefonunuza yukleyin.
 
 ---
 
-## 2. Backend Kurulumu (FastAPI)
+## 2. Backend Calistirma
 
-### Virtual environment + bağımlılıklar
-
-```bash
-cd c:\Users\safir\OneDrive\Masaüstü\SmartCampusAI\mobile\backend
-
-# Python venv
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-
-# Paketleri yükle
-pip install -r requirements.txt
-```
-
-### Backend'i başlat
+### Adim 1: Bagimliliklari yukleyin
 
 ```bash
-cd c:\Users\safir\OneDrive\Masaüstü\SmartCampusAI
-python -m mobile.backend.main
+cd SmartCampusAI
+pip install fastapi uvicorn python-jose passlib bcrypt httpx pydantic-settings
 ```
 
-Başarılı çıktı:
+### Adim 2: Backend'i baslatin
+
+```bash
+python -m uvicorn mobile.backend.main:app --host 0.0.0.0 --port 8000
+```
+
+Basarili cikti:
+
 ```
 [BACKEND] SmartCampusAI Mobile Backend v1.0.0
-[BACKEND] DATA_DIR: c:\...\SmartCampusAI\data
+[BACKEND] DATA_DIR: C:\...\SmartCampusAI\data
 [BACKEND] API Prefix: /api/v1
-INFO:     Uvicorn running on http://0.0.0.0:8000
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 ```
 
-### Backend'i test et
+### Adim 3: Dogrulayin
 
-Tarayıcıda aç: **http://localhost:8000/docs**
+Tarayicinizda su adresleri acin:
 
-FastAPI Swagger UI görürsün — tüm endpointleri buradan test edebilirsin.
+| Adres | Beklenen |
+|---|---|
+| http://localhost:8000 | `{"app": "SmartCampusAI Mobile Backend", ...}` |
+| http://localhost:8000/docs | Swagger API dokumantasyonu |
+| http://localhost:8000/api/v1/health | `{"status": "healthy", ...}` |
 
-**Login testi:**
+### IP Adresi Notu
+
+Mobil uygulama backend'e baglanirken bilgisayarinizin **yerel IP adresini** kullanir.
+IP adresinizi ogrenmek icin:
+
 ```bash
-curl -X POST http://localhost:8000/api/v1/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{\"username\":\"admin\",\"password\":\"sifre\",\"tenant_id\":\"default\"}'
+# Windows
+ipconfig
+
+# macOS / Linux
+ifconfig
+# veya
+ip addr show
 ```
+
+Ornek: `192.168.1.103` -- Bu IP adresi `api_client.dart` icindeki `baseUrl` ile eslesmelidir.
 
 ---
 
-## 3. Flutter Kurulumu
+## 3. APK Yukleme
 
-### Bağımlılıklar
+### GitHub Releases'ten indirme
+
+1. GitHub reponuzun **Releases** sayfasina gidin
+2. En son surumdeki `app-release.apk` dosyasini indirin
+3. APK dosyasini telefonunuza aktarin (USB, e-posta, bulut depolama, vb.)
+
+### Telefona yukleme
+
+1. **Ayarlar > Guvenlik > Bilinmeyen kaynaklara izin ver** secenegini acin
+   (Android 8+: dosya yoneticisi icin ayri izin gerekebilir)
+2. `app-release.apk` dosyasina dokunun
+3. **Yukle** butonuna basin
+4. Yukleme tamamlaninca **Ac** butonuna basin
+5. Backend'in calistigini ve ayni Wi-Fi aginda oldugunuzu dogrulayin
+
+### CI/CD ile otomatik APK
+
+Her `main` branch'e push yapildiginda GitHub Actions otomatik olarak:
+- APK build eder
+- GitHub Release olusturur (v{build_number} tag'i ile)
+- APK'yi Release'e ekler
+
+Manuel build tetiklemek icin: GitHub > Actions > Build Android APK > Run workflow
+
+---
+
+## 4. Giris Bilgileri
+
+Asagidaki test hesaplari varsayilan olarak tanimlidir:
+
+| Kullanici Adi | Sifre | Rol | Aciklama |
+|---|---|---|---|
+| `admin` | `SmartCampus123` | Yonetici | Mudur / superadmin |
+| `ogrenci` | `SmartCampus123` | Ogrenci | Ornek ogrenci hesabi |
+| `veli` | `SmartCampus123` | Veli | Ornek veli hesabi |
+| `ogretmen` | `SmartCampus123` | Ogretmen | Ornek ogretmen hesabi |
+| `screhber` | `SmartCampus123` | Rehber | Psikolojik danismanluk / rehber ogretmen |
+
+### Giris Akisi
+
+1. Uygulamayi acin -- Splash ekrani belirir
+2. Token gecerli degilse login sayfasina yonlendirilirsiniz
+3. Kullanici adi ve sifre girin
+4. Role gore ana sayfaya otomatik yonlendirilirsiniz:
+   - `ogrenci` -> Ogrenci Ana Sayfa
+   - `veli` -> Veli Ana Sayfa
+   - `ogretmen` -> Ogretmen Ana Sayfa
+   - `screhber` -> Rehber Ana Sayfa
+   - `admin` -> Yonetici Ana Sayfa
+
+---
+
+## 5. Sorun Giderme
+
+### 5.1 Backend Baglanti Hatasi
+
+**Belirti:** Uygulama "Baglanti hatasi" veya "Sunucu bulunamadi" gosteriyor.
+
+**Cozum:**
+
+1. Backend'in calistigini dogrulayin:
+   ```bash
+   curl http://localhost:8000/api/v1/health
+   ```
+
+2. Telefonun ve bilgisayarin **ayni Wi-Fi aginda** oldugunu kontrol edin
+
+3. `api_client.dart` icindeki `baseUrl` degerinin bilgisayar IP'si ile eslestigini dogrulayin:
+   ```dart
+   static const String baseUrl = 'http://192.168.1.103:8000/api/v1';
+   ```
+
+4. Bilgisayar guvenllik duvari (firewall) 8000 portuna izin veriyor mu kontrol edin:
+   ```bash
+   # Windows — gelen baglantilara izin ver
+   netsh advfirewall firewall add rule name="FastAPI" dir=in action=allow protocol=TCP localport=8000
+   ```
+
+### 5.2 Wi-Fi Aglari Farkli
+
+**Belirti:** Tarayicida `localhost:8000` calisiyor ama telefondan erisilemiyyor.
+
+**Cozum:**
+- Telefon ve bilgisayar ayni router'a bagli olmali
+- Bazi kurumsal aglar cihazlar arasi trafigi engelleyebilir; "guest" ag deneyin
+- Alternatif: USB tethering ile dogrudan baglanin
+
+### 5.3 CORS Hatasi
+
+**Belirti:** Backend loglarinda `CORS` hata mesajlari.
+
+**Cozum:**
+`mobile/backend/core/config.py` icindeki `CORS_ORIGINS` listesine telefonun eristigi URL'yi ekleyin:
+
+```python
+CORS_ORIGINS: list[str] = [
+    "http://localhost:3000",
+    "http://localhost:8501",
+    "http://127.0.0.1:8501",
+    "capacitor://localhost",
+    "http://localhost",
+    # Gerekirse ekleyin:
+    # "http://192.168.1.100:8000",
+]
+```
+
+### 5.4 "Module not found" Hatasi
+
+**Belirti:** `ModuleNotFoundError: No module named 'fastapi'`
+
+**Cozum:**
+```bash
+pip install fastapi uvicorn python-jose passlib bcrypt httpx pydantic-settings
+```
+
+Sanal ortam kullaniyorsaniz aktif oldugundan emin olun:
+```bash
+# Windows
+.\venv\Scripts\activate
+
+# macOS / Linux
+source venv/bin/activate
+```
+
+### 5.5 JWT Token Suresi Dolmus
+
+**Belirti:** Uygulama aniden login sayfasina donuyor.
+
+**Cozum:**
+- Access token suresi 24 saat, refresh token 30 gun
+- Refresh otomatik olarak `_AuthInterceptor` tarafindan yapilir
+- Sorun devam ederse uygulamadan cikis yapip tekrar giris yapin
+
+### 5.6 Veri Gorunmuyor
+
+**Belirti:** Sayfalar bos veya "Veri bulunamadi" gosteriyor.
+
+**Cozum:**
+- `SmartCampusAI/data/` dizininde ilgili JSON dosyalarinin var oldugundan emin olun
+- Backend loglarinda (terminal) hata mesajlarini kontrol edin
+- Streamlit uygulamasindan veri girisi yaparak JSON dosyalarini doldurun
+
+---
+
+## 6. Gelistirici Notu
+
+> Bu bolum sadece Flutter kodunu degistirmek / lokal build yapmak isteyenler icindir.
+
+### Flutter ortami kurma
 
 ```bash
-cd c:\Users\safir\OneDrive\Masaüstü\SmartCampusAI\mobile\flutter_app
+# Flutter SDK'yi kurun (https://docs.flutter.dev/get-started/install)
+# Java 17 kurulu olmali
 
+# Proje dizinine gidin
+cd SmartCampusAI/mobile/flutter_app
+
+# Platform dosyalarini olusturun (ilk seferlik)
+flutter create . --platforms=android --org=com.smartcampus.ai --project-name=smartcampus_mobile
+
+# Bagimliliklari yukleyin
 flutter pub get
+
+# App ikonunu olusturun
+dart run flutter_launcher_icons
+
+# Splash screen olusturun
+dart run flutter_native_splash:create
 ```
 
-### Android platform dosyalarını oluştur
-
-İlk kurulumda sadece `lib/` + `pubspec.yaml` var. Android+iOS platform dosyalarını üret:
+### Debug build
 
 ```bash
-flutter create . --platforms=android,ios --org=com.smartcampus.ai
-```
-
-### Icon + Splash screen (opsiyonel ilk sürüm için)
-
-```bash
-# flutter_launcher_icons paketi + assets/icons/icon.png ile icon
-# flutter_native_splash paketi + assets/images/splash.png ile splash
-```
-
----
-
-## 4. İlk Çalıştırma
-
-### Emulator'ı başlat
-
-Android Studio → AVD Manager → Pixel 6 → ▶️ Play
-
-**Önemli:** Emulator açıkken backend'de `10.0.2.2` adresi host makinenin localhost'udur.
-Bu zaten `api_client.dart` içinde ayarlı.
-
-### Flutter'ı çalıştır
-
-```bash
-cd c:\Users\safir\OneDrive\Masaüstü\SmartCampusAI\mobile\flutter_app
-
+# Emulator veya bagli cihazda calistirin
 flutter run
+
+# Veya debug APK olusturun
+flutter build apk --debug
 ```
 
-İlk derleme 3-5 dakika sürer. Sonra her değişiklikte **hot reload** (r tuşu) kullanılır.
-
-### Beklenen akış
-
-1. Splash screen (600ms)
-2. Login sayfası
-3. `admin` / `admin123` (örnek data'da bu olabilir — `data/users.json`'a bak)
-4. Rol bazlı home (öğrenci rolüyle → `OgrenciHomePage`)
-5. **Mood Check-in** kartına tıkla
-6. Emoji seç → "KAYDET" → toast başarılı mesaj
-7. Backend tarafında `data/mood_checkin/checkins.json` dosyasına eklendi
-8. **Streamlit'te aynı veri görünür** (Rehberlik > Mood Paneli veya Öğrenci Paneli'nde)
-
----
-
-## 5. Android Cihazda Test
-
-### USB bağlantı
-
-1. Telefonda **Ayarlar > Geliştirici Seçenekleri > USB Hata Ayıklama** aç
-2. USB ile bilgisayara bağla
-3. `flutter devices` → cihaz listede mi?
-4. `flutter run -d <device_id>` → cihaza yükle
-
-### Bilgisayar IP'si üzerinden backend
-
-Telefon emulator değil gerçek cihazsa `10.0.2.2` çalışmaz.
-`lib/core/api/api_client.dart` içinde:
-
-```dart
-static const String baseUrl = 'http://192.168.1.5:8000/api/v1';
-// Bilgisayarın local IP'si — ipconfig ile bul
-```
-
-Windows Defender Firewall'da 8000 portunu aç.
-
----
-
-## 6. Production Build
-
-### Android APK
+### Release build
 
 ```bash
 flutter build apk --release
-# Çıktı: build/app/outputs/flutter-apk/app-release.apk
+# Cikti: build/app/outputs/flutter-apk/app-release.apk
 ```
 
-### Google Play Store için .aab
+### Kod uretimi (Freezed, Riverpod Generator, vb.)
 
 ```bash
-flutter build appbundle --release
-# Çıktı: build/app/outputs/bundle/release/app-release.aab
+dart run build_runner build --delete-conflicting-outputs
 ```
 
-### Backend Production
+### baseUrl degistirme
 
-- HTTPS zorunlu (Let's Encrypt sertifika)
-- `JWT_SECRET_KEY` güvenli bir string (32+ karakter)
-- `DEBUG=False` (core/config.py)
-- Uvicorn + Gunicorn (process manager)
-- Nginx reverse proxy (önerilir)
-- Log rotation + monitoring (Sentry, Prometheus)
+`lib/core/api/api_client.dart` dosyasindaki IP adresini guncelleyin:
 
-```bash
-# Production uvicorn komutu
-gunicorn -k uvicorn.workers.UvicornWorker \
-  -w 4 -b 0.0.0.0:8000 \
-  mobile.backend.main:app
+```dart
+// Kendi bilgisayar IP'nizi yazin
+static const String baseUrl = 'http://192.168.1.XXX:8000/api/v1';
 ```
 
----
+### Onemli dosyalar
 
-## 7. Eksik Parçalar (Yapılacaklar)
-
-Şu anki iskelette **çalışan:**
-- ✅ Backend FastAPI (auth + mood + health)
-- ✅ JWT auth flow
-- ✅ JSON data adapter (Streamlit ile ortak veri)
-- ✅ Flutter login → role-based routing
-- ✅ Öğrenci home page
-- ✅ Mood check-in (tam end-to-end)
-
-**Henüz yapılmamış (sprint bazlı):**
-
-### Sprint 1 — Öğrenci Core (2 hafta)
-- Backend: `routers/ogrenci.py` — notlar, devamsızlık, ödev endpoint'leri
-- Flutter: NotlarPage, DevamsizlikPage, OdevlerPage
-- Push bildirim altyapısı (Firebase setup)
-
-### Sprint 2 — Veli App
-- Backend: `routers/veli.py` — günlük kapsül, çocuk listesi
-- Flutter: VeliHome, KapsulPage, CocukProfilPage
-
-### Sprint 3 — Öğretmen App
-- Backend: `routers/ogretmen.py` — QR yoklama, not girişi
-- Flutter: QR tarayıcı (mobile_scanner), NotGirisPage
-
-### Sprint 4 — Rehber App
-- Backend: `routers/rehber.py` — vaka, görüşme, aile formu
-- Flutter: VakaPage, GorusmePage, AileFormPage
-
-### Sprint 5 — Yönetim
-- Backend: `routers/erken_uyari.py` — risk skorları + protokol
-- Flutter: YoneticiDashboard, RiskKategoriPage
-
-### Sprint 6 — Polish + Store
-- Dark/Light tema geçişi (Ayarlar)
-- Onboarding animasyonları
-- Performance optimization
-- Play Store + App Store submission
-
-### Ek geliştirmeler
-- **WebSocket**: Smarti chat için real-time
-- **Firebase FCM**: Push bildirim (fcm_token alma + backend send)
-- **Biometric login**: `local_auth` ile parmak izi
-- **Offline mode**: Hive queue ile mood offline kaydet
-- **i18n**: Çoklu dil (Türkçe/İngilizce)
-- **Deep links**: Bildirimden direkt sayfa açılması
-
----
-
-## Dosya Yapısı Referansı
-
-```
-mobile/
-├── MIMARI.md                    # Bu dosyayı önce oku
-├── CALISTIRMA_KILAVUZU.md       # Bu dosya
-├── backend/
-│   ├── requirements.txt
-│   ├── main.py                  # uvicorn entry
-│   ├── core/
-│   │   ├── config.py
-│   │   ├── security.py          # JWT + bcrypt
-│   │   ├── deps.py              # FastAPI dependencies
-│   │   └── data_adapter.py      # JSON dosya köprüsü
-│   ├── routers/
-│   │   ├── auth.py              # login, refresh, me
-│   │   └── mood.py              # mood check-in + summary
-│   └── schemas/
-│       ├── auth.py
-│       └── mood.py
-└── flutter_app/
-    ├── pubspec.yaml
-    └── lib/
-        ├── main.dart
-        ├── app.dart              # MaterialApp + Router
-        ├── core/
-        │   ├── theme/app_theme.dart
-        │   ├── api/api_client.dart
-        │   └── auth/auth_service.dart
-        └── features/
-            ├── auth/login_page.dart
-            └── ogrenci/
-                ├── ogrenci_home.dart
-                └── mood_checkin_page.dart
-```
-
----
-
-## Sorun Giderme
-
-| Problem | Çözüm |
+| Dosya | Aciklama |
 |---|---|
-| `flutter pub get` hata veriyor | `flutter clean && flutter pub get` |
-| Emulator bağlantı reddediyor | `http://10.0.2.2:8000` doğru mu? Backend çalışıyor mu? |
-| Gerçek cihazdan bağlanamıyor | Bilgisayar IP'si `api_client.dart`'a yazıldı mı? Firewall? |
-| Login 500 hatası | Backend logda ne yazıyor? `data/users.json` var mı? |
-| JWT token expired | Otomatik refresh olmalı — refresh_token varsa sessizce yenilenir |
-| Mood kaydetti ama Streamlit görmüyor | Aynı klasör mü? `DATA_DIR` path config doğru mu? |
+| `lib/main.dart` | Entry point -- Hive init + ProviderScope |
+| `lib/app.dart` | GoRouter tanimlamalari + SplashPage |
+| `lib/core/api/api_client.dart` | Backend IP adresi burada |
+| `lib/core/auth/auth_service.dart` | JWT login/logout/refresh |
+| `lib/core/theme/app_theme.dart` | Tum renk, gradient, golge tanimlari |
+| `lib/core/widgets/premium_widgets.dart` | GlassCard, GradientButton, KPICard |
+| `pubspec.yaml` | Tum bagimliliklar + icon/splash ayarlari |
 
 ---
 
-## Next Steps
+## 7. API Dokumantasyonu
 
-1. **Bu iskelet üzerinden çalışarak** ilk modülü (Öğrenci Notları) ekle
-2. Her sprint'te 3-5 endpoint + Flutter sayfası ekleniyor
-3. 12 hafta sonunda production-ready 4 native app
-4. Google Play Store + App Store yayın
+Backend calisirken Swagger UI ile tum endpoint'leri interaktif olarak test edebilirsiniz.
 
-**İlk sprint'e hazır mısın? "Sprint 1 başla" de, Öğrenci Notları modülünü hemen ekleyeyim.**
+| Arayuz | Adres | Aciklama |
+|---|---|---|
+| **Swagger UI** | http://localhost:8000/docs | Interaktif API test arayuzu |
+| **ReDoc** | http://localhost:8000/redoc | Okunabilir API dokumantasyonu |
+| **Root** | http://localhost:8000/ | Uygulama bilgisi |
+| **Health** | http://localhost:8000/api/v1/health | Saglik kontrolu |
+
+### Swagger ile test
+
+1. http://localhost:8000/docs adresini acin
+2. **Authorize** butonuna tiklayin
+3. Oncelikle `/api/v1/auth/login` endpoint'ini kullanarak token alin:
+   ```json
+   {
+     "username": "admin",
+     "password": "SmartCampus123"
+   }
+   ```
+4. Donen `access_token` degerini kopyalayin
+5. **Authorize** butonuna tekrar tiklayin, `Bearer <token>` yazin
+6. Artik korunmali endpoint'leri test edebilirsiniz
+
+### Ornek API cagrilari (curl)
+
+```bash
+# Giris yap
+curl -X POST http://localhost:8000/api/v1/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"username": "ogrenci", "password": "SmartCampus123"}'
+
+# Ogrenci profili (token gerekli)
+curl http://localhost:8000/api/v1/ogrenci/profil \
+  -H "Authorization: Bearer <ACCESS_TOKEN>"
+
+# Gunluk isler (token gerekli)
+curl http://localhost:8000/api/v1/gunluk-isler \
+  -H "Authorization: Bearer <ACCESS_TOKEN>"
+
+# Saglik kontrolu (token gerektirmez)
+curl http://localhost:8000/api/v1/health
+
+# Dil dersleri (token gerektirmez)
+curl http://localhost:8000/api/v1/dil/dersler?dil=ingilizce
+
+# Bilgi yarismasi (token gerektirmez)
+curl http://localhost:8000/api/v1/bilgi-yarismasi/ilkokul
+```
+
+---
+
+## Hizli Baslangiic Ozeti
+
+```bash
+# 1. Bagimliliklari yukle
+pip install fastapi uvicorn python-jose passlib bcrypt httpx pydantic-settings
+
+# 2. Backend'i baslat
+python -m uvicorn mobile.backend.main:app --host 0.0.0.0 --port 8000
+
+# 3. Dogrula
+# Tarayicide: http://localhost:8000/docs
+
+# 4. APK'yi GitHub Releases'ten indirip telefona yukle
+
+# 5. Ayni Wi-Fi'de telefondan giris yap
+#    Kullanici: ogrenci / Sifre: SmartCampus123
+```

@@ -4,7 +4,7 @@
 SmartCampus AI - Egitim Yonetimi
 
 ## Short Description (80 char max)
-Okulunuzu tek elden yonetin: 5 rol, 85+ ozellik, AI asistan.
+Okulunuzu tek elden yonetin: 5 rol, 99 sayfa, AI asistan, ultra premium.
 
 ## Full Description (4000 char max)
 SmartCampus AI, Turkiye'nin en kapsamli egitim yonetim platformudur. Ogrenci, veli, ogretmen, rehber ve yonetici rolleriyle okul ekosisteminin tamamini dijitallestirir.
