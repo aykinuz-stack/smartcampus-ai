@@ -1,7 +1,9 @@
-# 📱 SmartCampus Mobile APK — Otomatik Build Kılavuzu
+# SmartCampus Mobile APK — Otomatik Build Kilavuzu
 
-Bu rehberi izleyerek **hiçbir şey kurmadan** Android APK üretebilir ve
-WhatsApp ile paylaşabilirsin. GitHub Actions her şeyi bulutta yapar.
+**Son guncelleme:** 2026-04-22 | **Mevcut:** 99 Dart dosya, 138 backend route, ultra premium tasarim
+
+Bu rehberi izleyerek **hicbir sey kurmadan** Android APK uretebilir ve
+WhatsApp ile paylasabilirsin. GitHub Actions her seyi bulutta yapar.
 
 ---
 
