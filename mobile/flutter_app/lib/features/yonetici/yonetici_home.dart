@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../core/api/rehber_yonetici_api.dart';
 import '../../core/auth/auth_service.dart';
 import '../../core/theme/app_theme.dart';
+import '../../core/widgets/premium_widgets.dart';
 
 
 class YoneticiHomePage extends ConsumerStatefulWidget {
@@ -78,28 +79,11 @@ class _YoneticiHomePageState extends ConsumerState<YoneticiHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Hero
-                  Container(
-                    padding: const EdgeInsets.all(18),
-                    decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                        colors: [AppColors.surfaceDarker, AppColors.primaryDark],
-                      ),
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Row(children: [
-                          Icon(Icons.dashboard, color: AppColors.gold, size: 26),
-                          SizedBox(width: 10),
-                          Text('Yönetici Dashboard',
-                              style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600)),
-                        ]),
-                        const SizedBox(height: 12),
-                        Text(user.adSoyad,
-                            style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
-                      ],
-                    ),
+                  HeroBanner(
+                    title: user.adSoyad.isNotEmpty ? user.adSoyad : 'Yonetici',
+                    subtitle: 'Okul yonetim merkezi',
+                    badge: 'YONETICI',
+                    gradient: AppGradients.darkCard,
                   ),
                   const SizedBox(height: 20),
 

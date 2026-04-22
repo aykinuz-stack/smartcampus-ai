@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../core/api/ogretmen_api.dart';
 import '../../core/auth/auth_service.dart';
 import '../../core/theme/app_theme.dart';
+import '../../core/widgets/premium_widgets.dart';
 
 
 class OgretmenHomePage extends ConsumerStatefulWidget {
@@ -68,28 +69,11 @@ class _OgretmenHomePageState extends ConsumerState<OgretmenHomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                padding: const EdgeInsets.all(18),
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [AppColors.success, Color(0xFF10B981)],
-                  ),
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Row(children: [
-                      Icon(Icons.person_pin, color: Colors.white, size: 26),
-                      SizedBox(width: 10),
-                      Text('Öğretmen Paneli',
-                          style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600)),
-                    ]),
-                    const SizedBox(height: 12),
-                    Text(user.adSoyad,
-                        style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
-                  ],
-                ),
+              HeroBanner(
+                title: user.adSoyad.isNotEmpty ? user.adSoyad : 'Ogretmen',
+                subtitle: 'Siniflarinizi yonetin, yoklama alin',
+                badge: 'OGRETMEN',
+                gradient: AppGradients.success,
               ),
               const SizedBox(height: 20),
 

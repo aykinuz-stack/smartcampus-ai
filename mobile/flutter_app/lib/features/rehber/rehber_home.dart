@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../core/auth/auth_service.dart';
 import '../../core/theme/app_theme.dart';
+import '../../core/widgets/premium_widgets.dart';
 
 
 class RehberHomePage extends ConsumerWidget {
@@ -47,33 +48,15 @@ class RehberHomePage extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              padding: const EdgeInsets.all(18),
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: [AppColors.danger, Color(0xFFF43F5E)],
-                ),
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Row(children: [
-                    Icon(Icons.psychology, color: Colors.white, size: 26),
-                    SizedBox(width: 10),
-                    Text('Rehberlik Paneli',
-                        style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600)),
-                  ]),
-                  const SizedBox(height: 12),
-                  Text(user.adSoyad,
-                      style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
-                ],
-              ),
+            HeroBanner(
+              title: user.adSoyad.isNotEmpty ? user.adSoyad : 'Rehber',
+              subtitle: 'Ogrenci gelisimi ve psikolojik destek',
+              badge: 'REHBER',
+              gradient: const LinearGradient(colors: [Color(0xFFE11D48), Color(0xFFF43F5E)]),
             ),
             const SizedBox(height: 20),
-            const Text('İşlemler',
-                style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600)),
-            const SizedBox(height: 10),
+            const SectionHeader(title: 'Islemler', icon: Icons.dashboard),
+
             GridView.count(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),

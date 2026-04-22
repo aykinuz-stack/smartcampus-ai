@@ -254,7 +254,7 @@ class SmartCampusApp extends ConsumerWidget {
 }
 
 
-/// Splash — token kontrol + yönlendir.
+/// Splash -- Ultra Premium token kontrol + yonlendir.
 class _SplashPage extends ConsumerStatefulWidget {
   const _SplashPage();
 
@@ -262,15 +262,63 @@ class _SplashPage extends ConsumerStatefulWidget {
   ConsumerState<_SplashPage> createState() => _SplashPageState();
 }
 
-class _SplashPageState extends ConsumerState<_SplashPage> {
+class _SplashPageState extends ConsumerState<_SplashPage>
+    with TickerProviderStateMixin {
+  late final AnimationController _logoCtrl;
+  late final Animation<double> _logoScale;
+  late final AnimationController _fadeCtrl;
+  late final Animation<double> _fadeAnim;
+  late final AnimationController _pulseCtrl;
+  late final Animation<double> _pulseAnim;
+
   @override
   void initState() {
     super.initState();
+
+    // Logo elastic animation
+    _logoCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1200),
+    );
+    _logoScale = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _logoCtrl, curve: Curves.elasticOut),
+    );
+
+    // Fade-in for text
+    _fadeCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 800),
+    );
+    _fadeAnim = CurvedAnimation(parent: _fadeCtrl, curve: Curves.easeOut);
+
+    // Pulsing loader
+    _pulseCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1200),
+    )..repeat(reverse: true);
+    _pulseAnim = Tween<double>(begin: 0.6, end: 1.0).animate(
+      CurvedAnimation(parent: _pulseCtrl, curve: Curves.easeInOut),
+    );
+
+    // Start animations in sequence
+    _logoCtrl.forward();
+    Future.delayed(const Duration(milliseconds: 400), () {
+      if (mounted) _fadeCtrl.forward();
+    });
+
     _check();
   }
 
+  @override
+  void dispose() {
+    _logoCtrl.dispose();
+    _fadeCtrl.dispose();
+    _pulseCtrl.dispose();
+    super.dispose();
+  }
+
   Future<void> _check() async {
-    await Future.delayed(const Duration(milliseconds: 600));
+    await Future.delayed(const Duration(milliseconds: 1800));
     final user = await ref.read(authServiceProvider).getCurrentUser();
     if (!mounted) return;
     if (user == null) {
@@ -294,63 +342,137 @@ class _SplashPageState extends ConsumerState<_SplashPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        width: double.infinity,
+        height: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topLeft, end: Alignment.bottomRight,
-            colors: [AppColors.surfaceDarker, Color(0xFF1E1B4B), AppColors.surfaceDark],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              AppColors.surfaceDarker,
+              Color(0xFF1E1B4B),
+              AppColors.surfaceDark,
+            ],
+            stops: [0.0, 0.5, 1.0],
           ),
         ),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Logo animasyonlu
-              TweenAnimationBuilder<double>(
-                tween: Tween(begin: 0.0, end: 1.0),
-                duration: const Duration(milliseconds: 800),
-                curve: Curves.elasticOut,
-                builder: (_, scale, child) => Transform.scale(scale: scale, child: child),
+              const Spacer(flex: 3),
+
+              // ---- Animated Logo ----
+              ScaleTransition(
+                scale: _logoScale,
                 child: Container(
-                  width: 110, height: 110,
+                  width: 120,
+                  height: 120,
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
-                      begin: Alignment.topLeft, end: Alignment.bottomRight,
-                      colors: [AppColors.primary, AppColors.gold]),
-                    borderRadius: BorderRadius.circular(28),
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [AppColors.primary, Color(0xFF8B5CF6), AppColors.gold],
+                      stops: [0.0, 0.5, 1.0],
+                    ),
+                    borderRadius: BorderRadius.circular(32),
                     boxShadow: [
-                      BoxShadow(color: AppColors.primary.withOpacity(0.4),
-                          blurRadius: 30, spreadRadius: 2),
+                      BoxShadow(
+                        color: AppColors.primary.withOpacity(0.5),
+                        blurRadius: 40,
+                        spreadRadius: 4,
+                      ),
+                      BoxShadow(
+                        color: AppColors.gold.withOpacity(0.25),
+                        blurRadius: 60,
+                        spreadRadius: 2,
+                        offset: const Offset(0, 16),
+                      ),
                     ],
                   ),
-                  child: const Icon(Icons.school_rounded, size: 60, color: Colors.white),
+                  child: const Icon(
+                    Icons.school_rounded,
+                    size: 64,
+                    color: Colors.white,
+                  ),
                 ),
               ),
-              const SizedBox(height: 28),
-              // Baslik animasyonlu
-              TweenAnimationBuilder<double>(
-                tween: Tween(begin: 0.0, end: 1.0),
-                duration: const Duration(milliseconds: 600),
-                builder: (_, opacity, __) => Opacity(
-                  opacity: opacity,
-                  child: const Column(children: [
-                    Text('SmartCampus AI',
-                        style: TextStyle(color: Colors.white, fontSize: 26,
-                            fontWeight: FontWeight.bold, letterSpacing: 1.2)),
-                    SizedBox(height: 6),
-                    Text('Egitimin Gelecegi',
-                        style: TextStyle(color: AppColors.gold, fontSize: 13,
-                            fontStyle: FontStyle.italic)),
-                  ]),
+
+              const SizedBox(height: 36),
+
+              // ---- Title with fade-in ----
+              FadeTransition(
+                opacity: _fadeAnim,
+                child: Column(
+                  children: [
+                    const Text(
+                      'SmartCampus AI',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 28,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 1.5,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      'Egitimin Gelecegi',
+                      style: TextStyle(
+                        color: AppColors.gold,
+                        fontSize: 14,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: 0.8,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              const SizedBox(height: 32),
-              const SizedBox(width: 28, height: 28,
-                  child: CircularProgressIndicator(strokeWidth: 2.5, color: AppColors.gold)),
-              const SizedBox(height: 12),
-              Text('Yukleniyor...', style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 12)),
-              const SizedBox(height: 60),
-              Text('v24 · 98 sayfa · 5 rol',
-                  style: TextStyle(color: Colors.white.withOpacity(0.3), fontSize: 10)),
+
+              const SizedBox(height: 48),
+
+              // ---- Pulsing loading indicator ----
+              FadeTransition(
+                opacity: _pulseAnim,
+                child: const SizedBox(
+                  width: 30,
+                  height: 30,
+                  child: CircularProgressIndicator(
+                    strokeWidth: 2.0,
+                    color: AppColors.gold,
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 14),
+
+              FadeTransition(
+                opacity: _fadeAnim,
+                child: Text(
+                  'Yukleniyor...',
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(0.4),
+                    fontSize: 12,
+                    letterSpacing: 0.5,
+                  ),
+                ),
+              ),
+
+              const Spacer(flex: 2),
+
+              // ---- Version text at bottom ----
+              Padding(
+                padding: const EdgeInsets.only(bottom: 40),
+                child: Text(
+                  'v25',
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(0.25),
+                    fontSize: 11,
+                    letterSpacing: 1.0,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

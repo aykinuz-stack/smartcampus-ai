@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../core/api/veli_api.dart';
 import '../../core/auth/auth_service.dart';
 import '../../core/theme/app_theme.dart';
+import '../../core/widgets/premium_widgets.dart';
 
 
 class VeliHomePage extends ConsumerStatefulWidget {
@@ -69,30 +70,11 @@ class _VeliHomePageState extends ConsumerState<VeliHomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Hero
-              Container(
-                padding: const EdgeInsets.all(18),
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [AppColors.primaryDark, AppColors.primary],
-                  ),
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Row(
-                      children: [
-                        Icon(Icons.family_restroom, color: Colors.white, size: 26),
-                        SizedBox(width: 10),
-                        Text('Veli Paneli',
-                            style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600)),
-                      ],
-                    ),
-                    const SizedBox(height: 12),
-                    Text(user.adSoyad,
-                        style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
-                  ],
-                ),
+              HeroBanner(
+                title: user.adSoyad.isNotEmpty ? user.adSoyad : 'Veli',
+                subtitle: 'Cocugunuzun gelisimini yakindan takip edin',
+                badge: 'VELI',
+                gradient: AppGradients.primary,
               ),
               const SizedBox(height: 20),
 

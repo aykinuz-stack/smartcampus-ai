@@ -8,9 +8,12 @@ import '../../core/api/api_client.dart';
 import '../../core/api/ogrenci_api.dart';
 import '../../core/auth/auth_service.dart';
 import '../../core/theme/app_theme.dart';
+import '../../core/widgets/premium_widgets.dart';
 
+// =============================================================================
+// OGRENCI HOME PAGE — Ultra Premium World-Class Dashboard
+// =============================================================================
 
-/// Ultra Premium Öğrenci Home — Dashboard API, yaklaşan sınav, ödev countdown, karusel
 class OgrenciHomePage extends ConsumerStatefulWidget {
   const OgrenciHomePage({super.key});
 
@@ -20,19 +23,27 @@ class OgrenciHomePage extends ConsumerStatefulWidget {
 
 class _OgrenciHomePageState extends ConsumerState<OgrenciHomePage>
     with TickerProviderStateMixin {
+  // API futures
   Future<Map<String, dynamic>>? _dashFuture;
   Future<Map<String, dynamic>>? _moodFuture;
   Future<Map<String, dynamic>>? _bildirimFuture;
 
-  // Karusel auto-scroll
+  // Auto-scroll carousel for Son Notlar
   late final PageController _pageCtrl;
   Timer? _autoTimer;
   int _currentPage = 0;
 
+  // Animated page indicator
+  late final AnimationController _dotPulse;
+
   @override
   void initState() {
     super.initState();
-    _pageCtrl = PageController(viewportFraction: 0.85);
+    _pageCtrl = PageController(viewportFraction: 0.92);
+    _dotPulse = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 800),
+    )..repeat(reverse: true);
     _loadAll();
   }
 
@@ -40,18 +51,22 @@ class _OgrenciHomePageState extends ConsumerState<OgrenciHomePage>
   void dispose() {
     _autoTimer?.cancel();
     _pageCtrl.dispose();
+    _dotPulse.dispose();
     super.dispose();
   }
 
   void _loadAll() {
     final api = ref.read(apiClientProvider);
     setState(() {
-      _dashFuture = api.get('/ogrenci/dashboard').then((r) =>
-          Map<String, dynamic>.from(r.data));
-      _moodFuture = api.get('/mood/summary').then((r) =>
-          Map<String, dynamic>.from(r.data));
-      _bildirimFuture = api.get('/bildirim/liste', params: {'limit': 5}).then(
-          (r) => Map<String, dynamic>.from(r.data));
+      _dashFuture = api
+          .get('/ogrenci/dashboard')
+          .then((r) => Map<String, dynamic>.from(r.data));
+      _moodFuture = api
+          .get('/mood/summary')
+          .then((r) => Map<String, dynamic>.from(r.data));
+      _bildirimFuture = api
+          .get('/bildirim/liste', params: {'limit': 5})
+          .then((r) => Map<String, dynamic>.from(r.data));
     });
   }
 
@@ -61,12 +76,18 @@ class _OgrenciHomePageState extends ConsumerState<OgrenciHomePage>
     _autoTimer = Timer.periodic(const Duration(seconds: 4), (_) {
       _currentPage = (_currentPage + 1) % pageCount;
       if (_pageCtrl.hasClients) {
-        _pageCtrl.animateToPage(_currentPage,
-            duration: const Duration(milliseconds: 400),
-            curve: Curves.easeInOut);
+        _pageCtrl.animateToPage(
+          _currentPage,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.easeInOutCubic,
+        );
       }
     });
   }
+
+  // ---------------------------------------------------------------------------
+  // BUILD
+  // ---------------------------------------------------------------------------
 
   @override
   Widget build(BuildContext context) {
@@ -74,104 +95,204 @@ class _OgrenciHomePageState extends ConsumerState<OgrenciHomePage>
 
     return userAsync.when(
       data: (user) => _buildPage(context, user),
-      loading: () => const Scaffold(body: Center(child: CircularProgressIndicator())),
-      error: (e, _) => Scaffold(body: Center(child: Text('Hata: $e'))),
+      loading: () => Scaffold(
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        body: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SizedBox(
+                width: 48,
+                height: 48,
+                child: CircularProgressIndicator(
+                  strokeWidth: 3,
+                  color: AppColors.primary,
+                ),
+              ),
+              const SizedBox(height: 16),
+              Text(
+                'Yukleniyor...',
+                style: TextStyle(
+                  color: AppColors.textSecondaryLight,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      error: (e, _) => Scaffold(
+        body: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.error_outline_rounded,
+                  size: 48, color: AppColors.danger),
+              const SizedBox(height: 12),
+              Text('Bir hata olustu',
+                  style: TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.w600)),
+              const SizedBox(height: 4),
+              Text('$e',
+                  style: TextStyle(
+                      fontSize: 12, color: AppColors.textSecondaryLight)),
+            ],
+          ),
+        ),
+      ),
     );
   }
 
   Widget _buildPage(BuildContext context, AuthUser? user) {
     if (user == null) {
-      WidgetsBinding.instance.addPostFrameCallback((_) => context.go('/login'));
-      return const SizedBox();
+      WidgetsBinding.instance
+          .addPostFrameCallback((_) => context.go('/login'));
+      return const SizedBox.shrink();
     }
 
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
+      // -- APP BAR --
       appBar: AppBar(
-        title: Text('Merhaba, ${user.adSoyad.split(' ').first}'),
+        title: Text(
+          'Merhaba, ${user.adSoyad.split(' ').first}',
+          style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 20),
+        ),
         actions: [
-          // Bildirim badge
+          // Notification bell with badge
           FutureBuilder<Map<String, dynamic>>(
             future: _bildirimFuture,
             builder: (_, snap) {
               final okunmamis = (snap.data?['okunmamis'] as int?) ?? 0;
-              return Stack(
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.notifications_outlined),
-                    onPressed: () => context.push('/bildirimler'),
-                  ),
-                  if (okunmamis > 0)
-                    Positioned(
-                      right: 6, top: 6,
-                      child: Container(
-                        padding: const EdgeInsets.all(4),
-                        decoration: const BoxDecoration(
-                          color: AppColors.danger,
-                          shape: BoxShape.circle,
-                        ),
-                        child: Text('$okunmamis',
-                            style: const TextStyle(color: Colors.white,
-                                fontSize: 10, fontWeight: FontWeight.bold)),
+              return Padding(
+                padding: const EdgeInsets.only(right: 4),
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    IconButton(
+                      icon: Icon(
+                        okunmamis > 0
+                            ? Icons.notifications_active_rounded
+                            : Icons.notifications_none_rounded,
+                        size: 24,
                       ),
+                      onPressed: () => context.push('/bildirimler'),
+                      tooltip: 'Bildirimler',
                     ),
-                ],
+                    if (okunmamis > 0)
+                      Positioned(
+                        right: 8,
+                        top: 8,
+                        child: Container(
+                          width: 18,
+                          height: 18,
+                          decoration: BoxDecoration(
+                            color: AppColors.danger,
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color:
+                                  isDark ? AppColors.surfaceDark : Colors.white,
+                              width: 2,
+                            ),
+                            boxShadow: AppShadows.glow(AppColors.danger),
+                          ),
+                          child: Center(
+                            child: Text(
+                              okunmamis > 9 ? '9+' : '$okunmamis',
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 9,
+                                fontWeight: FontWeight.w800,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
               );
             },
           ),
+          // Settings
           IconButton(
-            icon: const Icon(Icons.logout),
+            icon: const Icon(Icons.settings_outlined, size: 22),
+            onPressed: () => context.push('/ayarlar'),
+            tooltip: 'Ayarlar',
+          ),
+          // Logout
+          IconButton(
+            icon: const Icon(Icons.logout_rounded, size: 22),
             onPressed: () async {
               await ref.read(authServiceProvider).logout();
               if (context.mounted) context.go('/login');
             },
+            tooltip: 'Cikis Yap',
           ),
+          const SizedBox(width: 4),
         ],
       ),
+
+      // -- BODY --
       body: RefreshIndicator(
+        color: AppColors.primary,
+        strokeWidth: 2.5,
         onRefresh: () async => _loadAll(),
         child: FutureBuilder<Map<String, dynamic>>(
           future: _dashFuture,
           builder: (ctx, snap) {
             if (snap.connectionState == ConnectionState.waiting) {
-              return const Center(child: CircularProgressIndicator());
+              return Center(
+                child: CircularProgressIndicator(
+                  strokeWidth: 3,
+                  color: AppColors.primary,
+                ),
+              );
             }
             final dash = snap.data ?? {};
             return SingleChildScrollView(
-              padding: const EdgeInsets.all(16),
-              physics: const AlwaysScrollableScrollPhysics(),
+              padding: const EdgeInsets.symmetric(
+                horizontal: AppSpacing.lg,
+                vertical: AppSpacing.md,
+              ),
+              physics: const AlwaysScrollableScrollPhysics(
+                parent: BouncingScrollPhysics(),
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // === HERO CARD ===
-                  _HeroCard(user: user),
-                  const SizedBox(height: 16),
+                  // 1. HERO BANNER
+                  _buildHeroBanner(user),
+                  const SizedBox(height: AppSpacing.xl),
 
-                  // === 4 KPI KART ===
+                  // 2. KPI ROW
                   _buildKPIRow(dash),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: AppSpacing.xxl),
 
-                  // === YAKLASAN SINAVLAR ===
+                  // 3. YAKLASAN SINAVLAR
                   _buildYaklasanSinavlar(dash),
 
-                  // === ODEV COUNTDOWN ===
+                  // 4. ODEV GERI SAYIM
                   _buildOdevCountdown(dash),
 
-                  // === SON NOTLAR KARUSEL ===
-                  _buildNotlarKarusel(dash),
-                  const SizedBox(height: 20),
+                  // 5. SON NOTLAR CAROUSEL
+                  _buildNotlarCarousel(dash),
 
-                  // === BUGUN DERSLER ===
+                  // 6. BUGUN DERSLER
                   _buildBugunDersler(dash),
 
-                  // === MOOD CHECK-IN BANNER ===
+                  // 7. MOOD CHECK-IN BANNER
                   _buildMoodBanner(),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: AppSpacing.xxl),
 
-                  // === HIZLI ERISIM GRID ===
-                  const Text('Hızlı Erişim',
-                      style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600)),
-                  const SizedBox(height: 12),
+                  // 8. HIZLI ERISIM
+                  SectionHeader(
+                    title: 'Hizli Erisim',
+                    icon: Icons.grid_view_rounded,
+                  ),
                   _buildFeatureGrid(),
+                  const SizedBox(height: AppSpacing.xxxl),
                 ],
               ),
             );
@@ -181,52 +302,96 @@ class _OgrenciHomePageState extends ConsumerState<OgrenciHomePage>
     );
   }
 
-  // ─── KPI ROW ───
+  // ===========================================================================
+  // 1. HERO BANNER
+  // ===========================================================================
+
+  Widget _buildHeroBanner(AuthUser user) {
+    return HeroBanner(
+      title: user.adSoyad,
+      subtitle: 'SmartCampus AI',
+      badge: user.role.toUpperCase(),
+      gradient: AppGradients.primary,
+    );
+  }
+
+  // ===========================================================================
+  // 2. KPI ROW — 4 cards
+  // ===========================================================================
+
   Widget _buildKPIRow(Map<String, dynamic> dash) {
     final ort = (dash['genel_ortalama'] as num?)?.toDouble() ?? 0.0;
     final dev = (dash['devamsizlik_ozursuz'] as num?)?.toInt() ?? 0;
     final odev = (dash['bekleyen_odev_sayisi'] as num?)?.toInt() ?? 0;
 
-    return Row(children: [
-      Expanded(child: _KPICard(
-        icon: Icons.grade, label: 'Ortalama',
-        value: ort.toStringAsFixed(1),
-        color: ort >= 70 ? AppColors.success : AppColors.warning,
-        onTap: () => context.push('/notes'),
-      )),
-      const SizedBox(width: 8),
-      Expanded(child: _KPICard(
-        icon: Icons.event_busy, label: 'Devamsız',
-        value: '$dev',
-        color: dev > 5 ? AppColors.danger : AppColors.success,
-        onTap: () => context.push('/attendance'),
-      )),
-      const SizedBox(width: 8),
-      Expanded(child: _KPICard(
-        icon: Icons.assignment_late, label: 'Ödev',
-        value: '$odev',
-        color: odev > 3 ? AppColors.warning : AppColors.info,
-        onTap: () => context.push('/homework'),
-      )),
-      const SizedBox(width: 8),
-      Expanded(child: FutureBuilder<Map<String, dynamic>>(
-        future: _moodFuture,
-        builder: (_, snap) {
-          final ort = (snap.data?['ortalama_seviye'] as num?)?.toDouble() ?? 0.0;
-          final emoji = ort >= 4 ? '😄' : ort >= 3 ? '🙂' : ort > 0 ? '😟' : '❓';
-          return _KPICard(
-            icon: Icons.mood, label: 'Mood',
-            value: emoji,
-            color: ort >= 4 ? AppColors.success : ort >= 3 ? AppColors.warning : AppColors.danger,
-            onTap: () => context.push('/mood'),
-            isEmoji: true,
-          );
-        },
-      )),
-    ]);
+    return Row(
+      children: [
+        Expanded(
+          child: KPICard(
+            icon: Icons.grade_rounded,
+            label: 'Ortalama',
+            value: ort.toStringAsFixed(1),
+            color: ort >= 70 ? AppColors.success : AppColors.warning,
+            onTap: () => context.push('/notes'),
+          ),
+        ),
+        const SizedBox(width: AppSpacing.sm),
+        Expanded(
+          child: KPICard(
+            icon: Icons.event_busy_rounded,
+            label: 'Devamsiz',
+            value: '$dev',
+            color: dev > 5 ? AppColors.danger : AppColors.success,
+            onTap: () => context.push('/attendance'),
+          ),
+        ),
+        const SizedBox(width: AppSpacing.sm),
+        Expanded(
+          child: KPICard(
+            icon: Icons.assignment_late_rounded,
+            label: 'Odev',
+            value: '$odev',
+            color: odev > 3 ? AppColors.warning : AppColors.info,
+            onTap: () => context.push('/homework'),
+          ),
+        ),
+        const SizedBox(width: AppSpacing.sm),
+        Expanded(
+          child: FutureBuilder<Map<String, dynamic>>(
+            future: _moodFuture,
+            builder: (_, snap) {
+              final moodOrt =
+                  (snap.data?['ortalama_seviye'] as num?)?.toDouble() ?? 0.0;
+              final emoji = moodOrt >= 4
+                  ? '\u{1F604}'
+                  : moodOrt >= 3
+                      ? '\u{1F642}'
+                      : moodOrt > 0
+                          ? '\u{1F61F}'
+                          : '\u{2753}';
+              return KPICard(
+                icon: Icons.mood_rounded,
+                label: 'Mood',
+                value: emoji,
+                color: moodOrt >= 4
+                    ? AppColors.success
+                    : moodOrt >= 3
+                        ? AppColors.warning
+                        : AppColors.danger,
+                onTap: () => context.push('/mood'),
+                isEmoji: true,
+              );
+            },
+          ),
+        ),
+      ],
+    );
   }
 
-  // ─── YAKLASAN SINAVLAR ───
+  // ===========================================================================
+  // 3. YAKLASAN SINAVLAR — horizontal scrolling cards
+  // ===========================================================================
+
   Widget _buildYaklasanSinavlar(Map<String, dynamic> dash) {
     final sinavlar = (dash['yaklasan_sinavlar'] as List?) ?? [];
     if (sinavlar.isEmpty) return const SizedBox.shrink();
@@ -234,35 +399,147 @@ class _OgrenciHomePageState extends ConsumerState<OgrenciHomePage>
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          children: [
-            const Icon(Icons.quiz, size: 20, color: AppColors.danger),
-            const SizedBox(width: 6),
-            const Text('Yaklaşan Sınavlar',
-                style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600)),
-            const Spacer(),
-            Text('${sinavlar.length} sınav',
-                style: const TextStyle(fontSize: 12, color: AppColors.textSecondaryDark)),
-          ],
+        SectionHeader(
+          title: 'Yaklasan Sinavlar',
+          icon: Icons.quiz_rounded,
+          trailing: '${sinavlar.length} sinav',
         ),
-        const SizedBox(height: 10),
         SizedBox(
-          height: 110,
+          height: 128,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
+            physics: const BouncingScrollPhysics(),
             itemCount: sinavlar.length,
             itemBuilder: (_, i) {
-              final s = sinavlar[i] as Map;
-              return _SinavCard(sinav: Map<String, dynamic>.from(s));
+              final s = Map<String, dynamic>.from(sinavlar[i] as Map);
+              return _buildSinavCard(s);
             },
           ),
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: AppSpacing.xxl),
       ],
     );
   }
 
-  // ─── ODEV COUNTDOWN ───
+  Widget _buildSinavCard(Map<String, dynamic> sinav) {
+    final tarih = sinav['tarih'] as String? ?? '';
+    final ders = sinav['ders'] as String? ?? '';
+    final baslik = sinav['baslik'] as String? ?? ders;
+    final konu = sinav['konu'] as String? ?? '';
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
+    DateTime? sinavTarih;
+    try {
+      sinavTarih = DateTime.parse(tarih);
+    } catch (_) {}
+    final kalanGun =
+        sinavTarih != null ? sinavTarih.difference(DateTime.now()).inDays : 0;
+
+    Color urgencyColor;
+    Gradient urgencyGradient;
+    if (kalanGun <= 3) {
+      urgencyColor = AppColors.danger;
+      urgencyGradient = AppGradients.danger;
+    } else if (kalanGun <= 7) {
+      urgencyColor = AppColors.warning;
+      urgencyGradient = AppGradients.gold;
+    } else {
+      urgencyColor = AppColors.info;
+      urgencyGradient = AppGradients.primary;
+    }
+
+    return Container(
+      width: 172,
+      margin: const EdgeInsets.only(right: AppSpacing.md),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            urgencyColor.withOpacity(isDark ? 0.20 : 0.10),
+            urgencyColor.withOpacity(isDark ? 0.08 : 0.03),
+          ],
+        ),
+        borderRadius: AppRadius.bLg,
+        border: Border.all(color: urgencyColor.withOpacity(0.25)),
+        boxShadow: AppShadows.soft,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Countdown badge
+            Row(
+              children: [
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  decoration: BoxDecoration(
+                    gradient: urgencyGradient,
+                    borderRadius: AppRadius.bFull,
+                    boxShadow: AppShadows.glow(urgencyColor),
+                  ),
+                  child: Text(
+                    kalanGun <= 0 ? 'BUGUN' : '$kalanGun gun',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 11,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: 0.3,
+                    ),
+                  ),
+                ),
+                const Spacer(),
+                Icon(Icons.quiz_rounded,
+                    size: 16, color: urgencyColor.withOpacity(0.6)),
+              ],
+            ),
+            const Spacer(),
+            // Ders name
+            Text(
+              baslik,
+              style: const TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+                letterSpacing: -0.2,
+              ),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            ),
+            if (konu.isNotEmpty) ...[
+              const SizedBox(height: 2),
+              Text(
+                konu,
+                style: TextStyle(
+                  fontSize: 11,
+                  color: isDark
+                      ? AppColors.textTertiaryDark
+                      : AppColors.textSecondaryLight,
+                ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ],
+            const SizedBox(height: 4),
+            Text(
+              tarih,
+              style: TextStyle(
+                fontSize: 11,
+                color: urgencyColor,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // 4. ODEV GERI SAYIM
+  // ===========================================================================
+
   Widget _buildOdevCountdown(Map<String, dynamic> dash) {
     final odevler = (dash['bekleyen_odevler'] as List?) ?? [];
     if (odevler.isEmpty) return const SizedBox.shrink();
@@ -270,455 +547,30 @@ class _OgrenciHomePageState extends ConsumerState<OgrenciHomePage>
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          children: [
-            const Icon(Icons.timer, size: 20, color: AppColors.warning),
-            const SizedBox(width: 6),
-            const Text('Ödev Geri Sayım',
-                style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600)),
-          ],
+        SectionHeader(
+          title: 'Odev Geri Sayim',
+          icon: Icons.timer_rounded,
+          trailing: '${odevler.length} odev',
         ),
-        const SizedBox(height: 10),
-        ...odevler.take(3).map((o) {
+        ...odevler.take(4).map((o) {
           final m = Map<String, dynamic>.from(o as Map);
-          return _OdevCountdownTile(odev: m);
+          return _buildOdevTile(m);
         }),
-        const SizedBox(height: 20),
+        const SizedBox(height: AppSpacing.xxl),
       ],
     );
   }
 
-  // ─── SON NOTLAR KARUSEL (PageView) ───
-  Widget _buildNotlarKarusel(Map<String, dynamic> dash) {
-    final notlar = (dash['son_notlar'] as List?) ?? [];
-    if (notlar.isEmpty) return const SizedBox.shrink();
-
-    // 3'lü gruplar halinde PageView
-    final pages = <List<Map>>[];
-    for (var i = 0; i < notlar.length; i += 3) {
-      pages.add(notlar.skip(i).take(3).map((e) =>
-          Map<String, dynamic>.from(e as Map)).toList());
-    }
-
-    WidgetsBinding.instance.addPostFrameCallback((_) => _startAutoScroll(pages.length));
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text('Son Notlar',
-            style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600)),
-        const SizedBox(height: 10),
-        SizedBox(
-          height: 100,
-          child: PageView.builder(
-            controller: _pageCtrl,
-            itemCount: pages.length,
-            onPageChanged: (i) => _currentPage = i,
-            itemBuilder: (_, pageIdx) {
-              final group = pages[pageIdx];
-              return Row(
-                children: group.map((n) {
-                  final puan = (n['puan'] as num?)?.toDouble() ?? 0.0;
-                  Color c = puan >= 85
-                      ? AppColors.success
-                      : puan >= 70
-                          ? AppColors.info
-                          : puan >= 50
-                              ? AppColors.warning
-                              : AppColors.danger;
-                  return Expanded(
-                    child: Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 4),
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: c.withOpacity(0.1),
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: c.withOpacity(0.3)),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(puan.toStringAsFixed(0),
-                              style: TextStyle(fontSize: 24,
-                                  fontWeight: FontWeight.bold, color: c)),
-                          const SizedBox(height: 4),
-                          Text(n['ders'] ?? '', textAlign: TextAlign.center,
-                              style: const TextStyle(fontSize: 10),
-                              maxLines: 2, overflow: TextOverflow.ellipsis),
-                          Text(n['not_turu'] ?? '',
-                              style: TextStyle(fontSize: 9, color: c)),
-                        ],
-                      ),
-                    ),
-                  );
-                }).toList(),
-              );
-            },
-          ),
-        ),
-        if (pages.length > 1)
-          Padding(
-            padding: const EdgeInsets.only(top: 8),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(pages.length, (i) =>
-                  AnimatedContainer(
-                    duration: const Duration(milliseconds: 300),
-                    width: _currentPage == i ? 18 : 6,
-                    height: 6,
-                    margin: const EdgeInsets.symmetric(horizontal: 3),
-                    decoration: BoxDecoration(
-                      color: _currentPage == i
-                          ? AppColors.primary
-                          : AppColors.primary.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(3),
-                    ),
-                  ),
-              ),
-            ),
-          ),
-      ],
-    );
-  }
-
-  // ─── BUGUN DERSLER ───
-  Widget _buildBugunDersler(Map<String, dynamic> dash) {
-    final dersler = (dash['bugun_dersler'] as List?) ?? [];
-    if (dersler.isEmpty) return const SizedBox.shrink();
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          children: [
-            const Icon(Icons.today, size: 20, color: AppColors.primary),
-            const SizedBox(width: 6),
-            const Text('Bugünkü Dersler',
-                style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600)),
-            const Spacer(),
-            Text('${dersler.length} ders',
-                style: const TextStyle(fontSize: 12, color: AppColors.textSecondaryDark)),
-          ],
-        ),
-        const SizedBox(height: 10),
-        SizedBox(
-          height: 60,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: dersler.length,
-            itemBuilder: (_, i) {
-              final d = dersler[i] as Map;
-              return Container(
-                width: 110,
-                margin: const EdgeInsets.only(right: 8),
-                padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: AppColors.primary.withOpacity(0.08),
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: AppColors.primary.withOpacity(0.2)),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('${d['saat']}. ders',
-                        style: const TextStyle(fontSize: 10,
-                            fontWeight: FontWeight.bold, color: AppColors.primary)),
-                    Text('${d['ders']}',
-                        style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
-                        maxLines: 1, overflow: TextOverflow.ellipsis),
-                  ],
-                ),
-              );
-            },
-          ),
-        ),
-        const SizedBox(height: 20),
-      ],
-    );
-  }
-
-  // ─── MOOD BANNER ─��─
-  Widget _buildMoodBanner() {
-    return InkWell(
-      onTap: () => context.push('/mood'),
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [
-            AppColors.mood5.withOpacity(0.15),
-            AppColors.mood3.withOpacity(0.1),
-          ]),
-          borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: AppColors.mood5.withOpacity(0.3)),
-        ),
-        child: Row(children: [
-          const Text('😊', style: TextStyle(fontSize: 32)),
-          const SizedBox(width: 12),
-          Expanded(child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text('Bugün nasıl hissediyorsun?',
-                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-              Text('5 saniyede işaretle — gizli, sadece rehber görür',
-                  style: TextStyle(fontSize: 11, color: Colors.grey[600])),
-            ],
-          )),
-          const Icon(Icons.arrow_forward_ios, size: 16,
-              color: AppColors.textSecondaryDark),
-        ]),
-      ),
-    );
-  }
-
-  // ─── FEATURE GRID ───
-  Widget _buildFeatureGrid() {
-    return GridView.count(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      crossAxisCount: 2,
-      crossAxisSpacing: 12, mainAxisSpacing: 12,
-      childAspectRatio: 1.4,
-      children: [
-        _FeatureCard(icon: Icons.assignment_late, title: 'Günlük İşler',
-            subtitle: 'Bugün devamsızlar', color: const Color(0xFFDC2626),
-            onTap: () => context.push('/gunluk-isler')),
-        _FeatureCard(icon: Icons.grade, title: 'Notlarım',
-            subtitle: 'Ders ortalamaları', color: AppColors.primary,
-            onTap: () => context.push('/notes')),
-        _FeatureCard(icon: Icons.assignment, title: 'Ödevlerim',
-            subtitle: 'Bekleyen + teslim', color: AppColors.gold,
-            onTap: () => context.push('/homework')),
-        _FeatureCard(icon: Icons.calendar_today, title: 'Devamsızlık',
-            subtitle: 'Bu dönem', color: AppColors.warning,
-            onTap: () => context.push('/attendance')),
-        _FeatureCard(icon: Icons.chat, title: 'Mesajlar',
-            subtitle: 'Gelen / Giden', color: AppColors.info,
-            onTap: () => context.push('/messages')),
-        _FeatureCard(icon: Icons.translate, title: 'Dil Gelişimi',
-            subtitle: '5 dil · 104+ ders', color: AppColors.info,
-            onTap: () => context.push('/dil-gelisimi')),
-        _FeatureCard(icon: Icons.workspace_premium, title: 'KDG Premium',
-            subtitle: 'CEFR İng + Alm', color: const Color(0xFF7C3AED),
-            onTap: () => context.push('/kdg-premium')),
-        _FeatureCard(icon: Icons.shield, title: 'İhbar Hattı',
-            subtitle: 'Anonim bildirim', color: AppColors.danger,
-            onTap: () => context.push('/ihbar')),
-        _FeatureCard(icon: Icons.calendar_month, title: 'Takvim',
-            subtitle: 'Etkinlik + sınav', color: AppColors.gold,
-            onTap: () => context.push('/takvim')),
-        _FeatureCard(icon: Icons.menu_book, title: 'Ders Programı',
-            subtitle: 'Sınıf/gün bazlı', color: AppColors.info,
-            onTap: () => context.push('/yonetici/ders-programi')),
-        _FeatureCard(icon: Icons.access_time, title: 'Zaman Çizelgesi',
-            subtitle: 'Ders/teneffüs', color: AppColors.warning,
-            onTap: () => context.push('/yonetici/zaman-cizelgesi')),
-        _FeatureCard(icon: Icons.campaign, title: 'Duyuru & Yemek',
-            subtitle: 'Okul duyuruları', color: AppColors.success,
-            onTap: () => context.push('/duyuru-yemek')),
-        _FeatureCard(icon: Icons.lightbulb, title: 'Günün Bilgisi',
-            subtitle: 'Her gün yeni bilgi', color: AppColors.gold,
-            onTap: () => context.push('/gunun-bilgisi')),
-        _FeatureCard(icon: Icons.extension, title: 'Zeka Oyunları',
-            subtitle: 'Hafıza + Sudoku', color: const Color(0xFFEC4899),
-            onTap: () => context.push('/zeka-oyunlari')),
-        _FeatureCard(icon: Icons.local_library, title: 'Dijital Kütüphane',
-            subtitle: 'YouTube + Lab + Müze', color: const Color(0xFF5D4037),
-            onTap: () => context.push('/dijital-kutuphane')),
-        _FeatureCard(icon: Icons.emoji_events, title: 'Bilgi Yarışmaları',
-            subtitle: '4 tür · 3700+ soru', color: const Color(0xFF7C3AED),
-            onTap: () => context.push('/bilgi-yarismasi-koleksiyon')),
-        _FeatureCard(icon: Icons.calculate, title: 'Matematik Köyü',
-            subtitle: '6 oyun · formüller', color: const Color(0xFF6366F1),
-            onTap: () => context.push('/matematik-koyu')),
-        _FeatureCard(icon: Icons.train, title: 'AI Treni',
-            subtitle: '12 vagon · quiz', color: const Color(0xFF8B5CF6),
-            onTap: () => context.push('/ai-treni')),
-        _FeatureCard(icon: Icons.quiz, title: 'Online Sınav',
-            subtitle: 'Mobilde çöz', color: AppColors.warning,
-            onTap: () => context.push('/online-sinav')),
-        _FeatureCard(icon: Icons.emoji_events, title: 'Koçluk',
-            subtitle: 'Hedef + gelişim', color: AppColors.gold,
-            onTap: () => context.push('/kocluk')),
-        _FeatureCard(icon: Icons.smart_toy, title: 'Smarti AI',
-            subtitle: 'Asistan', color: AppColors.primary,
-            onTap: () => context.push('/smarti')),
-        _FeatureCard(icon: Icons.analytics, title: 'Sınav Sonuçlarım',
-            subtitle: 'Yazılı + deneme', color: const Color(0xFF8B5CF6),
-            onTap: () => context.push('/ogrenci/sinav-sonuclari')),
-        _FeatureCard(icon: Icons.warning_amber, title: 'Kazanım Borçlarım',
-            subtitle: 'Eksik kazanımlar', color: const Color(0xFFF97316),
-            onTap: () => context.push('/ogrenci/kazanim-borclari')),
-        _FeatureCard(icon: Icons.replay, title: 'Telafi Görevleri',
-            subtitle: 'Quiz + pekiştirme', color: const Color(0xFFEF4444),
-            onTap: () => context.push('/ogrenci/telafi')),
-        _FeatureCard(icon: Icons.book, title: 'Öğrenci Defterim',
-            subtitle: 'Kişisel notlar', color: const Color(0xFF14B8A6),
-            onTap: () => context.push('/ogrenci/defterim')),
-        _FeatureCard(icon: Icons.gps_fixed, title: 'KYT Soruları',
-            subtitle: 'Kazanım pekiştir', color: const Color(0xFF0EA5E9),
-            onTap: () => context.push('/bilgi-yarismasi-koleksiyon')),
-        _FeatureCard(icon: Icons.palette, title: 'Sanat Sokağı',
-            subtitle: 'Görsel sanatlar', color: const Color(0xFFEC4899),
-            onTap: () => context.push('/ogrenci/sanat-sokagi')),
-        _FeatureCard(icon: Icons.computer, title: 'Bilişim Vadisi',
-            subtitle: 'Kodlama + dijital', color: const Color(0xFF6366F1),
-            onTap: () => context.push('/ogrenci/bilisim-vadisi')),
-      ],
-    );
-  }
-}
-
-
-// ═══════════════════════════════════════════════════════════
-// HERO CARD
-// ═══════════════════════════════════════════════════════════
-
-class _HeroCard extends StatelessWidget {
-  final AuthUser user;
-  const _HeroCard({required this.user});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          begin: Alignment.topLeft, end: Alignment.bottomRight,
-          colors: [AppColors.primary, AppColors.primaryDark],
-        ),
-        borderRadius: BorderRadius.circular(16),
-        boxShadow: [
-          BoxShadow(color: AppColors.primary.withOpacity(0.3),
-              blurRadius: 16, offset: const Offset(0, 6)),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(children: [
-            const Icon(Icons.school, color: Colors.white, size: 28),
-            const SizedBox(width: 10),
-            const Text('SmartCampus AI',
-                style: TextStyle(color: Colors.white, fontSize: 16,
-                    fontWeight: FontWeight.w600)),
-            const Spacer(),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-              decoration: BoxDecoration(
-                color: AppColors.gold.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Text(user.role.toUpperCase(),
-                  style: const TextStyle(color: AppColors.gold, fontSize: 10,
-                      fontWeight: FontWeight.bold, letterSpacing: 1.2)),
-            ),
-          ]),
-          const SizedBox(height: 12),
-          Text(user.adSoyad,
-              style: const TextStyle(color: Colors.white, fontSize: 22,
-                  fontWeight: FontWeight.bold)),
-        ],
-      ),
-    );
-  }
-}
-
-
-// ════════════════════════════��══════════════════════════════
-// SINAV CARD (Countdown)
-// ═════���═══════════════════���═════════════════════════��═══════
-
-class _SinavCard extends StatelessWidget {
-  final Map<String, dynamic> sinav;
-  const _SinavCard({required this.sinav});
-
-  @override
-  Widget build(BuildContext context) {
-    final tarih = sinav['tarih'] as String? ?? '';
-    final ders = sinav['ders'] as String? ?? '';
-    final baslik = sinav['baslik'] as String? ?? ders;
-    final konu = sinav['konu'] as String? ?? '';
-
-    // Geri sayım
-    DateTime? sinavTarih;
-    try { sinavTarih = DateTime.parse(tarih); } catch (_) {}
-    final kalanGun = sinavTarih != null
-        ? sinavTarih.difference(DateTime.now()).inDays
-        : 0;
-
-    Color acil = kalanGun <= 3
-        ? AppColors.danger
-        : kalanGun <= 7
-            ? AppColors.warning
-            : AppColors.info;
-
-    return Container(
-      width: 160,
-      margin: const EdgeInsets.only(right: 10),
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft, end: Alignment.bottomRight,
-          colors: [acil.withOpacity(0.15), acil.withOpacity(0.05)],
-        ),
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: acil.withOpacity(0.4)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                decoration: BoxDecoration(
-                  color: acil.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                child: Text(
-                  kalanGun <= 0 ? 'BUGÜN!' : '$kalanGun gün',
-                  style: TextStyle(color: acil, fontSize: 11,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-              const Spacer(),
-              Icon(Icons.quiz, size: 16, color: acil),
-            ],
-          ),
-          const Spacer(),
-          Text(baslik, style: const TextStyle(fontSize: 13,
-              fontWeight: FontWeight.w600),
-              maxLines: 1, overflow: TextOverflow.ellipsis),
-          if (konu.isNotEmpty)
-            Text(konu, style: TextStyle(fontSize: 10,
-                color: Colors.grey[600]),
-                maxLines: 1, overflow: TextOverflow.ellipsis),
-          Text(tarih, style: TextStyle(fontSize: 10, color: acil,
-              fontWeight: FontWeight.w500)),
-        ],
-      ),
-    );
-  }
-}
-
-
-// ═══════════════════════════���═══════════════════════════════
-// ODEV COUNTDOWN TILE
-// ═══════════════════════════════════════════════════════════
-
-class _OdevCountdownTile extends StatelessWidget {
-  final Map<String, dynamic> odev;
-  const _OdevCountdownTile({required this.odev});
-
-  @override
-  Widget build(BuildContext context) {
+  Widget _buildOdevTile(Map<String, dynamic> odev) {
     final baslik = odev['baslik'] as String? ?? '';
     final ders = odev['ders'] as String? ?? '';
     final teslim = odev['teslim_tarihi'] as String? ?? '';
+    final isDark = Theme.of(context).brightness == Brightness.dark;
 
     DateTime? teslimTarih;
-    try { teslimTarih = DateTime.parse(teslim); } catch (_) {}
+    try {
+      teslimTarih = DateTime.parse(teslim);
+    } catch (_) {}
     final kalanGun = teslimTarih != null
         ? teslimTarih.difference(DateTime.now()).inDays
         : 99;
@@ -726,143 +578,647 @@ class _OdevCountdownTile extends StatelessWidget {
         ? teslimTarih.difference(DateTime.now()).inHours % 24
         : 0;
 
-    Color c = kalanGun <= 1
-        ? AppColors.danger
-        : kalanGun <= 3
-            ? AppColors.warning
-            : AppColors.info;
+    Color borderColor;
+    if (kalanGun <= 1) {
+      borderColor = AppColors.danger;
+    } else if (kalanGun <= 3) {
+      borderColor = AppColors.warning;
+    } else {
+      borderColor = AppColors.info;
+    }
 
     return Container(
-      margin: const EdgeInsets.only(bottom: 8),
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+      margin: const EdgeInsets.only(bottom: AppSpacing.sm),
       decoration: BoxDecoration(
-        color: c.withOpacity(0.08),
-        borderRadius: BorderRadius.circular(12),
-        border: Border(left: BorderSide(color: c, width: 4)),
-      ),
-      child: Row(
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(baslik.isNotEmpty ? baslik : ders,
-                    style: const TextStyle(fontSize: 13,
-                        fontWeight: FontWeight.w600),
-                    maxLines: 1, overflow: TextOverflow.ellipsis),
-                Text(ders, style: TextStyle(fontSize: 11,
-                    color: Colors.grey[600])),
-              ],
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-            decoration: BoxDecoration(
-              color: c.withOpacity(0.15),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: Text(
-              kalanGun <= 0
-                  ? 'BUGÜN!'
-                  : kalanGun == 1
-                      ? '${kalanSaat}s kaldı'
-                      : '$kalanGun gün',
-              style: TextStyle(color: c, fontSize: 12,
-                  fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-
-// ═══════════════════════════════════════════════════════════
-// YARDIMCI WIDGET'LAR
-// ═══════���══════════════════════════════════════════���════════
-
-class _KPICard extends StatelessWidget {
-  final IconData icon;
-  final String label;
-  final String value;
-  final Color color;
-  final VoidCallback onTap;
-  final bool isEmoji;
-  const _KPICard({required this.icon, required this.label, required this.value,
-                  required this.color, required this.onTap, this.isEmoji = false});
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(12),
-      child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
-        decoration: BoxDecoration(
-          color: color.withOpacity(0.1),
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: color.withOpacity(0.3)),
+        color: isDark
+            ? borderColor.withOpacity(0.06)
+            : borderColor.withOpacity(0.04),
+        borderRadius: AppRadius.bMd,
+        border: Border(
+          left: BorderSide(color: borderColor, width: 4),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        boxShadow: AppShadows.soft,
+      ),
+      child: Padding(
+        padding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        child: Row(
           children: [
-            if (isEmoji)
-              Text(value, style: const TextStyle(fontSize: 22))
-            else
-              Text(value, style: TextStyle(fontSize: 22,
-                  fontWeight: FontWeight.bold, color: color)),
-            const SizedBox(height: 4),
-            Text(label, style: const TextStyle(fontSize: 10),
-                textAlign: TextAlign.center),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-
-class _FeatureCard extends StatelessWidget {
-  final IconData icon;
-  final String title;
-  final String subtitle;
-  final Color color;
-  final VoidCallback onTap;
-  const _FeatureCard({required this.icon, required this.title,
-                      required this.subtitle, required this.color, required this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(14),
-      child: Container(
-        padding: const EdgeInsets.all(14),
-        decoration: BoxDecoration(
-          color: Theme.of(context).cardColor,
-          borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: color.withOpacity(0.3)),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+            // Icon
             Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: color.withOpacity(0.15),
-                borderRadius: BorderRadius.circular(10),
+                color: borderColor.withOpacity(0.10),
+                borderRadius: AppRadius.bSm,
               ),
-              child: Icon(icon, color: color, size: 22),
+              child: Icon(Icons.assignment_rounded,
+                  size: 18, color: borderColor),
             ),
-            const Spacer(),
-            Text(title, style: const TextStyle(fontSize: 13,
-                fontWeight: FontWeight.w600)),
-            Text(subtitle, style: TextStyle(fontSize: 11,
-                color: Theme.of(context).textTheme.bodySmall?.color)),
+            const SizedBox(width: 12),
+            // Content
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    baslik.isNotEmpty ? baslik : ders,
+                    style: const TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w700,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    ders,
+                    style: TextStyle(
+                      fontSize: 11,
+                      color: isDark
+                          ? AppColors.textTertiaryDark
+                          : AppColors.textSecondaryLight,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            // Countdown badge
+            Container(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+              decoration: BoxDecoration(
+                color: borderColor.withOpacity(0.12),
+                borderRadius: AppRadius.bFull,
+                border: Border.all(color: borderColor.withOpacity(0.2)),
+              ),
+              child: Text(
+                kalanGun <= 0
+                    ? 'BUGUN'
+                    : kalanGun == 1
+                        ? '${kalanSaat}s kaldi'
+                        : '$kalanGun gun',
+                style: TextStyle(
+                  color: borderColor,
+                  fontSize: 11,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+            ),
           ],
         ),
       ),
+    );
+  }
+
+  // ===========================================================================
+  // 5. SON NOTLAR — Auto-scrolling PageView (3 notes per page)
+  // ===========================================================================
+
+  Widget _buildNotlarCarousel(Map<String, dynamic> dash) {
+    final notlar = (dash['son_notlar'] as List?) ?? [];
+    if (notlar.isEmpty) return const SizedBox.shrink();
+
+    // Group notes, 3 per page
+    final pages = <List<Map<String, dynamic>>>[];
+    for (var i = 0; i < notlar.length; i += 3) {
+      pages.add(notlar
+          .skip(i)
+          .take(3)
+          .map((e) => Map<String, dynamic>.from(e as Map))
+          .toList());
+    }
+
+    WidgetsBinding.instance
+        .addPostFrameCallback((_) => _startAutoScroll(pages.length));
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SectionHeader(
+          title: 'Son Notlar',
+          icon: Icons.analytics_rounded,
+          trailing: '${notlar.length} not',
+        ),
+        SizedBox(
+          height: 116,
+          child: PageView.builder(
+            controller: _pageCtrl,
+            itemCount: pages.length,
+            onPageChanged: (i) => setState(() => _currentPage = i),
+            itemBuilder: (_, pageIdx) {
+              final group = pages[pageIdx];
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 2),
+                child: Row(
+                  children: group.map((n) {
+                    final puan =
+                        (n['puan'] as num?)?.toDouble() ?? 0.0;
+                    Color c;
+                    IconData scoreIcon;
+                    if (puan >= 85) {
+                      c = AppColors.success;
+                      scoreIcon = Icons.trending_up_rounded;
+                    } else if (puan >= 70) {
+                      c = AppColors.info;
+                      scoreIcon = Icons.trending_flat_rounded;
+                    } else if (puan >= 50) {
+                      c = AppColors.warning;
+                      scoreIcon = Icons.trending_down_rounded;
+                    } else {
+                      c = AppColors.danger;
+                      scoreIcon = Icons.trending_down_rounded;
+                    }
+                    final isDark =
+                        Theme.of(context).brightness == Brightness.dark;
+
+                    return Expanded(
+                      child: GlassCard(
+                        margin: const EdgeInsets.symmetric(
+                            horizontal: 4),
+                        padding: const EdgeInsets.all(12),
+                        borderRadius: AppRadius.md,
+                        child: Column(
+                          mainAxisAlignment:
+                              MainAxisAlignment.center,
+                          children: [
+                            // Score
+                            Row(
+                              mainAxisAlignment:
+                                  MainAxisAlignment.center,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  puan.toStringAsFixed(0),
+                                  style: TextStyle(
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.w900,
+                                    color: c,
+                                    letterSpacing: -1,
+                                  ),
+                                ),
+                                const SizedBox(width: 4),
+                                Icon(scoreIcon,
+                                    size: 16, color: c),
+                              ],
+                            ),
+                            const SizedBox(height: 6),
+                            // Ders
+                            Text(
+                              n['ders'] ?? '',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 11,
+                                fontWeight: FontWeight.w600,
+                                color: isDark
+                                    ? AppColors.textPrimaryDark
+                                    : AppColors.textPrimaryLight,
+                              ),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            const SizedBox(height: 2),
+                            // Not turu
+                            Text(
+                              n['not_turu'] ?? '',
+                              style: TextStyle(
+                                fontSize: 9,
+                                fontWeight: FontWeight.w500,
+                                color: c,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  }).toList(),
+                ),
+              );
+            },
+          ),
+        ),
+        // Animated page dots
+        if (pages.length > 1)
+          Padding(
+            padding: const EdgeInsets.only(top: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: List.generate(
+                pages.length,
+                (i) => AnimatedContainer(
+                  duration: const Duration(milliseconds: 350),
+                  curve: Curves.easeInOutCubic,
+                  width: _currentPage == i ? 22 : 6,
+                  height: 6,
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 3),
+                  decoration: BoxDecoration(
+                    gradient: _currentPage == i
+                        ? AppGradients.primary
+                        : null,
+                    color: _currentPage == i
+                        ? null
+                        : AppColors.primary.withOpacity(0.15),
+                    borderRadius: AppRadius.bFull,
+                    boxShadow: _currentPage == i
+                        ? AppShadows.glow(AppColors.primary)
+                        : AppShadows.none,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        const SizedBox(height: AppSpacing.xxl),
+      ],
+    );
+  }
+
+  // ===========================================================================
+  // 6. BUGUN DERSLER — horizontal chips
+  // ===========================================================================
+
+  Widget _buildBugunDersler(Map<String, dynamic> dash) {
+    final dersler = (dash['bugun_dersler'] as List?) ?? [];
+    if (dersler.isEmpty) return const SizedBox.shrink();
+
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SectionHeader(
+          title: 'Bugunku Dersler',
+          icon: Icons.today_rounded,
+          trailing: '${dersler.length} ders',
+        ),
+        SizedBox(
+          height: 52,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            physics: const BouncingScrollPhysics(),
+            itemCount: dersler.length,
+            itemBuilder: (_, i) {
+              final d = dersler[i] as Map;
+              final colors = [
+                AppColors.primary,
+                AppColors.info,
+                AppColors.success,
+                AppColors.gold,
+                AppColors.danger,
+                const Color(0xFF8B5CF6),
+                const Color(0xFFEC4899),
+              ];
+              final chipColor = colors[i % colors.length];
+
+              return Container(
+                margin: const EdgeInsets.only(right: AppSpacing.sm),
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 16, vertical: 10),
+                decoration: BoxDecoration(
+                  color: chipColor.withOpacity(isDark ? 0.12 : 0.08),
+                  borderRadius: AppRadius.bFull,
+                  border: Border.all(
+                      color: chipColor.withOpacity(0.20)),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      width: 24,
+                      height: 24,
+                      decoration: BoxDecoration(
+                        color: chipColor.withOpacity(0.15),
+                        shape: BoxShape.circle,
+                      ),
+                      child: Center(
+                        child: Text(
+                          '${d['saat']}',
+                          style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.w800,
+                            color: chipColor,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Text(
+                      '${d['ders']}',
+                      style: TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                        color: isDark
+                            ? AppColors.textPrimaryDark
+                            : AppColors.textPrimaryLight,
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
+        ),
+        const SizedBox(height: AppSpacing.xxl),
+      ],
+    );
+  }
+
+  // ===========================================================================
+  // 7. MOOD CHECK-IN BANNER
+  // ===========================================================================
+
+  Widget _buildMoodBanner() {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
+    return GestureDetector(
+      onTap: () => context.push('/mood'),
+      child: Container(
+        padding: const EdgeInsets.all(18),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              AppColors.mood5.withOpacity(isDark ? 0.15 : 0.10),
+              AppColors.mood3.withOpacity(isDark ? 0.10 : 0.06),
+              AppColors.mood4.withOpacity(isDark ? 0.08 : 0.04),
+            ],
+          ),
+          borderRadius: AppRadius.bLg,
+          border: Border.all(
+              color: AppColors.mood5.withOpacity(isDark ? 0.25 : 0.20)),
+          boxShadow: AppShadows.soft,
+        ),
+        child: Row(
+          children: [
+            // Emoji with glow
+            Container(
+              width: 52,
+              height: 52,
+              decoration: BoxDecoration(
+                color: AppColors.mood5.withOpacity(0.12),
+                shape: BoxShape.circle,
+                boxShadow: AppShadows.glow(AppColors.mood5),
+              ),
+              child: const Center(
+                child: Text('\u{1F60A}', style: TextStyle(fontSize: 28)),
+              ),
+            ),
+            const SizedBox(width: 14),
+            // Text
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Bugun nasil hissediyorsun?',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 15,
+                      letterSpacing: -0.2,
+                    ),
+                  ),
+                  const SizedBox(height: 3),
+                  Text(
+                    '5 saniyede isaretle \u2014 gizli, sadece rehber gorur',
+                    style: TextStyle(
+                      fontSize: 11,
+                      color: isDark
+                          ? AppColors.textTertiaryDark
+                          : AppColors.textSecondaryLight,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            // Arrow
+            Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: AppColors.mood5.withOpacity(0.12),
+                shape: BoxShape.circle,
+              ),
+              child: Icon(
+                Icons.arrow_forward_ios_rounded,
+                size: 14,
+                color: AppColors.mood5,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // 8. HIZLI ERISIM — Feature Grid
+  // ===========================================================================
+
+  Widget _buildFeatureGrid() {
+    return GridView.count(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      crossAxisCount: 2,
+      crossAxisSpacing: AppSpacing.md,
+      mainAxisSpacing: AppSpacing.md,
+      childAspectRatio: 1.4,
+      children: [
+        FeatureTile(
+          icon: Icons.assignment_late_rounded,
+          title: 'Gunluk Isler',
+          subtitle: 'Bugun devamsizlar',
+          color: const Color(0xFFDC2626),
+          onTap: () => context.push('/gunluk-isler'),
+        ),
+        FeatureTile(
+          icon: Icons.grade_rounded,
+          title: 'Notlarim',
+          subtitle: 'Ders ortalamalari',
+          color: AppColors.primary,
+          onTap: () => context.push('/notes'),
+        ),
+        FeatureTile(
+          icon: Icons.assignment_rounded,
+          title: 'Odevlerim',
+          subtitle: 'Bekleyen + teslim',
+          color: AppColors.gold,
+          onTap: () => context.push('/homework'),
+        ),
+        FeatureTile(
+          icon: Icons.calendar_today_rounded,
+          title: 'Devamsizlik',
+          subtitle: 'Bu donem',
+          color: AppColors.warning,
+          onTap: () => context.push('/attendance'),
+        ),
+        FeatureTile(
+          icon: Icons.chat_rounded,
+          title: 'Mesajlar',
+          subtitle: 'Gelen / Giden',
+          color: AppColors.info,
+          onTap: () => context.push('/messages'),
+        ),
+        FeatureTile(
+          icon: Icons.translate_rounded,
+          title: 'Dil Gelisimi',
+          subtitle: '5 dil - 104+ ders',
+          color: AppColors.info,
+          onTap: () => context.push('/dil-gelisimi'),
+        ),
+        FeatureTile(
+          icon: Icons.workspace_premium_rounded,
+          title: 'KDG Premium',
+          subtitle: 'CEFR Ing + Alm',
+          color: const Color(0xFF7C3AED),
+          onTap: () => context.push('/kdg-premium'),
+        ),
+        FeatureTile(
+          icon: Icons.shield_rounded,
+          title: 'Ihbar Hatti',
+          subtitle: 'Anonim bildirim',
+          color: AppColors.danger,
+          onTap: () => context.push('/ihbar'),
+        ),
+        FeatureTile(
+          icon: Icons.calendar_month_rounded,
+          title: 'Takvim',
+          subtitle: 'Etkinlik + sinav',
+          color: AppColors.gold,
+          onTap: () => context.push('/takvim'),
+        ),
+        FeatureTile(
+          icon: Icons.menu_book_rounded,
+          title: 'Ders Programi',
+          subtitle: 'Sinif/gun bazli',
+          color: AppColors.info,
+          onTap: () => context.push('/yonetici/ders-programi'),
+        ),
+        FeatureTile(
+          icon: Icons.access_time_rounded,
+          title: 'Zaman Cizelgesi',
+          subtitle: 'Ders/teneffus',
+          color: AppColors.warning,
+          onTap: () => context.push('/yonetici/zaman-cizelgesi'),
+        ),
+        FeatureTile(
+          icon: Icons.campaign_rounded,
+          title: 'Duyuru & Yemek',
+          subtitle: 'Okul duyurulari',
+          color: AppColors.success,
+          onTap: () => context.push('/duyuru-yemek'),
+        ),
+        FeatureTile(
+          icon: Icons.lightbulb_rounded,
+          title: 'Gunun Bilgisi',
+          subtitle: 'Her gun yeni bilgi',
+          color: AppColors.gold,
+          onTap: () => context.push('/gunun-bilgisi'),
+        ),
+        FeatureTile(
+          icon: Icons.extension_rounded,
+          title: 'Zeka Oyunlari',
+          subtitle: 'Hafiza + Sudoku',
+          color: const Color(0xFFEC4899),
+          onTap: () => context.push('/zeka-oyunlari'),
+        ),
+        FeatureTile(
+          icon: Icons.local_library_rounded,
+          title: 'Dijital Kutuphane',
+          subtitle: 'YouTube + Lab + Muze',
+          color: const Color(0xFF5D4037),
+          onTap: () => context.push('/dijital-kutuphane'),
+        ),
+        FeatureTile(
+          icon: Icons.emoji_events_rounded,
+          title: 'Bilgi Yarismasi',
+          subtitle: '4 tur - 3700+ soru',
+          color: const Color(0xFF7C3AED),
+          onTap: () => context.push('/bilgi-yarismasi-koleksiyon'),
+        ),
+        FeatureTile(
+          icon: Icons.calculate_rounded,
+          title: 'Matematik Koyu',
+          subtitle: '6 oyun - formuller',
+          color: const Color(0xFF6366F1),
+          onTap: () => context.push('/matematik-koyu'),
+        ),
+        FeatureTile(
+          icon: Icons.train_rounded,
+          title: 'AI Treni',
+          subtitle: '12 vagon - quiz',
+          color: const Color(0xFF8B5CF6),
+          onTap: () => context.push('/ai-treni'),
+        ),
+        FeatureTile(
+          icon: Icons.quiz_rounded,
+          title: 'Online Sinav',
+          subtitle: 'Mobilde coz',
+          color: AppColors.warning,
+          onTap: () => context.push('/online-sinav'),
+        ),
+        FeatureTile(
+          icon: Icons.emoji_events_rounded,
+          title: 'Kocluk',
+          subtitle: 'Hedef + gelisim',
+          color: AppColors.gold,
+          onTap: () => context.push('/kocluk'),
+        ),
+        FeatureTile(
+          icon: Icons.smart_toy_rounded,
+          title: 'Smarti AI',
+          subtitle: 'Asistan',
+          color: AppColors.primary,
+          onTap: () => context.push('/smarti'),
+        ),
+        FeatureTile(
+          icon: Icons.analytics_rounded,
+          title: 'Sinav Sonuclari',
+          subtitle: 'Yazili + deneme',
+          color: const Color(0xFF8B5CF6),
+          onTap: () => context.push('/ogrenci/sinav-sonuclari'),
+        ),
+        FeatureTile(
+          icon: Icons.warning_amber_rounded,
+          title: 'Kazanim Borclari',
+          subtitle: 'Eksik kazanimlar',
+          color: const Color(0xFFF97316),
+          onTap: () => context.push('/ogrenci/kazanim-borclari'),
+        ),
+        FeatureTile(
+          icon: Icons.replay_rounded,
+          title: 'Telafi Gorevleri',
+          subtitle: 'Quiz + pekistirme',
+          color: const Color(0xFFEF4444),
+          onTap: () => context.push('/ogrenci/telafi'),
+        ),
+        FeatureTile(
+          icon: Icons.book_rounded,
+          title: 'Defterim',
+          subtitle: 'Kisisel notlar',
+          color: const Color(0xFF14B8A6),
+          onTap: () => context.push('/ogrenci/defterim'),
+        ),
+        FeatureTile(
+          icon: Icons.gps_fixed_rounded,
+          title: 'KYT Sorulari',
+          subtitle: 'Kazanim pekistir',
+          color: const Color(0xFF0EA5E9),
+          onTap: () => context.push('/bilgi-yarismasi-koleksiyon'),
+        ),
+        FeatureTile(
+          icon: Icons.palette_rounded,
+          title: 'Sanat Sokagi',
+          subtitle: 'Gorsel sanatlar',
+          color: const Color(0xFFEC4899),
+          onTap: () => context.push('/ogrenci/sanat-sokagi'),
+        ),
+        FeatureTile(
+          icon: Icons.computer_rounded,
+          title: 'Bilisim Vadisi',
+          subtitle: 'Kodlama + dijital',
+          color: const Color(0xFF6366F1),
+          onTap: () => context.push('/ogrenci/bilisim-vadisi'),
+        ),
+      ],
     );
   }
 }
