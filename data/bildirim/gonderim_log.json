@@ -1,0 +1,14 @@
+[
+  {
+    "id": "c67d8d8803e5431fb283044c70045356",
+    "tip": "sms",
+    "tarih": "2026-04-22T14:41:47.113985",
+    "alici": "05551234567",
+    "sablon": "test",
+    "mesaj": "Test mesaji",
+    "basarili": false,
+    "message_id": null,
+    "hata": "SMS_API_KEY ortam degiskeni ayarlanmamis.",
+    "provider": "netgsm"
+  }
+]

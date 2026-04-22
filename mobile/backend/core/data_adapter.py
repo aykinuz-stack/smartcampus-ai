@@ -149,6 +149,11 @@ class DataPaths:
     # Servis
     SERVIS = "akademik/servis_bilgileri.json"
 
+    # Odeme
+    ODEME_PLANLAR = "odeme/taksit_planlari.json"
+    ODEME_KAYITLAR = "odeme/odeme_kayitlari.json"
+    ODEME_UCRETLER = "odeme/ucret_kalemleri.json"
+
     # Kurum
     POZISYONLAR = "kurumsal/pozisyonlar.json"
     DUYURULAR = "akademik/etkinlik_duyurular.json"

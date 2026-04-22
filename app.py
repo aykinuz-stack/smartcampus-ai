@@ -123,6 +123,8 @@ _MODUL_GRUPLARI = [
             ("Sosyal Medya Yonetimi",             "📱"),
             ("Insan Kaynaklari Yonetimi",         "👥"),
             ("Butce Gelir Gider",                 "💰"),
+            ("Odeme Takip",                       "💳"),
+            ("Veli-Ogretmen Gorusme",             "🤝"),
             ("Randevu ve Ziyaretci",           "📅"),
             ("Toplanti ve Kurullar",            "🤝"),
             ("Kurum Hizmetleri",               "🏛️"),
@@ -136,6 +138,8 @@ _MODUL_GRUPLARI = [
             ("Akademik Takip",                 "📚"),
             ("Olcme ve Degerlendirme",         "📝"),
             ("Rehberlik",                      "🧠"),
+            ("Analitik Dashboard",              "📊"),
+            ("Sertifika Uretici",              "🏆"),
             ("Okul Sagligi Takip",             "🏥"),
             ("Sosyal Etkinlik ve Kulupler",    "🎭"),
             ("Kutuphane",                      "📖"),
@@ -854,6 +858,18 @@ def _route(page: str):
     elif page == "Butce Gelir Gider":
         from views.butce_gelir_gider import render_butce_gelir_gider
         render_butce_gelir_gider()
+    elif page == "Odeme Takip":
+        from views.odeme_takip import render_odeme_takip
+        render_odeme_takip()
+    elif page == "Veli-Ogretmen Gorusme":
+        from views.veli_ogretmen_gorusme import render_veli_ogretmen_gorusme
+        render_veli_ogretmen_gorusme()
+    elif page == "Analitik Dashboard":
+        from views.analitik_dashboard import render_analitik_dashboard
+        render_analitik_dashboard()
+    elif page == "Sertifika Uretici":
+        from views.sertifika_uretici import render_sertifika_uretici
+        render_sertifika_uretici()
     elif page == "Kutuphane":
         from views.kutuphane import render_kutuphane
         render_kutuphane()

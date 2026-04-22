@@ -17,7 +17,7 @@ from fastapi.responses import JSONResponse
 from .core.config import settings
 from .core.data_adapter import DataAdapter, DataPaths
 from .core.deps import get_current_user, get_data_adapter
-from .routers import auth, mood, ogrenci, messaging, ihbar, smarti, veli, ogretmen, rehber, yonetici, quiz_koleksiyon, bildirim
+from .routers import auth, mood, ogrenci, messaging, ihbar, smarti, veli, ogretmen, rehber, yonetici, quiz_koleksiyon, bildirim, odeme
 
 
 @asynccontextmanager
@@ -568,6 +568,7 @@ app.include_router(rehber.router, prefix=settings.API_PREFIX)
 app.include_router(yonetici.router, prefix=settings.API_PREFIX)
 app.include_router(quiz_koleksiyon.router, prefix=settings.API_PREFIX)
 app.include_router(bildirim.router, prefix=settings.API_PREFIX)
+app.include_router(odeme.router, prefix=settings.API_PREFIX)
 
 
 # ══════════════════════════════════════════════════════════════

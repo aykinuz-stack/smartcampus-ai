@@ -1,0 +1,47 @@
+[
+  {
+    "id": "uk_50322f9e",
+    "ad": "Ogretim Ucreti",
+    "kategori": "ogretim",
+    "tutar": 85000,
+    "donem": "2025-2026",
+    "aciklama": "",
+    "zorunlu": true
+  },
+  {
+    "id": "uk_816c90a0",
+    "ad": "Yemek Ucreti",
+    "kategori": "yemek",
+    "tutar": 12000,
+    "donem": "2025-2026",
+    "aciklama": "",
+    "zorunlu": true
+  },
+  {
+    "id": "uk_1f240271",
+    "ad": "Servis Ucreti",
+    "kategori": "servis",
+    "tutar": 15000,
+    "donem": "2025-2026",
+    "aciklama": "",
+    "zorunlu": false
+  },
+  {
+    "id": "uk_de0580e6",
+    "ad": "Kiyafet Seti",
+    "kategori": "kiyafet",
+    "tutar": 3500,
+    "donem": "2025-2026",
+    "aciklama": "",
+    "zorunlu": true
+  },
+  {
+    "id": "uk_89e0501d",
+    "ad": "Etkinlik Fonu",
+    "kategori": "etkinlik",
+    "tutar": 2000,
+    "donem": "2025-2026",
+    "aciklama": "",
+    "zorunlu": false
+  }
+]
