@@ -246,8 +246,8 @@ class SmartCampusApp extends ConsumerWidget {
         GoRoute(path: '/yonetici/toplanti-kurullar', builder: (_, __) => const ToplantiKurullarPage()),
         GoRoute(path: '/yonetici/servis-hizmetleri', builder: (_, __) => const ServisHizmetleriPage()),
         GoRoute(path: '/yonetici/veli-talepleri', builder: (_, __) => const VeliTalepleriPage()),
-        // Fallback
-        GoRoute(path: '/home', builder: (_, __) => const _PlaceholderPage(title: 'Ana Sayfa')),
+        // Fallback — bilinmeyen roller login'e yonlendirilir
+        GoRoute(path: '/home', redirect: (_, __) => '/login'),
       ],
     );
   }
@@ -583,28 +583,4 @@ class _AyarlarPage extends ConsumerWidget {
 }
 
 
-/// Geçici placeholder — modül daha yazılmamış.
-class _PlaceholderPage extends StatelessWidget {
-  final String title;
-  const _PlaceholderPage({required this.title});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text(title)),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.construction, size: 64, color: AppColors.warning),
-            SizedBox(height: 16),
-            Text('Yakında aktif olacak', style: TextStyle(fontSize: 16)),
-            SizedBox(height: 8),
-            Text('Sprint takvimi icin MIMARI.md\'ye bak',
-                style: TextStyle(fontSize: 12, color: AppColors.textSecondaryDark)),
-          ],
-        ),
-      ),
-    );
-  }
-}
+// PlaceholderPage kaldirildi — tum sayfalar gercek.
