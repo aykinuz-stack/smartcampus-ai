@@ -1,0 +1,596 @@
+[
+  {
+    "id": "mot_dc1c0fb1",
+    "student_id": "stu_9de1ba8d",
+    "tarih": "2026-02-06",
+    "motivasyon_puani": 7,
+    "enerji_puani": 7,
+    "stres_puani": 2,
+    "notlar": ""
+  },
+  {
+    "id": "mot_88a3b0ee",
+    "student_id": "stu_c8fd4d91",
+    "tarih": "2026-02-28",
+    "motivasyon_puani": 8,
+    "enerji_puani": 4,
+    "stres_puani": 2,
+    "notlar": ""
+  },
+  {
+    "id": "mot_adad89d4",
+    "student_id": "stu_167ea8fc",
+    "tarih": "2026-01-13",
+    "motivasyon_puani": 6,
+    "enerji_puani": 3,
+    "stres_puani": 2,
+    "notlar": ""
+  },
+  {
+    "id": "mot_f3a0a041",
+    "student_id": "stu_64e1bdf1",
+    "tarih": "2025-11-24",
+    "motivasyon_puani": 3,
+    "enerji_puani": 9,
+    "stres_puani": 7,
+    "notlar": ""
+  },
+  {
+    "id": "mot_6e6a5dbf",
+    "student_id": "stu_013e1894",
+    "tarih": "2025-12-02",
+    "motivasyon_puani": 7,
+    "enerji_puani": 8,
+    "stres_puani": 6,
+    "notlar": ""
+  },
+  {
+    "id": "mot_eeed9867",
+    "student_id": "stu_7492e27c",
+    "tarih": "2026-01-02",
+    "motivasyon_puani": 9,
+    "enerji_puani": 7,
+    "stres_puani": 1,
+    "notlar": ""
+  },
+  {
+    "id": "mot_b36a19f1",
+    "student_id": "stu_20257ef3",
+    "tarih": "2025-12-13",
+    "motivasyon_puani": 8,
+    "enerji_puani": 4,
+    "stres_puani": 8,
+    "notlar": ""
+  },
+  {
+    "id": "mot_64218cde",
+    "student_id": "stu_beb8f17d",
+    "tarih": "2026-01-21",
+    "motivasyon_puani": 8,
+    "enerji_puani": 6,
+    "stres_puani": 5,
+    "notlar": ""
+  },
+  {
+    "id": "mot_c83b2d8f",
+    "student_id": "stu_6deb10e2",
+    "tarih": "2026-03-11",
+    "motivasyon_puani": 6,
+    "enerji_puani": 5,
+    "stres_puani": 3,
+    "notlar": ""
+  },
+  {
+    "id": "mot_bd0996c0",
+    "student_id": "stu_11d168de",
+    "tarih": "2026-01-31",
+    "motivasyon_puani": 4,
+    "enerji_puani": 4,
+    "stres_puani": 2,
+    "notlar": ""
+  },
+  {
+    "id": "mot_804d34af",
+    "student_id": "stu_a4623db1",
+    "tarih": "2026-02-03",
+    "motivasyon_puani": 6,
+    "enerji_puani": 9,
+    "stres_puani": 4,
+    "notlar": ""
+  },
+  {
+    "id": "mot_81d646ce",
+    "student_id": "stu_d730e39d",
+    "tarih": "2025-12-02",
+    "motivasyon_puani": 4,
+    "enerji_puani": 9,
+    "stres_puani": 5,
+    "notlar": ""
+  },
+  {
+    "id": "mot_1775c5c6",
+    "student_id": "stu_62ef3bab",
+    "tarih": "2025-12-03",
+    "motivasyon_puani": 4,
+    "enerji_puani": 5,
+    "stres_puani": 1,
+    "notlar": ""
+  },
+  {
+    "id": "mot_b945625f",
+    "student_id": "stu_c67996de",
+    "tarih": "2025-12-15",
+    "motivasyon_puani": 7,
+    "enerji_puani": 9,
+    "stres_puani": 4,
+    "notlar": ""
+  },
+  {
+    "id": "mot_6a1dce54",
+    "student_id": "stu_947af529",
+    "tarih": "2025-12-23",
+    "motivasyon_puani": 5,
+    "enerji_puani": 10,
+    "stres_puani": 7,
+    "notlar": ""
+  },
+  {
+    "id": "mot_ef48ed88",
+    "student_id": "stu_aafbb052",
+    "tarih": "2026-02-18",
+    "motivasyon_puani": 8,
+    "enerji_puani": 5,
+    "stres_puani": 5,
+    "notlar": ""
+  },
+  {
+    "id": "mot_183e96ee",
+    "student_id": "stu_cb41fbbe",
+    "tarih": "2025-10-18",
+    "motivasyon_puani": 3,
+    "enerji_puani": 3,
+    "stres_puani": 7,
+    "notlar": ""
+  },
+  {
+    "id": "mot_35b0c5c6",
+    "student_id": "stu_720da2af",
+    "tarih": "2025-12-16",
+    "motivasyon_puani": 8,
+    "enerji_puani": 8,
+    "stres_puani": 4,
+    "notlar": ""
+  },
+  {
+    "id": "mot_6a5d3c3b",
+    "student_id": "stu_8b5bad5e",
+    "tarih": "2025-11-07",
+    "motivasyon_puani": 10,
+    "enerji_puani": 6,
+    "stres_puani": 6,
+    "notlar": ""
+  },
+  {
+    "id": "mot_bb10cb48",
+    "student_id": "stu_3dbcd86c",
+    "tarih": "2025-10-29",
+    "motivasyon_puani": 3,
+    "enerji_puani": 4,
+    "stres_puani": 4,
+    "notlar": ""
+  },
+  {
+    "id": "mot_ac18c0ec",
+    "student_id": "stu_6818422d",
+    "tarih": "2025-11-15",
+    "motivasyon_puani": 3,
+    "enerji_puani": 10,
+    "stres_puani": 5,
+    "notlar": ""
+  },
+  {
+    "id": "mot_f136f64a",
+    "student_id": "stu_b9a17779",
+    "tarih": "2026-03-13",
+    "motivasyon_puani": 10,
+    "enerji_puani": 3,
+    "stres_puani": 5,
+    "notlar": ""
+  },
+  {
+    "id": "mot_ce126075",
+    "student_id": "stu_dbfddd75",
+    "tarih": "2026-02-13",
+    "motivasyon_puani": 10,
+    "enerji_puani": 10,
+    "stres_puani": 6,
+    "notlar": ""
+  },
+  {
+    "id": "mot_7492583c",
+    "student_id": "stu_e675af74",
+    "tarih": "2025-10-29",
+    "motivasyon_puani": 8,
+    "enerji_puani": 10,
+    "stres_puani": 4,
+    "notlar": ""
+  },
+  {
+    "id": "mot_cc7277e5",
+    "student_id": "stu_2f45135d",
+    "tarih": "2025-12-28",
+    "motivasyon_puani": 3,
+    "enerji_puani": 10,
+    "stres_puani": 1,
+    "notlar": ""
+  },
+  {
+    "id": "mot_0655370e",
+    "student_id": "stu_49d3eb4c",
+    "tarih": "2025-12-18",
+    "motivasyon_puani": 6,
+    "enerji_puani": 9,
+    "stres_puani": 2,
+    "notlar": ""
+  },
+  {
+    "id": "mot_ce14e7d7",
+    "student_id": "stu_46a34f04",
+    "tarih": "2026-03-23",
+    "motivasyon_puani": 10,
+    "enerji_puani": 10,
+    "stres_puani": 1,
+    "notlar": ""
+  },
+  {
+    "id": "mot_a1370863",
+    "student_id": "stu_0b33f1e9",
+    "tarih": "2026-03-30",
+    "motivasyon_puani": 7,
+    "enerji_puani": 4,
+    "stres_puani": 5,
+    "notlar": ""
+  },
+  {
+    "id": "mot_ab7b2278",
+    "student_id": "stu_86d21c53",
+    "tarih": "2025-11-30",
+    "motivasyon_puani": 10,
+    "enerji_puani": 10,
+    "stres_puani": 6,
+    "notlar": ""
+  },
+  {
+    "id": "mot_e992f534",
+    "student_id": "stu_f444c9e4",
+    "tarih": "2026-03-30",
+    "motivasyon_puani": 3,
+    "enerji_puani": 10,
+    "stres_puani": 8,
+    "notlar": ""
+  },
+  {
+    "id": "mot_7ce0da48",
+    "student_id": "stu_bcadaf50",
+    "tarih": "2026-01-20",
+    "motivasyon_puani": 3,
+    "enerji_puani": 9,
+    "stres_puani": 6,
+    "notlar": ""
+  },
+  {
+    "id": "mot_5d7ae7f1",
+    "student_id": "stu_0d6e6f1c",
+    "tarih": "2025-10-01",
+    "motivasyon_puani": 9,
+    "enerji_puani": 6,
+    "stres_puani": 1,
+    "notlar": ""
+  },
+  {
+    "id": "mot_795e9a09",
+    "student_id": "stu_e45f5615",
+    "tarih": "2026-04-04",
+    "motivasyon_puani": 9,
+    "enerji_puani": 9,
+    "stres_puani": 2,
+    "notlar": ""
+  },
+  {
+    "id": "mot_3f2a1fd6",
+    "student_id": "stu_58151441",
+    "tarih": "2025-12-12",
+    "motivasyon_puani": 4,
+    "enerji_puani": 7,
+    "stres_puani": 2,
+    "notlar": ""
+  },
+  {
+    "id": "mot_ad776c1e",
+    "student_id": "stu_c6a85d01",
+    "tarih": "2025-12-16",
+    "motivasyon_puani": 6,
+    "enerji_puani": 9,
+    "stres_puani": 5,
+    "notlar": ""
+  },
+  {
+    "id": "mot_8de6e1a0",
+    "student_id": "stu_af8261c4",
+    "tarih": "2026-03-26",
+    "motivasyon_puani": 10,
+    "enerji_puani": 3,
+    "stres_puani": 4,
+    "notlar": ""
+  },
+  {
+    "id": "mot_0dd7114f",
+    "student_id": "stu_8a9d3bf6",
+    "tarih": "2025-11-10",
+    "motivasyon_puani": 9,
+    "enerji_puani": 7,
+    "stres_puani": 3,
+    "notlar": ""
+  },
+  {
+    "id": "mot_b3da0261",
+    "student_id": "stu_4968ed2a",
+    "tarih": "2025-10-20",
+    "motivasyon_puani": 9,
+    "enerji_puani": 10,
+    "stres_puani": 8,
+    "notlar": ""
+  },
+  {
+    "id": "mot_0356373c",
+    "student_id": "stu_8ea274df",
+    "tarih": "2025-11-14",
+    "motivasyon_puani": 3,
+    "enerji_puani": 9,
+    "stres_puani": 2,
+    "notlar": ""
+  },
+  {
+    "id": "mot_bbffe0a2",
+    "student_id": "stu_7281a02d",
+    "tarih": "2025-12-11",
+    "motivasyon_puani": 4,
+    "enerji_puani": 10,
+    "stres_puani": 5,
+    "notlar": ""
+  },
+  {
+    "id": "mot_1c82cdce",
+    "student_id": "stu_594e0b21",
+    "tarih": "2025-12-02",
+    "motivasyon_puani": 5,
+    "enerji_puani": 6,
+    "stres_puani": 7,
+    "notlar": ""
+  },
+  {
+    "id": "mot_0153a2ae",
+    "student_id": "stu_a95a2c51",
+    "tarih": "2025-11-01",
+    "motivasyon_puani": 7,
+    "enerji_puani": 8,
+    "stres_puani": 8,
+    "notlar": ""
+  },
+  {
+    "id": "mot_b8a8785c",
+    "student_id": "stu_6a318026",
+    "tarih": "2026-01-12",
+    "motivasyon_puani": 7,
+    "enerji_puani": 3,
+    "stres_puani": 7,
+    "notlar": ""
+  },
+  {
+    "id": "mot_67fd3048",
+    "student_id": "stu_ac4e878d",
+    "tarih": "2026-01-11",
+    "motivasyon_puani": 5,
+    "enerji_puani": 8,
+    "stres_puani": 6,
+    "notlar": ""
+  },
+  {
+    "id": "mot_41ee36ac",
+    "student_id": "stu_493d8397",
+    "tarih": "2025-10-22",
+    "motivasyon_puani": 3,
+    "enerji_puani": 3,
+    "stres_puani": 7,
+    "notlar": ""
+  },
+  {
+    "id": "mot_8c5a50f6",
+    "student_id": "stu_a714c34f",
+    "tarih": "2025-12-26",
+    "motivasyon_puani": 5,
+    "enerji_puani": 8,
+    "stres_puani": 5,
+    "notlar": ""
+  },
+  {
+    "id": "mot_7c9107f1",
+    "student_id": "stu_93c7e975",
+    "tarih": "2026-01-11",
+    "motivasyon_puani": 5,
+    "enerji_puani": 4,
+    "stres_puani": 4,
+    "notlar": ""
+  },
+  {
+    "id": "mot_ed6899ec",
+    "student_id": "stu_00a78770",
+    "tarih": "2025-11-09",
+    "motivasyon_puani": 6,
+    "enerji_puani": 9,
+    "stres_puani": 3,
+    "notlar": ""
+  },
+  {
+    "id": "mot_b161bb8d",
+    "student_id": "stu_bd520f7a",
+    "tarih": "2025-10-10",
+    "motivasyon_puani": 10,
+    "enerji_puani": 9,
+    "stres_puani": 7,
+    "notlar": ""
+  },
+  {
+    "id": "mot_25eb8399",
+    "student_id": "stu_4cd01740",
+    "tarih": "2025-12-28",
+    "motivasyon_puani": 3,
+    "enerji_puani": 5,
+    "stres_puani": 1,
+    "notlar": ""
+  },
+  {
+    "id": "mot_168e4c03",
+    "student_id": "stu_026e18db",
+    "tarih": "2026-03-28",
+    "motivasyon_puani": 10,
+    "enerji_puani": 6,
+    "stres_puani": 1,
+    "notlar": ""
+  },
+  {
+    "id": "mot_9eb74cc1",
+    "student_id": "stu_44eabfc6",
+    "tarih": "2026-03-18",
+    "motivasyon_puani": 6,
+    "enerji_puani": 8,
+    "stres_puani": 1,
+    "notlar": ""
+  },
+  {
+    "id": "mot_4974eb5c",
+    "student_id": "stu_e8ab9d59",
+    "tarih": "2025-11-24",
+    "motivasyon_puani": 5,
+    "enerji_puani": 7,
+    "stres_puani": 3,
+    "notlar": ""
+  },
+  {
+    "id": "mot_ee847306",
+    "student_id": "stu_6abf4fd9",
+    "tarih": "2026-02-16",
+    "motivasyon_puani": 10,
+    "enerji_puani": 3,
+    "stres_puani": 8,
+    "notlar": ""
+  },
+  {
+    "id": "mot_37c7499a",
+    "student_id": "stu_0a39f725",
+    "tarih": "2026-02-05",
+    "motivasyon_puani": 9,
+    "enerji_puani": 10,
+    "stres_puani": 2,
+    "notlar": ""
+  },
+  {
+    "id": "mot_fda7add8",
+    "student_id": "stu_2a663f9b",
+    "tarih": "2026-02-22",
+    "motivasyon_puani": 10,
+    "enerji_puani": 7,
+    "stres_puani": 2,
+    "notlar": ""
+  },
+  {
+    "id": "mot_c5696529",
+    "student_id": "stu_f7c84836",
+    "tarih": "2025-10-28",
+    "motivasyon_puani": 3,
+    "enerji_puani": 7,
+    "stres_puani": 8,
+    "notlar": ""
+  },
+  {
+    "id": "mot_636df06b",
+    "student_id": "stu_85047d0f",
+    "tarih": "2026-01-06",
+    "motivasyon_puani": 8,
+    "enerji_puani": 10,
+    "stres_puani": 2,
+    "notlar": ""
+  },
+  {
+    "id": "mot_8477e8e7",
+    "student_id": "stu_19436ade",
+    "tarih": "2026-04-04",
+    "motivasyon_puani": 3,
+    "enerji_puani": 10,
+    "stres_puani": 5,
+    "notlar": ""
+  },
+  {
+    "id": "mot_52eb1056",
+    "student_id": "stu_afe1036b",
+    "tarih": "2025-11-09",
+    "motivasyon_puani": 5,
+    "enerji_puani": 7,
+    "stres_puani": 2,
+    "notlar": ""
+  },
+  {
+    "id": "mot_7b214da6",
+    "student_id": "stu_1ba8be51",
+    "tarih": "2025-11-18",
+    "motivasyon_puani": 5,
+    "enerji_puani": 8,
+    "stres_puani": 4,
+    "notlar": ""
+  },
+  {
+    "id": "mot_acfd20c9",
+    "student_id": "stu_28f91425",
+    "tarih": "2026-03-06",
+    "motivasyon_puani": 10,
+    "enerji_puani": 8,
+    "stres_puani": 6,
+    "notlar": ""
+  },
+  {
+    "id": "mot_468f584b",
+    "student_id": "stu_1381fa9d",
+    "tarih": "2025-11-28",
+    "motivasyon_puani": 7,
+    "enerji_puani": 10,
+    "stres_puani": 2,
+    "notlar": ""
+  },
+  {
+    "id": "mot_12ec6288",
+    "student_id": "stu_9e319103",
+    "tarih": "2025-12-28",
+    "motivasyon_puani": 4,
+    "enerji_puani": 10,
+    "stres_puani": 5,
+    "notlar": ""
+  },
+  {
+    "id": "mot_f5fafd9d",
+    "student_id": "stu_104d03ed",
+    "tarih": "2026-04-03",
+    "motivasyon_puani": 5,
+    "enerji_puani": 4,
+    "stres_puani": 8,
+    "notlar": ""
+  },
+  {
+    "id": "mot_551ccfff",
+    "student_id": "stu_1536d6de",
+    "tarih": "2025-10-13",
+    "motivasyon_puani": 7,
+    "enerji_puani": 7,
+    "stres_puani": 1,
+    "notlar": ""
+  }
+]

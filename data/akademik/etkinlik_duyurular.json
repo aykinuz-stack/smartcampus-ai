@@ -1,0 +1,202 @@
+[
+  {
+    "id": "etk_d978684c",
+    "baslik": "23 Nisan Kutlamasi",
+    "tur": "toplanti",
+    "tarih": "2026-03-03",
+    "aciklama": "23 Nisan Kutlamasi etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "veliler",
+    "konum": "Dis Mekan",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "etk_5c799e48",
+    "baslik": "Bilim Fuari",
+    "tur": "duyuru",
+    "tarih": "2026-01-01",
+    "aciklama": "Bilim Fuari etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "ilkokul",
+    "konum": "Siniflar",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "etk_bec8ba2e",
+    "baslik": "Spor Festivali",
+    "tur": "gezi",
+    "tarih": "2026-04-11",
+    "aciklama": "Spor Festivali etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "ilkokul",
+    "konum": "Siniflar",
+    "durum": "planli"
+  },
+  {
+    "id": "etk_e2b85d2f",
+    "baslik": "Kitap Okuma Haftasi",
+    "tur": "toplanti",
+    "tarih": "2026-01-28",
+    "aciklama": "Kitap Okuma Haftasi etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "ilkokul",
+    "konum": "Dis Mekan",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "etk_5f82344b",
+    "baslik": "Kariyer Gunu",
+    "tur": "gezi",
+    "tarih": "2026-05-11",
+    "aciklama": "Kariyer Gunu etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "ilkokul",
+    "konum": "Konferans Salonu",
+    "durum": "planli"
+  },
+  {
+    "id": "etk_7cb95591",
+    "baslik": "Veli Toplantisi",
+    "tur": "kutlama",
+    "tarih": "2025-12-01",
+    "aciklama": "Veli Toplantisi etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "ilkokul",
+    "konum": "Spor Salonu",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "etk_afa96639",
+    "baslik": "Okul Gezisi - Topkapi Sarayi",
+    "tur": "toplanti",
+    "tarih": "2025-10-09",
+    "aciklama": "Okul Gezisi - Topkapi Sarayi etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "tum_okul",
+    "konum": "Bahce",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "etk_28640174",
+    "baslik": "Matematik Olimpiyadi",
+    "tur": "duyuru",
+    "tarih": "2026-04-14",
+    "aciklama": "Matematik Olimpiyadi etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "lise",
+    "konum": "Konferans Salonu",
+    "durum": "planli"
+  },
+  {
+    "id": "etk_39027cfc",
+    "baslik": "Ingilizce Tiyatro",
+    "tur": "etkinlik",
+    "tarih": "2026-04-27",
+    "aciklama": "Ingilizce Tiyatro etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "ilkokul",
+    "konum": "Bahce",
+    "durum": "planli"
+  },
+  {
+    "id": "etk_343308c6",
+    "baslik": "Muzik Konseri",
+    "tur": "duyuru",
+    "tarih": "2025-11-17",
+    "aciklama": "Muzik Konseri etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "lise",
+    "konum": "Spor Salonu",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "etk_1e93a525",
+    "baslik": "29 Ekim Cumhuriyet Bayrami",
+    "tur": "gezi",
+    "tarih": "2026-02-14",
+    "aciklama": "29 Ekim Cumhuriyet Bayrami etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "tum_okul",
+    "konum": "Spor Salonu",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "etk_ff7ed2e0",
+    "baslik": "Yeni Yil Kutlamasi",
+    "tur": "gezi",
+    "tarih": "2026-02-22",
+    "aciklama": "Yeni Yil Kutlamasi etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "tum_okul",
+    "konum": "Dis Mekan",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "etk_7eef7641",
+    "baslik": "Bahar Senligi",
+    "tur": "toplanti",
+    "tarih": "2026-01-06",
+    "aciklama": "Bahar Senligi etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "lise",
+    "konum": "Dis Mekan",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "etk_45f9f648",
+    "baslik": "Mezuniyet Toreni",
+    "tur": "duyuru",
+    "tarih": "2026-02-09",
+    "aciklama": "Mezuniyet Toreni etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "lise",
+    "konum": "Bahce",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "etk_2dd8d476",
+    "baslik": "Ogretmenler Gunu",
+    "tur": "toplanti",
+    "tarih": "2025-12-30",
+    "aciklama": "Ogretmenler Gunu etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "ortaokul",
+    "konum": "Spor Salonu",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "etk_45ddea7c",
+    "baslik": "10 Kasim Anma Toreni",
+    "tur": "kutlama",
+    "tarih": "2025-10-28",
+    "aciklama": "10 Kasim Anma Toreni etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "ortaokul",
+    "konum": "Dis Mekan",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "etk_237cdab9",
+    "baslik": "Kodlama Haftasi",
+    "tur": "kutlama",
+    "tarih": "2026-02-05",
+    "aciklama": "Kodlama Haftasi etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "lise",
+    "konum": "Dis Mekan",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "etk_7927f12e",
+    "baslik": "Cevre Gunu Etkinligi",
+    "tur": "kutlama",
+    "tarih": "2025-11-14",
+    "aciklama": "Cevre Gunu Etkinligi etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "tum_okul",
+    "konum": "Dis Mekan",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "etk_8316a622",
+    "baslik": "Saglikli Yasam Haftasi",
+    "tur": "etkinlik",
+    "tarih": "2026-02-25",
+    "aciklama": "Saglikli Yasam Haftasi etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "ortaokul",
+    "konum": "Siniflar",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "etk_ae1e834c",
+    "baslik": "Okul Turu Tanitim Gunu",
+    "tur": "etkinlik",
+    "tarih": "2026-01-12",
+    "aciklama": "Okul Turu Tanitim Gunu etkinligi kapsaminda cesitli aktiviteler duzenlenmistir.",
+    "hedef_kitle": "veliler",
+    "konum": "Siniflar",
+    "durum": "tamamlandi"
+  }
+]

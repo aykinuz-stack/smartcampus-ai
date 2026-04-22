@@ -1,0 +1,695 @@
+[
+  {
+    "id": "k_11aa9852",
+    "student_id": "stu_b5251b8f",
+    "student_name": "Onur Bozkurt",
+    "tarih": "2026-04-17",
+    "akademik": {
+      "Matematik": "85 (yazılı)",
+      "Devamsızlık": "1 ders özürsüz",
+      "Ödev": "3 ödev teslim edildi"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İyi",
+      "Rehber Notu": "Bu hafta sakin"
+    },
+    "etkinlik": {
+      "Kulüp": "Satranç Kulübü (Çarşamba)",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Matematik denemesi"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "Bugün derste çok katılımcıydı"
+    },
+    "mood": {
+      "Emoji": "😊",
+      "Seviye": 4
+    },
+    "ai_ozet": "Onur Bozkurt bugün okul gününü sakin geçirdi. Matematik dersinde aktif katılım gösterdi. Yarın getirmesi gereken bir tek eşofman var. Mood: İyi.",
+    "olusturma": "2026-04-17T18:00:00"
+  },
+  {
+    "id": "k_c0ff24a1",
+    "student_id": "stu_b5251b8f",
+    "student_name": "Onur Bozkurt",
+    "tarih": "2026-04-16",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "Tam katılım",
+      "Ödev": "Fen ödevi bekleniyor"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İdare eder",
+      "Rehber Notu": "Bu hafta sakin"
+    },
+    "etkinlik": {
+      "Kulüp": "Satranç Kulübü (Çarşamba)",
+      "Katılım": "Bilim Fuarı"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "🙂",
+      "Seviye": 3
+    },
+    "ai_ozet": "Onur Bozkurt için 16.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-16T18:00:00"
+  },
+  {
+    "id": "k_c7127d9f",
+    "student_id": "stu_b5251b8f",
+    "student_name": "Onur Bozkurt",
+    "tarih": "2026-04-15",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "Tam katılım",
+      "Ödev": "3 ödev teslim edildi"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İyi",
+      "Rehber Notu": "Bu hafta sakin"
+    },
+    "etkinlik": {
+      "Kulüp": "Satranç Kulübü (Çarşamba)",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "😊",
+      "Seviye": 4
+    },
+    "ai_ozet": "Onur Bozkurt için 15.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-15T18:00:00"
+  },
+  {
+    "id": "k_277549eb",
+    "student_id": "stu_b5251b8f",
+    "student_name": "Onur Bozkurt",
+    "tarih": "2026-04-14",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "1 ders özürsüz",
+      "Ödev": "Fen ödevi bekleniyor"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İdare eder",
+      "Rehber Notu": "-"
+    },
+    "etkinlik": {
+      "Kulüp": "-",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "🙂",
+      "Seviye": 3
+    },
+    "ai_ozet": "Onur Bozkurt için 14.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-14T18:00:00"
+  },
+  {
+    "id": "k_7f3fa3a5",
+    "student_id": "stu_b5251b8f",
+    "student_name": "Onur Bozkurt",
+    "tarih": "2026-04-13",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "Tam katılım",
+      "Ödev": "3 ödev teslim edildi"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İyi",
+      "Rehber Notu": "-"
+    },
+    "etkinlik": {
+      "Kulüp": "-",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "😊",
+      "Seviye": 4
+    },
+    "ai_ozet": "Onur Bozkurt için 13.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-13T18:00:00"
+  },
+  {
+    "id": "k_541c5d8f",
+    "student_id": "stu_b5251b8f",
+    "student_name": "Onur Bozkurt",
+    "tarih": "2026-04-12",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "Tam katılım",
+      "Ödev": "Fen ödevi bekleniyor"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İdare eder",
+      "Rehber Notu": "-"
+    },
+    "etkinlik": {
+      "Kulüp": "-",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "🙂",
+      "Seviye": 3
+    },
+    "ai_ozet": "Onur Bozkurt için 12.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-12T18:00:00"
+  },
+  {
+    "id": "k_38d30dd7",
+    "student_id": "stu_b5251b8f",
+    "student_name": "Onur Bozkurt",
+    "tarih": "2026-04-11",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "1 ders özürsüz",
+      "Ödev": "3 ödev teslim edildi"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İyi",
+      "Rehber Notu": "-"
+    },
+    "etkinlik": {
+      "Kulüp": "-",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "😊",
+      "Seviye": 4
+    },
+    "ai_ozet": "Onur Bozkurt için 11.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-11T18:00:00"
+  },
+  {
+    "id": "k_f032632a",
+    "student_id": "stu_083e008b",
+    "student_name": "Ibrahim Acar",
+    "tarih": "2026-04-17",
+    "akademik": {
+      "Matematik": "85 (yazılı)",
+      "Devamsızlık": "1 ders özürsüz",
+      "Ödev": "3 ödev teslim edildi"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İyi",
+      "Rehber Notu": "Bu hafta sakin"
+    },
+    "etkinlik": {
+      "Kulüp": "Satranç Kulübü (Çarşamba)",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Matematik denemesi"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "Bugün derste çok katılımcıydı"
+    },
+    "mood": {
+      "Emoji": "😊",
+      "Seviye": 4
+    },
+    "ai_ozet": "Ibrahim Acar bugün okul gününü sakin geçirdi. Matematik dersinde aktif katılım gösterdi. Yarın getirmesi gereken bir tek eşofman var. Mood: İyi.",
+    "olusturma": "2026-04-17T18:00:00"
+  },
+  {
+    "id": "k_9336779c",
+    "student_id": "stu_083e008b",
+    "student_name": "Ibrahim Acar",
+    "tarih": "2026-04-16",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "Tam katılım",
+      "Ödev": "Fen ödevi bekleniyor"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İdare eder",
+      "Rehber Notu": "Bu hafta sakin"
+    },
+    "etkinlik": {
+      "Kulüp": "Satranç Kulübü (Çarşamba)",
+      "Katılım": "Bilim Fuarı"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "🙂",
+      "Seviye": 3
+    },
+    "ai_ozet": "Ibrahim Acar için 16.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-16T18:00:00"
+  },
+  {
+    "id": "k_f001537f",
+    "student_id": "stu_083e008b",
+    "student_name": "Ibrahim Acar",
+    "tarih": "2026-04-15",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "Tam katılım",
+      "Ödev": "3 ödev teslim edildi"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İyi",
+      "Rehber Notu": "Bu hafta sakin"
+    },
+    "etkinlik": {
+      "Kulüp": "Satranç Kulübü (Çarşamba)",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "😊",
+      "Seviye": 4
+    },
+    "ai_ozet": "Ibrahim Acar için 15.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-15T18:00:00"
+  },
+  {
+    "id": "k_8c5ef573",
+    "student_id": "stu_083e008b",
+    "student_name": "Ibrahim Acar",
+    "tarih": "2026-04-14",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "1 ders özürsüz",
+      "Ödev": "Fen ödevi bekleniyor"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İdare eder",
+      "Rehber Notu": "-"
+    },
+    "etkinlik": {
+      "Kulüp": "-",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "🙂",
+      "Seviye": 3
+    },
+    "ai_ozet": "Ibrahim Acar için 14.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-14T18:00:00"
+  },
+  {
+    "id": "k_5f0e03dc",
+    "student_id": "stu_083e008b",
+    "student_name": "Ibrahim Acar",
+    "tarih": "2026-04-13",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "Tam katılım",
+      "Ödev": "3 ödev teslim edildi"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İyi",
+      "Rehber Notu": "-"
+    },
+    "etkinlik": {
+      "Kulüp": "-",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "😊",
+      "Seviye": 4
+    },
+    "ai_ozet": "Ibrahim Acar için 13.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-13T18:00:00"
+  },
+  {
+    "id": "k_e6ae73b7",
+    "student_id": "stu_083e008b",
+    "student_name": "Ibrahim Acar",
+    "tarih": "2026-04-12",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "Tam katılım",
+      "Ödev": "Fen ödevi bekleniyor"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İdare eder",
+      "Rehber Notu": "-"
+    },
+    "etkinlik": {
+      "Kulüp": "-",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "🙂",
+      "Seviye": 3
+    },
+    "ai_ozet": "Ibrahim Acar için 12.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-12T18:00:00"
+  },
+  {
+    "id": "k_f3f1a965",
+    "student_id": "stu_083e008b",
+    "student_name": "Ibrahim Acar",
+    "tarih": "2026-04-11",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "1 ders özürsüz",
+      "Ödev": "3 ödev teslim edildi"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İyi",
+      "Rehber Notu": "-"
+    },
+    "etkinlik": {
+      "Kulüp": "-",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "😊",
+      "Seviye": 4
+    },
+    "ai_ozet": "Ibrahim Acar için 11.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-11T18:00:00"
+  },
+  {
+    "id": "k_0d643b55",
+    "student_id": "stu_19fac8ab",
+    "student_name": "Baris Ozdemir",
+    "tarih": "2026-04-17",
+    "akademik": {
+      "Matematik": "85 (yazılı)",
+      "Devamsızlık": "1 ders özürsüz",
+      "Ödev": "3 ödev teslim edildi"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İyi",
+      "Rehber Notu": "Bu hafta sakin"
+    },
+    "etkinlik": {
+      "Kulüp": "Satranç Kulübü (Çarşamba)",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Matematik denemesi"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "Bugün derste çok katılımcıydı"
+    },
+    "mood": {
+      "Emoji": "😊",
+      "Seviye": 4
+    },
+    "ai_ozet": "Baris Ozdemir bugün okul gününü sakin geçirdi. Matematik dersinde aktif katılım gösterdi. Yarın getirmesi gereken bir tek eşofman var. Mood: İyi.",
+    "olusturma": "2026-04-17T18:00:00"
+  },
+  {
+    "id": "k_7b41b492",
+    "student_id": "stu_19fac8ab",
+    "student_name": "Baris Ozdemir",
+    "tarih": "2026-04-16",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "Tam katılım",
+      "Ödev": "Fen ödevi bekleniyor"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İdare eder",
+      "Rehber Notu": "Bu hafta sakin"
+    },
+    "etkinlik": {
+      "Kulüp": "Satranç Kulübü (Çarşamba)",
+      "Katılım": "Bilim Fuarı"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "🙂",
+      "Seviye": 3
+    },
+    "ai_ozet": "Baris Ozdemir için 16.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-16T18:00:00"
+  },
+  {
+    "id": "k_da77c9f8",
+    "student_id": "stu_19fac8ab",
+    "student_name": "Baris Ozdemir",
+    "tarih": "2026-04-15",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "Tam katılım",
+      "Ödev": "3 ödev teslim edildi"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İyi",
+      "Rehber Notu": "Bu hafta sakin"
+    },
+    "etkinlik": {
+      "Kulüp": "Satranç Kulübü (Çarşamba)",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "😊",
+      "Seviye": 4
+    },
+    "ai_ozet": "Baris Ozdemir için 15.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-15T18:00:00"
+  },
+  {
+    "id": "k_bdf89fd5",
+    "student_id": "stu_19fac8ab",
+    "student_name": "Baris Ozdemir",
+    "tarih": "2026-04-14",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "1 ders özürsüz",
+      "Ödev": "Fen ödevi bekleniyor"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İdare eder",
+      "Rehber Notu": "-"
+    },
+    "etkinlik": {
+      "Kulüp": "-",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "🙂",
+      "Seviye": 3
+    },
+    "ai_ozet": "Baris Ozdemir için 14.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-14T18:00:00"
+  },
+  {
+    "id": "k_62b49a79",
+    "student_id": "stu_19fac8ab",
+    "student_name": "Baris Ozdemir",
+    "tarih": "2026-04-13",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "Tam katılım",
+      "Ödev": "3 ödev teslim edildi"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İyi",
+      "Rehber Notu": "-"
+    },
+    "etkinlik": {
+      "Kulüp": "-",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "😊",
+      "Seviye": 4
+    },
+    "ai_ozet": "Baris Ozdemir için 13.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-13T18:00:00"
+  },
+  {
+    "id": "k_57105e6c",
+    "student_id": "stu_19fac8ab",
+    "student_name": "Baris Ozdemir",
+    "tarih": "2026-04-12",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "Tam katılım",
+      "Ödev": "Fen ödevi bekleniyor"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İdare eder",
+      "Rehber Notu": "-"
+    },
+    "etkinlik": {
+      "Kulüp": "-",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "🙂",
+      "Seviye": 3
+    },
+    "ai_ozet": "Baris Ozdemir için 12.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-12T18:00:00"
+  },
+  {
+    "id": "k_a74554b1",
+    "student_id": "stu_19fac8ab",
+    "student_name": "Baris Ozdemir",
+    "tarih": "2026-04-11",
+    "akademik": {
+      "Matematik": "-",
+      "Devamsızlık": "1 ders özürsüz",
+      "Ödev": "3 ödev teslim edildi"
+    },
+    "sosyal_duygusal": {
+      "Mood": "İyi",
+      "Rehber Notu": "-"
+    },
+    "etkinlik": {
+      "Kulüp": "-",
+      "Katılım": "-"
+    },
+    "yarin_hazirlik": {
+      "Ders": "Türkçe kompozisyon",
+      "Malzeme": "Beden eğitimi için eşofman",
+      "Sınav": "Yok"
+    },
+    "ozel_an": {
+      "Öğretmen Notu": "-"
+    },
+    "mood": {
+      "Emoji": "😊",
+      "Seviye": 4
+    },
+    "ai_ozet": "Baris Ozdemir için 11.04 özeti — normal bir gündü.",
+    "olusturma": "2026-04-11T18:00:00"
+  }
+]

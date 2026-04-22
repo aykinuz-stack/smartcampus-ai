@@ -1,0 +1,59 @@
+grade,subject,unit,topic,outcome_code,outcome_text,keywords,status
+5,Matematik,Dogal Sayilar,Dogal Sayilarla Islemler,MAT.5.1.1.1,"Dogal sayilari okur ve yazar.",dogal sayi;okuma;yazma,active
+5,Matematik,Dogal Sayilar,Dogal Sayilarla Islemler,MAT.5.1.1.2,"En cok dokuz basamakli dogal sayilarin boluklarini ve basamaklarini belirler.",basamak;boluk;dogal sayi,active
+5,Matematik,Dogal Sayilar,Carpma ve Bolme,MAT.5.1.2.1,"Dogal sayilarla carpma islemi yapar.",carpma;dogal sayi;islem,active
+5,Matematik,Dogal Sayilar,Carpma ve Bolme,MAT.5.1.2.2,"Dogal sayilarla bolme islemi yapar.",bolme;dogal sayi;islem,active
+5,Matematik,Kesirler,Kesirleri Karsilastirma,MAT.5.1.3.1,"Paydasi esit olmayan kesirleri siralar.",kesir;siralama;payda,active
+5,Matematik,Kesirler,Kesirlerle Toplama Cikarma,MAT.5.1.3.2,"Paydasi esit veya birinin paydasi digerinin paydasisin kati olan kesirlerle toplama yapar.",kesir;toplama;payda,active
+5,Matematik,Ondalik Gosterim,Ondalik Kesirleri Okuma,MAT.5.1.4.1,"Ondalik kesirleri okur ve yazar.",ondalik kesir;okuma;yazma,active
+5,Matematik,Yuzde,Yuzdeler,MAT.5.1.5.1,"Bir yuzdelik ifadeyi ayni buyuklugu gosteren kesir ve ondalik gosterimle iliskilendirir.",yuzde;kesir;ondalik,active
+6,Matematik,Dogal Sayilar,Carpanlar ve Katlar,MAT.6.1.1.1,"Bir dogal sayinin katlarini ve verilen bir sayiya kadar olan katlarinin sayisini belirler.",kat;carpan;dogal sayi,active
+6,Matematik,Dogal Sayilar,Carpanlar ve Katlar,MAT.6.1.1.2,"Bir dogal sayinin carpanlarini belirler.",carpan;dogal sayi,active
+6,Matematik,Dogal Sayilar,Asal Sayilar,MAT.6.1.1.3,"Asal sayilari belirler.",asal sayi;asal carpan,active
+6,Matematik,Kesirlerle Islemler,Kesirlerle Carpma,MAT.6.1.2.1,"Kesirleri carpma islemi yapar.",kesir;carpma,active
+6,Matematik,Kesirlerle Islemler,Kesirlerle Bolme,MAT.6.1.2.2,"Kesirleri bolme islemi yapar.",kesir;bolme,active
+6,Matematik,Ondalik Gosterim,Ondalik Gosterimle Carpma,MAT.6.1.3.1,"Ondalik gosterimlerle carpma islemi yapar.",ondalik;carpma,active
+6,Matematik,Tam Sayilar,Tam Sayilari Tanima,MAT.6.1.4.1,"Tam sayilari tanitir ve sayma sayilari kesirleri ondalik gosteirimleri tam sayilarin icinde konumlandirir.",tam sayi;sayi ekseni,active
+7,Matematik,Tam Sayilar,Tam Sayilarla Islemler,MAT.7.1.1.1,"Tam sayilarla toplama ve cikarma islemleri yapar.",tam sayi;toplama;cikarma,active
+7,Matematik,Tam Sayilar,Tam Sayilarla Islemler,MAT.7.1.1.2,"Tam sayilarla carpma ve bolme islemleri yapar.",tam sayi;carpma;bolme,active
+7,Matematik,Rasyonel Sayilar,Rasyonel Sayilarla Islemler,MAT.7.1.2.1,"Rasyonel sayilarla toplama ve cikarma islemleri yapar.",rasyonel sayi;toplama;cikarma,active
+7,Matematik,Rasyonel Sayilar,Rasyonel Sayilarla Islemler,MAT.7.1.2.2,"Rasyonel sayilarla carpma ve bolme islemleri yapar.",rasyonel sayi;carpma;bolme,active
+7,Matematik,Oran Oranti,Oranti,MAT.7.1.3.1,"Iki coklugun birbirine oranini belirler.",oran;oranti,active
+8,Matematik,Carpanlar ve Katlar,OBEB ve OKEK,MAT.8.1.1.1,"Iki dogal sayinin ortak bolen ve ortak katlarini belirler.",OBEB;OKEK;bolen;kat,active
+8,Matematik,Uslu Ifadeler,Uslu Sayilar,MAT.8.1.2.1,"Tam sayilarin tam sayi kuvvetini hesaplar.",us;kuvvet;tam sayi,active
+8,Matematik,Karekok,Karekok,MAT.8.1.3.1,"Bir sayinin karekokunu belirler.",karekok;karesini alma,active
+8,Matematik,Veri Analizi,Merkezi Egilim Olculeri,MAT.8.4.1.1,"Verilerin aritmetik ortalamasi mod ve medyanini hesaplar.",aritmetik ortalama;mod;medyan,active
+5,Turkce,Okuma,Akici Okuma,TUR.5.3.1,"Noktalama isaretlerine dikkat ederek sesli ve sessiz okur.",okuma;noktalama;akici,active
+5,Turkce,Okuma,Soz Varligi,TUR.5.3.5,"Baglam icerisinde bilinmeyen sozcuklerin anlamlarini tahmin eder.",soz varligi;anlam;tahmin,active
+5,Turkce,Yazma,Yazim Kurallari,TUR.5.4.3,"Yazim kurallarini uygular.",yazim;imla;kural,active
+5,Turkce,Yazma,Noktalama,TUR.5.4.4,"Noktalama isaretlerini dogru kullanir.",noktalama;isaret,active
+6,Turkce,Okuma,Anlama,TUR.6.3.1,"Metni anlam birimlerine ayirarak okur.",okuma;anlam birimi,active
+6,Turkce,Okuma,Cikarim Yapma,TUR.6.3.17,"Metinle ilgili cikarimlar yapar.",cikarim;yorum,active
+6,Turkce,Yazma,Fikir Gelistirme,TUR.6.4.2,"Yazisini zenginlestirmek icin atasozleri deyimler ve sozel ifadeler kullanir.",atasozu;deyim;yazma,active
+7,Turkce,Okuma,Metin Turleri,TUR.7.3.18,"Metindeki hikaye unsurlarini belirler.",hikaye;unsur;metin,active
+7,Turkce,Yazma,Paragraf,TUR.7.4.9,"Yazilari duzeltme isareletlerini kullanarak duzeltir.",duzeltme;paragraf,active
+8,Turkce,Okuma,Elestiri,TUR.8.3.25,"Metindeki oznel ve nesnel yargilari ayirt eder.",oznel;nesnel;yargi,active
+8,Turkce,Yazma,Makale,TUR.8.4.15,"Yazdiklarini duzenleme asamasinda icelrik yonunden gozden gecirir.",duzenleme;icerik;gozden gecirme,active
+5,Fen Bilimleri,Canlilar Dunyasi,Yasam Alanlari,FEN.5.1.1.1,"Canli cesitliliginin yasam alanlarindaki onemi uzerine cikarimlar yapar.",canli;cesitlilik;yasam alani,active
+5,Fen Bilimleri,Canlilar Dunyasi,Insan ve Cevre,FEN.5.1.1.2,"Insan faaliyetlerinin ekosisteme etkilerini arastirir.",ekosistem;insan;cevre,active
+5,Fen Bilimleri,Madde ve Degisim,Maddenin Halleri,FEN.5.3.1.1,"Maddenin hal degisimini aciklar.",madde;hal degisimi;erime;buharlasmq,active
+6,Fen Bilimleri,Hucre,Hucre Yapisi,FEN.6.1.1.1,"Hucreyi ve hucre organellerini model uzerinde gosterir.",hucre;organel;model,active
+6,Fen Bilimleri,Kuvvet ve Hareket,Kuvvet,FEN.6.3.1.1,"Kuvvetin yapisal ve bicimsel etkilerini gozlemler.",kuvvet;hareket;etki,active
+7,Fen Bilimleri,Hucre Bolunmesi,Mitoz,FEN.7.1.1.1,"Mitoz bolunmeyi aciklar.",mitoz;hucre bolunmesi,active
+7,Fen Bilimleri,Kuvvet ve Enerji,Is ve Enerji,FEN.7.3.1.1,"Is ve enerji arasindaki iliskiyi aciklar.",is;enerji;iliskiq,active
+8,Fen Bilimleri,DNA ve Genetik,DNA,FEN.8.1.1.1,"DNA nin yapisi ve gorevini aciklar.",DNA;genetik;kalitim,active
+8,Fen Bilimleri,Basit Makineler,Kaldırac,FEN.8.3.2.1,"Kaldırac cesitlerini gunluk yasama orneklerle aciklar.",kaldirac;basit makine,active
+5,Sosyal Bilgiler,Birey ve Toplum,Haklar ve Ozgurlukler,SOS.5.1.1,"Haklarini ve sorumluluklarini bilir.",hak;sorumluluk;birey,active
+5,Sosyal Bilgiler,Kultur ve Miras,Kultur Ogelerimiz,SOS.5.2.1,"Kulturel ogeleri tanir ve korur.",kultur;miras;gelenek,active
+6,Sosyal Bilgiler,Turkiye Tarihi,Turkler ve Anadolu,SOS.6.2.1,"Turklerin Anadoluya gelisini ve yerlesmesini aciklar.",Turk;Anadolu;tarih,active
+6,Sosyal Bilgiler,Turkiye Cografyasi,Iklim ve Bitki Ortusu,SOS.6.3.1,"Turkiyenin iklim ozelliklerini aciklar.",iklim;bitki ortusu;cografya,active
+7,Sosyal Bilgiler,Demokrasi,Yonetim Bicimleri,SOS.7.4.1,"Farkli yonetim bicimlerini karsilastirir.",demokrasi;yonetim;cumhuriyet,active
+8,Sosyal Bilgiler,Ataturk ve Cumhuriyet,Cumhuriyetin Ilani,SOS.8.2.1,"Cumhuriyetin ilaninin onemini kavrar.",cumhuriyet;ilan;Ataturk,active
+5,Ingilizce,Greeting,Hello,ING.5.1.1,"Greets and introduces themselves.",greeting;hello;introduction,active
+5,Ingilizce,Classroom,Objects,ING.5.2.1,"Names classroom objects.",classroom;objects;vocabulary,active
+6,Ingilizce,Daily Routines,Present Simple,ING.6.1.1,"Talks about daily routines using present simple.",present simple;routine;daily,active
+6,Ingilizce,Weather,Describing Weather,ING.6.2.1,"Describes the weather conditions.",weather;description;conditions,active
+7,Ingilizce,Past Events,Past Simple,ING.7.1.1,"Talks about past events using past simple tense.",past simple;events;tense,active
+7,Ingilizce,Comparisons,Comparatives,ING.7.2.1,"Makes comparisons using comparative adjectives.",comparison;adjective;comparative,active
+8,Ingilizce,Future Plans,Will and Going To,ING.8.1.1,"Expresses future plans and predictions.",future;will;going to,active
+8,Ingilizce,Conditionals,If Clauses,ING.8.2.1,"Uses conditional sentences type 1 and 2.",conditional;if clause;sentence,active

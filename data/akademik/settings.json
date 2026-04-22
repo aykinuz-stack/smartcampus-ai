@@ -1,0 +1,245 @@
+{
+  "okul_acilis_tarihi": "2025-09-08",
+  "zaman_cizelgesi": [
+    {
+      "sira": 1,
+      "tur": "hazirlik",
+      "etiket": "Sabah Hazirlik",
+      "ders_no": 0,
+      "baslangic": "08:30",
+      "bitis": "09:00",
+      "sure_dk": 30,
+      "mod": "ders",
+      "aktif": true
+    },
+    {
+      "sira": 2,
+      "tur": "ders",
+      "etiket": "1. Ders",
+      "ders_no": 1,
+      "baslangic": "09:00",
+      "bitis": "09:40",
+      "sure_dk": 40,
+      "mod": "ders",
+      "aktif": true
+    },
+    {
+      "sira": 3,
+      "tur": "teneffus",
+      "etiket": "1. Teneffus",
+      "ders_no": 0,
+      "baslangic": "09:40",
+      "bitis": "10:00",
+      "sure_dk": 20,
+      "mod": "ders",
+      "aktif": true
+    },
+    {
+      "sira": 4,
+      "tur": "ders",
+      "etiket": "2. Ders",
+      "ders_no": 2,
+      "baslangic": "10:00",
+      "bitis": "10:40",
+      "sure_dk": 40,
+      "mod": "ders",
+      "aktif": true
+    },
+    {
+      "sira": 5,
+      "tur": "teneffus",
+      "etiket": "2. Teneffus",
+      "ders_no": 0,
+      "baslangic": "10:40",
+      "bitis": "10:50",
+      "sure_dk": 10,
+      "mod": "ders",
+      "aktif": true
+    },
+    {
+      "sira": 6,
+      "tur": "ders",
+      "etiket": "3. Ders",
+      "ders_no": 3,
+      "baslangic": "10:50",
+      "bitis": "11:30",
+      "sure_dk": 40,
+      "mod": "ders",
+      "aktif": true
+    },
+    {
+      "sira": 7,
+      "tur": "teneffus",
+      "etiket": "3. Teneffus",
+      "ders_no": 0,
+      "baslangic": "11:30",
+      "bitis": "11:40",
+      "sure_dk": 10,
+      "mod": "ders",
+      "aktif": true
+    },
+    {
+      "sira": 8,
+      "tur": "ders",
+      "etiket": "4. Ders",
+      "ders_no": 4,
+      "baslangic": "11:40",
+      "bitis": "12:20",
+      "sure_dk": 40,
+      "mod": "ders",
+      "aktif": true
+    },
+    {
+      "sira": 9,
+      "tur": "ogle_arasi",
+      "etiket": "Ogle Arasi",
+      "ders_no": 0,
+      "baslangic": "12:20",
+      "bitis": "13:00",
+      "sure_dk": 40,
+      "mod": "ders",
+      "aktif": true
+    },
+    {
+      "sira": 10,
+      "tur": "ders",
+      "etiket": "5. Ders",
+      "ders_no": 5,
+      "baslangic": "13:00",
+      "bitis": "13:40",
+      "sure_dk": 40,
+      "mod": "ders",
+      "aktif": true
+    },
+    {
+      "sira": 11,
+      "tur": "teneffus",
+      "etiket": "5. Teneffus",
+      "ders_no": 0,
+      "baslangic": "13:40",
+      "bitis": "13:50",
+      "sure_dk": 10,
+      "mod": "ders",
+      "aktif": true
+    },
+    {
+      "sira": 12,
+      "tur": "ders",
+      "etiket": "6. Ders",
+      "ders_no": 6,
+      "baslangic": "13:50",
+      "bitis": "14:30",
+      "sure_dk": 40,
+      "mod": "ders",
+      "aktif": true
+    },
+    {
+      "sira": 13,
+      "tur": "teneffus",
+      "etiket": "6. Teneffus",
+      "ders_no": 0,
+      "baslangic": "14:30",
+      "bitis": "14:40",
+      "sure_dk": 10,
+      "mod": "ders",
+      "aktif": true
+    },
+    {
+      "sira": 14,
+      "tur": "ders",
+      "etiket": "7. Ders",
+      "ders_no": 7,
+      "baslangic": "14:40",
+      "bitis": "15:20",
+      "sure_dk": 40,
+      "mod": "ders",
+      "aktif": true
+    },
+    {
+      "sira": 15,
+      "tur": "teneffus",
+      "etiket": "7. Teneffus",
+      "ders_no": 0,
+      "baslangic": "15:20",
+      "bitis": "15:30",
+      "sure_dk": 10,
+      "mod": "ders",
+      "aktif": true
+    },
+    {
+      "sira": 16,
+      "tur": "ders",
+      "etiket": "8. Ders",
+      "ders_no": 8,
+      "baslangic": "15:30",
+      "bitis": "16:10",
+      "sure_dk": 40,
+      "mod": "ders",
+      "aktif": true
+    }
+  ],
+  "ders_programi_ayarlari": {
+    "gunluk_ders_saati": 8,
+    "haftalik_gun_sayisi": 5,
+    "aktif_gunler": [
+      "Pazartesi",
+      "Sali",
+      "Carsamba",
+      "Persembe",
+      "Cuma"
+    ]
+  },
+  "ders_saatleri": {
+    "5": {
+      "Turkce": 6,
+      "Matematik": 5,
+      "Fen Bilimleri": 4,
+      "Sosyal Bilgiler": 4,
+      "Ingilizce": 5,
+      "Almanca": 4,
+      "Din Kulturu ve Ahlak Bilgisi": 4,
+      "Gorsel Sanatlar": 3,
+      "Muzik": 3,
+      "Beden Egitimi": 2
+    },
+    "6": {
+      "Turkce": 6,
+      "Matematik": 5,
+      "Fen Bilimleri": 4,
+      "Sosyal Bilgiler": 4,
+      "Ingilizce": 5,
+      "Almanca": 4,
+      "Din Kulturu ve Ahlak Bilgisi": 4,
+      "Gorsel Sanatlar": 3,
+      "Muzik": 3,
+      "Beden Egitimi": 2
+    },
+    "7": {
+      "Turkce": 6,
+      "Matematik": 5,
+      "Fen Bilimleri": 4,
+      "Sosyal Bilgiler": 4,
+      "Ingilizce": 5,
+      "Almanca": 4,
+      "Din Kulturu ve Ahlak Bilgisi": 4,
+      "Gorsel Sanatlar": 3,
+      "Muzik": 3,
+      "Beden Egitimi": 2
+    },
+    "8": {
+      "Turkce": 6,
+      "Matematik": 5,
+      "Fen Bilimleri": 4,
+      "T.C. Inkilap Tarihi ve Ataturkculuk": 4,
+      "Ingilizce": 5,
+      "Almanca": 4,
+      "Din Kulturu ve Ahlak Bilgisi": 4,
+      "Gorsel Sanatlar": 3,
+      "Muzik": 3,
+      "Beden Egitimi": 2
+    }
+  },
+  "sinif_kadro": {
+    "2025-2026": {}
+  }
+}

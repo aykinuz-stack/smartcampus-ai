@@ -1,0 +1,2712 @@
+[
+  {
+    "id": "gor_56fd8de1",
+    "student_id": "stu_9de1ba8d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-15",
+    "sure_dakika": 60,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_38e8a05a",
+    "student_id": "stu_9de1ba8d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-25",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_6a925366",
+    "student_id": "stu_9de1ba8d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-17",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_220d6110",
+    "student_id": "stu_9de1ba8d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-04",
+    "sure_dakika": 30,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_b5108827",
+    "student_id": "stu_c8fd4d91",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-07",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_ba3cfbda",
+    "student_id": "stu_c8fd4d91",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-17",
+    "sure_dakika": 30,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_8cda5bfc",
+    "student_id": "stu_c8fd4d91",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-20",
+    "sure_dakika": 30,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_eb81b4b5",
+    "student_id": "stu_c8fd4d91",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-04",
+    "sure_dakika": 60,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_cfe1c692",
+    "student_id": "stu_c8fd4d91",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-20",
+    "sure_dakika": 60,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_dc3767b2",
+    "student_id": "stu_c8fd4d91",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-16",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_2c9a2884",
+    "student_id": "stu_167ea8fc",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-09",
+    "sure_dakika": 30,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_94b5663a",
+    "student_id": "stu_167ea8fc",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-12",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_0ee40ad0",
+    "student_id": "stu_167ea8fc",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-27",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_a4f04bff",
+    "student_id": "stu_167ea8fc",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-13",
+    "sure_dakika": 30,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_442507b4",
+    "student_id": "stu_64e1bdf1",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-05",
+    "sure_dakika": 60,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_f9ea24f3",
+    "student_id": "stu_64e1bdf1",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-13",
+    "sure_dakika": 30,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_2262e00a",
+    "student_id": "stu_64e1bdf1",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-24",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_857e9e3e",
+    "student_id": "stu_013e1894",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-20",
+    "sure_dakika": 30,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_b96013d5",
+    "student_id": "stu_013e1894",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-11",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_c8089538",
+    "student_id": "stu_013e1894",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-05",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_c8374da1",
+    "student_id": "stu_7492e27c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-20",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_45afe903",
+    "student_id": "stu_7492e27c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-16",
+    "sure_dakika": 60,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_2a90f3d5",
+    "student_id": "stu_7492e27c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-25",
+    "sure_dakika": 60,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_1b0e2ca6",
+    "student_id": "stu_7492e27c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-10",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_fbc15328",
+    "student_id": "stu_7492e27c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-19",
+    "sure_dakika": 60,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_980026c2",
+    "student_id": "stu_7492e27c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-02",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_32e57158",
+    "student_id": "stu_20257ef3",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-29",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_7094a763",
+    "student_id": "stu_20257ef3",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-02",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_8ceea694",
+    "student_id": "stu_20257ef3",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-15",
+    "sure_dakika": 30,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_273aff4b",
+    "student_id": "stu_beb8f17d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-28",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_7dc9b263",
+    "student_id": "stu_beb8f17d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-02",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_9960b312",
+    "student_id": "stu_beb8f17d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-27",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_8fad711d",
+    "student_id": "stu_beb8f17d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-04",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_6b5ed6ef",
+    "student_id": "stu_6deb10e2",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-23",
+    "sure_dakika": 30,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_51f7e036",
+    "student_id": "stu_6deb10e2",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-22",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_3c8c16b8",
+    "student_id": "stu_6deb10e2",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-27",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_e0cc94b1",
+    "student_id": "stu_6deb10e2",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-14",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_686ee610",
+    "student_id": "stu_6deb10e2",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-31",
+    "sure_dakika": 60,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_67a27cf4",
+    "student_id": "stu_11d168de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-25",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_29ac32b6",
+    "student_id": "stu_11d168de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-18",
+    "sure_dakika": 30,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_89bdc068",
+    "student_id": "stu_11d168de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-20",
+    "sure_dakika": 60,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_6ad66a05",
+    "student_id": "stu_11d168de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-04",
+    "sure_dakika": 60,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_74753ef3",
+    "student_id": "stu_11d168de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-28",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_3e4a9067",
+    "student_id": "stu_a4623db1",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-07",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_26d9afd5",
+    "student_id": "stu_a4623db1",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-17",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_42c1cf59",
+    "student_id": "stu_a4623db1",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-17",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_1780eecd",
+    "student_id": "stu_a4623db1",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-01",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_3f713d09",
+    "student_id": "stu_a4623db1",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-07",
+    "sure_dakika": 30,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_235ff319",
+    "student_id": "stu_d730e39d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-08",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_fdb9c504",
+    "student_id": "stu_d730e39d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-15",
+    "sure_dakika": 60,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_7ce3a72c",
+    "student_id": "stu_d730e39d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-02",
+    "sure_dakika": 30,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_e5a0d9e9",
+    "student_id": "stu_d730e39d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-24",
+    "sure_dakika": 60,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_c792958b",
+    "student_id": "stu_d730e39d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-19",
+    "sure_dakika": 30,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_420e04d0",
+    "student_id": "stu_62ef3bab",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-10",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_234cb841",
+    "student_id": "stu_62ef3bab",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-13",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_fe34d170",
+    "student_id": "stu_c67996de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-28",
+    "sure_dakika": 60,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_9c6fd3e7",
+    "student_id": "stu_c67996de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-26",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_3e71a362",
+    "student_id": "stu_c67996de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-22",
+    "sure_dakika": 30,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_45d4db5b",
+    "student_id": "stu_c67996de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-13",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_65406198",
+    "student_id": "stu_c67996de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-18",
+    "sure_dakika": 60,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_9c3264cf",
+    "student_id": "stu_947af529",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-14",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_18a2c9cd",
+    "student_id": "stu_947af529",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-13",
+    "sure_dakika": 60,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_9655c7eb",
+    "student_id": "stu_aafbb052",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-07",
+    "sure_dakika": 30,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_1195ae0f",
+    "student_id": "stu_aafbb052",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-25",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_67e91273",
+    "student_id": "stu_aafbb052",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-05",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_cb246a0e",
+    "student_id": "stu_aafbb052",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-29",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_3daa17ea",
+    "student_id": "stu_aafbb052",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-29",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_35152b6f",
+    "student_id": "stu_aafbb052",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-25",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_ee1ed5d6",
+    "student_id": "stu_cb41fbbe",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-20",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_b6971702",
+    "student_id": "stu_cb41fbbe",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-04",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_99429c75",
+    "student_id": "stu_720da2af",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-15",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_ec2cf483",
+    "student_id": "stu_720da2af",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-03",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_8ba45e68",
+    "student_id": "stu_720da2af",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-03",
+    "sure_dakika": 60,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_9a80c1ff",
+    "student_id": "stu_720da2af",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-06",
+    "sure_dakika": 30,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_d37fb68a",
+    "student_id": "stu_720da2af",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-09",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_b721ed57",
+    "student_id": "stu_8b5bad5e",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-28",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_fe7f0174",
+    "student_id": "stu_8b5bad5e",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-02",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_139cd7fe",
+    "student_id": "stu_8b5bad5e",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-01",
+    "sure_dakika": 60,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_df35b158",
+    "student_id": "stu_8b5bad5e",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-26",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_2b611406",
+    "student_id": "stu_8b5bad5e",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-12",
+    "sure_dakika": 30,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_99bff1d1",
+    "student_id": "stu_8b5bad5e",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-13",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_358ebb71",
+    "student_id": "stu_3dbcd86c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-13",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_72f5c233",
+    "student_id": "stu_3dbcd86c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-06",
+    "sure_dakika": 60,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_a708c374",
+    "student_id": "stu_3dbcd86c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-28",
+    "sure_dakika": 60,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_2364e06d",
+    "student_id": "stu_3dbcd86c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-22",
+    "sure_dakika": 60,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_fabc5118",
+    "student_id": "stu_3dbcd86c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-25",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_167cf5c0",
+    "student_id": "stu_3dbcd86c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-08",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_ed109e4a",
+    "student_id": "stu_6818422d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-03",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_cec0280f",
+    "student_id": "stu_6818422d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-09",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_b3af1ad4",
+    "student_id": "stu_6818422d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-15",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_0aa6325c",
+    "student_id": "stu_6818422d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-15",
+    "sure_dakika": 30,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_3ab4ea04",
+    "student_id": "stu_b9a17779",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-12",
+    "sure_dakika": 60,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_5f91eb2c",
+    "student_id": "stu_b9a17779",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-23",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_62da0029",
+    "student_id": "stu_b9a17779",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-26",
+    "sure_dakika": 60,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_cc13d39b",
+    "student_id": "stu_dbfddd75",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-05",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_aa6677ab",
+    "student_id": "stu_dbfddd75",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-01",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_4f94ea10",
+    "student_id": "stu_e675af74",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-04",
+    "sure_dakika": 60,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_fdf73967",
+    "student_id": "stu_e675af74",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-06",
+    "sure_dakika": 30,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_f2628dbe",
+    "student_id": "stu_e675af74",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-04-03",
+    "sure_dakika": 30,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_409a24d4",
+    "student_id": "stu_e675af74",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-21",
+    "sure_dakika": 30,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_4b7fc382",
+    "student_id": "stu_e675af74",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-29",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_a2a5302a",
+    "student_id": "stu_e675af74",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-15",
+    "sure_dakika": 30,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_3b8dec9c",
+    "student_id": "stu_2f45135d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-20",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_0befec98",
+    "student_id": "stu_2f45135d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-13",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_e47a7c57",
+    "student_id": "stu_2f45135d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-06",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_e5710c0a",
+    "student_id": "stu_2f45135d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-07",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_b946ce05",
+    "student_id": "stu_2f45135d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-14",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_030e8316",
+    "student_id": "stu_49d3eb4c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-28",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_b799c69a",
+    "student_id": "stu_49d3eb4c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-11",
+    "sure_dakika": 30,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_148271dc",
+    "student_id": "stu_46a34f04",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-21",
+    "sure_dakika": 60,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_fcac389c",
+    "student_id": "stu_46a34f04",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-23",
+    "sure_dakika": 60,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_a2b81b78",
+    "student_id": "stu_46a34f04",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-23",
+    "sure_dakika": 60,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_5af23711",
+    "student_id": "stu_46a34f04",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-25",
+    "sure_dakika": 30,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_bd9a8a73",
+    "student_id": "stu_46a34f04",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-11",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_1538007f",
+    "student_id": "stu_46a34f04",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-09",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_3c976ef9",
+    "student_id": "stu_0b33f1e9",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-26",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_82c560b6",
+    "student_id": "stu_0b33f1e9",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-04",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_1232cba0",
+    "student_id": "stu_0b33f1e9",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-03",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_bdb1143f",
+    "student_id": "stu_0b33f1e9",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-04",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_b1d6b514",
+    "student_id": "stu_0b33f1e9",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-02",
+    "sure_dakika": 60,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_9d158d10",
+    "student_id": "stu_0b33f1e9",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-11",
+    "sure_dakika": 60,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_6645c04d",
+    "student_id": "stu_86d21c53",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-25",
+    "sure_dakika": 60,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_493b0b03",
+    "student_id": "stu_86d21c53",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-05",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_0175e53f",
+    "student_id": "stu_f444c9e4",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-14",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_c9612d9c",
+    "student_id": "stu_f444c9e4",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-17",
+    "sure_dakika": 60,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_8a807589",
+    "student_id": "stu_f444c9e4",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-20",
+    "sure_dakika": 30,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_1429109a",
+    "student_id": "stu_f444c9e4",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-31",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_19cd9531",
+    "student_id": "stu_f444c9e4",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-04",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_9ee58418",
+    "student_id": "stu_bcadaf50",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-08",
+    "sure_dakika": 60,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_05fac187",
+    "student_id": "stu_bcadaf50",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-19",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_111075b6",
+    "student_id": "stu_bcadaf50",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-12",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_aa67c90e",
+    "student_id": "stu_bcadaf50",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-26",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_0a1e3182",
+    "student_id": "stu_bcadaf50",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-18",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_ee54f11d",
+    "student_id": "stu_0d6e6f1c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-03",
+    "sure_dakika": 60,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_37024713",
+    "student_id": "stu_0d6e6f1c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-09",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_bb018f71",
+    "student_id": "stu_0d6e6f1c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-04",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_6d712b2d",
+    "student_id": "stu_0d6e6f1c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-15",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_9dc114ce",
+    "student_id": "stu_0d6e6f1c",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-19",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_d5ddaa09",
+    "student_id": "stu_e45f5615",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-07",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_9276df2e",
+    "student_id": "stu_e45f5615",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-10",
+    "sure_dakika": 60,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_788edb0d",
+    "student_id": "stu_58151441",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-25",
+    "sure_dakika": 60,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_742bb149",
+    "student_id": "stu_58151441",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-24",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_7616f2c5",
+    "student_id": "stu_c6a85d01",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-25",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_e842bfbc",
+    "student_id": "stu_c6a85d01",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-05",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_f33b0327",
+    "student_id": "stu_c6a85d01",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-08",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_a5017ec7",
+    "student_id": "stu_af8261c4",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-18",
+    "sure_dakika": 60,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_4d2aceb5",
+    "student_id": "stu_af8261c4",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-21",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_e2579729",
+    "student_id": "stu_8a9d3bf6",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-13",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_380ec551",
+    "student_id": "stu_8a9d3bf6",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-26",
+    "sure_dakika": 60,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_34fcd320",
+    "student_id": "stu_8a9d3bf6",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-03",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_2167ca9a",
+    "student_id": "stu_8a9d3bf6",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-22",
+    "sure_dakika": 60,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_c64ad1c5",
+    "student_id": "stu_4968ed2a",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-23",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_42411139",
+    "student_id": "stu_4968ed2a",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-28",
+    "sure_dakika": 60,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_25f2a072",
+    "student_id": "stu_4968ed2a",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-01",
+    "sure_dakika": 60,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_d6ce6658",
+    "student_id": "stu_8ea274df",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-18",
+    "sure_dakika": 60,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_14feaa45",
+    "student_id": "stu_8ea274df",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-30",
+    "sure_dakika": 60,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_90100fd4",
+    "student_id": "stu_8ea274df",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-01",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_d285da34",
+    "student_id": "stu_8ea274df",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-01",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_41e47d8e",
+    "student_id": "stu_7281a02d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-14",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_70465dc6",
+    "student_id": "stu_7281a02d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-29",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_d59fc397",
+    "student_id": "stu_594e0b21",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-02",
+    "sure_dakika": 60,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_feeaf41c",
+    "student_id": "stu_594e0b21",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-23",
+    "sure_dakika": 60,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_aef7a367",
+    "student_id": "stu_594e0b21",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-08",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_e5fca224",
+    "student_id": "stu_594e0b21",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-23",
+    "sure_dakika": 60,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_734f6be3",
+    "student_id": "stu_a95a2c51",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-01",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_6123ea84",
+    "student_id": "stu_a95a2c51",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-21",
+    "sure_dakika": 60,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_8e8e0de4",
+    "student_id": "stu_a95a2c51",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-19",
+    "sure_dakika": 60,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_b067b57c",
+    "student_id": "stu_a95a2c51",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-22",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_7bb53331",
+    "student_id": "stu_6a318026",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-13",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_5c2215c1",
+    "student_id": "stu_6a318026",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-06",
+    "sure_dakika": 30,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_813d90cd",
+    "student_id": "stu_6a318026",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-04",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_041f0af8",
+    "student_id": "stu_6a318026",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-20",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_582c005f",
+    "student_id": "stu_ac4e878d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-26",
+    "sure_dakika": 60,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_9bafc294",
+    "student_id": "stu_ac4e878d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-13",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_51f4ade6",
+    "student_id": "stu_ac4e878d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-30",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_f2c22c9d",
+    "student_id": "stu_ac4e878d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-31",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_149fc7ce",
+    "student_id": "stu_ac4e878d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-28",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_e8bc7310",
+    "student_id": "stu_ac4e878d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-23",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_fbc66e80",
+    "student_id": "stu_493d8397",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-21",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_53853c99",
+    "student_id": "stu_493d8397",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-07",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_857803b2",
+    "student_id": "stu_493d8397",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-22",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_a4e121d9",
+    "student_id": "stu_493d8397",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-14",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_ba85f48f",
+    "student_id": "stu_a714c34f",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-14",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_0147a4d3",
+    "student_id": "stu_a714c34f",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-22",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_f6062ff6",
+    "student_id": "stu_a714c34f",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-23",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_88cf2fff",
+    "student_id": "stu_93c7e975",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-27",
+    "sure_dakika": 60,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_2a836035",
+    "student_id": "stu_93c7e975",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-01",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_96c059a0",
+    "student_id": "stu_93c7e975",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-16",
+    "sure_dakika": 30,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_9175fd0b",
+    "student_id": "stu_93c7e975",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-13",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_2a4abdab",
+    "student_id": "stu_93c7e975",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-07",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_f3d8724e",
+    "student_id": "stu_00a78770",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-24",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_9fca9bfd",
+    "student_id": "stu_00a78770",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-09",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_6494b6d0",
+    "student_id": "stu_00a78770",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-04",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_135b0bfd",
+    "student_id": "stu_00a78770",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-20",
+    "sure_dakika": 60,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_8de0e0bc",
+    "student_id": "stu_bd520f7a",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-08",
+    "sure_dakika": 30,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_90ddf8cc",
+    "student_id": "stu_bd520f7a",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-22",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_21261bca",
+    "student_id": "stu_bd520f7a",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-31",
+    "sure_dakika": 60,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_4e13bebd",
+    "student_id": "stu_bd520f7a",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-25",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_349aac54",
+    "student_id": "stu_bd520f7a",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-20",
+    "sure_dakika": 30,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_020f8173",
+    "student_id": "stu_bd520f7a",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-29",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_eab68cff",
+    "student_id": "stu_4cd01740",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-24",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_6121bab8",
+    "student_id": "stu_4cd01740",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-07",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_eb773378",
+    "student_id": "stu_026e18db",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-09",
+    "sure_dakika": 60,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_9675aa86",
+    "student_id": "stu_026e18db",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-23",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_08a8f36d",
+    "student_id": "stu_026e18db",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-04",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_a8a084aa",
+    "student_id": "stu_026e18db",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-13",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_1787eb67",
+    "student_id": "stu_026e18db",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-09",
+    "sure_dakika": 30,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_51eaa21f",
+    "student_id": "stu_44eabfc6",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-05",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_cce7b32b",
+    "student_id": "stu_44eabfc6",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-21",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_8711b204",
+    "student_id": "stu_e8ab9d59",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-09",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_59fb9587",
+    "student_id": "stu_e8ab9d59",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-04-04",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_47a072d0",
+    "student_id": "stu_e8ab9d59",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-15",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_e53ad7ec",
+    "student_id": "stu_e8ab9d59",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-31",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_7a38436b",
+    "student_id": "stu_e8ab9d59",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-22",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_4072c45a",
+    "student_id": "stu_6abf4fd9",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-10",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_11bdcfd2",
+    "student_id": "stu_6abf4fd9",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-24",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_61973abc",
+    "student_id": "stu_0a39f725",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-06",
+    "sure_dakika": 60,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_8d38bbdf",
+    "student_id": "stu_0a39f725",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-23",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_45d74c9d",
+    "student_id": "stu_0a39f725",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-25",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_f1b2ce68",
+    "student_id": "stu_0a39f725",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-01",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_95b24f47",
+    "student_id": "stu_0a39f725",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-21",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_cbab5911",
+    "student_id": "stu_2a663f9b",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-10",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_f7ff750e",
+    "student_id": "stu_2a663f9b",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-03",
+    "sure_dakika": 30,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_2c576796",
+    "student_id": "stu_2a663f9b",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-21",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_63bc7e5e",
+    "student_id": "stu_f7c84836",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-06",
+    "sure_dakika": 60,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_61e17e02",
+    "student_id": "stu_f7c84836",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-31",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_dda6434a",
+    "student_id": "stu_f7c84836",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-12",
+    "sure_dakika": 60,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_7cb1e22a",
+    "student_id": "stu_f7c84836",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-16",
+    "sure_dakika": 60,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_70c667e8",
+    "student_id": "stu_f7c84836",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-21",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_b8081e4d",
+    "student_id": "stu_85047d0f",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-25",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_bc806b78",
+    "student_id": "stu_85047d0f",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-15",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_cd69a621",
+    "student_id": "stu_85047d0f",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-05",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_d2fe0834",
+    "student_id": "stu_85047d0f",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-24",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_5e440bca",
+    "student_id": "stu_85047d0f",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-25",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_29aea1f1",
+    "student_id": "stu_19436ade",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-19",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_2a8fd8ec",
+    "student_id": "stu_19436ade",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-17",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_c49c1068",
+    "student_id": "stu_19436ade",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-06",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_cf723c99",
+    "student_id": "stu_19436ade",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-17",
+    "sure_dakika": 60,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_5d1582db",
+    "student_id": "stu_19436ade",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-26",
+    "sure_dakika": 60,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_952dbcea",
+    "student_id": "stu_afe1036b",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-19",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_3d16bf42",
+    "student_id": "stu_afe1036b",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-01",
+    "sure_dakika": 30,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_f120f99c",
+    "student_id": "stu_1ba8be51",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-02",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_c3f43440",
+    "student_id": "stu_1ba8be51",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-23",
+    "sure_dakika": 30,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_6211a162",
+    "student_id": "stu_1ba8be51",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-21",
+    "sure_dakika": 30,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_6ddfa56a",
+    "student_id": "stu_1ba8be51",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-12",
+    "sure_dakika": 60,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_6db5154a",
+    "student_id": "stu_1ba8be51",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-10",
+    "sure_dakika": 30,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_862edba1",
+    "student_id": "stu_28f91425",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-13",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_cde50757",
+    "student_id": "stu_28f91425",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-13",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_167a4014",
+    "student_id": "stu_28f91425",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-19",
+    "sure_dakika": 45,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_8b8b8070",
+    "student_id": "stu_28f91425",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-26",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_258122ff",
+    "student_id": "stu_28f91425",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-22",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_fc26a9bf",
+    "student_id": "stu_1381fa9d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-11",
+    "sure_dakika": 45,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_53355b29",
+    "student_id": "stu_1381fa9d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-17",
+    "sure_dakika": 30,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_6950411f",
+    "student_id": "stu_1381fa9d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-29",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_b84a728e",
+    "student_id": "stu_1381fa9d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-08",
+    "sure_dakika": 60,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_e1aabfc6",
+    "student_id": "stu_1381fa9d",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-18",
+    "sure_dakika": 30,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_d012e404",
+    "student_id": "stu_9e319103",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-20",
+    "sure_dakika": 45,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_a406ebbb",
+    "student_id": "stu_9e319103",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-28",
+    "sure_dakika": 30,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_3a328681",
+    "student_id": "stu_9e319103",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-31",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_29729213",
+    "student_id": "stu_9e319103",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-02",
+    "sure_dakika": 60,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_abb703d2",
+    "student_id": "stu_9e319103",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-08",
+    "sure_dakika": 30,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_193ab432",
+    "student_id": "stu_104d03ed",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-23",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_cc03e2bd",
+    "student_id": "stu_104d03ed",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-22",
+    "sure_dakika": 60,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_e6bc7620",
+    "student_id": "stu_104d03ed",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-01-13",
+    "sure_dakika": 60,
+    "konu": "Sinav stratejisi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_1860fec7",
+    "student_id": "stu_104d03ed",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-21",
+    "sure_dakika": 60,
+    "konu": "Stres yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_7d219160",
+    "student_id": "stu_1536d6de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-03-17",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_835adac4",
+    "student_id": "stu_1536d6de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-10-28",
+    "sure_dakika": 60,
+    "konu": "Universite tercihi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_fc718b7d",
+    "student_id": "stu_1536d6de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-12-01",
+    "sure_dakika": 45,
+    "konu": "Ders calisma plani",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_49f28ff9",
+    "student_id": "stu_1536d6de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2025-11-13",
+    "sure_dakika": 30,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_43e7490d",
+    "student_id": "stu_1536d6de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-04-03",
+    "sure_dakika": 45,
+    "konu": "Motivasyon",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "gor_58f8ae38",
+    "student_id": "stu_1536d6de",
+    "koc_id": "ogr_70d7140a",
+    "tarih": "2026-02-18",
+    "sure_dakika": 45,
+    "konu": "Zaman yonetimi",
+    "notlar": "Gorusme olumlu gecti.",
+    "durum": "tamamlandi"
+  }
+]

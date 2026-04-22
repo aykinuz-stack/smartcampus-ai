@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/api/api_client.dart';
 import '../../core/auth/auth_service.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/widgets/premium_widgets.dart';
@@ -82,6 +83,118 @@ class _LoginPageState extends ConsumerState<LoginPage>
           '- Backend calisiyor mu?\n'
           '- Ayni Wi-Fi aginda misin?');
     }
+  }
+
+  void _showForgotPasswordDialog(BuildContext context) {
+    final usernameCtrl = TextEditingController();
+
+    showDialog(
+      context: context,
+      builder: (ctx) {
+        bool loading = false;
+        String? resultMsg;
+        bool success = false;
+
+        return StatefulBuilder(
+          builder: (ctx, setDialogState) {
+            return AlertDialog(
+              backgroundColor: AppColors.surfaceDarker,
+              title: const Text(
+                'Sifremi Unuttum',
+                style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
+              ),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    'Kullanici adinizi girin. Gecici sifre olusturulacaktir.',
+                    style: TextStyle(color: AppColors.textSecondaryDark, fontSize: 13),
+                  ),
+                  const SizedBox(height: 16),
+                  TextField(
+                    controller: usernameCtrl,
+                    style: const TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
+                      labelText: 'Kullanici Adi',
+                      labelStyle: TextStyle(color: AppColors.textSecondaryDark),
+                      prefixIcon: const Icon(Icons.person_outline, color: AppColors.gold),
+                      filled: true,
+                      fillColor: AppColors.surfaceDark,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: BorderSide(color: AppColors.glassBorder),
+                      ),
+                    ),
+                  ),
+                  if (resultMsg != null) ...[
+                    const SizedBox(height: 12),
+                    Text(
+                      resultMsg!,
+                      style: TextStyle(
+                        color: success ? AppColors.success : AppColors.danger,
+                        fontSize: 13,
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.pop(ctx),
+                  child: Text('Kapat', style: TextStyle(color: AppColors.textSecondaryDark)),
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.primary,
+                    foregroundColor: Colors.white,
+                  ),
+                  onPressed: loading
+                      ? null
+                      : () async {
+                          if (usernameCtrl.text.trim().isEmpty) {
+                            setDialogState(() {
+                              resultMsg = 'Kullanici adi bos olamaz';
+                              success = false;
+                            });
+                            return;
+                          }
+                          setDialogState(() {
+                            loading = true;
+                            resultMsg = null;
+                          });
+                          try {
+                            final api = ref.read(apiClientProvider);
+                            final resp = await api.post('/auth/forgot-password', data: {
+                              'username': usernameCtrl.text.trim(),
+                              'tenant_id': _tenantCtrl.text.trim(),
+                            });
+                            final msg = resp.data['message'] ?? 'Islem tamamlandi';
+                            setDialogState(() {
+                              loading = false;
+                              resultMsg = msg;
+                              success = true;
+                            });
+                          } catch (e) {
+                            setDialogState(() {
+                              loading = false;
+                              resultMsg = 'Islem basarisiz. Tekrar deneyin.';
+                              success = false;
+                            });
+                          }
+                        },
+                  child: loading
+                      ? const SizedBox(
+                          width: 18, height: 18,
+                          child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
+                        )
+                      : const Text('Gonder'),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
   }
 
   InputDecoration _premiumInputDecoration({
@@ -431,6 +544,23 @@ class _LoginPageState extends ConsumerState<LoginPage>
                               ],
                             ),
                             height: 54,
+                          ),
+
+                          const SizedBox(height: 12),
+
+                          // Sifremi Unuttum
+                          Center(
+                            child: TextButton(
+                              onPressed: () => _showForgotPasswordDialog(context),
+                              child: Text(
+                                'Sifremi Unuttum',
+                                style: TextStyle(
+                                  color: AppColors.gold.withOpacity(0.85),
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
                           ),
                         ],
                       ),

@@ -1,0 +1,662 @@
+[
+  {
+    "id": "hdf_7c65f32e",
+    "student_id": "stu_9de1ba8d",
+    "hedef": "TYT net ortalamasi 85'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 53,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_5c55a80b",
+    "student_id": "stu_c8fd4d91",
+    "hedef": "TYT net ortalamasi 84'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 72,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_e247e441",
+    "student_id": "stu_167ea8fc",
+    "hedef": "TYT net ortalamasi 101'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 44,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_701ebe92",
+    "student_id": "stu_64e1bdf1",
+    "hedef": "TYT net ortalamasi 103'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 49,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_3df9983b",
+    "student_id": "stu_013e1894",
+    "hedef": "TYT net ortalamasi 82'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 60,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_2dc0c8b8",
+    "student_id": "stu_7492e27c",
+    "hedef": "TYT net ortalamasi 86'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 90,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_86871bb9",
+    "student_id": "stu_20257ef3",
+    "hedef": "TYT net ortalamasi 80'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 36,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_51bff8a1",
+    "student_id": "stu_beb8f17d",
+    "hedef": "TYT net ortalamasi 84'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 43,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_d0e0f876",
+    "student_id": "stu_6deb10e2",
+    "hedef": "TYT net ortalamasi 83'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 83,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_84bed75b",
+    "student_id": "stu_11d168de",
+    "hedef": "TYT net ortalamasi 81'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 28,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_a0fd223a",
+    "student_id": "stu_a4623db1",
+    "hedef": "TYT net ortalamasi 87'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 71,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_5f2dec9b",
+    "student_id": "stu_d730e39d",
+    "hedef": "TYT net ortalamasi 96'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 38,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_60c9f6be",
+    "student_id": "stu_62ef3bab",
+    "hedef": "TYT net ortalamasi 85'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 61,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_8759b771",
+    "student_id": "stu_c67996de",
+    "hedef": "TYT net ortalamasi 108'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 63,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_9db915e7",
+    "student_id": "stu_947af529",
+    "hedef": "TYT net ortalamasi 96'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 59,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_1c2a8f02",
+    "student_id": "stu_aafbb052",
+    "hedef": "TYT net ortalamasi 86'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 30,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_0fd39275",
+    "student_id": "stu_cb41fbbe",
+    "hedef": "TYT net ortalamasi 102'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 68,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_1793314c",
+    "student_id": "stu_720da2af",
+    "hedef": "TYT net ortalamasi 97'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 37,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_36d86825",
+    "student_id": "stu_8b5bad5e",
+    "hedef": "TYT net ortalamasi 102'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 41,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_0c0bc7fb",
+    "student_id": "stu_3dbcd86c",
+    "hedef": "TYT net ortalamasi 83'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 22,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_f22e85c3",
+    "student_id": "stu_6818422d",
+    "hedef": "TYT net ortalamasi 106'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 76,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_ad4f1ee1",
+    "student_id": "stu_b9a17779",
+    "hedef": "TYT net ortalamasi 102'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 37,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_de73e6b1",
+    "student_id": "stu_dbfddd75",
+    "hedef": "TYT net ortalamasi 103'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 71,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_d2de6988",
+    "student_id": "stu_e675af74",
+    "hedef": "TYT net ortalamasi 98'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 26,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_0081d9f2",
+    "student_id": "stu_2f45135d",
+    "hedef": "TYT net ortalamasi 92'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 56,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_be57dfff",
+    "student_id": "stu_49d3eb4c",
+    "hedef": "TYT net ortalamasi 95'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 56,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_34f04d3c",
+    "student_id": "stu_46a34f04",
+    "hedef": "TYT net ortalamasi 85'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 28,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_3c92bb0e",
+    "student_id": "stu_0b33f1e9",
+    "hedef": "TYT net ortalamasi 82'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 80,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_2b17e498",
+    "student_id": "stu_86d21c53",
+    "hedef": "TYT net ortalamasi 93'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 33,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_34d88714",
+    "student_id": "stu_f444c9e4",
+    "hedef": "TYT net ortalamasi 102'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 38,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_a9106031",
+    "student_id": "stu_bcadaf50",
+    "hedef": "TYT net ortalamasi 86'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 89,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_8ed409de",
+    "student_id": "stu_0d6e6f1c",
+    "hedef": "TYT net ortalamasi 109'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 71,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_8608838e",
+    "student_id": "stu_e45f5615",
+    "hedef": "TYT net ortalamasi 106'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 56,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_48a77837",
+    "student_id": "stu_58151441",
+    "hedef": "TYT net ortalamasi 85'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 43,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_bf088250",
+    "student_id": "stu_c6a85d01",
+    "hedef": "TYT net ortalamasi 95'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 30,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_cfa003f3",
+    "student_id": "stu_af8261c4",
+    "hedef": "TYT net ortalamasi 89'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 74,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_833f49c5",
+    "student_id": "stu_8a9d3bf6",
+    "hedef": "TYT net ortalamasi 88'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 28,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_2d31b173",
+    "student_id": "stu_4968ed2a",
+    "hedef": "TYT net ortalamasi 100'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 60,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_50ade6ae",
+    "student_id": "stu_8ea274df",
+    "hedef": "TYT net ortalamasi 81'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 24,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_ef240690",
+    "student_id": "stu_7281a02d",
+    "hedef": "TYT net ortalamasi 94'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 39,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_e9f378c0",
+    "student_id": "stu_594e0b21",
+    "hedef": "TYT net ortalamasi 103'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 75,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_01384a2a",
+    "student_id": "stu_a95a2c51",
+    "hedef": "TYT net ortalamasi 94'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 48,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_a2a1f2df",
+    "student_id": "stu_6a318026",
+    "hedef": "TYT net ortalamasi 93'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 22,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_d4c62195",
+    "student_id": "stu_ac4e878d",
+    "hedef": "TYT net ortalamasi 101'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 30,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_1fdce8fd",
+    "student_id": "stu_493d8397",
+    "hedef": "TYT net ortalamasi 93'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 44,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_919c141e",
+    "student_id": "stu_a714c34f",
+    "hedef": "TYT net ortalamasi 90'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 31,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_1be3af5d",
+    "student_id": "stu_93c7e975",
+    "hedef": "TYT net ortalamasi 81'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 24,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_2d13fe5a",
+    "student_id": "stu_00a78770",
+    "hedef": "TYT net ortalamasi 89'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 63,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_f3203420",
+    "student_id": "stu_bd520f7a",
+    "hedef": "TYT net ortalamasi 107'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 87,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_a63ff947",
+    "student_id": "stu_4cd01740",
+    "hedef": "TYT net ortalamasi 109'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 85,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_a2dd83d7",
+    "student_id": "stu_026e18db",
+    "hedef": "TYT net ortalamasi 97'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 40,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_70367437",
+    "student_id": "stu_44eabfc6",
+    "hedef": "TYT net ortalamasi 103'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 87,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_1672f401",
+    "student_id": "stu_e8ab9d59",
+    "hedef": "TYT net ortalamasi 100'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 52,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_13026c93",
+    "student_id": "stu_6abf4fd9",
+    "hedef": "TYT net ortalamasi 96'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 76,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_56e85328",
+    "student_id": "stu_0a39f725",
+    "hedef": "TYT net ortalamasi 100'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 60,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_b9aa7734",
+    "student_id": "stu_2a663f9b",
+    "hedef": "TYT net ortalamasi 103'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 27,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_4e39e4ed",
+    "student_id": "stu_f7c84836",
+    "hedef": "TYT net ortalamasi 87'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 62,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_bea7451e",
+    "student_id": "stu_85047d0f",
+    "hedef": "TYT net ortalamasi 110'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 55,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_7752471f",
+    "student_id": "stu_19436ade",
+    "hedef": "TYT net ortalamasi 96'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 46,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_1fd53d0f",
+    "student_id": "stu_afe1036b",
+    "hedef": "TYT net ortalamasi 93'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 74,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_fddc04c6",
+    "student_id": "stu_1ba8be51",
+    "hedef": "TYT net ortalamasi 85'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 23,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_568f4f86",
+    "student_id": "stu_28f91425",
+    "hedef": "TYT net ortalamasi 108'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 68,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_d1dfc4e3",
+    "student_id": "stu_1381fa9d",
+    "hedef": "TYT net ortalamasi 85'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 74,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_cdcbaf4e",
+    "student_id": "stu_9e319103",
+    "hedef": "TYT net ortalamasi 106'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 55,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_a8b35985",
+    "student_id": "stu_104d03ed",
+    "hedef": "TYT net ortalamasi 98'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 70,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hdf_36734b89",
+    "student_id": "stu_1536d6de",
+    "hedef": "TYT net ortalamasi 101'e cikmak",
+    "kategori": "akademik",
+    "baslangic": "2025-09-15",
+    "bitis": "2026-06-01",
+    "ilerleme": 74,
+    "durum": "devam_ediyor"
+  }
+]

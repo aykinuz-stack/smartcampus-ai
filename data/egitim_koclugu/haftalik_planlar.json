@@ -1,0 +1,926 @@
+[
+  {
+    "id": "hp_057e3d67",
+    "student_id": "stu_9de1ba8d",
+    "hafta_baslangic": "2026-03-29",
+    "dersler": {
+      "Matematik": 6,
+      "Turkce": 8,
+      "Fen": 7,
+      "Sosyal": 4
+    },
+    "toplam_saat": 39,
+    "gerceklesen_saat": 35,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_e32dc134",
+    "student_id": "stu_c8fd4d91",
+    "hafta_baslangic": "2026-03-13",
+    "dersler": {
+      "Matematik": 7,
+      "Turkce": 3,
+      "Fen": 8,
+      "Sosyal": 6
+    },
+    "toplam_saat": 25,
+    "gerceklesen_saat": 16,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_9522de67",
+    "student_id": "stu_167ea8fc",
+    "hafta_baslangic": "2026-03-20",
+    "dersler": {
+      "Matematik": 12,
+      "Turkce": 5,
+      "Fen": 3,
+      "Sosyal": 2
+    },
+    "toplam_saat": 32,
+    "gerceklesen_saat": 11,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_66b39b12",
+    "student_id": "stu_64e1bdf1",
+    "hafta_baslangic": "2026-03-22",
+    "dersler": {
+      "Matematik": 7,
+      "Turkce": 8,
+      "Fen": 9,
+      "Sosyal": 7
+    },
+    "toplam_saat": 30,
+    "gerceklesen_saat": 10,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_58a1bea2",
+    "student_id": "stu_013e1894",
+    "hafta_baslangic": "2026-03-31",
+    "dersler": {
+      "Matematik": 9,
+      "Turkce": 3,
+      "Fen": 7,
+      "Sosyal": 4
+    },
+    "toplam_saat": 33,
+    "gerceklesen_saat": 29,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_b9915735",
+    "student_id": "stu_7492e27c",
+    "hafta_baslangic": "2026-03-02",
+    "dersler": {
+      "Matematik": 6,
+      "Turkce": 5,
+      "Fen": 8,
+      "Sosyal": 7
+    },
+    "toplam_saat": 22,
+    "gerceklesen_saat": 29,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_98a5f1ec",
+    "student_id": "stu_20257ef3",
+    "hafta_baslangic": "2026-03-06",
+    "dersler": {
+      "Matematik": 14,
+      "Turkce": 7,
+      "Fen": 7,
+      "Sosyal": 8
+    },
+    "toplam_saat": 25,
+    "gerceklesen_saat": 14,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_b5445cfa",
+    "student_id": "stu_beb8f17d",
+    "hafta_baslangic": "2026-03-21",
+    "dersler": {
+      "Matematik": 13,
+      "Turkce": 10,
+      "Fen": 8,
+      "Sosyal": 5
+    },
+    "toplam_saat": 29,
+    "gerceklesen_saat": 19,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_33dbc4b7",
+    "student_id": "stu_6deb10e2",
+    "hafta_baslangic": "2026-03-26",
+    "dersler": {
+      "Matematik": 10,
+      "Turkce": 10,
+      "Fen": 4,
+      "Sosyal": 2
+    },
+    "toplam_saat": 24,
+    "gerceklesen_saat": 12,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_86cfe141",
+    "student_id": "stu_11d168de",
+    "hafta_baslangic": "2026-03-17",
+    "dersler": {
+      "Matematik": 7,
+      "Turkce": 6,
+      "Fen": 3,
+      "Sosyal": 7
+    },
+    "toplam_saat": 39,
+    "gerceklesen_saat": 27,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_b9862273",
+    "student_id": "stu_a4623db1",
+    "hafta_baslangic": "2026-03-28",
+    "dersler": {
+      "Matematik": 14,
+      "Turkce": 9,
+      "Fen": 4,
+      "Sosyal": 7
+    },
+    "toplam_saat": 29,
+    "gerceklesen_saat": 27,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_8b121789",
+    "student_id": "stu_d730e39d",
+    "hafta_baslangic": "2026-03-16",
+    "dersler": {
+      "Matematik": 5,
+      "Turkce": 6,
+      "Fen": 8,
+      "Sosyal": 7
+    },
+    "toplam_saat": 33,
+    "gerceklesen_saat": 11,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_590ce2be",
+    "student_id": "stu_62ef3bab",
+    "hafta_baslangic": "2026-03-20",
+    "dersler": {
+      "Matematik": 9,
+      "Turkce": 9,
+      "Fen": 10,
+      "Sosyal": 8
+    },
+    "toplam_saat": 34,
+    "gerceklesen_saat": 21,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_dc7421d2",
+    "student_id": "stu_c67996de",
+    "hafta_baslangic": "2026-03-20",
+    "dersler": {
+      "Matematik": 13,
+      "Turkce": 10,
+      "Fen": 4,
+      "Sosyal": 6
+    },
+    "toplam_saat": 22,
+    "gerceklesen_saat": 15,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_eb716047",
+    "student_id": "stu_947af529",
+    "hafta_baslangic": "2026-03-06",
+    "dersler": {
+      "Matematik": 14,
+      "Turkce": 3,
+      "Fen": 5,
+      "Sosyal": 4
+    },
+    "toplam_saat": 19,
+    "gerceklesen_saat": 25,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_980a40f5",
+    "student_id": "stu_aafbb052",
+    "hafta_baslangic": "2026-03-16",
+    "dersler": {
+      "Matematik": 9,
+      "Turkce": 10,
+      "Fen": 6,
+      "Sosyal": 5
+    },
+    "toplam_saat": 19,
+    "gerceklesen_saat": 20,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_b816f8a1",
+    "student_id": "stu_cb41fbbe",
+    "hafta_baslangic": "2026-03-16",
+    "dersler": {
+      "Matematik": 15,
+      "Turkce": 7,
+      "Fen": 5,
+      "Sosyal": 7
+    },
+    "toplam_saat": 25,
+    "gerceklesen_saat": 27,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_77b0ded7",
+    "student_id": "stu_720da2af",
+    "hafta_baslangic": "2026-03-29",
+    "dersler": {
+      "Matematik": 7,
+      "Turkce": 7,
+      "Fen": 5,
+      "Sosyal": 2
+    },
+    "toplam_saat": 16,
+    "gerceklesen_saat": 29,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_23e3300c",
+    "student_id": "stu_8b5bad5e",
+    "hafta_baslangic": "2026-03-26",
+    "dersler": {
+      "Matematik": 7,
+      "Turkce": 8,
+      "Fen": 8,
+      "Sosyal": 6
+    },
+    "toplam_saat": 17,
+    "gerceklesen_saat": 23,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_e6e499aa",
+    "student_id": "stu_3dbcd86c",
+    "hafta_baslangic": "2026-04-02",
+    "dersler": {
+      "Matematik": 15,
+      "Turkce": 3,
+      "Fen": 8,
+      "Sosyal": 7
+    },
+    "toplam_saat": 19,
+    "gerceklesen_saat": 10,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_5c7588da",
+    "student_id": "stu_6818422d",
+    "hafta_baslangic": "2026-03-20",
+    "dersler": {
+      "Matematik": 12,
+      "Turkce": 5,
+      "Fen": 5,
+      "Sosyal": 5
+    },
+    "toplam_saat": 28,
+    "gerceklesen_saat": 30,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_2668e622",
+    "student_id": "stu_b9a17779",
+    "hafta_baslangic": "2026-04-03",
+    "dersler": {
+      "Matematik": 10,
+      "Turkce": 8,
+      "Fen": 6,
+      "Sosyal": 6
+    },
+    "toplam_saat": 33,
+    "gerceklesen_saat": 25,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_8a6215b7",
+    "student_id": "stu_dbfddd75",
+    "hafta_baslangic": "2026-03-17",
+    "dersler": {
+      "Matematik": 6,
+      "Turkce": 4,
+      "Fen": 7,
+      "Sosyal": 7
+    },
+    "toplam_saat": 40,
+    "gerceklesen_saat": 25,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_c28ff5c7",
+    "student_id": "stu_e675af74",
+    "hafta_baslangic": "2026-03-01",
+    "dersler": {
+      "Matematik": 9,
+      "Turkce": 8,
+      "Fen": 5,
+      "Sosyal": 3
+    },
+    "toplam_saat": 17,
+    "gerceklesen_saat": 28,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_39080178",
+    "student_id": "stu_2f45135d",
+    "hafta_baslangic": "2026-04-01",
+    "dersler": {
+      "Matematik": 8,
+      "Turkce": 4,
+      "Fen": 4,
+      "Sosyal": 4
+    },
+    "toplam_saat": 23,
+    "gerceklesen_saat": 33,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_755f4c06",
+    "student_id": "stu_49d3eb4c",
+    "hafta_baslangic": "2026-03-15",
+    "dersler": {
+      "Matematik": 10,
+      "Turkce": 6,
+      "Fen": 8,
+      "Sosyal": 6
+    },
+    "toplam_saat": 39,
+    "gerceklesen_saat": 14,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_2f8effd0",
+    "student_id": "stu_46a34f04",
+    "hafta_baslangic": "2026-03-09",
+    "dersler": {
+      "Matematik": 10,
+      "Turkce": 6,
+      "Fen": 6,
+      "Sosyal": 7
+    },
+    "toplam_saat": 28,
+    "gerceklesen_saat": 33,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_55c0165b",
+    "student_id": "stu_0b33f1e9",
+    "hafta_baslangic": "2026-03-24",
+    "dersler": {
+      "Matematik": 10,
+      "Turkce": 5,
+      "Fen": 8,
+      "Sosyal": 3
+    },
+    "toplam_saat": 38,
+    "gerceklesen_saat": 19,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_4851b019",
+    "student_id": "stu_86d21c53",
+    "hafta_baslangic": "2026-03-16",
+    "dersler": {
+      "Matematik": 9,
+      "Turkce": 5,
+      "Fen": 7,
+      "Sosyal": 4
+    },
+    "toplam_saat": 34,
+    "gerceklesen_saat": 34,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_cd95a8a8",
+    "student_id": "stu_f444c9e4",
+    "hafta_baslangic": "2026-03-04",
+    "dersler": {
+      "Matematik": 13,
+      "Turkce": 6,
+      "Fen": 8,
+      "Sosyal": 8
+    },
+    "toplam_saat": 35,
+    "gerceklesen_saat": 18,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_17bbdcad",
+    "student_id": "stu_bcadaf50",
+    "hafta_baslangic": "2026-03-24",
+    "dersler": {
+      "Matematik": 6,
+      "Turkce": 5,
+      "Fen": 4,
+      "Sosyal": 3
+    },
+    "toplam_saat": 17,
+    "gerceklesen_saat": 26,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_1137a72e",
+    "student_id": "stu_0d6e6f1c",
+    "hafta_baslangic": "2026-03-12",
+    "dersler": {
+      "Matematik": 10,
+      "Turkce": 6,
+      "Fen": 9,
+      "Sosyal": 8
+    },
+    "toplam_saat": 38,
+    "gerceklesen_saat": 32,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_b0882562",
+    "student_id": "stu_e45f5615",
+    "hafta_baslangic": "2026-03-15",
+    "dersler": {
+      "Matematik": 6,
+      "Turkce": 5,
+      "Fen": 8,
+      "Sosyal": 4
+    },
+    "toplam_saat": 30,
+    "gerceklesen_saat": 31,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_b08c7e55",
+    "student_id": "stu_58151441",
+    "hafta_baslangic": "2026-03-12",
+    "dersler": {
+      "Matematik": 5,
+      "Turkce": 9,
+      "Fen": 10,
+      "Sosyal": 7
+    },
+    "toplam_saat": 38,
+    "gerceklesen_saat": 31,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_f732e896",
+    "student_id": "stu_c6a85d01",
+    "hafta_baslangic": "2026-03-03",
+    "dersler": {
+      "Matematik": 6,
+      "Turkce": 6,
+      "Fen": 3,
+      "Sosyal": 7
+    },
+    "toplam_saat": 20,
+    "gerceklesen_saat": 27,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_381720c1",
+    "student_id": "stu_af8261c4",
+    "hafta_baslangic": "2026-03-20",
+    "dersler": {
+      "Matematik": 8,
+      "Turkce": 9,
+      "Fen": 6,
+      "Sosyal": 8
+    },
+    "toplam_saat": 20,
+    "gerceklesen_saat": 14,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_0a07e75b",
+    "student_id": "stu_8a9d3bf6",
+    "hafta_baslangic": "2026-03-29",
+    "dersler": {
+      "Matematik": 8,
+      "Turkce": 8,
+      "Fen": 7,
+      "Sosyal": 4
+    },
+    "toplam_saat": 30,
+    "gerceklesen_saat": 33,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_6c9dd1a8",
+    "student_id": "stu_4968ed2a",
+    "hafta_baslangic": "2026-03-27",
+    "dersler": {
+      "Matematik": 9,
+      "Turkce": 3,
+      "Fen": 8,
+      "Sosyal": 6
+    },
+    "toplam_saat": 30,
+    "gerceklesen_saat": 16,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_9bea58c6",
+    "student_id": "stu_8ea274df",
+    "hafta_baslangic": "2026-03-01",
+    "dersler": {
+      "Matematik": 10,
+      "Turkce": 3,
+      "Fen": 7,
+      "Sosyal": 6
+    },
+    "toplam_saat": 17,
+    "gerceklesen_saat": 13,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_2d742395",
+    "student_id": "stu_7281a02d",
+    "hafta_baslangic": "2026-03-28",
+    "dersler": {
+      "Matematik": 15,
+      "Turkce": 9,
+      "Fen": 6,
+      "Sosyal": 3
+    },
+    "toplam_saat": 30,
+    "gerceklesen_saat": 20,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_6a8f433e",
+    "student_id": "stu_594e0b21",
+    "hafta_baslangic": "2026-03-27",
+    "dersler": {
+      "Matematik": 12,
+      "Turkce": 3,
+      "Fen": 10,
+      "Sosyal": 8
+    },
+    "toplam_saat": 36,
+    "gerceklesen_saat": 25,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_dc1386c3",
+    "student_id": "stu_a95a2c51",
+    "hafta_baslangic": "2026-03-03",
+    "dersler": {
+      "Matematik": 5,
+      "Turkce": 8,
+      "Fen": 7,
+      "Sosyal": 3
+    },
+    "toplam_saat": 17,
+    "gerceklesen_saat": 22,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_da4ceaef",
+    "student_id": "stu_6a318026",
+    "hafta_baslangic": "2026-03-24",
+    "dersler": {
+      "Matematik": 10,
+      "Turkce": 5,
+      "Fen": 9,
+      "Sosyal": 4
+    },
+    "toplam_saat": 31,
+    "gerceklesen_saat": 31,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_e70886e9",
+    "student_id": "stu_ac4e878d",
+    "hafta_baslangic": "2026-03-15",
+    "dersler": {
+      "Matematik": 11,
+      "Turkce": 3,
+      "Fen": 8,
+      "Sosyal": 2
+    },
+    "toplam_saat": 39,
+    "gerceklesen_saat": 12,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_f35f59cf",
+    "student_id": "stu_493d8397",
+    "hafta_baslangic": "2026-03-12",
+    "dersler": {
+      "Matematik": 9,
+      "Turkce": 7,
+      "Fen": 4,
+      "Sosyal": 8
+    },
+    "toplam_saat": 32,
+    "gerceklesen_saat": 29,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_981fc509",
+    "student_id": "stu_a714c34f",
+    "hafta_baslangic": "2026-03-07",
+    "dersler": {
+      "Matematik": 7,
+      "Turkce": 3,
+      "Fen": 7,
+      "Sosyal": 3
+    },
+    "toplam_saat": 24,
+    "gerceklesen_saat": 10,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_df746a32",
+    "student_id": "stu_93c7e975",
+    "hafta_baslangic": "2026-03-07",
+    "dersler": {
+      "Matematik": 11,
+      "Turkce": 7,
+      "Fen": 9,
+      "Sosyal": 2
+    },
+    "toplam_saat": 34,
+    "gerceklesen_saat": 33,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_a1c5f62b",
+    "student_id": "stu_00a78770",
+    "hafta_baslangic": "2026-03-27",
+    "dersler": {
+      "Matematik": 7,
+      "Turkce": 6,
+      "Fen": 10,
+      "Sosyal": 7
+    },
+    "toplam_saat": 39,
+    "gerceklesen_saat": 33,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_01c40aee",
+    "student_id": "stu_bd520f7a",
+    "hafta_baslangic": "2026-03-17",
+    "dersler": {
+      "Matematik": 13,
+      "Turkce": 5,
+      "Fen": 10,
+      "Sosyal": 2
+    },
+    "toplam_saat": 39,
+    "gerceklesen_saat": 23,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_21f1cae7",
+    "student_id": "stu_4cd01740",
+    "hafta_baslangic": "2026-03-14",
+    "dersler": {
+      "Matematik": 14,
+      "Turkce": 4,
+      "Fen": 9,
+      "Sosyal": 6
+    },
+    "toplam_saat": 28,
+    "gerceklesen_saat": 25,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_0ecb93c4",
+    "student_id": "stu_026e18db",
+    "hafta_baslangic": "2026-03-23",
+    "dersler": {
+      "Matematik": 10,
+      "Turkce": 3,
+      "Fen": 10,
+      "Sosyal": 5
+    },
+    "toplam_saat": 31,
+    "gerceklesen_saat": 27,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_674b856c",
+    "student_id": "stu_44eabfc6",
+    "hafta_baslangic": "2026-03-24",
+    "dersler": {
+      "Matematik": 12,
+      "Turkce": 8,
+      "Fen": 7,
+      "Sosyal": 2
+    },
+    "toplam_saat": 15,
+    "gerceklesen_saat": 10,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_60299ff8",
+    "student_id": "stu_e8ab9d59",
+    "hafta_baslangic": "2026-04-04",
+    "dersler": {
+      "Matematik": 7,
+      "Turkce": 8,
+      "Fen": 6,
+      "Sosyal": 3
+    },
+    "toplam_saat": 19,
+    "gerceklesen_saat": 16,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_56327a4e",
+    "student_id": "stu_6abf4fd9",
+    "hafta_baslangic": "2026-04-02",
+    "dersler": {
+      "Matematik": 11,
+      "Turkce": 4,
+      "Fen": 4,
+      "Sosyal": 4
+    },
+    "toplam_saat": 17,
+    "gerceklesen_saat": 23,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_2240cd46",
+    "student_id": "stu_0a39f725",
+    "hafta_baslangic": "2026-03-10",
+    "dersler": {
+      "Matematik": 11,
+      "Turkce": 4,
+      "Fen": 5,
+      "Sosyal": 6
+    },
+    "toplam_saat": 39,
+    "gerceklesen_saat": 15,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_d5a3c20c",
+    "student_id": "stu_2a663f9b",
+    "hafta_baslangic": "2026-03-20",
+    "dersler": {
+      "Matematik": 9,
+      "Turkce": 6,
+      "Fen": 10,
+      "Sosyal": 8
+    },
+    "toplam_saat": 27,
+    "gerceklesen_saat": 15,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_ea3dc962",
+    "student_id": "stu_f7c84836",
+    "hafta_baslangic": "2026-03-26",
+    "dersler": {
+      "Matematik": 9,
+      "Turkce": 10,
+      "Fen": 10,
+      "Sosyal": 3
+    },
+    "toplam_saat": 34,
+    "gerceklesen_saat": 25,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_15b45d67",
+    "student_id": "stu_85047d0f",
+    "hafta_baslangic": "2026-04-01",
+    "dersler": {
+      "Matematik": 13,
+      "Turkce": 10,
+      "Fen": 3,
+      "Sosyal": 7
+    },
+    "toplam_saat": 19,
+    "gerceklesen_saat": 14,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_5d5ce853",
+    "student_id": "stu_19436ade",
+    "hafta_baslangic": "2026-03-10",
+    "dersler": {
+      "Matematik": 14,
+      "Turkce": 9,
+      "Fen": 4,
+      "Sosyal": 2
+    },
+    "toplam_saat": 39,
+    "gerceklesen_saat": 31,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_c4897f4d",
+    "student_id": "stu_afe1036b",
+    "hafta_baslangic": "2026-03-02",
+    "dersler": {
+      "Matematik": 5,
+      "Turkce": 7,
+      "Fen": 6,
+      "Sosyal": 6
+    },
+    "toplam_saat": 23,
+    "gerceklesen_saat": 27,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_1d773173",
+    "student_id": "stu_1ba8be51",
+    "hafta_baslangic": "2026-03-26",
+    "dersler": {
+      "Matematik": 8,
+      "Turkce": 4,
+      "Fen": 8,
+      "Sosyal": 3
+    },
+    "toplam_saat": 35,
+    "gerceklesen_saat": 25,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_c47e70a1",
+    "student_id": "stu_28f91425",
+    "hafta_baslangic": "2026-03-10",
+    "dersler": {
+      "Matematik": 14,
+      "Turkce": 9,
+      "Fen": 4,
+      "Sosyal": 6
+    },
+    "toplam_saat": 19,
+    "gerceklesen_saat": 27,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_8051c260",
+    "student_id": "stu_1381fa9d",
+    "hafta_baslangic": "2026-03-01",
+    "dersler": {
+      "Matematik": 9,
+      "Turkce": 9,
+      "Fen": 8,
+      "Sosyal": 8
+    },
+    "toplam_saat": 30,
+    "gerceklesen_saat": 20,
+    "durum": "devam_ediyor"
+  },
+  {
+    "id": "hp_3dcaeb8f",
+    "student_id": "stu_9e319103",
+    "hafta_baslangic": "2026-04-03",
+    "dersler": {
+      "Matematik": 9,
+      "Turkce": 4,
+      "Fen": 8,
+      "Sosyal": 2
+    },
+    "toplam_saat": 35,
+    "gerceklesen_saat": 22,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_8dd7a8bb",
+    "student_id": "stu_104d03ed",
+    "hafta_baslangic": "2026-03-07",
+    "dersler": {
+      "Matematik": 13,
+      "Turkce": 7,
+      "Fen": 10,
+      "Sosyal": 7
+    },
+    "toplam_saat": 39,
+    "gerceklesen_saat": 35,
+    "durum": "tamamlandi"
+  },
+  {
+    "id": "hp_dd831a93",
+    "student_id": "stu_1536d6de",
+    "hafta_baslangic": "2026-03-29",
+    "dersler": {
+      "Matematik": 13,
+      "Turkce": 5,
+      "Fen": 6,
+      "Sosyal": 6
+    },
+    "toplam_saat": 38,
+    "gerceklesen_saat": 18,
+    "durum": "tamamlandi"
+  }
+]

@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 from typing import Annotated
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Body, Depends, HTTPException, status
 
 from ..core.config import settings
 from ..core.deps import get_current_user
@@ -154,6 +154,127 @@ async def logout(req: LogoutRequest):
     """Client taraftan token'i silmesi yeterli — burda sadece 200."""
     # Production'da token blacklist sistemine ekleme yapilabilir
     return {"ok": True, "message": "Cikis yapildi"}
+
+
+@router.post("/change-password")
+async def change_password(
+    req: Annotated[dict, Body()],
+    user: Annotated[dict, Depends(get_current_user)],
+):
+    """Sifre degistir — eski sifre + yeni sifre."""
+    import json
+    from ..core.security import hash_password
+
+    old_password = req.get("old_password", "")
+    new_password = req.get("new_password", "")
+    if not old_password or not new_password:
+        raise HTTPException(status_code=400, detail="Eski ve yeni sifre gerekli")
+    if len(new_password) < 4:
+        raise HTTPException(status_code=400, detail="Yeni sifre en az 4 karakter olmali")
+
+    username = user.get("sub", "")
+    tenant_id = user.get("tenant_id", "default")
+
+    # Kullanici dosyasini bul
+    candidates = [
+        _PROJECT_ROOT / "data" / "tenants" / tenant_id / "users.json",
+        _PROJECT_ROOT / "data" / "users.json",
+    ]
+    users_path = None
+    users = []
+    for p in candidates:
+        if p.exists():
+            try:
+                with open(p, "r", encoding="utf-8") as f:
+                    users = json.load(f)
+                users_path = p
+                break
+            except Exception:
+                pass
+
+    if not users_path:
+        raise HTTPException(status_code=500, detail="Kullanici dosyasi bulunamadi")
+
+    target = next((u for u in users if u.get("username") == username), None)
+    if not target:
+        raise HTTPException(status_code=404, detail="Kullanici bulunamadi")
+
+    # Eski sifre dogrulama
+    stored = target.get("password_hash") or target.get("sifre_hash") or target.get("sifre", "")
+    ok = False
+    if stored.startswith("$2"):
+        ok = verify_password(old_password, stored)
+    elif len(stored) == 64 and all(c in "0123456789abcdef" for c in stored):
+        import hashlib
+        ok = hashlib.sha256(old_password.encode("utf-8")).hexdigest() == stored
+    else:
+        ok = stored == old_password
+    if not ok:
+        raise HTTPException(status_code=401, detail="Eski sifre hatali")
+
+    # Yeni sifre hash'le ve kaydet
+    target["password_hash"] = hash_password(new_password)
+    # Eski alanlari temizle
+    target.pop("sifre_hash", None)
+    target.pop("sifre", None)
+
+    with open(users_path, "w", encoding="utf-8") as f:
+        json.dump(users, f, ensure_ascii=False, indent=2)
+
+    return {"ok": True, "message": "Sifre basariyla degistirildi"}
+
+
+@router.post("/forgot-password")
+async def forgot_password(req: Annotated[dict, Body()]):
+    """Sifre sifirlama talebi — username ile gecici sifre uretir."""
+    import json
+    import secrets
+    import logging
+    from ..core.security import hash_password
+
+    username = req.get("username", "").strip()
+    tenant_id = req.get("tenant_id", "default")
+    if not username:
+        raise HTTPException(status_code=400, detail="Kullanici adi gerekli")
+
+    candidates = [
+        _PROJECT_ROOT / "data" / "tenants" / tenant_id / "users.json",
+        _PROJECT_ROOT / "data" / "users.json",
+    ]
+    users_path = None
+    users = []
+    for p in candidates:
+        if p.exists():
+            try:
+                with open(p, "r", encoding="utf-8") as f:
+                    users = json.load(f)
+                users_path = p
+                break
+            except Exception:
+                pass
+
+    if not users_path:
+        raise HTTPException(status_code=500, detail="Kullanici dosyasi bulunamadi")
+
+    target = next((u for u in users if u.get("username") == username), None)
+    if not target:
+        # Guvenlik: kullanicinin var olup olmadigini belli etme
+        return {"ok": True, "message": "Eger kullanici mevcutsa, gecici sifre olusturuldu. Yoneticiyle iletisime gecin."}
+
+    # Gecici sifre uret
+    temp_password = secrets.token_urlsafe(8)
+    target["password_hash"] = hash_password(temp_password)
+    target.pop("sifre_hash", None)
+    target.pop("sifre", None)
+
+    with open(users_path, "w", encoding="utf-8") as f:
+        json.dump(users, f, ensure_ascii=False, indent=2)
+
+    # Log'a yaz (production'da e-posta/SMS gonderilir)
+    logger = logging.getLogger("smartcampus.auth")
+    logger.info(f"[FORGOT-PASSWORD] Kullanici: {username} | Gecici sifre: {temp_password}")
+
+    return {"ok": True, "message": "Gecici sifre olusturuldu. Yoneticiyle iletisime gecin."}
 
 
 @router.get("/me", response_model=CurrentUserResponse)

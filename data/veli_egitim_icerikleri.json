@@ -1,0 +1,12 @@
+[
+    {"id": "ve_01", "baslik": "Cocugunuzla Etkili Iletisim", "kategori": "Iletisim", "sure_dk": 15, "ozet": "Aktif dinleme, empati ve pozitif dil kullanarak cocugunuzla guven iliskisi kurun."},
+    {"id": "ve_02", "baslik": "LGS'ye Hazirlik Stratejileri", "kategori": "Sinav Hazirligi", "sure_dk": 20, "ozet": "Etkili calisma plani, zaman yonetimi ve sinav kaygisinsi azaltma teknikleri."},
+    {"id": "ve_03", "baslik": "Dijital Cagda Cocuk Yetistirme", "kategori": "Teknoloji", "sure_dk": 15, "ozet": "Ekran suresi yonetimi, guvenli internet kullanimi ve dijital okuryazarlik."},
+    {"id": "ve_04", "baslik": "Motivasyon ve Oz-Disiplin", "kategori": "Gelisim", "sure_dk": 12, "ozet": "Ic motivasyonu destekleme, odul-ceza dengesi ve aliskanlk olusturma."},
+    {"id": "ve_05", "baslik": "Okul-Ev Isbirligi", "kategori": "Iletisim", "sure_dk": 10, "ozet": "Ogretmenle etkili iletisim, ev odevi destegi ve okul etkinliklerine katilim."},
+    {"id": "ve_06", "baslik": "Beslenme ve Akademik Basari", "kategori": "Saglik", "sure_dk": 12, "ozet": "Beyin dostu besinler, kahvalti onemi ve sinav donemi beslenme onerileri."},
+    {"id": "ve_07", "baslik": "Ergenlik Doneminde Iletisim", "kategori": "Gelisim", "sure_dk": 18, "ozet": "Ergenlik degisiklikleri, sinir koyma ve guvene dayali iliskiyi surdurmek."},
+    {"id": "ve_08", "baslik": "Coklu Zeka ve Ogrenme Stilleri", "kategori": "Egitim", "sure_dk": 15, "ozet": "Cocugunuzun ogrenme stilini taniyin: gorsel, isitsel, kinestetik yaklasimlari."},
+    {"id": "ve_09", "baslik": "Universite Tercih Rehberi", "kategori": "Sinav Hazirligi", "sure_dk": 20, "ozet": "YKS sonrasi tercih stratejisi, bolum tanitimi ve kariyer planlama."},
+    {"id": "ve_10", "baslik": "Stres Yonetimi (Veli Icin)", "kategori": "Saglik", "sure_dk": 10, "ozet": "Ebeveyn tukenmisligi, oz-bakim ve stresle basa cikma yontemleri."}
+]

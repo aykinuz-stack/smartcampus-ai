@@ -1,0 +1,58 @@
+230
+YKS Çıkmış Sorular Ortaöğretim Genel Müdürlüğü
+MATEMATİKTYT95. Bir matematik kitabının aşağıda bir kısmı 
+gösterilen sayfasındaki 1. işlemin sonucu 2. işlemin 
+sonucundan 12 fazladır.
+ 
+a = 2 b =
+1. işlem:
+2. işlem:
+3. işlem:
+4. işlem:
+ab b
++=
+ab b
+−=
+ab b
+×=
+ab b
+÷=
+ Buna göre 3. işlemin sonucu 4. işlemin 
+sonucunun kaç katına eşittir?
+A) 9 B) 16 C) 24 D) 30 E) 36
+2025-TYTDenklemler ve Eşitsizlikler ile İlgili 
+Uygulamalar
+ • Oran-Orantı Kavramları ve Özellikleri
+ • Oran-Orantı Problemleri
+ • Sayı Problemleri
+ • Kesir Problemleri
+ • Yaş Problemleri
+ • Işçi Problemleri
+ • Yüzde Problemleri
+ • Kar-Zarar Problemleri
+ • Karışım Problemleri
+ • Hareket Problemleri
+ • Rutin Olmayan Problemler
+TYT Ç
+IKMIŞ SORULAR
+TEMEL YETERLİLİK TE
+S
+Tİ
+96. Türkiye’deki 81 ilin tamamını kapsayan bir projede; 
+önce her bir ile  p  tane park yapılması, sonra 
+da yapılan her bir parka  a  tane ağaç dikilmesi 
+planlanmıştır.
+ Fakat, bu planda yapılacak park ve dikilecek 
+ağaç sayısı yeterli bulunmamış ve önce her bir 
+ile yapılması planlanan park sayısından 1 fazla 
+sayıda park yapılmış, sonra da yapılan her bir parka 
+dikilmesi planlanan sayıdan 1 fazla sayıda ağaç 
+dikilmiştir.  
+ Buna göre, son durumda dikilen toplam ağaç 
+sayısı ile başlangıçta dikilmesi planlanan toplam 
+ağaç sayısı arasındaki fark aşağıdakilerin 
+hangisinde doğru olarak verilmiştir?
+A) 162  B) 81 • a • p      
+C) 81 • (a + p)  D) 81 • (a • p + 1)
+ E) 81 • (a + p + 1)
+2018-TYT

@@ -562,6 +562,46 @@ async def get_kazanim_borclari(
 
 
 # ══════════════════════════════════════════════════════════════
+# OGRENCI FOTOSU
+# ══════════════════════════════════════════════════════════════
+
+@router.get("/foto/{student_id}")
+async def get_foto(
+    student_id: str,
+    user: Annotated[dict, Depends(get_current_user)],
+):
+    """Ogrenci fotosu — base64 veya placeholder."""
+    import base64
+    from pathlib import Path
+
+    _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+    foto_dir = _PROJECT_ROOT / "data" / "ogrenci_foto"
+
+    # jpg, png, jpeg arasin
+    for ext in ("jpg", "jpeg", "png"):
+        foto_path = foto_dir / f"{student_id}.{ext}"
+        if foto_path.exists():
+            try:
+                with open(foto_path, "rb") as f:
+                    data = base64.b64encode(f.read()).decode("utf-8")
+                mime = "image/jpeg" if ext in ("jpg", "jpeg") else "image/png"
+                return {
+                    "student_id": student_id,
+                    "foto": f"data:{mime};base64,{data}",
+                    "has_foto": True,
+                }
+            except Exception:
+                break
+
+    # Placeholder — foto yok
+    return {
+        "student_id": student_id,
+        "foto": None,
+        "has_foto": False,
+    }
+
+
+# ══════════════════════════════════════════════════════════════
 # TELAFI GOREVLERI
 # ══════════════════════════════════════════════════════════════
 

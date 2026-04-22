@@ -1,0 +1,222 @@
+[
+  {
+    "id": "dp_60b2f6e1",
+    "student_id": "stu_46a34f04",
+    "ogrenci_adi": "Selin Bozkurt",
+    "plan_turu": "akademik_destek",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2026-03-24",
+    "bitis": "2026-05-04",
+    "durum": "aktif",
+    "sorumlu": "Emre Dogan"
+  },
+  {
+    "id": "dp_ce812f8f",
+    "student_id": "stu_9e319103",
+    "ogrenci_adi": "Onur Ozturk",
+    "plan_turu": "davranissal",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2026-03-02",
+    "bitis": "2026-05-06",
+    "durum": "aktif",
+    "sorumlu": "Ilgin Kilic"
+  },
+  {
+    "id": "dp_1ac1d445",
+    "student_id": "stu_a61fb766",
+    "ogrenci_adi": "Baris Balci",
+    "plan_turu": "sosyal_duygusal",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2025-10-28",
+    "bitis": "2026-06-18",
+    "durum": "aktif",
+    "sorumlu": "Lina Polat"
+  },
+  {
+    "id": "dp_6772bb27",
+    "student_id": "stu_720da2af",
+    "ogrenci_adi": "Nehir Yilmaz",
+    "plan_turu": "davranissal",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2026-03-17",
+    "bitis": "2026-05-19",
+    "durum": "tamamlandi",
+    "sorumlu": "Ali Ozturk"
+  },
+  {
+    "id": "dp_293fb86a",
+    "student_id": "stu_0a39f725",
+    "ogrenci_adi": "Baris Erdogan",
+    "plan_turu": "davranissal",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2025-12-10",
+    "bitis": "2026-06-12",
+    "durum": "tamamlandi",
+    "sorumlu": "Pelin Korkmaz"
+  },
+  {
+    "id": "dp_b6ea829b",
+    "student_id": "stu_167ea8fc",
+    "ogrenci_adi": "Burak Tekin",
+    "plan_turu": "sosyal_duygusal",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2025-10-12",
+    "bitis": "2026-05-24",
+    "durum": "aktif",
+    "sorumlu": "Deniz Cetin"
+  },
+  {
+    "id": "dp_90c6ad78",
+    "student_id": "stu_013e1894",
+    "ogrenci_adi": "Hasan Ozturk",
+    "plan_turu": "davranissal",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2026-03-26",
+    "bitis": "2026-05-08",
+    "durum": "tamamlandi",
+    "sorumlu": "Derin Aslan"
+  },
+  {
+    "id": "dp_d68c8695",
+    "student_id": "stu_052e49c5",
+    "ogrenci_adi": "Dilara Polat",
+    "plan_turu": "akademik_destek",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2026-02-08",
+    "bitis": "2026-05-29",
+    "durum": "tamamlandi",
+    "sorumlu": "Elif Balci"
+  },
+  {
+    "id": "dp_44bfa7bd",
+    "student_id": "stu_09677a72",
+    "ogrenci_adi": "Serkan Yildirim",
+    "plan_turu": "davranissal",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2026-03-25",
+    "bitis": "2026-05-16",
+    "durum": "tamamlandi",
+    "sorumlu": "Ilgin Kaya"
+  },
+  {
+    "id": "dp_10384cf3",
+    "student_id": "stu_53cd7338",
+    "ogrenci_adi": "Zeynep Ozturk",
+    "plan_turu": "akademik_destek",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2026-04-02",
+    "bitis": "2026-05-27",
+    "durum": "aktif",
+    "sorumlu": "Nisa Kilic"
+  },
+  {
+    "id": "dp_d2d59c20",
+    "student_id": "stu_4968ed2a",
+    "ogrenci_adi": "Ilgin Kurt",
+    "plan_turu": "sosyal_duygusal",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2026-01-17",
+    "bitis": "2026-05-16",
+    "durum": "aktif",
+    "sorumlu": "Dilara Kaya"
+  },
+  {
+    "id": "dp_d631ce85",
+    "student_id": "stu_104d03ed",
+    "ogrenci_adi": "Onur Yildirim",
+    "plan_turu": "sosyal_duygusal",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2025-10-22",
+    "bitis": "2026-05-15",
+    "durum": "tamamlandi",
+    "sorumlu": "Nisa Aydin"
+  },
+  {
+    "id": "dp_127d0b56",
+    "student_id": "stu_d0220a6d",
+    "ogrenci_adi": "Defne Erdogan",
+    "plan_turu": "davranissal",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2025-09-26",
+    "bitis": "2026-06-24",
+    "durum": "aktif",
+    "sorumlu": "Baris Erdogan"
+  },
+  {
+    "id": "dp_fc662f2a",
+    "student_id": "stu_003234ae",
+    "ogrenci_adi": "Eren Kara",
+    "plan_turu": "davranissal",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2025-09-19",
+    "bitis": "2026-06-12",
+    "durum": "tamamlandi",
+    "sorumlu": "Merve Tekin"
+  },
+  {
+    "id": "dp_6455569e",
+    "student_id": "stu_afe1036b",
+    "ogrenci_adi": "Hasan Yildiz",
+    "plan_turu": "davranissal",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2025-11-06",
+    "bitis": "2026-06-25",
+    "durum": "tamamlandi",
+    "sorumlu": "Sude Sahin"
+  },
+  {
+    "id": "dp_91ffb86e",
+    "student_id": "stu_29581f55",
+    "ogrenci_adi": "Busra Balci",
+    "plan_turu": "sosyal_duygusal",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2025-11-05",
+    "bitis": "2026-06-13",
+    "durum": "tamamlandi",
+    "sorumlu": "Rana Sahin"
+  },
+  {
+    "id": "dp_856a9f60",
+    "student_id": "stu_e1699208",
+    "ogrenci_adi": "Asya Erdogan",
+    "plan_turu": "akademik_destek",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2025-09-28",
+    "bitis": "2026-06-13",
+    "durum": "aktif",
+    "sorumlu": "Oguz Kilic"
+  },
+  {
+    "id": "dp_78fd7ba1",
+    "student_id": "stu_ac8cd5e2",
+    "ogrenci_adi": "Mira Kurt",
+    "plan_turu": "davranissal",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2026-01-31",
+    "bitis": "2026-05-22",
+    "durum": "tamamlandi",
+    "sorumlu": "Ege Balci"
+  },
+  {
+    "id": "dp_6eb04c17",
+    "student_id": "stu_6bda4eaa",
+    "ogrenci_adi": "Mustafa Ucar",
+    "plan_turu": "sosyal_duygusal",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2026-03-27",
+    "bitis": "2026-06-24",
+    "durum": "aktif",
+    "sorumlu": "Mehmet Acar"
+  },
+  {
+    "id": "dp_98333733",
+    "student_id": "stu_137a414a",
+    "ogrenci_adi": "Elif Ucar",
+    "plan_turu": "akademik_destek",
+    "hedef": "Ogrencinin basari duzeyini yukseltmek",
+    "baslangic": "2025-11-24",
+    "bitis": "2026-05-31",
+    "durum": "aktif",
+    "sorumlu": "Kerem Ak"
+  }
+]

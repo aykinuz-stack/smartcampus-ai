@@ -1,0 +1,522 @@
+[
+  {
+    "id": "kyt_s_d6f29b6a",
+    "kategori": "Ogrenme Stili",
+    "soru_no": 1,
+    "metin": "Ogrenme Stili - Soru 1",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_5b47dc0f",
+    "kategori": "Ogrenme Stili",
+    "soru_no": 2,
+    "metin": "Ogrenme Stili - Soru 2",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_92ef5bd9",
+    "kategori": "Ogrenme Stili",
+    "soru_no": 3,
+    "metin": "Ogrenme Stili - Soru 3",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_eaf07293",
+    "kategori": "Ogrenme Stili",
+    "soru_no": 4,
+    "metin": "Ogrenme Stili - Soru 4",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_db40acd4",
+    "kategori": "Ogrenme Stili",
+    "soru_no": 5,
+    "metin": "Ogrenme Stili - Soru 5",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_970daac4",
+    "kategori": "Ogrenme Stili",
+    "soru_no": 6,
+    "metin": "Ogrenme Stili - Soru 6",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_78e6e3d3",
+    "kategori": "Ogrenme Stili",
+    "soru_no": 7,
+    "metin": "Ogrenme Stili - Soru 7",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_3102a786",
+    "kategori": "Ogrenme Stili",
+    "soru_no": 8,
+    "metin": "Ogrenme Stili - Soru 8",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_82636bc4",
+    "kategori": "Ogrenme Stili",
+    "soru_no": 9,
+    "metin": "Ogrenme Stili - Soru 9",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_1c234cbe",
+    "kategori": "Ogrenme Stili",
+    "soru_no": 10,
+    "metin": "Ogrenme Stili - Soru 10",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_a35d1a3f",
+    "kategori": "Mesleki Ilgi",
+    "soru_no": 1,
+    "metin": "Mesleki Ilgi - Soru 1",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_39c8ddaa",
+    "kategori": "Mesleki Ilgi",
+    "soru_no": 2,
+    "metin": "Mesleki Ilgi - Soru 2",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_089e78db",
+    "kategori": "Mesleki Ilgi",
+    "soru_no": 3,
+    "metin": "Mesleki Ilgi - Soru 3",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_5ef5559a",
+    "kategori": "Mesleki Ilgi",
+    "soru_no": 4,
+    "metin": "Mesleki Ilgi - Soru 4",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_d8b7d9a3",
+    "kategori": "Mesleki Ilgi",
+    "soru_no": 5,
+    "metin": "Mesleki Ilgi - Soru 5",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_b531aa71",
+    "kategori": "Mesleki Ilgi",
+    "soru_no": 6,
+    "metin": "Mesleki Ilgi - Soru 6",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_db8136ce",
+    "kategori": "Mesleki Ilgi",
+    "soru_no": 7,
+    "metin": "Mesleki Ilgi - Soru 7",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_3939a294",
+    "kategori": "Mesleki Ilgi",
+    "soru_no": 8,
+    "metin": "Mesleki Ilgi - Soru 8",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_865b7a14",
+    "kategori": "Mesleki Ilgi",
+    "soru_no": 9,
+    "metin": "Mesleki Ilgi - Soru 9",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_8f16bf6d",
+    "kategori": "Mesleki Ilgi",
+    "soru_no": 10,
+    "metin": "Mesleki Ilgi - Soru 10",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_9ece7ba0",
+    "kategori": "Coklu Zeka",
+    "soru_no": 1,
+    "metin": "Coklu Zeka - Soru 1",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_3995a21b",
+    "kategori": "Coklu Zeka",
+    "soru_no": 2,
+    "metin": "Coklu Zeka - Soru 2",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_726ea95c",
+    "kategori": "Coklu Zeka",
+    "soru_no": 3,
+    "metin": "Coklu Zeka - Soru 3",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_94e9babf",
+    "kategori": "Coklu Zeka",
+    "soru_no": 4,
+    "metin": "Coklu Zeka - Soru 4",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_fe522da1",
+    "kategori": "Coklu Zeka",
+    "soru_no": 5,
+    "metin": "Coklu Zeka - Soru 5",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_2a320c0b",
+    "kategori": "Coklu Zeka",
+    "soru_no": 6,
+    "metin": "Coklu Zeka - Soru 6",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_26ebcbc7",
+    "kategori": "Coklu Zeka",
+    "soru_no": 7,
+    "metin": "Coklu Zeka - Soru 7",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_b908d43c",
+    "kategori": "Coklu Zeka",
+    "soru_no": 8,
+    "metin": "Coklu Zeka - Soru 8",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_6633edb8",
+    "kategori": "Coklu Zeka",
+    "soru_no": 9,
+    "metin": "Coklu Zeka - Soru 9",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_fd434ed9",
+    "kategori": "Coklu Zeka",
+    "soru_no": 10,
+    "metin": "Coklu Zeka - Soru 10",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_47de2c60",
+    "kategori": "Kisilik",
+    "soru_no": 1,
+    "metin": "Kisilik - Soru 1",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_04375fca",
+    "kategori": "Kisilik",
+    "soru_no": 2,
+    "metin": "Kisilik - Soru 2",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_842dfaea",
+    "kategori": "Kisilik",
+    "soru_no": 3,
+    "metin": "Kisilik - Soru 3",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_ef3a3dbe",
+    "kategori": "Kisilik",
+    "soru_no": 4,
+    "metin": "Kisilik - Soru 4",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_9d00a7b2",
+    "kategori": "Kisilik",
+    "soru_no": 5,
+    "metin": "Kisilik - Soru 5",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_4c3fa27b",
+    "kategori": "Kisilik",
+    "soru_no": 6,
+    "metin": "Kisilik - Soru 6",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_eb457e32",
+    "kategori": "Kisilik",
+    "soru_no": 7,
+    "metin": "Kisilik - Soru 7",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_2e99240d",
+    "kategori": "Kisilik",
+    "soru_no": 8,
+    "metin": "Kisilik - Soru 8",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_a42cd9fd",
+    "kategori": "Kisilik",
+    "soru_no": 9,
+    "metin": "Kisilik - Soru 9",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  },
+  {
+    "id": "kyt_s_4b717341",
+    "kategori": "Kisilik",
+    "soru_no": 10,
+    "metin": "Kisilik - Soru 10",
+    "secenekler": [
+      "Kesinlikle katiliyorum",
+      "Katiliyorum",
+      "Kararsizim",
+      "Katilmiyorum",
+      "Kesinlikle katilmiyorum"
+    ]
+  }
+]

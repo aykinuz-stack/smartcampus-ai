@@ -1,0 +1,452 @@
+[
+  {
+    "id": "kb_fde94382",
+    "student_id": "stu_b2d4d380",
+    "ders": "Ingilizce",
+    "kazanim_kodu": "ING.3.3",
+    "kazanim_adi": "Ingilizce Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2025-11-14"
+  },
+  {
+    "id": "kb_e6890293",
+    "student_id": "stu_2d981dec",
+    "ders": "Matematik",
+    "kazanim_kodu": "MAT.6.1",
+    "kazanim_adi": "Matematik Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2026-01-16"
+  },
+  {
+    "id": "kb_ccc1b2b3",
+    "student_id": "stu_7b1dbcb2",
+    "ders": "Fen Bilimleri",
+    "kazanim_kodu": "FEN.6.4",
+    "kazanim_adi": "Fen Bilimleri Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2025-10-13"
+  },
+  {
+    "id": "kb_6bb8dd18",
+    "student_id": "stu_b9a17779",
+    "ders": "Ingilizce",
+    "kazanim_kodu": "ING.10.4",
+    "kazanim_adi": "Ingilizce Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2025-10-12"
+  },
+  {
+    "id": "kb_a5824095",
+    "student_id": "stu_29581f55",
+    "ders": "Matematik",
+    "kazanim_kodu": "MAT.7.5",
+    "kazanim_adi": "Matematik Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2025-11-16"
+  },
+  {
+    "id": "kb_b4bbcdf0",
+    "student_id": "stu_a1f01cbd",
+    "ders": "Ingilizce",
+    "kazanim_kodu": "ING.2.1",
+    "kazanim_adi": "Ingilizce Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2026-03-04"
+  },
+  {
+    "id": "kb_015987fd",
+    "student_id": "stu_720da2af",
+    "ders": "Fen Bilimleri",
+    "kazanim_kodu": "FEN.10.2",
+    "kazanim_adi": "Fen Bilimleri Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2025-09-16"
+  },
+  {
+    "id": "kb_e9d6f48b",
+    "student_id": "stu_cfef5561",
+    "ders": "Ingilizce",
+    "kazanim_kodu": "ING.2.2",
+    "kazanim_adi": "Ingilizce Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2025-11-03"
+  },
+  {
+    "id": "kb_7521513f",
+    "student_id": "stu_844044c9",
+    "ders": "Matematik",
+    "kazanim_kodu": "MAT.2.4",
+    "kazanim_adi": "Matematik Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2025-12-13"
+  },
+  {
+    "id": "kb_85865ba4",
+    "student_id": "stu_58f083f0",
+    "ders": "Ingilizce",
+    "kazanim_kodu": "ING.3.4",
+    "kazanim_adi": "Ingilizce Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2026-02-26"
+  },
+  {
+    "id": "kb_280cc0a4",
+    "student_id": "stu_bcadaf50",
+    "ders": "Fen Bilimleri",
+    "kazanim_kodu": "FEN.10.4",
+    "kazanim_adi": "Fen Bilimleri Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2025-12-19"
+  },
+  {
+    "id": "kb_767773d3",
+    "student_id": "stu_00a78770",
+    "ders": "Ingilizce",
+    "kazanim_kodu": "ING.11.5",
+    "kazanim_adi": "Ingilizce Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2025-10-27"
+  },
+  {
+    "id": "kb_cc7f97f8",
+    "student_id": "stu_799bdb7f",
+    "ders": "Fen Bilimleri",
+    "kazanim_kodu": "FEN.7.1",
+    "kazanim_adi": "Fen Bilimleri Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2025-11-30"
+  },
+  {
+    "id": "kb_27c8cb53",
+    "student_id": "stu_d730e39d",
+    "ders": "Matematik",
+    "kazanim_kodu": "MAT.9.1",
+    "kazanim_adi": "Matematik Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2026-03-24"
+  },
+  {
+    "id": "kb_4daeaa11",
+    "student_id": "stu_c830dc54",
+    "ders": "Turkce",
+    "kazanim_kodu": "TUR.7.4",
+    "kazanim_adi": "Turkce Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2025-09-19"
+  },
+  {
+    "id": "kb_4f231aa8",
+    "student_id": "stu_94f8308d",
+    "ders": "Turkce",
+    "kazanim_kodu": "TUR.5.2",
+    "kazanim_adi": "Turkce Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2026-03-30"
+  },
+  {
+    "id": "kb_d29d8668",
+    "student_id": "stu_6deb10e2",
+    "ders": "Turkce",
+    "kazanim_kodu": "TUR.9.4",
+    "kazanim_adi": "Turkce Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2026-03-11"
+  },
+  {
+    "id": "kb_58a24bb9",
+    "student_id": "stu_a714c34f",
+    "ders": "Ingilizce",
+    "kazanim_kodu": "ING.11.2",
+    "kazanim_adi": "Ingilizce Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2025-10-17"
+  },
+  {
+    "id": "kb_c1cd59e2",
+    "student_id": "stu_2f97424c",
+    "ders": "Turkce",
+    "kazanim_kodu": "TUR.6.3",
+    "kazanim_adi": "Turkce Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2025-10-05"
+  },
+  {
+    "id": "kb_9f165262",
+    "student_id": "stu_947af529",
+    "ders": "Matematik",
+    "kazanim_kodu": "MAT.9.5",
+    "kazanim_adi": "Matematik Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2025-09-18"
+  },
+  {
+    "id": "kb_69ff6652",
+    "student_id": "stu_25265882",
+    "ders": "Turkce",
+    "kazanim_kodu": "TUR.8.5",
+    "kazanim_adi": "Turkce Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2026-03-09"
+  },
+  {
+    "id": "kb_8549f847",
+    "student_id": "stu_beb8f17d",
+    "ders": "Ingilizce",
+    "kazanim_kodu": "ING.9.5",
+    "kazanim_adi": "Ingilizce Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2026-01-22"
+  },
+  {
+    "id": "kb_4e10779f",
+    "student_id": "stu_d4b86dd5",
+    "ders": "Ingilizce",
+    "kazanim_kodu": "ING.5.2",
+    "kazanim_adi": "Ingilizce Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2026-02-05"
+  },
+  {
+    "id": "kb_f6c2a0d6",
+    "student_id": "stu_9de1ba8d",
+    "ders": "Fen Bilimleri",
+    "kazanim_kodu": "FEN.9.2",
+    "kazanim_adi": "Fen Bilimleri Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2026-03-15"
+  },
+  {
+    "id": "kb_d6288a9d",
+    "student_id": "stu_34a22c94",
+    "ders": "Matematik",
+    "kazanim_kodu": "MAT.8.1",
+    "kazanim_adi": "Matematik Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2026-01-21"
+  },
+  {
+    "id": "kb_6c122dc7",
+    "student_id": "stu_62ef3bab",
+    "ders": "Matematik",
+    "kazanim_kodu": "MAT.9.4",
+    "kazanim_adi": "Matematik Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2026-02-16"
+  },
+  {
+    "id": "kb_b25746a4",
+    "student_id": "stu_f6fd30fc",
+    "ders": "Matematik",
+    "kazanim_kodu": "MAT.8.2",
+    "kazanim_adi": "Matematik Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2026-01-01"
+  },
+  {
+    "id": "kb_ef895f97",
+    "student_id": "stu_46a34f04",
+    "ders": "Ingilizce",
+    "kazanim_kodu": "ING.10.4",
+    "kazanim_adi": "Ingilizce Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2025-12-24"
+  },
+  {
+    "id": "kb_f6a85ed1",
+    "student_id": "stu_1381fa9d",
+    "ders": "Fen Bilimleri",
+    "kazanim_kodu": "FEN.12.4",
+    "kazanim_adi": "Fen Bilimleri Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2026-01-22"
+  },
+  {
+    "id": "kb_91f4a226",
+    "student_id": "stu_1731f663",
+    "ders": "Matematik",
+    "kazanim_kodu": "MAT.7.2",
+    "kazanim_adi": "Matematik Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2025-12-30"
+  },
+  {
+    "id": "kb_c818ceaa",
+    "student_id": "stu_75e776ef",
+    "ders": "Fen Bilimleri",
+    "kazanim_kodu": "FEN.3.5",
+    "kazanim_adi": "Fen Bilimleri Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2025-12-10"
+  },
+  {
+    "id": "kb_66948ef7",
+    "student_id": "stu_23e9d8b2",
+    "ders": "Matematik",
+    "kazanim_kodu": "MAT.2.2",
+    "kazanim_adi": "Matematik Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2026-03-09"
+  },
+  {
+    "id": "kb_3dc5cc36",
+    "student_id": "stu_594e0b21",
+    "ders": "Ingilizce",
+    "kazanim_kodu": "ING.11.5",
+    "kazanim_adi": "Ingilizce Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2026-03-17"
+  },
+  {
+    "id": "kb_d1ebd7fe",
+    "student_id": "stu_bd173fcf",
+    "ders": "Turkce",
+    "kazanim_kodu": "TUR.7.5",
+    "kazanim_adi": "Turkce Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2025-09-22"
+  },
+  {
+    "id": "kb_cd2abbbf",
+    "student_id": "stu_d5e5fc00",
+    "ders": "Turkce",
+    "kazanim_kodu": "TUR.4.4",
+    "kazanim_adi": "Turkce Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2025-11-09"
+  },
+  {
+    "id": "kb_75a8e4bb",
+    "student_id": "stu_01021469",
+    "ders": "Fen Bilimleri",
+    "kazanim_kodu": "FEN.1.2",
+    "kazanim_adi": "Fen Bilimleri Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2026-03-02"
+  },
+  {
+    "id": "kb_1cdf99eb",
+    "student_id": "stu_b5e4305a",
+    "ders": "Turkce",
+    "kazanim_kodu": "TUR.6.2",
+    "kazanim_adi": "Turkce Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2026-03-23"
+  },
+  {
+    "id": "kb_0fcfec69",
+    "student_id": "stu_396a442a",
+    "ders": "Fen Bilimleri",
+    "kazanim_kodu": "FEN.3.2",
+    "kazanim_adi": "Fen Bilimleri Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2026-03-10"
+  },
+  {
+    "id": "kb_35430fb7",
+    "student_id": "stu_e348c994",
+    "ders": "Fen Bilimleri",
+    "kazanim_kodu": "FEN.8.4",
+    "kazanim_adi": "Fen Bilimleri Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2025-10-10"
+  },
+  {
+    "id": "kb_301fa54e",
+    "student_id": "stu_8ea274df",
+    "ders": "Fen Bilimleri",
+    "kazanim_kodu": "FEN.11.1",
+    "kazanim_adi": "Fen Bilimleri Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2025-09-28"
+  },
+  {
+    "id": "kb_8733c106",
+    "student_id": "stu_0add9935",
+    "ders": "Fen Bilimleri",
+    "kazanim_kodu": "FEN.1.4",
+    "kazanim_adi": "Fen Bilimleri Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2026-02-04"
+  },
+  {
+    "id": "kb_ee613f2a",
+    "student_id": "stu_a34e85cb",
+    "ders": "Matematik",
+    "kazanim_kodu": "MAT.4.4",
+    "kazanim_adi": "Matematik Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2025-10-17"
+  },
+  {
+    "id": "kb_e8e59da8",
+    "student_id": "stu_7d381d97",
+    "ders": "Ingilizce",
+    "kazanim_kodu": "ING.4.3",
+    "kazanim_adi": "Ingilizce Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2025-11-26"
+  },
+  {
+    "id": "kb_79a10e49",
+    "student_id": "stu_0a39f725",
+    "ders": "Fen Bilimleri",
+    "kazanim_kodu": "FEN.12.5",
+    "kazanim_adi": "Fen Bilimleri Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2026-01-21"
+  },
+  {
+    "id": "kb_b12eba61",
+    "student_id": "stu_58151441",
+    "ders": "Fen Bilimleri",
+    "kazanim_kodu": "FEN.11.2",
+    "kazanim_adi": "Fen Bilimleri Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2026-01-22"
+  },
+  {
+    "id": "kb_7e62f5ff",
+    "student_id": "stu_2e00ec78",
+    "ders": "Turkce",
+    "kazanim_kodu": "TUR.3.1",
+    "kazanim_adi": "Turkce Kazanim",
+    "durum": "borçlu",
+    "tespit_tarihi": "2025-12-07"
+  },
+  {
+    "id": "kb_7a6b73b9",
+    "student_id": "stu_6818422d",
+    "ders": "Matematik",
+    "kazanim_kodu": "MAT.10.3",
+    "kazanim_adi": "Matematik Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2026-01-06"
+  },
+  {
+    "id": "kb_a849c43b",
+    "student_id": "stu_f444c9e4",
+    "ders": "Ingilizce",
+    "kazanim_kodu": "ING.10.4",
+    "kazanim_adi": "Ingilizce Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2026-02-09"
+  },
+  {
+    "id": "kb_7194cbc8",
+    "student_id": "stu_a4623db1",
+    "ders": "Matematik",
+    "kazanim_kodu": "MAT.9.2",
+    "kazanim_adi": "Matematik Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2026-03-19"
+  },
+  {
+    "id": "kb_8d04e475",
+    "student_id": "stu_85047d0f",
+    "ders": "Matematik",
+    "kazanim_kodu": "MAT.12.4",
+    "kazanim_adi": "Matematik Kazanim",
+    "durum": "tamamlandi",
+    "tespit_tarihi": "2026-01-05"
+  }
+]

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/api/api_client.dart';
 import '../../core/auth/auth_service.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/theme/theme_provider.dart';
@@ -102,6 +103,12 @@ class ProfilPage extends ConsumerWidget {
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () => context.push('/ayarlar'),
               ),
+              ListTile(
+                leading: const Icon(Icons.lock_outline, color: AppColors.warning),
+                title: const Text('Sifre Degistir'),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => _showChangePasswordDialog(context, ref),
+              ),
 
               const _SectionHeader('Uygulama'),
               ListTile(
@@ -164,6 +171,114 @@ class ProfilPage extends ConsumerWidget {
       case ThemeMode.system: return 'Sistem';
     }
   }
+}
+
+
+void _showChangePasswordDialog(BuildContext context, WidgetRef ref) {
+  final eskiCtrl = TextEditingController();
+  final yeniCtrl = TextEditingController();
+  final tekrarCtrl = TextEditingController();
+
+  showDialog(
+    context: context,
+    builder: (ctx) {
+      String? errorMsg;
+      bool loading = false;
+
+      return StatefulBuilder(
+        builder: (ctx, setDialogState) {
+          return AlertDialog(
+            title: const Text('Sifre Degistir'),
+            content: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  TextField(
+                    controller: eskiCtrl,
+                    obscureText: true,
+                    decoration: const InputDecoration(
+                      labelText: 'Eski Sifre',
+                      prefixIcon: Icon(Icons.lock_outline),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  TextField(
+                    controller: yeniCtrl,
+                    obscureText: true,
+                    decoration: const InputDecoration(
+                      labelText: 'Yeni Sifre',
+                      prefixIcon: Icon(Icons.lock_rounded),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  TextField(
+                    controller: tekrarCtrl,
+                    obscureText: true,
+                    decoration: const InputDecoration(
+                      labelText: 'Yeni Sifre (Tekrar)',
+                      prefixIcon: Icon(Icons.lock_rounded),
+                    ),
+                  ),
+                  if (errorMsg != null) ...[
+                    const SizedBox(height: 12),
+                    Text(errorMsg!, style: const TextStyle(color: Colors.red, fontSize: 13)),
+                  ],
+                ],
+              ),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(ctx),
+                child: const Text('Iptal'),
+              ),
+              ElevatedButton(
+                onPressed: loading
+                    ? null
+                    : () async {
+                        if (yeniCtrl.text != tekrarCtrl.text) {
+                          setDialogState(() => errorMsg = 'Yeni sifreler uyusmuyor');
+                          return;
+                        }
+                        if (yeniCtrl.text.length < 4) {
+                          setDialogState(() => errorMsg = 'Sifre en az 4 karakter olmali');
+                          return;
+                        }
+                        setDialogState(() {
+                          loading = true;
+                          errorMsg = null;
+                        });
+                        try {
+                          final api = ref.read(apiClientProvider);
+                          await api.post('/auth/change-password', data: {
+                            'old_password': eskiCtrl.text,
+                            'new_password': yeniCtrl.text,
+                          });
+                          if (ctx.mounted) {
+                            Navigator.pop(ctx);
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text('Sifre basariyla degistirildi')),
+                            );
+                          }
+                        } catch (e) {
+                          setDialogState(() {
+                            loading = false;
+                            errorMsg = 'Sifre degistirilemedi. Eski sifrenizi kontrol edin.';
+                          });
+                        }
+                      },
+                child: loading
+                    ? const SizedBox(
+                        width: 18, height: 18,
+                        child: CircularProgressIndicator(strokeWidth: 2),
+                      )
+                    : const Text('Degistir'),
+              ),
+            ],
+          );
+        },
+      );
+    },
+  );
 }
 
 

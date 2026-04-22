@@ -1,0 +1,90 @@
+[
+  {
+    "id": "ymk_1f31a25a",
+    "tarih": "2026-03-30",
+    "gun": "Pazartesi",
+    "corba": "Yayla Corbasi",
+    "ana_yemek": "Tavuk Sinitzel",
+    "yan_yemek": "Sebze Sote",
+    "salata": "Mor Lahana",
+    "tatli": "Komposto",
+    "kalori": 716
+  },
+  {
+    "id": "ymk_c089f0e7",
+    "tarih": "2026-03-31",
+    "gun": "Sali",
+    "corba": "Domates Corbasi",
+    "ana_yemek": "Izgara Tavuk",
+    "yan_yemek": "Makarna",
+    "salata": "Coban Salata",
+    "tatli": "Meyve",
+    "kalori": 743
+  },
+  {
+    "id": "ymk_acec0253",
+    "tarih": "2026-04-01",
+    "gun": "Carsamba",
+    "corba": "Domates Corbasi",
+    "ana_yemek": "Karniyarik",
+    "yan_yemek": "Makarna",
+    "salata": "Coban Salata",
+    "tatli": "Kek",
+    "kalori": 868
+  },
+  {
+    "id": "ymk_6e8ba907",
+    "tarih": "2026-04-02",
+    "gun": "Persembe",
+    "corba": "Domates Corbasi",
+    "ana_yemek": "Kofte",
+    "yan_yemek": "Sebze Sote",
+    "salata": "Mor Lahana",
+    "tatli": "Meyve",
+    "kalori": 674
+  },
+  {
+    "id": "ymk_002472a7",
+    "tarih": "2026-04-03",
+    "gun": "Cuma",
+    "corba": "Tavuk Suyu Corbasi",
+    "ana_yemek": "Izgara Tavuk",
+    "yan_yemek": "Sebze Sote",
+    "salata": "Coban Salata",
+    "tatli": "Komposto",
+    "kalori": 608
+  },
+  {
+    "id": "ymk_814ef2f3",
+    "tarih": "2026-04-06",
+    "gun": "Pazartesi",
+    "corba": "Tavuk Suyu Corbasi",
+    "ana_yemek": "Izgara Tavuk",
+    "yan_yemek": "Pilav",
+    "salata": "Havuc Salata",
+    "tatli": "Sutlac",
+    "kalori": 879
+  },
+  {
+    "id": "ymk_d720509a",
+    "tarih": "2026-04-07",
+    "gun": "Sali",
+    "corba": "Ezogelin",
+    "ana_yemek": "Firinda Balik",
+    "yan_yemek": "Patates Pure",
+    "salata": "Havuc Salata",
+    "tatli": "Komposto",
+    "kalori": 620
+  },
+  {
+    "id": "ymk_0f3e1789",
+    "tarih": "2026-04-08",
+    "gun": "Carsamba",
+    "corba": "Ezogelin",
+    "ana_yemek": "Etli Nohut",
+    "yan_yemek": "Patates Pure",
+    "salata": "Mevsim Salata",
+    "tatli": "Sutlac",
+    "kalori": 837
+  }
+]

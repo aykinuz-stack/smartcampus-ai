@@ -1,0 +1,2601 @@
+[
+  {
+    "id": "9-COĞRAFYA-6596",
+    "grade": 9,
+    "subject": "COĞRAFYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Pasta grafikte en buyuk pay hangi kategoridedir?",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "D",
+    "source": "graph",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 45
+  },
+  {
+    "id": "9-Biyoloji-6276",
+    "grade": 9,
+    "subject": "Biyoloji",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur?",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "D",
+    "source": "graph",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 45
+  },
+  {
+    "id": "9-Fizik-7856",
+    "grade": 9,
+    "subject": "Fizik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Histogramda verilerin en yogun oldugu aralik hangisidir?",
+    "options": [
+      "0-5",
+      "6-10",
+      "11-15",
+      "16-20"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 45
+  },
+  {
+    "id": "9-COĞRAFYA-5467",
+    "grade": 9,
+    "subject": "COĞRAFYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Cizgi grafikte en yuksek deger hangi gunde gorulmektedir?",
+    "options": [
+      "Pzt",
+      "Sal",
+      "Car",
+      "Per"
+    ],
+    "answer": "Per",
+    "source": "graph",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 45
+  },
+  {
+    "id": "9-Matematik-3111",
+    "grade": 9,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Venn diyagraminda kesisim bolgesindeki eleman sayisi kactir?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 45
+  },
+  {
+    "id": "9-Matematik-5825",
+    "grade": 9,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Sekilde verilen dairenin cevresi kactir? (π ile)",
+    "options": [
+      "5π",
+      "10π",
+      "15π",
+      "20π"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 45
+  },
+  {
+    "id": "9-Matematik-3054",
+    "grade": 9,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Sekilde verilen ucgenin kenar uzunluklarina gore turu hangisidir?",
+    "options": [
+      "Eskenar",
+      "Ikizkenar",
+      "Cesitkenar",
+      "Dik ucgen"
+    ],
+    "answer": "Ikizkenar",
+    "source": "graph",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 45
+  },
+  {
+    "id": "9-Matematik-6989",
+    "grade": 9,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Koordinat duzleminde orjine en yakin nokta hangisidir?",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 45
+  },
+  {
+    "id": "9-Matematik-2813",
+    "grade": 9,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Grafikteki dogrunun y-ekseni kesisimi kactir?",
+    "options": [
+      "-1",
+      "0",
+      "1",
+      "2"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 45
+  },
+  {
+    "id": "9-Fizik-3598",
+    "grade": 9,
+    "subject": "Fizik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Hiz-zaman grafiiginde en yuksek hiz hangi anda gorulur?",
+    "options": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ],
+    "answer": "t2",
+    "source": "graph",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 45
+  },
+  {
+    "id": "9-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-3239",
+    "grade": 9,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "Soru: Atatürk'ün \"Egemenlik kayıtsız şartsız milletindir.\" sözü hangi meclis toplantısında vurgulanmıştır?",
+    "options": [
+      "1920 Türkiye Büyük Millet Meclisi Açılış Töreni",
+      "1923 Cumhuriyet'in İlanı",
+      "1924 Anayasa'nın Kabulü",
+      "1931 Halk Fırkası Programı"
+    ],
+    "answer": "A",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 55
+  },
+  {
+    "id": "9-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-3251",
+    "grade": 9,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "Soru: Atatürk'ün \"Egemenlik kayıtsız şartsız milletindir\" sözü, hangi ulusal egemenlik ilkesini vurgulamaktadır?",
+    "options": [
+      "Monarşi",
+      "Oligarşi",
+      "Demokrasi",
+      "Teokrasi"
+    ],
+    "answer": "C",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 55
+  },
+  {
+    "id": "9-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-8006",
+    "grade": 9,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "Soru: Türkiye Cumhuriyeti'nin kurucusu kimdir?",
+    "options": [
+      "İsmet İnönü",
+      "Mustafa Kemal Atatürk",
+      "Fevzi Çakmak",
+      "Halil Edib Adıvar"
+    ],
+    "answer": "B",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 55
+  },
+  {
+    "id": "9-KİMYA-5454",
+    "grade": 9,
+    "subject": "KİMYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "Soru: Aşağıdakilerden hangisi bir elementtir?",
+    "options": [
+      "H2O",
+      "CO2",
+      "O",
+      "NaCl"
+    ],
+    "answer": "C",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 55
+  },
+  {
+    "id": "9-Felsefe-5166",
+    "grade": 9,
+    "subject": "Felsefe",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "Soru: Felsefede \"varlık\" kavramı ile ilgili olarak aşağıdaki ifadelerden hangisi yanlıştır?",
+    "options": [
+      "Varlık, var olan her şeyi kapsar.",
+      "Varlık, sadece fiziksel nesneleri ifade eder.",
+      "Felsefi varlık, hem somut hem de soyut olanı içerir.",
+      "Varlık, felsefi düşüncenin temel konularından biridir."
+    ],
+    "answer": "B",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 55
+  },
+  {
+    "id": "9-Felsefe-2398",
+    "grade": 9,
+    "subject": "Felsefe",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "Soru: Felsefede \"idealizm\" terimi neyi ifade eder?",
+    "options": [
+      "Gerçekliğin yalnızca düşüncelerde var olduğunu",
+      "Gerçekliğin yalnızca fiziksel nesnelerde var olduğunu",
+      "Bilginin yalnızca deneyimle elde edilebileceğini",
+      "İnsan davranışlarının her zaman mantıklı olduğunu"
+    ],
+    "answer": "A",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 55
+  },
+  {
+    "id": "9-Felsefe-8190",
+    "grade": 9,
+    "subject": "Felsefe",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "Soru: Felsefede \"doğa durumu\" kavramı en çok hangi düşünürle ilişkilendirilir?",
+    "options": [
+      "Platon",
+      "Aristoteles",
+      "Thomas Hobbes",
+      "Jean-Jacques Rousseau"
+    ],
+    "answer": "C",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 55
+  },
+  {
+    "id": "9-Türk Dili ve Edebiyatı-2457",
+    "grade": 9,
+    "subject": "Türk Dili ve Edebiyatı",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "Soru: Aşağıdaki eserlerden hangisi, Türk edebiyatında \"Sade Türkçe\" akımının öncüsü olarak kabul edilen yazarlardan birine aittir?",
+    "options": [
+      "Şiir Hakkında Bazı Mülahazalar",
+      "Kırk Yıl",
+      "İkilik",
+      "Türkçülüğün Esasları"
+    ],
+    "answer": "A",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 55
+  },
+  {
+    "id": "9-Türk Dili ve Edebiyatı-2013",
+    "grade": 9,
+    "subject": "Türk Dili ve Edebiyatı",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "Soru: Aşağıdakilerden hangisi Türk edebiyatında \"söz sanatları\" arasında yer almaz?",
+    "options": [
+      "Teşbih",
+      "İstiare",
+      "Anlamca zıtlık",
+      "Metafor"
+    ],
+    "answer": "C",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 55
+  },
+  {
+    "id": "9-Matematik-1694",
+    "grade": 9,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Sekilde verilen dikdortgenin alani kactir?",
+    "options": [
+      "15",
+      "20",
+      "24",
+      "25"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 45
+  },
+  {
+    "id": "9-COĞRAFYA-7999",
+    "grade": 9,
+    "subject": "COĞRAFYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Haritadaki noktalardan hangisi merkeze en yakindir?",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "D",
+    "source": "graph",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 45
+  },
+  {
+    "id": "9-Matematik-5944",
+    "grade": 9,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Tabloya gore en yuksek sicaklik hangi gundedir?",
+    "options": [
+      "Pzt",
+      "Sal",
+      "Car",
+      "Per"
+    ],
+    "answer": "Per",
+    "source": "graph",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 45
+  },
+  {
+    "id": "9-Matematik-6980",
+    "grade": 9,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Sekilde verilen dikdortgen prizmanin hacmi kactir?",
+    "options": [
+      "234",
+      "240",
+      "248",
+      "245"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 45
+  },
+  {
+    "id": "9-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-5219",
+    "grade": 9,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Acik Uclu",
+    "difficulty": "hard",
+    "text": "Atatürk'ün Türk milletinin çağdaş medeniyetler seviyesine ulaşması için ortaya koyduğu temel ilke ve inkılaplardan üç tanesini açıklayarak belirtiniz.",
+    "options": [],
+    "answer": "",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 40
+  },
+  {
+    "id": "9-COĞRAFYA-4479",
+    "grade": 9,
+    "subject": "COĞRAFYA",
+    "question_type": "Klasik",
+    "difficulty": "medium",
+    "text": "Türkiye'nin iklim çeşitliliğini etkileyen faktörlerden biri aşağıdakilerden hangisidir?  \nA) Yükseklik  \nB) Nüfus yoğunluğu  \nC) Tarım arazileri  \nD) Sanayi gelişimi  \nCevap: A",
+    "options": [],
+    "answer": "",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 40
+  },
+  {
+    "id": "9-COĞRAFYA-7075",
+    "grade": 9,
+    "subject": "COĞRAFYA",
+    "question_type": "Bosluk Doldurma",
+    "difficulty": "easy",
+    "text": "Türkiye'nin en yüksek dağı ___________ 'dır.",
+    "options": [],
+    "answer": "Ağrı Dağı",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 40
+  },
+  {
+    "id": "9-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-3881",
+    "grade": 9,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Acik Uclu",
+    "difficulty": "hard",
+    "text": "Atatürk'ün \"Yurtta sulh, cihanda sulh\" ilkesinin günümüz Türkiye'sindeki yansımalarını ve uluslararası ilişkilerdeki önemini tartışınız.",
+    "options": [],
+    "answer": "",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 40
+  },
+  {
+    "id": "9-Türk Dili ve Edebiyatı-8683",
+    "grade": 9,
+    "subject": "Türk Dili ve Edebiyatı",
+    "question_type": "Acik Uclu",
+    "difficulty": "hard",
+    "text": "19. yüzyıl Türk edebiyatında Servet-i Fünun topluluğunun önemi nedir? Bu topluluğun edebi anlayışını ve eserlerini örneklerle açıklayınız.",
+    "options": [],
+    "answer": "",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 40
+  },
+  {
+    "id": "9-COĞRAFYA-3398",
+    "grade": 9,
+    "subject": "COĞRAFYA",
+    "question_type": "Klasik",
+    "difficulty": "easy",
+    "text": "Dünya'nın en büyük okyanusu hangisidir?  \nCevap: Pasifik Okyanusu",
+    "options": [],
+    "answer": "",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 40
+  },
+  {
+    "id": "9-Felsefe-6464",
+    "grade": 9,
+    "subject": "Felsefe",
+    "question_type": "Bosluk Doldurma",
+    "difficulty": "medium",
+    "text": "Felsefede \"doğa\" terimi genellikle _______ ile ilişkilendirilir.",
+    "options": [],
+    "answer": "varoluşsal sorgulamalar",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 40
+  },
+  {
+    "id": "9-Fizik-8776",
+    "grade": 9,
+    "subject": "Fizik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "Soru: Bir nesnenin hareketi sırasında aldığı yol zaman ile doğru orantılı ise, bu nesnenin hareketi hangi tür hareket olarak tanımlanır?",
+    "options": [
+      "Düzgün hareket",
+      "Düzensiz hareket",
+      "Dönme hareketi",
+      "Sarkaç hareketi"
+    ],
+    "answer": "A",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 55
+  },
+  {
+    "id": "9-Türk Dili ve Edebiyatı-1466",
+    "grade": 9,
+    "subject": "Türk Dili ve Edebiyatı",
+    "question_type": "Bosluk Doldurma",
+    "difficulty": "medium",
+    "text": "\"Şiir, duygu ve düşüncelerin sözlü veya yazılı olarak ifade edildiği bir sanat dalıdır. Şiirin temel unsurlarından biri olan _____, kelimelerin ses uyumuna dayalı olarak oluşturduğu ritimdir.\"",
+    "options": [],
+    "answer": "ritim",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 40
+  },
+  {
+    "id": "9-Felsefe-6895",
+    "grade": 9,
+    "subject": "Felsefe",
+    "question_type": "Klasik",
+    "difficulty": "easy",
+    "text": "Felsefenin temel sorularından biri aşağıdakilerden hangisidir?  \nA) İnsanlar neden farklı diller konuşur?  \nB) Gerçeklik nedir?  \nC) Hangi renk en güzel renktir?  \nD) En sevdiğin yemek hangisidir?  \nCevap: B",
+    "options": [],
+    "answer": "",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 40
+  },
+  {
+    "id": "9-Felsefe-6782",
+    "grade": 9,
+    "subject": "Felsefe",
+    "question_type": "Acik Uclu",
+    "difficulty": "hard",
+    "text": "Felsefi bir görüşü savunmak için hangi temel argümanları kullanabileceğinizi açıklayınız. Örnek olarak bir felsefi akımı seçip, o akımın temel ilkelerini ve bu ilkelerin günümüz düşüncesine katkılarını tartışınız.",
+    "options": [],
+    "answer": "",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 40
+  },
+  {
+    "id": "9-Türk Dili ve Edebiyatı-3799",
+    "grade": 9,
+    "subject": "Türk Dili ve Edebiyatı",
+    "question_type": "Dogru/Yanlis",
+    "difficulty": "hard",
+    "text": "Soru: Türk edebiyatında \"söz sanatı\" terimi, dilin estetik bir biçimde kullanılması anlamına gelir.",
+    "options": [
+      "Dogru",
+      "Yanlis"
+    ],
+    "answer": "Yanlis",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 40
+  },
+  {
+    "id": "9-Biyoloji-6494",
+    "grade": 9,
+    "subject": "Biyoloji",
+    "question_type": "Acik Uclu",
+    "difficulty": "easy",
+    "text": "Bitkilerin fotosentez sürecindeki rolünü açıklayınız.",
+    "options": [],
+    "answer": "",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 40
+  },
+  {
+    "id": "9-Matematik-6982",
+    "grade": 9,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "Soru: Aşağıdaki denklemlerin hangisi x'in değerini 5 olarak veren bir denklemdir?",
+    "options": [
+      "3x - 2 = 13",
+      "4x + 1 = 21",
+      "2x + 3 = 13",
+      "x/2 - 1 = 4"
+    ],
+    "answer": "B",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 55
+  },
+  {
+    "id": "9-Fizik-4096",
+    "grade": 9,
+    "subject": "Fizik",
+    "question_type": "Klasik",
+    "difficulty": "medium",
+    "text": "Bir cismin hızı 20 m/s'den 40 m/s'ye çıkıyorsa, cismin ivmesi 5 m/s² olarak hesaplanıyorsa, bu cisme etki eden net kuvvet nedir? (Cismin kütlesi 10 kg'dır.)  \nCevap: ...",
+    "options": [],
+    "answer": "",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 40
+  },
+  {
+    "id": "9-COĞRAFYA-2864",
+    "grade": 9,
+    "subject": "COĞRAFYA",
+    "question_type": "Bosluk Doldurma",
+    "difficulty": "hard",
+    "text": "Türkiye'nin yüzölçümü bakımından en büyük ili olan __________, coğrafi olarak Marmara Bölgesi'nde yer almaktadır.",
+    "options": [],
+    "answer": "Konya",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 40
+  },
+  {
+    "id": "9-Fizik-9842",
+    "grade": 9,
+    "subject": "Fizik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "Soru: Bir cismin hızının zamanla değişimi hangi grafikle gösterilir?",
+    "options": [
+      "Hız-zaman grafiği",
+      "Mesafe-zaman grafiği",
+      "Kuvvet-zaman grafiği",
+      "Enerji-zaman grafiği"
+    ],
+    "answer": "A",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 55
+  },
+  {
+    "id": "9-COĞRAFYA-3374",
+    "grade": 9,
+    "subject": "COĞRAFYA",
+    "question_type": "Dogru/Yanlis",
+    "difficulty": "medium",
+    "text": "Soru: Dünya'nın en büyük okyanusu Pasifik Okyanusu'dur.",
+    "options": [
+      "Dogru",
+      "Yanlis"
+    ],
+    "answer": "Dogru",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 40
+  },
+  {
+    "id": "9-Türk Dili ve Edebiyatı-1235",
+    "grade": 9,
+    "subject": "Türk Dili ve Edebiyatı",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "Soru: Aşağıdaki şairlerden hangisi Türk edebiyatında \"İlk Şair\" olarak kabul edilmektedir?",
+    "options": [
+      "Karacaoğlan",
+      "Aşık Veysel",
+      "Yunus Emre",
+      "Fuzuli"
+    ],
+    "answer": "C",
+    "source": "ai",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 55
+  },
+  {
+    "id": "9-Fizik-6250",
+    "grade": 9,
+    "subject": "Fizik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "12 J is yapan bir kuvvet sonucu yapilan is miktari kactir?",
+    "options": [
+      "7",
+      "12",
+      "17",
+      "22"
+    ],
+    "answer": "B",
+    "source": "random",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 30
+  },
+  {
+    "id": "9-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-6885",
+    "grade": 9,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "Asagidakilerden hangisi verilen kazanima uygun bir ornektir?",
+    "options": [
+      "Kazanima dogrudan uygun durum",
+      "Kazanima kismen uygun durum",
+      "Kazanima uygun olmayan durum",
+      "Kazanima ters dusen durum"
+    ],
+    "answer": "A",
+    "source": "random",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 30
+  },
+  {
+    "id": "9-Biyoloji-8998",
+    "grade": 9,
+    "subject": "Biyoloji",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "Hucresel solunumda ATP uretiminin en fazla gerceklestigi organel hangisidir?",
+    "options": [
+      "Mitokondri",
+      "Ribozom",
+      "Golgi",
+      "Lizozom"
+    ],
+    "answer": "A",
+    "source": "random",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 30
+  },
+  {
+    "id": "9-Matematik-9267",
+    "grade": 9,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Sekilde gosterilen acinin olcusu kactir?",
+    "options": [
+      "45",
+      "60",
+      "75",
+      "90"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [],
+    "outcomes": [],
+    "quality_score": 45
+  },
+  {
+    "id": "11-COĞRAFYA-3050",
+    "grade": 11,
+    "subject": "COĞRAFYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Pasta grafikte en buyuk pay hangi kategoridedir? (Kazanim: a) Türkiye'de sanayiyi etkileyen faktörlere yer verilir.\nb) Türkiye’de sanayi sektörünün dağılışına yer verilir.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "D",
+    "source": "graph",
+    "outcome_ids": [
+      "fd640673ea70"
+    ],
+    "outcomes": [
+      "a) Türkiye'de sanayiyi etkileyen faktörlere yer verilir.\nb) Türkiye’de sanayi sektörünün dağılışına yer verilir."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Fizik-6146",
+    "grade": 11,
+    "subject": "Fizik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Hiz-zaman grafiiginde en yuksek hiz hangi anda gorulur? (Kazanim: Öğrencilerin farklı ülkelerin elektrik şebekelerinde kullanılan gerilim değerleri ile ilgili araştırma yapmaları ve araştırma bulgularına dayanarak bu değerlerin kullanılmasının sebeplerini tartışmaları sağlanır.)",
+    "options": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ],
+    "answer": "t3",
+    "source": "graph",
+    "outcome_ids": [
+      "60605069dd7c"
+    ],
+    "outcomes": [
+      "Öğrencilerin farklı ülkelerin elektrik şebekelerinde kullanılan gerilim değerleri ile ilgili araştırma yapmaları ve araştırma bulgularına dayanarak bu değerlerin kullanılmasının sebeplerini tartışmaları sağlanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-KİMYA-7253",
+    "grade": 11,
+    "subject": "KİMYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: b. Gazların özelliklerinin ölçme yöntemleri üzerinde durulur. Manometrelerle ilgili hesaplamalara girilmez.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "D",
+    "source": "graph",
+    "outcome_ids": [
+      "9120efcd800b"
+    ],
+    "outcomes": [
+      "b. Gazların özelliklerinin ölçme yöntemleri üzerinde durulur. Manometrelerle ilgili hesaplamalara girilmez."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Matematik-4303",
+    "grade": 11,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Koordinat duzleminde orjine en yakin nokta hangisidir? (Kazanim: 11.7.2.1. Deneysel olasılık ile teorik olasılığı ilişkilendirir.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "A",
+    "source": "graph",
+    "outcome_ids": [
+      "238f6a4ffab9"
+    ],
+    "outcomes": [
+      "11.7.2.1. Deneysel olasılık ile teorik olasılığı ilişkilendirir."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Matematik-1579",
+    "grade": 11,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Sekilde verilen dikdortgenin alani kactir? (Kazanim: 11.5.1.1. Çemberde teğet, kiriş, çap, yay ve kesen kavramlarını açıklar.\nBir çember ile bir doğrunun birbirlerine göre durumları ele alınır.)",
+    "options": [
+      "48",
+      "54",
+      "63",
+      "60"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "3701e5382f8a"
+    ],
+    "outcomes": [
+      "11.5.1.1. Çemberde teğet, kiriş, çap, yay ve kesen kavramlarını açıklar.\nBir çember ile bir doğrunun birbirlerine göre durumları ele alınır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-KİMYA-3019",
+    "grade": 11,
+    "subject": "KİMYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 11.5.1.1. Kimyasal tepkimeler ile tanecik çarpışmaları arasındaki ilişkiyi açıklar.        \n              \n11.5.1.2. Kimyasal tepkimelerin hızlarını açıklar.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "A",
+    "source": "graph",
+    "outcome_ids": [
+      "0ed8a55e1b93"
+    ],
+    "outcomes": [
+      "11.5.1.1. Kimyasal tepkimeler ile tanecik çarpışmaları arasındaki ilişkiyi açıklar.        \n              \n11.5.1.2. Kimyasal tepkimelerin hızlarını açıklar."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Matematik-2389",
+    "grade": 11,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Sekilde verilen dikdortgen prizmanin hacmi kactir? (Kazanim: 11.1.1.1. Yönlü açıyı açıklar.)",
+    "options": [
+      "136",
+      "140",
+      "147",
+      "145"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "f017fb6dc19f"
+    ],
+    "outcomes": [
+      "11.1.1.1. Yönlü açıyı açıklar."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Fizik-3704",
+    "grade": 11,
+    "subject": "Fizik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Histogramda verilerin en yogun oldugu aralik hangisidir? (Kazanim: 11.2.6.1. Transformatörlerin çalışma prensibini açıklar.\n\n11.2.6.2. Transformatörlerin kullanım amaçlarını açıklar.)",
+    "options": [
+      "0-5",
+      "6-10",
+      "11-15",
+      "16-20"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "7bc95c56724f"
+    ],
+    "outcomes": [
+      "11.2.6.1. Transformatörlerin çalışma prensibini açıklar.\n\n11.2.6.2. Transformatörlerin kullanım amaçlarını açıklar."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Matematik-7317",
+    "grade": 11,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Sekilde verilen dikdortgenin alani kactir? (Kazanim: 11.4.2.2. İkinci dereceden bir bilinmeyenli eşitsizlik sistemlerinin çözüm kümesini bulur.)",
+    "options": [
+      "12",
+      "16",
+      "20",
+      "20"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "bfad82ab409f"
+    ],
+    "outcomes": [
+      "11.4.2.2. İkinci dereceden bir bilinmeyenli eşitsizlik sistemlerinin çözüm kümesini bulur."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Felsefe-4030",
+    "grade": 11,
+    "subject": "Felsefe",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 15. yüzyıl-17. yüzyıl felsefesinin 18. yüzyıl -19. yüzyıl felsefesi üzerindeki etkilerine değinilir.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "D",
+    "source": "graph",
+    "outcome_ids": [
+      "fbafbea549a2"
+    ],
+    "outcomes": [
+      "15. yüzyıl-17. yüzyıl felsefesinin 18. yüzyıl -19. yüzyıl felsefesi üzerindeki etkilerine değinilir."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-KİMYA-7250",
+    "grade": 11,
+    "subject": "KİMYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 11.3.4.1.Çözeltileri çözünürlük kavramı temelinde sınıflandırır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "A",
+    "source": "graph",
+    "outcome_ids": [
+      "27311c2a6ec9"
+    ],
+    "outcomes": [
+      "11.3.4.1.Çözeltileri çözünürlük kavramı temelinde sınıflandırır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Biyoloji-2262",
+    "grade": 11,
+    "subject": "Biyoloji",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: a. Multipl skleroz (MS), Parkinson, Alzheimer, epilepsi (sara), depresyon üzerinde durulur.\nb. Sinir sistemi rahatsızlıklarının tedavisiyle ilgili teknolojik gelişmelerin araştırılması sağlanır.\nc. Mahmut Gazi Yaşargil’in çalışmalarına değinilir.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "e291061f9f44"
+    ],
+    "outcomes": [
+      "a. Multipl skleroz (MS), Parkinson, Alzheimer, epilepsi (sara), depresyon üzerinde durulur.\nb. Sinir sistemi rahatsızlıklarının tedavisiyle ilgili teknolojik gelişmelerin araştırılması sağlanır.\nc. Mahmut Gazi Yaşargil’in çalışmalarına değinilir."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Türk Dili ve Edebiyatı-7003",
+    "grade": 11,
+    "subject": "Türk Dili ve Edebiyatı",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: A.2.16. Metinden hareketle dil bilgisi çalışmaları yapar.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "A",
+    "source": "graph",
+    "outcome_ids": [
+      "5721b5698ec5"
+    ],
+    "outcomes": [
+      "A.2.16. Metinden hareketle dil bilgisi çalışmaları yapar."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-9037",
+    "grade": 11,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 11.1.2. XVII. yüzyılda değişen siyasi rekabet içerisinde Osmanlı Devleti’nin izlediği politikaları açıklar.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "A",
+    "source": "graph",
+    "outcome_ids": [
+      "9a552c91a804"
+    ],
+    "outcomes": [
+      "11.1.2. XVII. yüzyılda değişen siyasi rekabet içerisinde Osmanlı Devleti’nin izlediği politikaları açıklar."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Biyoloji-6391",
+    "grade": 11,
+    "subject": "Biyoloji",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 11.1.5.2. Alveollerden dokulara ve dokulardan alveollere gaz taşınmasını açıklar.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "20d61c772238"
+    ],
+    "outcomes": [
+      "11.1.5.2. Alveollerden dokulara ve dokulardan alveollere gaz taşınmasını açıklar."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Biyoloji-9656",
+    "grade": 11,
+    "subject": "Biyoloji",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: a. Kemik, kıkırdak ve kas doku açıklanır.\nb. Destek ve hareket sisteminin yapısı işlenirken görsel ögeler, grafik düzenleyiciler, e-öğrenme nesnesi\nve uygulamalarından yararlanılır.\nc. Kemik ve kas çeşitleri açıklanır.\nç. Kıkırdak ve eklem çeşitleri ile vücutta bulunduğu yerlere örnekler verilir. Yapılarına girilmez)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "D",
+    "source": "graph",
+    "outcome_ids": [
+      "9095ef6e8dec"
+    ],
+    "outcomes": [
+      "a. Kemik, kıkırdak ve kas doku açıklanır.\nb. Destek ve hareket sisteminin yapısı işlenirken görsel ögeler, grafik düzenleyiciler, e-öğrenme nesnesi\nve uygulamalarından yararlanılır.\nc. Kemik ve kas çeşitleri açıklanır.\nç. Kıkırdak ve eklem çeşitleri ile vücutta bulunduğu yerlere örnekler verilir. Yapılarına girilmez"
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Biyoloji-9282",
+    "grade": 11,
+    "subject": "Biyoloji",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 11.1.5.3. KOAH, astım, verem, akciğer ve gırtlak kanseri, zatürre hastalıkları belirtilir.\n11.1.5.4. Yaygın olarak görülen mesleki solunum sistemi hastalıklarından korunmak için iş sağlığı ve güvenliği\nkonusunda alınabilecek önlemlerin araştırılması ve elde edilen bilgilerin paylaşılması sağlanır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "C",
+    "source": "graph",
+    "outcome_ids": [
+      "0fc2ac28c1e4"
+    ],
+    "outcomes": [
+      "11.1.5.3. KOAH, astım, verem, akciğer ve gırtlak kanseri, zatürre hastalıkları belirtilir.\n11.1.5.4. Yaygın olarak görülen mesleki solunum sistemi hastalıklarından korunmak için iş sağlığı ve güvenliği\nkonusunda alınabilecek önlemlerin araştırılması ve elde edilen bilgilerin paylaşılması sağlanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Biyoloji-5463",
+    "grade": 11,
+    "subject": "Biyoloji",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: Destek ve hareket sisteminin sağlığı açısından sporun, beslenmenin ve uygun duruşun önemi tartışılır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "df1b8b811369"
+    ],
+    "outcomes": [
+      "Destek ve hareket sisteminin sağlığı açısından sporun, beslenmenin ve uygun duruşun önemi tartışılır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Türk Dili ve Edebiyatı-2322",
+    "grade": 11,
+    "subject": "Türk Dili ve Edebiyatı",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 2. ÖYKÜLEYİCİ (ANLATMAYA BAĞLI)EDEBİ METİNLER\nA.2.1. Metinde geçen kelime ve kelime gruplarının anlamlarını tespit eder.\nA.2. 2. Metnin türünün ortaya çıkışı ve tarihsel dönem ile ilişkisini belirler.\nA.2. 3. Metnin tema ve konusunu belirler.\n A.2. 4. Metindeki çatışmaları belirler.\nA.2. 5. Metnin olay örgüsünü belirler.\nA.2. 6. Metindeki şahıs kadrosunun özelliklerini belirler.\nA.2. 7. Metindeki zaman ve mekânın özelliklerini belirler.\nA.2. 8. Metinde anlatıcı ve bakış açısının işlevini belirler.\nA.2. 9. Metindeki anlatım biçimleri ve tekniklerinin işlevlerini belirler.  \n A.2. 10. Metnin üslup özelliklerini belirler.\nA.2. 11 Metinde millî, manevi ve evrensel değerler ile sosyal, siyasi, tarihî ve mitolojik ögeleri belirler.\nA.2. 12. Metinde edebiyat, sanat ve fikir akımlarının/anlayışlarının yansımalarını değerlendirir.\nA.2. 13. Metni yorumlar.\nA.2. 14. Yazar ile metin arasındaki ilişkiyi değerlendirir.\nA.2. 15. Türün ve dönemin/akımın diğer önemli yazarlarını ve eserlerini sıralar. \n(Kazanım açıklamaları için bkz. EK 2 ))",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "92117df695d8"
+    ],
+    "outcomes": [
+      "2. ÖYKÜLEYİCİ (ANLATMAYA BAĞLI)EDEBİ METİNLER\nA.2.1. Metinde geçen kelime ve kelime gruplarının anlamlarını tespit eder.\nA.2. 2. Metnin türünün ortaya çıkışı ve tarihsel dönem ile ilişkisini belirler.\nA.2. 3. Metnin tema ve konusunu belirler.\n A.2. 4. Metindeki çatışmaları belirler.\nA.2. 5. Metnin olay örgüsünü belirler.\nA.2. 6. Metindeki şahıs kadrosunun özelliklerini belirler.\nA.2. 7. Metindeki zaman ve mekânın özelliklerini belirler.\nA.2. 8. Metinde anlatıcı ve bakış açısının işlevini belirler.\nA.2. 9. Metindeki anlatım biçimleri ve tekniklerinin işlevlerini belirler.  \n A.2. 10. Metnin üslup özelliklerini belirler.\nA.2. 11 Metinde millî, manevi ve evrensel değerler ile sosyal, siyasi, tarihî ve mitolojik ögeleri belirler.\nA.2. 12. Metinde edebiyat, sanat ve fikir akımlarının/anlayışlarının yansımalarını değerlendirir.\nA.2. 13. Metni yorumlar.\nA.2. 14. Yazar ile metin arasındaki ilişkiyi değerlendirir.\nA.2. 15. Türün ve dönemin/akımın diğer önemli yazarlarını ve eserlerini sıralar. \n(Kazanım açıklamaları için bkz. EK 2 )"
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Biyoloji-1373",
+    "grade": 11,
+    "subject": "Biyoloji",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: a. Endokrin bezleri ve bu bezlerin salgıladıkları hormonlar işlenirken görsel ögeler, grafik düzenleyiciler, e-öğrenme nesnesi ve uygulamalarından yararlanılır.\nb. Hormonların yapısına girilmez.\nc. Homeostasi örnekleri (vücut sıcaklığının, kandaki kalsiyum ve glikoz oranının düzenlenmesi) açıklanır.\nç. Hormonların yaşam kalitesi üzerine etkilerinin örnek bir hastalık üzerinden tartışılması sağlanır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "93b294c08a59"
+    ],
+    "outcomes": [
+      "a. Endokrin bezleri ve bu bezlerin salgıladıkları hormonlar işlenirken görsel ögeler, grafik düzenleyiciler, e-öğrenme nesnesi ve uygulamalarından yararlanılır.\nb. Hormonların yapısına girilmez.\nc. Homeostasi örnekleri (vücut sıcaklığının, kandaki kalsiyum ve glikoz oranının düzenlenmesi) açıklanır.\nç. Hormonların yaşam kalitesi üzerine etkilerinin örnek bir hastalık üzerinden tartışılması sağlanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-KİMYA-8700",
+    "grade": 11,
+    "subject": "KİMYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: a. Hund Kuralı, Pauli İlkesi ve Aufbau Prensibi açıklanır.\nb. Atomların ve iyonların elektron dizilimlerine örnekler verilir. Atom numarası 36 ve daha küçük türlerin elektron dizilimleri esas alınır.\nc. Değerlik orbital ve değerlik elektronu kavramları açıklanır.\nç. Elektron dizilimleriyle elementin ait olduğu blok ilişkilendirilerek grup ve periyot belirlenir.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "6f857a06dbf8"
+    ],
+    "outcomes": [
+      "a. Hund Kuralı, Pauli İlkesi ve Aufbau Prensibi açıklanır.\nb. Atomların ve iyonların elektron dizilimlerine örnekler verilir. Atom numarası 36 ve daha küçük türlerin elektron dizilimleri esas alınır.\nc. Değerlik orbital ve değerlik elektronu kavramları açıklanır.\nç. Elektron dizilimleriyle elementin ait olduğu blok ilişkilendirilerek grup ve periyot belirlenir."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-4078",
+    "grade": 11,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: Öğrencilerin, Avrupa devletlerinin sömürgecilik faaliyetleri kapsamında yaptıkları katliamların etkileri hakkında çıkarımlarda bulunmaları sağlanır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "C",
+    "source": "graph",
+    "outcome_ids": [
+      "7d423633749b"
+    ],
+    "outcomes": [
+      "Öğrencilerin, Avrupa devletlerinin sömürgecilik faaliyetleri kapsamında yaptıkları katliamların etkileri hakkında çıkarımlarda bulunmaları sağlanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Türk Dili ve Edebiyatı-9219",
+    "grade": 11,
+    "subject": "Türk Dili ve Edebiyatı",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: SÖZLÜ İLETİŞİM KAZANIMLARI \n  C.1.2 -C.1.17 kazanım ve açıklamaları için bkz. EK 6\n C.2.1-C.2.8 kazanım ve açıklamaları için bkz. EK 6)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "A",
+    "source": "graph",
+    "outcome_ids": [
+      "dd8199de3cce"
+    ],
+    "outcomes": [
+      "SÖZLÜ İLETİŞİM KAZANIMLARI \n  C.1.2 -C.1.17 kazanım ve açıklamaları için bkz. EK 6\n C.2.1-C.2.8 kazanım ve açıklamaları için bkz. EK 6"
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-5074",
+    "grade": 11,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: d) Öğrencilerin, 1768-1914 arasındaki süreçte Osmanlı-Rus rekabetini sebep-sonuç ilişkisi açısından analiz etmeleri sağlanır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "db69565fc20a"
+    ],
+    "outcomes": [
+      "d) Öğrencilerin, 1768-1914 arasındaki süreçte Osmanlı-Rus rekabetini sebep-sonuç ilişkisi açısından analiz etmeleri sağlanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Türk Dili ve Edebiyatı-5889",
+    "grade": 11,
+    "subject": "Türk Dili ve Edebiyatı",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: YAZMA KAZANIMLARI \nB.1-B.12 kazanım ve  açıklamaları için bkz. EK 5)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "A",
+    "source": "graph",
+    "outcome_ids": [
+      "eb2ca647de46"
+    ],
+    "outcomes": [
+      "YAZMA KAZANIMLARI \nB.1-B.12 kazanım ve  açıklamaları için bkz. EK 5"
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-5843",
+    "grade": 11,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: Başlıca siyasi gelişmeler olarak Haçova Muharebesi (1596), Zitvatorok Antlaşması (1606), Kasr-ı Şirin Antlaşması (1639), Girit’in Fethi (1669), Bucaş Antlaşması (1672), Bahçesaray Antlaşması (1681), II. Viyana Kuşatması (1683), Karlofça Antlaşması (1699) ve İstanbul Antlaşması (1700) verilir. Burada verilen kronolojik sıralama, öğrencilerin kronolojik düşüncelerini desteklemeye yöneliktir. Sıralanan olay ve olgulara ilişkin bir konu anlatımı yapılmamalı ve bunların ezberletilmesi yoluna gidilmemelidir.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "A",
+    "source": "graph",
+    "outcome_ids": [
+      "ff323d9a912a"
+    ],
+    "outcomes": [
+      "Başlıca siyasi gelişmeler olarak Haçova Muharebesi (1596), Zitvatorok Antlaşması (1606), Kasr-ı Şirin Antlaşması (1639), Girit’in Fethi (1669), Bucaş Antlaşması (1672), Bahçesaray Antlaşması (1681), II. Viyana Kuşatması (1683), Karlofça Antlaşması (1699) ve İstanbul Antlaşması (1700) verilir. Burada verilen kronolojik sıralama, öğrencilerin kronolojik düşüncelerini desteklemeye yöneliktir. Sıralanan olay ve olgulara ilişkin bir konu anlatımı yapılmamalı ve bunların ezberletilmesi yoluna gidilmemelidir."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Matematik-4121",
+    "grade": 11,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Sekilde verilen dikdortgenin alani kactir? (Kazanim: 11.6.1.1. Küre, dik dairesel silindir ve dik dairesel koninin alan ve hacim bağıntılarını oluşturarak işlemler yapar.)",
+    "options": [
+      "32",
+      "36",
+      "45",
+      "40"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "1834d46fb629"
+    ],
+    "outcomes": [
+      "11.6.1.1. Küre, dik dairesel silindir ve dik dairesel koninin alan ve hacim bağıntılarını oluşturarak işlemler yapar."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Felsefe-6388",
+    "grade": 11,
+    "subject": "Felsefe",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 11.2.1. MS 2. yüzyıl-MS 15. yüzyıl felsefesini hazırlayan düşünce ortamını açıklar.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "D",
+    "source": "graph",
+    "outcome_ids": [
+      "92786f325e46"
+    ],
+    "outcomes": [
+      "11.2.1. MS 2. yüzyıl-MS 15. yüzyıl felsefesini hazırlayan düşünce ortamını açıklar."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Matematik-5217",
+    "grade": 11,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Sekilde verilen dikdortgenin alani kactir? (Kazanim: 11.1.2.3. Sinüs teoremiyle ilgili problemler çözer.\na) Sinüs teoremi, iki kenarının uzunluğu ve bu kenarlar arasındaki açının ölçüsü verilen üçgenin alanından yararlanılarak elde edilir.\nb) Sinüs teoremi çevrel çemberle ilişkilendirilmez.\nc) Gerçek hayat problemlerine yer verilir.)",
+    "options": [
+      "36",
+      "42",
+      "49",
+      "48"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "e18d1e071136"
+    ],
+    "outcomes": [
+      "11.1.2.3. Sinüs teoremiyle ilgili problemler çözer.\na) Sinüs teoremi, iki kenarının uzunluğu ve bu kenarlar arasındaki açının ölçüsü verilen üçgenin alanından yararlanılarak elde edilir.\nb) Sinüs teoremi çevrel çemberle ilişkilendirilmez.\nc) Gerçek hayat problemlerine yer verilir."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Fizik-8354",
+    "grade": 11,
+    "subject": "Fizik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Histogramda verilerin en yogun oldugu aralik hangisidir? (Kazanim: Düşey doğrultuda (yukarıdan aşağıya ve aşağıdan yukarıya) atış hareket denklemleri, konum-zaman, hız-zaman ve ivme-zaman grafikleri verilerek matematiksel hesaplamalar yapılması sağlanır.)",
+    "options": [
+      "0-5",
+      "6-10",
+      "11-15",
+      "16-20"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "51ddf990c281"
+    ],
+    "outcomes": [
+      "Düşey doğrultuda (yukarıdan aşağıya ve aşağıdan yukarıya) atış hareket denklemleri, konum-zaman, hız-zaman ve ivme-zaman grafikleri verilerek matematiksel hesaplamalar yapılması sağlanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Biyoloji-5183",
+    "grade": 11,
+    "subject": "Biyoloji",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: Süksesyonun evrelerine girilmez.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "7eab116281e3"
+    ],
+    "outcomes": [
+      "Süksesyonun evrelerine girilmez."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-COĞRAFYA-4562",
+    "grade": 11,
+    "subject": "COĞRAFYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Pasta grafikte en buyuk pay hangi kategoridedir? (Kazanim: 11.3.5. Ülkeler arası etkileşimde turizm faaliyetlerinin rolünü açıklar.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "A",
+    "source": "graph",
+    "outcome_ids": [
+      "303295436681"
+    ],
+    "outcomes": [
+      "11.3.5. Ülkeler arası etkileşimde turizm faaliyetlerinin rolünü açıklar."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Türk Dili ve Edebiyatı-8174",
+    "grade": 11,
+    "subject": "Türk Dili ve Edebiyatı",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: A.4. 15. Metinlerden hareketle dil bilgisi çalışmaları yapar.\n (Kazanım açıklamaları için bkz. EK 4))",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "C",
+    "source": "graph",
+    "outcome_ids": [
+      "9e3429a825c4"
+    ],
+    "outcomes": [
+      "A.4. 15. Metinlerden hareketle dil bilgisi çalışmaları yapar.\n (Kazanım açıklamaları için bkz. EK 4)"
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-COĞRAFYA-7560",
+    "grade": 11,
+    "subject": "COĞRAFYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Pasta grafikte en buyuk pay hangi kategoridedir? (Kazanim: 11.2.6. Türkiye’deki kır yerleşme tiplerini ayırt eder.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "C",
+    "source": "graph",
+    "outcome_ids": [
+      "68b5bb8362a6"
+    ],
+    "outcomes": [
+      "11.2.6. Türkiye’deki kır yerleşme tiplerini ayırt eder."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Fizik-1600",
+    "grade": 11,
+    "subject": "Fizik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Histogramda verilerin en yogun oldugu aralik hangisidir? (Kazanim: Değişkenlerin deney veya simülasyonlarla belirlenmesi sağlanır.\na) Alana dik giren parçacıkların sapma yönleri üzerinde durulur. Matematiksel hesaplamalara girilmez.\nb) Öğrencilerin yüklü parçacıkların elektrik alandaki davranışının teknolojideki kullanım yerlerini araştırmaları ve sunum yapmaları sağlanır.)",
+    "options": [
+      "0-5",
+      "6-10",
+      "11-15",
+      "16-20"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "b41ac1075830"
+    ],
+    "outcomes": [
+      "Değişkenlerin deney veya simülasyonlarla belirlenmesi sağlanır.\na) Alana dik giren parçacıkların sapma yönleri üzerinde durulur. Matematiksel hesaplamalara girilmez.\nb) Öğrencilerin yüklü parçacıkların elektrik alandaki davranışının teknolojideki kullanım yerlerini araştırmaları ve sunum yapmaları sağlanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-7561",
+    "grade": 11,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 11.2.3. Osmanlı devlet idaresi ve toplum düzenindeki çözülmeleri önleme çabalarını analiz eder.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "fb102ddfb0bb"
+    ],
+    "outcomes": [
+      "11.2.3. Osmanlı devlet idaresi ve toplum düzenindeki çözülmeleri önleme çabalarını analiz eder."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Türk Dili ve Edebiyatı-6503",
+    "grade": 11,
+    "subject": "Türk Dili ve Edebiyatı",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: YAZMA KAZANIMLARI / SÖZLÜ İLETİŞİM KAZANIMLARI  \n “Giriş” üniteleri ünite tablosunda belirtilen kendi konuları çerçevesinde ele alınacaktır.                                                                                   \n(bkz. Ortaöğretim Türk Dili ve Edebiyatı Dersi Öğretim Programı 2018  sayfa 13, 2.madde))",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "D",
+    "source": "graph",
+    "outcome_ids": [
+      "492ab71a874c"
+    ],
+    "outcomes": [
+      "YAZMA KAZANIMLARI / SÖZLÜ İLETİŞİM KAZANIMLARI  \n “Giriş” üniteleri ünite tablosunda belirtilen kendi konuları çerçevesinde ele alınacaktır.                                                                                   \n(bkz. Ortaöğretim Türk Dili ve Edebiyatı Dersi Öğretim Programı 2018  sayfa 13, 2.madde)"
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Felsefe-9219",
+    "grade": 11,
+    "subject": "Felsefe",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: a) St. Augustinus’un “İtiraflar” adlı eserinden alınan veya derlenen bir metinden hareketle filozofun “Tanrı ve evren” ile ilgili görüşlerinin irdelenmesi sağlanır. \nb) Fârâbî’nin “el-medînetü’l fâzıla” adlı eserinden alınan veya derlenen bir metinden hareketle filozofun ahlak ve siyaset görüşlerinin irdelenmesi sağlanır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "C",
+    "source": "graph",
+    "outcome_ids": [
+      "cd9baa7dd225"
+    ],
+    "outcomes": [
+      "a) St. Augustinus’un “İtiraflar” adlı eserinden alınan veya derlenen bir metinden hareketle filozofun “Tanrı ve evren” ile ilgili görüşlerinin irdelenmesi sağlanır. \nb) Fârâbî’nin “el-medînetü’l fâzıla” adlı eserinden alınan veya derlenen bir metinden hareketle filozofun ahlak ve siyaset görüşlerinin irdelenmesi sağlanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Felsefe-3960",
+    "grade": 11,
+    "subject": "Felsefe",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: a) J. Locke’un “İnsan Zihni Üzerine Bir Deneme” adlı eserinden alınan veya derlenen bir metinden hareketle filozofun bilginin kaynağı konusundaki görüşlerinin irdelenmesi sağlanır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "A",
+    "source": "graph",
+    "outcome_ids": [
+      "d35f35726214"
+    ],
+    "outcomes": [
+      "a) J. Locke’un “İnsan Zihni Üzerine Bir Deneme” adlı eserinden alınan veya derlenen bir metinden hareketle filozofun bilginin kaynağı konusundaki görüşlerinin irdelenmesi sağlanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-KİMYA-8574",
+    "grade": 11,
+    "subject": "KİMYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: a. Derişim birimleri olarak molarite ve molalite tanıtılır.\nb. Normalite ve formalite tanımlarına girilmez.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "5a08c651b05f"
+    ],
+    "outcomes": [
+      "a. Derişim birimleri olarak molarite ve molalite tanıtılır.\nb. Normalite ve formalite tanımlarına girilmez."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-2222",
+    "grade": 11,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: b) Öğrencilerin, Osmanlı Devleti’nin yeni düzenli ordu kurma teşebbüslerinin (Nizam-ı Cedit, Yeniçeri Ocağı’nın kaldırılması ve Asâkir-i Mansûre-i Muhammediye) gerekçelerini analiz etmeleri sağlanır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "C",
+    "source": "graph",
+    "outcome_ids": [
+      "51b725a52960"
+    ],
+    "outcomes": [
+      "b) Öğrencilerin, Osmanlı Devleti’nin yeni düzenli ordu kurma teşebbüslerinin (Nizam-ı Cedit, Yeniçeri Ocağı’nın kaldırılması ve Asâkir-i Mansûre-i Muhammediye) gerekçelerini analiz etmeleri sağlanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Türk Dili ve Edebiyatı-2519",
+    "grade": 11,
+    "subject": "Türk Dili ve Edebiyatı",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: OKUMA (METNİ ANLAMA VE ÇÖZÜMLEME) KAZANIMLARI\n  A.3. 1. Metinde geçen kelime ve kelime gruplarının anlamlarını tespit eder. \n A.3  2. Metnin türünün ortaya çıkışı ve tarihsel dönem ile ilişkisini belirler.\n  A.3. 3. Metnin tema ve konusunu belirler. \n A.3. 4. Metindeki çatışmaları belirler. \n A.3. 5. Metindeki olay örgüsünü belirler. \n  A.3. 6. Metindeki şahıs kadrosunun özelliklerini belirler. \n  A.3. 7. Metindeki zaman ve mekânın özelliklerini belirler. \n A.3. 8. Metnin dil, üslup ve anlatım/sunum özelliklerini belirler.\n  A.3. 9. Metinde millî, manevi ve evrensel değerler ile sosyal, siyasi, tarihî ve mitolojik ögeleri belirler. \n A.3. 10. Metinde edebiyat, sanat ve fikir akımlarının/anlayışlarının yansımalarını değerlendirir.\nA.3. 11. Metni yorumlar.\nA.3. 12. Yazar ve metin arasındaki ilişkiyi değerlendirir.\nA.3. 13. Türün ve dönemin/akımın diğer önemli yazarlarını ve eserlerini sıralar.\n (Kazanım açıklamaları için bkz. EK 3))",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "a93e7976f324"
+    ],
+    "outcomes": [
+      "OKUMA (METNİ ANLAMA VE ÇÖZÜMLEME) KAZANIMLARI\n  A.3. 1. Metinde geçen kelime ve kelime gruplarının anlamlarını tespit eder. \n A.3  2. Metnin türünün ortaya çıkışı ve tarihsel dönem ile ilişkisini belirler.\n  A.3. 3. Metnin tema ve konusunu belirler. \n A.3. 4. Metindeki çatışmaları belirler. \n A.3. 5. Metindeki olay örgüsünü belirler. \n  A.3. 6. Metindeki şahıs kadrosunun özelliklerini belirler. \n  A.3. 7. Metindeki zaman ve mekânın özelliklerini belirler. \n A.3. 8. Metnin dil, üslup ve anlatım/sunum özelliklerini belirler.\n  A.3. 9. Metinde millî, manevi ve evrensel değerler ile sosyal, siyasi, tarihî ve mitolojik ögeleri belirler. \n A.3. 10. Metinde edebiyat, sanat ve fikir akımlarının/anlayışlarının yansımalarını değerlendirir.\nA.3. 11. Metni yorumlar.\nA.3. 12. Yazar ve metin arasındaki ilişkiyi değerlendirir.\nA.3. 13. Türün ve dönemin/akımın diğer önemli yazarlarını ve eserlerini sıralar.\n (Kazanım açıklamaları için bkz. EK 3)"
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-COĞRAFYA-6874",
+    "grade": 11,
+    "subject": "COĞRAFYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Cizgi grafikte en yuksek deger hangi gunde gorulmektedir? (Kazanim: 11.1.2. Madde döngüleri ve enerji akışını ekosistemin devamlılığı açısından analiz eder.)",
+    "options": [
+      "Pzt",
+      "Sal",
+      "Car",
+      "Per"
+    ],
+    "answer": "Pzt",
+    "source": "graph",
+    "outcome_ids": [
+      "f1825e86207a"
+    ],
+    "outcomes": [
+      "11.1.2. Madde döngüleri ve enerji akışını ekosistemin devamlılığı açısından analiz eder."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-COĞRAFYA-1200",
+    "grade": 11,
+    "subject": "COĞRAFYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Cizgi grafikte en yuksek deger hangi gunde gorulmektedir? (Kazanim: 1.  DÖNEM ARA TATİLİ: 10 - 14 Kasım)",
+    "options": [
+      "Pzt",
+      "Sal",
+      "Car",
+      "Per"
+    ],
+    "answer": "Pzt",
+    "source": "graph",
+    "outcome_ids": [
+      "0d456548b726"
+    ],
+    "outcomes": [
+      "1.  DÖNEM ARA TATİLİ: 10 - 14 Kasım"
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-COĞRAFYA-6392",
+    "grade": 11,
+    "subject": "COĞRAFYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Haritadaki noktalardan hangisi merkeze en yakindir? (Kazanim: SOSYAL ETKİNLİK)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "C",
+    "source": "graph",
+    "outcome_ids": [
+      "3d02d4636357"
+    ],
+    "outcomes": [
+      "SOSYAL ETKİNLİK"
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-COĞRAFYA-5467",
+    "grade": 11,
+    "subject": "COĞRAFYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Cizgi grafikte en yuksek deger hangi gunde gorulmektedir? (Kazanim: 11.2.19. Türkiye'de sanayi sektörünün özelliklerini açıklar.)",
+    "options": [
+      "Pzt",
+      "Sal",
+      "Car",
+      "Per"
+    ],
+    "answer": "Car",
+    "source": "graph",
+    "outcome_ids": [
+      "51210455a141"
+    ],
+    "outcomes": [
+      "11.2.19. Türkiye'de sanayi sektörünün özelliklerini açıklar."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Biyoloji-5997",
+    "grade": 11,
+    "subject": "Biyoloji",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 11.1.4.1. Kalp, kan ve damarların yapı, görev ve işleyişini açıklar.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "62266e95c4b2"
+    ],
+    "outcomes": [
+      "11.1.4.1. Kalp, kan ve damarların yapı, görev ve işleyişini açıklar."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Matematik-1604",
+    "grade": 11,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Sekilde gosterilen acinin olcusu kactir? (Kazanim: 11.3.3.1. Bir fonksiyonun grafiğinden, dönüşümler yardımı ile yeni fonksiyon grafikleri çizer.\na) Tek ve çift fonksiyonların grafiğinin simetri özellikleri üzerinde durulur.\nb) y = f(x) + b, y = f(x - a), y = kf(x), y = f(kx), y = -f(x), y = f(-x) dönüşümlerinin grafikleri bilgi ve iletişim teknolojilerinden yararlanılarak verilir.)",
+    "options": [
+      "15",
+      "30",
+      "45",
+      "60"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "3bc28c89c2a8"
+    ],
+    "outcomes": [
+      "11.3.3.1. Bir fonksiyonun grafiğinden, dönüşümler yardımı ile yeni fonksiyon grafikleri çizer.\na) Tek ve çift fonksiyonların grafiğinin simetri özellikleri üzerinde durulur.\nb) y = f(x) + b, y = f(x - a), y = kf(x), y = f(kx), y = -f(x), y = f(-x) dönüşümlerinin grafikleri bilgi ve iletişim teknolojilerinden yararlanılarak verilir."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Fizik-9515",
+    "grade": 11,
+    "subject": "Fizik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Hiz-zaman grafiiginde en yuksek hiz hangi anda gorulur? (Kazanim: 11.1.4.1. Bir boyutta sabit ivmeli hareketi analiz eder.)",
+    "options": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ],
+    "answer": "t3",
+    "source": "graph",
+    "outcome_ids": [
+      "a556f1468f91"
+    ],
+    "outcomes": [
+      "11.1.4.1. Bir boyutta sabit ivmeli hareketi analiz eder."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-KİMYA-6309",
+    "grade": 11,
+    "subject": "KİMYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 11.2.5.1. Gazların sıkışma/genleşme sürecinde gerçek gaz ve ideal gaz kavramlarını karşılaştırır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "D",
+    "source": "graph",
+    "outcome_ids": [
+      "2a493a076cf9"
+    ],
+    "outcomes": [
+      "11.2.5.1. Gazların sıkışma/genleşme sürecinde gerçek gaz ve ideal gaz kavramlarını karşılaştırır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-KİMYA-7886",
+    "grade": 11,
+    "subject": "KİMYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: a. Boyle, Charles ve Avogadro yasalarından yola çıkılarak ideal gaz denklemi türetilir.\nb. İdeal gaz denklemi kullanılarak örnek hesaplamalar yapılır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "A",
+    "source": "graph",
+    "outcome_ids": [
+      "8561deec673c"
+    ],
+    "outcomes": [
+      "a. Boyle, Charles ve Avogadro yasalarından yola çıkılarak ideal gaz denklemi türetilir.\nb. İdeal gaz denklemi kullanılarak örnek hesaplamalar yapılır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Felsefe-3676",
+    "grade": 11,
+    "subject": "Felsefe",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 11.5.3. Örnek felsefi metinlerden hareketle 20. yüzyıl filozoflarının felsefi görüşlerini analiz eder.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "437abba3e71c"
+    ],
+    "outcomes": [
+      "11.5.3. Örnek felsefi metinlerden hareketle 20. yüzyıl filozoflarının felsefi görüşlerini analiz eder."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Fizik-2453",
+    "grade": 11,
+    "subject": "Fizik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Hiz-zaman grafiiginde en yuksek hiz hangi anda gorulur? (Kazanim: 11.1.4.2. Bir boyutta sabit ivmeli hareket ile ilgili hesaplamalar yapar)",
+    "options": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ],
+    "answer": "t4",
+    "source": "graph",
+    "outcome_ids": [
+      "56a3cf082b77"
+    ],
+    "outcomes": [
+      "11.1.4.2. Bir boyutta sabit ivmeli hareket ile ilgili hesaplamalar yapar"
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-7192",
+    "grade": 11,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: b) Küresel kapitalist güçlerle rekabet etme konusundaki zorluklar; 1838 Balta Limanı Antlaşması örneğinden hareketle gümrük ve ticaret antlaşmalarının sınırlayıcılığı ve yerli üretim yerine ithalatın tercih edilmesi gibi faktörler bağlamında kısaca ele alınır.\nc) 1856’dan sonraki süreçte kamu maliyesinde yaşanan borç krizleri sonucunda Düyûn-ı Umûmiye İdaresinin kurulmasına değinilir.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "A",
+    "source": "graph",
+    "outcome_ids": [
+      "96bd1c8d8f69"
+    ],
+    "outcomes": [
+      "b) Küresel kapitalist güçlerle rekabet etme konusundaki zorluklar; 1838 Balta Limanı Antlaşması örneğinden hareketle gümrük ve ticaret antlaşmalarının sınırlayıcılığı ve yerli üretim yerine ithalatın tercih edilmesi gibi faktörler bağlamında kısaca ele alınır.\nc) 1856’dan sonraki süreçte kamu maliyesinde yaşanan borç krizleri sonucunda Düyûn-ı Umûmiye İdaresinin kurulmasına değinilir."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Felsefe-1958",
+    "grade": 11,
+    "subject": "Felsefe",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: c) F. Hegel’in “Tinin Fenomenolojisi” adlı eserinden alınan veya derlenen bir metinden hareketle filozofun “diyalektik idealizm” anlayışının irdelenmesi sağlanır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "C",
+    "source": "graph",
+    "outcome_ids": [
+      "3893fc3becf4"
+    ],
+    "outcomes": [
+      "c) F. Hegel’in “Tinin Fenomenolojisi” adlı eserinden alınan veya derlenen bir metinden hareketle filozofun “diyalektik idealizm” anlayışının irdelenmesi sağlanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Fizik-5135",
+    "grade": 11,
+    "subject": "Fizik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Histogramda verilerin en yogun oldugu aralik hangisidir? (Kazanim: Öğrencilerin deney yaparak veya simülasyonlarla atış hareketlerini incelemeleri ve yorumlamaları sağlanır.)",
+    "options": [
+      "0-5",
+      "6-10",
+      "11-15",
+      "16-20"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "11f27da452de"
+    ],
+    "outcomes": [
+      "Öğrencilerin deney yaparak veya simülasyonlarla atış hareketlerini incelemeleri ve yorumlamaları sağlanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Türk Dili ve Edebiyatı-5243",
+    "grade": 11,
+    "subject": "Türk Dili ve Edebiyatı",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: A.4. 15. Metinlerden hareketle dil bilgisi çalışmaları yapar. \n  YAZMA KAZANIMLARI \n   B.1-B.12 kazanım ve  açıklamaları için bkz. EK 5)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "D",
+    "source": "graph",
+    "outcome_ids": [
+      "fa7f29bd9611"
+    ],
+    "outcomes": [
+      "A.4. 15. Metinlerden hareketle dil bilgisi çalışmaları yapar. \n  YAZMA KAZANIMLARI \n   B.1-B.12 kazanım ve  açıklamaları için bkz. EK 5"
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Matematik-9553",
+    "grade": 11,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Grafikteki dogrunun y-ekseni kesisimi kactir? (Kazanim: 11.7.1.3. Bileşik olayı açıklayarak gerçekleşme olasılığını hesaplar.)",
+    "options": [
+      "-1",
+      "0",
+      "1",
+      "2"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "d84689b56a99"
+    ],
+    "outcomes": [
+      "11.7.1.3. Bileşik olayı açıklayarak gerçekleşme olasılığını hesaplar."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Felsefe-9825",
+    "grade": 11,
+    "subject": "Felsefe",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 11.3.3. Örnek felsefi metinlerden hareketle 15. yüzyıl-17. yüzyıl filozoflarının felsefi görüşlerini analiz eder.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "5b33d845a375"
+    ],
+    "outcomes": [
+      "11.3.3. Örnek felsefi metinlerden hareketle 15. yüzyıl-17. yüzyıl filozoflarının felsefi görüşlerini analiz eder."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-2202",
+    "grade": 11,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: c) Osmanlı Devleti’nde açılan azınlık okulları ile yabancı ve misyoner okullarına değinilerek II. Abdülhamit Dönemi’nde devlet tarafından kurulan okullar kısaca ele alınır.\nç) II. Abdülhamid Dönemi’nde gerçekleştirilen devlet hastanelerinin ve Dârülaceze gibi sosyal yardım kurumlarının kurulması, emeklilik sistemi ve yoksul aylığı uygulamaları ele alınır. Öğrencilerin, bu uygulamaların günümüzde de varlıklarını sürdürdüklerini değişim ve süreklilik açısından analiz etmeleri sağlanır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "A",
+    "source": "graph",
+    "outcome_ids": [
+      "49546d693d12"
+    ],
+    "outcomes": [
+      "c) Osmanlı Devleti’nde açılan azınlık okulları ile yabancı ve misyoner okullarına değinilerek II. Abdülhamit Dönemi’nde devlet tarafından kurulan okullar kısaca ele alınır.\nç) II. Abdülhamid Dönemi’nde gerçekleştirilen devlet hastanelerinin ve Dârülaceze gibi sosyal yardım kurumlarının kurulması, emeklilik sistemi ve yoksul aylığı uygulamaları ele alınır. Öğrencilerin, bu uygulamaların günümüzde de varlıklarını sürdürdüklerini değişim ve süreklilik açısından analiz etmeleri sağlanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-KİMYA-1703",
+    "grade": 11,
+    "subject": "KİMYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: a. Gazların özelliklerine ilişkin yasalar (Boyle, Charles, Gay Lussac ve Avogadro) üzerinde durulur.\nb. Öğrencilerin hazır veriler kullanılarak gaz yasaları ile ilgili grafikler çizmeleri ve yorumlamaları sağlanır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "C",
+    "source": "graph",
+    "outcome_ids": [
+      "8b9723c3afca"
+    ],
+    "outcomes": [
+      "a. Gazların özelliklerine ilişkin yasalar (Boyle, Charles, Gay Lussac ve Avogadro) üzerinde durulur.\nb. Öğrencilerin hazır veriler kullanılarak gaz yasaları ile ilgili grafikler çizmeleri ve yorumlamaları sağlanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-KİMYA-3238",
+    "grade": 11,
+    "subject": "KİMYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 11.3.2.2. Farklı derişimlerde çözeltiler hazırlar.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "C",
+    "source": "graph",
+    "outcome_ids": [
+      "44fec48a3699"
+    ],
+    "outcomes": [
+      "11.3.2.2. Farklı derişimlerde çözeltiler hazırlar."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Biyoloji-2135",
+    "grade": 11,
+    "subject": "Biyoloji",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: a. Lenf dolaşımı işlenirken görsel ögeler, grafik düzenleyiciler, e-öğrenme nesnesi ve uygulamalarından yararlanılır.\nb. Lenf dolaşımı kan dolaşımı ile ilişkilendirilerek ele alınır. \n c. Ödem oluşumu üzerinde durulur.\nç. Lenf dolaşımının bağışıklık ile ilişkisi açıklanır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "A",
+    "source": "graph",
+    "outcome_ids": [
+      "068621af0af3"
+    ],
+    "outcomes": [
+      "a. Lenf dolaşımı işlenirken görsel ögeler, grafik düzenleyiciler, e-öğrenme nesnesi ve uygulamalarından yararlanılır.\nb. Lenf dolaşımı kan dolaşımı ile ilişkilendirilerek ele alınır. \n c. Ödem oluşumu üzerinde durulur.\nç. Lenf dolaşımının bağışıklık ile ilişkisi açıklanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-4827",
+    "grade": 11,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: a) Coğrafi Keşifler’in ardından Avrupa’ya ve dünyaya yayılan değerli madenlerin ortaya çıkardığı ekonomik değişimin Osmanlı coğrafyasında enflasyona yol açtığı vurgulanır.\nb) Kapitülasyonların sürekli hale gelmesinin Osmanlı ekonomisine etkisine değinilir.\nc) Merkantilist ekonomi ve Askerî Devrim’in, Osmanlı Devleti’nin toprak düzeninde ve buna bağlı savaş organizasyonunda yol açtığı zorunlu dönüşümler (Yeniçeri Ocağı mevcudunun artışı ve devşirme sisteminin sona ermesi; tımar sisteminin önemini yitirmesiyle ordunun lojistik sisteminin bozulması) kısaca açıklanır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "D",
+    "source": "graph",
+    "outcome_ids": [
+      "e386062066cb"
+    ],
+    "outcomes": [
+      "a) Coğrafi Keşifler’in ardından Avrupa’ya ve dünyaya yayılan değerli madenlerin ortaya çıkardığı ekonomik değişimin Osmanlı coğrafyasında enflasyona yol açtığı vurgulanır.\nb) Kapitülasyonların sürekli hale gelmesinin Osmanlı ekonomisine etkisine değinilir.\nc) Merkantilist ekonomi ve Askerî Devrim’in, Osmanlı Devleti’nin toprak düzeninde ve buna bağlı savaş organizasyonunda yol açtığı zorunlu dönüşümler (Yeniçeri Ocağı mevcudunun artışı ve devşirme sisteminin sona ermesi; tımar sisteminin önemini yitirmesiyle ordunun lojistik sisteminin bozulması) kısaca açıklanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-COĞRAFYA-4381",
+    "grade": 11,
+    "subject": "COĞRAFYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Cizgi grafikte en yuksek deger hangi gunde gorulmektedir? (Kazanim: 11.2.14. Türkiye ekonomisinin sektörel dağılımından hareketle ülke ekonomisi hakkında çıkarımlarda bulunur.)",
+    "options": [
+      "Pzt",
+      "Sal",
+      "Car",
+      "Per"
+    ],
+    "answer": "Per",
+    "source": "graph",
+    "outcome_ids": [
+      "7257afe35586"
+    ],
+    "outcomes": [
+      "11.2.14. Türkiye ekonomisinin sektörel dağılımından hareketle ülke ekonomisi hakkında çıkarımlarda bulunur."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK-2829",
+    "grade": 11,
+    "subject": "TARİH VE T C TARİHİ VE ATATÜRKÇÜLÜK",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: a) Osmanlı Devleti’ndeki nüfus artış hızının büyük güçlere nispetle azalmasının uluslararası rekabette güç kaybı üzerindeki etkilerine değinilir.\nb) Öğrencilerin, Osmanlı Devleti’nin toprak kaybetmesiyle başlayan süreçte Türk ve Müslüman ahalinin maruz kaldığı katliamları, İstanbul ve Anadolu’ya yaptıkları göçler sırasında yaşadıklarını tarihsel empati kurarak analiz etmeleri sağlanır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "584d44c01f97"
+    ],
+    "outcomes": [
+      "a) Osmanlı Devleti’ndeki nüfus artış hızının büyük güçlere nispetle azalmasının uluslararası rekabette güç kaybı üzerindeki etkilerine değinilir.\nb) Öğrencilerin, Osmanlı Devleti’nin toprak kaybetmesiyle başlayan süreçte Türk ve Müslüman ahalinin maruz kaldığı katliamları, İstanbul ve Anadolu’ya yaptıkları göçler sırasında yaşadıklarını tarihsel empati kurarak analiz etmeleri sağlanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Felsefe-5459",
+    "grade": 11,
+    "subject": "Felsefe",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: a) Filozofların ilk neden hakkındaki düşünceleri (Thales, Anaksimandros, Anaksimenes, Empedokles ve Demokritos) ve değişim düşüncesi (Lao Tse, Herakleitos ve Parmenides) ele alınır. \nb) Sokrates ve Sofistlerin (Protagoras ve Gorgias) bilgi ve ahlak anlayışları ele alınır. \nc) Platon ve Aristoteles’in varlık, bilgi ve değer anlayışları ele alınır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "D",
+    "source": "graph",
+    "outcome_ids": [
+      "a0ec59dce852"
+    ],
+    "outcomes": [
+      "a) Filozofların ilk neden hakkındaki düşünceleri (Thales, Anaksimandros, Anaksimenes, Empedokles ve Demokritos) ve değişim düşüncesi (Lao Tse, Herakleitos ve Parmenides) ele alınır. \nb) Sokrates ve Sofistlerin (Protagoras ve Gorgias) bilgi ve ahlak anlayışları ele alınır. \nc) Platon ve Aristoteles’in varlık, bilgi ve değer anlayışları ele alınır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Felsefe-5347",
+    "grade": 11,
+    "subject": "Felsefe",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 11.2.3. Örnek felsefi metinlerden hareketle MS 2. yüzyıl-MS 15. yüzyıl filozoflarının felsefi görüşlerini analiz eder.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "D",
+    "source": "graph",
+    "outcome_ids": [
+      "a8d1e2525d6a"
+    ],
+    "outcomes": [
+      "11.2.3. Örnek felsefi metinlerden hareketle MS 2. yüzyıl-MS 15. yüzyıl filozoflarının felsefi görüşlerini analiz eder."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-COĞRAFYA-9148",
+    "grade": 11,
+    "subject": "COĞRAFYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Haritadaki noktalardan hangisi merkeze en yakindir? (Kazanim: 11.4.4. Farklı gelişmişliğe sahip ülkelerdeki doğal kaynak kullanımını çevresel etkileri açısından\ndeğerlendirir.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "C",
+    "source": "graph",
+    "outcome_ids": [
+      "e45760bd6819"
+    ],
+    "outcomes": [
+      "11.4.4. Farklı gelişmişliğe sahip ülkelerdeki doğal kaynak kullanımını çevresel etkileri açısından\ndeğerlendirir."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Felsefe-6030",
+    "grade": 11,
+    "subject": "Felsefe",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 11.5.2. 20. yüzyıl felsefesinin karakteristik özelliklerini açıklar.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "4bea420ddafd"
+    ],
+    "outcomes": [
+      "11.5.2. 20. yüzyıl felsefesinin karakteristik özelliklerini açıklar."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Matematik-1585",
+    "grade": 11,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Grafikteki dogrunun y-ekseni kesisimi kactir? (Kazanim: 11.4.2.2. İkinci dereceden bir bilinmeyenli eşitsizlik sistemlerinin çözüm kümesini bulur.)",
+    "options": [
+      "-2",
+      "-1",
+      "0",
+      "1"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "bfad82ab409f"
+    ],
+    "outcomes": [
+      "11.4.2.2. İkinci dereceden bir bilinmeyenli eşitsizlik sistemlerinin çözüm kümesini bulur."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Matematik-7436",
+    "grade": 11,
+    "subject": "Matematik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Sekilde gosterilen acinin olcusu kactir? (Kazanim: 11.1.2.3. Sinüs teoremiyle ilgili problemler çözer.)",
+    "options": [
+      "75",
+      "90",
+      "105",
+      "120"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "0e3611c91a53"
+    ],
+    "outcomes": [
+      "11.1.2.3. Sinüs teoremiyle ilgili problemler çözer."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Biyoloji-7170",
+    "grade": 11,
+    "subject": "Biyoloji",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: 11.1.6.3. a. Böbrek taşı, böbrek yetmezliği, idrar yolu enfeksiyonu belirtilir.\nb. Diyaliz kısaca açıklanarak, diyalize bağımlı hastaların yaşadıkları problemler ve böbrek\nbağışının önemi vurgulanır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "C",
+    "source": "graph",
+    "outcome_ids": [
+      "0d19615d1a9c"
+    ],
+    "outcomes": [
+      "11.1.6.3. a. Böbrek taşı, böbrek yetmezliği, idrar yolu enfeksiyonu belirtilir.\nb. Diyaliz kısaca açıklanarak, diyalize bağımlı hastaların yaşadıkları problemler ve böbrek\nbağışının önemi vurgulanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Türk Dili ve Edebiyatı-2033",
+    "grade": 11,
+    "subject": "Türk Dili ve Edebiyatı",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "easy",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: OKUMA (METNİ ANLAMA VE ÇÖZÜMLEME) KAZANIMLARI \nA.1.1. Metinde geçen kelime ve kelime gruplarının anlamlarını tespit eder.\nA.1.2. Şiirin temasını belirler. \nA.1.3. Şiirde ahengi sağlayan özellikleri/unsurları belirler. \nA.1.4. Şiirin nazım biçimini ve nazım türünü tespit eder. \nA.1.5.  Şiirdeki mazmun, imge ve edebî sanatları belirleyerek bunların anlama katkısını değerlendirir. \nA.1.6. Şiirde söyleyici ile hitap edilen kişi/varlık arasındaki ilişkiyi belirler. \nA.1. 7. Şiirde millî, manevi ve evrensel değerler ile sosyal, siyasi, tarihî ve mitolojik ögeleri belirler. \nA.1. 8. Şiirde edebiyat, sanat ve fikir akımlarının/anlayışlarının yansımalarını değerlendirir. \nA.1.9. Şiiri yorumlar. \nA.1.10. Şair ile şiir arasındaki ilişkiyi değerlendirir.\n A.1. 11. Türün/biçimin ve dönemin/akımın diğer önemli yazarlarını ve eserlerini sıralar. \nA.1. 13. Metinler arası karşılaştırmalar yapar.\n(Kazanım açıklamaları için bkz. EK 1))",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "B",
+    "source": "graph",
+    "outcome_ids": [
+      "14d301b9bdf6"
+    ],
+    "outcomes": [
+      "OKUMA (METNİ ANLAMA VE ÇÖZÜMLEME) KAZANIMLARI \nA.1.1. Metinde geçen kelime ve kelime gruplarının anlamlarını tespit eder.\nA.1.2. Şiirin temasını belirler. \nA.1.3. Şiirde ahengi sağlayan özellikleri/unsurları belirler. \nA.1.4. Şiirin nazım biçimini ve nazım türünü tespit eder. \nA.1.5.  Şiirdeki mazmun, imge ve edebî sanatları belirleyerek bunların anlama katkısını değerlendirir. \nA.1.6. Şiirde söyleyici ile hitap edilen kişi/varlık arasındaki ilişkiyi belirler. \nA.1. 7. Şiirde millî, manevi ve evrensel değerler ile sosyal, siyasi, tarihî ve mitolojik ögeleri belirler. \nA.1. 8. Şiirde edebiyat, sanat ve fikir akımlarının/anlayışlarının yansımalarını değerlendirir. \nA.1.9. Şiiri yorumlar. \nA.1.10. Şair ile şiir arasındaki ilişkiyi değerlendirir.\n A.1. 11. Türün/biçimin ve dönemin/akımın diğer önemli yazarlarını ve eserlerini sıralar. \nA.1. 13. Metinler arası karşılaştırmalar yapar.\n(Kazanım açıklamaları için bkz. EK 1)"
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Fizik-4735",
+    "grade": 11,
+    "subject": "Fizik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Hiz-zaman grafiiginde en yuksek hiz hangi anda gorulur? (Kazanim: 11.1.4.6. Düşey doğrultuda ilk hızı olan ve sabit ivmeli hareket yapan cisimlerin hareketlerini analiz eder.)",
+    "options": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ],
+    "answer": "t1",
+    "source": "graph",
+    "outcome_ids": [
+      "1f8e59b148df"
+    ],
+    "outcomes": [
+      "11.1.4.6. Düşey doğrultuda ilk hızı olan ve sabit ivmeli hareket yapan cisimlerin hareketlerini analiz eder."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-Fizik-7421",
+    "grade": 11,
+    "subject": "Fizik",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "hard",
+    "text": "[Grafik] Hiz-zaman grafiiginde en yuksek hiz hangi anda gorulur? (Kazanim: 11.1.4.3. Hava direncinin ihmal edildiği ortamda düşen cisimlerin hareketlerini analiz eder.)",
+    "options": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ],
+    "answer": "t3",
+    "source": "graph",
+    "outcome_ids": [
+      "bea0c425906f"
+    ],
+    "outcomes": [
+      "11.1.4.3. Hava direncinin ihmal edildiği ortamda düşen cisimlerin hareketlerini analiz eder."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-KİMYA-8846",
+    "grade": 11,
+    "subject": "KİMYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Asagidaki sutun grafiiginde en yuksek deger hangi kategoride gorulur? (Kazanim: a. Basınç birimleri (atm, Torr, mmHg ) ve hacim birimleri (L, m3) ile bunların ondalık ast ve üst katları kısaca açıklanır.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "D",
+    "source": "graph",
+    "outcome_ids": [
+      "aecf72211d14"
+    ],
+    "outcomes": [
+      "a. Basınç birimleri (atm, Torr, mmHg ) ve hacim birimleri (L, m3) ile bunların ondalık ast ve üst katları kısaca açıklanır."
+    ],
+    "quality_score": 55
+  },
+  {
+    "id": "11-COĞRAFYA-2958",
+    "grade": 11,
+    "subject": "COĞRAFYA",
+    "question_type": "Coktan Secmeli (ABCD)",
+    "difficulty": "medium",
+    "text": "[Grafik] Haritadaki noktalardan hangisi merkeze en yakindir? (Kazanim: 11.1.1. Biyoçeşitliliğin oluşumu ve azalmasında etkili olan faktörleri açıklar.)",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "answer": "A",
+    "source": "graph",
+    "outcome_ids": [
+      "797890981ead"
+    ],
+    "outcomes": [
+      "11.1.1. Biyoçeşitliliğin oluşumu ve azalmasında etkili olan faktörleri açıklar."
+    ],
+    "quality_score": 55
+  }
+]

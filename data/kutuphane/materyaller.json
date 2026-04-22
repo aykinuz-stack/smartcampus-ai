@@ -1,0 +1,202 @@
+[
+  {
+    "id": "mat_bcaceff3",
+    "baslik": "Kucuk Prens",
+    "yazar": "Ilgin Ucar",
+    "isbn": "978-605-642-803-0",
+    "kategori": "Ansiklopedi",
+    "stok": 5,
+    "konum": "Raf D-4",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_feb78b92",
+    "baslik": "Sefiller",
+    "yazar": "Yigit Yilmaz",
+    "isbn": "978-605-422-961-7",
+    "kategori": "Bilim",
+    "stok": 4,
+    "konum": "Raf E-9",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_ef53fe2a",
+    "baslik": "Suç ve Ceza",
+    "yazar": "Gizem Arslan",
+    "isbn": "978-605-565-450-3",
+    "kategori": "Ansiklopedi",
+    "stok": 4,
+    "konum": "Raf B-5",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_230a752e",
+    "baslik": "Simyaci",
+    "yazar": "Arda Demir",
+    "isbn": "978-605-477-283-0",
+    "kategori": "Tarih",
+    "stok": 3,
+    "konum": "Raf E-1",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_ea774c98",
+    "baslik": "Ince Memed",
+    "yazar": "Ecrin Celik",
+    "isbn": "978-605-996-704-8",
+    "kategori": "Tarih",
+    "stok": 3,
+    "konum": "Raf A-7",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_84e6d3aa",
+    "baslik": "Calisku Arı",
+    "yazar": "Lina Balci",
+    "isbn": "978-605-271-647-1",
+    "kategori": "Siir",
+    "stok": 4,
+    "konum": "Raf F-3",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_b0fc6d7e",
+    "baslik": "Bilim Dunyasi",
+    "yazar": "Lina Gunes",
+    "isbn": "978-605-555-734-6",
+    "kategori": "Siir",
+    "stok": 3,
+    "konum": "Raf A-1",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_eb682fb2",
+    "baslik": "Turkiye Tarihi",
+    "yazar": "Hande Balci",
+    "isbn": "978-605-150-173-2",
+    "kategori": "Cocuk",
+    "stok": 3,
+    "konum": "Raf C-10",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_da0c94c5",
+    "baslik": "Matematik Olimpiyat",
+    "yazar": "Burak Kaya",
+    "isbn": "978-605-776-598-3",
+    "kategori": "Bilim",
+    "stok": 1,
+    "konum": "Raf E-4",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_14784c8c",
+    "baslik": "Ingilizce Gramer",
+    "yazar": "Nehir Kara",
+    "isbn": "978-605-975-120-8",
+    "kategori": "Roman",
+    "stok": 3,
+    "konum": "Raf B-8",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_456da74d",
+    "baslik": "Fen Deneyleri",
+    "yazar": "Fatma Erdogan",
+    "isbn": "978-605-690-820-8",
+    "kategori": "Hikaye",
+    "stok": 1,
+    "konum": "Raf E-7",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_1d10197e",
+    "baslik": "Cocuk Ansiklopedisi",
+    "yazar": "Serkan Celik",
+    "isbn": "978-605-652-401-4",
+    "kategori": "Hikaye",
+    "stok": 3,
+    "konum": "Raf A-7",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_4b38baee",
+    "baslik": "Masal Dunyasi",
+    "yazar": "Yigit Ak",
+    "isbn": "978-605-953-969-9",
+    "kategori": "Ders Kitabi",
+    "stok": 4,
+    "konum": "Raf D-9",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_e579b6f5",
+    "baslik": "Robotik Temelleri",
+    "yazar": "Selin Kara",
+    "isbn": "978-605-703-985-9",
+    "kategori": "Roman",
+    "stok": 2,
+    "konum": "Raf B-4",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_c65df961",
+    "baslik": "Dunya Klasikleri",
+    "yazar": "Yaren Ak",
+    "isbn": "978-605-638-405-8",
+    "kategori": "Bilim",
+    "stok": 5,
+    "konum": "Raf C-1",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_cef5ceae",
+    "baslik": "Turk Edebiyati",
+    "yazar": "Mehmet Yilmaz",
+    "isbn": "978-605-201-889-5",
+    "kategori": "Siir",
+    "stok": 5,
+    "konum": "Raf B-6",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_94ae4a29",
+    "baslik": "Siirimiz",
+    "yazar": "Yigit Demir",
+    "isbn": "978-605-700-618-9",
+    "kategori": "Cocuk",
+    "stok": 2,
+    "konum": "Raf A-10",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_aa58dadd",
+    "baslik": "Bilgisayar Bilimi",
+    "yazar": "Merve Tas",
+    "isbn": "978-605-691-709-3",
+    "kategori": "Siir",
+    "stok": 3,
+    "konum": "Raf E-6",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_8186b65b",
+    "baslik": "Astronomi",
+    "yazar": "Furkan Yildiz",
+    "isbn": "978-605-339-484-6",
+    "kategori": "Tarih",
+    "stok": 4,
+    "konum": "Raf F-5",
+    "durum": "mevcut"
+  },
+  {
+    "id": "mat_be8d45cc",
+    "baslik": "Geometri Yardimci",
+    "yazar": "Arda Cetin",
+    "isbn": "978-605-980-816-7",
+    "kategori": "Bilim",
+    "stok": 3,
+    "konum": "Raf D-9",
+    "durum": "mevcut"
+  }
+]

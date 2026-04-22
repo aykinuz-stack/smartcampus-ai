@@ -1139,3 +1139,49 @@ async def yonetici_toplantilar(
 ):
     """Toplanti ve kurul listesi."""
     return {"toplantilar": []}
+
+
+# ══════════════════════════════════════════════════════════════
+# VEKIL OGRETMEN YONETIMI
+# ══════════════════════════════════════════════════════════════
+
+VEKIL_PATH = "akademik/vekil_gorevler.json"
+
+
+@router.get("/vekil-listesi")
+async def vekil_listesi(
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Gunun vekil ogretmen listesi."""
+    _require_yonetici(user)
+    data = adapter.load(VEKIL_PATH) or []
+    today = date.today().isoformat()
+    bugun = [v for v in data if v.get("tarih") == today]
+    return {"vekiller": bugun, "toplam": len(data)}
+
+
+@router.post("/vekil-ata")
+async def vekil_ata(
+    request: dict,
+    user: Annotated[dict, Depends(get_current_user)],
+    adapter: Annotated[DataAdapter, Depends(get_data_adapter)],
+):
+    """Vekil ogretmen ata."""
+    _require_yonetici(user)
+    import uuid as _uuid
+
+    yeni = {
+        "id": f"vkl_{_uuid.uuid4().hex[:8]}",
+        "izinli_ogretmen_id": request.get("izinli_ogretmen_id", ""),
+        "izinli_ogretmen_adi": request.get("izinli_ogretmen_adi", ""),
+        "vekil_ogretmen_id": request.get("vekil_ogretmen_id", ""),
+        "vekil_ogretmen_adi": request.get("vekil_ogretmen_adi", ""),
+        "tarih": request.get("tarih", date.today().isoformat()),
+        "ders_saatleri": request.get("ders_saatleri", []),
+        "aciklama": request.get("aciklama", ""),
+        "atayan": user.get("ad_soyad", user.get("name", "")),
+        "olusturma_tarihi": datetime.now().isoformat(),
+    }
+    adapter.append(VEKIL_PATH, yeni)
+    return {"ok": True, "id": yeni["id"]}

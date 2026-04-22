@@ -1,0 +1,114 @@
+[
+  {
+    "id": "nbk_ec1bee2d",
+    "gorev_id": "nbg_f9ee615e",
+    "tarih": "2026-01-13",
+    "durum": "devredildi",
+    "notlar": ""
+  },
+  {
+    "id": "nbk_f9b28b9f",
+    "gorev_id": "nbg_d97a75c3",
+    "tarih": "2025-11-26",
+    "durum": "devredildi",
+    "notlar": ""
+  },
+  {
+    "id": "nbk_83d2964c",
+    "gorev_id": "nbg_d97a75c3",
+    "tarih": "2026-02-18",
+    "durum": "tamamlandi",
+    "notlar": ""
+  },
+  {
+    "id": "nbk_4244362d",
+    "gorev_id": "nbg_203e2dba",
+    "tarih": "2025-09-29",
+    "durum": "devredildi",
+    "notlar": ""
+  },
+  {
+    "id": "nbk_df383436",
+    "gorev_id": "nbg_211737b2",
+    "tarih": "2026-01-09",
+    "durum": "devredildi",
+    "notlar": ""
+  },
+  {
+    "id": "nbk_57794159",
+    "gorev_id": "nbg_4102ed15",
+    "tarih": "2026-01-17",
+    "durum": "devredildi",
+    "notlar": ""
+  },
+  {
+    "id": "nbk_b805a557",
+    "gorev_id": "nbg_850eb9fd",
+    "tarih": "2026-01-23",
+    "durum": "tamamlandi",
+    "notlar": ""
+  },
+  {
+    "id": "nbk_eb92c3a8",
+    "gorev_id": "nbg_e474cab5",
+    "tarih": "2025-10-03",
+    "durum": "devredildi",
+    "notlar": ""
+  },
+  {
+    "id": "nbk_67874024",
+    "gorev_id": "nbg_e474cab5",
+    "tarih": "2025-12-18",
+    "durum": "tamamlandi",
+    "notlar": ""
+  },
+  {
+    "id": "nbk_a52192b5",
+    "gorev_id": "nbg_d2bce4e7",
+    "tarih": "2025-10-25",
+    "durum": "devredildi",
+    "notlar": ""
+  },
+  {
+    "id": "nbk_77110905",
+    "gorev_id": "nbg_d2bce4e7",
+    "tarih": "2026-01-12",
+    "durum": "tamamlandi",
+    "notlar": ""
+  },
+  {
+    "id": "nbk_151e6a39",
+    "gorev_id": "nbg_8722a9b3",
+    "tarih": "2026-03-06",
+    "durum": "devredildi",
+    "notlar": ""
+  },
+  {
+    "id": "nbk_14fd1470",
+    "gorev_id": "nbg_8722a9b3",
+    "tarih": "2025-09-18",
+    "durum": "devredildi",
+    "notlar": ""
+  },
+  {
+    "id": "nbk_0f2735ba",
+    "gorev_id": "nbg_8722a9b3",
+    "tarih": "2025-10-16",
+    "durum": "tamamlandi",
+    "notlar": ""
+  },
+  {
+    "id": "nbk_afc646ff",
+    "gorev_id": "nbg_97e54c68",
+    "tarih": "2026-03-25",
+    "durum": "tamamlandi",
+    "notlar": ""
+  },
+  {
+    "id": "nbk_918976cd",
+    "gorev_id": "nbg_97e54c68",
+    "tarih": "2025-11-28",
+    "durum": "tamamlandi",
+    "notlar": ""
+  }
+]

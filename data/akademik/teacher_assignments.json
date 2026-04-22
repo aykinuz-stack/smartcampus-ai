@@ -1,0 +1,670 @@
+[
+  {
+    "id": "ta_86be959c",
+    "ogretmen_id": "ogr_9cd6c903",
+    "ogretmen_adi": "Ayse Yilmaz",
+    "akademik_yil": "2025-2026",
+    "dersler": [
+      "Turkce"
+    ],
+    "gorevler": [
+      {
+        "sinif": 5,
+        "sube": "A",
+        "ders": "Turkce",
+        "haftalik_saat": 6
+      },
+      {
+        "sinif": 5,
+        "sube": "B",
+        "ders": "Turkce",
+        "haftalik_saat": 6
+      },
+      {
+        "sinif": 6,
+        "sube": "A",
+        "ders": "Turkce",
+        "haftalik_saat": 6
+      },
+      {
+        "sinif": 6,
+        "sube": "B",
+        "ders": "Turkce",
+        "haftalik_saat": 6
+      }
+    ],
+    "musait_degil": [],
+    "created_at": "2026-02-08T01:55:28.722085",
+    "updated_at": "2026-02-08T03:07:11.605246"
+  },
+  {
+    "id": "ta_743fc253",
+    "ogretmen_id": "ogr_71cf4e27",
+    "ogretmen_adi": "Mehmet Kaya",
+    "akademik_yil": "2025-2026",
+    "dersler": [
+      "Matematik"
+    ],
+    "gorevler": [
+      {
+        "sinif": 5,
+        "sube": "A",
+        "ders": "Matematik",
+        "haftalik_saat": 5
+      },
+      {
+        "sinif": 5,
+        "sube": "B",
+        "ders": "Matematik",
+        "haftalik_saat": 5
+      },
+      {
+        "sinif": 6,
+        "sube": "A",
+        "ders": "Matematik",
+        "haftalik_saat": 5
+      },
+      {
+        "sinif": 6,
+        "sube": "B",
+        "ders": "Matematik",
+        "haftalik_saat": 5
+      },
+      {
+        "sinif": 7,
+        "sube": "A",
+        "ders": "Matematik",
+        "haftalik_saat": 5
+      },
+      {
+        "sinif": 7,
+        "sube": "B",
+        "ders": "Matematik",
+        "haftalik_saat": 5
+      },
+      {
+        "sinif": 8,
+        "sube": "A",
+        "ders": "Matematik",
+        "haftalik_saat": 5
+      },
+      {
+        "sinif": 8,
+        "sube": "B",
+        "ders": "Matematik",
+        "haftalik_saat": 5
+      }
+    ],
+    "musait_degil": [],
+    "created_at": "2026-02-08T01:57:09.209086",
+    "updated_at": "2026-02-08T03:07:11.605246"
+  },
+  {
+    "id": "ta_2a27aafa",
+    "ogretmen_id": "ogr_7b23824b",
+    "ogretmen_adi": "Ali Celik",
+    "akademik_yil": "2025-2026",
+    "dersler": [
+      "Fen Bilimleri"
+    ],
+    "gorevler": [
+      {
+        "sinif": 5,
+        "sube": "A",
+        "ders": "Fen Bilimleri",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 5,
+        "sube": "B",
+        "ders": "Fen Bilimleri",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 6,
+        "sube": "A",
+        "ders": "Fen Bilimleri",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 6,
+        "sube": "B",
+        "ders": "Fen Bilimleri",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 7,
+        "sube": "A",
+        "ders": "Fen Bilimleri",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 7,
+        "sube": "B",
+        "ders": "Fen Bilimleri",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 8,
+        "sube": "A",
+        "ders": "Fen Bilimleri",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 8,
+        "sube": "B",
+        "ders": "Fen Bilimleri",
+        "haftalik_saat": 4
+      }
+    ],
+    "musait_degil": [],
+    "created_at": "2026-02-08T02:03:08.232274",
+    "updated_at": "2026-02-08T03:07:11.605246"
+  },
+  {
+    "id": "ta_1a2dc3ab",
+    "ogretmen_id": "ogr_c9e7fef1",
+    "ogretmen_adi": "Zeynep Sahin",
+    "akademik_yil": "2025-2026",
+    "dersler": [
+      "Din Kulturu ve Ahlak Bilgisi"
+    ],
+    "gorevler": [
+      {
+        "sinif": 5,
+        "sube": "A",
+        "ders": "Din Kulturu ve Ahlak Bilgisi",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 5,
+        "sube": "B",
+        "ders": "Din Kulturu ve Ahlak Bilgisi",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 6,
+        "sube": "A",
+        "ders": "Din Kulturu ve Ahlak Bilgisi",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 6,
+        "sube": "B",
+        "ders": "Din Kulturu ve Ahlak Bilgisi",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 7,
+        "sube": "A",
+        "ders": "Din Kulturu ve Ahlak Bilgisi",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 7,
+        "sube": "B",
+        "ders": "Din Kulturu ve Ahlak Bilgisi",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 8,
+        "sube": "A",
+        "ders": "Din Kulturu ve Ahlak Bilgisi",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 8,
+        "sube": "B",
+        "ders": "Din Kulturu ve Ahlak Bilgisi",
+        "haftalik_saat": 4
+      }
+    ],
+    "musait_degil": [
+      {
+        "gun": "Cuma",
+        "ders_saati": 0
+      }
+    ],
+    "created_at": "2026-02-08T02:11:34.972599",
+    "updated_at": "2026-02-08T03:07:11.605246"
+  },
+  {
+    "id": "ta_10361a78",
+    "ogretmen_id": "ogr_ae0edb95",
+    "ogretmen_adi": "Ahmet Ozturk",
+    "akademik_yil": "2025-2026",
+    "dersler": [
+      "Gorsel Sanatlar"
+    ],
+    "gorevler": [
+      {
+        "sinif": 5,
+        "sube": "A",
+        "ders": "Gorsel Sanatlar",
+        "haftalik_saat": 3
+      },
+      {
+        "sinif": 5,
+        "sube": "B",
+        "ders": "Gorsel Sanatlar",
+        "haftalik_saat": 3
+      },
+      {
+        "sinif": 6,
+        "sube": "A",
+        "ders": "Gorsel Sanatlar",
+        "haftalik_saat": 3
+      },
+      {
+        "sinif": 6,
+        "sube": "B",
+        "ders": "Gorsel Sanatlar",
+        "haftalik_saat": 3
+      },
+      {
+        "sinif": 7,
+        "sube": "A",
+        "ders": "Gorsel Sanatlar",
+        "haftalik_saat": 3
+      },
+      {
+        "sinif": 7,
+        "sube": "B",
+        "ders": "Gorsel Sanatlar",
+        "haftalik_saat": 3
+      },
+      {
+        "sinif": 8,
+        "sube": "A",
+        "ders": "Gorsel Sanatlar",
+        "haftalik_saat": 3
+      },
+      {
+        "sinif": 8,
+        "sube": "B",
+        "ders": "Gorsel Sanatlar",
+        "haftalik_saat": 3
+      }
+    ],
+    "musait_degil": [],
+    "created_at": "2026-02-08T02:15:01.170750",
+    "updated_at": "2026-02-08T03:07:11.620220"
+  },
+  {
+    "id": "ta_41975076",
+    "ogretmen_id": "ogr_b67aa0b7",
+    "ogretmen_adi": "Elif Arslan",
+    "akademik_yil": "2025-2026",
+    "dersler": [
+      "Muzik"
+    ],
+    "gorevler": [
+      {
+        "sinif": 5,
+        "sube": "A",
+        "ders": "Muzik",
+        "haftalik_saat": 3
+      },
+      {
+        "sinif": 5,
+        "sube": "B",
+        "ders": "Muzik",
+        "haftalik_saat": 3
+      },
+      {
+        "sinif": 6,
+        "sube": "A",
+        "ders": "Muzik",
+        "haftalik_saat": 3
+      },
+      {
+        "sinif": 6,
+        "sube": "B",
+        "ders": "Muzik",
+        "haftalik_saat": 3
+      },
+      {
+        "sinif": 7,
+        "sube": "A",
+        "ders": "Muzik",
+        "haftalik_saat": 3
+      },
+      {
+        "sinif": 7,
+        "sube": "B",
+        "ders": "Muzik",
+        "haftalik_saat": 3
+      },
+      {
+        "sinif": 8,
+        "sube": "A",
+        "ders": "Muzik",
+        "haftalik_saat": 3
+      },
+      {
+        "sinif": 8,
+        "sube": "B",
+        "ders": "Muzik",
+        "haftalik_saat": 3
+      }
+    ],
+    "musait_degil": [],
+    "created_at": "2026-02-08T02:15:57.619284",
+    "updated_at": "2026-02-08T03:07:11.622170"
+  },
+  {
+    "id": "ta_0fcc8f51",
+    "ogretmen_id": "ogr_005a1285",
+    "ogretmen_adi": "Fatma Demir",
+    "akademik_yil": "2025-2026",
+    "dersler": [
+      "Sosyal Bilgiler",
+      "T.C. Inkilap Tarihi ve Ataturkculuk"
+    ],
+    "gorevler": [
+      {
+        "sinif": 5,
+        "sube": "A",
+        "ders": "Sosyal Bilgiler",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 5,
+        "sube": "B",
+        "ders": "Sosyal Bilgiler",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 6,
+        "sube": "A",
+        "ders": "Sosyal Bilgiler",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 6,
+        "sube": "B",
+        "ders": "Sosyal Bilgiler",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 7,
+        "sube": "A",
+        "ders": "Sosyal Bilgiler",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 7,
+        "sube": "B",
+        "ders": "Sosyal Bilgiler",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 8,
+        "sube": "A",
+        "ders": "T.C. Inkilap Tarihi ve Ataturkculuk",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 8,
+        "sube": "B",
+        "ders": "T.C. Inkilap Tarihi ve Ataturkculuk",
+        "haftalik_saat": 4
+      }
+    ],
+    "musait_degil": [],
+    "created_at": "2026-02-08T02:42:26.516373",
+    "updated_at": "2026-02-08T03:07:11.605246"
+  },
+  {
+    "id": "ta_d5362dbc",
+    "ogretmen_id": "ogr_969d34b3",
+    "ogretmen_adi": "Mustafa Dogan",
+    "akademik_yil": "2025-2026",
+    "dersler": [
+      "Beden Egitimi"
+    ],
+    "gorevler": [
+      {
+        "sinif": 5,
+        "sube": "A",
+        "ders": "Beden Egitimi",
+        "haftalik_saat": 2
+      },
+      {
+        "sinif": 5,
+        "sube": "B",
+        "ders": "Beden Egitimi",
+        "haftalik_saat": 2
+      },
+      {
+        "sinif": 6,
+        "sube": "A",
+        "ders": "Beden Egitimi",
+        "haftalik_saat": 2
+      },
+      {
+        "sinif": 6,
+        "sube": "B",
+        "ders": "Beden Egitimi",
+        "haftalik_saat": 2
+      },
+      {
+        "sinif": 7,
+        "sube": "A",
+        "ders": "Beden Egitimi",
+        "haftalik_saat": 2
+      },
+      {
+        "sinif": 7,
+        "sube": "B",
+        "ders": "Beden Egitimi",
+        "haftalik_saat": 2
+      },
+      {
+        "sinif": 8,
+        "sube": "A",
+        "ders": "Beden Egitimi",
+        "haftalik_saat": 2
+      },
+      {
+        "sinif": 8,
+        "sube": "B",
+        "ders": "Beden Egitimi",
+        "haftalik_saat": 2
+      }
+    ],
+    "musait_degil": [],
+    "created_at": "2026-02-08T02:46:01.890373",
+    "updated_at": "2026-02-08T03:07:11.624034"
+  },
+  {
+    "id": "ta_3a4c0595",
+    "ogretmen_id": "ogr_a58454c4",
+    "ogretmen_adi": "Hasan Kilic",
+    "akademik_yil": "2025-2026",
+    "dersler": [
+      "Ingilizce"
+    ],
+    "gorevler": [
+      {
+        "sinif": 5,
+        "sube": "A",
+        "ders": "Ingilizce",
+        "haftalik_saat": 5
+      },
+      {
+        "sinif": 5,
+        "sube": "B",
+        "ders": "Ingilizce",
+        "haftalik_saat": 5
+      },
+      {
+        "sinif": 6,
+        "sube": "A",
+        "ders": "Ingilizce",
+        "haftalik_saat": 5
+      }
+    ],
+    "musait_degil": [],
+    "created_at": "2026-02-08T02:46:46.497454",
+    "updated_at": "2026-02-08T03:07:11.605246"
+  },
+  {
+    "id": "ta_2fbb61ac",
+    "ogretmen_id": "ogr_d8ffbda3",
+    "ogretmen_adi": "Emine Aydin",
+    "akademik_yil": "2025-2026",
+    "dersler": [
+      "Almanca"
+    ],
+    "gorevler": [
+      {
+        "sinif": 5,
+        "sube": "A",
+        "ders": "Almanca",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 5,
+        "sube": "B",
+        "ders": "Almanca",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 6,
+        "sube": "A",
+        "ders": "Almanca",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 6,
+        "sube": "B",
+        "ders": "Almanca",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 7,
+        "sube": "A",
+        "ders": "Almanca",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 7,
+        "sube": "B",
+        "ders": "Almanca",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 8,
+        "sube": "A",
+        "ders": "Almanca",
+        "haftalik_saat": 4
+      },
+      {
+        "sinif": 8,
+        "sube": "B",
+        "ders": "Almanca",
+        "haftalik_saat": 4
+      }
+    ],
+    "musait_degil": [],
+    "created_at": "2026-02-08T02:47:51.242513",
+    "updated_at": "2026-02-08T03:07:11.625035"
+  },
+  {
+    "id": "ta_612abdeb",
+    "ogretmen_id": "ogr_7ffe7b92",
+    "ogretmen_adi": "Selin Yildiz",
+    "akademik_yil": "2025-2026",
+    "dersler": [
+      "Ingilizce"
+    ],
+    "gorevler": [
+      {
+        "sinif": 6,
+        "sube": "B",
+        "ders": "Ingilizce",
+        "haftalik_saat": 5
+      },
+      {
+        "sinif": 7,
+        "sube": "A",
+        "ders": "Ingilizce",
+        "haftalik_saat": 5
+      },
+      {
+        "sinif": 7,
+        "sube": "B",
+        "ders": "Ingilizce",
+        "haftalik_saat": 5
+      }
+    ],
+    "musait_degil": [],
+    "created_at": "2026-02-08T03:04:38.062711",
+    "updated_at": "2026-02-08T03:07:11.605246"
+  },
+  {
+    "id": "ta_53c31c01",
+    "ogretmen_id": "ogr_a878335f",
+    "ogretmen_adi": "Burak Aksoy",
+    "akademik_yil": "2025-2026",
+    "dersler": [
+      "Ingilizce"
+    ],
+    "gorevler": [
+      {
+        "sinif": 8,
+        "sube": "A",
+        "ders": "Ingilizce",
+        "haftalik_saat": 5
+      },
+      {
+        "sinif": 8,
+        "sube": "B",
+        "ders": "Ingilizce",
+        "haftalik_saat": 5
+      }
+    ],
+    "musait_degil": [],
+    "created_at": "2026-02-08T03:04:38.062711",
+    "updated_at": "2026-02-08T03:07:11.605246"
+  },
+  {
+    "id": "ta_09ae6a07",
+    "ogretmen_id": "ogr_c10238ce",
+    "ogretmen_adi": "Neslihan Korkmaz",
+    "akademik_yil": "2025-2026",
+    "dersler": [
+      "Turkce"
+    ],
+    "gorevler": [
+      {
+        "sinif": 7,
+        "sube": "A",
+        "ders": "Turkce",
+        "haftalik_saat": 6
+      },
+      {
+        "sinif": 7,
+        "sube": "B",
+        "ders": "Turkce",
+        "haftalik_saat": 6
+      },
+      {
+        "sinif": 8,
+        "sube": "A",
+        "ders": "Turkce",
+        "haftalik_saat": 6
+      },
+      {
+        "sinif": 8,
+        "sube": "B",
+        "ders": "Turkce",
+        "haftalik_saat": 6
+      }
+    ],
+    "musait_degil": [],
+    "created_at": "2026-02-08T03:04:38.069116",
+    "updated_at": "2026-02-08T03:07:11.605246"
+  }
+]

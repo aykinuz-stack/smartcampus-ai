@@ -307,11 +307,44 @@ class _OgrenciHomePageState extends ConsumerState<OgrenciHomePage>
   // ===========================================================================
 
   Widget _buildHeroBanner(AuthUser user) {
+    // Initials for avatar
+    final parts = user.adSoyad.split(' ');
+    final initials = parts.length >= 2
+        ? '${parts[0][0]}${parts[1][0]}'.toUpperCase()
+        : (user.adSoyad.isNotEmpty ? user.adSoyad[0].toUpperCase() : '?');
+
     return HeroBanner(
       title: user.adSoyad,
       subtitle: 'SmartCampus AI',
       badge: user.role.toUpperCase(),
       gradient: AppGradients.primary,
+      trailing: Container(
+        width: 56,
+        height: 56,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: Colors.white.withOpacity(0.15),
+          border: Border.all(color: AppColors.gold, width: 2.5),
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.gold.withOpacity(0.25),
+              blurRadius: 12,
+              spreadRadius: 1,
+            ),
+          ],
+        ),
+        child: Center(
+          child: Text(
+            initials,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.w800,
+              letterSpacing: 0.5,
+            ),
+          ),
+        ),
+      ),
     );
   }
 

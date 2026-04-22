@@ -144,6 +144,16 @@ async def yoklama_batch(
 
     adapter.save(DataPaths.ATTENDANCE, existing)
 
+    # ── SMS/Email devamsızlık bildirimi (BildirimServisi) ──
+    try:
+        from utils.bildirim_servisi import get_bildirim_servisi
+        bs = get_bildirim_servisi()
+        for y in req.yoklamalar:
+            if y.turu in ('devamsiz', 'ozursuz'):
+                bs.devamsizlik_bildirimi(y.student_id, req.tarih, req.ders)
+    except Exception:
+        pass  # SMS failure should not block yoklama save
+
     # ── Veliye otomatik devamsızlık bildirimi ──
     _yoklama_veli_bildirim(adapter, req, existing, user)
 

@@ -1,0 +1,56 @@
+Ortaöğretim Genel Müdürlüğü229
+YKS Çıkmış Sorular
+MATEMATİKTYT91. A ve B doğal sayılar olmak üzere, bir kenar 
+uzunluğu A §B birim olan bir karenin alanı  
+720 birimkaredir.
+ Buna göre A + B oplamı aşağıdakilerden hangisi 
+olamaz ?
+A) 26 B) 49 C) 83 D) 127 E) 182
+2023-TYT
+92. Selma, sarı ve mavi renklerden oluşan özdeş 
+mandallarla tasarladığı bir oyuncağın 1. adımında 
+yere bir mandal koyuyor. Sonraki her adımda bir 
+önceki adımda koyduğu tüm mandalların mavi 
+kısımlarına şekildeki gibi birer mandal takıp bir 
+sonraki adıma geçiyor. Selma, bu oyuncağın ilk 
+3 adımını 7 mandal kullanarak aşağıdaki gibi 
+tamamlıyor.
+  
+ Buna göre Selma’nın 12. adımı tamamladıktan 
+sonra kullandığı toplam mandal sayısı, 10. adımı 
+tamamladıktan sonra kullandığı toplam mandal 
+sayısından kaç fazladır?
+A) 3 • 210    B) 3 • 211   C) 7 • 29    D) 7 • 210    E) 211
+2024-TYT93. Elif’in, matematik kitabında okuduğu bir not 
+aşağıdaki gibidir:
+ 
+NOT:
+Örnek:     a =   720      b =
+a ve b sayılarının ikisi de tam sayı
+olmadığı hâlde       sayısı tam sayı olabilir.
+a
+b
+ Elif, kitabına su damladığı için örnekteki b sayısını 
+okuyamamıştır. 
+ Buna göre b sayısı aşağıdakilerden hangisi 
+olamaz ?
+A) §5 B) æ20 C) æ45 D) æ60 E) æ80
+2024-TYT
+94. Kerem Öğretmen, üslü ifadeler konusunu işlerken  
+abc
+ ifadesinin bu şekilde parantez kullanılmadan 
+yazılamayacağını, çünkü abc/g167
+/g169/g168/g183
+/g185/g184
+ ve abc
+/g11/g12  
+ifadelerinin farklı değerlere sahip olabileceğini 
+belirtmiş ve bu durumu bir örnekle açıklamıştır.
+ Buna göre aşağıdakilerden hangisi Kerem 
+Öğretmen’in verdiği örnek olabilir?
+A) a = 1,     b = 2,     c = 3
+B) a = 2,     b = 1,     c = 3
+C) a = 2,     b = 2,     c = 2
+D) a = 3,     b = 0,     c = 3
+E) a = 3,     b = 2,     c = 1
+2025-TYT

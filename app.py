@@ -126,6 +126,7 @@ _MODUL_GRUPLARI = [
             ("Odeme Takip",                       "💳"),
             ("Sosyal Medya Yonetimi",             "📱"),
             ("Kurum Hizmetleri",                  "🏛️"),
+            ("Vekil Yonetimi",                    "🔄"),
         ],
     },
     {
@@ -923,6 +924,9 @@ def _route(page: str):
     elif page == "Kurum Yonetimi":
         from views.kurum_yonetimi import render_kurum_yonetimi
         render_kurum_yonetimi()
+    elif page == "Vekil Yonetimi":
+        from views.vekil_yonetimi import render_vekil_yonetimi
+        render_vekil_yonetimi()
     else:
         from views.ana_sayfa import render_ana_sayfa
         render_ana_sayfa()

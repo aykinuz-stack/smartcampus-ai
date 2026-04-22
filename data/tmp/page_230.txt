@@ -1,0 +1,39 @@
+228
+YKS Çıkmış Sorular Ortaöğretim Genel Müdürlüğü
+MATEMATİKTYT87. Köklü sayılarla işlem yapan Mert, æ10 + §6 sayısını 
+eşleniği olan æ10 � §6  ile çarpmak yerine yanlışlıkla 
+bölmüştür.
+ Buna göre, Mert’in bulduğu sayı bulması 
+gereken sayıdan kaç fazladır?
+A) æ12 B) æ15 C) æ18 D) æ20 E) æ30
+2021-TYT
+88. Mine, tahtaya yazdığı aşağıdaki beş sayıdan her 
+birini üslü sayı olarak ifade ediyor.
+ 8 - 9 - 36 - 64 - 81
+ Mine, bu sayılardan birini tahtadan sildikten sonra 
+kalan dört sayıdan her birinin, ya tabanının ya da 
+kuvvetinin 3 sayısına eşit olduğunu görüyor. 
+  Buna göre, Mine’nin tahtadan sildiği sayı kaçtır?
+A) 8 B) 9 C) 36 D) 64 E) 81
+2022-TYT89. A, B, C ve D sayılarının yerine 2, 3, 4, 6 ve 8 
+sayılarından dört tanesi birer kez kullanıldığında 
+aşağıdaki eşitlik sağlanmaktadır.
+  A §B = C §D 
+ Buna göre, bu beş sayıdan hangisi verilen 
+eşitlikte yer almaz ?
+A) 2 B) 3 C) 4 D) 6 E) 8
+2022-TYT
+90. 1 Ocak 2015’te yapılan nüfus sayımında nüfusu        
+810 000 olan bir şehrin, 2016’dan 2023’e kadar her 
+sene 1 Ocak’ta nüfus sayımı yapılmıştır. 2015’ten 
+sonra yapılan ilk dört yıldaki nüfus sayımlarının her 
+birinde nüfus bir önceki yıla göre 1
+10 oranında, 
+sonraki dört yılın her birinde ise nüfus bir önceki yıla 
+göre 1
+11 oranında artmıştır.
+ Buna göre, bu şehrin 1 Ocak 2023’te yapılan 
+nüfus sayımında nüfusu kaç olmuştur?
+A) 220        B) 313            C) 59
+     D) 68                   E) 106
+2023-TYT

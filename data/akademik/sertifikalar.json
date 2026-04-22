@@ -1,0 +1,402 @@
+[
+  {
+    "id": "srt_d629cbd6",
+    "student_id": "stu_99d4ba09",
+    "ogrenci_adi": "Deniz Sahin",
+    "tur": "Matematik Olimpiyati",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-10-19",
+    "veren": "Defne Cetin",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_773ce8ef",
+    "student_id": "stu_0a39f725",
+    "ogrenci_adi": "Baris Erdogan",
+    "tur": "Tesekkur Belgesi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-04-01",
+    "veren": "Berk Ucar",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_ac583f86",
+    "student_id": "stu_b5e4305a",
+    "ogrenci_adi": "Berk Koc",
+    "tur": "Bilim Yarismasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-03-30",
+    "veren": "Ibrahim Ucar",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_caa61e1b",
+    "student_id": "stu_4efa79eb",
+    "ogrenci_adi": "Can Tas",
+    "tur": "Bilim Yarismasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-01-06",
+    "veren": "Ayse Tas",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_6225cd0f",
+    "student_id": "stu_87b39cfb",
+    "ogrenci_adi": "Zeynep Celik",
+    "tur": "Spor Basarisi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-03-27",
+    "veren": "Baris Balci",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_328ca0e9",
+    "student_id": "stu_85047d0f",
+    "ogrenci_adi": "Defne Yilmaz",
+    "tur": "Ingilizce Sertifikasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-11-08",
+    "veren": "Lina Kara",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_e4a91a50",
+    "student_id": "stu_2e00ec78",
+    "ogrenci_adi": "Furkan Sahin",
+    "tur": "Takdir Belgesi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-11-14",
+    "veren": "Taha Ozcan",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_43d02900",
+    "student_id": "stu_c67996de",
+    "ogrenci_adi": "Ecrin Tas",
+    "tur": "Kodlama Sertifikasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-09-17",
+    "veren": "Zeynep Yilmaz",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_3bcbbff2",
+    "student_id": "stu_35779711",
+    "ogrenci_adi": "Mira Kilic",
+    "tur": "Spor Basarisi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-11-17",
+    "veren": "Emine Yildiz",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_a537a970",
+    "student_id": "stu_6abf4fd9",
+    "ogrenci_adi": "Emine Tekin",
+    "tur": "Takdir Belgesi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-10-30",
+    "veren": "Derin Celik",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_0eb6fd96",
+    "student_id": "stu_c830dc54",
+    "ogrenci_adi": "Burak Kilic",
+    "tur": "Matematik Olimpiyati",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-03-02",
+    "veren": "Nisa Erdogan",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_d9889367",
+    "student_id": "stu_2caf8f65",
+    "ogrenci_adi": "Ilgin Polat",
+    "tur": "Ingilizce Sertifikasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-12-08",
+    "veren": "Taha Ak",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_56fea3c8",
+    "student_id": "stu_799bdb7f",
+    "ogrenci_adi": "Yusuf Yildirim",
+    "tur": "Spor Basarisi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-11-03",
+    "veren": "Mira Polat",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_5e479c35",
+    "student_id": "stu_df8d1b5d",
+    "ogrenci_adi": "Pelin Yilmaz",
+    "tur": "Kodlama Sertifikasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-03-28",
+    "veren": "Baris Aydin",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_9d818b63",
+    "student_id": "stu_0b33f1e9",
+    "ogrenci_adi": "Hasan Yildirim",
+    "tur": "Bilim Yarismasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-12-09",
+    "veren": "Yusuf Yildiz",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_50b69c3d",
+    "student_id": "stu_f444c9e4",
+    "ogrenci_adi": "Ege Tas",
+    "tur": "Spor Basarisi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-12-22",
+    "veren": "Emre Yildiz",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_faa6adb0",
+    "student_id": "stu_7f78a776",
+    "ogrenci_adi": "Emir Tas",
+    "tur": "Ustun Basari",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-09-18",
+    "veren": "Elif Korkmaz",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_f73ff7f4",
+    "student_id": "stu_f6fd30fc",
+    "ogrenci_adi": "Dilara Korkmaz",
+    "tur": "Matematik Olimpiyati",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-04-03",
+    "veren": "Yigit Acar",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_e68861d8",
+    "student_id": "stu_52d6a702",
+    "ogrenci_adi": "Can Yilmaz",
+    "tur": "Ingilizce Sertifikasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-11-19",
+    "veren": "Ela Aydin",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_27c6333a",
+    "student_id": "stu_6bda4eaa",
+    "ogrenci_adi": "Mustafa Ucar",
+    "tur": "Ustun Basari",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-02-12",
+    "veren": "Busra Gunes",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_93d465b4",
+    "student_id": "stu_d6aabb75",
+    "ogrenci_adi": "Nehir Ozcan",
+    "tur": "Ingilizce Sertifikasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-10-16",
+    "veren": "Berk Koc",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_d19378ff",
+    "student_id": "stu_6c28d03d",
+    "ogrenci_adi": "Sude Ozcan",
+    "tur": "Tesekkur Belgesi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-01-07",
+    "veren": "Huseyin Kurt",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_2b5c5857",
+    "student_id": "stu_9de1ba8d",
+    "ogrenci_adi": "Ela Ak",
+    "tur": "Ingilizce Sertifikasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-09-26",
+    "veren": "Sude Bozkurt",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_354c814a",
+    "student_id": "stu_ac8cd5e2",
+    "ogrenci_adi": "Mira Kurt",
+    "tur": "Ingilizce Sertifikasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-02-07",
+    "veren": "Esra Tekin",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_a319b872",
+    "student_id": "stu_d96f243c",
+    "ogrenci_adi": "Yaren Ozturk",
+    "tur": "Matematik Olimpiyati",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-02-16",
+    "veren": "Selin Aydin",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_69eb7256",
+    "student_id": "stu_0c60ee44",
+    "ogrenci_adi": "Can Tas",
+    "tur": "Spor Basarisi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-10-04",
+    "veren": "Mustafa Kilic",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_98401f3d",
+    "student_id": "stu_64e1bdf1",
+    "ogrenci_adi": "Mehmet Balci",
+    "tur": "Matematik Olimpiyati",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-01-25",
+    "veren": "Ada Celik",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_d99b370a",
+    "student_id": "stu_9c894071",
+    "ogrenci_adi": "Yigit Demir",
+    "tur": "Ustun Basari",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-10-03",
+    "veren": "Baris Celik",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_6701dfce",
+    "student_id": "stu_8ea274df",
+    "ogrenci_adi": "Asya Erdogan",
+    "tur": "Ingilizce Sertifikasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-09-18",
+    "veren": "Eren Ak",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_06e7db62",
+    "student_id": "stu_0652ad27",
+    "ogrenci_adi": "Lina Ozdemir",
+    "tur": "Ustun Basari",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-01-17",
+    "veren": "Emine Dogan",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_c96caace",
+    "student_id": "stu_2444fc70",
+    "ogrenci_adi": "Yusuf Gunes",
+    "tur": "Kodlama Sertifikasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-10-12",
+    "veren": "Mira Kaya",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_b00046c1",
+    "student_id": "stu_f9c118e2",
+    "ogrenci_adi": "Mert Yildirim",
+    "tur": "Matematik Olimpiyati",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-12-31",
+    "veren": "Ecrin Yildirim",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_89d69558",
+    "student_id": "stu_23e9d8b2",
+    "ogrenci_adi": "Furkan Ak",
+    "tur": "Tesekkur Belgesi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-12-16",
+    "veren": "Baris Erdogan",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_5ecfd9fd",
+    "student_id": "stu_1731f663",
+    "ogrenci_adi": "Ada Korkmaz",
+    "tur": "Spor Basarisi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-02-28",
+    "veren": "Ecrin Acar",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_e6f86ad5",
+    "student_id": "stu_f7bd99ba",
+    "ogrenci_adi": "Mert Polat",
+    "tur": "Ingilizce Sertifikasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-10-30",
+    "veren": "Furkan Polat",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_664a32a0",
+    "student_id": "stu_2d981dec",
+    "ogrenci_adi": "Gizem Sahin",
+    "tur": "Tesekkur Belgesi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-03-09",
+    "veren": "Esra Kilic",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_fabb7e2d",
+    "student_id": "stu_104d03ed",
+    "ogrenci_adi": "Onur Yildirim",
+    "tur": "Bilim Yarismasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-10-03",
+    "veren": "Omer Yildirim",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_361fab43",
+    "student_id": "stu_5409ef32",
+    "ogrenci_adi": "Nisa Tas",
+    "tur": "Spor Basarisi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2025-10-28",
+    "veren": "Merve Koc",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_d25a3fc3",
+    "student_id": "stu_58151441",
+    "ogrenci_adi": "Ege Korkmaz",
+    "tur": "Tesekkur Belgesi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-03-07",
+    "veren": "Merve Korkmaz",
+    "akademik_yil": "2025-2026"
+  },
+  {
+    "id": "srt_316ddc5d",
+    "student_id": "stu_a95a2c51",
+    "ogrenci_adi": "Nehir Aydin",
+    "tur": "Ingilizce Sertifikasi",
+    "aciklama": "Basarili calismalarindan dolayi verilmistir.",
+    "tarih": "2026-03-29",
+    "veren": "Mehmet Koc",
+    "akademik_yil": "2025-2026"
+  }
+]

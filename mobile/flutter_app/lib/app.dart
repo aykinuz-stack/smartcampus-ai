@@ -540,27 +540,67 @@ class _AyarlarPage extends ConsumerWidget {
             onTap: () {},
           ),
           const Divider(),
-          // Uygulama hakkında
+          // Uygulama hakkinda
           ListTile(
             leading: const Icon(Icons.info_outline, color: AppColors.info),
-            title: const Text('Hakkında'),
-            subtitle: const Text('SmartCampus AI v22'),
+            title: const Text('Hakkinda'),
+            subtitle: const Text('SmartCampus AI v25'),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
               showAboutDialog(
                 context: context,
                 applicationName: 'SmartCampus AI',
-                applicationVersion: 'v22',
-                applicationLegalese: '2026 SmartCampus',
+                applicationVersion: 'v25',
+                applicationLegalese: '\u00A9 2026 SmartCampus',
                 applicationIcon: Container(
-                  width: 48, height: 48,
+                  width: 56, height: 56,
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
-                      colors: [AppColors.primary, AppColors.gold]),
-                    borderRadius: BorderRadius.circular(12),
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [AppColors.primary, AppColors.gold],
+                    ),
+                    borderRadius: BorderRadius.circular(16),
+                    boxShadow: [
+                      BoxShadow(
+                        color: AppColors.primary.withOpacity(0.3),
+                        blurRadius: 12,
+                        spreadRadius: 1,
+                      ),
+                    ],
                   ),
-                  child: const Icon(Icons.school, color: Colors.white, size: 28),
+                  child: const Icon(Icons.school_rounded, color: Colors.white, size: 32),
                 ),
+                children: [
+                  const SizedBox(height: 16),
+                  const Text(
+                    'Turkiye\'nin en modern egitim yonetim platformu',
+                    style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 12),
+                  Container(
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: AppColors.primary.withOpacity(0.06),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: AppColors.primary.withOpacity(0.12),
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        _buildInfoRow('Versiyon', 'v25'),
+                        const SizedBox(height: 6),
+                        _buildInfoRow('Build', '99 Dart dosya, 138 route'),
+                        const SizedBox(height: 6),
+                        _buildInfoRow('Platform', 'Flutter + FastAPI'),
+                        const SizedBox(height: 6),
+                        _buildInfoRow('Roller', 'Ogrenci, Veli, Ogretmen, Rehber, Yonetici'),
+                      ],
+                    ),
+                  ),
+                ],
               );
             },
           ),
@@ -568,7 +608,7 @@ class _AyarlarPage extends ConsumerWidget {
           // Cikis
           ListTile(
             leading: const Icon(Icons.logout, color: AppColors.danger),
-            title: const Text('Çıkış Yap'),
+            title: const Text('Cikis Yap'),
             onTap: () async {
               await ref.read(authServiceProvider).logout();
               if (context.mounted) {
@@ -578,6 +618,31 @@ class _AyarlarPage extends ConsumerWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _buildInfoRow(String label, String value) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(
+          width: 72,
+          child: Text(
+            label,
+            style: const TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
+              color: AppColors.primary,
+            ),
+          ),
+        ),
+        Expanded(
+          child: Text(
+            value,
+            style: const TextStyle(fontSize: 12),
+          ),
+        ),
+      ],
     );
   }
 }
