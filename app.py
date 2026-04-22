@@ -883,8 +883,8 @@ def _route(page: str):
         from views.yemek_tercihi import render_yemek_tercihi
         render_yemek_tercihi()
     elif page == "Kutuphane":
-        from views.kutuphane import render_kutuphane
-        render_kutuphane()
+        from views.kutuphane_barkod import render_kutuphane_barkod
+        render_kutuphane_barkod()
     elif page == "Yabanci Dil":
         from views.yabanci_dil import render_yabanci_dil
         render_yabanci_dil()
