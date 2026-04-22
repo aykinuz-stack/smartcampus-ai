@@ -154,6 +154,9 @@ _MODUL_GRUPLARI = [
     {
         "baslik": "OPERASYON",
         "moduller": [
+            ("Servis GPS Takip",               "🚌"),
+            ("Kutuphane Barkod",               "📚"),
+            ("Yemek Tercihi ve Alerji",        "🍽️"),
             ("Tesis ve Varlik Yonetimi",       "🏗️"),
             ("Sivil Savunma ve IS Guvenligi",  "⛑️"),
             ("Mezunlar ve Kariyer Yonetimi",   "🎓"),
@@ -870,6 +873,15 @@ def _route(page: str):
     elif page == "Sertifika Uretici":
         from views.sertifika_uretici import render_sertifika_uretici
         render_sertifika_uretici()
+    elif page == "Servis GPS Takip":
+        from views.servis_gps_takip import render_servis_gps_takip
+        render_servis_gps_takip()
+    elif page == "Kutuphane Barkod":
+        from views.kutuphane_barkod import render_kutuphane_barkod
+        render_kutuphane_barkod()
+    elif page == "Yemek Tercihi ve Alerji":
+        from views.yemek_tercihi import render_yemek_tercihi
+        render_yemek_tercihi()
     elif page == "Kutuphane":
         from views.kutuphane import render_kutuphane
         render_kutuphane()

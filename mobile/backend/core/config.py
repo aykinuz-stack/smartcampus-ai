@@ -23,7 +23,7 @@ class Settings(BaseSettings):
         "http://localhost",
     ]
 
-    # JWT
+    # JWT — PRODUCTION'DA MUTLAKA DEGISTIR!
     JWT_SECRET_KEY: str = "change-me-in-production-32-char-random-string"
     JWT_ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440   # 24 saat — modül içinde tekrar şifre sormasın

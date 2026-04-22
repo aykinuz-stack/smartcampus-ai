@@ -39,7 +39,7 @@ app = FastAPI(
     redoc_url="/redoc",
 )
 
-# CORS
+# CORS — production'da allow_origins kisitlanmali
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.CORS_ORIGINS,
@@ -47,6 +47,33 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+# ── Rate Limiting Middleware ──
+from collections import defaultdict
+import time as _time
+
+_rate_store: dict[str, list[float]] = defaultdict(list)
+
+@app.middleware("http")
+async def rate_limit_middleware(request: Request, call_next):
+    """Basit IP bazli rate limiting — dakikada max RATE_LIMIT_PER_MIN istek."""
+    client_ip = request.client.host if request.client else "unknown"
+    now = _time.time()
+    window = 60  # 1 dakika
+
+    # Eski kayitlari temizle
+    _rate_store[client_ip] = [t for t in _rate_store[client_ip] if now - t < window]
+
+    if len(_rate_store[client_ip]) >= settings.RATE_LIMIT_PER_MIN:
+        return JSONResponse(
+            status_code=429,
+            content={"detail": "Cok fazla istek. Lutfen bekleyin.", "retry_after": window},
+        )
+
+    _rate_store[client_ip].append(now)
+    response = await call_next(request)
+    return response
 
 
 # Global error handler
