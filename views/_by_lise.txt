@@ -1,0 +1,508 @@
+{k:"Tarih",s:"Vestfalya Barışı hangi yılda imzalandı?",o:["1618","1648","1713","1789"],d:1,a:"Vestfalya Barışı 1648 de imzalanmış ve modern devletler sistemini kurmuştur."}
+{k:"Tarih",s:"Rönesans hangi ülkede başlamıştır?",o:["Fransa","İngiltere","İtalya","Almanya"],d:2,a:"Rönesans 14. yüzyılda İtalya da başlamıştır."}
+{k:"Tarih",s:"Magna Carta hangi yılda imzalanmıştır?",o:["1066","1215","1453","1789"],d:1,a:"Magna Carta 1215 yılında İngiltere de imzalanmıştır."}
+{k:"Tarih",s:"Amerikan Bağımsızlık Bildirgesi hangi yıl ilan edildi?",o:["1763","1776","1789","1812"],d:1,a:"Amerikan Bağımsızlık Bildirgesi 4 Temmuz 1776 da ilan edilmiştir."}
+{k:"Tarih",s:"Bolşevik Devrimi hangi yılda gerçekleşti?",o:["1905","1914","1917","1922"],d:2,a:"Bolşevik Devrimi Ekim 1917 de Rusya da gerçekleşmiştir."}
+{k:"Tarih",s:"Birleşmiş Milletler hangi yılda kuruldu?",o:["1919","1939","1945","1950"],d:2,a:"Birleşmiş Milletler 1945 yılında kurulmuştur."}
+{k:"Tarih",s:"NATO hangi yılda kuruldu?",o:["1945","1947","1949","1955"],d:2,a:"NATO (Kuzey Atlantik Antlaşması Örgütü) 1949 yılında kurulmuştur."}
+{k:"Tarih",s:"Berlin Duvarı hangi yılda yıkıldı?",o:["1985","1987","1989","1991"],d:2,a:"Berlin Duvarı 9 Kasım 1989 da yıkılmıştır."}
+{k:"Tarih",s:"Osmanlı Devletinde ilk anayasa hangi dönemde hazırlandı?",o:["Tanzimat","I. Meşrutiyet","II. Meşrutiyet","Cumhuriyet"],d:1,a:"İlk anayasa Kanun-i Esasi 1876 I. Meşrutiyet döneminde hazırlanmıştır."}
+{k:"Tarih",s:"Türkiye hangi yılda NATO ya katıldı?",o:["1949","1950","1952","1955"],d:2,a:"Türkiye 1952 yılında NATO ya katılmıştır."}
+{k:"Tarih",s:"Lale Devri hangi yüzyılda yaşanmıştır?",o:["16. yy","17. yy","18. yy","19. yy"],d:2,a:"Lale Devri 18. yüzyılda 1718-1730 yılları arasında yaşanmıştır."}
+{k:"Tarih",s:"Yavuz Sultan Selim hangi savaşla Mısırı fethetti?",o:["Çaldıran","Ridaniye","Preveze","Mohaç"],d:1,a:"Yavuz Sultan Selim 1517 Ridaniye Savaşı ile Mısırı fethetti."}
+{k:"Tarih",s:"İttihat ve Terakki Cemiyeti hangi olayla iktidara geldi?",o:["31 Mart","II. Meşrutiyet","Balkan Savaşları","I. Dünya Savaşı"],d:1,a:"İttihat ve Terakki 1908 II. Meşrutiyet ilanıyla iktidara gelmiştir."}
+{k:"Tarih",s:"Waterloo Savaşı kim yenilmiştir?",o:["İngiltere","Prusya","Napolyon","Rusya"],d:2,a:"Napolyon 1815 Waterloo Savaşında yenilerek sürgüne gönderilmiştir."}
+{k:"Tarih",s:"Endüstri Devriminde buhar makinesini kim geliştirdi?",o:["Edison","Newton","James Watt","Tesla"],d:2,a:"James Watt buhar makinesini geliştirerek Endüstri Devrimine katkı sağlamıştır."}
+{k:"Tarih",s:"Düyun-u Umumiye ne demektir?",o:["Meclis","Borç idaresi","Ordu","Mahkeme"],d:1,a:"Düyun-u Umumiye Osmanlı dış borçlarını yönetmek için kurulan idaredir."}
+{k:"Tarih",s:"Mudros Ateşkesinden sonra hangi antlaşma dayatıldı?",o:["Lozan","Sevr","Ankara","Kars"],d:1,a:"Sevr Antlaşması Osmanlıya dayatılmış ancak TBMM kabul etmemiştir."}
+{k:"Tarih",s:"Tekalif-i Milliye emirleri ne amaçla çıkarıldı?",o:["Eğitim","Savaş ihtiyaçlarını karşılamak","Ticaret","Tarım"],d:1,a:"Tekalif-i Milliye emirleri Kurtuluş Savaşı için kaynak toplamak amacıyla çıkarılmıştır."}
+{k:"Tarih",s:"Avrupa Birliği hangi antlaşmayla kuruldu?",o:["Roma","Paris","Maastricht","Lizbon"],d:2,a:"Avrupa Birliği 1992 Maastricht Antlaşması ile kurulmuştur."}
+{k:"Tarih",s:"Osmanlıda devşirme sistemi nedir?",o:["Vergi sistemi","Hristiyan çocukların askere alınması","Ticaret sistemi","Eğitim sistemi"],d:1,a:"Devşirme sistemi Hristiyan ailelerden çocuk alınarak Osmanlı ordusuna kazandırılmasıdır."}
+{k:"Tarih",s:"Marshall Planı hangi ülke tarafından uygulandı?",o:["SSCB","İngiltere","ABD","Fransa"],d:2,a:"Marshall Planı II. Dünya Savaşı sonrası Avrupa yı yeniden inşa etmek için ABD tarafından uygulandı."}
+{k:"Tarih",s:"Piri Reis Haritası hangi yüzyılda çizildi?",o:["14. yy","15. yy","16. yy","17. yy"],d:2,a:"Piri Reis Haritası 1513 yılında 16. yüzyılda çizilmiştir."}
+{k:"Tarih",s:"Kurtuluş Savaşının ilk askeri zafer hangisidir?",o:["Sakarya","İnönü","Dumlupınar","Başkomutanlık"],d:1,a:"I. İnönü Muharebesi (1921) Kurtuluş Savaşının ilk askeri zaferidir."}
+{k:"Tarih",s:"Atatürk ilkelerinden hangisi ekonomi politikasını belirler?",o:["Halkçılık","Devletçilik","Laiklik","Milliyetçilik"],d:1,a:"Devletçilik ilkesi ekonomi politikasını belirler."}
+{k:"Tarih",s:"Tanzimat Fermanının en önemli yeniliği nedir?",o:["Matbaa","Can ve mal güvenliği","Meclis","Cumhuriyet"],d:1,a:"Tanzimat Fermanı ile tüm vatandaşlara can ve mal güvencesi sağlanmıştır."}
+{k:"Tarih",s:"Türk Tarih Kurumu hangi yılda kuruldu?",o:["1928","1931","1934","1938"],d:1,a:"Türk Tarih Kurumu 1931 yılında kurulmuştur."}
+{k:"Tarih",s:"Türk Dil Kurumu hangi yılda kuruldu?",o:["1928","1930","1932","1935"],d:2,a:"Türk Dil Kurumu 1932 yılında kurulmuştur."}
+{k:"Tarih",s:"Kabotaj Kanunu hangi yılda kabul edildi?",o:["1924","1926","1928","1930"],d:1,a:"Kabotaj Kanunu 1 Temmuz 1926 da kabul edilerek deniz ticareti Türklere verilmiştir."}
+{k:"Tarih",s:"Soğuk Savaşta Varşova Paktı hangi yılda kuruldu?",o:["1949","1951","1955","1961"],d:2,a:"Varşova Paktı 1955 yılında SSCB liderliğinde kurulmuştur."}
+{k:"Tarih",s:"Kıbrıs Barış Harekatı hangi yılda yapıldı?",o:["1960","1964","1974","1983"],d:2,a:"Kıbrıs Barış Harekatı 20 Temmuz 1974 te gerçekleştirilmiştir."}
+{k:"Tarih",s:"Osmanlıda Islahat Fermanı hangi yılda ilan edildi?",o:["1839","1856","1876","1908"],d:1,a:"Islahat Fermanı 1856 yılında ilan edilmiştir."}
+{k:"Tarih",s:"Hz. Muhammed hangi yılda Hicret etmiştir?",o:["610","622","630","632"],d:1,a:"Hicret 622 yılında Mekke den Medine ye göçtür."}
+{k:"Tarih",s:"Haçlı Seferleri kaç yüzyıl sürmüştür?",o:["1","2","3","4"],d:1,a:"Haçlı Seferleri 11.-13. yüzyıllar arasında yaklaşık 2 yüzyıl sürmüştür."}
+{k:"Tarih",s:"Matbaayı Osmanlıya kim getirmiştir?",o:["Mimar Sinan","İbrahim Müteferrika","Evliya Çelebi","Katip Çelebi"],d:1,a:"İbrahim Müteferrika 1727 de Osmanlıda ilk matbaayı kurmuştur."}
+{k:"Tarih",s:"30 Yıl Savaşları hangi kıtada yaşanmıştır?",o:["Asya","Afrika","Avrupa","Amerika"],d:2,a:"30 Yıl Savaşları 1618-1648 arasında Avrupa da yaşanmıştır."}
+{k:"Tarih",s:"Sanayi Devrimi ile ortaya çıkan sınıf hangisidir?",o:["Aristokrasi","Burjuvazi ve işçi sınıfı","Ruhban sınıfı","Köylü sınıfı"],d:1,a:"Sanayi Devrimi ile burjuvazi güçlenmiş ve işçi sınıfı ortaya çıkmıştır."}
+{k:"Tarih",s:"Truman Doktrini hangi yılda ilan edildi?",o:["1945","1947","1949","1950"],d:1,a:"Truman Doktrini 1947 de komünizme karşı ABD nin yardım politikasıdır."}
+{k:"Tarih",s:"İnsan Hakları Evrensel Beyannamesi hangi yılda kabul edildi?",o:["1945","1948","1950","1960"],d:1,a:"İnsan Hakları Evrensel Beyannamesi 10 Aralık 1948 de BM tarafından kabul edilmiştir."}
+{k:"Tarih",s:"Türkiye de çok partili hayata ne zaman geçildi?",o:["1923","1930","1946","1950"],d:2,a:"Türkiye de çok partili hayata fiilen 1946 yılında geçilmiştir."}
+{k:"Tarih",s:"Demokrat Parti hangi yılda iktidara geldi?",o:["1946","1948","1950","1952"],d:2,a:"Demokrat Parti 14 Mayıs 1950 seçimleriyle iktidara gelmiştir."}
+{k:"Tarih",s:"Çaldıran Savaşı hangi yılda yapıldı?",o:["1453","1514","1526","1538"],d:1,a:"Çaldıran Savaşı 1514 yılında Osmanlı ile Safeviler arasında yapılmıştır."}
+{k:"Tarih",s:"Avrupa Konseyi hangi yılda kuruldu?",o:["1945","1947","1949","1951"],d:2,a:"Avrupa Konseyi 1949 yılında kurulmuş, Türkiye kurucu üyedir."}
+{k:"Tarih",s:"Balkan Savaşları hangi yıllar arasında yapıldı?",o:["1908-1910","1912-1913","1914-1918","1919-1922"],d:1,a:"Balkan Savaşları 1912-1913 yılları arasında yapılmıştır."}
+{k:"Tarih",s:"Osmanlı padişahlarından hangisi en uzun süre tahtta kalmıştır?",o:["Fatih","Yavuz","Kanuni","II. Abdülhamid"],d:2,a:"Kanuni Sultan Süleyman 46 yıl ile en uzun süre tahtta kalan padişahtır."}
+{k:"Coğrafya",s:"Tektonik plaka hareketleri ne oluşturur?",o:["Rüzgar","Deprem ve volkan","Yağmur","Gel-git"],d:1,a:"Tektonik plaka hareketleri deprem volkanik aktivite ve dağ oluşumuna neden olur."}
+{k:"Coğrafya",s:"Coriolis etkisi nedir?",o:["Depremlerin sebebi","Dünya dönüşünün rüzgar ve akıntıları saptırması","Volkanik etki","Gel-git olayı"],d:1,a:"Coriolis etkisi Dünya nın dönüşünden kaynaklanan rüzgar ve akıntıların sapmasıdır."}
+{k:"Coğrafya",s:"Fay hattı nedir?",o:["Dağ zirvesi","Yer kabuğundaki kırık hattı","Nehir yatağı","Okyanus dibi"],d:1,a:"Fay hattı yer kabuğundaki tektonik plakaların birleştiği kırık hattıdır."}
+{k:"Coğrafya",s:"El Nino etkisi nedir?",o:["Deprem","Pasifik de deniz suyu sıcaklık artışı","Volkanik patlama","Tsunami"],d:1,a:"El Nino Pasifik Okyanusundaki anormal deniz suyu ısınmasıdır."}
+{k:"Coğrafya",s:"Orojenez ne demektir?",o:["Deprem oluşumu","Dağ oluşumu","Kıta kayması","Volkanik patlama"],d:1,a:"Orojenez tektonik kuvvetlerle dağ oluşumu sürecidir."}
+{k:"Coğrafya",s:"Karst topoğrafyası hangi kayaçta gelişir?",o:["Granit","Bazalt","Kireçtaşı","Kumtaşı"],d:2,a:"Karst topoğrafyası kireçtaşının çözünmesiyle gelişir."}
+{k:"Coğrafya",s:"Rift vadisi nasıl oluşur?",o:["Aşınmayla","Tektonik plakaların birbirinden uzaklaşmasıyla","Volkanla","Buzul erozyonuyla"],d:1,a:"Rift vadisi tektonik plakaların birbirinden uzaklaşmasıyla oluşur."}
+{k:"Coğrafya",s:"Dünya nın en derin noktası neresidir?",o:["Grand Kanyon","Mariana Çukuru","Baykal Gölü","Kola Kuyusu"],d:1,a:"Mariana Çukuru yaklaşık 11000 m ile dünyanın en derin noktasıdır."}
+{k:"Coğrafya",s:"Jet akımı nedir?",o:["Uçak rotası","Atmosferin üst katmanlarındaki hızlı hava akımı","Okyanus akıntısı","Volkanik gaz"],d:1,a:"Jet akımı troposferin üst kısmında esen çok hızlı hava akımıdır."}
+{k:"Coğrafya",s:"Monoson ikliminin en belirgin özelliği nedir?",o:["Sürekli kurak","Mevsimsel rüzgar değişimi ve yoğun yağış","Soğuk kış","Ilıman yaz"],d:1,a:"Muson ikliminde mevsimsel rüzgar değişimi ve yoğun yağış dönemleri karakteristiktir."}
+{k:"Coğrafya",s:"GAP hangi nehirler üzerinde kurulmuştur?",o:["Kızılırmak-Sakarya","Fırat-Dicle","Seyhan-Ceyhan","Meriç-Ergene"],d:1,a:"GAP (Güneydoğu Anadolu Projesi) Fırat ve Dicle nehirleri üzerine kurulmuştur."}
+{k:"Coğrafya",s:"Moren ne demektir?",o:["Volkanik kayaç","Buzulun taşıdığı malzeme birikintisi","Kum tepesi","Akarsu yatağı"],d:1,a:"Moren buzulların taşıyıp biriktirdiği kaya ve toprak yığınıdır."}
+{k:"Coğrafya",s:"İzostazi kavramı neyi açıklar?",o:["Hava basıncı","Yer kabuğunun denge durumu","Okyanus akıntıları","Rüzgar oluşumu"],d:1,a:"İzostazi yer kabuğunun manto üzerinde denge durumunda bulunmasıdır."}
+{k:"Coğrafya",s:"Meridyen boylam farkı neyi etkiler?",o:["Mevsimler","Saat farkı","Yağış","Sıcaklık"],d:1,a:"Meridyenler arası 15 derecelik fark 1 saatlik saat farkına karşılık gelir."}
+{k:"Coğrafya",s:"Türkiye de en çok deprem yaşanan fay hangisidir?",o:["Doğu Anadolu","Kuzey Anadolu","Batı Anadolu","Güneydoğu"],d:1,a:"Kuzey Anadolu Fay Hattı Türkiye nin en aktif ve tehlikeli fay hattıdır."}
+{k:"Coğrafya",s:"Taiga biyomu nerelerde bulunur?",o:["Tropiklerde","Kuzeyde iğne yapraklı orman kuşağı","Çöllerde","Kutuplarda"],d:1,a:"Taiga kuzeyin soğuk bölgelerinde bulunan iğne yapraklı orman biyomudur."}
+{k:"Coğrafya",s:"Çöl ortamında hangi fiziksel ayrışma daha yaygındır?",o:["Kimyasal","Biyolojik","Termal (sıcaklık farkı)","Buzul"],d:2,a:"Çöllerde gece-gündüz sıcaklık farkı nedeniyle termal ayrışma yaygındır."}
+{k:"Coğrafya",s:"Heyelan en çok hangi koşullarda oluşur?",o:["Kurak arazide","Eğimli arazide yoğun yağış sonrası","Düz ovada","Çöl ortamında"],d:1,a:"Heyelan genellikle eğimli arazilerde yoğun yağış sonrası toprak kaymasıyla oluşur."}
+{k:"Coğrafya",s:"Stratosferde bulunan koruyucu tabaka hangisidir?",o:["Troposfer","Ozon tabakası","Mezosfer","Termosfer"],d:1,a:"Ozon tabakası stratosferde bulunur ve zararlı UV ışınlarını süzer."}
+{k:"Coğrafya",s:"Batı Karadeniz in en önemli ekonomik faaliyeti nedir?",o:["Tarım","Madencilik","Turizm","Hayvancılık"],d:1,a:"Batı Karadeniz de Zonguldak bölgesinde taşkömürü madenciliği önemli ekonomik faaliyettir."}
+{k:"Coğrafya",s:"Tünel vadisi nasıl oluşur?",o:["Volkanla","Akarsu erozyonuyla","Rüzgarla","Buzulla"],d:1,a:"Tünel vadisi genellikle akarsuyun kayalık arazi içinden geçmesiyle oluşur."}
+{k:"Coğrafya",s:"Epirojenez ne demektir?",o:["Dağ oluşumu","Kıta oluşumu (yükselme-alçalma)","Deprem","Volkan"],d:1,a:"Epirojenez geniş alanları etkileyen yavaş yükselme ve alçalma hareketleridir."}
+{k:"Coğrafya",s:"Litosfer nedir?",o:["Atmosferin alt katmanı","Yer kabuğu ve üst manto","Okyanus tabanı","Volkanik bölge"],d:1,a:"Litosfer yer kabuğu ve üst mantonun katı kısmından oluşan katmandır."}
+{k:"Coğrafya",s:"Enlem sıcaklığı nasıl etkiler?",o:["Etkilemez","Enlem arttıkça sıcaklık azalır","Enlem arttıkça sıcaklık artar","Sadece yağışı etkiler"],d:1,a:"Ekvatorda en yüksek sıcaklık vardır kutuplara gidildikçe sıcaklık azalır."}
+{k:"Coğrafya",s:"Konveksiyonel yağış nasıl oluşur?",o:["Dağa çarparak","Cephe ile","Yüzeyin ısınmasıyla havanın yükselmesi","Rüzgarla"],d:2,a:"Konveksiyonel yağış yüzeyin aşırı ısınmasıyla havanın yükselmesi sonucu oluşur."}
+{k:"Coğrafya",s:"Astenosfer nedir?",o:["Atmosfer katmanı","Mantonun akışkan üst kısmı","Yer çekirdeği","Okyanus tabanı"],d:1,a:"Astenosfer mantonun yarı akışkan kısmıdır litosfer plakaları üzerinde hareket eder."}
+{k:"Bilim",s:"Avogadro sayısı yaklaşık kaçtır?",o:["3.14 x 10^8","6.02 x 10^23","9.81","1.6 x 10^-19"],d:1,a:"Avogadro sayısı yaklaşık 6.02 x 10^23 tür ve 1 moldeki tanecik sayısını ifade eder."}
+{k:"Bilim",s:"Heisenberg belirsizlik ilkesi neyi ifade eder?",o:["Enerji korunumu","Konum ve momentum aynı anda kesin ölçülemez","Işık hızı sabittir","Kütle enerji eşdeğerliği"],d:1,a:"Heisenberg ilkesi bir parçacığın konumu ve momentumunun aynı anda kesin ölçülemeyeceğini belirtir."}
+{k:"Bilim",s:"RNA nın DNA dan farkı nedir?",o:["Çift sarmal","Tek sarmallı ve riboz şekeri içerir","Daha büyük","Proteindir"],d:1,a:"RNA tek sarmallı yapıdadır ve deoksiriboz yerine riboz şekeri içerir."}
+{k:"Bilim",s:"Entropi ne demektir?",o:["Enerji birimi","Düzensizlik ölçüsü","Basınç birimi","Kuvvet türü"],d:1,a:"Entropi termodinamikte düzensizliğin ölçüsüdür."}
+{k:"Bilim",s:"Kara delik nedir?",o:["Uzay boşluğu","Çekim kuvveti ışığın bile kaçamadığı bölge","Yıldız patlaması","Gezegen"],d:1,a:"Kara delik çekim kuvveti o kadar güçlü olan bölgedir ki ışık bile kaçamaz."}
+{k:"Bilim",s:"Ohm kanunu nedir?",o:["F=ma","V=IR","E=mc2","PV=nRT"],d:1,a:"Ohm kanunu gerilim = akım x direnç yani V=IR formülüyle ifade edilir."}
+{k:"Bilim",s:"Kromozom sayısı insanda kaçtır?",o:["23","44","46","48"],d:2,a:"İnsanda 46 kromozom (23 çift) bulunur."}
+{k:"Bilim",s:"Periyodik tabloda soy gazlar hangi gruptadır?",o:["1. grup","7. grup","8A grubu","Geçiş metalleri"],d:2,a:"Soy gazlar periyodik tablonun 8A (18.) grubundadır."}
+{k:"Bilim",s:"Fotoelektrik olay nedir?",o:["Fotoğrafçılık","Işığın metalden elektron koparması","Elektrik üretimi","Lens oluşumu"],d:1,a:"Fotoelektrik olay ışığın metal yüzeye çarparak elektron koparmasıdır."}
+{k:"Bilim",s:"Mitoz bölünme sonucunda kaç hücre oluşur?",o:["1","2","4","8"],d:1,a:"Mitoz bölünme sonucunda genetik olarak özdeş 2 hücre oluşur."}
+{k:"Bilim",s:"Mayoz bölünme sonucunda kaç hücre oluşur?",o:["1","2","4","8"],d:2,a:"Mayoz bölünme sonucunda 4 haploid hücre oluşur."}
+{k:"Bilim",s:"Standart basınç kaç atmosferdir?",o:["0.5","1","2","10"],d:1,a:"Standart basınç 1 atmosfer yani 101325 Pascal dir."}
+{k:"Bilim",s:"Doppler etkisi neyi açıklar?",o:["Işık hızı","Ses kaynağı hareket edince frekans değişimi","Çekim kuvveti","Manyetik alan"],d:1,a:"Doppler etkisi ses veya ışık kaynağı hareket ederken gözlemciye göre frekans değişimini açıklar."}
+{k:"Bilim",s:"Elektromanyetik spektrumda en kısa dalga boylu ışın hangisidir?",o:["Radyo dalgası","Kızılötesi","Mor ötesi","Gama ışını"],d:3,a:"Gama ışınları elektromanyetik spektrumda en kısa dalga boyuna sahiptir."}
+{k:"Bilim",s:"Mendel in birinci yasası nedir?",o:["Bağımsız dağılım","Ayrışma (segregasyon)","Dominant gen","Mutasyon"],d:1,a:"Mendel in birinci yasası alellerin gamet oluşumunda birbirinden ayrılmasıdır."}
+{k:"Bilim",s:"Joule neyin birimidir?",o:["Kuvvet","Güç","Enerji","Basınç"],d:2,a:"Joule SI birim sisteminde enerjinin birimidir."}
+{k:"Bilim",s:"Watt neyin birimidir?",o:["Kuvvet","Güç","Enerji","Basınç"],d:1,a:"Watt güç (birim zamanda yapılan iş) birimidir."}
+{k:"Bilim",s:"Pascal neyin birimidir?",o:["Kuvvet","Güç","Enerji","Basınç"],d:3,a:"Pascal basınç birimidir."}
+{k:"Bilim",s:"Katalizör ne yapar?",o:["Tepkimeyi durdurur","Tepkime hızını değiştirir kendisi değişmez","Tepkimeye katılır","Ürün oluşturur"],d:1,a:"Katalizör kimyasal tepkime hızını değiştirir ancak kendisi tepkimede tüketilmez."}
+{k:"Bilim",s:"Hubble Yasası neyi ifade eder?",o:["Gezegenler","Evrenin genişlediğini","Atom yapısı","Genetik"],d:1,a:"Hubble Yasası galaksilerin bizden uzaklaştığını yani evrenin genişlediğini gösterir."}
+{k:"Bilim",s:"Nötron yıldızı nasıl oluşur?",o:["Güneşten","Büyük yıldızın çökmesiyle","Gezegenlerden","Kara delikten"],d:1,a:"Nötron yıldızı süpernova patlamasından sonra büyük bir yıldızın çekirdeğinin çökmesiyle oluşur."}
+{k:"Bilim",s:"Enzimler ne tür moleküllerdir?",o:["Karbonhidrat","Lipid","Protein","Nükleik asit"],d:2,a:"Enzimler biyolojik katalizör görevi gören protein molekülleridir."}
+{k:"Bilim",s:"Endotermik tepkime ne demektir?",o:["Isı veren","Isı alan","Nötr","Gaz çıkaran"],d:1,a:"Endotermik tepkime çevreden ısı alan tepkimedir."}
+{k:"Bilim",s:"Ekzotermik tepkime ne demektir?",o:["Isı alan","Isı veren","Nötr","Gaz alan"],d:1,a:"Ekzotermik tepkime çevreye ısı veren tepkimedir."}
+{k:"Bilim",s:"Kuantum fiziğinin kurucusu kimdir?",o:["Newton","Einstein","Planck","Bohr"],d:2,a:"Max Planck kuantum fiziğinin kurucusu olarak kabul edilir."}
+{k:"Bilim",s:"CRISPR teknolojisi ne amaçla kullanılır?",o:["Teleskop","Gen düzenleme","Nükleer enerji","İlaç üretimi"],d:1,a:"CRISPR DNA düzenleme teknolojisidir gen terapisi ve araştırmada kullanılır."}
+{k:"Tarih",s:"Müdafaa-i Hukuk Cemiyetleri ne amaçla kuruldu?",o:["Ticaret","İşgallere karşı direniş","Eğitim","Tarım"],d:1,a:"Müdafaa-i Hukuk Cemiyetleri işgallere karşı halkın haklarını savunmak için kurulmuştur."}
+{k:"Tarih",s:"Misak-ı Milli hangi yılda kabul edildi?",o:["1918","1919","1920","1921"],d:2,a:"Misak-ı Milli 28 Ocak 1920 de son Osmanlı Meclisinde kabul edilmiştir."}
+{k:"Tarih",s:"Takrir-i Sükun Kanunu ne amaçla çıkarıldı?",o:["Ekonomi","İç güvenlik ve muhalefeti bastırma","Eğitim","Sağlık"],d:1,a:"Takrir-i Sükun Kanunu 1925 te Şeyh Said isyanı sonrası çıkarılmıştır."}
+{k:"Tarih",s:"Osmanlıda Divan-ı Hümayun ne işe yarardı?",o:["Askeri karargah","Devlet yönetim kurulu","Mahkeme","Ticaret odası"],d:1,a:"Divan-ı Hümayun Osmanlı Devletinin en yüksek yönetim organıydı."}
+{k:"Tarih",s:"Coğrafi Keşifler hangi yüzyılda yoğunlaştı?",o:["13. yy","14. yy","15. yy","17. yy"],d:2,a:"Coğrafi Keşifler 15. ve 16. yüzyıllarda yoğunlaşmıştır."}
+{k:"Tarih",s:"Osmanlıda Tımar sistemi neyi ifade eder?",o:["Ticaret","Toprak yönetim sistemi","Eğitim","Denizcilik"],d:1,a:"Tımar sistemi devlete ait toprakların sipahilere verildiği askeri-tarımsal düzendir."}
+{k:"Coğrafya",s:"Türkiye nin en büyük ovası hangisidir?",o:["Çukurova","Konya Ovası","Bafra Ovası","Muş Ovası"],d:1,a:"Konya Ovası Türkiye nin en geniş ovasıdır."}
+{k:"Coğrafya",s:"Plato ile ova arasındaki fark nedir?",o:["Boyut","Plato yüksekte düz alan ova alçakta","Renk","İklim"],d:1,a:"Plato yüksek ve düz araziyken ova alçak ve düz alanları ifade eder."}
+{k:"Coğrafya",s:"Sübtropikal iklim kuşağı nerelerde görülür?",o:["Kutuplar","Ekvator","Dönenceler civarı","Kuzey Kutup Dairesi"],d:2,a:"Sübtropikal iklim tropikal kuşak ile ılıman kuşak arasında dönenceler civarında görülür."}
+{k:"Coğrafya",s:"Karstik göl nasıl oluşur?",o:["Volkanla","Kireçtaşının erimesiyle oluşan çukurda","Buzulla","Heyelanla"],d:1,a:"Karstik göl kireçtaşının erimesiyle oluşan çukurlarda su birikmesiyle meydana gelir."}
+{k:"Coğrafya",s:"Set gölü nasıl oluşur?",o:["Depremle","Heyelan veya lav akıntısıyla nehrin önünün kapanması","Rüzgarla","Buzulla"],d:1,a:"Set gölü heyelan lav akıntısı veya birikinti ile nehir yatağının önünün kapanmasıyla oluşur."}
+{k:"Coğrafya",s:"Türkiye de Akdeniz iklimi nerelerde görülür?",o:["Karadeniz kıyıları","Akdeniz ve Ege kıyıları","İç Anadolu","Doğu Anadolu"],d:1,a:"Akdeniz iklimi Akdeniz ve Ege kıyılarında görülür."}
+{k:"Coğrafya",s:"Tuzluluk oranı en yüksek deniz hangisidir?",o:["Akdeniz","Karadeniz","Lut Gölü (Ölü Deniz)","Kızıldeniz"],d:2,a:"Ölü Deniz (Lut Gölü) dünyanın tuzluluk oranı en yüksek su kütlesidir."}
+{k:"Coğrafya",s:"Delta ovaları hangi özelliğe sahiptir?",o:["Kurak","Alüvyon bakımından zengin verimli","Dağlık","Volkanik"],d:1,a:"Delta ovaları nehirlerin alüvyon biriktirmesiyle oluşan çok verimli alanlardır."}
+{k:"Coğrafya",s:"Türkiye de en önemli krom yatakları nerededir?",o:["Batı Anadolu","Güneydoğu ve İç Anadolu","Karadeniz","Ege"],d:1,a:"Krom yatakları Elazığ Eskişehir ve Güneydoğu Anadolu da yoğunlaşmıştır."}
+{k:"Coğrafya",s:"Dünyanın en yağışlı yeri neresidir?",o:["Amazon","Cherrapunji Hindistan","Kongo","Borneo"],d:1,a:"Hindistan daki Cherrapunji (Mawsynram) dünyanın en yağışlı yeri olarak bilinir."}
+{k:"Coğrafya",s:"Graben nedir?",o:["Dağ","Fay hatları arasında çökmüş alan","Volkan","Plato"],d:1,a:"Graben iki fay hattı arasında çökmüş tektonik çukurluktur."}
+{k:"Coğrafya",s:"Horst nedir?",o:["Çukur","Fay hatları arasında yükselmiş alan","Göl","Ova"],d:1,a:"Horst iki fay hattı arasında yükselmiş bloktur."}
+{k:"Coğrafya",s:"Bor madeni en çok hangi ülkede bulunur?",o:["ABD","Rusya","Türkiye","Çin"],d:2,a:"Türkiye dünya bor rezervlerinin yaklaşık yüzde 73 üne sahiptir."}
+{k:"Coğrafya",s:"Maki bitki örtüsü nerelerde görülür?",o:["Kurak bölgeler","Akdeniz iklim kuşağı","Tropikal bölge","Kutuplar"],d:1,a:"Maki Akdeniz ikliminin hüküm sürdüğü yerlerde görülen bodur ağaç ve çalılıklardır."}
+{k:"Coğrafya",s:"Türkiye nin en uzun sınırı hangi ülkeyledir?",o:["Irak","İran","Suriye","Bulgaristan"],d:2,a:"Türkiye nin en uzun kara sınırı Suriye iledir."}
+{k:"Coğrafya",s:"Beşeri coğrafya neyi inceler?",o:["Fiziki arazi","İnsan ve mekan ilişkisi","Hava durumu","Kayaçlar"],d:1,a:"Beşeri coğrafya insanların mekanla ilişkisini nüfus yerleşme ekonomi gibi konuları inceler."}
+{k:"Coğrafya",s:"Sıcak çöl ikliminin en belirgin özelliği nedir?",o:["Çok yağışlı","Gece-gündüz sıcaklık farkı çok yüksek","Ilıman","Nemli"],d:1,a:"Sıcak çöllerde gece-gündüz sıcaklık farkı 40-50 dereceyi bulabilir."}
+{k:"Coğrafya",s:"Dalmaçya tipi kıyı nasıl oluşur?",o:["Akarsu erozyonuyla","Dağların kıyıya paralel uzanıp vadilerin deniz suyu altında kalmasıyla","Volkanla","Buzulla"],d:1,a:"Dalmaçya tipi kıyı dağların kıyıya paralel uzandığı ve vadilerin suyla dolduğu kıyılardır."}
+{k:"Coğrafya",s:"Ria tipi kıyı nasıl oluşur?",o:["Volkanla","Akarsu vadilerinin deniz suyu altında kalmasıyla","Rüzgarla","Buzulla"],d:1,a:"Ria tipi kıyı akarsu vadilerinin deniz seviyesi yükselmesiyle suyla dolmasıyla oluşur."}
+{k:"Coğrafya",s:"Fjord tipi kıyı nasıl oluşur?",o:["Volkanla","Buzul vadilerinin suyla dolmasıyla","Rüzgarla","Akarsuyla"],d:1,a:"Fjord tipi kıyılar buzul vadilerinin deniz suyu ile dolmasıyla oluşan derin girintilerdir."}
+{k:"Coğrafya",s:"Skyer (şist) hangi kayaç türüne aittir?",o:["Magmatik","Tortul","Başkalaşım (metamorfik)","Volkanik"],d:2,a:"Şist başkalaşım (metamorfik) kayaçlardandır."}
+{k:"Coğrafya",s:"Türkiye de jeotermal enerji potansiyeli en yüksek bölge hangisidir?",o:["Karadeniz","Ege","İç Anadolu","Doğu Anadolu"],d:1,a:"Ege Bölgesi fay hatları nedeniyle Türkiye nin en yüksek jeotermal enerji potansiyeline sahiptir."}
+{k:"Bilim",s:"Termodinamiğin ikinci yasası neyi belirtir?",o:["Enerji korunur","Entropi sürekli artar","Sıcaklık sabit kalır","Basınç azalır"],d:1,a:"Termodinamiğin ikinci yasası kapalı bir sistemde entropinin sürekli arttığını belirtir."}
+{k:"Bilim",s:"Genelleştirilmiş görelilik kuramı neyi açıklar?",o:["Atomlar","Kütlenin uzay-zamanı bükmesi ve kütleçekim","Işık hızı","Elektrik"],d:1,a:"Einstein in genel görelilik kuramı kütleçekimi uzay-zamanın bükülmesi olarak açıklar."}
+{k:"Bilim",s:"Higgs bozonu niçin önemlidir?",o:["Enerji üretimi","Parçacıklara kütle kazandıran mekanizma","Işık hızı","Nükleer enerji"],d:1,a:"Higgs bozonu parçacıklara kütlelerini kazandıran Higgs alanıyla ilişkili parçacıktır."}
+{k:"Bilim",s:"Karanlık madde ne demektir?",o:["Siyah delik","Gözlemlenemeyen ama çekim etkisi olan madde","Kara enerji","Nötron"],d:1,a:"Karanlık madde gözlemlenemeyen ancak kütleçekim etkisiyle varlığı bilinen maddedir."}
+{k:"Bilim",s:"Genetik mühendisliği ne amaçla kullanılır?",o:["Araba üretimi","Canlıların genlerini değiştirme","Maden arama","Havayolu"],d:1,a:"Genetik mühendisliği canlıların DNA sını değiştirmek için kullanılır."}
+{k:"Bilim",s:"Redoks tepkimesi nedir?",o:["Asit-baz","Elektron alışverişi tepkimesi","Nükleer","Fisyon"],d:1,a:"Redoks tepkimesi elektron alışverişinin (yükseltgenme-indirgenme) olduğu tepkimedir."}
+{k:"Bilim",s:"Hücre zarı hangi moleküllerden oluşur?",o:["Karbonhidrat","Fosfolipid çift tabaka","Sadece protein","Nükleik asit"],d:1,a:"Hücre zarı fosfolipid çift tabakasından ve proteinlerden oluşur."}
+{k:"Bilim",s:"Kuvantum dolanıklık nedir?",o:["Elektrik","İki parçacığın birbirine bağlı kuantum durumu","Çekim kuvveti","Manyetik alan"],d:1,a:"Kuantum dolanıklık iki parçacığın mesafeden bağımsız olarak birbirine bağlı davranmasıdır."}
+{k:"Bilim",s:"Proton kütle birimi olarak kaç amu dur?",o:["0.5","1","2","4"],d:1,a:"Protonun kütlesi yaklaşık 1 atom kütle birimi (amu) dir."}
+{k:"Bilim",s:"Standart Modelde kaç temel kuvvet vardır?",o:["2","3","4","5"],d:2,a:"Standart Modelde 4 temel kuvvet vardır: kütle çekim elektromanyetik güçlü ve zayıf nükleer."}
+{k:"Bilim",s:"Antibiyotikler neye karşı etkilidir?",o:["Virüslere","Bakterilere","Mantarlara","Parazitlere"],d:1,a:"Antibiyotikler bakterilere karşı etkili ilaçlardır virüslere karşı etkisizdir."}
+{k:"Bilim",s:"İzotop ne demektir?",o:["Farklı element","Aynı elementin farklı nötron sayılı türleri","Bileşik","Alaşım"],d:1,a:"İzotoplar aynı elementin farklı nötron sayısına sahip türleridir."}
+{k:"Bilim",s:"Schrodinger denklemi neyi tanımlar?",o:["Çekim kuvveti","Kuantum mekaniğinde dalga fonksiyonu","Işık hızı","Ses dalgası"],d:1,a:"Schrodinger denklemi kuantum mekaniğinde parçacığın dalga fonksiyonunu tanımlar."}
+{k:"Bilim",s:"Fotosentezde ışık tepkimeleri nerede gerçekleşir?",o:["Mitokondri","Tilakoid zarında","Hücre çekirdeğinde","Ribozomda"],d:1,a:"Fotosentezin ışık tepkimeleri kloroplastın tilakoid zarında gerçekleşir."}
+{k:"Bilim",s:"Krebs döngüsü nerede gerçekleşir?",o:["Sitoplazma","Hücre zarı","Mitokondri matriks","Çekirdek"],d:2,a:"Krebs döngüsü mitokondrinin matriksinde gerçekleşen metabolik döngüdür."}
+{k:"Bilim",s:"Nötrinonun özelliği nedir?",o:["Ağır parçacık","Çok küçük kütleli zayıf etkileşimli parçacık","Protondan büyük","Yüklü parçacık"],d:1,a:"Nötrino çok küçük kütleli nötr ve maddeyle çok zayıf etkileşen parçacıktır."}
+{k:"Bilim",s:"Manyetik rezonans görüntüleme (MR) hangi prensiple çalışır?",o:["X ışını","Manyetik alan ve radyo dalgası","Ultrason","Lazer"],d:1,a:"MR güçlü manyetik alan ve radyo dalgaları kullanarak vücuttaki hidrojen atomlarını görüntüler."}
+{k:"Bilim",s:"Plazma ne tür bir maddedir?",o:["Katı","Sıvı","Gaz","Maddenin dördüncü hali"],d:3,a:"Plazma iyonize gaz olarak bilinen maddenin dördüncü halidir."}
+{k:"Bilim",s:"Supernova nedir?",o:["Yeni gezegen","Büyük bir yıldızın patlayarak parlaması","Kara delik","Kuasar"],d:1,a:"Supernova büyük bir yıldızın ömrünün sonunda patlayarak muazzam parlaklıkla parlamasıdır."}
+{k:"Bilim",s:"Elektroliz ne demektir?",o:["Isıyla ayrışma","Elektrik akımıyla bileşikleri ayrıştırma","Nükleer parçalanma","Yanma"],d:1,a:"Elektroliz elektrik akımı kullanarak bileşikleri bileşenlerine ayırma işlemidir."}
+{k:"Bilim",s:"Allotropi ne demektir?",o:["Farklı element","Aynı elementin farklı fiziksel yapıları","İzotop","Bileşik"],d:1,a:"Allotropi aynı elementin farklı fiziksel yapılarda bulunmasıdır (elmas ve grafit gibi)."}
+{k:"Bilim",s:"Le Chatelier prensibi neyi ifade eder?",o:["Enerji korunumu","Denge sistemi değişikliğe karşı tepki verir","Kütle korunumu","Entropi artışı"],d:1,a:"Le Chatelier prensibi dengedeki bir sisteme dışarıdan etki yapıldığında sistemin bu etkiyi azaltacak yönde tepki verdiğini belirtir."}
+{k:"Bilim",s:"pH skalasında 1 ne anlama gelir?",o:["Nötr","Güçlü asit","Güçlü baz","Saf su"],d:1,a:"pH 1 çok güçlü asidik çözeltiyi ifade eder."}
+{k:"Bilim",s:"Süperiletkenlik ne demektir?",o:["Normal iletim","Sıfır direnç ile elektrik iletimi","Yüksek direnç","Isı iletimi"],d:1,a:"Süperiletkenlik belirli sıcaklıkların altında bir malzemenin sıfır elektrik direnci göstermesidir."}
+{k:"Doğa",s:"Biyom nedir?",o:["Tek tür","Benzer iklim ve bitki örtüsüne sahip geniş ekosistem","Hayvan grubu","Toprak türü"],d:1,a:"Biyom benzer iklim koşullarına ve bitki örtüsüne sahip büyük ekolojik bölgedir."}
+{k:"Doğa",s:"Tropik yağmur ormanlarının en önemli özelliği nedir?",o:["Düşük nem","Yüksek biyolojik çeşitlilik","Soğuk iklim","Az yağış"],d:1,a:"Tropik yağmur ormanları dünyanın en yüksek biyolojik çeşitliliğine sahip biyomlardır."}
+{k:"Doğa",s:"Ötrofikasyon ne demektir?",o:["Oksijen artışı","Göl ve nehirlerde aşırı besin maddesi birikimi","Kuraklık","Erozyon"],d:1,a:"Ötrofikasyon su kütlelerinde aşırı besin maddesi birikimi sonucu alg patlaması ve oksijen azalmasıdır."}
+{k:"Doğa",s:"Endemik tür ne demektir?",o:["Yaygın tür","Sadece belirli bir bölgede yaşayan tür","Göçmen tür","Nesli tükenmiş tür"],d:1,a:"Endemik tür yalnızca belirli bir coğrafi bölgede doğal olarak yaşayan türdür."}
+{k:"Doğa",s:"Karbon ayak izi ne demektir?",o:["Ayak izi","Bireyin veya kuruluşun ürettiği sera gazı miktarı","Karbon elementi","Toprak izi"],d:1,a:"Karbon ayak izi bir faaliyetin doğrudan ve dolaylı olarak ürettiği sera gazı miktarıdır."}
+{k:"Doğa",s:"Biyoçeşitlilik kaybının en büyük nedeni nedir?",o:["Doğal afetler","Habitat tahribatı","Volkanlar","Depremler"],d:1,a:"Habitat tahribatı ve parçalanması biyoçeşitlilik kaybının en büyük nedenidir."}
+{k:"Doğa",s:"Kırmızı Liste ne demektir?",o:["Alışveriş listesi","IUCN nesli tehlike altındaki türler listesi","Yasaklı maddeler","Tehlikeli bölgeler"],d:1,a:"IUCN Kırmızı Liste nesli tehlike altındaki türlerin uluslararası sınıflandırma listesidir."}
+{k:"Doğa",s:"İstilacı tür ne demektir?",o:["Yerli tür","Yabancı ortamda hızla yayılıp zarar veren tür","Göçmen tür","Endemik tür"],d:1,a:"İstilacı tür doğal ortamının dışına yayılarak ekosisteme zarar veren türdür."}
+{k:"Doğa",s:"Permakültür ne demektir?",o:["Gübreleme","Doğaya uyumlu sürdürülebilir tarım sistemi","Endüstriyel tarım","Monokültür"],d:1,a:"Permakültür doğal ekosistemleri taklit eden sürdürülebilir tarım ve yaşam tasarım sistemidir."}
+{k:"Doğa",s:"Okyanusların asitlenmesi neyin sonucudur?",o:["Volkanik aktivite","CO2 emiliminin artması","Rüzgar","Gel-git"],d:1,a:"Okyanuslar atmosferden artan CO2 yi emerek asitlenir ve mercan resifleri tehlikeye girer."}
+{k:"Doğa",s:"Azot döngüsünde azot fiksasyonu ne demektir?",o:["Azotun yok olması","Atmosferik azotun biyolojik kullanılabilir forma dönüşmesi","Azot gazı üretimi","Amonyak yıkımı"],d:1,a:"Azot fiksasyonu atmosferdeki N2 nin bitkilerin kullanabileceği forma dönüştürülmesidir."}
+{k:"Doğa",s:"Mercan ağarması neden olur?",o:["Soğuk su","Deniz suyunun ısınmasıyla simbiyotik alglerin kaybı","Kirlilik","Tuzluluk"],d:1,a:"Mercan ağarması su sıcaklığının artmasıyla mercanların simbiyotik alglerini kaybetmesidir."}
+{k:"Doğa",s:"Suksesyon ne demektir?",o:["Ölüm","Bir ekosistemde zamanla tür kompozisyonunun değişmesi","Göç","Avcılık"],d:1,a:"Suksesyon bir ekosistemin zamanla tür kompozisyonu ve yapısının değişim sürecidir."}
+{k:"Doğa",s:"Ticari avcılığın en büyük kurbanı hangi hayvan grubudur?",o:["Kuşlar","Deniz memelileri ve balıklar","Sürüngenler","Böcekler"],d:1,a:"Ticari avcılık özellikle deniz memelileri ve balıkları tehdit etmektedir."}
+{k:"Doğa",s:"Yenilenebilir enerji kaynakları hangileridir?",o:["Kömür petrol","Güneş rüzgar hidroelektrik","Doğalgaz","Uranyum"],d:1,a:"Güneş rüzgar ve hidroelektrik yenilenebilir enerji kaynaklarıdır."}
+{k:"Doğa",s:"Ozon deliğinin en büyük nedeni nedir?",o:["CO2","CFC gazları","Metan","Su buharı"],d:1,a:"Kloroflorokarbon (CFC) gazları ozon tabakasının incelmesinin en büyük nedenidir."}
+{k:"Doğa",s:"Mangrove ormanları neden önemlidir?",o:["Kereste","Kıyı koruma ve biyoçeşitlilik","Süs bitkisi","Yakacak"],d:1,a:"Mangrove ormanları kıyıları fırtınadan korur ve zengin biyoçeşitliliğe ev sahipliği yapar."}
+{k:"Doğa",s:"Toprak kirliliğinin en büyük nedeni nedir?",o:["Rüzgar","Tarım kimyasalları ve sanayi atıkları","Yağmur","Güneş"],d:1,a:"Pestisit gübre ve endüstriyel atıklar toprak kirliliğinin en büyük nedenleridir."}
+{k:"Doğa",s:"Su ayak izi ne demektir?",o:["Ayak yıkama","Bir ürünün üretimi için harcanan toplam su","Yağmur ölçümü","Nehir akışı"],d:1,a:"Su ayak izi bir ürün veya hizmetin üretimi için doğrudan ve dolaylı kullanılan toplam su miktarıdır."}
+{k:"Doğa",s:"Ekolojik niş ne demektir?",o:["Yuva","Bir türün ekosistemdeki rolü ve yaşam tarzı","Göç yolu","Bölge sınırı"],d:1,a:"Ekolojik niş bir türün ekosistemi içindeki rolü beslenme tarzı ve yaşam koşullarını tanımlar."}
+{k:"Doğa",s:"Biyokütle enerjisi nedir?",o:["Nükleer","Organik maddelerden elde edilen enerji","Fosil yakıt","Jeotermal"],d:1,a:"Biyokütle enerjisi bitki ve hayvan kaynaklı organik maddelerden elde edilen enerjidir."}
+{k:"Doğa",s:"Yer altı sularının kirlenmesi neye yol açar?",o:["Deprem","İçme suyu kıtlığı ve toprak kirliliği","Volkan","Sel"],d:1,a:"Yer altı sularının kirlenmesi içme suyu kaynaklarını ve tarım alanlarını tehdit eder."}
+{k:"Doğa",s:"Paris İklim Anlaşması ne amaçlar?",o:["Ticaret","Küresel sıcaklık artışını 1.5 derece ile sınırlama","Savaş","Eğitim"],d:1,a:"Paris Anlaşması küresel sıcaklık artışını sanayi öncesine göre 1.5 derece ile sınırlamayı hedefler."}
+{k:"Doğa",s:"Sürdürülebilir kalkınma ne demektir?",o:["Hızlı büyüme","Bugünün ihtiyaçlarını gelecek nesilleri tehlikeye atmadan karşılama","Sanayi devrimi","Doğal kaynak tüketimi"],d:1,a:"Sürdürülebilir kalkınma gelecek nesillerin ihtiyaçlarını karşılayabilme kapasitesini tehlikeye atmadan bugünün ihtiyaçlarını karşılamaktır."}
+{k:"Doğa",s:"Atık su arıtma tesisleri ne yapar?",o:["Su üretir","Kirli suyu temizleyerek doğaya güvenle geri verir","Su depolar","Su ısıtır"],d:1,a:"Atık su arıtma tesisleri evsel ve endüstriyel atık suları arıtarak çevreye zarar vermeden doğaya geri kazandırır."}
+{k:"Doğa",s:"Gen bankası ne amaçla kurulur?",o:["Para saklamak","Bitki ve hayvan genetik materyalini korumak","İlaç üretmek","Gıda depolamak"],d:1,a:"Gen bankaları bitki tohumları ve hayvan genetik materyallerini gelecek nesiller için korumak amacıyla kurulur."}
+{k:"Doğa",s:"Ekosistem hizmetleri ne demektir?",o:["İnternet","Doğanın insanlara sağladığı faydalar","Bankacılık","Telekomünikasyon"],d:1,a:"Ekosistem hizmetleri tozlaşma su arıtma karbon tutma gibi doğanın insanlara sağladığı faydalardır."}
+{k:"Doğa",s:"Biyolojik göstergeler ne işe yarar?",o:["Termometre","Çevre kalitesini ölçmek için belirli canlı türleri","Pusula","Harita"],d:1,a:"Biyolojik göstergeler çevre kalitesinin değerlendirilmesinde kullanılan belirli canlı türleridir."}
+{k:"Doğa",s:"Sera etkisi olmasa Dünya ortalama sıcaklığı kaç olurdu?",o:["-18 derece","0 derece","15 derece","25 derece"],d:0,a:"Sera etkisi olmasa Dünya nın ortalama sıcaklığı yaklaşık -18 derece olurdu."}
+{k:"Doğa",s:"Karbon nötr ne demektir?",o:["Karbon yok","Üretilen karbonun eşit miktarda dengelenmesi","Karbon elementinin nötr olması","Karbon kırılması"],d:1,a:"Karbon nötr atmosfere salınan karbonun eşit miktarda azaltılması veya dengelenmesidir."}
+{k:"Başkentler",s:"Kazakistan ın başkenti neresidir?",o:["Almatı","Astana","Bişkek","Taşkent"],d:1,a:"Astana Kazakistan ın başkentidir."}
+{k:"Başkentler",s:"Özbekistan ın başkenti neresidir?",o:["Bişkek","Astana","Taşkent","Dışanbe"],d:2,a:"Taşkent Özbekistan ın başkentidir."}
+{k:"Başkentler",s:"Türkmenistan ın başkenti neresidir?",o:["Aşkabat","Taşkent","Bişkek","Dışanbe"],d:0,a:"Aşkabat Türkmenistan ın başkentidir."}
+{k:"Başkentler",s:"Kırgızistan ın başkenti neresidir?",o:["Taşkent","Astana","Bişkek","Aşkabat"],d:2,a:"Bişkek Kırgızistan ın başkentidir."}
+{k:"Başkentler",s:"Tacikistan ın başkenti neresidir?",o:["Taşkent","Bişkek","Astana","Dışanbe"],d:3,a:"Dışanbe Tacikistan ın başkentidir."}
+{k:"Başkentler",s:"Ermenistan ın başkenti neresidir?",o:["Tiflis","Bakü","Erivan","Tahran"],d:2,a:"Erivan Ermenistan ın başkentidir."}
+{k:"Başkentler",s:"Sri Lanka nın başkenti neresidir?",o:["Kolombo","Sri Jayewardenepura Kotte","Kandy","Galle"],d:1,a:"Sri Lanka nın resmi başkenti Sri Jayewardenepura Kotte dir."}
+{k:"Başkentler",s:"Nepal in başkenti neresidir?",o:["Katmandu","Dakka","Thimphu","Colombo"],d:0,a:"Katmandu Nepal in başkentidir."}
+{k:"Başkentler",s:"Bhutan ın başkenti neresidir?",o:["Katmandu","Thimphu","Dakka","Yangon"],d:1,a:"Thimphu Bhutan ın başkentidir."}
+{k:"Başkentler",s:"Bangladeş in başkenti neresidir?",o:["Kalküta","Mumbai","Dakka","Chittagong"],d:2,a:"Dakka Bangladeş in başkentidir."}
+{k:"Başkentler",s:"Kamboçya nın başkenti neresidir?",o:["Vientiane","Phnom Penh","Hanoi","Jakarta"],d:1,a:"Phnom Penh Kamboçya nın başkentidir."}
+{k:"Başkentler",s:"Laos un başkenti neresidir?",o:["Phnom Penh","Vientiane","Bangkok","Hanoi"],d:1,a:"Vientiane Laos un başkentidir."}
+{k:"Başkentler",s:"Etiyopya nın başkenti neresidir?",o:["Nairobi","Addis Ababa","Mogadişu","Kampala"],d:1,a:"Addis Ababa Etiyopya nın başkentidir."}
+{k:"Başkentler",s:"Gana nın başkenti neresidir?",o:["Lagos","Accra","Dakar","Abidjan"],d:1,a:"Accra Gana nın başkentidir."}
+{k:"Başkentler",s:"Senegal in başkenti neresidir?",o:["Accra","Bamako","Dakar","Conakry"],d:2,a:"Dakar Senegal in başkentidir."}
+{k:"Başkentler",s:"Libya nın başkenti neresidir?",o:["Tunus","Trablus","Kahire","Cezayir"],d:1,a:"Trablus Libya nın başkentidir."}
+{k:"Başkentler",s:"Cezayir in başkenti neresidir?",o:["Tunus","Rabat","Trablus","Cezayir"],d:3,a:"Cezayir şehri Cezayir in başkentidir."}
+{k:"Başkentler",s:"Fas ın başkenti neresidir?",o:["Kazablanka","Marakeş","Rabat","Fes"],d:2,a:"Rabat Fas ın başkentidir."}
+{k:"Başkentler",s:"Tunus un başkenti neresidir?",o:["Tunus","Trablus","Kahire","Rabat"],d:0,a:"Tunus şehri Tunus un başkentidir."}
+{k:"Başkentler",s:"Tanzanya nın başkenti neresidir?",o:["Nairobi","Dar es Salaam","Dodoma","Kampala"],d:2,a:"Dodoma Tanzanya nın resmi başkentidir."}
+{k:"Başkentler",s:"Uganda nın başkenti neresidir?",o:["Nairobi","Kampala","Kigali","Bujumbura"],d:1,a:"Kampala Uganda nın başkentidir."}
+{k:"Başkentler",s:"Küba nın eski adı ile bilinen başkenti neresidir?",o:["Havana","Santiago","Trinidad","Varadero"],d:0,a:"Havana Küba nın başkentidir."}
+{k:"Başkentler",s:"Paraguay ın başkenti neresidir?",o:["Montevideo","Buenos Aires","Asuncion","La Paz"],d:2,a:"Asuncion Paraguay ın başkentidir."}
+{k:"Başkentler",s:"Uruguay ın başkenti neresidir?",o:["Asuncion","Montevideo","Buenos Aires","Brasilia"],d:1,a:"Montevideo Uruguay ın başkentidir."}
+{k:"Başkentler",s:"Bolivya nın anayasal başkenti neresidir?",o:["La Paz","Sucre","Santa Cruz","Cochabamba"],d:1,a:"Sucre Bolivya nın anayasal başkenti La Paz ise yönetim başkentidir."}
+{k:"Başkentler",s:"Ekvador ın başkenti neresidir?",o:["Lima","Quito","Bogota","Guayaquil"],d:1,a:"Quito Ekvador ın başkentidir."}
+{k:"Başkentler",s:"Venezuela nın başkenti neresidir?",o:["Bogota","Caracas","Lima","Quito"],d:1,a:"Caracas Venezuela nın başkentidir."}
+{k:"Başkentler",s:"Panama nın başkenti neresidir?",o:["San Jose","Panama City","Managua","Tegucigalpa"],d:1,a:"Panama City Panama nın başkentidir."}
+{k:"Başkentler",s:"Kosta Rika nın başkenti neresidir?",o:["Panama City","San Jose","Managua","Guatemala City"],d:1,a:"San Jose Kosta Rika nın başkentidir."}
+{k:"Başkentler",s:"İzlanda nın başkenti neresidir?",o:["Oslo","Reykjavik","Helsinki","Kopenhag"],d:1,a:"Reykjavik İzlanda nın başkentidir."}
+{k:"Başkentler",s:"Malta nın başkenti neresidir?",o:["Valletta","Napoli","Atina","Nicosia"],d:0,a:"Valletta Malta nın başkentidir."}
+{k:"Başkentler",s:"KKTC nin başkenti neresidir?",o:["Limasol","Girne","Lefkoşa","Magusa"],d:2,a:"Lefkoşa KKTC nin başkentidir."}
+{k:"Başkentler",s:"Kosova nın başkenti neresidir?",o:["Belgrad","Tiran","Priştine","Üsküp"],d:2,a:"Priştine Kosova nın başkentidir."}
+{k:"Başkentler",s:"Karadağ ın başkenti neresidir?",o:["Belgrad","Podgorica","Tiran","Sarajevo"],d:1,a:"Podgorica Karadağ ın başkentidir."}
+{k:"Başkentler",s:"Lüksemburg un başkenti neresidir?",o:["Brüksel","Lüksemburg","Amsterdam","Bern"],d:1,a:"Lüksemburg şehri Lüksemburg un başkentidir."}
+{k:"Başkentler",s:"Liechtenstein in başkenti neresidir?",o:["Bern","Vaduz","Zürih","Cenevre"],d:1,a:"Vaduz Liechtenstein in başkentidir."}
+{k:"Başkentler",s:"Andorra nın başkenti neresidir?",o:["Andorra la Vella","Madrid","Lizbon","Toulouse"],d:0,a:"Andorra la Vella Andorra nın başkentidir."}
+{k:"Başkentler",s:"San Marino nun başkenti neresidir?",o:["Roma","San Marino","Vatikan","Napoli"],d:1,a:"San Marino şehri San Marino nun başkentidir."}
+{k:"Başkentler",s:"Monako nın başkenti neresidir?",o:["Nice","Monako","Marsilya","Cannes"],d:1,a:"Monako şehir-devleti olarak başkenti kendisidir."}
+{k:"Başkentler",s:"Fiji nin başkenti neresidir?",o:["Suva","Nadi","Port Moresby","Honiara"],d:0,a:"Suva Fiji nin başkentidir."}
+{k:"Türkiye",s:"Türkiye GDP ye göre dünyanın kaçıncı büyük ekonomisidir?",o:["10-15","15-20","20-25","25-30"],d:1,a:"Türkiye GDP ye göre dünyanın yaklaşık 17-19. büyük ekonomisidir."}
+{k:"Türkiye",s:"Bosphorus kelimesi ne anlama gelir?",o:["Dar geçit","İnek geçidi","Deniz yolu","Köprü"],d:1,a:"Bosphorus Yunanca inek geçidi anlamına gelir."}
+{k:"Türkiye",s:"Türkiye nin ilk nükleer santralı nerede inşa edilmektedir?",o:["Sinop","Mersin Akkuyu","İstanbul","Edirne"],d:1,a:"Akkuyu Nükleer Santrali Mersin de inşa edilmektedir."}
+{k:"Türkiye",s:"Mimar Sinan ın kalfalık eseri hangisidir?",o:["Selimiye","Süleymaniye","Şehzadebaşı","Sultanahmet"],d:1,a:"Süleymaniye Camii Mimar Sinan ın kalfalık eseridir."}
+{k:"Türkiye",s:"Mimar Sinan ın çıraklık eseri hangisidir?",o:["Selimiye","Süleymaniye","Şehzadebaşı","Sultanahmet"],d:2,a:"Şehzadebaşı Camii Mimar Sinan ın çıraklık eseridir."}
+{k:"Türkiye",s:"Türkiye de UNESCO listesindeki ilk alan hangisidir?",o:["Pamukkale","İstanbul Tarihi Alanları","Göreme","Divriği"],d:3,a:"Divriği Ulu Camii ve Darüşşifası 1985 te UNESCO listesine alınan ilk Türk eseridir."}
+{k:"Türkiye",s:"Marmaray hangi yılda hizmete açıldı?",o:["2010","2013","2016","2019"],d:1,a:"Marmaray 29 Ekim 2013 te hizmete açılmıştır."}
+{k:"Türkiye",s:"Yavuz Sultan Selim Köprüsü hangi yılda açıldı?",o:["2014","2016","2018","2020"],d:1,a:"Yavuz Sultan Selim Köprüsü 2016 yılında açılmıştır."}
+{k:"Türkiye",s:"Türkiye de en çok ihracat yapılan sektör hangisidir?",o:["Tarım","Otomotiv","Tekstil","Madencilik"],d:1,a:"Otomotiv sektörü Türkiye nin en büyük ihracat kalemidir."}
+{k:"Türkiye",s:"Çatalhöyük kaç yıl öncesine tarihlenir?",o:["3000","5000","7000","9000"],d:3,a:"Çatalhöyük yaklaşık 9000 yıl öncesine tarihlenen dünyanın en eski yerleşim yerlerinden biridir."}
+{k:"Türkiye",s:"Türkiye nin en uzun tüneli hangisidir?",o:["Marmaray","Ovit","İlgaz","Avrasya"],d:1,a:"Ovit Tüneli 14.3 km ile Türkiye nin en uzun karayolu tünelidir."}
+{k:"Türkiye",s:"İstanbul Havalimanı hangi yılda tam kapasiteyle açıldı?",o:["2017","2018","2019","2020"],d:2,a:"İstanbul Havalimanı 2019 yılında tam kapasiteyle hizmete açılmıştır."}
+{k:"Türkiye",s:"Van Gölü neden tuzlu ve sodalıdır?",o:["Denizle bağlantılı","Volkanik kayaçlardan çözünen mineraller","İnsan kirliliği","Rüzgar"],d:1,a:"Van Gölü çevresindeki volkanik kayaçlardan çözünen mineraller nedeniyle tuzlu ve sodalıdır."}
+{k:"Türkiye",s:"Efes teki Artemis Tapınağı dünyanın yedi harikasından biri midir?",o:["Evet","Hayır","Belirsiz","Tartışmalı"],d:0,a:"Artemis Tapınağı Antik Dünyanın Yedi Harikasından biridir."}
+{k:"Türkiye",s:"Osmanlı döneminde İstanbul a ne ad verilirdi?",o:["Byzantium","Konstantinopolis","Dersaadet","Hepsi"],d:3,a:"İstanbul tarih boyunca Byzantium Konstantinopolis ve Dersaadet gibi isimlerle anılmıştır."}
+{k:"Türkiye",s:"Türkiye nin en büyük suni gölü hangisidir?",o:["Keban","Atatürk Baraj Gölü","Hirfanlı","Karakaya"],d:1,a:"Atatürk Baraj Gölü Türkiye nin en büyük yapay gölüdür."}
+{k:"Türkiye",s:"Anadolu Medeniyetleri Müzesi hangi ildedir?",o:["İstanbul","Ankara","İzmir","Antalya"],d:1,a:"Anadolu Medeniyetleri Müzesi Ankara dadır."}
+{k:"Türkiye",s:"Türkiye de ilk demir yolu hattı nerede yapıldı?",o:["İstanbul","İzmir-Aydın","Ankara","Adana"],d:1,a:"Türkiye nin ilk demir yolu hattı 1856 da İzmir-Aydın arasında yapılmıştır."}
+{k:"Türkiye",s:"Türkiye de zeytinyağı üretiminde birinci il hangisidir?",o:["İzmir","Aydın","Balıkesir","Muğla"],d:2,a:"Balıkesir Türkiye de zeytinyağı üretiminde en önde gelen illerdendir."}
+{k:"Türkiye",s:"Türkiye nin en büyük limanı hangisidir?",o:["İzmir","Mersin","İstanbul Ambarlı","Antalya"],d:2,a:"İstanbul Ambarlı Limanı Türkiye nin en büyük konteyner limanıdır."}
+{k:"Türkiye",s:"Diyarbakır Surları hangi döneme aittir?",o:["Osmanlı","Roma","Selçuklu","Cumhuriyet"],d:1,a:"Diyarbakır Surları Roma dönemine ait olup UNESCO Dünya Mirası listesindedir."}
+{k:"Türkiye",s:"Kapadokya da peribacaları hangi kayaçtan oluşmuştur?",o:["Granit","Mermer","Tüf","Bazalt"],d:2,a:"Peribacaları volkanik tüf kayacının aşınmasıyla oluşmuştur."}
+{k:"Türkiye",s:"Türkiye nin en büyük ticaret ortağı hangi ülkedir?",o:["ABD","Rusya","Almanya","Çin"],d:2,a:"Almanya Türkiye nin en büyük ticaret ortaklarından biridir."}
+{k:"Türkiye",s:"Türkiye de kaç tane UNESCO Dünya Mirası alanı vardır?",o:["10","15","21","30"],d:2,a:"Türkiye 2024 itibarıyla 21 UNESCO Dünya Mirası alanına sahiptir."}
+{k:"Türkiye",s:"Avrasya Tüneli hangi boğazın altından geçer?",o:["Çanakkale","İstanbul","Kerç","Süveyş"],d:1,a:"Avrasya Tüneli İstanbul Boğazı nın altından geçen karayolu tünelidir."}
+{k:"Türkiye",s:"Troya Savaşı efsanesi hangi ilde geçer?",o:["İzmir","Çanakkale","Balıkesir","Bursa"],d:1,a:"Troya antik kenti ve savaş efsanesi Çanakkale ilinde geçmektedir."}
+{k:"Spor",s:"Olimpiyatlarda en çok altın madalya kazanan sporcu kimdir?",o:["Usain Bolt","Michael Phelps","Carl Lewis","Jesse Owens"],d:1,a:"Michael Phelps 23 altın madalya ile olimpiyat tarihinin en başarılı sporcusudur."}
+{k:"Spor",s:"FIFA Dünya Kupası ilk kez hangi ülkede düzenlendi?",o:["Brezilya","İtalya","Uruguay","İngiltere"],d:2,a:"İlk FIFA Dünya Kupası 1930 da Uruguay da düzenlenmiştir."}
+{k:"Spor",s:"Olimpiyat ateşi ilk kez nerede yakıldı?",o:["Atina 1896","Amsterdam 1928","Berlin 1936","Londra 1948"],d:1,a:"Olimpiyat ateşi ilk kez 1928 Amsterdam Olimpiyatlarında yakılmıştır."}
+{k:"Spor",s:"Roger Federer hangi spor dalında ünlüdür?",o:["Golf","Tenis","Badminton","Masa tenisi"],d:1,a:"Roger Federer tenis tarihinin en büyük oyuncularından biridir."}
+{k:"Spor",s:"Decathlon kaç branştan oluşur?",o:["5","8","10","12"],d:2,a:"Decathlon (onlu yarışma) 10 atletizm branşından oluşur."}
+{k:"Spor",s:"Yelken sporunda kullanılan teknelere ne denir?",o:["Gemi","Kayık","Yat","Tekne sınıflarına göre değişir"],d:3,a:"Yelken sporunda tekne sınıflarına göre Laser Finn Optimist gibi farklı isimler kullanılır."}
+{k:"Spor",s:"Grand Slam tenis turnuvalarından biri değil hangisi?",o:["Wimbledon","Roland Garros","US Open","Miami Open"],d:3,a:"Miami Open Grand Slam turnuvası değildir. Grand Slamler: Avustralya Roland Garros Wimbledon US Open."}
+{k:"Spor",s:"Beşiktaş JK hangi yılda kurulmuştur?",o:["1899","1903","1905","1907"],d:1,a:"Beşiktaş JK 1903 yılında kurulmuştur."}
+{k:"Spor",s:"Galatasaray SK hangi yılda kurulmuştur?",o:["1899","1903","1905","1907"],d:2,a:"Galatasaray SK 1905 yılında kurulmuştur."}
+{k:"Spor",s:"Fenerbahçe SK hangi yılda kurulmuştur?",o:["1899","1903","1905","1907"],d:3,a:"Fenerbahçe SK 1907 yılında kurulmuştur."}
+{k:"Spor",s:"E-spor hangi tür yarışmadır?",o:["Atletizm","Elektronik oyun yarışması","Masa oyunu","Kart oyunu"],d:1,a:"E-spor profesyonel elektronik oyun yarışmalarıdır."}
+{k:"Spor",s:"Bir kriket maçında wicket ne demektir?",o:["Top","Kaleci","Üç tahta çubuk ve üzerindeki çıtalar","Saha"],d:2,a:"Wicket kriket te korucunun arkasındaki üç tahta çubuk ve üzerindeki çıtalardır."}
+{k:"Spor",s:"Ironman yarışı hangi sporlardan oluşur?",o:["Koşu bisiklet","Yüzme bisiklet koşu","Kayak atış","Yüzme güreş"],d:1,a:"Ironman 3.8 km yüzme 180 km bisiklet ve 42.2 km koşudan oluşan ultra triatlon yarışıdır."}
+{k:"Spor",s:"Doping nedir?",o:["Spor malzemesi","Performans artırıcı yasaklı madde kullanımı","Antrenman yöntemi","Beslenme planı"],d:1,a:"Doping sporcuların performanslarını artırmak için yasaklı madde kullanmasıdır."}
+{k:"Spor",s:"VAR sistemi ne işe yarar?",o:["Skor takibi","Video ile hakem kararlarının incelenmesi","Bilet satışı","Antrenman planı"],d:1,a:"VAR Video Yardımcı Hakem sistemi tartışmalı pozisyonların video ile incelenmesidir."}
+{k:"Spor",s:"Türkiye hangi yılda Avrupa Şampiyonası üçüncüsü oldu?",o:["2000","2002","2008","2012"],d:2,a:"Türkiye 2008 Avrupa Şampiyonasında yarı finale çıkarak üçüncü olmuştur."}
+{k:"Spor",s:"2002 Dünya Kupasında Türkiye kaçıncı oldu?",o:["Birinci","İkinci","Üçüncü","Dördüncü"],d:2,a:"Türkiye 2002 Dünya Kupasında üçüncülük kazanmıştır."}
+{k:"Spor",s:"Naim Süleymanoğlu hangi spor dalında olimpiyat şampiyonu oldu?",o:["Güreş","Halter","Boks","Judo"],d:1,a:"Naim Süleymanoğlu halter dalında 3 kez olimpiyat şampiyonu olmuştur."}
+{k:"Spor",s:"Olimpiyatlarda hangi spor dalı ilk kez 2020 Tokyo da yer aldı?",o:["Karate","Kriket","Rugby","Golf"],d:0,a:"Karate ilk kez 2020 Tokyo Olimpiyatlarında yer almıştır."}
+{k:"Spor",s:"ATP ve WTA hangi sporun organizasyonlarıdır?",o:["Futbol","Tenis","Basketbol","Voleybol"],d:1,a:"ATP (erkekler) ve WTA (kadınlar) profesyonel tenisin ana organizasyonlarıdır."}
+{k:"Spor",s:"Biatlon hangi iki sporu birleştirir?",o:["Yüzme koşu","Kros kayak ve atıcılık","Bisiklet koşu","Güreş boks"],d:1,a:"Biatlon kros kayak ve tüfekle atıcılığı birleştiren kış sporudur."}
+{k:"Spor",s:"Bir boks maçında raunt kaç dakikadır?",o:["2","3","4","5"],d:1,a:"Profesyonel boksta her raunt 3 dakikadır."}
+{k:"Spor",s:"Dünya Atletizm Şampiyonası ilk kez nerede yapıldı?",o:["Atina","Helsinki","Berlin","Tokyo"],d:1,a:"İlk Dünya Atletizm Şampiyonası 1983 te Helsinki de yapılmıştır."}
+{k:"Spor",s:"Kendo hangi ülkenin dövüş sanatıdır?",o:["Çin","Kore","Japonya","Vietnam"],d:2,a:"Kendo Japonya nın geleneksel kılıç sanatıdır."}
+{k:"Spor",s:"Polo maçında kaç chukker oynanır?",o:["2","4","6","8"],d:2,a:"Polo maçında genellikle 6 chukker oynanır her biri 7 dakikadır."}
+{k:"Matematik",s:"Logaritma ne demektir?",o:["Çarpma işlemi","Üs alma işleminin tersi","Bölme işlemi","Toplama işlemi"],d:1,a:"Logaritma üs alma işleminin tersidir log_b(x)=y demek b^y=x demektir."}
+{k:"Matematik",s:"sin 30 derece kaçtır?",o:["0","0.5","0.707","1"],d:1,a:"sin 30 derece = 0.5 tir."}
+{k:"Matematik",s:"cos 60 derece kaçtır?",o:["0","0.5","0.707","1"],d:1,a:"cos 60 derece = 0.5 tir."}
+{k:"Matematik",s:"tan 45 derece kaçtır?",o:["0","0.5","1","Tanımsız"],d:2,a:"tan 45 derece = 1 dir."}
+{k:"Matematik",s:"e sayısı yaklaşık kaçtır?",o:["1.414","2.718","3.14","1.618"],d:1,a:"Euler sayısı e yaklaşık 2.718 dir."}
+{k:"Matematik",s:"Altın oran yaklaşık kaçtır?",o:["1.414","2.718","3.14","1.618"],d:3,a:"Altın oran (phi) yaklaşık 1.618 dir."}
+{k:"Matematik",s:"Türev neyi ifade eder?",o:["Alan","Bir fonksiyonun anlık değişim hızı","Toplam","Ortalama"],d:1,a:"Türev bir fonksiyonun belirli bir noktadaki anlık değişim hızını ifade eder."}
+{k:"Matematik",s:"İntegral neyi hesaplar?",o:["Eğim","Bir eğri altında kalan alan","Hız","Açı"],d:1,a:"Belirli integral bir eğri altında kalan alanı hesaplar."}
+{k:"Matematik",s:"Permütasyon ile kombinasyon arasındaki fark nedir?",o:["Fark yok","Permütasyonda sıra önemli kombinasyonda değil","Aynı formül","Biri toplama biri çarpma"],d:1,a:"Permütasyonda sıra önemlidir kombinasyonda sıra önemsizdir."}
+{k:"Matematik",s:"Bir kürenin hacmi nasıl hesaplanır?",o:["pi r kare","4/3 pi r kup","2 pi r","pi r kare h"],d:1,a:"Kürenin hacmi 4/3 x pi x r kup formülüyle hesaplanır."}
+{k:"Matematik",s:"Bir matrisin determinantı sıfır ise ne anlama gelir?",o:["Tersi var","Tersi yoktur (tekil matris)","Birim matris","Simetrik"],d:1,a:"Determinantı sıfır olan matris tekil matristir ve tersi yoktur."}
+{k:"Matematik",s:"Kompleks sayıda i neyi ifade eder?",o:["1","0","-1 in karekökü","Pi"],d:2,a:"i sanal birimdir ve -1 in karekökü olarak tanımlanır."}
+{k:"Matematik",s:"Olasılıkta bağımsız olay ne demektir?",o:["Birbirini etkileyen","Birinin sonucu diğerini etkilemeyen","Aynı anda olan","Sıralı"],d:1,a:"Bağımsız olaylarda birinin sonucu diğerinin olasılığını etkilemez."}
+{k:"Matematik",s:"Normal dağılımda ortalamadan 1 standart sapma içinde verinin yüzdesi kaçtır?",o:["50%","68%","95%","99%"],d:1,a:"Normal dağılımda verinin yaklaşık yüzde 68 i ortalamadan 1 standart sapma içindedir."}
+{k:"Matematik",s:"Polinom nedir?",o:["Tek terimli","Değişkenlerin kuvvetlerinden oluşan cebirsel ifade","Kesir","Logaritma"],d:1,a:"Polinom değişkenlerin negatif olmayan tam sayı kuvvetleri ve katsayılardan oluşan ifadedir."}
+{k:"Matematik",s:"Limit kavramı neyi ifade eder?",o:["Son nokta","Fonksiyonun bir noktaya yaklaşırken aldığı değer","İlk nokta","Orta nokta"],d:1,a:"Limit bir fonksiyonun bağımsız değişkeni belirli bir değere yaklaşırken aldığı değeri ifade eder."}
+{k:"Matematik",s:"Pisagor üçlüsü hangisidir?",o:["2 3 4","3 4 5","4 5 6","5 6 7"],d:1,a:"3 4 5 bir Pisagor üçlüsüdür çünkü 9+16=25 dir."}
+{k:"Matematik",s:"10 faktöriyel (10!) yaklaşık kaçtır?",o:["100000","362880","3628800","1000000"],d:2,a:"10! = 10x9x8x7x6x5x4x3x2x1 = 3628800 dür."}
+{k:"Matematik",s:"Geometrik dizi nedir?",o:["Sabit fark","Her terim öncekinin sabit katı","Rastgele","Fibonacci"],d:1,a:"Geometrik dizide her terim bir önceki terimin sabit bir sayıyla çarpılmasıyla elde edilir."}
+{k:"Matematik",s:"Aritmetik dizi nedir?",o:["Sabit oran","Her terim öncekine sabit sayı eklenmesi","Rastgele","Üstel"],d:1,a:"Aritmetik dizide ardışık terimler arasındaki fark sabittir."}
+{k:"Matematik",s:"Euler formülü e^(i*pi) + 1 kaça eşittir?",o:["1","0","-1","Pi"],d:1,a:"Euler formülüne göre e^(i*pi) + 1 = 0 dır."}
+{k:"Matematik",s:"İrrasyonel sayı nedir?",o:["Tam sayı","Kesir olarak yazılamayan sayı","Negatif sayı","Çift sayı"],d:1,a:"İrrasyonel sayılar kesir olarak yazılamayan sayılardır (pi kök 2 gibi)."}
+{k:"Matematik",s:"Vektör ile skaler arasındaki fark nedir?",o:["Fark yok","Vektör büyüklük ve yön skaler sadece büyüklük","Biri sayı biri harf","Biri pozitif biri negatif"],d:1,a:"Vektör hem büyüklük hem yön içerirken skaler sadece büyüklük ifade eder."}
+{k:"Matematik",s:"Sinüs teoremi ne ifade eder?",o:["a/sinA = b/sinB = c/sinC","a^2=b^2+c^2","sin^2+cos^2=1","tan=sin/cos"],d:0,a:"Sinüs teoremi üçgenin kenarlarının karşı açılarının sinüsleriyle orantılı olduğunu gösterir."}
+{k:"Matematik",s:"Kosinüs teoremi ne ifade eder?",o:["Sinüs kuralı","a^2 = b^2 + c^2 - 2bc cosA","tan kuralı","Alan formülü"],d:1,a:"Kosinüs teoremi herhangi bir üçgende kenarlar ve açılar arasındaki ilişkiyi verir."}
+{k:"Deyimler",s:"Araba devrilince yol gösteren çok olur ne demektir?",o:["Trafik kuralı","İş işten geçtikten sonra akıl veren çok olur","Araba tamiri","Yol yapımı"],d:1,a:"Olay olduktan sonra akıl verip ne yapılması gerektiğini söyleyen çok olur."}
+{k:"Deyimler",s:"Ayıkla pirincin taşını ne demektir?",o:["Pirinç temizlemek","Çok zor ve karmaşık bir durumu ifade eder","Yemek pişirmek","Tarla işi"],d:1,a:"İçinden çıkılması çok zor karmaşık bir durumu ifade eder."}
+{k:"Deyimler",s:"Balık baştan kokar ne demektir?",o:["Balık pişirmek","Bozukluk yöneticiden başlar","Denize gitmek","Balık avlamak"],d:1,a:"Bir toplulukta bozukluk ve sorunlar önce yöneticiden başlar."}
+{k:"Deyimler",s:"Dolap çevirmek ne demektir?",o:["Çamaşır yıkamak","Gizli entrikalar yapmak","Dans etmek","Mobilya taşımak"],d:1,a:"Gizlice hile ve entrika yapmak demektir."}
+{k:"Deyimler",s:"Feleğin çemberinden geçmek ne demektir?",o:["Jimnastik","Çok sıkıntı ve zorluk çekmek","Sirk gösterisi","Halka geçirmek"],d:1,a:"Çok acı ve zorluk çekerek deneyim kazanmak demektir."}
+{k:"Deyimler",s:"Hamam böceği gibi her yere girmek ne demektir?",o:["Temizlik","Her işe burnunu sokmak","Böcek ilaçlama","Seyahat"],d:1,a:"Her yere sokulup her işe burnunu sokan kişi için kullanılır."}
+{k:"Deyimler",s:"İt ürür kervan yürür ne demektir?",o:["Hayvan bakımı","Kararlı olan eleştirilere aldırmaz","Seyahat","Avcılık"],d:1,a:"Amacına kararlı olan kişi boş eleştirilere aldırmaz yoluna devam eder."}
+{k:"Deyimler",s:"Karınca kararınca ne demektir?",o:["Karınca bilgisi","Gücü ve imkanı ölçüsünde","Küçük iş","Böcek bilimi"],d:1,a:"Kendi gücü ve imkanı ölçüsünde elinden geldiğince demektir."}
+{k:"Deyimler",s:"Kırk yılda bir ne demektir?",o:["40 yıl","Çok nadiren","Her gün","Bazen"],d:1,a:"Çok seyrek çok nadiren olan şeyler için kullanılır."}
+{k:"Deyimler",s:"Mangalda kül bırakmamak ne demektir?",o:["Mangal yakmak","Çok kurnaz ve sinsi olmak","Temizlik","Yemek pişirmek"],d:1,a:"Çok kurnaz ve sinsi olmak hiçbir iz bırakmamak demektir."}
+{k:"Deyimler",s:"Nalıncı keseri gibi kendine yontmak ne demektir?",o:["Marangozluk","Her şeyi kendi çıkarına göre yapmak","Ağaç işi","Taş yontmak"],d:1,a:"Her şeyi kendi çıkarına uygun hale getirmek demektir."}
+{k:"Deyimler",s:"Öğretmene küsmekle cahil kalınır ne demektir?",o:["Okula gitmek","Kırgınlıkla kendine zarar verirsin","Öğretmenlik","Sınav"],d:1,a:"Sana faydası olan kişiye küsmek sadece sana zarar verir."}
+{k:"Deyimler",s:"Söz gümüşse sükut altındır ne demektir?",o:["Metal fiyatları","Bazen susmak konuşmaktan değerlidir","Altın almak","Gümüş satmak"],d:1,a:"Bazen konuşmak yerine susmak daha değerli ve akıllıcadır."}
+{k:"Deyimler",s:"Taş yerinde ağırdır ne demektir?",o:["Taş taşımak","İnsan kendi yerinde değerlidir","Ağırlık ölçmek","Dağ tırmanmak"],d:1,a:"İnsan kendi bulunduğu yerde kendi konumunda değerlidir."}
+{k:"Deyimler",s:"Üzüm yemek ne anlama gelir (deyim olarak)?",o:["Meyve yemek","Asıl amacı bilmeden taklit etmek","Bağ bakmak","Şarap yapmak"],d:1,a:"Asıl amacı anlamadan sadece sonucuyla ilgilenmek (bağcıyı dövmek değil üzüm yemek)."}
+{k:"Deyimler",s:"Yel kayadan ne koparır ne demektir?",o:["Rüzgar","Güçlü kişi küçük saldırıdan etkilenmez","Dağ tırmanma","Hava durumu"],d:1,a:"Güçlü ve dayanıklı kişi küçük saldırı ve eleştirilerden etkilenmez."}
+{k:"Deyimler",s:"Zaman herşeyin ilacıdır ne demektir?",o:["İlaç almak","Zamanla acılar diner sorunlar çözülür","Saat almak","Doktor olmak"],d:1,a:"Zamanla acılar azalır yaralar iyileşir sorunlar çözüme kavuşur."}
+{k:"Deyimler",s:"Aba altından sopa göstermek ne demektir?",o:["Kıyafet","Gizlice tehdit etmek","Spor yapmak","Hediye vermek"],d:1,a:"Belli etmeden üstü kapalı bir şekilde tehdit etmek demektir."}
+{k:"Deyimler",s:"Dikine gitmek ne demektir?",o:["Yokuş çıkmak","İnatla kendi bildiğini yapmak","Yüzmek","Koşmak"],d:1,a:"Hiç kimsenin sözünü dinlemeyip inatla kendi bildiğini yapmak demektir."}
+{k:"Deyimler",s:"Çıban başı olmak ne demektir?",o:["Hastalanmak","Sorunların kaynağı olmak","Doktor olmak","İlaç almak"],d:1,a:"Sorunların ve kötülüklerin asıl kaynağı ve sebebi olmak demektir."}
+{k:"Deyimler",s:"Kaşık düşmanı ne demektir?",o:["Kaşık toplayan","Yemek konusunda seçici olan","Yemek yemek","Bulaşık yıkamak"],d:1,a:"Yemek seçen yemek konusunda çok titiz olan kişi için kullanılır."}
+{k:"Deyimler",s:"Çuvaldızı kendine iğneyi başkasına batırmak ne demektir?",o:["Terzilik","Önce kendini eleştir sonra başkasını","Dikiş dikmek","İğne toplamak"],d:1,a:"Eleştiriye önce kendinden başlamak daha sonra başkalarını eleştirmek gerektiğini anlatır."}
+{k:"Deyimler",s:"Kesenin ağzını açmak ne demektir?",o:["Çanta açmak","Para harcamaya başlamak","Alışveriş","Cüzdan almak"],d:1,a:"Cömertçe para harcamaya başlamak demektir."}
+{k:"Deyimler",s:"Devlet kuşu konmak ne demektir?",o:["Kuş bakmak","Büyük bir şansa erişmek","Avcılık","Parkta gezmek"],d:1,a:"Büyük bir talih ve şansa erişmek beklenmedik bir fırsat yakalamak demektir."}
+{k:"Deyimler",s:"Üç aşağı beş yukarı ne demektir?",o:["Matematik","Aşağı yukarı yaklaşık","Merdiven çıkmak","Asansör"],d:1,a:"Tam olarak olmasa da yaklaşık olarak aşağı yukarı demektir."}
+{k:"Atasözleri",s:"Bilgi güçtür kimin sözüdür?",o:["Aristoteles","Francis Bacon","Newton","Platon"],d:1,a:"Bilgi güçtür sözü Francis Bacon a atfedilir."}
+{k:"Atasözleri",s:"Her şeyin başı sağlık ne anlatır?",o:["Hastane","Sağlık tüm değerlerin temelidir","Spor","Doktor"],d:1,a:"Sağlık olmadan hiçbir şeyin değeri yoktur en önemli şey sağlıktır."}
+{k:"Atasözleri",s:"Korkak bezirgan ne kar ne zarar eder ne demektir?",o:["Ticaret","Risk almayan kazanamaz","Korkmak","Kaçmak"],d:1,a:"Risk almayan kişi ne kazanır ne kaybeder yani hiçbir ilerleme kaydedemez."}
+{k:"Atasözleri",s:"Dimyata pirince giderken evdeki bulgurdan olmak ne anlatır?",o:["Pirinç almak","Daha fazlasını isterken elindekini de kaybetmek","Yemek pişirmek","Seyahat"],d:1,a:"Daha fazlasını elde etmeye çalışırken elindekini de kaybetmeyi anlatır."}
+{k:"Atasözleri",s:"Havlamak ile ısırmak bir değildir ne demektir?",o:["Köpek eğitimi","Tehdit eden her zaman yapamaz","Hayvan bakımı","Veteriner"],d:1,a:"Tehdit eden lafla söyleyen her zaman eyleme geçemez."}
+{k:"Atasözleri",s:"İki cambaz bir ipte oynamaz ne anlatır?",o:["Sirk","İki rakip aynı yerde barınamaz","Jimnastik","Akrobasi"],d:1,a:"Aynı alanda iki güçlü rakip bir arada barınamaz."}
+{k:"Atasözleri",s:"Kendi göbeğini kendin kes ne demektir?",o:["Doktorluk","Sorunlarını kendin çöz başkasını bekleme","Ameliyat","İlk yardım"],d:1,a:"Kendi sorunlarını kendin çöz başkalarından yardım bekleme."}
+{k:"Atasözleri",s:"Mum yanmasa ışık vermez ne anlatır?",o:["Mum yakmak","Emek vermeden sonuç alınamaz","Karanlık","Elektrik"],d:1,a:"Bir şey elde etmek için emek fedakarlık ve çaba gerekir."}
+{k:"Atasözleri",s:"Ne ekersen onu biçersin ne demektir?",o:["Tarım","Yaptıklarının sonuçlarıyla karşılaşırsın","Hasat","Ekim"],d:1,a:"İyi veya kötü ne yaparsan sonucuyla kendin karşılaşırsın."}
+{k:"Atasözleri",s:"Otuz bir günde kırk haramileri ne anlatır?",o:["Masal","Her gün yeni bir sorunla karşılaşmak","Sayı saymak","Hırsızlık"],d:1,a:"Sürekli olarak yeni sorunlar ve sıkıntılarla karşılaşmak demektir."}
+{k:"Atasözleri",s:"Parayı veren düdüğü çalar ne demektir?",o:["Müzik","Gücü ve parası olan istediğini yaptırır","Düdük almak","Konser"],d:1,a:"Para ve güç sahibi olan istediğini yaptırabilir karar verici odur."}
+{k:"Atasözleri",s:"Sürüden ayrılan koyunu kurt kapar ne anlatır?",o:["Hayvancılık","Topluluktan ayrılan tehlikeye düşer","Çoban olmak","Kurt avı"],d:1,a:"Topluluktan ayrılıp yalnız kalan kişi tehlikelere karşı savunmasız kalır."}
+{k:"Atasözleri",s:"Terzi kendi söküğünü dikemez ne demektir?",o:["Terzilik","Uzman bile kendi sorununu çözemeyebilir","Dikiş dikmek","Kumaş kesmek"],d:1,a:"Bir konuda uzman olan kişi bile kendi sorunlarını çözmekte zorlanabilir."}
+{k:"Atasözleri",s:"Ucuz etin yahnisi yavan olur ne anlatır?",o:["Yemek tarifi","Kalitesiz malzeme kalitesiz sonuç verir","Et almak","Aşçılık"],d:1,a:"Düşük kaliteli malzeme veya ucuz iş kalitesiz sonuç doğurur."}
+{k:"Atasözleri",s:"Vakit nakittir ne demektir?",o:["Saat almak","Zaman çok değerlidir boşa harcanmamalı","Para saymak","Banka"],d:1,a:"Zaman para kadar değerlidir verimli kullanılmalıdır."}
+{k:"Atasözleri",s:"Yılan hikayesi ne demektir?",o:["Hayvan bilimi","Bir türlü bitmeyen iş veya anlatım","Masal okumak","Yılan avlamak"],d:1,a:"Bir türlü bitmeyen sonu gelmeyen uzun ve sıkıcı iş veya anlatım demektir."}
+{k:"Atasözleri",s:"Zorla güzellik olmaz ne anlatır?",o:["Güzellik bakımı","İsteksiz yapılan iş iyi sonuç vermez","Makyaj","Estetik"],d:1,a:"Gönüllü olmayan zorla yaptırılan hiçbir iş güzel ve kaliteli olmaz."}
+{k:"Atasözleri",s:"Alet işler el övünür ne demektir?",o:["Alet satmak","İyi araç gereç başarıyı artırır","Tamir","Fabrika"],d:1,a:"Doğru aletlerle çalışan kişi daha iyi sonuç alır."}
+{k:"Atasözleri",s:"Cahile söz anlatmak deveye hendek atlatmaktan zordur ne anlatır?",o:["Deve bakımı","Bilgisiz kişiye bir şey anlatmak çok zordur","Hendek kazmak","Hayvanat bahçesi"],d:1,a:"Bilgisiz ve inatçı bir kişiye bir şeyi anlatmak veya kabul ettirmek çok zordur."}
+{k:"Atasözleri",s:"Deli ile damda oturma ya o seni iter ya sen onu ne demektir?",o:["İnşaat","Akılsız kişiyle iş yapmak tehlikelidir","Çatı tamiri","Yükseklik korkusu"],d:1,a:"Aklı başında olmayan kişiyle iş birliği yapmak tehlikelidir eninde sonunda sorun çıkar."}
+{k:"Atasözleri",s:"Elinin hamuruyla erkek işine karışma ne anlatır?",o:["Yemek yapmak","Bilmediğin işe karışma","Hamur yoğurmak","Fırın"],d:1,a:"Bilmediğin ve uzmanlığın olmayan işlere karışma demektir."}
+{k:"Atasözleri",s:"Güvenme varlığa düşersin darlığa ne demektir?",o:["Zenginlik","Sahip olduklarına güvenip savurganlık yapma","Banka","Yatırım"],d:1,a:"Elindeki varlığa güvenip savurganlık yaparsan bir gün darlığa düşebilirsin."}
+{k:"Atasözleri",s:"Her gece karanlık olmaz ne anlatır?",o:["Astronomi","Kötü günler sona erer","Gece lambası","Uyumak"],d:1,a:"Her zorluk geçicidir kötü günlerin ardından iyi günler gelir."}
+{k:"Atasözleri",s:"İnsanı tanımak kolay anlamak zordur ne demektir?",o:["Psikoloji","İnsanı dışından görmek kolay içini anlamak zordur","Fotoğrafçılık","Resim"],d:1,a:"İnsanın dış görünüşünü bilmek kolaydır ama gerçek karakterini anlamak çok zordur."}
+{k:"Atasözleri",s:"Kadıya mülk (ev) geçmez ne anlatır?",o:["Gayrimenkul","Geçici görevdekine sürekli mal verilmez","Kadı olmak","Ev almak"],d:1,a:"Geçici bir görevde bulunan kişiye kalıcı bir mülk verilmez."}
+
+{k:"Coğrafya",s:"Bermuda Şeytan Üçgeni hangi okyanustadır?",o:["Hint Okyanusu","Pasifik","Atlantik","Arktik"],d:2,a:"Bermuda Üçgeni Kuzey Atlantik'tedir."}
+{k:"Coğrafya",s:"Dünyanın en büyük mercan resifi hangisidir?",o:["Kızıldeniz Resifi","Büyük Set Resifi","Belize Resifi","Raja Ampat"],d:1,a:"Büyük Set Resifi Avustralya kıyılarındadır."}
+
+{k:"Başkentler",s:"Gürcistan'ın başkenti neresidir?",o:["Batum","Tiflis","Kutaisi","Suhumi"],d:1,a:"Gürcistan'ın başkenti Tiflis'tir."}
+{k:"Başkentler",s:"Hırvatistan'ın başkenti neresidir?",o:["Split","Dubrovnik","Zagreb","Rijeka"],d:2,a:"Hırvatistan'ın başkenti Zagreb'dir."}
+{k:"Başkentler",s:"Sırbistan'ın başkenti neresidir?",o:["Novi Sad","Belgrad","Niş","Kragujevac"],d:1,a:"Sırbistan'ın başkenti Belgrad'dır."}
+{k:"Başkentler",s:"Slovenya'nın başkenti neresidir?",o:["Maribor","Koper","Ljubljana","Celje"],d:2,a:"Slovenya'nın başkenti Ljubljana'dır."}
+{k:"Başkentler",s:"Letonya'ın başkenti neresidir?",o:["Daugavpils","Riga","Liepaja","Jurmala"],d:1,a:"Letonya'nın başkenti Riga'dır."}
+{k:"Başkentler",s:"Litvanya'nın başkenti neresidir?",o:["Kaunas","Klaipeda","Vilnius","Şiauliai"],d:2,a:"Litvanya'nın başkenti Vilnius'tur."}
+{k:"Başkentler",s:"Estonya'nın başkenti neresidir?",o:["Tartu","Tallinn","Narva","Pärnu"],d:1,a:"Estonya'nın başkenti Tallinn'dir."}
+{k:"Başkentler",s:"Moldova'nın başkenti neresidir?",o:["Tiraspol","Bălți","Kişinev","Cahul"],d:2,a:"Moldova'nın başkenti Kişinev'dir."}
+{k:"Başkentler",s:"Kuzey Makedonya'nın başkenti neresidir?",o:["Bitola","Üsküp","Ohrid","Kumanovo"],d:1,a:"Kuzey Makedonya'nın başkenti Üsküp'tür."}
+{k:"Başkentler",s:"Karadağ'ın başkenti neresidir?",o:["Podgorica","Nikşiç","Kotor","Budva"],d:0,a:"Karadağ'ın başkenti Podgorica'dır."}
+
+{k:"Doğa",s:"Fotosentez sırasında bitkiler hangi gazı açığa çıkarır?",o:["Karbondioksit","Azot","Oksijen","Hidrojen"],d:2,a:"Fotosentezde bitkiler oksijen üretir."}
+{k:"Doğa",s:"Hangi hayvan en uzun göç yolculuğu yapar?",o:["Kuzey Kırlangıcı","Kutup Sumru","Balina","Kelebek"],d:1,a:"Kutup sumru yılda ~70.000 km göç eder."}
+{k:"Doğa",s:"Mantarlar hangi aleme aittir?",o:["Bitkiler","Hayvanlar","Fungi","Protista"],d:2,a:"Mantarlar Fungi (Mantarlar) alemine aittir."}
+{k:"Doğa",s:"En hızlı büyüyen bitki hangisidir?",o:["Bambu","Söğüt","Kavak","Çam"],d:0,a:"Bambu günde 91 cm'ye kadar büyüyebilir."}
+{k:"Doğa",s:"Hangi organ insan vücudunun en büyük organıdır?",o:["Karaciğer","Beyin","Deri","Akciğer"],d:2,a:"Deri insan vücudunun en büyük organıdır."}
+{k:"Doğa",s:"Bir arı kovanında kraliçe arı kaç yıl yaşar?",o:["1 yıl","2-3 yıl","5-7 yıl","10 yıl"],d:2,a:"Kraliçe arı ortalama 5-7 yıl yaşar."}
+{k:"Doğa",s:"DNA'nın açılımı nedir?",o:["Deoksiribonükleik Asit","Diribonükleik Asit","Dinükleotid Amino","Deoksi Nükleik Amino"],d:0,a:"DNA Deoksiribonükleik Asit anlamına gelir."}
+{k:"Doğa",s:"Hangi element insan vücudunda en çok bulunur?",o:["Karbon","Hidrojen","Oksijen","Azot"],d:2,a:"İnsan vücudunun %65'i oksijenden oluşur."}
+{k:"Doğa",s:"Ekosistemde ayrıştırıcıların görevi nedir?",o:["Enerji üretmek","Ölü maddeleri parçalamak","Avlanmak","Fotosentez yapmak"],d:1,a:"Ayrıştırıcılar ölü organik maddeleri parçalar."}
+{k:"Doğa",s:"Hangi biyom dünya yüzeyinin en geniş alanını kaplar?",o:["Çöl","Tropikal Orman","Tayga","Savan"],d:2,a:"Tayga (kuzey iğne yapraklı orman) en geniş biyomdur."}
+{k:"Doğa",s:"Plazmodik bölünme hangi canlılarda görülür?",o:["Bakterilerde","Bitkilerde","Cıvık mantarlarda","Hayvanlarda"],d:2,a:"Plazmodik bölünme cıvık mantarlarda görülür."}
+{k:"Doğa",s:"Kaç tür kan grubu vardır?",o:["3","4","6","8"],d:3,a:"ABO (4 ana grup) ve Rh (+/-) ile birlikte 8 kan grubu vardır."}
+{k:"Doğa",s:"Endemik tür ne demektir?",o:["Nesli tükenen tür","Sadece belirli bölgede yaşayan","Göçmen tür","Evcilleştirilmiş tür"],d:1,a:"Endemik tür yalnızca belirli bir coğrafi bölgede yaşar."}
+{k:"Doğa",s:"İnsan genomunda yaklaşık kaç gen bulunur?",o:["5.000","20.000","100.000","1.000.000"],d:1,a:"İnsan genomunda yaklaşık 20.000-25.000 gen vardır."}
+{k:"Doğa",s:"Hangi vitamin eksikliği raşitizme neden olur?",o:["A vitamini","B vitamini","C vitamini","D vitamini"],d:3,a:"D vitamini eksikliği kemik yumuşaması (raşitizm) yapar."}
+{k:"Doğa",s:"Klorofil hangi renk ışığı en çok emer?",o:["Yeşil","Kırmızı ve Mavi","Sarı","Turuncu"],d:1,a:"Klorofil kırmızı ve mavi dalga boylarını emer, yeşili yansıtır."}
+{k:"Doğa",s:"Ozon tabakası atmosferin hangi katmanındadır?",o:["Troposfer","Stratosfer","Mezosfer","Termosfer"],d:1,a:"Ozon tabakası stratosfer katmanındadır."}
+{k:"Doğa",s:"Simbiyoz ilişki türlerinden hangisi her iki canlıya da yarar sağlar?",o:["Parazitizm","Kommensalizm","Mutualizm","Predatörlük"],d:2,a:"Mutualizm her iki canlının da fayda gördüğü ilişkidir."}
+{k:"Doğa",s:"Kromozom sayısı insanda kaçtır?",o:["23","44","46","48"],d:2,a:"İnsanda 46 kromozom (23 çift) bulunur."}
+{k:"Doğa",s:"Hangi canlı grubu hem karada hem suda yaşar?",o:["Sürüngenler","Amfibiler","Memeliler","Balıklar"],d:1,a:"Amfibiler (kurbağalar vb.) hem karada hem suda yaşar."}
+
+{k:"Türkiye",s:"Türkiye'nin en uzun nehri hangisidir?",o:["Fırat","Kızılırmak","Sakarya","Dicle"],d:1,a:"Kızılırmak 1355 km ile Türkiye'nin en uzun nehridir."}
+{k:"Türkiye",s:"Kapadokya hangi ildedir?",o:["Kayseri","Nevşehir","Aksaray","Niğde"],d:1,a:"Kapadokya'nın merkezi Nevşehir'dedir."}
+{k:"Türkiye",s:"Türkiye'nin en yüksek gölü hangisidir?",o:["Van Gölü","Çıldır Gölü","Balık Gölü","Süphan Gölü"],d:2,a:"Balık Gölü (Ağrı) ~2241 m ile en yüksek göldür."}
+{k:"Türkiye",s:"Anadolu'da kurulan ilk Türk beyliği hangisidir?",o:["Danişmentliler","Saltuklar","Mengücekliler","Artuklular"],d:1,a:"Saltuklular Anadolu'daki ilk Türk beyliklerinden kabul edilir."}
+{k:"Türkiye",s:"Efes Antik Kenti hangi ildedir?",o:["Muğla","Aydın","İzmir","Denizli"],d:2,a:"Efes Antik Kenti İzmir Selçuk ilçesindedir."}
+{k:"Türkiye",s:"Türkiye'nin en büyük adası hangisidir?",o:["Bozcaada","Gökçeada","Büyükada","Akdamar"],d:1,a:"Gökçeada (Çanakkale) Türkiye'nin en büyük adasıdır."}
+{k:"Türkiye",s:"Sümela Manastırı hangi ildedir?",o:["Rize","Artvin","Trabzon","Giresun"],d:2,a:"Sümela Manastırı Trabzon Maçka ilçesindedir."}
+{k:"Türkiye",s:"Türkiye Cumhuriyeti'nin ilk anayasası hangi yıl kabul edildi?",o:["1921","1923","1924","1926"],d:2,a:"İlk kapsamlı anayasa 1924 Teşkilât-ı Esasiye Kanunu'dur."}
+{k:"Türkiye",s:"Hatay hangi yıl Türkiye'ye katıldı?",o:["1936","1938","1939","1940"],d:2,a:"Hatay 1939'da Türkiye'ye katılmıştır."}
+{k:"Türkiye",s:"Aspendos Antik Tiyatrosu hangi ildedir?",o:["Mersin","Antalya","Adana","Burdur"],d:1,a:"Aspendos Antalya Serik ilçesindedir."}
+{k:"Türkiye",s:"Türkiye'nin ilk kadın pilotu kimdir?",o:["Sabiha Gökçen","Bedriye Tahir","Yıldız Uçansu","Leman Bozkurt"],d:0,a:"Sabiha Gökçen dünyanın ilk kadın savaş pilotudur."}
+{k:"Türkiye",s:"İstanbul Boğazı hangi iki denizi birleştirir?",o:["Akdeniz-Ege","Karadeniz-Marmara","Marmara-Ege","Karadeniz-Akdeniz"],d:1,a:"İstanbul Boğazı Karadeniz ile Marmara Denizi'ni birleştirir."}
+{k:"Türkiye",s:"Göbeklitepe hangi ildedir?",o:["Diyarbakır","Şanlıurfa","Mardin","Gaziantep"],d:1,a:"Göbeklitepe Şanlıurfa'dadır ve dünyanın en eski tapınağıdır."}
+{k:"Türkiye",s:"Türkiye'nin en uzun tüneli hangisidir?",o:["Bolu Tüneli","Ovit Tüneli","Zigana Tüneli","Ilgaz Tüneli"],d:1,a:"Ovit Tüneli 14.3 km ile Türkiye'nin en uzun karayolu tünelidir."}
+{k:"Türkiye",s:"Zeugma Mozaik Müzesi hangi ildedir?",o:["Adıyaman","Gaziantep","Şanlıurfa","Malatya"],d:1,a:"Zeugma Mozaik Müzesi Gaziantep'tedir."}
+{k:"Türkiye",s:"Safranbolu hangi ilin ilçesidir?",o:["Çankırı","Kastamonu","Karabük","Bartın"],d:2,a:"Safranbolu Karabük iline bağlı UNESCO Dünya Mirasıdır."}
+{k:"Türkiye",s:"Türkiye'nin en kalabalık ikinci şehri hangisidir?",o:["İzmir","Ankara","Bursa","Antalya"],d:1,a:"Ankara nüfus olarak Türkiye'nin ikinci büyük şehridir."}
+{k:"Türkiye",s:"Nemrut Dağı hangi ildedir?",o:["Bitlis","Adıyaman","Malatya","Elazığ"],d:1,a:"Nemrut Dağı (Kommagene) Adıyaman'dadır."}
+{k:"Türkiye",s:"Türkiye'nin en derin gölü hangisidir?",o:["Van Gölü","Tortum Gölü","Hazar Gölü","Çıldır Gölü"],d:2,a:"Hazar Gölü (Elazığ) ~216 m derinlikle en derin göldür."}
+{k:"Türkiye",s:"Ani Harabeleri hangi ildedir?",o:["Ağrı","Kars","Iğdır","Erzurum"],d:1,a:"Ani Harabeleri Kars'ta yer alır, UNESCO Dünya Mirasıdır."}
+{k:"Türkiye",s:"Çanakkale Savaşı hangi yıl başladı?",o:["1914","1915","1916","1917"],d:1,a:"Çanakkale Savaşı 1915'te başlamıştır."}
+{k:"Türkiye",s:"Pamukkale travertenleri hangi ildedir?",o:["Aydın","Burdur","Denizli","Muğla"],d:2,a:"Pamukkale Denizli'dedir, UNESCO Dünya Mirasıdır."}
+{k:"Türkiye",s:"Türkiye'nin ilk cumhurbaşkanı kimdir?",o:["İsmet İnönü","Mustafa Kemal Atatürk","Celal Bayar","Fevzi Çakmak"],d:1,a:"Mustafa Kemal Atatürk Türkiye'nin ilk cumhurbaşkanıdır."}
+{k:"Türkiye",s:"Mardin'in mimari özelliği nedir?",o:["Ahşap evler","Taş evler ve medreseler","Kerpiç yapılar","Betonarme binalar"],d:1,a:"Mardin taş mimarisi ve medreseleriyle ünlüdür."}
+
+{k:"Spor",s:"FIFA Dünya Kupası ilk kez hangi yıl düzenlendi?",o:["1926","1930","1934","1938"],d:1,a:"İlk Dünya Kupası 1930'da Uruguay'da yapıldı."}
+{k:"Spor",s:"Olimpiyat halkaları kaç tanedir?",o:["4","5","6","7"],d:1,a:"5 halka 5 kıtayı temsil eder."}
+{k:"Spor",s:"Wimbledon turnuvası hangi spor dalındadır?",o:["Golf","Tenis","Kriket","Badminton"],d:1,a:"Wimbledon dünyanın en prestijli tenis turnuvasıdır."}
+{k:"Spor",s:"NBA hangi ülkenin basketbol liginin kısaltmasıdır?",o:["Kanada","İngiltere","ABD","Avustralya"],d:2,a:"NBA (National Basketball Association) ABD liginin kısaltmasıdır."}
+{k:"Spor",s:"Bir maraton kaç kilometredir?",o:["40 km","42.195 km","45 km","50 km"],d:1,a:"Maraton mesafesi 42.195 km'dir."}
+{k:"Spor",s:"Formula 1'de en çok şampiyonluk kazanan pilot kimdir?",o:["Ayrton Senna","Michael Schumacher","Lewis Hamilton","Sebastian Vettel"],d:2,a:"Lewis Hamilton 7 şampiyonlukla rekor sahibidir (Schumacher ile birlikte)."}
+{k:"Spor",s:"Voleybolda bir takım kaç kişiden oluşur?",o:["5","6","7","8"],d:1,a:"Voleybolda sahada 6 oyuncu bulunur."}
+{k:"Spor",s:"Bir buz hokeyi maçı kaç periyottan oluşur?",o:["2","3","4","5"],d:1,a:"Buz hokeyi 3 periyottan oluşur."}
+{k:"Spor",s:"Hangi ülke en çok olimpiyat altın madalyası kazanmıştır?",o:["Çin","Rusya","ABD","İngiltere"],d:2,a:"ABD tarihte en çok olimpiyat altın madalyası kazanan ülkedir."}
+{k:"Spor",s:"Bir kriket maçında bir takım kaç oyuncudan oluşur?",o:["9","10","11","12"],d:2,a:"Krikette bir takım 11 oyuncudan oluşur."}
+{k:"Spor",s:"Tour de France hangi spor dalında düzenlenir?",o:["Koşu","Bisiklet","Yüzme","Triatlon"],d:1,a:"Tour de France dünyanın en ünlü bisiklet yarışıdır."}
+{k:"Spor",s:"Bir rugby takımı kaç kişidir?",o:["11","13","15","17"],d:2,a:"Rugby Union'da bir takım 15 kişidir."}
+{k:"Spor",s:"Usain Bolt 100 metreyi kaç saniyede koşmuştur?",o:["9.38","9.58","9.72","9.84"],d:1,a:"Usain Bolt 100 metre dünya rekoru 9.58 saniyedir."}
+{k:"Spor",s:"Bir golf sahasında kaç delik bulunur?",o:["9","12","16","18"],d:3,a:"Standart bir golf sahasında 18 delik bulunur."}
+{k:"Spor",s:"Beyzbolda atıcıya ne denir?",o:["Pitcher","Catcher","Batter","Shortstop"],d:0,a:"Beyzbolda top atan oyuncuya Pitcher denir."}
+{k:"Spor",s:"Türkiye'nin ilk olimpiyat altın madalyası hangi spor dalındandır?",o:["Halter","Güreş","Atletizm","Boks"],d:1,a:"Türkiye'nin ilk altın madalyası 1936'da güreştedir."}
+{k:"Spor",s:"Super Bowl hangi sporun şampiyonluk maçıdır?",o:["Beyzbol","Basketbol","Amerikan Futbolu","Buz Hokeyi"],d:2,a:"Super Bowl NFL (Amerikan Futbolu) şampiyonluk maçıdır."}
+{k:"Spor",s:"Bir polo maçında bir takım kaç biniciden oluşur?",o:["2","3","4","5"],d:2,a:"Poloda her takım 4 biniciden oluşur."}
+{k:"Spor",s:"2024 Yaz Olimpiyatları hangi şehirde yapıldı?",o:["Tokyo","Los Angeles","Paris","Londra"],d:2,a:"2024 Yaz Olimpiyatları Paris'te düzenlendi."}
+{k:"Spor",s:"Bir tenis setinde kaç game kazanmak gerekir?",o:["4","5","6","7"],d:2,a:"Normal sette 6 game kazanmak gerekir (tie-break hariç)."}
+{k:"Spor",s:"Fenerbahçe hangi yıl kurulmuştur?",o:["1903","1905","1907","1909"],d:2,a:"Fenerbahçe 1907'de kurulmuştur."}
+{k:"Spor",s:"Galatasaray hangi yıl UEFA Kupası'nı kazandı?",o:["1998","1999","2000","2001"],d:2,a:"Galatasaray 2000 yılında UEFA Kupası'nı kazandı."}
+{k:"Spor",s:"Dünya Kupası'nı en çok kazanan ülke hangisidir?",o:["Almanya","Arjantin","İtalya","Brezilya"],d:3,a:"Brezilya 5 kez Dünya Kupası kazanmıştır."}
+{k:"Spor",s:"Bir hentbol maçı kaç dakikadır?",o:["40","50","60","70"],d:2,a:"Hentbol maçı 2x30=60 dakikadır."}
+{k:"Spor",s:"Bir yüzme olimpik havuzu kaç metredir?",o:["25 m","33 m","50 m","100 m"],d:2,a:"Olimpik yüzme havuzu 50 metre uzunluğundadır."}
+
+{k:"Matematik",s:"Pi sayısının ilk 5 basamağı nedir?",o:["3.14159","3.14169","3.15159","3.14259"],d:0,a:"Pi sayısı 3.14159265... şeklinde devam eder."}
+{k:"Matematik",s:"Bir üçgenin iç açıları toplamı kaç derecedir?",o:["90°","180°","270°","360°"],d:1,a:"Üçgenin iç açıları toplamı 180 derecedir."}
+{k:"Matematik",s:"Fibonacci dizisinde 1, 1, 2, 3'ten sonra gelen sayı nedir?",o:["4","5","6","7"],d:1,a:"Fibonacci dizisinde 2+3=5'tir."}
+{k:"Matematik",s:"Bir küpün kaç yüzü vardır?",o:["4","5","6","8"],d:2,a:"Bir küpün 6 yüzü vardır."}
+{k:"Matematik",s:"0! (sıfır faktöriyel) kaçtır?",o:["0","1","Tanımsız","Sonsuz"],d:1,a:"0! = 1 olarak tanımlanır."}
+{k:"Matematik",s:"Bir çemberin çevresi hangi formülle hesaplanır?",o:["πr²","2πr","πd²","r²"],d:1,a:"Çemberin çevresi 2πr formülüyle hesaplanır."}
+{k:"Matematik",s:"Karekök 144 kaçtır?",o:["11","12","13","14"],d:1,a:"√144 = 12'dir."}
+{k:"Matematik",s:"Bir doğal sayının karesinin birler basamağı 2 olabilir mi?",o:["Evet","Hayır","Bazen","Sadece çift sayılarda"],d:1,a:"Hiçbir tam karenin birler basamağı 2 olamaz."}
+{k:"Matematik",s:"log₁₀(1000) kaçtır?",o:["2","3","4","10"],d:1,a:"10³=1000 olduğundan log₁₀(1000)=3'tür."}
+{k:"Matematik",s:"Bir altıgenin iç açıları toplamı kaç derecedir?",o:["540°","630°","720°","810°"],d:2,a:"Altıgenin iç açıları toplamı (6-2)×180=720 derecedir."}
+{k:"Matematik",s:"İki paralel doğruyu bir kesenle kestiğimizde oluşan yöndeş açılar nasıldır?",o:["Tamamlayıcı","Bütünler","Eşit","Ters"],d:2,a:"Yöndeş açılar birbirine eşittir."}
+{k:"Matematik",s:"Asal sayıların en küçüğü hangisidir?",o:["0","1","2","3"],d:2,a:"2 en küçük asal sayıdır."}
+{k:"Matematik",s:"Bir silindirin hacmi hangi formülle bulunur?",o:["πr²h","2πrh","4/3πr³","πr²"],d:0,a:"Silindir hacmi V=πr²h formülüyle hesaplanır."}
+{k:"Matematik",s:"Euler sabiti (e) yaklaşık olarak kaçtır?",o:["1.618","2.718","3.141","4.236"],d:1,a:"Euler sabiti e ≈ 2.71828'dir."}
+{k:"Matematik",s:"Bir dik üçgende hipotenüs nasıl bulunur?",o:["a+b","a×b","√(a²+b²)","a²+b²"],d:2,a:"Pisagor teoremine göre hipotenüs = √(a²+b²)"},
+{k:"Matematik",s:"sin 30° kaçtır?",o:["0","1/2","√2/2","√3/2"],d:1,a:"sin 30° = 1/2'dir."}
+{k:"Matematik",s:"Bir matrisin determinantı 0 ise ne olur?",o:["Tersi vardır","Tersi yoktur","Birim matristir","Simetrik matristir"],d:1,a:"Determinantı 0 olan matrisin tersi yoktur (tekil matris)."}
+{k:"Matematik",s:"İki kümenin kesişimi ne anlama gelir?",o:["Tüm elemanlar","Ortak elemanlar","Fark elemanları","Boş küme"],d:1,a:"Kesişim iki kümenin ortak elemanlarının kümesidir."}
+{k:"Matematik",s:"Bir fonksiyonun türevi neyi verir?",o:["Alan","Eğim","Hacim","Uzunluk"],d:1,a:"Türev fonksiyonun o noktadaki eğimini verir."}
+{k:"Matematik",s:"Bir olayın olasılığı en fazla kaç olabilir?",o:["0.5","0.99","1","Sonsuz"],d:2,a:"Olasılık değerleri 0 ile 1 arasındadır, en fazla 1 olabilir."}
+{k:"Matematik",s:"∫(2x)dx integrali nedir?",o:["x²","x²+C","2x²","2x²+C"],d:1,a:"∫2x dx = x² + C'dir."}
+{k:"Matematik",s:"Bir çokgenin köşegen sayısı formülü nedir?",o:["n(n-1)/2","n(n-3)/2","n(n-2)/2","n²/2"],d:1,a:"Köşegen sayısı n(n-3)/2 formülüyle hesaplanır."}
+{k:"Matematik",s:"i² (sanal birim karesi) kaçtır?",o:["1","-1","i","0"],d:1,a:"Sanal birim i'nin karesi -1'dir: i²=-1."}
+{k:"Matematik",s:"Bir kümede 5 eleman varsa, alt küme sayısı kaçtır?",o:["10","16","25","32"],d:3,a:"Alt küme sayısı 2⁵=32'dir."}
+{k:"Matematik",s:"Aritmetik dizide ortak fark sabit ise dizi nasıl adlandırılır?",o:["Geometrik","Harmonik","Aritmetik","Fibonacci"],d:2,a:"Ardışık terimler arası farkı sabit olan dizi aritmetik dizidir."}
+
+{k:"Deyimler",s:"'Ayağını denk almak' ne demektir?",o:["Hızlı koşmak","Dikkatli davranmak","Yürümeye başlamak","Engel olmak"],d:1,a:"Ayağını denk almak: dikkatli ve tedbirli davranmak."}
+{k:"Deyimler",s:"'Kılı kırk yarmak' ne anlama gelir?",o:["Saç kesmek","Titiz davranmak","Sinirli olmak","Zorluk çekmek"],d:1,a:"Kılı kırk yarmak: çok titiz ve ayrıntıcı davranmak."}
+{k:"Deyimler",s:"'Taşı gediğine koymak' ne demektir?",o:["İnşaat yapmak","Yerinde söz söylemek","Taş toplamak","Duvar örmek"],d:1,a:"Taşı gediğine koymak: yerinde ve uygun söz söylemek."}
+{k:"Deyimler",s:"'Çam devirmek' ne anlama gelir?",o:["Ağaç kesmek","Büyük gaf yapmak","Güçlü olmak","Başarılı olmak"],d:1,a:"Çam devirmek: istemeden büyük bir pot kırmak, gaf yapmak."}
+{k:"Deyimler",s:"'Pabucu dama atılmak' ne demektir?",o:["Pabuç kaybetmek","Önemini kaybetmek","Yükseğe çıkmak","Hediye almak"],d:1,a:"Pabucu dama atılmak: değerini, önemini yitirmek."}
+{k:"Deyimler",s:"'Çenesi düşük' ne anlama gelir?",o:["Çenesi ağrıyan","Çok konuşan","Sessiz olan","Dişçiye giden"],d:1,a:"Çenesi düşük: çok ve gereksiz konuşan kişi."}
+{k:"Deyimler",s:"'Araba devrilince yol gösteren çok olur' ne demektir?",o:["Trafik kuralı","İş işten geçince akıl veren çoğalır","Araba tamiri","Yardımseverlik"],d:1,a:"İş işten geçtikten sonra akıl veren, eleştiren çok olur."}
+{k:"Deyimler",s:"'Balık kavağa çıkınca' ne anlama gelir?",o:["İmkânsız bir durum","Balık avı","Ağaç tırmanma","Doğa olayı"],d:0,a:"Olmayacak, imkânsız bir durumu ifade eder."}
+{k:"Deyimler",s:"'Kendi göbeğini kendi kesmek' ne demektir?",o:["Doğum yapmak","Kendi sorununu kendi çözmek","Diyet yapmak","Ameliyat olmak"],d:1,a:"Kendi sorunlarını başkasına muhtaç olmadan çözmek."}
+{k:"Deyimler",s:"'Saman altından su yürütmek' ne anlama gelir?",o:["Çiftçilik","Gizlice iş çevirmek","Sulama yapmak","Temizlik yapmak"],d:1,a:"Gizliden gizliye, kimseye belli etmeden iş çevirmek."}
+{k:"Deyimler",s:"'Yüzüne gözüne bulaştırmak' ne demektir?",o:["Makyaj yapmak","Bir işi becerememek","Yemek dökmek","Boyama yapmak"],d:1,a:"Yapılan işi becerememek, berbat etmek."}
+{k:"Deyimler",s:"'Devede kulak' ne anlama gelir?",o:["Büyük kulak","Çok az, önemsiz","Deve bakımı","Hayvan hastalığı"],d:1,a:"Devede kulak: büyük bir şeye oranla çok az olan."}
+{k:"Deyimler",s:"'Ateş olmayan yerden duman çıkmaz' ne demektir?",o:["Yangın uyarısı","Her söylentinin bir gerçeklik payı var","Duman zararlıdır","Ateş söndürme"],d:1,a:"Her dedikodunun, söylentinin bir dayanağı vardır."}
+{k:"Deyimler",s:"'Bin dereden su getirmek' ne anlama gelir?",o:["Susuzluk","Bir şeyi yapmamak için bahaneler uydurmak","Su taşımak","Çok çalışmak"],d:1,a:"Bir işten kaçmak için çeşitli bahaneler öne sürmek."}
+{k:"Deyimler",s:"'Kulağı kirişte olmak' ne demektir?",o:["Kulağı ağrımak","Dikkatle dinlemek, tetikte olmak","Müzik dinlemek","Kulak tıkanması"],d:1,a:"Her an olan biteni dikkatle dinlemek, tetikte olmak."}
+{k:"Deyimler",s:"'El elden üstündür' ne anlama gelir?",o:["Alkış","Her zaman daha iyisi vardır","El sıkışma","Güreş terimi"],d:1,a:"Ne kadar başarılı olursan ol, senden daha iyisi mutlaka vardır."}
+{k:"Deyimler",s:"'Dağ fare doğurdu' ne demektir?",o:["Doğa olayı","Büyük beklentiden küçük sonuç çıkması","Hayvan doğumu","Dağcılık"],d:1,a:"Büyük hazırlık ve beklentinin ardından önemsiz bir sonuç çıkması."}
+{k:"Deyimler",s:"'Çıkmadık candan umut kesilmez' ne anlama gelir?",o:["Tıp terimi","Yaşadığı sürece umut vardır","Ölüm haberi","Hastane kuralı"],d:1,a:"İnsan hayatta olduğu sürece her zaman umut vardır."}
+{k:"Deyimler",s:"'Kaşla göz arasında' ne demektir?",o:["Makyaj","Çok kısa sürede, hemen","Göz hastalığı","Yüz ifadesi"],d:1,a:"Çok kısa bir süre içinde, kimse farkına varmadan."}
+{k:"Deyimler",s:"'Baklayı ağzından çıkarmak' ne anlama gelir?",o:["Yemek yemek","Gizli tuttuğu şeyi söylemek","Dişçiye gitmek","Nefes egzersizi"],d:1,a:"Sakladığı sırrı, gizlediği şeyi açığa vurmak."}
+{k:"Deyimler",s:"'Dikme çınarı gölgesinde oturmak' ne anlama gelir?",o:["Bahçecilik","Başkasının emeğinden yararlanmak","Park gezisi","Ağaç dikmek"],d:1,a:"Başkasının kurduğu düzenin, emeğin nimetlerinden faydalanmak."}
+{k:"Deyimler",s:"'Gemisini yürüten kaptandır' ne demektir?",o:["Denizcilik kuralı","Herkes kendi çıkarına bakar","Kaptan eğitimi","Gemi yarışı"],d:1,a:"Herkes kendi işini becermeye, çıkarını korumaya bakar."}
+{k:"Deyimler",s:"'İğneyi kendine çuvaldızı başkasına batır' ne anlama gelir?",o:["Terzilik","Önce kendini eleştir","İğne yapımı","Dikiş kursu"],d:1,a:"Başkasını eleştirmeden önce kendine bak."}
+{k:"Deyimler",s:"'Su uyur düşman uyumaz' ne demektir?",o:["Su tasarrufu","Düşman her zaman tetikte olabilir","Uyku düzeni","Nehir akışı"],d:1,a:"Her şey sakin görünse de düşman her zaman hazırdır."}
+{k:"Deyimler",s:"'Yangından mal kaçırır gibi' ne demektir?",o:["İtfaiyecilik","Çok acele ve telaşla","Hırsızlık","Taşınma"],d:1,a:"Son derece aceleyle, büyük telaş içinde bir işi yapmak."}
+
+{k:"Atasözleri",s:"'Ak akçe kara gün içindir' ne anlama gelir?",o:["Renk bilgisi","Zor günler için para biriktirmek","Banka reklamı","Madeni para"],d:1,a:"İleride karşılaşılabilecek sıkıntılar için önceden para biriktirmek."}
+{k:"Atasözleri",s:"'Ağaç yaşken eğilir' ne demektir?",o:["Bahçecilik","Eğitim küçük yaşta başlamalı","Ağaç budama","Orman bakımı"],d:1,a:"İnsan küçük yaşta eğitilir, büyüyünce alışkanlık değiştirmek zordur."}
+{k:"Atasözleri",s:"'Her yokuşun bir inişi vardır' ne anlama gelir?",o:["Yol yapımı","Her zorluğun ardından kolaylık gelir","Dağcılık","Trafik kuralı"],d:1,a:"Sıkıntılı dönemler sonunda sona erer."}
+{k:"Atasözleri",s:"'Sakla samanı gelir zamanı' ne demektir?",o:["Çiftçilik","Her şeyin lazım olacağı bir gün gelir","Saman satışı","Depolama"],d:1,a:"İşe yaramaz görünen şey ileride gerekebilir."}
+{k:"Atasözleri",s:"'Damlaya damlaya göl olur' ne anlama gelir?",o:["Su döngüsü","Küçük birikimler büyük sonuçlar doğurur","Göl oluşumu","Yağmur yağışı"],d:1,a:"Küçük birikimlerin zamanla büyük kazanımlara dönüşeceğini anlatır."}
+{k:"Atasözleri",s:"'Balık baştan kokar' ne demektir?",o:["Yemek tarifi","Bozukluk yöneticiden başlar","Balıkçılık","Mutfak hijyeni"],d:1,a:"Bir topluluktaki sorun, yöneticilerden kaynaklanır."}
+{k:"Atasözleri",s:"'Komşu komşunun külüne muhtaçtır' ne anlama gelir?",o:["Kül temizliği","İnsanlar birbirine ihtiyaç duyar","Komşu kavgası","Kül kullanımı"],d:1,a:"Herkes bir gün komşusuna muhtaç olabilir."}
+{k:"Atasözleri",s:"'Gülme komşuna gelir başına' ne demektir?",o:["Komedi","Başkasının başına gelene gülme, sana da gelebilir","Espri yapma","Güldürü programı"],d:1,a:"Başkasının başına gelene gülme, aynısı sana da gelebilir."}
+{k:"Atasözleri",s:"'Yuvarlanan taş yosun tutmaz' ne anlama gelir?",o:["Jeoloji","Sürekli yer değiştiren birikim yapamaz","Taş bilimi","Yosun türleri"],d:1,a:"Bir yerde durmayan, sürekli iş/yer değiştiren kişi bir şey elde edemez."}
+{k:"Atasözleri",s:"'Dost acı söyler' ne demektir?",o:["Dost kavgası","Gerçek dost doğruyu söyler","Acı biber","İlaç"],d:1,a:"Gerçek dost hoşa gitmese de doğruyu söyler."}
+{k:"Atasözleri",s:"'Güvenme varlığa düşersin darlığa' ne anlama gelir?",o:["Finansal tavsiye","Zenginliğe güvenme, bir gün yoksul kalabilirsin","Banka iflası","Sigorta reklamı"],d:1,a:"Sahip olduğun varlığa güvenme, her an kaybedebilirsin."}
+{k:"Atasözleri",s:"'Tatlı dil yılanı deliğinden çıkarır' ne demektir?",o:["Yılan avcılığı","Güzel sözle her kapı açılır","Hayvan bakımı","Dil bilgisi"],d:1,a:"Güzel ve tatlı konuşmayla en zor işler bile başarılır."}
+{k:"Atasözleri",s:"'Mum dibine ışık vermez' ne anlama gelir?",o:["Fizik kanunu","Kişi yakınlarına fayda sağlayamaz","Mum üretimi","Aydınlatma"],d:1,a:"Başkalarına yardım eden kişi bazen yakınlarına faydası olmaz."}
+{k:"Atasözleri",s:"'Üzüm üzüme baka baka kararır' ne anlama gelir?",o:["Tarım bilgisi","İnsanlar çevresinden etkilenir","Üzüm hasadı","Bağcılık"],d:1,a:"İnsanlar birbirinden etkilenir, çevre kişiyi şekillendirir."}
+{k:"Atasözleri",s:"'El eli yıkar el de yüzü' ne demektir?",o:["Hijyen kuralı","İnsanlar birbirine yardım edince herkes kazanır","El yıkama","Temizlik"],d:1,a:"Karşılıklı yardımlaşma herkese fayda sağlar."}
+{k:"Atasözleri",s:"'İşleyen demir pas tutmaz' ne anlama gelir?",o:["Metal bilimi","Çalışan kişi her zaman dinç ve sağlıklı kalır","Demir bakımı","Fabrika kuralı"],d:1,a:"Sürekli çalışan, hareket eden kişi sağlığını ve zindeliğini korur."}
+{k:"Atasözleri",s:"'Bugünün işini yarına bırakma' ne demektir?",o:["Takvim kullanımı","İşleri erteleme, zamanında yap","Planlama aracı","Ajanda"],d:1,a:"Yapılması gereken işi ertelemeden hemen yapmalısın."}
+{k:"Atasözleri",s:"'Keskin sirke küpüne zarar' ne anlama gelir?",o:["Sirke üretimi","Aşırı sert/kızgın olan kendine zarar verir","Küp bakımı","Yemek tarifi"],d:1,a:"Çok sert, öfkeli davranan kişi en çok kendine zarar verir."}
+{k:"Atasözleri",s:"'Aç ayı oynamaz' ne demektir?",o:["Hayvan bakımı","Karşılığını almadan kimse iş yapmaz","Sirk gösterisi","Ayı besleme"],d:1,a:"Karşılığını görmeyen kişi o iş için çaba göstermez."}
+{k:"Atasözleri",s:"'Her kuşun eti yenmez' ne anlama gelir?",o:["Yemek kültürü","Her kişiye her şey söylenemez/yapılamaz","Kuş türleri","Avcılık"],d:1,a:"Bazı insanlarla uğraşmamak gerekir, herkes aynı muameleyi kaldırmaz."}
+{k:"Atasözleri",s:"'Atı alan Üsküdar'ı geçti' ne demektir?",o:["At yarışı","İş işten geçti, fırsat kaçırıldı","Üsküdar tarihi","Ulaşım"],d:1,a:"Artık çok geç, yapılacak bir şey kalmadı."}
+{k:"Atasözleri",s:"'Gönül ne kahve ister ne kahvehane' ne anlama gelir?",o:["Kahve kültürü","Önemli olan maddi şeyler değil samimiyettir","Kahvehane tarihi","İçecek tercihi"],d:1,a:"Önemli olan ikram değil, samimiyet ve dostluktur."}
+{k:"Atasözleri",s:"'İki cambaz bir ipte oynamaz' ne demektir?",o:["Sirk gösterisi","İki rakip aynı yerde barınamaz","Cambaz eğitimi","İp yapımı"],d:1,a:"İki güçlü rakip aynı ortamda geçinemez."}
+{k:"Atasözleri",s:"'Tencere yuvarlanmış kapağını bulmuş' ne anlama gelir?",o:["Mutfak eşyası","Birbirine denk kişiler bir araya gelmiş","Tencere üretimi","Yemek pişirme"],d:1,a:"Birbirine benzeyen, denk olan kişiler bir araya gelmiştir."}
+{k:"Atasözleri",s:"'Körle yatan şaşı kalkar' ne demektir?",o:["Göz hastalığı","Kötü çevreyle takılan zarar görür","Uyku düzeni","Oftalmoloji"],d:1,a:"Kötü alışkanlıkları olan insanlarla vakit geçiren onlardan etkilenir."}
