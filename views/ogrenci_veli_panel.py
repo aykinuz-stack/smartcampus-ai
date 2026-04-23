@@ -181,768 +181,142 @@ def _inject_panel_tab_css():
 
 
 def _inject_veli_premium_css():
-    """Veli paneli icin SIFIRDAN LIGHT TEMA — koyu lacivert/dark mode tamamen iptal.
-
-    Streamlit config.toml'da dark theme aktif olsa bile bu CSS tum element'leri
-    light tema'ya zorla cevirir. Atom duzeyinde reset.
-    """
+    """Veli paneli — temiz, okunabilir, sade light tema."""
     if st.session_state.get("_veli_premium_css_injected"):
         return
     st.session_state["_veli_premium_css_injected"] = True
 
     st.markdown("""
 <style>
-/* ════════════════════════════════════════════════════════════ */
-/*  VELI PANELI — LIGHT TEMA HARD RESET v4                      */
-/*  Streamlit dark theme override + tum koyu renkler iptal      */
-/* ════════════════════════════════════════════════════════════ */
+/* ═══ VELI PANELI — TEMIZ LIGHT TEMA v5 ═══ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
-/* ── HARD RESET: Streamlit dark theme'i tamamen ezer + MESH GRADIENT ── */
+/* Temiz beyaz arka plan */
 html, body, .stApp, .main, section.main,
 [data-testid="stAppViewContainer"],
 [data-testid="stAppViewContainer"] > .main {
-    background-color: #fafbff !important;
-    background-image:
-        /* Aurora orbs — gorunur ve canli */
-        radial-gradient(ellipse 800px 600px at 5% 0%, rgba(244,114,182,.18) 0%, transparent 50%),
-        radial-gradient(ellipse 700px 500px at 95% 10%, rgba(168,85,247,.20) 0%, transparent 50%),
-        radial-gradient(ellipse 900px 700px at 50% 50%, rgba(125,211,252,.15) 0%, transparent 60%),
-        radial-gradient(ellipse 800px 600px at 10% 95%, rgba(167,243,208,.18) 0%, transparent 50%),
-        radial-gradient(ellipse 700px 500px at 90% 100%, rgba(253,224,71,.15) 0%, transparent 50%),
-        /* Soft mesh base */
-        linear-gradient(135deg, #fef3f2 0%, #fdf4ff 25%, #f5f3ff 50%, #eff6ff 75%, #ecfeff 100%) !important;
-    background-attachment: fixed !important;
-    color: #0f172a !important;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
-    min-height: 100vh !important;
+    background-color: #f8fafc !important;
+    color: #1e293b !important;
+    font-family: 'Inter', system-ui, sans-serif !important;
 }
+[data-testid="stHeader"] { background: #f8fafc !important; }
 
-[data-testid="stAppViewContainer"] > .main > .block-container,
-[data-testid="stMainBlockContainer"] {
-    background: transparent !important;
-    background-color: transparent !important;
-    color: #0f172a !important;
-}
-
-[data-testid="stVerticalBlock"],
-[data-testid="stHorizontalBlock"] {
-    background: transparent !important;
-    background-color: transparent !important;
-    color: #0f172a !important;
-}
-
-[data-testid="stHeader"] {
-    background: transparent !important;
-    background-color: transparent !important;
-}
-
-/* ── TUM YAZILAR koyu lacivert ── */
+/* Tum yazilar koyu — okunabilir */
 .stApp p, .stApp span, .stApp div, .stApp label,
 .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6,
-.stApp li, .stApp td, .stApp th {
-    color: #0f172a !important;
-}
+.stApp li, .stApp td, .stApp th { color: #1e293b !important; }
 
-/* ── BUTTON premium glassmorphism ── */
-.stButton > button,
-button[data-baseweb="button"] {
-    background: rgba(255,255,255,.85) !important;
-    background-color: rgba(255,255,255,.85) !important;
-    color: #1e1b4b !important;
-    border: 1px solid rgba(199,210,254,.5) !important;
-    border-radius: 14px !important;
-    font-weight: 700 !important;
-    backdrop-filter: blur(20px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-    box-shadow:
-        0 1px 0 rgba(255,255,255,.7) inset,
-        0 1px 3px rgba(15,23,42,.04),
-        0 4px 16px rgba(99,102,241,.10),
-        0 12px 32px rgba(168,85,247,.06) !important;
-    transition: all .25s cubic-bezier(.4,0,.2,1) !important;
-}
-.stButton > button:hover {
-    background: rgba(255,255,255,.95) !important;
-    border-color: #6366f1 !important;
-    color: #4338ca !important;
-    transform: translateY(-2px) !important;
-    box-shadow:
-        0 1px 0 rgba(255,255,255,.9) inset,
-        0 8px 24px rgba(99,102,241,.20),
-        0 16px 48px rgba(168,85,247,.10) !important;
-}
-.stButton > button[kind="primary"] {
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%) !important;
-    color: #ffffff !important;
-    border: 1px solid rgba(255,255,255,.3) !important;
-    backdrop-filter: none !important;
-    box-shadow:
-        0 1px 0 rgba(255,255,255,.4) inset,
-        0 -2px 0 rgba(0,0,0,.1) inset,
-        0 6px 20px rgba(99,102,241,.40),
-        0 12px 32px rgba(236,72,153,.20) !important;
-}
-.stButton > button[kind="primary"]:hover {
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%) !important;
-    transform: translateY(-2px) !important;
-    box-shadow:
-        0 1px 0 rgba(255,255,255,.5) inset,
-        0 -2px 0 rgba(0,0,0,.15) inset,
-        0 10px 28px rgba(99,102,241,.50),
-        0 20px 48px rgba(236,72,153,.25) !important;
-}
-.stButton > button[kind="primary"] * {
-    color: #ffffff !important;
-}
+/* Basliklar */
+.stApp h1 { font-size: 1.6rem !important; font-weight: 700 !important; color: #0f172a !important; }
+.stApp h2 { font-size: 1.3rem !important; font-weight: 700 !important; color: #1e293b !important; }
+.stApp h3 { font-size: 1.1rem !important; font-weight: 600 !important; color: #334155 !important; }
 
-/* ── INPUT, TEXTAREA, SELECTBOX, NUMBER, DATE light ── */
-.stTextInput input, .stTextArea textarea,
-.stNumberInput input, .stDateInput input, .stTimeInput input,
-.stSelectbox div[data-baseweb="select"] > div,
-.stMultiSelect div[data-baseweb="select"] > div {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    color: #0f172a !important;
-    border: 1px solid #e2e8f0 !important;
-    border-radius: 10px !important;
+/* Butonlar — sade */
+.stButton > button {
+    background: #ffffff !important; color: #1e293b !important;
+    border: 1px solid #e2e8f0 !important; border-radius: 10px !important;
+    font-weight: 600 !important; box-shadow: 0 1px 2px rgba(0,0,0,.05) !important;
 }
-.stTextInput input:focus, .stTextArea textarea:focus,
-.stNumberInput input:focus, .stDateInput input:focus {
-    border-color: #6366f1 !important;
-    box-shadow: 0 0 0 3px rgba(99,102,241,.15) !important;
-}
-.stSelectbox label, .stTextInput label, .stTextArea label,
-.stNumberInput label, .stDateInput label, .stMultiSelect label {
-    color: #475569 !important;
-    font-weight: 600 !important;
-}
+.stButton > button:hover { border-color: #6366f1 !important; box-shadow: 0 2px 6px rgba(99,102,241,.12) !important; }
+.stButton > button[kind="primary"] { background: #6366f1 !important; color: #fff !important; border: none !important; }
+.stButton > button[kind="primary"]:hover { background: #4f46e5 !important; }
 
-/* ── EXPANDER glassmorphism ── */
-[data-testid="stExpander"],
-.streamlit-expanderHeader,
+/* Input alanlari */
+.stTextInput input, .stTextArea textarea, .stNumberInput input, .stDateInput input,
+.stSelectbox div[data-baseweb="select"] > div, .stMultiSelect div[data-baseweb="select"] > div {
+    background: #ffffff !important; color: #1e293b !important;
+    border: 1px solid #e2e8f0 !important; border-radius: 8px !important;
+}
+.stTextInput input:focus, .stTextArea textarea:focus { border-color: #6366f1 !important; box-shadow: 0 0 0 2px rgba(99,102,241,.1) !important; }
+.stSelectbox label, .stTextInput label, .stTextArea label { color: #475569 !important; font-weight: 600 !important; }
+
+/* Tabs — sade, okunabilir */
+div[data-testid="stTabs"] > div:first-child { gap: 4px !important; }
+button[data-baseweb="tab"] {
+    background: #ffffff !important; color: #475569 !important;
+    border: 1px solid #e2e8f0 !important; border-radius: 10px !important;
+    font-weight: 600 !important; padding: 8px 16px !important; font-size: 0.85rem !important;
+}
+button[data-baseweb="tab"]:hover { border-color: #6366f1 !important; color: #4338ca !important; }
+button[data-baseweb="tab"][aria-selected="true"] {
+    background: #6366f1 !important; color: #ffffff !important;
+    border-color: #6366f1 !important; box-shadow: 0 2px 8px rgba(99,102,241,.25) !important;
+}
+button[data-baseweb="tab"][aria-selected="true"] *, button[data-baseweb="tab"][aria-selected="true"] p { color: #ffffff !important; }
+div[data-baseweb="tab-highlight"], div[data-baseweb="tab-border"] { display: none !important; }
+
+/* Expander — temiz kart */
 [data-testid="stExpander"] > details {
-    background: rgba(255,255,255,.7) !important;
-    background-color: rgba(255,255,255,.7) !important;
-    border: 1px solid rgba(199,210,254,.45) !important;
-    border-radius: 16px !important;
-    backdrop-filter: blur(20px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-    box-shadow:
-        0 1px 0 rgba(255,255,255,.7) inset,
-        0 1px 3px rgba(15,23,42,.04),
-        0 8px 24px rgba(99,102,241,.08) !important;
+    background: #ffffff !important; border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important; box-shadow: 0 1px 3px rgba(0,0,0,.04) !important;
 }
-[data-testid="stExpander"] summary {
-    background: transparent !important;
-    color: #1e1b4b !important;
-    font-weight: 700 !important;
-}
-[data-testid="stExpander"] > details > div,
-.streamlit-expanderContent {
-    background: rgba(250,251,255,.6) !important;
-    border-top: 1px solid rgba(226,232,240,.5) !important;
-    color: #0f172a !important;
-}
+[data-testid="stExpander"] summary { color: #1e293b !important; font-weight: 700 !important; }
+[data-testid="stExpander"] > details > div { background: #fafbff !important; color: #1e293b !important; }
 
-/* ── METRIC premium glassmorphism ── */
+/* Metric — temiz kart */
 [data-testid="stMetric"] {
-    background: rgba(255,255,255,.85) !important;
-    background-color: rgba(255,255,255,.85) !important;
-    border: 1px solid rgba(199,210,254,.5) !important;
-    border-radius: 18px !important;
-    padding: 18px 20px !important;
-    backdrop-filter: blur(20px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-    box-shadow:
-        0 1px 0 rgba(255,255,255,.7) inset,
-        0 1px 3px rgba(15,23,42,.04),
-        0 6px 20px rgba(99,102,241,.10),
-        0 16px 40px rgba(168,85,247,.06) !important;
-    transition: all .3s cubic-bezier(.4,0,.2,1) !important;
+    background: #ffffff !important; border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important; padding: 16px !important; box-shadow: 0 1px 3px rgba(0,0,0,.04) !important;
 }
-[data-testid="stMetric"]:hover {
-    transform: translateY(-3px) !important;
-    border-color: #a855f7 !important;
-    box-shadow:
-        0 1px 0 rgba(255,255,255,.9) inset,
-        0 12px 28px rgba(99,102,241,.18),
-        0 24px 56px rgba(168,85,247,.12) !important;
-}
-[data-testid="stMetricValue"], [data-testid="stMetricValue"] > div {
-    color: #1e1b4b !important;
-    font-weight: 900 !important;
-    letter-spacing: -.5px !important;
-}
-[data-testid="stMetricLabel"], [data-testid="stMetricLabel"] > div, [data-testid="stMetricLabel"] p {
-    color: #6366f1 !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
-    letter-spacing: .8px !important;
-    font-size: .72rem !important;
-}
+[data-testid="stMetricValue"] { color: #0f172a !important; font-weight: 800 !important; }
+[data-testid="stMetricLabel"] { color: #64748b !important; font-weight: 600 !important; }
 
-/* ── ALERT premium glass ── */
-[data-testid="stAlert"], .stAlert {
-    background: rgba(255,255,255,.85) !important;
-    border-radius: 14px !important;
-    backdrop-filter: blur(20px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-    box-shadow:
-        0 1px 0 rgba(255,255,255,.7) inset,
-        0 4px 16px rgba(99,102,241,.10) !important;
-    color: #0f172a !important;
-    border: 1px solid rgba(199,210,254,.45) !important;
-}
+/* Tablo — beyaz arka plan */
+[data-testid="stDataFrame"], [data-testid="stTable"] { background: #ffffff !important; border-radius: 10px !important; }
+.stDataFrame th { background: #f1f5f9 !important; color: #334155 !important; font-weight: 700 !important; }
+.stDataFrame td { color: #1e293b !important; }
 
-/* ── RADIO, CHECKBOX, SLIDER light ── */
-.stRadio label, .stCheckbox label, .stSlider label {
-    color: #0f172a !important;
-}
-.stRadio div[role="radiogroup"] label {
-    color: #0f172a !important;
-}
+/* Radio / Checkbox — okunabilir */
+.stRadio label, .stCheckbox label { color: #1e293b !important; font-weight: 500 !important; }
+.stRadio [data-baseweb="radio"] { color: #6366f1 !important; }
 
-/* ── TAB BAR — premium glassmorphism ── */
-div[data-baseweb="tab-list"] {
-    background: rgba(255,255,255,.7) !important;
-    background-color: rgba(255,255,255,.7) !important;
-    border-radius: 20px !important;
-    padding: 10px !important;
-    gap: 4px !important;
-    border: 1px solid rgba(199,210,254,.5) !important;
-    backdrop-filter: blur(24px) saturate(200%) !important;
-    -webkit-backdrop-filter: blur(24px) saturate(200%) !important;
-    box-shadow:
-        0 1px 0 rgba(255,255,255,.8) inset,
-        0 1px 3px rgba(15,23,42,.04),
-        0 8px 24px rgba(99,102,241,.12),
-        0 24px 56px rgba(168,85,247,.08) !important;
-    margin-bottom: 18px !important;
-}
-button[data-baseweb="tab"] {
-    background: transparent !important;
-    background-color: transparent !important;
-    border-radius: 14px !important;
-    color: #475569 !important;
-    font-weight: 700 !important;
-    font-size: 0.85rem !important;
-    padding: 11px 18px !important;
-    border: 1px solid transparent !important;
-    transition: all .25s cubic-bezier(.4,0,.2,1) !important;
-}
-button[data-baseweb="tab"] *,
-button[data-baseweb="tab"] p {
-    color: #475569 !important;
-}
-button[data-baseweb="tab"]:hover {
-    background: rgba(99,102,241,.10) !important;
-    color: #4338ca !important;
-    border-color: rgba(199,210,254,.6) !important;
-    transform: translateY(-1px) !important;
-}
-button[data-baseweb="tab"]:hover *,
-button[data-baseweb="tab"]:hover p {
-    color: #4338ca !important;
-}
-button[data-baseweb="tab"][aria-selected="true"] {
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%) !important;
-    color: #ffffff !important;
-    border-color: rgba(255,255,255,.35) !important;
-    box-shadow:
-        0 1px 0 rgba(255,255,255,.4) inset,
-        0 -2px 0 rgba(0,0,0,.10) inset,
-        0 6px 20px rgba(99,102,241,.40),
-        0 16px 32px rgba(236,72,153,.20) !important;
-    transform: translateY(-1px) !important;
-}
-button[data-baseweb="tab"][aria-selected="true"] *,
-button[data-baseweb="tab"][aria-selected="true"] p {
-    color: #ffffff !important;
-}
+/* Sidebar gizle (veli icin gereksiz) */
+section[data-testid="stSidebar"] { display: none !important; }
 
-/* ── DATAFRAME / TABLE light ── */
-[data-testid="stDataFrame"], [data-testid="stTable"] {
-    background: #ffffff !important;
-    border: 1px solid #e2e8f0 !important;
-    border-radius: 12px !important;
-}
-.stDataFrame table, .stTable table {
-    color: #0f172a !important;
-}
+/* Uyari/info banner'lari */
+.stAlert { border-radius: 10px !important; }
 
-/* ── DOWNLOAD/UPLOAD button light ── */
-.stDownloadButton > button, .stFileUploader > div {
-    background: #ffffff !important;
-    color: #0f172a !important;
-    border: 1px solid #e2e8f0 !important;
-    border-radius: 12px !important;
-}
-
-/* ── PROGRESS BAR light ── */
-[data-testid="stProgress"] > div > div {
-    background: linear-gradient(90deg, #6366f1, #8b5cf6) !important;
-}
-
-/* ── CAPTION light ── */
-[data-testid="stCaptionContainer"], .stCaption, small {
-    color: #94a3b8 !important;
-}
-
-/* ── KARANLIK HELPER CLASS'LARI tamamen iptal ── */
-.sc-cinema, .sc-neon, .sc-stat-hover {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    border: 1px solid #e2e8f0 !important;
-    color: #0f172a !important;
-    box-shadow: 0 1px 3px rgba(15,23,42,.04), 0 4px 12px rgba(99,102,241,.06) !important;
-}
-.sc-cinema *, .sc-neon *, .sc-stat-hover * {
-    color: #0f172a !important;
-}
-.sc-blob, .sc-blob-container,
-.sc-blob-1, .sc-blob-2, .sc-blob-3 {
-    display: none !important;
-}
-
-/* ── Markdown koyu arka planli div'leri light yap ── */
-[style*="background:#ffffff"], [style*="background:#f8fafc"],
-[style*="background:#ffffff"], [style*="background:#ffffff"],
-[style*="background:#ffffff"], [style*="background:#f1f5f9"],
-[style*="background-color:#0f172a"], [style*="background-color:#1e293b"],
-[style*="background-color:#0B0F19"], [style*="background-color:#131825"] {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-    color: #0f172a !important;
-    border: 1px solid #e2e8f0 !important;
-}
-[style*="color:#475569"], [style*="color:#475569"],
-[style*="color:#0f172a"], [style*="color:#0f172a"] {
-    color: #475569 !important;
-}
-
-/* ── HR divider soft ── */
-hr {
-    background: linear-gradient(90deg, transparent, #e2e8f0, transparent) !important;
-    border: none !important;
-    height: 1px !important;
-}
-
-/* ── Animasyon keyframe'leri ── */
-@keyframes vp_fadeInUp {
-    0%   { opacity: 0; transform: translateY(16px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-@keyframes vp_shimmer {
-    0%   { background-position: -200% center; }
-    100% { background-position:  200% center; }
-}
-/* ════════════════════════════════════════════════════════════ */
-/*  VELI PANELI — LIGHT MODERN v3 (Apple/Linear inspired)       */
-/* ════════════════════════════════════════════════════════════ */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
-
-/* ── Animasyon keyframe'leri ── */
-@keyframes vp_fadeInUp {
-    0%   { opacity: 0; transform: translateY(16px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-@keyframes vp_shimmer {
-    0%   { background-position: -200% center; }
-    100% { background-position:  200% center; }
-}
-@keyframes vp_floatSoft {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50%      { transform: translate(15px, -20px) scale(1.04); }
-}
-@keyframes vp_pulseSoft {
-    0%, 100% { box-shadow: 0 8px 24px rgba(99,102,241,.18),
-                           0 4px 12px rgba(99,102,241,.08); }
-    50%      { box-shadow: 0 12px 32px rgba(168,85,247,.25),
-                           0 6px 16px rgba(168,85,247,.12); }
-}
-
-/* ── ARKA PLAN — SAYFA TAMAMEN LIGHT ── */
-[data-testid="stAppViewContainer"],
-[data-testid="stAppViewContainer"] > .main,
-[data-testid="stAppViewContainer"] > .main > .block-container,
-.stApp,
-section.main {
-    background:
-        radial-gradient(ellipse 1200px 600px at top right, rgba(168,85,247,.08) 0%, transparent 60%),
-        radial-gradient(ellipse 1000px 500px at bottom left, rgba(99,102,241,.07) 0%, transparent 60%),
-        linear-gradient(180deg, #ffffff 0%, #f8fafc 50%, #f1f5fb 100%) !important;
-}
-
-/* ── HEADER tamamen seffaf ── */
-[data-testid="stHeader"] {
-    background: transparent !important;
-}
-
-/* ── TUM TEXT default koyu ── */
-.stApp,
-.stApp p,
-.stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6,
-.stApp div,
-.stApp span,
-.stApp label,
-.stApp li {
-    color: #0f172a !important;
-}
-
-/* ── BUTTON light tema ── */
-button[kind="secondary"], .stButton > button {
-    background: #ffffff !important;
-    color: #1e1b4b !important;
-    border: 1px solid #e2e8f0 !important;
-    box-shadow: 0 1px 3px rgba(15,23,42,.04), 0 4px 12px rgba(99,102,241,.06) !important;
-    transition: all .2s ease !important;
-}
-button[kind="secondary"]:hover, .stButton > button:hover {
-    background: #f8fafc !important;
-    border-color: #6366f1 !important;
-    transform: translateY(-1px) !important;
-    box-shadow: 0 4px 12px rgba(99,102,241,.15) !important;
-}
-.stButton > button[kind="primary"] {
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
-    color: #ffffff !important;
-    border: none !important;
-    box-shadow: 0 4px 14px rgba(99,102,241,.35) !important;
-}
-.stButton > button[kind="primary"]:hover {
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
-    transform: translateY(-1px) !important;
-    box-shadow: 0 6px 20px rgba(99,102,241,.45) !important;
-}
-
-/* ── INPUT / SELECTBOX / TEXTAREA light tema ── */
-.stTextInput input, .stTextArea textarea, .stSelectbox div[data-baseweb="select"] > div,
-.stDateInput input, .stNumberInput input, .stTimeInput input {
-    background: #ffffff !important;
-    color: #0f172a !important;
-    border: 1px solid #e2e8f0 !important;
-    border-radius: 10px !important;
-}
-.stTextInput input:focus, .stTextArea textarea:focus {
-    border-color: #6366f1 !important;
-    box-shadow: 0 0 0 3px rgba(99,102,241,.15) !important;
-}
-
-/* ── EXPANDER light tema ── */
-.streamlit-expanderHeader, [data-testid="stExpander"] {
-    background: #ffffff !important;
-    border: 1px solid #e2e8f0 !important;
-    border-radius: 12px !important;
-    color: #0f172a !important;
-    box-shadow: 0 1px 3px rgba(15,23,42,.04) !important;
-}
-.streamlit-expanderContent {
-    background: #fafbff !important;
-    border: 1px solid #e2e8f0 !important;
-    border-top: none !important;
-    border-radius: 0 0 12px 12px !important;
-}
-
-/* ── INFO/WARNING/SUCCESS BANNER'lar light tema ── */
-.stAlert {
-    border-radius: 12px !important;
-    box-shadow: 0 1px 3px rgba(15,23,42,.04) !important;
-}
-
-/* ── SC-CINEMA / SC-NEON helper card'lari LIGHT (override) ── */
-.sc-cinema,
-.sc-neon,
-.sc-stat-hover {
-    background: #ffffff !important;
-    border: 1px solid #e2e8f0 !important;
-    color: #0f172a !important;
-    box-shadow: 0 1px 3px rgba(15,23,42,.04), 0 4px 12px rgba(99,102,241,.06) !important;
-}
-.sc-cinema h1, .sc-cinema h2, .sc-cinema h3, .sc-cinema h4,
-.sc-cinema p, .sc-cinema div, .sc-cinema span {
-    color: #0f172a !important;
-}
-.sc-blob, .sc-blob-container {
-    display: none !important;
-}
-
-/* ── STREAMLIT METRIC kart light ── */
-[data-testid="stMetric"] {
-    background: #ffffff !important;
-    border-radius: 16px !important;
-    padding: 14px 16px !important;
-    border: 1px solid #e2e8f0 !important;
-    box-shadow:
-        0 1px 3px rgba(15,23,42,.04),
-        0 4px 12px rgba(99,102,241,.06) !important;
-}
-[data-testid="stMetricValue"] {
-    color: #0f172a !important;
-    font-weight: 800 !important;
-}
-[data-testid="stMetricLabel"], [data-testid="stMetricLabel"] p {
-    color: #475569 !important;
-}
-
-/* ── HORIZONTAL DIVIDER ── */
-hr {
-    background: linear-gradient(90deg, transparent, #e2e8f0, transparent) !important;
-    border: none !important;
-    height: 1px !important;
-}
-
-/* ── PREMIUM HERO (zengin glass + aurora) ── */
+/* Veli hero header */
 .vp-hero {
-    position: relative;
-    background:
-        linear-gradient(135deg,
-            rgba(255,255,255,.85) 0%,
-            rgba(245,243,255,.75) 30%,
-            rgba(254,243,242,.70) 65%,
-            rgba(239,246,255,.80) 100%);
-    border-radius: 26px;
-    padding: 28px 34px;
-    margin-bottom: 18px;
-    overflow: hidden;
-    backdrop-filter: blur(24px) saturate(200%);
-    -webkit-backdrop-filter: blur(24px) saturate(200%);
-    box-shadow:
-        0 1px 0 rgba(255,255,255,.8) inset,
-        0 1px 3px rgba(15,23,42,.04),
-        0 12px 32px rgba(99,102,241,.10),
-        0 24px 64px rgba(168,85,247,.10),
-        0 48px 96px rgba(236,72,153,.06);
-    border: 1px solid rgba(199,210,254,.6);
-    animation: vp_fadeInUp .6s cubic-bezier(.4,0,.2,1);
+    background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+    border-radius: 16px; padding: 24px; color: white;
+    box-shadow: 0 4px 16px rgba(99,102,241,.2);
 }
-.vp-hero::before {
-    content: '';
-    position: absolute;
-    top: -120px;
-    right: -80px;
-    width: 320px;
-    height: 320px;
-    background: radial-gradient(circle, rgba(236,72,153,.18) 0%, transparent 70%);
-    border-radius: 50%;
-    filter: blur(50px);
-    animation: vp_floatSoft 14s ease-in-out infinite;
-    pointer-events: none;
-}
-.vp-hero::after {
-    content: '';
-    position: absolute;
-    bottom: -130px;
-    left: -80px;
-    width: 360px;
-    height: 360px;
-    background: radial-gradient(circle, rgba(99,102,241,.15) 0%, transparent 70%);
-    border-radius: 50%;
-    filter: blur(60px);
-    animation: vp_floatSoft 18s ease-in-out infinite reverse;
-    pointer-events: none;
-}
-.vp-hero-inner {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    gap: 22px;
-    flex-wrap: wrap;
-}
-
-/* ── AVATAR (modern, light shadow) ── */
+.vp-hero * { color: white !important; }
 .vp-avatar {
-    flex-shrink: 0;
-    width: 86px;
-    height: 86px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #fbbf24 0%, #f472b6 50%, #a855f7 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 900;
-    font-size: 2.1rem;
-    letter-spacing: -1px;
-    box-shadow:
-        0 12px 32px rgba(244,114,182,.35),
-        0 4px 12px rgba(251,191,36,.25),
-        inset 0 -2px 6px rgba(0,0,0,.12),
-        inset 0 2px 6px rgba(255,255,255,.4);
-    border: 3px solid rgba(255,255,255,.95);
-    animation: vp_pulseSoft 5s ease-in-out infinite;
+    width: 72px; height: 72px; border-radius: 50%;
+    background: rgba(255,255,255,.2); display: flex; align-items: center;
+    justify-content: center; font-size: 1.6rem; font-weight: 800; color: white;
+    border: 3px solid rgba(255,255,255,.4);
 }
-
-/* ── HOSGELDIN METNI (dark on light, modern hierarchy) ── */
-.vp-welcome {
-    flex: 1;
-    min-width: 240px;
-}
-.vp-welcome-greeting {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.88rem;
-    color: #6366f1;
-    font-weight: 600;
-    margin-bottom: 4px;
-    letter-spacing: .2px;
-}
-.vp-welcome-name {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.95rem;
-    font-weight: 800;
-    background: linear-gradient(120deg, #1e1b4b 0%, #6366f1 30%, #ec4899 60%, #f59e0b 100%);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    line-height: 1.15;
-    margin-bottom: 2px;
-    letter-spacing: -.6px;
-    animation: vp_shimmer 5s linear infinite;
-}
-.vp-welcome-meta {
-    font-size: 0.85rem;
-    color: #64748b;
-    font-weight: 500;
-    margin-top: 8px;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-.vp-welcome-meta-item {
-    background: rgba(255,255,255,.85);
-    border: 1px solid rgba(99,102,241,.15);
-    border-radius: 14px;
-    padding: 5px 14px;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 1px 3px rgba(15,23,42,.04);
-}
-.vp-welcome-meta-item b { color: #1e1b4b; font-weight: 700; }
-
-/* ── TARIH KUTUSU (modern minimal) ── */
+.vp-welcome-name { font-size: 1.6rem; font-weight: 800; }
+.vp-subtitle { opacity: .8; font-size: .9rem; }
 .vp-date-box {
-    flex-shrink: 0;
-    text-align: center;
-    background: rgba(255,255,255,.9);
-    border: 1px solid rgba(226,232,240,.8);
-    border-radius: 18px;
-    padding: 14px 22px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow:
-        0 4px 12px rgba(99,102,241,.08),
-        inset 0 1px 0 rgba(255,255,255,.6);
-}
-.vp-date-day {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 2rem;
-    font-weight: 800;
-    color: #6366f1;
-    line-height: 1;
-    margin-bottom: 4px;
-    letter-spacing: -1px;
-}
-.vp-date-month {
-    font-size: 0.72rem;
-    color: #475569;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-}
-.vp-date-weekday {
-    font-size: 0.68rem;
-    color: #94a3b8;
-    font-weight: 500;
-    margin-top: 4px;
-    text-transform: uppercase;
-    letter-spacing: .5px;
+    background: rgba(255,255,255,.15); border-radius: 12px; padding: 8px 14px;
+    font-size: .8rem; text-align: center;
 }
 
-/* ── TAB STİLLERİ (light & modern) ── */
-div[data-baseweb="tab-list"] {
-    background: rgba(255,255,255,.9) !important;
-    border-radius: 18px !important;
-    padding: 8px !important;
-    gap: 4px !important;
-    border: 1px solid rgba(226,232,240,.8) !important;
-    box-shadow:
-        0 4px 16px rgba(99,102,241,.06),
-        0 1px 3px rgba(15,23,42,.04),
-        inset 0 1px 0 rgba(255,255,255,.6) !important;
-    margin-bottom: 16px !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
+/* Kart stilleri */
+.vp-card {
+    background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px;
+    padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,.04); margin-bottom: 12px;
 }
-button[data-baseweb="tab"] {
-    background: transparent !important;
-    border-radius: 12px !important;
-    color: #64748b !important;
-    font-family: 'Inter', sans-serif !important;
-    font-weight: 600 !important;
-    font-size: 0.85rem !important;
-    padding: 10px 18px !important;
-    border: 1px solid transparent !important;
-    transition: all .25s cubic-bezier(.4,0,.2,1) !important;
+.vp-card-title { font-weight: 700; color: #0f172a; font-size: 1rem; margin-bottom: 8px; }
+.vp-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 20px;
+    font-size: .75rem; font-weight: 700;
 }
-button[data-baseweb="tab"]:hover {
-    background: rgba(99,102,241,.08) !important;
-    color: #4338ca !important;
-    border-color: rgba(99,102,241,.15) !important;
-    transform: translateY(-1px) !important;
-}
-button[data-baseweb="tab"][aria-selected="true"] {
-    background: linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#ec4899 100%) !important;
-    color: #fff !important;
-    border-color: rgba(255,255,255,.3) !important;
-    box-shadow:
-        0 6px 16px rgba(139,92,246,.35),
-        0 2px 6px rgba(236,72,153,.2),
-        inset 0 1px 0 rgba(255,255,255,.3) !important;
-    transform: translateY(-1px) !important;
-}
-button[data-baseweb="tab"][aria-selected="true"]::after {
-    background: transparent !important;
-    border: none !important;
-}
+.vp-badge-green { background: #dcfce7; color: #166534; }
+.vp-badge-red { background: #fee2e2; color: #991b1b; }
+.vp-badge-yellow { background: #fef3c7; color: #92400e; }
+.vp-badge-blue { background: #dbeafe; color: #1e40af; }
+.vp-badge-purple { background: #f3e8ff; color: #6b21a8; }
 
-/* ── METRIC kart hover efektleri (light theme) ── */
-[data-testid="stMetric"] {
-    background: rgba(255,255,255,.9) !important;
-    border-radius: 16px !important;
-    padding: 14px 16px !important;
-    border: 1px solid rgba(226,232,240,.8) !important;
-    box-shadow:
-        0 1px 3px rgba(15,23,42,.04),
-        0 4px 12px rgba(99,102,241,.06) !important;
-    transition: all .3s cubic-bezier(.4,0,.2,1) !important;
-}
-[data-testid="stMetric"]:hover {
-    transform: translateY(-2px) !important;
-    border-color: rgba(168,85,247,.3) !important;
-    box-shadow:
-        0 8px 24px rgba(99,102,241,.12),
-        0 4px 12px rgba(168,85,247,.08) !important;
-}
-[data-testid="stMetric"] [data-testid="stMetricValue"] {
-    color: #1e1b4b !important;
-    font-weight: 800 !important;
-}
-[data-testid="stMetric"] [data-testid="stMetricLabel"] {
-    color: #64748b !important;
-}
-
-/* ── Mobile için optimize ── */
+/* Mobile optimize */
 @media (max-width: 768px) {
     .vp-hero { padding: 20px 18px; }
-    .vp-avatar { width: 64px; height: 64px; font-size: 1.5rem; }
-    .vp-welcome-name { font-size: 1.4rem; }
+    .vp-avatar { width: 56px; height: 56px; font-size: 1.3rem; }
+    .vp-welcome-name { font-size: 1.3rem; }
     .vp-date-box { display: none; }
 }
 </style>
