@@ -163,8 +163,6 @@ _MODUL_GRUPLARI = [
             ("Sosyal Etkinlik ve Kulupler",    "🎭"),
             ("Kutuphane",                      "📖"),
             ("Okul Sagligi Takip",             "🏥"),
-            ("Yemek Tercihi ve Alerji",        "🍽️"),
-            ("Servis GPS Takip",               "🚌"),
         ],
     },
     {
