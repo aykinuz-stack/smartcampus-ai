@@ -230,26 +230,58 @@ html, body, .stApp, .main, section.main,
 .stTextInput input:focus, .stTextArea textarea:focus { border-color: #6366f1 !important; box-shadow: 0 0 0 2px rgba(99,102,241,.1) !important; }
 .stSelectbox label, .stTextInput label, .stTextArea label { color: #475569 !important; font-weight: 600 !important; }
 
-/* Tabs — tam okunabilir, kesilmez */
-div[data-testid="stTabs"] > div:first-child { gap: 4px !important; flex-wrap: wrap !important; }
-div[data-baseweb="tab-list"] { flex-wrap: wrap !important; overflow: visible !important; }
-button[data-baseweb="tab"] {
-    background: #ffffff !important; color: #475569 !important;
+/* Tabs — tam okunabilir, kesilmez, yuksek spesifiklik */
+html body .stApp div[data-testid="stTabs"] > div[role="tablist"],
+html body .stApp div[data-testid="stTabs"] > div:first-child {
+    background: #f1f5f9 !important; border: none !important;
+    border-radius: 12px !important; padding: 6px !important;
+    gap: 5px !important; flex-wrap: wrap !important;
+    overflow: visible !important; box-shadow: none !important;
+}
+html body .stApp div[data-testid="stTabs"] > div[role="tablist"] > button,
+html body .stApp div[data-testid="stTabs"] div[data-baseweb="tab-list"] > button,
+html body .stApp button[data-baseweb="tab"] {
+    background: #ffffff !important; color: #334155 !important;
     border: 1px solid #e2e8f0 !important; border-radius: 10px !important;
-    font-weight: 600 !important; padding: 10px 16px !important; font-size: 0.82rem !important;
+    font-weight: 600 !important; padding: 10px 18px !important;
+    font-size: 0.85rem !important;
     white-space: nowrap !important; overflow: visible !important;
-    text-overflow: unset !important; min-width: fit-content !important; max-width: none !important;
+    text-overflow: unset !important; min-width: fit-content !important;
+    max-width: none !important; flex-shrink: 0 !important;
 }
-button[data-baseweb="tab"] p, button[data-baseweb="tab"] span {
-    white-space: nowrap !important; overflow: visible !important; text-overflow: unset !important;
+html body .stApp button[data-baseweb="tab"] p,
+html body .stApp button[data-baseweb="tab"] span,
+html body .stApp div[role="tablist"] > button p,
+html body .stApp div[role="tablist"] > button span {
+    white-space: nowrap !important; overflow: visible !important;
+    text-overflow: unset !important; color: inherit !important;
+    font-size: 0.85rem !important;
 }
-button[data-baseweb="tab"]:hover { border-color: #6366f1 !important; color: #4338ca !important; }
-button[data-baseweb="tab"][aria-selected="true"] {
+html body .stApp button[data-baseweb="tab"]:hover,
+html body .stApp div[role="tablist"] > button:hover {
+    border-color: #6366f1 !important; color: #4338ca !important;
+    background: #f8fafc !important;
+}
+html body .stApp button[data-baseweb="tab"][aria-selected="true"],
+html body .stApp div[role="tablist"] > button[aria-selected="true"] {
     background: #6366f1 !important; color: #ffffff !important;
     border-color: #6366f1 !important; box-shadow: 0 2px 8px rgba(99,102,241,.25) !important;
 }
-button[data-baseweb="tab"][aria-selected="true"] *, button[data-baseweb="tab"][aria-selected="true"] p { color: #ffffff !important; }
-div[data-baseweb="tab-highlight"], div[data-baseweb="tab-border"] { display: none !important; }
+html body .stApp button[data-baseweb="tab"][aria-selected="true"] *,
+html body .stApp div[role="tablist"] > button[aria-selected="true"] *,
+html body .stApp div[role="tablist"] > button[aria-selected="true"] p {
+    color: #ffffff !important;
+}
+html body .stApp div[data-baseweb="tab-highlight"],
+html body .stApp div[data-baseweb="tab-border"] { display: none !important; }
+/* Nested tab'lar da ayni kural */
+html body .stApp div[data-testid="stTabs"] div[data-testid="stTabs"] > div[role="tablist"] {
+    background: #f8fafc !important; border: 1px solid #e2e8f0 !important;
+    padding: 4px !important;
+}
+html body .stApp div[data-testid="stTabs"] div[data-testid="stTabs"] > div[role="tablist"] > button {
+    font-size: 0.82rem !important; padding: 8px 14px !important;
+}
 
 /* Expander — temiz kart */
 [data-testid="stExpander"] > details {
