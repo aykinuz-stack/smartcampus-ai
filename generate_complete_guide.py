@@ -686,6 +686,364 @@ def build_pdf():
             y = np()
 
     # ════════════════════════════════════
+    # VELI DETAYLI REHBER
+    # ════════════════════════════════════
+    bolum_no += 1
+    y = np()
+    c.setFont(_font(True, True), 26)
+    c.setFillColor(NAVY)
+    c.drawString(40, y, f"BOLUM {bolum_no}")
+    c.setFont(_font(True, True), 20)
+    c.setFillColor(ORANGE)
+    c.drawString(150, y, "VELI DETAYLI REHBER")
+    _line(c, 40, y - 8, W - 40, y - 8, GOLD, 2)
+    y -= 30
+
+    c.setFont(_font(True), 12)
+    c.setFillColor(NAVY)
+    c.drawString(45, y, "Anaokulundan Liseye — Cocugunuzun Tum Gelisimini Takip Edin")
+    y -= 20
+
+    veli_detay = [
+        ("COCUK DETAY SAYFASI (5 Sekme)", ORANGE, [
+            ("Yoklama Sekmesi", [
+                "Cocugunuzun tum devamsizlik kayitlarini gorursunuz",
+                "Ozursuz / ozurlu / gec kalan gun sayilari",
+                "Son 30 gun devamsizlik trendi",
+                "Devamsizlik orani (%) — %10 ustu kirmizi uyari",
+                "Her kayitta: tarih, ders, ders saati, tur (devamsiz/gec/izinli)",
+                "OTOMATIK SMS: Cocugunuz devamsiz oldugunda telefonunuza SMS gelir",
+            ]),
+            ("Notlar Sekmesi", [
+                "Ders bazli tum notlar (yazili, sozlu, proje, performans)",
+                "Genel ortalama + donem ortalamasi",
+                "Ders bazli ortalamalar (en yuksek/en dusuk)",
+                "Not trendi: yukseliyor mu, dusuyor mu?",
+                "Renk kodlari: 85+ yesil, 70+ mavi, 50+ turuncu, 50- kirmizi",
+                "OTOMATIK BILDIRIM: Yeni not girildiginde bildirim gelir",
+            ]),
+            ("Sinav Sonuclari Sekmesi", [
+                "Yazili sinav sonuclari (dogru/yanlis/bos analizi)",
+                "Deneme sinavi sonuclari",
+                "Online sinav sonuclari",
+                "Sinav bazli karsilastirma: sinif ortalamasi vs cocugunuz",
+                "Zaman icindeki performans trendi",
+            ]),
+            ("Karne Sekmesi", [
+                "1. ve 2. donem karnesi",
+                "Ders bazli donem notu",
+                "Ogretmen yorumlari",
+                "Davranis notu",
+                "Devamsizlik ozeti",
+            ]),
+            ("Odevler Sekmesi", [
+                "Bekleyen odevler (teslim tarihi ile)",
+                "Geciken odevler (kirmizi isaret)",
+                "Teslim edilen odevler + ogretmen puani",
+                "Odev detay: ders, ogretmen, aciklama, dosya",
+            ]),
+        ]),
+        ("GUNLUK KAPSUL (AI Ozet)", PURPLE, [
+            ("Her Gun 18:00'de Otomatik", [
+                "AI tarafindan hazirlanan gunluk ozet",
+                "Akademik bolum: bugun alinan notlar, yapilan sinavlar",
+                "Sosyal-Duygusal: cocugunuzun mood durumu (gizli, sadece tehlike varsa bilgi)",
+                "Etkinlikler: katildigi ders disi etkinlikler",
+                "Yarin Hazirlik: yarin sinav var mi, odev teslimi var mi",
+                "Ozel An: basari, odul, olumlu gelisme",
+            ]),
+        ]),
+        ("OTOMATIK GELEN BILDIRIMLER", RED, [
+            ("SMS ile Gelen", [
+                "Devamsizlik bildirimi: 'Cocugunuz bugun 2. ders Matematik dersine katilmadi'",
+                "Not bildirimi: 'Matematik 2. yazili notu girildi: 85'",
+                "Odeme hatirlatma: 'Nisan taksiti vade tarihi: 15.04.2026'",
+                "Sinav hatirlatma: 'Matematik yazili — 28 Nisan Pazartesi'",
+            ]),
+            ("Uygulama Ici Bildirimler", [
+                "Yeni odev verildi bildirimi",
+                "Veli toplantisi hatirlatma",
+                "Gunluk kapsul hazir bildirimi",
+                "Belge talebi sonucu",
+            ]),
+        ]),
+        ("RANDEVU VE GORUSME", BLUE, [
+            ("Ogretmen Gorusme Talebi", [
+                "Ogretmen sec, tarih + saat sec (09:00-16:00 arasi)",
+                "Konu sec: Akademik Durum, Davranis, Devamsizlik, Genel",
+                "Not yaz, gonder",
+                "Cakisma kontrolu: ayni saat baskasi almissa uyari verir",
+                "Gorusme sonrasi ogretmen notu + siz puanlarsiniz (1-5 yildiz)",
+            ]),
+        ]),
+        ("SERVIS TAKIBI", CYAN, [
+            ("Okul Servisi Bilgileri", [
+                "Cocugunuzun binecegi servis: plaka, guzergah, sofor adi",
+                "Kalkis saati, tahmini varis saati",
+                "Servis durumu: yolda (yesil), bekleniyor (turuncu), tamamlandi (gri)",
+                "Sofor telefon numarasi",
+            ]),
+        ]),
+        ("YEMEK MENUSU + ALERJI", GREEN, [
+            ("Haftalik Menu", [
+                "5 gunluk menu: corba, ana yemek, yan yemek, tatli",
+                "Kalori bilgisi (varsa)",
+                "Alerji uyarisi: cocugunuzun alerjisi varsa isretlenir",
+                "Bugunun menusu vurgulanir",
+            ]),
+        ]),
+        ("ODEME TAKIBI (Mobil)", GOLD, [
+            ("Borc Durumu", [
+                "Toplam borc, odenen, kalan tutar",
+                "Sonraki taksit tarihi + tutari",
+                "Geciken taksit sayisi (varsa kirmizi)",
+                "Odeme gecmisi: tarih, tutar, yontem, makbuz no",
+            ]),
+        ]),
+        ("DIGER VELI OZELLIKLERI", MUTED, [
+            ("Tamamlayici Ozellikler", [
+                "Basari Duvari: cocugunuzun odul ve basarilari (gold/silver/bronze)",
+                "Saglik & Rehberlik: asi takvimi, saglik kayitlari, rehber bilgisi",
+                "Veli Egitim: 14+ makale (cocuk gelisimi, dijital guvenlik, sinav stresi)",
+                "Gunluk Bulten: okulun gunluk duyurulari",
+                "Belge Talebi: online ogrenci belgesi basvurusu",
+                "Memnuniyet Anketi: 5 yildiz puanlama + yorum",
+                "Mesajlasma: ogretmen ve yonetimle direkt iletisim",
+                "Smarti AI: yapay zeka asistan — her sorunuza cevap",
+            ]),
+        ]),
+    ]
+
+    for baslik, renk, alt_boluml in veli_detay:
+        if y < 120:
+            y = np()
+        _rect(c, 40, y - 5, W - 80, 20, fill=renk)
+        c.setFont(_font(True), 11)
+        c.setFillColor(white)
+        c.drawString(50, y, baslik)
+        y -= 28
+
+        for alt_baslik, maddeler in alt_boluml:
+            if y < 80:
+                y = np()
+            c.setFont(_font(True), 10)
+            c.setFillColor(NAVY)
+            c.drawString(55, y, alt_baslik)
+            y -= 14
+            for madde in maddeler:
+                c.setFont(_font(), 9)
+                c.setFillColor(BODY_CLR)
+                c.drawString(65, y, f"• {madde}")
+                y -= 12
+                if y < 50:
+                    y = np()
+            y -= 5
+
+    # ════════════════════════════════════
+    # OGRENCI DETAYLI REHBER
+    # ════════════════════════════════════
+    bolum_no += 1
+    y = np()
+    c.setFont(_font(True, True), 26)
+    c.setFillColor(NAVY)
+    c.drawString(40, y, f"BOLUM {bolum_no}")
+    c.setFont(_font(True, True), 20)
+    c.setFillColor(CYAN)
+    c.drawString(150, y, "OGRENCI DETAYLI REHBER")
+    _line(c, 40, y - 8, W - 40, y - 8, GOLD, 2)
+    y -= 30
+
+    c.setFont(_font(True), 12)
+    c.setFillColor(NAVY)
+    c.drawString(45, y, "24 Sayfa — Tum Akademik Hayatini Tek Elden Yonet")
+    y -= 25
+
+    ogrenci_detay = [
+        ("DASHBOARD (Ana Ekran)", INDIGO, [
+            ("KPI Kartlari (Ust Kisim)", [
+                "Genel Ortalama: tum derslerin ortalamasi (renk kodlu)",
+                "Devamsizlik: ozursuz gun sayisi (5+ kirmizi uyari)",
+                "Bekleyen Odev: teslim edilmemis odev sayisi",
+                "Mood: bugunun ruh hali (emoji gostergesi)",
+            ]),
+            ("Yaklasan Sinavlar (Countdown)", [
+                "Yaklasan yazili/quiz tarihleri geri sayim ile",
+                "3 gunden az kaldiysa KIRMIZI kart",
+                "7 gunden az TURUNCU, diger MAVI",
+                "Sinav adi, ders, tarih, konu bilgisi",
+            ]),
+            ("Odev Geri Sayim", [
+                "En yakin teslim tarihli odevler",
+                "Kalan gun/saat gosterimi",
+                "1 gunden az kirmizi, 3 gunden az turuncu",
+            ]),
+            ("Son Notlar Karusel", [
+                "Son 10 not otomatik kayan PageView",
+                "Her 4 saniyede sayfa degisir",
+                "Not degeri buyuk font, ders adi kucuk",
+                "Renk kodu: 85+ yesil, 70+ mavi, 50+ turuncu, 50- kirmizi",
+            ]),
+            ("Bugunun Dersleri", [
+                "Bugun hangi dersler var — yatay scroll",
+                "Ders saati + ders adi",
+            ]),
+        ]),
+        ("AKADEMIK TAKIP", GREEN, [
+            ("Notlarim", [
+                "Tum dersler, tum donemler, tum not turleri",
+                "Ders bazli ortalama, en yuksek, en dusuk",
+                "Donem ortalamasi vs genel ortalama",
+                "Filtre: donem secimi",
+            ]),
+            ("Devamsizlik", [
+                "Ozursuz / ozurlu / gec detayli liste",
+                "Son 30 gun trendi",
+                "Devamsizlik orani (%)",
+            ]),
+            ("Odevlerim", [
+                "Bekleyen: teslim tarihi yaklasan odevler",
+                "Geciken: suresi gecmis odevler (kirmizi)",
+                "Teslim Edilen: ogretmen puani (varsa)",
+                "Online teslim: dosya/link yukle",
+            ]),
+            ("Sinav Sonuclarim", [
+                "Yazili + deneme + online sinav sonuclari",
+                "Dogru/Yanlis/Bos analizi",
+                "Ders bazli ortalamalar",
+                "Puan dairesi: renk kodlu (yesil/mavi/turuncu/kirmizi)",
+            ]),
+            ("Kazanim Borclarim", [
+                "70 altindaki dersler listelenir",
+                "RED bant (0-49): kritik — telafi zorunlu",
+                "YELLOW bant (50-69): uyari — pekistirme onerisi",
+                "Telafi gorevine yonlendirme butonu",
+            ]),
+            ("Telafi Gorevleri", [
+                "RED: Ozet okuma + 2 quiz (hemen + 48 saat)",
+                "YELLOW: 5 soruluk pekistirme",
+                "GREEN: 8 soruluk haftalik tekrar",
+                "BLUE: Zor set (5) + Hiz calismasi (10)",
+                "Aktif / Tamamlanan tab ile takip",
+            ]),
+        ]),
+        ("AI VE DIJITAL OGRENME", PURPLE, [
+            ("Smarti AI Asistan", [
+                "GPT-4o-mini destekli yapay zeka sohbet",
+                "Ders sorusu sor, aninda cevap al",
+                "Sesli giris butonu (mikrofon)",
+                "Chat gecmisi Hive'da saklanir (kapaninca kaybolmaz)",
+                "Rol bazli oneriler: 'Notlarim nasil?', 'Yarin sinav var mi?'",
+            ]),
+            ("Online Sinav", [
+                "Mobilde sinav coz",
+                "Tab guvenlik (baska uygulamaya gecersen uyari)",
+                "Sure takibi",
+                "Otomatik puanlama",
+                "Aninda geri bildirim",
+            ]),
+            ("AI Treni", [
+                "12 vagon interaktif quiz",
+                "Her vagon farkli konu",
+                "Dogru cevapla ilerle, yanlis tekrar dene",
+            ]),
+            ("Dil Gelisimi", [
+                "5 dil: Ingilizce, Almanca, Fransizca, Ispanyolca, Italyanca",
+                "104+ ders, kelime + gramer + dinleme",
+                "KDG Premium: CEFR A1-C1 seviye Ingilizce + Almanca",
+            ]),
+        ]),
+        ("OYUNLAR VE ETKINLIKLER", PINK, [
+            ("Zeka Oyunlari", [
+                "Hafiza oyunu, Sudoku, mantik bulmacalari",
+                "Puan takibi, en yuksek skor",
+            ]),
+            ("Bilgi Yarismasi", [
+                "4 tur: Genel Kultur, Kim Milyoner, Bilgi Yarismasi, KYT",
+                "3700+ soru",
+            ]),
+            ("Matematik Koyu", [
+                "6 matematik oyunu",
+                "Formul tablosu",
+            ]),
+            ("Sanat Sokagi", [
+                "6 atolye: Resim, Muzik, Fotograf, Drama, El Sanatlari, Dijital",
+                "Ilham kosesi: unlu sanatcilardan sozler",
+            ]),
+            ("Bilisim Vadisi", [
+                "3 seviye kodlama: Baslangic (Scratch), Orta (Python), Ileri (AI)",
+                "Dijital okuryazarlik: guvenli sifre, siber zorbalik",
+                "Yararli kaynaklar: Code.org, Khan Academy",
+            ]),
+        ]),
+        ("KISISEL ALAN", GOLD, [
+            ("Defterim", [
+                "Kisisel not defteri (offline calisir — Hive)",
+                "4 kategori: Kisisel, Ders Notu, Sinav, Odev",
+                "Filtre + arama",
+                "Swipe ile silme",
+                "Kapaninca kaybolmaz",
+            ]),
+            ("Mood Check-in", [
+                "Gunluk duygu durumu isaretle (5 saniye)",
+                "5 seviye: Cok kotu → Harika",
+                "GIZLI: sadece rehber ogretmen gorur",
+                "Tehlike durumunda otomatik uyari",
+            ]),
+            ("Ihbar Hatti", [
+                "Anonim bildirim: zorbalik, siddet, ihmal",
+                "Takip kodu ile sonuc sorgulama",
+                "Kimlik bilgisi VERILMEZ",
+            ]),
+            ("Kocluk", [
+                "Hedef belirleme + gelisim takibi",
+                "Haftalik/aylik ilerleme",
+            ]),
+        ]),
+        ("OTOMATIK GELEN BILGILER", RED, [
+            ("Bildirimler", [
+                "Yeni sinav tarihi eklendi",
+                "Yeni odev verildi",
+                "Not girildi",
+                "Devamsizlik uyarisi",
+                "Duyuru + etkinlik bildirimi",
+            ]),
+            ("Gunun Bilgisi", [
+                "Her gun farkli bilgi (230 gun, 8 kategori)",
+                "Bilim, tarih, dogad, teknoloji, sanat...",
+            ]),
+            ("Duyuru & Yemek", [
+                "Okul duyurulari",
+                "Bugunun yemek menusu",
+            ]),
+        ]),
+    ]
+
+    for baslik, renk, alt_boluml in ogrenci_detay:
+        if y < 120:
+            y = np()
+        _rect(c, 40, y - 5, W - 80, 20, fill=renk)
+        c.setFont(_font(True), 11)
+        c.setFillColor(white)
+        c.drawString(50, y, baslik)
+        y -= 28
+
+        for alt_baslik, maddeler in alt_boluml:
+            if y < 80:
+                y = np()
+            c.setFont(_font(True), 10)
+            c.setFillColor(NAVY)
+            c.drawString(55, y, alt_baslik)
+            y -= 14
+            for madde in maddeler:
+                c.setFont(_font(), 9)
+                c.setFillColor(BODY_CLR)
+                c.drawString(65, y, f"• {madde}")
+                y -= 12
+                if y < 50:
+                    y = np()
+            y -= 5
+
+    # ════════════════════════════════════
     # ARKA KAPAK
     # ════════════════════════════════════
     c.showPage()
