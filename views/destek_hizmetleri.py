@@ -2775,7 +2775,7 @@ def render_destek_hizmetleri():
         "📋 Grup A": [("📊 Dashboard", 0), ("🎫 Talepler", 1), ("🔄 Periyodik İşler", 2), ("📋 Denetimler", 3), ("🔧 Bakım Yönetimi", 4), ("🏢 Firma Havuzu", 5), ("📦 Tedarikçiler", 6)],
         "📊 Grup B": [("📈 Raporlar", 7), ("📊 SLA Cockpit", 8), ("🗺️ Tesis Haritası", 9), ("🏆 Memnuniyet", 10), ("🧠 Kök Neden", 11), ("📱 Saha Ekibi", 12), ("🔄 Eskalasyon", 13)],
         "🔧 Grup C": [("📊 Prediktif Bakım", 14), ("🎮 Gamification", 15), ("🔌 Entegrasyon Hub", 16), ("🧬 Destek DNA", 17), ("🎯 Kaynak Planlama", 18), ("📡 Komuta Merkezi", 19), ("📋 Denetim Uyum", 20)],
-        "📈 Grup D": [("🌍 Benchmark", 21), ("🤖 AI Operasyon", 22), ("⚙️ Ayarlar", 23), ("🤖 Smarti", 24)],
+        "📈 Grup D": [("🌍 Benchmark", 21), ("🤖 AI Operasyon", 22), ("🏗️ Tesis & Varlik", 25), ("⚙️ Ayarlar", 23), ("🤖 Smarti", 24)],
     }
     _sg_33990 = st.radio("", list(_GRP_33990.keys()), horizontal=True, label_visibility="collapsed", key="rg_33990")
     _gt_33990 = _GRP_33990[_sg_33990]
@@ -2930,3 +2930,10 @@ def render_destek_hizmetleri():
             except Exception:
                 return ""
         render_smarti_chat("destek_hizmetleri", data_context_fn=_des_smarti_context)
+    if 25 in _aktif_idx_33990:
+      with _tab_real_33990[25]:
+        try:
+            from views.tesis_varlik_yonetimi import render_tesis_varlik_yonetimi
+            render_tesis_varlik_yonetimi()
+        except Exception as _e:
+            st.error(f"Tesis & Varlik Yonetimi yuklenemedi: {_e}")

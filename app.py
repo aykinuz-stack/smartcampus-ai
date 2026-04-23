@@ -168,7 +168,6 @@ _MODUL_GRUPLARI = [
     {
         "baslik": "OPERASYON",
         "moduller": [
-            ("Tesis ve Varlik Yonetimi",       "🏗️"),
             ("Sivil Savunma ve IS Guvenligi",  "⛑️"),
             ("Mezunlar ve Kariyer Yonetimi",   "🎓"),
         ],
