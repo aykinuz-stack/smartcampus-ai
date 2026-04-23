@@ -704,11 +704,15 @@ def render_sidebar() -> str:
             st.session_state[_um_key] = get_user_modules(auth_user.get("username", ""))
         izinli = st.session_state[_um_key]
 
+        # izinli bossa rol varsayilanini kullan (Ogretmen, Calisan vb.)
+        if not izinli and role not in ("Yonetici", "SuperAdmin"):
+            from utils.auth import get_role_default_modules
+            izinli = list(get_role_default_modules(role))
+
         # Admin-only moduller
         extra_moduller = []
         if role == "SuperAdmin":
             extra_moduller.append(("Kurum Yonetimi", "🏢"))
-        # Veli/Ogrenci panel onizleme kaldirildi — artik kendi sifreleriyle girilecek
 
         # Tum modul listesini olustur (radio icin)
         tum_moduller = []
@@ -718,8 +722,8 @@ def render_sidebar() -> str:
         for ad, _ in extra_moduller:
             tum_moduller.append(ad)
 
-        # Yetki filtresi
-        if izinli:
+        # Yetki filtresi — Yonetici/SuperAdmin haric herkes filtrelenir
+        if izinli and role not in ("Yonetici", "SuperAdmin"):
             tum_moduller = [m for m in tum_moduller if m in izinli or m == "Ana Sayfa"]
 
         # Gosterim icin ikon ekle (radio label)
