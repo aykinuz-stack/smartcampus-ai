@@ -1335,6 +1335,7 @@ def render_butce_gelir_gider():
         "📅 Tahmini vs Gerçekleşen",
         "📅 Aylık Takip",
         "📈 Raporlar",
+        "💳 Ödeme Takip",
         "⚙️ Ayarlar",
         "🤖 Smarti",
     ]
@@ -1359,6 +1360,13 @@ def render_butce_gelir_gider():
     with tabs[6]:
         _render_raporlar(store)
     with tabs[7]:
-        _render_ayarlar(store)
+        # Odeme Takip — butce modulu icine entegre
+        try:
+            from views.odeme_takip import render_odeme_takip
+            render_odeme_takip()
+        except Exception as e:
+            st.error(f"Odeme Takip yuklenemedi: {e}")
     with tabs[8]:
+        _render_ayarlar(store)
+    with tabs[9]:
         _render_smarti(store)

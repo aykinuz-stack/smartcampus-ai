@@ -123,7 +123,6 @@ _MODUL_GRUPLARI = [
             ("Insan Kaynaklari Yonetimi",         "👥"),
             ("Kayit Modulu",                      "🎯"),
             ("Butce Gelir Gider",                 "💰"),
-            ("Odeme Takip",                       "💳"),
             ("Sosyal Medya Yonetimi",             "📱"),
             ("Kurum Hizmetleri",                  "🏛️"),
             ("Vekil Yonetimi",                    "🔄"),
