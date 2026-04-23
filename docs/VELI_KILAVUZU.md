@@ -225,6 +225,8 @@ Talebiniz gonderildikten sonra su durumlardan birinde olur:
 
 Okul servisinin guzergah ve zaman bilgilerini goruntuleyebilirsiniz.
 
+> **Not:** Servis bilgileri artik Kurum Hizmetleri modulunun Servis sekmesi uzerinden sunulmaktadir.
+
 ### 6.1 Guzergah Bilgisi
 
 1. **Veli Paneli** icerisinden **Servis Takibi** bolumune gidin.
@@ -250,6 +252,8 @@ Okul servisinin guzergah ve zaman bilgilerini goruntuleyebilirsiniz.
 ## 7. Yemek Menusu
 
 Okulun haftalik yemek menusunu goruntuleyebilirsiniz.
+
+> **Not:** Yemek ve alerji bilgileri artik Kurum Hizmetleri modulunun Yemek sekmesi uzerinden sunulmaktadir.
 
 ### 7.1 Menu Goruntuleme
 
@@ -493,6 +497,8 @@ Mobil uygulamayi Android telefonunuza yukleme adimlari:
 ## 16. Odeme Durumu
 
 Okul ucretleri ve taksit odemelerinizi takip edin.
+
+> **Not:** Odeme islemleri artik Butce Gelir Gider modulunun Odeme Takip sekmesi uzerinden yonetilmektedir. Veli Paneli uzerinden odeme bilgilerinize erismeye devam edebilirsiniz.
 
 ### 16.1 Taksit Plani Goruntuleme
 

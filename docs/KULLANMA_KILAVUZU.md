@@ -26,7 +26,7 @@ SmartCampusAI, Turk ozel okullari icin gelistirilmis **yapay zeka destekli egiti
 
 **Temel ozellikler:**
 
-- 8 ana grup altinda **34 modul** ile tam kapsamli okul yonetimi
+- 8 ana grup altinda **30 modul** ile tam kapsamli okul yonetimi
 - **Yapay zeka destekli** soru uretimi, ogrenme analitigi ve akilli asistan
 - **Multi-tenant** yapi: Birden fazla okul/kampus ayni altyapida bagimsiz calisabilir
 - **Rol bazli erisim:** Yonetici, ogretmen, veli, ogrenci ve rehber rolleri
@@ -129,14 +129,14 @@ Sidebar'da moduller **8 grup** halinde duzenlenmistir. Her grubun basligi buyuk 
 | # | Grup Adi | Modul Sayisi |
 |---|----------|--------------|
 | 1 | GENEL | 3 |
-| 2 | KURUM YONETIMI | 7 |
+| 2 | KURUM YONETIMI | 6 |
 | 3 | ILETISIM & RANDEVU | 3 |
 | 4 | AKADEMIK | 7 |
 | 5 | DIJITAL OGRENME | 5 |
-| 6 | OKUL YASAMI | 5 |
-| 7 | OPERASYON | 3 |
+| 6 | OKUL YASAMI | 3 |
+| 7 | OPERASYON | 2 |
 | 8 | SISTEM | 1 |
-| | **Toplam** | **34** |
+| | **Toplam** | **30** |
 
 Bir modulu acmak icin sidebar'daki ilgili butona tiklamaniz yeterlidir. Aktif modul, sol kenarinda vurgu cizgisi ve koyu arka planla belirginlestirilir.
 
@@ -237,15 +237,9 @@ Kurumun mali yonetimi:
 - Butce planlama ve takip
 - Donem bazli karsilastirmalar
 - Grafik ve tablo raporlari
+- **Odeme Takip sekmesi:** Ogrenci aidat ve odeme sureci, taksit takibi, geciken odeme uyarilari, odeme makbuzu uretimi
 
-#### Odeme Takip
-
-Ogrenci aidat ve odeme sureci:
-
-- Odeme planlari olusturma
-- Taksit takibi
-- Geciken odeme uyarilari
-- Odeme makbuzu uretimi
+> **Not:** Odeme Takip artik ayri bir modul degil, Butce Gelir Gider modulunun bir sekmesidir.
 
 #### Sosyal Medya Yonetimi
 
@@ -261,6 +255,10 @@ Okulun sundugu ek hizmetlerin yonetimi:
 
 - Hizmet tanimlari ve fiyatlandirma
 - Hizmet bazli raporlama
+- **Yemek Tercihi ve Alerji sekmesi:** Haftalik/aylik menu planlama, ogrenci alerji bilgileri, ozel diyet gereksinimleri
+- **Servis GPS Takip sekmesi:** Servis guzergah yonetimi, binis/inis kayitlari, veli bildirim sistemi
+
+> **Not:** Yemek Tercihi ve Servis GPS Takip artik ayri moduller degil, Kurum Hizmetleri modulunun sekmeleridir.
 
 ---
 
@@ -459,36 +457,11 @@ Ogrenci saglik bilgilerinin yonetimi:
 - Revir kayitlari
 - Asi takibi
 
-#### Yemek Tercihi ve Alerji
-
-Yemekhane yonetimi ve alerji takibi:
-
-- Haftalik/aylik menu planlama
-- Ogrenci alerji bilgileri ve uyarilar
-- Veli bazli yemek tercihi secimi
-- Ozel diyet gereksinimleri
-
-#### Servis GPS Takip
-
-Okul servisi takip sistemi:
-
-- Canli GPS konum takibi
-- Servis guzergah yonetimi
-- Binis/inis kayitlari
-- Veli bildirim sistemi (tahmini varis suresi)
+> **Not:** Yemek Tercihi ve Alerji ile Servis GPS Takip artik KURUM YONETIMI > Kurum Hizmetleri modulunun sekmeleridir.
 
 ---
 
 ### 4.7 OPERASYON
-
-#### Tesis ve Varlik Yonetimi
-
-Okul bina ve varliklarinin yonetimi:
-
-- Oda, sinif, laboratuvar envantteri
-- Bakim ve onarim talepleri
-- Demirbbas takibi
-- Alan rezervasyonu
 
 #### Sivil Savunma ve IS Guvenligi
 
@@ -507,6 +480,8 @@ Mezun takibi ve kariyer yonlendirme:
 - Universite ve kariyer takibi
 - Mezun etkinlikleri
 - Mentorluk programlari
+
+> **Not:** Tesis ve Varlik Yonetimi artik ayri bir modul degil, Destek Hizmetleri > Tesis & Varlik sekmesi olarak erisime aciktir.
 
 ---
 

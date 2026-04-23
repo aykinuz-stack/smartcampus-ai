@@ -1,7 +1,7 @@
 # SmartCampusAI Mobile -- Mimari Dokuman
 
 > Son guncelleme: 2026-04-21
-> Flutter 3.19+ | FastAPI | 99 Dart dosya | 135 API endpoint | 5 rol
+> Flutter 3.19+ | FastAPI | 99 Dart dosya | 143 API endpoint | 5 rol
 
 ---
 
@@ -17,7 +17,7 @@ backend JSON dosyalarini direkt okur/yazar.
 | Framework | Flutter 3.19+ / Dart 3.2+ |
 | Backend | FastAPI (Python 3.10+) |
 | Dart dosya sayisi | 99 |
-| API endpoint sayisi | 135 |
+| API endpoint sayisi | 143 |
 | Rol sayisi | 5 (ogrenci, veli, ogretmen, rehber, yonetici) |
 | Toplam sayfa | 85+ (24 ogrenci, 13 veli, 7 ogretmen, 13 rehber, 21 yonetici, 6 ortak, 1 auth) |
 | Tasarim | Ultra Premium -- dark/light tema, glassmorphism, gradient |
@@ -143,7 +143,7 @@ mobile/
 |   |   |-- rehber.py
 |   |   |-- veli.py
 |   |   +-- yonetici.py
-|   +-- main.py                # FastAPI app, CORS, rate limiting, 135 route
+|   +-- main.py                # FastAPI app, CORS, rate limiting, 143 route
 +-- docs/
     |-- MIMARI.md              (bu dosya)
     +-- CALISTIRMA_KILAVUZU.md

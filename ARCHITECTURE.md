@@ -9,7 +9,7 @@
 1. [Genel Bakis](#1-genel-bakis)
 2. [Teknoloji Stack](#2-teknoloji-stack)
 3. [Dizin Yapisi](#3-dizin-yapisi)
-4. [Modul Listesi (34 Modul)](#4-modul-listesi-34-modul)
+4. [Modul Listesi (30 Modul)](#4-modul-listesi-30-modul)
 5. [Mobil Uygulama Mimarisi](#5-mobil-uygulama-mimarisi)
 6. [Backend API Yapisi](#6-backend-api-yapisi)
 7. [Veri Modeli](#7-veri-modeli)
@@ -26,9 +26,9 @@ platformudur. Sistem uc ana bilesenden olusur:
 
 | Bilesen           | Teknoloji       | Aciklama                                       |
 |-------------------|-----------------|-------------------------------------------------|
-| Web Uygulamasi    | Streamlit       | 34 modul, 291 Python view dosyasi               |
+| Web Uygulamasi    | Streamlit       | 30 modul, 291 Python view dosyasi               |
 | Mobil Uygulama    | Flutter (Dart)  | 99 Dart dosyasi, 5 rol, 78 sayfa                |
-| Mobil Backend     | FastAPI          | 138 route, 13 router, JWT kimlik dogrulama       |
+| Mobil Backend     | FastAPI          | 143 route, 13 router, JWT kimlik dogrulama       |
 
 Temel prensipler:
 - **Multi-tenant mimari**: Her okul kendi veri alaninda calisir (`data/tenants/`)
@@ -233,9 +233,9 @@ SmartCampusAI/
 
 ---
 
-## 4. Modul Listesi (34 Modul)
+## 4. Modul Listesi (30 Modul)
 
-Web uygulamasi 8 sidebar grubunda toplam 34 modul icerir:
+Web uygulamasi 8 sidebar grubunda toplam 30 modul icerir:
 
 ### 4.1 GENEL (3 modul)
 
@@ -245,71 +245,67 @@ Web uygulamasi 8 sidebar grubunda toplam 34 modul icerir:
 | 2 | Yonetim Tek Ekran     | Tum okul verilerinin tek ekranda ozet gorunumu         |
 | 3 | Analitik Dashboard    | 5 sekmeli analitik panel (Plotly grafikleri)            |
 
-### 4.2 KURUM YONETIMI (7 modul)
+### 4.2 KURUM YONETIMI (6 modul)
 
 | # | Modul Adi                         | Aciklama                                              |
 |---|-----------------------------------|-------------------------------------------------------|
 | 4 | Kurumsal Organizasyon ve Iletisim | Okul profili, org semasi, iletisim, sinif listeleri   |
 | 5 | Insan Kaynaklari Yonetimi         | Personel CRUD, izin takibi, ozluk, pozisyon yonetimi  |
 | 6 | Kayit Modulu                      | Aday takip (CRM), kampanya, gorusme, kesin kayit      |
-| 7 | Butce Gelir Gider                 | Gelir/gider takibi, butce planlama, raporlar           |
-| 8 | Odeme Takip                       | Taksit planlari, makbuz, veli odeme portali            |
-| 9 | Sosyal Medya Yonetimi             | Icerik planlama, performans takibi, takvim             |
-|10 | Kurum Hizmetleri                  | Destek hizmetleri, form yonetimi, MEB formlar          |
+| 7 | Butce Gelir Gider                 | Gelir/gider, butce planlama, odeme takip, taksit, makbuz |
+| 8 | Sosyal Medya Yonetimi             | Icerik planlama, performans takibi, takvim             |
+| 9 | Kurum Hizmetleri                  | Yemek & alerji, servis GPS, destek hizmetleri, MEB formlar |
 
 ### 4.3 ILETISIM & RANDEVU (3 modul)
 
 | # | Modul Adi               | Aciklama                                              |
 |---|-------------------------|-------------------------------------------------------|
-|11 | Veli-Ogretmen Gorusme   | Gorusme zamanlama, randevu olusturma, takip            |
-|12 | Randevu ve Ziyaretci    | Ziyaretci giris/cikis, randevu yonetimi, rehber       |
-|13 | Toplanti ve Kurullar    | Toplanti planlama, katilimci takibi, tutanak           |
+|10 | Veli-Ogretmen Gorusme   | Gorusme zamanlama, randevu olusturma, takip            |
+|11 | Randevu ve Ziyaretci    | Ziyaretci giris/cikis, randevu yonetimi, rehber       |
+|12 | Toplanti ve Kurullar    | Toplanti planlama, katilimci takibi, tutanak           |
 
 ### 4.4 AKADEMIK (7 modul)
 
 | # | Modul Adi                 | Aciklama                                              |
 |---|---------------------------|-------------------------------------------------------|
-|14 | Akademik Takip            | Not girisi, devamsizlik, ders programi, yillik plan   |
-|15 | Olcme ve Degerlendirme    | Soru bankasi, sinav olusturma, online sinav, analiz   |
-|16 | Ogrenci Zeka Merkezi      | Oyunlastirma, zeka oyunlari, matematik, bilisim       |
-|17 | Okul Oncesi - Ilkokul     | Okul oncesi + ilkokul mufredati, etkinlik planlama    |
-|18 | Rehberlik                 | Vaka takibi, BEP, psikolojik test, kriz mudahale      |
-|19 | Sertifika Uretici         | 7 sablon, PDF uretim, toplu ZIP, ozel tasarim          |
-|20 | Egitim Koclugu            | Bireylestirmis destek, hedef takibi, ilerleme raporu   |
+|13 | Akademik Takip            | Not girisi, devamsizlik, ders programi, yillik plan   |
+|14 | Olcme ve Degerlendirme    | Soru bankasi, sinav olusturma, online sinav, analiz   |
+|15 | Ogrenci Zeka Merkezi      | Oyunlastirma, zeka oyunlari, matematik, bilisim       |
+|16 | Okul Oncesi - Ilkokul     | Okul oncesi + ilkokul mufredati, etkinlik planlama    |
+|17 | Rehberlik                 | Vaka takibi, BEP, psikolojik test, kriz mudahale      |
+|18 | Sertifika Uretici         | 7 sablon, PDF uretim, toplu ZIP, ozel tasarim          |
+|19 | Egitim Koclugu            | Bireylestirmis destek, hedef takibi, ilerleme raporu   |
 
 ### 4.5 DIJITAL OGRENME (5 modul)
 
 | # | Modul Adi               | Aciklama                                              |
 |---|-------------------------|-------------------------------------------------------|
-|21 | AI Ogrenme Platformu    | GPT destekli icerik, adaptif ogrenme, dijital pasaport|
-|22 | Yabanci Dil             | 5 dil (EN/DE/FR/ES/IT), CEFR bazli, konusma pratiği  |
-|23 | Kisisel Dil Gelisimi    | Bireysel dil ilerleme takibi, kelime defteri           |
-|24 | AI Treni                | Oyunlastirilmis bilgi yarismasi (gomulu, backend yok) |
-|25 | STEAM Merkezi           | Bilim, teknoloji, muhendislik, sanat, matematik       |
+|20 | AI Ogrenme Platformu    | GPT destekli icerik, adaptif ogrenme, dijital pasaport|
+|21 | Yabanci Dil             | 5 dil (EN/DE/FR/ES/IT), CEFR bazli, konusma pratiği  |
+|22 | Kisisel Dil Gelisimi    | Bireysel dil ilerleme takibi, kelime defteri           |
+|23 | AI Treni                | Oyunlastirilmis bilgi yarismasi (gomulu, backend yok) |
+|24 | STEAM Merkezi           | Bilim, teknoloji, muhendislik, sanat, matematik       |
 
-### 4.6 OKUL YASAMI (5 modul)
+### 4.6 OKUL YASAMI (3 modul)
 
 | # | Modul Adi               | Aciklama                                              |
 |---|-------------------------|-------------------------------------------------------|
-|26 | Sosyal Etkinlik ve Kulupler | Kulup yonetimi, etkinlik planlama, katilimci takip |
-|27 | Kutuphane               | Barkod sistemi, odunc takibi, 20 ornek kitap          |
-|28 | Okul Sagligi Takip      | Revir kayitlari, saglik formlari, alerji takibi        |
-|29 | Yemek Tercihi ve Alerji | 11 alerjen, menu catisma kontrolu, diyet tercihleri    |
-|30 | Servis GPS Takip        | Otobus rota takibi (st.map), ogrenci binis listesi    |
+|25 | Sosyal Etkinlik ve Kulupler | Kulup yonetimi, etkinlik planlama, katilimci takip |
+|26 | Kutuphane               | Barkod sistemi, odunc takibi, 20 ornek kitap          |
+|27 | Okul Sagligi Takip      | Revir kayitlari, saglik formlari, alerji takibi        |
 
-### 4.7 OPERASYON (3 modul)
+### 4.7 OPERASYON (2 modul)
 
 | # | Modul Adi                       | Aciklama                                              |
 |---|---------------------------------|-------------------------------------------------------|
-|31 | Tesis ve Varlik Yonetimi        | Demirbas, tuketim malzemesi, bakim planlama            |
-|32 | Sivil Savunma ve IS Guvenligi   | Tatbikat planlama, risk degerlendirme, egitim takibi   |
-|33 | Mezunlar ve Kariyer Yonetimi    | Mezun veritabani, mentorluk, etkinlik, is takibi       |
+|28 | Sivil Savunma ve IS Guvenligi   | Tatbikat planlama, risk degerlendirme, egitim takibi   |
+|29 | Mezunlar ve Kariyer Yonetimi    | Mezun veritabani, mentorluk, etkinlik, is takibi       |
 
 ### 4.8 SISTEM (1 modul)
 
 | # | Modul Adi | Aciklama                                              |
 |---|-----------|-------------------------------------------------------|
-|34 | AI Destek | Yapay zeka destekli sistem yardimcisi                  |
+|30 | AI Destek | Yapay zeka destekli sistem yardimcisi                  |
 
 ---
 
@@ -484,7 +480,7 @@ Mobil uygulamada ultra premium tasarim dili kullanilir:
 |---------|-------|
 | Framework | FastAPI |
 | API Prefix | `/api/v1` |
-| Toplam Route | ~138 |
+| Toplam Route | 143 |
 | Toplam Router | 13 |
 | Dokumantasyon | `/docs` (Swagger), `/redoc` (ReDoc) |
 | Rate Limit | 100 istek/dakika/IP |
@@ -507,8 +503,8 @@ Mobil uygulamada ultra premium tasarim dili kullanilir:
 | bildirim | `/bildirim` | 3 | Push bildirim gonderme/listeleme |
 | odeme | `/odeme` | 6 | Taksit listesi, makbuz, odeme durumu |
 
-Ek olarak `main.py` icerisinde dogrudan tanimli ~20 route bulunur (dil dersleri,
-kurum hizmetleri vb.).
+Ek olarak `main.py` icerisinde dogrudan tanimli ~29 route bulunur (dil dersleri,
+kurum hizmetleri vb.). Toplam: 143 route.
 
 ### 6.3 Akis Semasi
 

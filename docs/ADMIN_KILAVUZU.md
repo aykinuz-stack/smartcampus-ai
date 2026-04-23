@@ -49,12 +49,12 @@ Giris yaptiktan sonra sol tarafta (sidebar) modul gruplari gorunur. Yonetici rol
 | Grup                  | Icerik                                                      |
 |-----------------------|-------------------------------------------------------------|
 | **GENEL**             | Ana Sayfa, Yonetim Tek Ekran, Analitik Dashboard            |
-| **KURUM YONETIMI**    | Kurumsal Org., IK, Kayit, Butce, Odeme, Sosyal Medya, Kurum Hizmetleri |
+| **KURUM YONETIMI**    | Kurumsal Org., IK, Kayit, Butce Gelir Gider, Sosyal Medya, Kurum Hizmetleri |
 | **ILETISIM & RANDEVU**| Veli-Ogretmen Gorusme, Randevu ve Ziyaretci, Toplanti ve Kurullar |
 | **AKADEMIK**          | Akademik Takip, Olcme Degerlendirme, Zeka Merkezi, Rehberlik vb. |
 | **DIJITAL OGRENME**   | AI Ogrenme Platformu, Yabanci Dil, AI Treni, STEAM Merkezi  |
-| **OKUL YASAMI**       | Etkinlikler, Kutuphane, Saglik, Yemek, Servis               |
-| **OPERASYON**         | Tesis Yonetimi, Sivil Savunma, Mezunlar                     |
+| **OKUL YASAMI**       | Etkinlikler, Kutuphane, Saglik                               |
+| **OPERASYON**         | Sivil Savunma, Mezunlar                                      |
 | **SISTEM**            | AI Destek                                                    |
 
 Herhangi bir modulu acmak icin sidebar'daki ilgili butona tiklayin.
@@ -225,7 +225,9 @@ Kurumun mali takibini yapin.
 
 Ogrenci ucretleri ve taksit yonetimi.
 
-**Modulu acmak icin:** KURUM YONETIMI > Odeme Takip
+**Erisim:** KURUM YONETIMI > Butce Gelir Gider > **Odeme Takip** sekmesi
+
+> **Not:** Odeme Takip artik ayri bir sidebar modulu degil, Butce Gelir Gider modulunun bir sekmesidir.
 
 #### Taksit Plani Olusturma
 
@@ -376,7 +378,9 @@ Erken Uyari Sistemi, Ogrenci Zeka Merkezi modulunun icinde yer alir:
 
 Okul servislerinin guzergah ve zaman yonetimi.
 
-**Modulu acmak icin:** OKUL YASAMI > Servis GPS Takip
+**Erisim:** KURUM YONETIMI > Kurum Hizmetleri > **Servis** sekmesi
+
+> **Not:** Servis GPS Takip artik ayri bir sidebar modulu degil, Kurum Hizmetleri modulunun bir sekmesidir.
 
 1. **Guzergah Yonetimi:** Mevcut servis guzergahlarini goruntuleyebilir, yeni guzergah ekleyebilirsiniz.
 2. **Durak Tanimlari:** Her guzergahtaki duraklari sirasiyla ekleyin.
@@ -388,7 +392,9 @@ Okul servislerinin guzergah ve zaman yonetimi.
 
 Ogrenci beslenme yonetimi.
 
-**Modulu acmak icin:** OKUL YASAMI > Yemek Tercihi ve Alerji
+**Erisim:** KURUM YONETIMI > Kurum Hizmetleri > **Yemek** sekmesi
+
+> **Not:** Yemek Tercihi ve Alerji artik ayri bir sidebar modulu degil, Kurum Hizmetleri modulunun bir sekmesidir.
 
 1. **Haftalik Menu:** Yemek menusunu girin veya guncelleyin.
 2. **Alerji Kayitlari:** Ogrenci bazli alerji bilgilerini yonetin.
@@ -414,7 +420,9 @@ Okul kutuphanesi envanter ve odunc yonetimi.
 
 Okul binasi, ekipman ve demirbas takibi.
 
-**Modulu acmak icin:** OPERASYON > Tesis ve Varlik Yonetimi
+**Erisim:** Destek Hizmetleri > **Tesis & Varlik** sekmesi
+
+> **Not:** Tesis ve Varlik Yonetimi artik ayri bir sidebar modulu degil, Destek Hizmetleri modulunun bir sekmesidir.
 
 1. **Demirbas Kaydi:** Okul demirbaslarini (projektor, bilgisayar, mobilya) sisteme ekleyin.
 2. **Tuketim Malzemeleri:** Kirtasiye, temizlik malzemesi gibi tuketim kalemlerinin stok takibi.
@@ -457,7 +465,7 @@ Bircok modulde PDF export ozelligi bulunur:
 |--------------------------|-----------------------------------------------------|
 | Olcme ve Degerlendirme   | Sinav kagidi (OSYM formati), optik form, sonuc raporu |
 | Akademik Takip           | Karne, devamsizlik raporu, sinif listesi            |
-| Odeme Takip              | Makbuz, borc durumu                                  |
+| Butce Gelir Gider > Odeme Takip | Makbuz, borc durumu                           |
 | Ogrenci Zeka Merkezi     | Ogrenci 360 raporu                                   |
 | Sertifika Uretici        | Basari belgesi, katilim belgesi                      |
 
