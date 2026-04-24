@@ -192,8 +192,8 @@ def _tab_genel_bakis(students, teachers, grades, attendance):
     # Grade-level distribution
     with c2:
         _section("Kademe Dagilimi")
-        grade_counts = Counter(s.get("sinif", 0) for s in aktif_students)
-        sorted_grades = sorted(grade_counts.items())
+        grade_counts = Counter(str(s.get("sinif", "0")) for s in aktif_students)
+        sorted_grades = sorted(grade_counts.items(), key=lambda x: int(x[0]) if x[0].isdigit() else 0)
         labels = [f'{g}. Sinif' for g, _ in sorted_grades]
         values = [c for _, c in sorted_grades]
         fig = _px_bar(
