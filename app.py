@@ -768,7 +768,11 @@ def render_sidebar() -> str:
 
         # Secili sayfa (buton basılmadıysa session'dan al)
         if page is None:
-            page = st.session_state.get("_sidebar_secim", "Ana Sayfa")
+            # Yonetici icin varsayilan: Yonetim Tek Ekran
+            if role in ("Yonetici", "SuperAdmin"):
+                page = st.session_state.get("_sidebar_secim", "Yonetim Tek Ekran")
+            else:
+                page = st.session_state.get("_sidebar_secim", "Ana Sayfa")
 
         return page
 
