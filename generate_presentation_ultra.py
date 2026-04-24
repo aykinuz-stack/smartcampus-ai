@@ -19,6 +19,7 @@ from pptx.enum.shapes import MSO_SHAPE
 from pptx.oxml.ns import qn, nsmap
 from lxml import etree
 import copy
+from modul_veri import MODULLER
 
 # ====================================================================
 # DESIGN TOKENS
@@ -778,545 +779,217 @@ def slide_05_roles():
 
 
 # ====================================================================
-# MODULE SLIDES (6–25)
+# MODULE SLIDES — Dynamic from modul_veri.py (40 modules x 2-3 slides)
 # ====================================================================
 
-def slide_06_kayit():
+def _module_overview_slide(mod):
+    """SLIDE 1 for a module: Overview with features and tab count stat."""
     slide = new_slide()
-    _module_slide(slide,
-        "\U0001F4CB", "Kayit Modulu", "Ogrenci kayit sureci basindan sonuna",
-        [("6", "Grup"), ("34", "Sekme"), ("5", "Pipeline Adim"), ("3", "Kampanya Turu")],
+    grup = mod.get("grup", "MODUL")
+    icon = mod.get("icon", "")
+    ad = mod.get("ad", "")
+    aciklama = mod.get("amac", mod.get("aciklama", ""))
+    ana_ozellikler = mod.get("ana_ozellikler", [])
+    sekmeler = mod.get("sekmeler", [])
+
+    # Section label — module group name
+    _section_label(slide, MARGIN_LEFT, Inches(0.3), grup)
+
+    # Title: emoji + module name
+    _add_rich_text_box(
+        slide, MARGIN_LEFT, Inches(0.55), CONTENT_WIDTH, Inches(0.6),
         [
-            ("\U0001F4CB", "Tam pipeline: Basvuru -> Gorusme -> Sinav -> Kabul -> Kayit -> Kesin Kayit"),
-            ("\U0001F3AF", "Kampanya yonetimi: erken kayit, kardes, burslu indirimleri"),
-            ("\U0001F916", "AI tabanli lead skorlama ve takip otomasyonu"),
-            ("\U0001F4CA", "Donem bazli analitik: donusum orani, kaynak analizi"),
-            ("\U0001F4B0", "Odeme plani olusturma, taksitlendirme, makbuz kesme"),
-            ("\U0001F4E7", "Otomatik SMS/email bildirimleri (basvuru onay, hatirlatma)"),
-        ],
-        "PIPELINE ADIMLARI:\n\n"
-        "\u25C6 1. On Basvuru\n"
-        "   Web formu veya manuel giris\n\n"
-        "\u25C6 2. Gorusme\n"
-        "   Veli gorusmesi & rehberlik\n\n"
-        "\u25C6 3. Sinav/Degerlendirme\n"
-        "   Seviye tespit sinavi\n\n"
-        "\u25C6 4. Kabul Karari\n"
-        "   Komisyon degerlendirmesi\n\n"
-        "\u25C6 5. Kesin Kayit\n"
-        "   Evrak + Odeme + Onay"
+            (icon + "  ", Pt(30), GOLD, False, "Segoe UI Emoji"),
+            (ad, Pt(30), WHITE, True, "Segoe UI Black"),
+        ]
     )
+    # Gold underline
+    _add_line(slide, MARGIN_LEFT, Inches(1.2),
+              Inches(5), Inches(1.2), color=GOLD, width=Pt(3))
+
+    # Subtitle: module description (truncate if very long)
+    desc_text = aciklama[:200] + ("..." if len(aciklama) > 200 else "")
+    _add_text_box(slide, MARGIN_LEFT, Inches(1.35),
+                  Inches(8.0), Inches(0.7),
+                  desc_text, Pt(12), LIGHT_GRAY, PP_ALIGN.LEFT, bold=False,
+                  line_spacing=1.4)
+
+    # Left side: ANA OZELLIKLER
+    feat_y = Inches(2.2)
+    _add_text_box(slide, MARGIN_LEFT, feat_y - Inches(0.05),
+                  Inches(4), Inches(0.3),
+                  "ANA OZELLIKLER", Pt(11), GOLD, PP_ALIGN.LEFT, bold=True,
+                  font_name="Segoe UI Semibold")
+
+    # Build feature items with diamond bullet
+    feat_items = []
+    for feat in ana_ozellikler[:8]:
+        feat_items.append(("\u25C6", feat))
+    if feat_items:
+        _add_icon_bullet_list(
+            slide, MARGIN_LEFT, feat_y + Inches(0.3),
+            Inches(6.5), Inches(4.0),
+            feat_items, font_size=Pt(11), color=OFF_WHITE, spacing=1.35
+        )
+
+    # Right side: stat card showing tab count + feature count
+    stat_x = Inches(8.5)
+    stat_y = Inches(2.2)
+    _add_stat_card(slide, stat_x, stat_y, Inches(2.2), Inches(1.1),
+                   str(len(sekmeler)), "Sekme",
+                   num_color=GOLD, border_color=DARK_GOLD)
+    _add_stat_card(slide, stat_x + Inches(2.5), stat_y, Inches(2.2), Inches(1.1),
+                   str(len(ana_ozellikler)), "Ozellik",
+                   num_color=LIGHT_GOLD, border_color=DARK_GOLD)
+
+    # If module has is_akisi, show step count too
+    is_akisi = mod.get("is_akisi", [])
+    if is_akisi:
+        _add_stat_card(slide, stat_x, stat_y + Inches(1.4), Inches(2.2), Inches(1.1),
+                       str(len(is_akisi)), "Is Adimi",
+                       num_color=CYAN, border_color=DARK_GOLD)
+
+    # If module has sss, show FAQ count
+    sss = mod.get("sss", [])
+    if sss:
+        _add_stat_card(slide, stat_x + Inches(2.5), stat_y + Inches(1.4),
+                       Inches(2.2), Inches(1.1),
+                       str(len(sss)), "SSS",
+                       num_color=PURPLE, border_color=DARK_GOLD)
+
+    return slide
 
 
-def slide_07_akademik():
+def _module_tabs_slide(mod, tab_offset=0, max_tabs=8):
+    """SLIDE 2 (or 3) for a module: Tabs detail + is_akisi + ipuclari."""
     slide = new_slide()
-    _module_slide(slide,
-        "\U0001F4DA", "Akademik Takip", "Ogrenci basarisinin 360 derece takibi",
-        [("30", "Sekme"), ("5", "Ana Grup"), ("9", "Veri Modeli"), ("7", "Rapor")],
+    icon = mod.get("icon", "")
+    ad = mod.get("ad", "")
+    sekmeler = mod.get("sekmeler", [])
+    is_akisi = mod.get("is_akisi", [])
+    ipuclari = mod.get("ipuclari", [])
+    grup = mod.get("grup", "MODUL")
+
+    tab_slice = sekmeler[tab_offset:tab_offset + max_tabs]
+    is_continuation = tab_offset > 0
+
+    # Section label
+    _section_label(slide, MARGIN_LEFT, Inches(0.3), grup)
+
+    # Title
+    title_text = f"SEKMELER — {ad}"
+    if is_continuation:
+        title_text += " (devam)"
+    _add_rich_text_box(
+        slide, MARGIN_LEFT, Inches(0.55), CONTENT_WIDTH, Inches(0.5),
         [
-            ("\U0001F4D6", "Yoklama & devamsizlik: gunluk/haftalik/toplu giris, 7 alt sekme"),
-            ("\U0001F4DD", "Not girisi: coklu not turu, donem bazli, otomatik ortalama"),
-            ("\U0001F4D3", "Ders defteri: kazanim isleme takibi, ay bazli"),
-            ("\U0001F4C5", "Akademik planlama: yillik/aylik/haftalik plan, MEB uyumu"),
-            ("\U0001F4CA", "Karne & siralama: otomatik karne, sinif/okul siralamasi"),
-            ("\U0001F4E6", "Odev takip: dosya/link/video/QR, online teslim"),
-        ],
-        "VERI MODELLERI:\n\n"
-        "\u25C6 Student — Ogrenci kaydi\n"
-        "\u25C6 Teacher — Ogretmen profili\n"
-        "\u25C6 GradeRecord — Not kaydi\n"
-        "\u25C6 AttendanceRecord — Devamsizlik\n"
-        "\u25C6 ScheduleSlot — Ders programi\n"
-        "\u25C6 AcademicPlan — Plan kaydi\n"
-        "\u25C6 KazanimIsleme — Kazanim takip\n"
-        "\u25C6 OlcmeTakvim — Sinav takvimi\n"
-        "\u25C6 EtutKayit — Etut/destek kaydi"
+            (icon + "  ", Pt(24), GOLD, False, "Segoe UI Emoji"),
+            (title_text, Pt(22), WHITE, True, "Segoe UI Black"),
+        ]
     )
+    _add_line(slide, MARGIN_LEFT, Inches(1.05),
+              Inches(5), Inches(1.05), color=GOLD, width=Pt(2))
+
+    # Layout: tabs on the left, is_akisi on the right (only on first tab slide)
+    has_right_panel = (not is_continuation) and (is_akisi or ipuclari)
+    tab_area_width = Inches(6.5) if has_right_panel else Inches(11.5)
+
+    # Render tabs
+    ty = Inches(1.25)
+    tab_lines = []
+    for i, sekme in enumerate(tab_slice):
+        sekme_ad = sekme[0] if len(sekme) > 0 else ""
+        sekme_desc = sekme[1] if len(sekme) > 1 else ""
+        # Truncate long descriptions
+        if len(sekme_desc) > 120:
+            sekme_desc = sekme_desc[:117] + "..."
+        tab_lines.append((f"{tab_offset + i + 1}. {sekme_ad}", Pt(11), GOLD, True, "Segoe UI Semibold"))
+        tab_lines.append((f"    {sekme_desc}", Pt(10), LIGHT_GRAY, False, "Segoe UI"))
+
+    if tab_lines:
+        _add_multiline_text(
+            slide, MARGIN_LEFT, ty, tab_area_width, Inches(5.0),
+            tab_lines, alignment=PP_ALIGN.LEFT, line_spacing=1.25
+        )
+
+    # Right panel: is_akisi + ipuclari (only on first tab slide)
+    if has_right_panel:
+        rx = Inches(7.5)
+        ry = Inches(1.25)
+        rw = Inches(5.0)
+
+        # is_akisi section
+        if is_akisi:
+            _add_rounded_rect(slide, rx, ry, rw, Inches(3.5),
+                              fill_color=CARD_BG_ALT, border_color=GOLD,
+                              border_width=Pt(1))
+            _add_text_box(slide, rx + Inches(0.15), ry + Inches(0.1),
+                          rw - Inches(0.3), Inches(0.3),
+                          "IS AKISI", Pt(11), GOLD, PP_ALIGN.LEFT, bold=True,
+                          font_name="Segoe UI Semibold")
+
+            akis_lines = []
+            for step in is_akisi[:7]:
+                akis_lines.append(("\u25B6", step))
+            _add_icon_bullet_list(
+                slide, rx + Inches(0.15), ry + Inches(0.45),
+                rw - Inches(0.3), Inches(2.9),
+                akis_lines, font_size=Pt(9), color=OFF_WHITE, spacing=1.3
+            )
+            ry += Inches(3.7)
+
+        # ipuclari section (1-2 tips)
+        if ipuclari and ry < Inches(5.8):
+            tip_count = min(2, len(ipuclari))
+            tip_h = Inches(0.4) + tip_count * Inches(0.55)
+            _add_rounded_rect(slide, rx, ry, rw, tip_h,
+                              fill_color=CARD_BG_ALT, border_color=DARK_GOLD,
+                              border_width=Pt(1))
+            _add_text_box(slide, rx + Inches(0.15), ry + Inches(0.08),
+                          rw - Inches(0.3), Inches(0.25),
+                          "IPUCLARI", Pt(10), LIGHT_GOLD, PP_ALIGN.LEFT, bold=True,
+                          font_name="Segoe UI Semibold")
+            tip_items = []
+            for tip in ipuclari[:tip_count]:
+                tip_text = tip[:150] + ("..." if len(tip) > 150 else "")
+                tip_items.append(("\u2728", tip_text))
+            _add_icon_bullet_list(
+                slide, rx + Inches(0.15), ry + Inches(0.35),
+                rw - Inches(0.3), tip_h - Inches(0.4),
+                tip_items, font_size=Pt(9), color=LIGHT_GRAY, spacing=1.25
+            )
+
+    return slide
 
 
-def slide_08_olcme():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F4DD", "Olcme & Degerlendirme", "Turkiye'nin en gelismis sinav sistemi",
-        [("42", "Sektor Gap"), ("7", "Soru Tipi"), ("20", "Blueprint"), ("6", "Bloom")],
-        [
-            ("\U0001F916", "AI soru uretimi: GPT-4o-mini, kazanim bazli, 5 adim wizard"),
-            ("\U0001F4DA", "Soru bankasi: MCQ, dogru/yanlis, eslestirme, siralama, cloze, matematik"),
-            ("\U0001F3AF", "Online sinav: tab guvenlik, heartbeat, negatif puanlama"),
-            ("\U0001F4CA", "Psikometrik analiz: IRT (1PL, 2PL, 3PL), madde analizi"),
-            ("\U0001F4C4", "OSYM tarzi PDF: 2 sutun, optik form, QR kod"),
-            ("\U0001F9E9", "Adaptif test: CAT engine, Fisher bilgi, MLE"),
-        ],
-        "SINAV ALTYAPISI:\n\n"
-        "\u25C6 ExamGenerator — Blueprint'ten sinav\n"
-        "\u25C6 AutoGrader — Otomatik puanlama\n"
-        "\u25C6 ProctoringEngine — Gozetim\n"
-        "\u25C6 QTIExporter — IMS QTI 2.1\n"
-        "\u25C6 LTIProvider — Moodle/Canvas\n"
-        "\u25C6 IRTModel — Rasch modeli\n"
-        "\u25C6 CATEngine — Adaptif test\n"
-        "\u25C6 DifficultyCalibrator — p-value\n"
-        "\u25C6 LearningAnalytics — Analitik"
-    )
+def generate_module_slides():
+    """Generate 2-3 slides per module for all 40 modules from modul_veri.py."""
+    total = 0
+    for idx, mod in enumerate(MODULLER):
+        ad = mod.get("ad", f"Modul {idx+1}")
+        sekmeler = mod.get("sekmeler", [])
+        num = idx + 1
+        print(f"  [M{num:02d}/40]  {ad}...", end="")
 
+        # SLIDE 1: Overview
+        _module_overview_slide(mod)
+        total += 1
 
-def slide_09_rehberlik():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F9E0", "Rehberlik & Psikolojik Danismanlik",
-        "Ogrenci ruh sagligi ve gelisim takibi",
-        [("8", "Sekme"), ("5", "Gorusme Tipi"), ("4", "Risk Seviye"), ("3", "BEP Alani")],
-        [
-            ("\U0001F4CB", "Vaka yonetimi: acma, takip, kapatma sureci"),
-            ("\U0001F4AC", "Gorusme kaydi: ogrenci, veli, ogretmen gorusmeleri"),
-            ("\U0001F60A", "Mood check-in: gunluk duygu durumu takibi"),
-            ("\u26A0\uFE0F", "Risk analizi: erken uyari, zorbalik, dropout riski"),
-            ("\U0001F4D1", "BEP takibi: bireysel egitim programi, hedef izleme"),
-            ("\U0001F6A8", "Kriz mudahale: acil durum protokolleri"),
-        ],
-        "MOOD CHECK-IN:\n\n"
-        "\U0001F60A Cok Mutlu\n"
-        "\U0001F642 Mutlu\n"
-        "\U0001F610 Normal\n"
-        "\U0001F641 Uzgun\n"
-        "\U0001F622 Cok Uzgun\n\n"
-        "Gunluk takip ile erken mudahale.\n"
-        "AI destekli risk tespiti.\n"
-        "Anonim sinif bazli raporlama."
-    )
+        # SLIDE 2: Tabs detail
+        if len(sekmeler) > 8:
+            # First 8 tabs
+            _module_tabs_slide(mod, tab_offset=0, max_tabs=8)
+            total += 1
+            # Remaining tabs
+            _module_tabs_slide(mod, tab_offset=8, max_tabs=8)
+            total += 1
+        else:
+            _module_tabs_slide(mod, tab_offset=0, max_tabs=8)
+            total += 1
 
+        print(f"  OK ({2 if len(sekmeler) <= 8 else 3} slayt)")
 
-def slide_10_ik():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F465", "IK & Personel Yonetimi",
-        "Ise alimdan performansa tum surec",
-        [("6", "Ana Sekme"), ("12", "Alt Sekme"), ("5", "Mulakat"), ("4", "Izin Turu")],
-        [
-            ("\U0001F4CB", "Ise alim: pozisyon acma, ilan, basvuru toplama"),
-            ("\U0001F3AF", "Mulakat sureci: 5 asamali degerlendirme"),
-            ("\U0001F4C5", "Izin yonetimi: yillik, mazeret, saglik, ucretsiz"),
-            ("\U0001F4CA", "Performans: donemsel degerlendirme, hedef takibi"),
-            ("\U0001F4B0", "Bordro entegrasyon: maas, prim, mesai hesaplama"),
-            ("\U0001F4C4", "Ozluk dosyasi: dijital dokuman arsivi"),
-        ],
-        "ISE ALIM PIPELINE:\n\n"
-        "\u25C6 Pozisyon Talebi\n"
-        "\u25C6 Ilan Yayinlama\n"
-        "\u25C6 Basvuru Toplama\n"
-        "\u25C6 On Eleme\n"
-        "\u25C6 Mulakat (5 asama)\n"
-        "\u25C6 Referans Kontrolu\n"
-        "\u25C6 Teklif & Ise Baslatma\n\n"
-        "Tum surec dijital ve izlenebilir."
-    )
-
-
-def slide_11_butce():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F4B0", "Butce & Odeme Takip",
-        "Gelir/gider yonetimi ve veli odeme takibi",
-        [("4", "Ana Modul"), ("12+", "Rapor"), ("3", "Odeme Tipi"), ("5", "Geciken Band")],
-        [
-            ("\U0001F4B8", "Gelir/gider takibi: kategori bazli, donem karsilastirma"),
-            ("\U0001F4CB", "Taksit plani: ogrenci bazli, esnek taksitlendirme"),
-            ("\U0001F9FE", "Makbuz kesme: otomatik numara, PDF cikti"),
-            ("\U0001F514", "Geciken uyari: SMS/email hatirlatma, renk kodlu takip"),
-            ("\U0001F4CA", "Butce planlama: yillik projeksiyon, sapma analizi"),
-            ("\U0001F4B3", "Coklu odeme yontemi: nakit, havale, kredi karti"),
-        ],
-        "ODEME TAKIP OZELLIKLERI:\n\n"
-        "\u25C6 Taksit plani olusturma\n"
-        "\u25C6 Otomatik hatirlatma SMS\n"
-        "\u25C6 Geciken odeme raporlari\n"
-        "\u25C6 Makbuz/dekont PDF\n"
-        "\u25C6 Donem bazli analiz\n"
-        "\u25C6 Indirim & burs yonetimi\n"
-        "\u25C6 Kardes indirimi otomatik\n"
-        "\u25C6 Tahsilat dashboard"
-    )
-
-
-def slide_12_kurum():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F3EB", "Kurum Hizmetleri",
-        "Gunluk operasyonlarin dijital yonetimi",
-        [("7", "Hizmet Alani"), ("15+", "Sekme"), ("5", "Nobet Turu"), ("30", "Menu Gun")],
-        [
-            ("\U0001F6E1\uFE0F", "Nobet yonetimi: ogretmen/ogrenci nobeti, lokasyon bazli"),
-            ("\u23F0", "Zaman cizelgesi: ders/teneffus/ogle/etut zamanlama"),
-            ("\U0001F4C5", "Ders programi: sinif/ogretmen/salon bazli goruntuleme"),
-            ("\U0001F35D", "Yemek menusu: haftalik menu, alerji takibi, diyet secenekleri"),
-            ("\U0001F68C", "Servis takip: GPS canli konum, rota optimizasyonu"),
-            ("\U0001F4E9", "Veli talepleri: dijital form, takip numarasi, durum bildirimi"),
-        ],
-        "YEMEK & ALERJI:\n\n"
-        "\u25C6 Haftalik menu planlama\n"
-        "\u25C6 Ogrenci bazli alerji kaydi\n"
-        "\u25C6 Diyet secenekleri (vejeteryan, vegan)\n"
-        "\u25C6 Kalori & besin degeri hesabi\n"
-        "\u25C6 Veli bilgilendirme\n\n"
-        "SERVIS GPS:\n\n"
-        "\u25C6 Canli konum takibi\n"
-        "\u25C6 Veli mobil erisim\n"
-        "\u25C6 Tahmini varis suresi"
-    )
-
-
-def slide_13_uyari():
-    slide = new_slide()
-    _module_slide(slide,
-        "\u26A0\uFE0F", "Erken Uyari Sistemi",
-        "Yapay zeka destekli 32 boyutlu risk analizi",
-        [("32", "Risk Boyutu"), ("4", "Risk Seviye"), ("3", "AI Model"), ("7/24", "Izleme")],
-        [
-            ("\U0001F916", "AI tahmin motoru: dropout riski, basari dususu, davranis degisimi"),
-            ("\U0001F534", "4 seviye risk: Dusuk / Orta / Yuksek / Kritik"),
-            ("\U0001F4CA", "32 boyutlu analiz: akademik, sosyal, devamsizlik, psikolojik..."),
-            ("\U0001F514", "Otomatik bildirim: rehber, yonetici, veli bilgilendirme"),
-            ("\U0001F9E9", "Zorbalik tespiti: davranis kaliplari analizi"),
-            ("\U0001F4CB", "Mudahale plani: otomatik oneriler, takip sureci"),
-        ],
-        "RISK BOYUTLARI (Ornek):\n\n"
-        "\u25C6 Akademik basari trendi\n"
-        "\u25C6 Devamsizlik orani\n"
-        "\u25C6 Not degisimi hizi\n"
-        "\u25C6 Sosyal etkilesim skoru\n"
-        "\u25C6 Mood check-in trendi\n"
-        "\u25C6 Odev teslim orani\n"
-        "\u25C6 Disiplin kayitlari\n"
-        "\u25C6 Aile durumu degisimi\n"
-        "\u25C6 Akran iliskileri\n"
-        "\u25C6 ... ve 23 boyut daha"
-    )
-
-
-def slide_14_veli():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F468\u200D\U0001F469\u200D\U0001F467", "Veli Paneli",
-        "Veliler icin ozel tasarlanmis mobil deneyim",
-        [("5", "Cocuk Sekmesi"), ("8", "Kapsul"), ("3", "Randevu Tipi"), ("1-Tik", "Odeme")],
-        [
-            ("\U0001F476", "Cocuk detay: 5 sekme (genel, notlar, devamsizlik, odevler, gorusmeler)"),
-            ("\U0001F4CA", "Kapsul gorunum: ozet kartlar ile hizli erisim"),
-            ("\U0001F4C5", "Randevu: online randevu alma, takvim goruntuleme"),
-            ("\U0001F68C", "Servis: GPS canli takip, binis/inis bildirimi"),
-            ("\U0001F4B0", "Odeme: taksit durumu, gecmis odemeler, online odeme"),
-            ("\U0001F4AC", "Mesajlasma: ogretmen ile direkt iletisim"),
-        ],
-        "VELI MOBIL DENEYIMI:\n\n"
-        "\u25C6 Push bildirimler\n"
-        "\u25C6 Cocuk secimi (coklu cocuk)\n"
-        "\u25C6 Haftalik ozet rapor\n"
-        "\u25C6 Sinav sonuc bildirimi\n"
-        "\u25C6 Devamsizlik uyarisi\n"
-        "\u25C6 Menu goruntuleme\n"
-        "\u25C6 Servis GPS canli\n"
-        "\u25C6 Odeme hatirlatma\n"
-        "\u25C6 Duyuru & etkinlikler"
-    )
-
-
-def slide_15_ogrenci():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F393", "Ogrenci Paneli",
-        "Ogrenciler icin motive edici dijital deneyim",
-        [("24", "Sayfa"), ("5", "Dashboard"), ("3", "AI Ozellik"), ("10+", "Oyun")],
-        [
-            ("\U0001F4CA", "Kisisel dashboard: not ortalamasi, siralama, hedefler"),
-            ("\U0001F4D3", "Dijital defterim: ders notlari, odevler, kaynaklar"),
-            ("\U0001F916", "AI asistan: soru sorma, aciklama, ders plani onerisi"),
-            ("\U0001F3AE", "Egitici oyunlar: matematik, kelime, hafiza, bulmaca"),
-            ("\U0001F3C6", "Basari rozetleri: gamification ile motivasyon"),
-            ("\U0001F4DA", "Online sinav: zamana karsi yaris, aninda sonuc"),
-        ],
-        "GAMIFICATION:\n\n"
-        "\u25C6 XP puan sistemi\n"
-        "\u25C6 Seviye atlama\n"
-        "\u25C6 Basari rozetleri\n"
-        "\u25C6 Haftalik liderlik tablosu\n"
-        "\u25C6 Gorev tamamlama oduller\n\n"
-        "AI ASISTAN:\n\n"
-        "\u25C6 7/24 soru yanit\n"
-        "\u25C6 Ders anlatimi\n"
-        "\u25C6 Calisma plani onerisi"
-    )
-
-
-def slide_16_dijital():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F310", "Dijital Ogrenme",
-        "5 dil, CEFR, STEAM ve AI destekli ogrenme",
-        [("5", "Dil"), ("6", "CEFR Seviye"), ("4", "STEAM Alani"), ("1", "AI Treni")],
-        [
-            ("\U0001F1EC\U0001F1E7", "Ingilizce, Almanca, Fransizca, Ispanyolca, Arapca"),
-            ("\U0001F4CA", "CEFR seviye belirleme: A1-C2 otomatik yerlestirme"),
-            ("\U0001F916", "AI Treni: interaktif, gomulu, backend gerektirmez"),
-            ("\U0001F52C", "STEAM projeleri: bilim, teknoloji, muhendislik, sanat, matematik"),
-            ("\U0001F3AE", "Interaktif alistirmalar: dinleme, konusma, yazma, okuma"),
-            ("\U0001F4CB", "Ilerleme takibi: beceri bazli, haftalik rapor"),
-        ],
-        "DESTEKLENEN DILLER:\n\n"
-        "\U0001F1EC\U0001F1E7 Ingilizce (Cambridge)\n"
-        "\U0001F1E9\U0001F1EA Almanca (Goethe)\n"
-        "\U0001F1EB\U0001F1F7 Fransizca (DELF)\n"
-        "\U0001F1EA\U0001F1F8 Ispanyolca (DELE)\n"
-        "\U0001F1F8\U0001F1E6 Arapca\n\n"
-        "AI TRENI:\n"
-        "Tamamen gomulu calisir.\n"
-        "Backend gerektirmez.\n"
-        "Interaktif soru-cevap."
-    )
-
-
-def slide_17_kutuphane():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F4DA", "Kutuphane & Etkinlik",
-        "Barkodlu kutuphane + kulup & etkinlik yonetimi",
-        [("3", "Kutuphane Mod"), ("5", "Kulup Tipi"), ("12", "Etkinlik/Yil"), ("1-Tik", "Barkod")],
-        [
-            ("\U0001F4D6", "Kitap katalogu: barkod ile hizli kayit, ISBN arama"),
-            ("\U0001F504", "Odunc/iade: barkod okutma, otomatik sure takibi"),
-            ("\U0001F514", "Gecikme uyari: SMS/email, ceza hesaplama"),
-            ("\U0001F3AD", "Kulup yonetimi: kayit, yoklama, etkinlik planlama"),
-            ("\U0001F3C6", "Etkinlik takvimi: okul geneli, sinif bazli, disaridan"),
-            ("\U0001F4CA", "Okuma istatistikleri: ogrenci bazli, sinif karsilastirma"),
-        ],
-        "BARKOD SISTEMI:\n\n"
-        "\u25C6 ISBN barkod okuma\n"
-        "\u25C6 Ogrenci kimlik barkod\n"
-        "\u25C6 1 saniyede odunc/iade\n"
-        "\u25C6 Stok sayim kolayligi\n\n"
-        "KULUP YONETIMI:\n\n"
-        "\u25C6 Spor kulupler\n"
-        "\u25C6 Sanat & muzik\n"
-        "\u25C6 Bilim & teknoloji\n"
-        "\u25C6 Sosyal sorumluluk\n"
-        "\u25C6 Liderlik programi"
-    )
-
-
-def slide_18_saglik():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F3E5", "Saglik & Guvenlik",
-        "Revir, sivil savunma, is sagligi guvenligi",
-        [("3", "Ana Alan"), ("5", "Revir Kayit"), ("4", "Tatbikat/Yil"), ("7/24", "Kriz Hatti")],
-        [
-            ("\U0001F48A", "Revir kayitlari: saglik gecmisi, ilac takibi, alerji"),
-            ("\U0001F691", "Acil durum: kriz protokolu, ambulans cagrisi, veli bilgilendirme"),
-            ("\U0001F6E1\uFE0F", "Sivil savunma: deprem/yangin tatbikati, tahliye plani"),
-            ("\U0001F9F0", "ISG: risk degerlendirme, is kazasi kaydi, denetim"),
-            ("\U0001F489", "Asi takibi: ogrenci asi kayitlari, hatirlatma"),
-            ("\U0001F4CB", "Saglik raporu: donemsel saglik istatistikleri"),
-        ],
-        "REVIR KAYIT SISTEMI:\n\n"
-        "\u25C6 Ogrenci saglik profili\n"
-        "\u25C6 Kronik hastalik takibi\n"
-        "\u25C6 Ilac bilgisi (alerji!)\n"
-        "\u25C6 Revir ziyaret kaydi\n"
-        "\u25C6 Kaza/yaralanma formu\n\n"
-        "SIVIL SAVUNMA:\n\n"
-        "\u25C6 Deprem tatbikati plani\n"
-        "\u25C6 Yangin tahliye rotasi\n"
-        "\u25C6 Toplanma alani bilgisi\n"
-        "\u25C6 Veli bilgilendirme SMS"
-    )
-
-
-def slide_19_analitik():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F4CA", "Analitik Dashboard",
-        "Plotly ile gorsellestirme, veri odakli karar destek",
-        [("5", "Dashboard Tab"), ("15+", "Grafik Tipi"), ("3", "Karsilastirma"), ("PDF", "Export")],
-        [
-            ("\U0001F4CA", "Sinif bazli basari analizi: ortalama, dagılım, trend"),
-            ("\U0001F4C8", "Donem karsilastirma: 1. ve 2. donem, yillik trend"),
-            ("\U0001F3AF", "Ders bazli analiz: en basarili/basarisiz dersler"),
-            ("\U0001F465", "Ogretmen performansi: sinif ortalamalari karsilastirma"),
-            ("\U0001F4CB", "Devamsizlik analizi: gun/saat bazli, trend grafikleri"),
-            ("\U0001F4E5", "PDF/Excel export: tum raporlar indirilebilir"),
-        ],
-        "PLOTLY GORSELLESTIRME:\n\n"
-        "\u25C6 Bar chart — sinif karsilastirma\n"
-        "\u25C6 Line chart — trend analizi\n"
-        "\u25C6 Pie chart — dagılım\n"
-        "\u25C6 Heatmap — ders/sinif matrix\n"
-        "\u25C6 Box plot — not dagılımı\n"
-        "\u25C6 Scatter — korelasyon\n"
-        "\u25C6 Radar — coklu boyut\n\n"
-        "Tum grafikler interaktif,\n"
-        "zoom + hover detay."
-    )
-
-
-def slide_20_sosyal():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F4E2", "Sosyal Medya & Iletisim",
-        "Icerik takvimi, mesajlasma, gorusme yonetimi",
-        [("4", "Kanal"), ("30", "Gun/Ay Plan"), ("3", "Mesaj Turu"), ("2", "SMS Saglayici")],
-        [
-            ("\U0001F4C5", "Icerik takvimi: aylik plan, onay sureci, otomatik paylasim"),
-            ("\U0001F4AC", "Mesajlasma: veli-ogretmen, yonetici duyuru, toplu mesaj"),
-            ("\U0001F4E7", "Email: SMTP entegrasyon, sablon destekli, toplu gonderim"),
-            ("\U0001F4F1", "SMS: NetGSM/Twilio, otomatik hatirlatma, maliyet takibi"),
-            ("\U0001F4CB", "Gorusme kaydi: tarih, katilimci, konu, sonuc"),
-            ("\U0001F4CA", "Iletisim analitigi: acilma orani, yanit suresi"),
-        ],
-        "ILETISIM KANALLARI:\n\n"
-        "\u25C6 SMS (NetGSM / Twilio)\n"
-        "\u25C6 Email (SMTP)\n"
-        "\u25C6 Push Bildirim (Mobil)\n"
-        "\u25C6 Uygulama Ici Mesaj\n\n"
-        "OTOMATIK BILDIRIMLER:\n\n"
-        "\u25C6 Sinav sonucu\n"
-        "\u25C6 Devamsizlik uyarisi\n"
-        "\u25C6 Odeme hatirlatma\n"
-        "\u25C6 Etkinlik duyurusu\n"
-        "\u25C6 Randevu onay/iptal"
-    )
-
-
-def slide_21_sertifika():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F3C6", "Sertifika Uretici",
-        "7 sablon, toplu PDF uretimi, ZIP export",
-        [("7", "Sablon"), ("PDF", "Cikti"), ("ZIP", "Toplu"), ("QR", "Dogrulama")],
-        [
-            ("\U0001F4DC", "7 profesyonel sablon: katilim, basari, tesekkur, spor, sanat..."),
-            ("\U0001F3A8", "Kurumsal tasarim: logo, renkler, imza alani"),
-            ("\U0001F4E5", "Toplu uretim: sinif bazli, etkinlik bazli, ZIP indirme"),
-            ("\U0001F4F1", "QR dogrulama: her sertifikada benzersiz QR kod"),
-            ("\U0001F58A\uFE0F", "Dijital imza: yonetici + ogretmen imza alani"),
-            ("\U0001F4CA", "Arsiv: tum uretilen sertifikalar kayit altinda"),
-        ],
-        "SABLON TURLERI:\n\n"
-        "\u25C6 Katilim Belgesi\n"
-        "\u25C6 Basari Belgesi\n"
-        "\u25C6 Tesekkur Belgesi\n"
-        "\u25C6 Spor Basari\n"
-        "\u25C6 Sanat & Muzik\n"
-        "\u25C6 Bilim Olimpiyadi\n"
-        "\u25C6 Ozel Tasarim\n\n"
-        "Her sertifika PDF formatinda,\n"
-        "QR kod ile dogrulanabilir."
-    )
-
-
-def slide_22_destek():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F527", "Destek Hizmetleri",
-        "Bakim, talep, denetim ve tesis yonetimi",
-        [("4", "Ana Alan"), ("8", "Talep Turu"), ("3", "Oncelik"), ("5", "Denetim")],
-        [
-            ("\U0001F4CB", "Talep yonetimi: ariza bildirimi, oncelik, atama, takip"),
-            ("\U0001F527", "Bakim planlama: periyodik bakim takvimi, hatirlatma"),
-            ("\U0001F50D", "Denetim: bina/sinif denetimi, kontrol listesi, puanlama"),
-            ("\U0001F3EB", "Tesis yonetimi: salon/sinif envanteri, kapasite planlama"),
-            ("\U0001F4CA", "Raporlama: ariza istatistikleri, cozum suresi analizi"),
-            ("\U0001F514", "Bildirim: talep durumu degisikliginde otomatik uyari"),
-        ],
-        "TALEP SURECI:\n\n"
-        "\u25C6 1. Bildirim (herkes)\n"
-        "\u25C6 2. Onceliklendirme\n"
-        "\u25C6 3. Atama (teknik ekip)\n"
-        "\u25C6 4. Is emri olusturma\n"
-        "\u25C6 5. Cozum & onay\n"
-        "\u25C6 6. Kapatma & rapor\n\n"
-        "Ortalama cozum suresi: <24 saat\n"
-        "Memnuniyet anketi: her talep sonrasi"
-    )
-
-
-def slide_23_toplanti():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F91D", "Toplanti & Randevu",
-        "Ogretmenler kurulu, ziyaretci yonetimi",
-        [("3", "Toplanti Tipi"), ("6", "Randevu Tab"), ("5", "Ziyaretci Adim"), ("PDF", "Tutanak")],
-        [
-            ("\U0001F4CB", "Ogretmenler kurulu: gundem, katilim, tutanak, karar takibi"),
-            ("\U0001F4C5", "Randevu sistemi: online alma, onaylama, hatirlatma"),
-            ("\U0001F6B6", "Ziyaretci giris/cikis: kimlik kaydi, ziyaret nedeni"),
-            ("\U0001F4DC", "Toplanti tutanagi: otomatik PDF, katilimci imzasi"),
-            ("\U0001F514", "Hatirlatma: SMS/email ile toplanti oncesi uyari"),
-            ("\U0001F4CA", "Istatistik: toplanti suresi, katilim orani analizi"),
-        ],
-        "ZIYARETCI YONETIMI:\n\n"
-        "\u25C6 1. Kimlik kaydi\n"
-        "\u25C6 2. Ziyaret nedeni\n"
-        "\u25C6 3. Gorusulecek kisi\n"
-        "\u25C6 4. Giris saati kaydi\n"
-        "\u25C6 5. Cikis saati kaydi\n\n"
-        "Gorusulecek unvanlar IK\n"
-        "modulunden otomatik gelir.\n"
-        "Tum ziyaretler arsivlenir."
-    )
-
-
-def slide_24_mezun():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F393", "Mezunlar & Kariyer",
-        "Mezun takibi ve universite yerlestirme",
-        [("3", "Ana Alan"), ("5", "Takip Kriteri"), ("100+", "Universite"), ("PDF", "Rapor")],
-        [
-            ("\U0001F393", "Mezun veritabani: iletisim, universite, kariyer bilgileri"),
-            ("\U0001F3EB", "Universite yerlestirme: YKS sonuc takibi, istatistikler"),
-            ("\U0001F4BC", "Kariyer rehberligi: ilgi alani testi, meslek onerileri"),
-            ("\U0001F4CA", "Basari haritasi: mezunlarin universite dagılımı"),
-            ("\U0001F4AC", "Mezun iletisim: etkinlik davet, referans programa"),
-            ("\U0001F3C6", "Basari hikayeleri: vitrin sayfasi, motivasyon"),
-        ],
-        "UNIVERSITE ISTATISTIKLERI:\n\n"
-        "\u25C6 YKS puan dagılımı\n"
-        "\u25C6 Bolum bazli yerlestirme\n"
-        "\u25C6 Yillara gore trend\n"
-        "\u25C6 Turkiye siralamasi\n"
-        "\u25C6 Burslu ogrenci orani\n\n"
-        "KARIYER REHBERLIGI:\n\n"
-        "\u25C6 Holland ilgi envanteti\n"
-        "\u25C6 AI bazli oneri motoru\n"
-        "\u25C6 Mentor eslestirme"
-    )
-
-
-def slide_25_ai():
-    slide = new_slide()
-    _module_slide(slide,
-        "\U0001F916", "SmartI — AI Asistan",
-        "GPT-4o-mini destekli yapay zeka copilot",
-        [("GPT-4o", "AI Model"), ("7/24", "Erisim"), ("5", "Mod"), ("3", "Dil")],
-        [
-            ("\U0001F4AC", "Sohbet modu: ogrenci/ogretmen/veli icin AI chat"),
-            ("\U0001F399\uFE0F", "Sesli mod: konusarak soru sorma, AI yanit"),
-            ("\U0001F4D6", "Ders plani copilot: AI ile haftalik plan olusturma"),
-            ("\U0001F4DD", "Soru uretimi: kazanim bazli, Bloom taksonomisi, 7 soru tipi"),
-            ("\U0001F4CA", "Analiz: ogrenci performans ozeti, oneri motoru"),
-            ("\U0001F30D", "Coklu dil: Turkce, Ingilizce, Almanca destek"),
-        ],
-        "AI KULLANIM ALANLARI:\n\n"
-        "\u25C6 Soru bankasi uretimi\n"
-        "\u25C6 PDF'den soru cikarma\n"
-        "\u25C6 Ders plani olusturma\n"
-        "\u25C6 Ogrenci analiz raporu\n"
-        "\u25C6 Telafi gorevi olusturma\n"
-        "\u25C6 Lead skorlama\n"
-        "\u25C6 Mood analizi\n"
-        "\u25C6 Risk tahmini\n\n"
-        "Tum AI islemleri audit log ile\n"
-        "kayit altindadir."
-    )
+    return total
 
 
 # ====================================================================
@@ -2745,69 +2418,73 @@ def slide_50_tesekkur():
 # MASTER BUILD
 # ====================================================================
 def build_presentation():
-    """Build all 50 slides and save."""
+    """Build all slides and save. Opening (5) + Modules (80-90) + Closing (25) = 110+ slides."""
     print("\n" + "=" * 60)
     print("  SmartCampus AI — ULTRA PREMIUM Presentation Generator")
+    print("  40 modul x 2-3 slayt + 30 genel slayt")
     print("=" * 60)
 
-    slides = [
+    # ── Phase 1: Opening slides (1-5) ──
+    opening_slides = [
         ("01", "Kapak", slide_01_cover),
         ("02", "Neden SmartCampus?", slide_02_neden),
         ("03", "Cozum Ozeti", slide_03_cozum),
         ("04", "Rakamlarla SmartCampus", slide_04_numbers),
         ("05", "Roller", slide_05_roles),
-        ("06", "Kayit Modulu", slide_06_kayit),
-        ("07", "Akademik Takip", slide_07_akademik),
-        ("08", "Olcme & Degerlendirme", slide_08_olcme),
-        ("09", "Rehberlik", slide_09_rehberlik),
-        ("10", "IK & Personel", slide_10_ik),
-        ("11", "Butce & Odeme", slide_11_butce),
-        ("12", "Kurum Hizmetleri", slide_12_kurum),
-        ("13", "Erken Uyari", slide_13_uyari),
-        ("14", "Veli Paneli", slide_14_veli),
-        ("15", "Ogrenci Paneli", slide_15_ogrenci),
-        ("16", "Dijital Ogrenme", slide_16_dijital),
-        ("17", "Kutuphane & Etkinlik", slide_17_kutuphane),
-        ("18", "Saglik & Guvenlik", slide_18_saglik),
-        ("19", "Analitik Dashboard", slide_19_analitik),
-        ("20", "Sosyal Medya & Iletisim", slide_20_sosyal),
-        ("21", "Sertifika Uretici", slide_21_sertifika),
-        ("22", "Destek Hizmetleri", slide_22_destek),
-        ("23", "Toplanti & Randevu", slide_23_toplanti),
-        ("24", "Mezunlar & Kariyer", slide_24_mezun),
-        ("25", "AI Destek (SmartI)", slide_25_ai),
-        ("26", "Mobil Uygulama", slide_26_mobil),
-        ("27", "Mobil Ozellikler", slide_27_mobil_ozellik),
-        ("28", "APK Build & CI/CD", slide_28_apk),
-        ("29", "Teknik Altyapi", slide_29_teknik),
-        ("30", "Guvenlik", slide_30_guvenlik),
-        ("31", "Entegrasyonlar", slide_31_entegrasyon),
-        ("32", "Rakip Karsilastirma", slide_32_rakip),
-        ("33", "Fark Yaratan 10 Ozellik", slide_33_fark),
-        ("34", "Neden Biz?", slide_34_neden_biz),
-        ("35", "ROI & Deger", slide_35_roi),
-        ("36", "Fiyatlandirma", slide_36_fiyat),
-        ("37", "Uygulama Sureci", slide_37_uygulama),
-        ("38", "Referanslar", slide_38_referans),
-        ("39", "Iletisim", slide_39_iletisim),
-        ("40", "Arka Kapak", slide_40_arka_kapak),
-        ("41", "Veri Modeli", slide_41_veri_modeli),
-        ("42", "MEB Uyumu", slide_42_meb_uyum),
-        ("43", "Telafi Sistemi", slide_43_telafi),
-        ("44", "Sinav Tipleri", slide_44_sinav_tipleri),
-        ("45", "Multi-tenant", slide_45_multi_tenant),
-        ("46", "Gamification", slide_46_gamification),
-        ("47", "Sinav Guvenligi", slide_47_proctoring),
-        ("48", "Raporlama", slide_48_reporting),
-        ("49", "Yol Haritasi", slide_49_roadmap),
-        ("50", "Tesekkurler", slide_50_tesekkur),
     ]
 
-    for num, name, func in slides:
-        print(f"  [{num}/50]  {name}...", end="")
+    slide_count = 0
+    for num, name, func in opening_slides:
+        print(f"  [{num}]  {name}...", end="")
         try:
             func()
             print("  OK")
+            slide_count += 1
+        except Exception as e:
+            print(f"  HATA: {e}")
+            raise
+
+    # ── Phase 2: Module slides (dynamic — 40 modules x 2-3 slides) ──
+    print(f"\n  --- 40 MODUL DETAY SLAYTLARI ---")
+    mod_count = generate_module_slides()
+    slide_count += mod_count
+    print(f"  --- Modul slaytlari tamamlandi: {mod_count} slayt ---\n")
+
+    # ── Phase 3: Closing slides (mobile, technical, competitive, closing, bonus) ──
+    closing_slides = [
+        ("C01", "Mobil Uygulama", slide_26_mobil),
+        ("C02", "Mobil Ozellikler", slide_27_mobil_ozellik),
+        ("C03", "APK Build & CI/CD", slide_28_apk),
+        ("C04", "Teknik Altyapi", slide_29_teknik),
+        ("C05", "Guvenlik", slide_30_guvenlik),
+        ("C06", "Entegrasyonlar", slide_31_entegrasyon),
+        ("C07", "Rakip Karsilastirma", slide_32_rakip),
+        ("C08", "Fark Yaratan 10 Ozellik", slide_33_fark),
+        ("C09", "Neden Biz?", slide_34_neden_biz),
+        ("C10", "ROI & Deger", slide_35_roi),
+        ("C11", "Fiyatlandirma", slide_36_fiyat),
+        ("C12", "Uygulama Sureci", slide_37_uygulama),
+        ("C13", "Referanslar", slide_38_referans),
+        ("C14", "Iletisim", slide_39_iletisim),
+        ("C15", "Arka Kapak", slide_40_arka_kapak),
+        ("B01", "Veri Modeli", slide_41_veri_modeli),
+        ("B02", "MEB Uyumu", slide_42_meb_uyum),
+        ("B03", "Telafi Sistemi", slide_43_telafi),
+        ("B04", "Sinav Tipleri", slide_44_sinav_tipleri),
+        ("B05", "Multi-tenant", slide_45_multi_tenant),
+        ("B06", "Gamification", slide_46_gamification),
+        ("B07", "Sinav Guvenligi", slide_47_proctoring),
+        ("B08", "Raporlama", slide_48_reporting),
+        ("B09", "Yol Haritasi", slide_49_roadmap),
+        ("B10", "Tesekkurler", slide_50_tesekkur),
+    ]
+
+    for num, name, func in closing_slides:
+        print(f"  [{num}]  {name}...", end="")
+        try:
+            func()
+            print("  OK")
+            slide_count += 1
         except Exception as e:
             print(f"  HATA: {e}")
             raise
@@ -2817,7 +2494,8 @@ def build_presentation():
     out_path = os.path.join(out_dir, "SmartCampusAI_Sunum_ULTRA.pptx")
     prs.save(out_path)
     print(f"\n{'=' * 60}")
-    print(f"  BASARILI! {len(slides)} slayt olusturuldu.")
+    print(f"  BASARILI! Toplam {slide_count} slayt olusturuldu.")
+    print(f"  (5 giris + {mod_count} modul + {len(closing_slides)} kapanis)")
     print(f"  Dosya: {out_path}")
     print(f"  Boyut: {os.path.getsize(out_path) / 1024:.0f} KB")
     print(f"{'=' * 60}\n")
