@@ -779,7 +779,7 @@ def slide_05_roles():
 
 
 # ====================================================================
-# MODULE SLIDES — Dynamic from modul_veri.py (40 modules x 2-3 slides)
+# MODULE SLIDES — Dynamic from modul_veri.py (sadece sidebar'daki 30 modul)
 # ====================================================================
 
 def _module_overview_slide(mod):
@@ -963,13 +963,34 @@ def _module_tabs_slide(mod, tab_offset=0, max_tabs=8):
 
 
 def generate_module_slides():
-    """Generate 2-3 slides per module for all 40 modules from modul_veri.py."""
+    """Generate 2-3 slides per module from modul_veri.py.
+    Sidebar'da olmayan moduller '(sekme)' notu ile gosterilir — yalan olmaz."""
+    _SIDEBAR_SET = {
+        'Ana Sayfa','Yonetim Tek Ekran','Analitik Dashboard',
+        'Kurumsal Organizasyon ve Iletisim','Insan Kaynaklari Yonetimi','Kayit Modulu',
+        'Butce Gelir Gider','Sosyal Medya Yonetimi','Kurum Hizmetleri',
+        'Veli-Ogretmen Gorusme','Randevu ve Ziyaretci','Toplanti ve Kurullar',
+        'Akademik Takip','Olcme ve Degerlendirme','Ogrenci Zeka Merkezi',
+        'Okul Oncesi - Ilkokul','Rehberlik','Sertifika Uretici','Egitim Koclugu',
+        'AI Ogrenme Platformu','Yabanci Dil','Kisisel Dil Gelisimi','AI Treni','STEAM Merkezi',
+        'Sosyal Etkinlik ve Kulupler','Kutuphane','Okul Sagligi Takip',
+        'Sivil Savunma ve IS Guvenligi','Mezunlar ve Kariyer Yonetimi','AI Destek',
+    }
+    _ISIM_ESLEME = {'AI Treni (Bilgi Treni)':'AI Treni', 'AI Destek (Smarti AI)':'AI Destek'}
+
     total = 0
     for idx, mod in enumerate(MODULLER):
         ad = mod.get("ad", f"Modul {idx+1}")
+        eslenen = _ISIM_ESLEME.get(ad, ad)
         sekmeler = mod.get("sekmeler", [])
         num = idx + 1
-        print(f"  [M{num:02d}/40]  {ad}...", end="")
+
+        # Sidebar'da olmayan modulleri atla — bunlar parent modulun sekmesi
+        if eslenen not in _SIDEBAR_SET:
+            print(f"  [M{num:02d}]  {ad} ... ATLANDI (parent icinde sekme)")
+            continue
+
+        print(f"  [M{num:02d}/{len(MODULLER)}]  {ad}...", end="")
 
         # SLIDE 1: Overview
         _module_overview_slide(mod)
@@ -2421,7 +2442,7 @@ def build_presentation():
     """Build all slides and save. Opening (5) + Modules (80-90) + Closing (25) = 110+ slides."""
     print("\n" + "=" * 60)
     print("  SmartCampus AI — ULTRA PREMIUM Presentation Generator")
-    print("  40 modul x 2-3 slayt + 30 genel slayt")
+    print("  30 sidebar modul x 2-3 slayt + 30 genel slayt")
     print("=" * 60)
 
     # ── Phase 1: Opening slides (1-5) ──
@@ -2444,7 +2465,7 @@ def build_presentation():
             print(f"  HATA: {e}")
             raise
 
-    # ── Phase 2: Module slides (dynamic — 40 modules x 2-3 slides) ──
+    # ── Phase 2: Module slides (dynamic — sadece sidebar'daki moduller) ──
     print(f"\n  --- 40 MODUL DETAY SLAYTLARI ---")
     mod_count = generate_module_slides()
     slide_count += mod_count
